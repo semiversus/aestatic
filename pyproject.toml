@@ -5,7 +5,9 @@ description = ""
 authors = ["Günther Jena <guenther@jena.at>"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
+markdown = "^3.4.1"
+jinja2 = "^3.1.2"
 
 [tool.poetry.dev-dependencies]
 
