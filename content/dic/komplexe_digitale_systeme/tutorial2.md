@@ -22,7 +22,7 @@ next: tutorial3.md
   Umgangssprache meist der Kommandozeileninterpreter als Shell gemeint.
 
 # Vorbereitung
-Starte [DICbian]({filename}dicbian.md) und logge dich mittels dem Benutzernamen <code>dic</code> und dem Passwort <code>dic</code> ein.
+Starte [DICbian](dicbian.html) und logge dich mittels dem Benutzernamen <code>dic</code> und dem Passwort <code>dic</code> ein.
 
 ![DICbian nach dem Login]({filename}dicbian_shell.png)
 
@@ -49,4 +49,3 @@ Wenn man DICbian in der Virtualbox herunterfahren möchte muss man sich erst als
 <code>su</code> gemacht (Passwort ist <code>htl</code>). Anschließend kann man mittels <code>poweroff</code> das System herunterfahren.
 
 <figure><img src="{filename}tutorial_poweroff.png"><figcaption>Herunterfahren von DICbian</figcaption></figure>
-

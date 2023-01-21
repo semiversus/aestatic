@@ -98,7 +98,7 @@ Die verschiedenen Modi sind unter "<a href="#betriebsmodi_1">Betriebsmodi</a>" a
 ### COM01 und COM00 - Funktion des *OC0* Pins
 Beschreibt die Funktionsweise des Pins *OC0*. Sind beide Bits auf <code>0</code> wird der Pin als normaler Portpin verwendet
 (Port B Bit 3). Bei anderen Kombinationen ist der *Compare Match Output Mode* aktiv und die normale Portfunktion wird
-überschrieben. Weitere Informationen finden sich unter [PWM Erzeugung]({filename}avr_pwm.md).
+überschrieben. Weitere Informationen finden sich unter [PWM Erzeugung](avr_pwm.html).
 
 ### CS02, CS01 und CS00 - Clock Select
 
@@ -151,10 +151,10 @@ Die Frequenz, mit der ein *Compare Match* bei Verwendung des Prozessortakts als 
 
 ## Fast PWM
 Beim Fast PWM zählt der Timer bis zum Maximum seines Zählberreichs. Das Register <code>OCRn</code> dient als Vergleich und abhängig
-davon, ob <code>TCNTn</code> kleiner oder größer <code>OCRn</code> ist, kann der OCn Pin auf logisch <code>0</code> oder <code>1</code> gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung]({filename}avr_pwm.md).
+davon, ob <code>TCNTn</code> kleiner oder größer <code>OCRn</code> ist, kann der OCn Pin auf logisch <code>0</code> oder <code>1</code> gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung](avr_pwm.html).
 
 ## PWM, Phasenkorrekt
-Siehe auch hier im Kapitel [PWM Erzeugung]({filename}avr_pwm.md).
+Siehe auch hier im Kapitel [PWM Erzeugung](avr_pwm.html).
 
 # Pins
 

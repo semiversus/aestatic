@@ -2,7 +2,7 @@ title: Test - Programmierbare Logik
 parent: ../uebersicht.md
 
 # Inhalt
-* [Programmierbare Logische Anordnungen]({filename}../pla.md)
+* [Programmierbare Logische Anordnungen](../pla.html)
 * Beispiele aus dem Unterricht
 
 # Frühere Tests

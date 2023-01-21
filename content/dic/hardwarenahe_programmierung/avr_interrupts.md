@@ -81,7 +81,7 @@ Damit ein Interrupt zur Ausführung kommt, werden folgende Punkte benötigt:
 * Aufruf von <code>sei()</code> im Hauptprogramm, um die *globale Interruptfreigabe* zu aktivieren
 * Die Komponente kommt in einen Zustand, der den Interrupt auslöst (meist über ein *Interrupt Flag*)
 
-Als Beispiel für einen einfachen Interrupt wird auf [externe Interrupts]({filename}avr_externer_interrupt.md) verwiesen.
+Als Beispiel für einen einfachen Interrupt wird auf [externe Interrupts](avr_externer_interrupt.html) verwiesen.
 
 !!! panel-warning "Interrupt ohne Service Routine"
     Wird eine Komponente so konfiguriert, dass sie einen Interrupt auslösen kann, die entsprechende Interruptroutine aber

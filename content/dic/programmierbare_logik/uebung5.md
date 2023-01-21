@@ -107,7 +107,7 @@ zurück. Solange <code>enable_o</code> auf <code>'1'</code> ist laufen die Zähl
 
 ## Zustandsdiagramm
 Zeichne das Zustandsdiagramm. Wähle einen passenden Zustandsmaschinentyp aus
-([Mealy oder Moore]({filename}../grundlagen_der_digitaltechnik/automatentheorie.md#moore-und-mealy-automat_1)).
+([Mealy oder Moore](../grundlagen_der_digitaltechnik/automatentheorie.html#moore-und-mealy-automat_1)).
 
 ## Implementierung
 Vervollständige die Vorlage von <code>stopwatch_fsm</code>. Dort sind die Zustände <code>CLEARED</code>, <code>RUNNING</code> und <code>STOPPED</code> als Typ

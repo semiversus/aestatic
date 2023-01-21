@@ -4,19 +4,19 @@ parent: ../uebersicht.md
 
 # Inhalt
 ## Bipolarer Transistor
-* [Grundlagen des bipolaren Transistor]({filename}bipolarer_transistor.md)
-* [Bipolarer Transistor als Schalter]({filename}bipolarer_transistor_schalter.md)
+* [Grundlagen des bipolaren Transistor](bipolarer_transistor.html)
+* [Bipolarer Transistor als Schalter](bipolarer_transistor_schalter.html)
 
 ## Unipolarer Transistor
 * Grundlagen des unipolaren Transistors
 * Unipolarer Transistor als Schalter
 ## Anwendungen
-* [Ausgangstreiber]({filename}ausgangstreiber.md)
+* [Ausgangstreiber](ausgangstreiber.html)
 ## Speicher
-* [Datenspeicher Übersicht]({filename}datenspeicher.md)
-* [Statische Datenspeicher]({filename}statische_datenspeicher.md)
-* [Dynamische Datenspeicher]({filename}dynamische_datenspeicher.md)
+* [Datenspeicher Übersicht](datenspeicher.html)
+* [Statische Datenspeicher](statische_datenspeicher.html)
+* [Dynamische Datenspeicher](dynamische_datenspeicher.html)
 * Übung ["Expertenrunde Speicher"]({filename}halbleiterspeicher.compress)
 
 # Tests
-* [Schriftliche Tests]({filename}test_transistor.md)
+* [Schriftliche Tests](test_transistor.html)

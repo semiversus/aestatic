@@ -37,7 +37,7 @@ In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz T
 # Aufgabe 1 - Erstellen der UCF Datei
 * Der Takt <code>clk</code> befindet sich am Pin <code>B8</code>.
 * Die LED (<code>led_o</code>) ist am Pin <code>M5</code> angeschlossen.
-* Erweitere dazu die Datei <code>blink.ucf</code> (siehe [Übung 1 - UCF Datei]({filename}uebung1.md#pinout) als Beispiel).
+* Erweitere dazu die Datei <code>blink.ucf</code> (siehe [Übung 1 - UCF Datei](uebung1.html#pinout) als Beispiel).
 
 # Aufgabe 2 - Implementierung des Zählers
 Um nun eine LED blinken zu lassen benötigen wir einen Zähler. Wenn 50 Millionen Taktzyklen gezählt sind ist eine Sekunde

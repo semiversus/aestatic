@@ -38,7 +38,7 @@ Das obige Beispiel entspricht genau der folgenden nebenläufigen Anweisung:
 
 # Prozess für sequentielle Schaltungen
 Sequentiellen Schaltungen werden mittels speichernden Elementen (*Register*) realisiert. Bei
-[synchronen Schaltungen]({filename}../grundlagen_der_digitaltechnik/synchrones_design.md) arbeiten alle Register mit
+[synchronen Schaltungen](../grundlagen_der_digitaltechnik/synchrones_design.html) arbeiten alle Register mit
 einem globalen Takt und reagieren auf die gleiche Taktflanke. Typischerweise wird die steigende Taktflanke gewählt,
 prinzipiell lässt sich aber auch die fallende Taktflanke wählen.
 

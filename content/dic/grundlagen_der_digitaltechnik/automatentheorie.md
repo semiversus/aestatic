@@ -2,7 +2,7 @@ title: Automatentheorie
 parent: uebersicht.md
 
 !!! panel-info "Übungsblatt"
-    Zu diesem Teil gibt es [Übungsaufgaben]({filename}uebung_automatentheorie.md)
+    Zu diesem Teil gibt es [Übungsaufgaben](uebung_automatentheorie.html)
 
 # Allgemeines
 Die Automatentheorie beschreibt Modelle, die durch die im Automat vorhanden Zustände, den akzeptierten Eingaben und durch die Ausgaben beschrieben werden können. Wenn ein Automat nur endlich viele Zustände einnehmen kann, spricht man von einem ''endlichen Automaten''. Andere Ausdrücke sind Zustandsmaschine oder der englische Ausdruck ''Finite State Machine''.

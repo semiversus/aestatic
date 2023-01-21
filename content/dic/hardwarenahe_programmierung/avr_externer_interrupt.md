@@ -71,7 +71,7 @@ Die Bits INT0, INT1 und INT2 aktivieren die Interruptfreigabe.
 Für den Aufruf der entsprechenden Interruptrountine sind nun folgende Punkte notwendig:
 
 * Das entsprechende Bit bei <code>GICR</code> ist gesetzt, damit der Interrupt freigegeben ist
-* Über <code>sei()</code> wurde die globale Interruptfreigabe aktiviert (siehe [Interrupts]({filename}avr_interrupts.md) im Skriptum)
+* Über <code>sei()</code> wurde die globale Interruptfreigabe aktiviert (siehe [Interrupts](avr_interrupts.html) im Skriptum)
 * Eine Pegeländerung entsprechend der Konfiguration unter <code>MCUCR</code> bzw. <code>MCUCSR</code> tritt beim entsprechenden Pin auf
 
 ## GIFR

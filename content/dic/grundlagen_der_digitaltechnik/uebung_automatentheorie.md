@@ -2,7 +2,7 @@ title: Übung zur Automatentheorie
 parent: automatentheorie.md
 
 # Graphische Darstellung des Getränke-Automaten
-Stelle das Beispiel des [Getränke-Automaten]({filename}automatentheorie.md#beispiel-getrankeautomat) graphisch dar
+Stelle das Beispiel des [Getränke-Automaten](automatentheorie.html#beispiel-getrankeautomat) graphisch dar
 
 # Automat mittels Logisim
 Realisiere mittels Logisim den folgenden Automaten:
@@ -35,4 +35,3 @@ Der Zustand wird über die beiden D-Flip-Flop <code>z1</code> und <code>z0</code
 **Z0** | A0 | A0 | A0
 **Z1** | A0 | A1 | A0
 **Z2** | A1 | A1 | A1
-

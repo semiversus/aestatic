@@ -6,7 +6,7 @@ Bei der Verhaltensmodellierung wird ein System durch einen Algorithmus in VHDL N
 Gatter oder komplexere Komponenten direkt verwendet. Ein Verhaltensmodell ist im Prinzip eine *Black Box* Sicht des zu
 beschreibenden Systems.
 
-Ein [Volladdierer]({filename}../grundlagen_der_digitaltechnik/schaltnetze.md#voll-addierer) lässt sich mittels Verhaltensmodellierung wie folgt beschreiben:
+Ein [Volladdierer](../grundlagen_der_digitaltechnik/schaltnetze.html#voll-addierer) lässt sich mittels Verhaltensmodellierung wie folgt beschreiben:
 
     #!vhdl
     entity fulladder is

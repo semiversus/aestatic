@@ -4,12 +4,12 @@ parent: ../uebersicht.md
 
 # Allgemeines
 
-* [Funktionale Einheiten]({filename}funktionale_einheiten.md)
-* [Programmiermodell]({filename}programmiermodell.md)
-* [Logisim Prozessor]({filename}logisim_prozessor.md)
+* [Funktionale Einheiten](funktionale_einheiten.html)
+* [Programmiermodell](programmiermodell.html)
+* [Logisim Prozessor](logisim_prozessor.html)
 
 # Atmel AVR
-* [Architektur und Assembler]({filename}avr_assembler.md) (mit Übungen)
+* [Architektur und Assembler](avr_assembler.html) (mit Übungen)
 
 # Tests
-* [Schriftliche Tests]({filename}test_rechnerarchitektur.md)
+* [Schriftliche Tests](test_rechnerarchitektur.html)

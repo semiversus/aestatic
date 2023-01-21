@@ -1,26 +1,26 @@
 title: Unterrichtsmaterial
 
 # Digitale Systeme und Computersysteme
-* [Grundlagen der Digitaltechnik]({filename}grundlagen_der_digitaltechnik/uebersicht.md)
-* [Programmierbare Logik]({filename}programmierbare_logik/uebersicht.md)
-* [Mikrocontroller]({filename}mikrocontroller/uebersicht.md)
-* [Hardwarenahe Programmierung]({filename}hardwarenahe_programmierung/uebersicht.md)
-* [Halbleiterelemente]({filename}halbleiterelemente/uebersicht.md)
-* [Bussysteme]({filename}bussysteme/uebersicht.md)
-* [Rechnerarchitektur]({filename}rechnerarchitektur/uebersicht.md)
-* [Digitale Signalverarbeitung]({filename}digitale_signalverarbeitung/uebersicht.md)
-* [Komplexe digitale Systeme]({filename}komplexe_digitale_systeme/uebersicht.md)
+* [Grundlagen der Digitaltechnik](grundlagen_der_digitaltechnik/uebersicht.html)
+* [Programmierbare Logik](programmierbare_logik/uebersicht.html)
+* [Mikrocontroller](mikrocontroller/uebersicht.html)
+* [Hardwarenahe Programmierung](hardwarenahe_programmierung/uebersicht.html)
+* [Halbleiterelemente](halbleiterelemente/uebersicht.html)
+* [Bussysteme](bussysteme/uebersicht.html)
+* [Rechnerarchitektur](rechnerarchitektur/uebersicht.html)
+* [Digitale Signalverarbeitung](digitale_signalverarbeitung/uebersicht.html)
+* [Komplexe digitale Systeme](komplexe_digitale_systeme/uebersicht.html)
 
 # Robotik und Embedded Systems
-* [Projektmanagment]({filename}robotik/projektmanagment/uebersicht.md)
-* [Python]({filename}robotik/python/uebersicht.md)
-* [RaspberryPi]({filename}robotik/raspberry.md)
-* [Suchalgorithmen]({filename}robotik/search/uebersicht.md)
-* [ESP32]({filename}robotik/esp32/installation.md)
+* [Projektmanagment](robotik/projektmanagment/uebersicht.html)
+* [Python](robotik/python/uebersicht.html)
+* [RaspberryPi](robotik/raspberry.html)
+* [Suchalgorithmen](robotik/search/uebersicht.html)
+* [ESP32](robotik/esp32/installation.html)
 
 # Hardwareentwicklung
-* [Projekte Teil 1]({filename}/hwe/teil1/uebersicht.md)
-* [Projekte Teil 2]({filename}/hwe/teil2/uebersicht.md)
+* [Projekte Teil 1](/hwe/teil1/uebersicht.html)
+* [Projekte Teil 2](/hwe/teil2/uebersicht.html)
 
 
 # Korrekturen

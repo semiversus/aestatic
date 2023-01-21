@@ -14,9 +14,9 @@ title: Test - Kombinatorik und Sequentielle Logik
 * Unterschiede zwischen den Speicherelementen erklären
 
 # Skriptum
-* [Kombinatorik]({filename}kombinatorik.md)
-* [Wichtige Schaltnetze]({filename}schaltnetze.md)
-* [Sequentielle Logik]({filename}sequentielle_logik.md)
+* [Kombinatorik](kombinatorik.html)
+* [Wichtige Schaltnetze](schaltnetze.html)
+* [Sequentielle Logik](sequentielle_logik.html)
 
 # Frühere Tests
 * [Test 1]({filename}test_kombinatorik_1.pdf), [Musterlösung]({filename}test_kombinatorik_1_loesung.pdf){: class="download" }

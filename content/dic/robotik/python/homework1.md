@@ -1,7 +1,7 @@
 title: Python Hausübung 1
 parent: uebersicht.md
 
-* Installation von [VSCode und Python]({filename}installation.md)
+* Installation von [VSCode und Python](installation.html)
 * Statistikübung
 
 In der Statistikübung soll der Nutzer nach Ganzzahlen gefragt werden. Der Nutzer

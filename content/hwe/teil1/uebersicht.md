@@ -1,16 +1,16 @@
 title: Hardwareentwicklung Teil 1
 
 # Übersicht Projekte
-* [Temperaturregelung]({filename}temperaturregelung.md)
-* [Klavier]({filename}klavier.md)
-* [Füllstandsmessung]({filename}fuellstand.md)
-* [Pomodoro Timer]({filename}pomodoro.md)
-* [Würfel]({filename}wuerfel.md)
-* [Sirene]({filename}sirene.md)
-* [Ampel]({filename}ampel.md)
-* [Verstärker]({filename}verstaerker.md)
-* [Schrittmotortreiber]({filename}schrittmotor.md)
-* [Servotester]({filename}servotester.md)
+* [Temperaturregelung](temperaturregelung.html)
+* [Klavier](klavier.html)
+* [Füllstandsmessung](fuellstand.html)
+* [Pomodoro Timer](pomodoro.html)
+* [Würfel](wuerfel.html)
+* [Sirene](sirene.html)
+* [Ampel](ampel.html)
+* [Verstärker](verstaerker.html)
+* [Schrittmotortreiber](schrittmotor.html)
+* [Servotester](servotester.html)
 
 # Benotungsbasis
 Insgesamt gibt es 130 Punkte.

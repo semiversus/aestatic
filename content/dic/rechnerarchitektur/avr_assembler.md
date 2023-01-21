@@ -2,7 +2,7 @@ title: AVR Assembler
 parent: uebersicht.md
 
 !!! panel-info "Übungsblatt"
-    Zu diesem Teil gibt es [Übungsaufgaben]({filename}uebung_avr_assembler.md)
+    Zu diesem Teil gibt es [Übungsaufgaben](uebung_avr_assembler.html)
 
 # Allgemeines
 Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entwicklung der AVR Reihe stand vor allem eine möglichst effiziente Nutzung durch C-Compiler im Vordergrund.

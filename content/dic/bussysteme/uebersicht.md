@@ -4,16 +4,16 @@ parent: ../uebersicht.md
 
 # Inhalt
 ## Allgemeines
-* [Allgemeine Einführung]({filename}bussysteme.md)
-* [Kanalkodierung]({filename}kanalkodierung.md)
+* [Allgemeine Einführung](bussysteme.html)
+* [Kanalkodierung](kanalkodierung.html)
 
 ## Bussysteme
-* [RS232]({filename}rs232.md)
-* [CAN]({filename}can.md)
-* [I&sup2;C]({filename}i2c.md) (mit Übungen)
+* [RS232](rs232.html)
+* [CAN](can.html)
+* [I&sup2;C](i2c.html) (mit Übungen)
 
 ## Datenintegrität
-* [Datenintegrität und Prüfsummen]({filename}datenintegritaet.md)
+* [Datenintegrität und Prüfsummen](datenintegritaet.html)
 
 # Tests
-* [Schriftliche Tests]({filename}test_bussysteme.md)
+* [Schriftliche Tests](test_bussysteme.html)

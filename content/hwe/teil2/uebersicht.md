@@ -3,13 +3,13 @@ title: Hardwareentwicklung Teil 2
 Im zweiten Teil konzentrieren wir uns auf Firmware Projekte.
 
 # Übersicht Projekte
-* [Reaktionsspiel]({filename}reaktionsspiel.md)
-* [PS2 Keyboard]({filename}keyboard.md)
-* [Wecker]({filename}wecker.md)
-<!-- * [Füllstandsmessung]({filename}fuellstandsmessung.md) -->
-* [Schrittmotorsteuerung]({filename}schrittmotor.md)
-* [micro:bit MicroPython]({filename}micropython.md)
-<!-- * [micro:bit Rust]({filename}rust.md) -->
-* [Codeschloss]({filename}codeschloss.md)
-* [Servoansteuerung]({filename}servo.md)
-* [Morse-Uhr]({filename}morseuhr.md)
+* [Reaktionsspiel](reaktionsspiel.html)
+* [PS2 Keyboard](keyboard.html)
+* [Wecker](wecker.html)
+<!-- * [Füllstandsmessung](fuellstandsmessung.html) -->
+* [Schrittmotorsteuerung](schrittmotor.html)
+* [micro:bit MicroPython](micropython.html)
+<!-- * [micro:bit Rust](rust.html) -->
+* [Codeschloss](codeschloss.html)
+* [Servoansteuerung](servo.html)
+* [Morse-Uhr](morseuhr.html)

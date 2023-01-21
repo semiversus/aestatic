@@ -4,14 +4,14 @@ parent: ../uebersicht.md
 
 # Inhalt
 ## Einführung C
-* [Einführung C]({filename}uebersicht_c.md)
-* [Aufbau von Fest- und Gleitkommazahlen]({filename}floatingpoint.md)
-* [Bitmanipulation]({filename}bitmanipulation.md) (mit Übungen)
+* [Einführung C](uebersicht_c.html)
+* [Aufbau von Fest- und Gleitkommazahlen](floatingpoint.html)
+* [Bitmanipulation](bitmanipulation.html) (mit Übungen)
 
 ## C Programmierung für Embedded Systems
-* [Hardwareabstraktion]({filename}hal.md)
-* [Beschreibung der Megacard HAL]({filename}hal_megacard.md) ([Template]({filename}embedded_template_hal.compress){: class="download" })
-    * [Beispiel Safe]({filename}uebung_safe.md) (mit Musterlösung)
+* [Hardwareabstraktion](hal.html)
+* [Beschreibung der Megacard HAL](hal_megacard.html) ([Template]({filename}embedded_template_hal.compress){: class="download" })
+    * [Beispiel Safe](uebung_safe.html) (mit Musterlösung)
 
 # Tests
 * [Test 1]({filename}embedded_test_1.compress){: class="download" } - Push Fast Game

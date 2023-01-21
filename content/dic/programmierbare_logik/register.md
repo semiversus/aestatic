@@ -5,7 +5,7 @@ parent: uebersicht.md
 # Allgemeines
 
 Register dienen in der Digitaltechnik dazu, Werte zu speichern. Register können durch verschiedene Arten von Flip-Flops
-realisiert werden (siehe [sequentielle Logik]({filename}../grundlagen_der_digitaltechnik/sequentielle_logik.md)).
+realisiert werden (siehe [sequentielle Logik](../grundlagen_der_digitaltechnik/sequentielle_logik.html)).
 
 # Register mit Reset
 

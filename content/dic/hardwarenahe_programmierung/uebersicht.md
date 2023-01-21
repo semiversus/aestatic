@@ -4,16 +4,16 @@ parent: ../uebersicht.md
 
 # Inhalt
 ## Allgemeines
-* [Tastenentprellung]({filename}tastenentprellung.md)
+* [Tastenentprellung](tastenentprellung.html)
 
 ## AVR
-* [Allgemeines zu Atmel AVR]({filename}avr_allgemein.md)
-* [IO mittels Portpins]({filename}avr_port_io.md)
-* [Interrupts]({filename}avr_interrupts.md)
-* [Externe Interrupts]({filename}avr_externer_interrupt.md)
-* [UART]({filename}avr_uart.md)
-* [Timer]({filename}avr_timer.md)
-* [ADC]({filename}avr_adc.md)
+* [Allgemeines zu Atmel AVR](avr_allgemein.html)
+* [IO mittels Portpins](avr_port_io.html)
+* [Interrupts](avr_interrupts.html)
+* [Externe Interrupts](avr_externer_interrupt.html)
+* [UART](avr_uart.html)
+* [Timer](avr_timer.html)
+* [ADC](avr_adc.html)
 
 # Tests
-* [Schriftliche Tests]({filename}test_hardwarenahe_programmierung.md)
+* [Schriftliche Tests](test_hardwarenahe_programmierung.html)

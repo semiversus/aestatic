@@ -4,15 +4,15 @@ parent: ../uebersicht.md
 
 # Inhalt
 ## Kombinatorik
-* [Kombinatorik]({filename}kombinatorik.md)
+* [Kombinatorik](kombinatorik.html)
 * KV-Diagramme
-* [Wichtige Schaltnetze]({filename}schaltnetze.md)
+* [Wichtige Schaltnetze](schaltnetze.html)
 ## Sequentielle Logik
-* [Sequentielle Logik]({filename}sequentielle_logik.md)
-* [Automatentheorie]({filename}automatentheorie.md) (mit Übungen)
-* [Timing in der Digitaltechnik]({filename}timing.md)
-* [Synchrones Design]({filename}synchrones_design.md)
+* [Sequentielle Logik](sequentielle_logik.html)
+* [Automatentheorie](automatentheorie.html) (mit Übungen)
+* [Timing in der Digitaltechnik](timing.html)
+* [Synchrones Design](synchrones_design.html)
 
 # Tests
-* [Kombinatorik und sequentielle Logik]({filename}test_kombinatorik.md)
-* [Digitaltechnik]({filename}test_digitaltechnik.md)
+* [Kombinatorik und sequentielle Logik](test_kombinatorik.html)
+* [Digitaltechnik](test_digitaltechnik.html)

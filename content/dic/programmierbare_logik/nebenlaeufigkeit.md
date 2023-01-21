@@ -10,7 +10,7 @@ laufen diese jede für sich gesehen unabhängig von der anderen. Die unabhängig
 
 Es gibt folgende *concurrent statements*:
 
-* <code>process</code> **Anweisungen** - Beschreiben einen nebenläufigen Prozess (siehe [<code>process</code> Anweisung]({filename}process.md))
+* <code>process</code> **Anweisungen** - Beschreiben einen nebenläufigen Prozess (siehe [<code>process</code> Anweisung](process.html))
 * **Einfache Signalzuweisung** - Weist einen Ausdruck einem Signal zu
 * **Bedingte Signalzuweisung** - Je nach Bedingung wird der *Wahr*-Ausdruck oder der *Falsch*-Ausdruck zugewiesen
 * **Selektive Signalzuweisung** - Entspricht einem Multiplexer, der abhängig von einem *select*-Ausdruck den entsprechenden
@@ -37,7 +37,7 @@ Ausdruck auswählt.
       carry_o <= a_i and b_i;
     end architecture;
 
-In diesem Beispiel wird ein [Halbaddierer]({filename}../grundlagen_der_digitaltechnik/schaltnetze.md#halb-addierer)
+In diesem Beispiel wird ein [Halbaddierer](../grundlagen_der_digitaltechnik/schaltnetze.html#halb-addierer)
 beschrieben. Bei den Signalzuweisungen von <code>sum_o</code> und <code>carry_o</code> handelt es sich um einfache Signalzuweisungen. Auf
 der rechten Seite der Zuweisung steht ein Ausdruck, der durch Kombinatorik ausgewertet werden kann.
 
@@ -80,7 +80,7 @@ Syntax verwendet:
 
 ## Beispiel
 Dazu ein ausführlicheres Beispiel, das die Umwandlung einer 4 Bit BCD Zahl in eine Sieben Segment Anzeige erlaubt (siehe
-auch [Übung1]({filename}uebung1.md)):
+auch [Übung1](uebung1.html)):
 
     #!vhdl
     library ieee;
