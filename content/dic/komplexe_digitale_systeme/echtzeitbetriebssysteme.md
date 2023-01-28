@@ -25,7 +25,7 @@ Der Prozesskontext beinhaltet meist auch, welchem Prozess dieser Prozess zugeord
 ## Prozesszustände
 Da ein Prozessor immer nur einen Prozess pro Zeiteinheit bearbeiten kann, werden verschiedene Prozesszustände verwendet, um die Bearbeitung zu ermöglichen:
 
-![Prozesszustände]({filename}prozess_zustand.svg)
+![Prozesszustände](prozess_zustand.svg)
 
 * *Erzeugt* - Wurde vom Betriebssystem erzeugt, aber steht noch nicht zur Ausführung bereit
 * *Bereit* - Besitzt alle Ressourcen und wartet auf die Zuteilung von Prozessorzeit

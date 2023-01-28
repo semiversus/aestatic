@@ -2,7 +2,7 @@ title: VHDL Test (2)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner]({filename}vhdl_test_2.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_test_2.compress){: class="download" } herunterladen und entpacken
 * Insgesamt gibt es <span class="badge">29 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
@@ -32,7 +32,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Ausgang <code>timer_enable_o</code> ist im Zustand <code>DELAY</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 * Der Ausgang <code>timer_clear_o</code> ist im Zustand <code>OFF</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 
-![FSM für Lichtsteuerung]({filename}test2_led_delay_fsm.svg.tex)
+![FSM für Lichtsteuerung](test2_led_delay_fsm.svg.tex)
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>led_delay_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
@@ -78,7 +78,7 @@ In der Datei <samp>led_delay.ucf</samp> ist nur das Signal <code>clk</code> defi
 * <code>button_on_i</code> wird durch den Taster <samp>BTN1</samp> angesteuert
 * <code>led_o</code> ist die LED <samp>LD0</samp>
 
-<figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+<figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 ## Test am Board
 <span class="badge">1 Punkt</span>
@@ -124,7 +124,7 @@ funktioniert (es ist genau eine).
 
 Erstelle die Komponente <code>shuffle</code> durch Bearbeitung der Datei <samp>shuffle.vhd</samp> nach folgender Skizze:
 
-![Shuffle Komponente]({filename}test2_shuffle.jpg)
+![Shuffle Komponente](test2_shuffle.jpg)
 
 * Wenn <code>enable_i</code> auf <code>'1'</code> ist, soll der interne Zähler <code>counter_reg</code> bei einer steigenden Taktflanke hinaufzählen
 * Der interne Zähler soll von 0 bis 5 zählen

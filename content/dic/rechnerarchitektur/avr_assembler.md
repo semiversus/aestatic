@@ -8,10 +8,10 @@ parent: uebersicht.md
 Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entwicklung der AVR Reihe stand vor allem eine möglichst effiziente Nutzung durch C-Compiler im Vordergrund.
 
 * [Komplette Übersicht](http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf){: class="external" } über den Befehlssatz von Atmel
-* [Auszug]({filename}avr_assembler_befehle.pdf){: class="download" } der wichtigsten Befehle
+* [Auszug](avr_assembler_befehle.pdf){: class="download" } der wichtigsten Befehle
 
 ## Blockschaltbild
-<figure><img src="{filename}avr_blockschaltbild.svg"><figcaption>Blockschaltbild des AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+<figure><img src="avr_blockschaltbild.svg"><figcaption>Blockschaltbild des AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
 Im Blockschaltbild des Atmel AVR ATMega16 erkennt man am oberen und unteren Ende die vier IO-Ports.
 

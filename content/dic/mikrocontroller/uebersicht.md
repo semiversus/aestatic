@@ -10,10 +10,10 @@ parent: ../uebersicht.md
 
 ## C Programmierung für Embedded Systems
 * [Hardwareabstraktion](hal.html)
-* [Beschreibung der Megacard HAL](hal_megacard.html) ([Template]({filename}embedded_template_hal.compress){: class="download" })
+* [Beschreibung der Megacard HAL](hal_megacard.html) ([Template](embedded_template_hal.compress){: class="download" })
     * [Beispiel Safe](uebung_safe.html) (mit Musterlösung)
 
 # Tests
-* [Test 1]({filename}embedded_test_1.compress){: class="download" } - Push Fast Game
-* [Test 2]({filename}embedded_test_2.compress){: class="download" } - Time Keep Game
-* [Test 3]({filename}embedded_test_3.compress){: class="download" } - Küchenwecker
+* [Test 1](embedded_test_1.compress){: class="download" } - Push Fast Game
+* [Test 2](embedded_test_2.compress){: class="download" } - Time Keep Game
+* [Test 3](embedded_test_3.compress){: class="download" } - Küchenwecker

@@ -5,7 +5,7 @@ parent: uebersicht.md
 # Übungsaufgabe
 
 !!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
-    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
 
 * Entwurf einer universeller Zählerkomponente
 * Erkennung eines Tastendrucks
@@ -21,11 +21,11 @@ aus:
 Die vier 7-Segment Anzeigen werden für die Ausgabe der Zeit verwendet (hier 0 Minuten, 13 Sekunden und 5
 Zehntelsekunden):
 
-![Stopwatch auf Basys2 Board]({filename}stopwatch_basys2.png)
+![Stopwatch auf Basys2 Board](stopwatch_basys2.png)
 
 # Vorbereitung
 
-* [Projektordner]({filename}vhdl_uebung_5.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_5.compress){: class="download" } herunterladen und entpacken
 * Projekt <code>stopwatch.xise</code> öffnen
 
 # Entwicklung einer universellen Zählerkomponente
@@ -51,12 +51,12 @@ verknüpft)
 * Wähle die Testbench <code>counter_tb</code> (Datei <code>counter_tb.vhd</code>)
 * Starte die Simulation mittels *Simulate Behavioral Model*
 
-![XISE Simulation View]({filename}xise_simulation.png)
+![XISE Simulation View](xise_simulation.png)
 
 Beim Durchlaufen der Testbench werden etwaige Fehler des Design angezeigt. Eine erfolgreiche Testbench endet ohne
 Fehlerausgaben:
 
-![XISE Simulation View]({filename}counter_simulation.png)
+![XISE Simulation View](counter_simulation.png)
 
 # Tastendruck Erkennung
 ## Spezifikation
@@ -66,7 +66,7 @@ der Ausgang <code>detect_o</code> für einen Taktzyklus lang auf <code>1</code> 
 
 ## Timingdiagramm
 
-![Timingdiagramm]({filename}uebung5_timing.svg.tex)
+![Timingdiagramm](uebung5_timing.svg.tex)
 
 ## Implementierung
 Bearbeite dazu die Datei <code>button_detect.vhd</code>. Die beiden Register <code>button_reg1</code> und <code>button_reg2</code> dienen der

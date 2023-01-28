@@ -9,7 +9,7 @@ next: tutorial2.md
     sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
     Lizenz und somit auch dieses Tutorial.
 
-    Eine Kopie der Unterlagen kann man [hier]({filename}grd1-de-manual.pdf){: class="download" } herunterladen.
+    Eine Kopie der Unterlagen kann man [hier](grd1-de-manual.pdf){: class="download" } herunterladen.
 
 # Entstehungsgeschichte zu Linux
 <span class="badge">30 Minuten</span>

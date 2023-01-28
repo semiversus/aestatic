@@ -16,7 +16,7 @@ prellen lässt. Daher die Bezeichnung *Tastenprellen* oder genauer *Kontaktprell
 
 Im folgenden Oszibild sieht man ein solches Prellen, welches in diesem Fall beim Loslassen der Taste aufgenommen wurde (0V entspricht *geschlossen*, 5V entspricht *offen*):
 
-![Tastenprellen]({filename}tastenprellen.png)
+![Tastenprellen](tastenprellen.png)
 
 Im Bild sieht man das Prellen über eine Zeitdauer von ca. 1.5ms . Dies ist ein typischer Wert, kann aber je nach Bauart
 auch stark variieren.

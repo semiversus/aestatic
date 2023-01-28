@@ -18,12 +18,12 @@ auch genutzt werden.
 
 * Durch Öffnen der Datei DICbian.ova wird das Image importiert. Im Dialog "Appliance importieren" auf "Importieren" klicken.
 
-![DICbian importieren]({filename}dicbian_import.png)
+![DICbian importieren](dicbian_import.png)
 
 * In Virtualbox "DICbian" auswählen und mittels Doppelklick starten
 
 * Nach dem Bootvorgang wartet der Login
 
-![DICbian importieren]({filename}dicbian_login.png)
+![DICbian importieren](dicbian_login.png)
 
 * Benutzername ist <code>dic</code>, Passwort ist <code>dic</code> (das root-Passwort ist <code>htl</code>)

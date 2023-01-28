@@ -8,11 +8,15 @@ authors = ["Günther Jena <guenther@jena.at>"]
 python = "^3.7"
 markdown = "^3.4.1"
 jinja2 = "^3.1.2"
+libsass = "^0.22.0"
 
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
-aestatic = 'aestatic:__main__'
+aestatic = 'aestatic.__main__:main'
+
+[virtualenvs]
+in-project = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

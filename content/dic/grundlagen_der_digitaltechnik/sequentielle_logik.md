@@ -11,7 +11,7 @@ Ein Speicherelement kann ein Bit speichern und besitzt zwei stabile Zusände (0 
 
 ## Prinzip der Rückkopplung
 
-![Latch-Realisierung mittels Multiplexer]({filename}latch_mux.svg)
+![Latch-Realisierung mittels Multiplexer](latch_mux.svg)
 
 Speicherelemente beinhalten immer eine Art von Rückkopplung, um den Zustand speichern zu können. Bei der dargestellten Schaltung wird ein Multiplexer so verschalten, dass ein Eingang direkt mit dem Ausgang verbunden ist. Dadurch ergibt sich folgende Funktionalität:
 
@@ -26,7 +26,7 @@ Laut Definition ist ein *Latch* ein Speicherelement, welches abhängig vom Pegel
 
 ## Transparentes RS Latch
 
-![Latch-Realisierung mittels NOR Gatter]({filename}rs_latch_nor.svg)
+![Latch-Realisierung mittels NOR Gatter](rs_latch_nor.svg)
 
 Anhand der Schaltung und des Impulsdiagramm können wir die Funktionsweise des RS Latch nachvollziehen. Angenommen wird ein Anfangszustand von %%Q%% gleich 0 und %%\overline{Q}%% gleich 1.
 Im Impulsdiagramm sieht man folgenden Signalverlauf:
@@ -53,19 +53,19 @@ Aufgrund des Verhaltens können wir folgende Punkte zusammen fassen:
 
 Das hier gezeigt RS Latch ist mittels <code>NOR</code>-Gatter aufgebaut, deswegen spricht man auch vom RS-NOR-Latch. Im folgenden sieht man ein RS Latch, welches mittels <code>NAND</code>-Gatter aufgebaut ist. Man spricht dann vom RS-NAND-Latch.
 
-![Latch-Realisierung mittels NAND Gatter]({filename}rs_latch_nand.svg)
+![Latch-Realisierung mittels NAND Gatter](rs_latch_nand.svg)
 
 ## Taktzustandgesteuertes RS Latch
 
 Bei einem taktzustandgesteuertem RS Latch wird ein zusätzlicher Eingang <code>C</code> hinzugefügt. Von diesem Eingang <code>C</code> hängt nun ab, ob das Latch *transparent* (<code>R</code> und <code>S</code> können den Zustand ändern) oder ob es im *Halte* Modus betrieben wird. Im *Halte* Modus können die Eingänge <code>R</code> und <code>S</code> den Zustand nicht ändern, der momentane Zustand wird also gehalten.
 
-![Taktzustandsgesteuertes RS Latch]({filename}rs_latch_taktzustandsgesteuert.svg)
+![Taktzustandsgesteuertes RS Latch](rs_latch_taktzustandsgesteuert.svg)
 
 ## Taktzustandgesteuertes D Latch
 
 In der Praxis gibt es viele Anwendungen, in denen ein Bit gespeichert werden soll. Die Schaltung eines taktzustandgesteuerten RS Latch wird also so erweitert, dass ein einzelner Eingang die Funktion von <code>R</code> und <code>S</code> übernimmt.
 
-![Taktzustandsgesteuertes D Latch]({filename}d_latch.svg)
+![Taktzustandsgesteuertes D Latch](d_latch.svg)
 
 Hier werden die ursprünglichen Eingänge <code>R</code> und <code>S</code> durch den Eingang <code>D</code> ersetzt. Dieser Eingang hat steuert direkt den ursprünglichen *Set*-Eingang an und in invertierter Form den ursprünglichen *Reset*-Eingang. Für den Eingang <code>C</code> gleich 1 gilt: Ist Eingang <code>D</code> gleich 1 wird das RS Latch gesetzt, bei <code>D</code> gleich 0 wird es zurückgesetzt. Ist der Eingang <code>C</code> auf 0 ist das D Latch im *Halte* Modus.
 
@@ -76,7 +76,7 @@ Es gibt viele Anwendungen, die ein Speicherelement benötigen, welches auf eine 
 ## D Flip-Flop
 Um dies zu erreichen werden zwei Latches miteinander kombiniert:
 
-![Einflanken-getriggertes Flip-Flop]({filename}d_flipflop.svg)
+![Einflanken-getriggertes Flip-Flop](d_flipflop.svg)
 
 Ist der Eingang <code>C</code> gleich 1, so ist das Master Latch *transparent* und das Slave Latch im *Halte* Zustand. Ist der Eingang <code>C</code> gleich 0, hält das Master Latch seinen Zustand und das Slave Latch ist transparent. Wenn <code>C</code> also von 0 auf 1 wechselt, wird der Zustand am Eingang <code>D</code> gespeichert und am Ausgang ausgegeben. Man spricht in diesem Fall von einem Flip-Flop, das auf die positive Flanke des Signals <code>C</code> reagiert. Die Flankentriggerung wird im DIN Symbol mittels einem Dreieck am Eingang symbolisiert.
 
@@ -97,14 +97,14 @@ J|K|%%Q%%|%%\overline{Q}%%|Beschreibung
 
 Hier wird also das gleichzeitige Setzen der Eingänge genutzt, um eine neue Funktion einzuführen: Das Invertieren des aktuellen Zustandes.
 
-![JK Flip-Flop]({filename}jk_flipflop.svg)
+![JK Flip-Flop](jk_flipflop.svg)
 
 ## T Flip-Flop
 Ein T Flip-Flop reagiert auf eine Taktflanke und hat einen Eingang. Der Eingang gibt an, ob der Zustand beibehalten werden soll (<code>T</code>=0) oder ob er wechseln soll (<code>T</code>=1).
 
-![T Flip-Flop]({filename}t_flipflop.svg)
+![T Flip-Flop](t_flipflop.svg)
 
 ## Asynchrone Eingänge
 Je nach Bauart können auch noch zusätzliche asynchrone Eingänge vorhanden sein. Diese <code>asynchronen</code> Eingänge verändern den Zustand unabhängig vom Taktsignal. So kann ein asynchroner Reset genutzt werden, das Flip-Flop unabhängig vom Takt in einen definierten Zustand zu bringen.
 
-![Asynchrone Eingänge]({filename}d_flipflop_async.svg)
+![Asynchrone Eingänge](d_flipflop_async.svg)

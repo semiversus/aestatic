@@ -21,7 +21,7 @@ parent: ../uebersicht.md
 * ca. 30 Punkte
 
 # Frühere Tests
-* [Test 1](test1.html) ([Musterlösung]({filename}vhdl_test_1_loesung.compress){: class="download" })
-* [Test 2](test2.html) ([Musterlösung]({filename}vhdl_test_2_loesung.compress){: class="download" })
-* [Test 3](test3.html) ([Musterlösung]({filename}vhdl_test_3_loesung.compress){: class="download" })
-* [Test 4](test4.html) ([Musterlösung]({filename}vhdl_test_4_loesung.compress){: class="download" })
+* [Test 1](test1.html) ([Musterlösung](vhdl_test_1_loesung.compress){: class="download" })
+* [Test 2](test2.html) ([Musterlösung](vhdl_test_2_loesung.compress){: class="download" })
+* [Test 3](test3.html) ([Musterlösung](vhdl_test_3_loesung.compress){: class="download" })
+* [Test 4](test4.html) ([Musterlösung](vhdl_test_4_loesung.compress){: class="download" })

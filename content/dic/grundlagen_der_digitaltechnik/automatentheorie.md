@@ -56,7 +56,7 @@ Bei der Ausgabefunktion gibt es zwei verschiedene Definitionen: Einmal hängt di
 
 Dies kann in folgendem Diagramm zusammengefasst werden:
 
-![Mealy- und Moore-Automat]({filename}moore_mealy.svg)
+![Mealy- und Moore-Automat](moore_mealy.svg)
 
 Es ist möglich, einen gegebenen Mealy-Automaten in einen Moore-Automaten umzuwandeln und umgekehrt. Für viele Aufgabenstellungen kommt der Mealy-Automat mit weniger Zuständen aus, da die Eingänge auch direkt die Ausgänge beeinflussen können. Um das selbe zu erreichen, benötigt der Moore-Automat mehr Zustände, da die Ausgänge immer vom aktuellen Zustand abgeleitet werden.
 
@@ -104,7 +104,7 @@ Bisher kamen wir mit einer rein mathematischen Darstellung aus. In der Praxis is
 
 Die Darstellungsform für Mealy- oder Moore-Automat unterscheiden sich:
 
-![Graphische Darstellung: Mealy- und Moore-Automat]({filename}moore_mealy_graphen.svg)
+![Graphische Darstellung: Mealy- und Moore-Automat](moore_mealy_graphen.svg)
 
 Zustände werden als Kreise dargestellt. Die Bezeichnung des Zustands befindet sich innerhalb des Kreises. Der Startzustand wird mit einem Pfeil markiert, der keinen Zustand als Ursprung hat (hier <code>Z0</code>). Die Übergänge werden mittels Pfeilen dargestellt. Der Beschreibung des Pfeils enthält die Eingabe, die für diesen Zustandswechsel notwendig ist. Beim Mealy-Automat sind die Ausgaben vom Zustand und der Eingabe abhängig, deshalb wird die Ausgabe in der Beschreibung des entsprechenden Pfeils hinzugefügt. Beim Moore-Automat ist die Ausgabe nur vom Zustand abhängig, deshalb wird die Ausgabe innerhalb des Kreises hinzugefügt.
 
@@ -113,6 +113,6 @@ Bisher gingen wir von allgemeinen Ein- und Ausgaben aus. In der Digitaltechnik s
 
 Mit <code>n</code> Flip-Flops lassen sich <code>2^n</code> Zustände darstellen.
 
-![Digitale Automaten]({filename}moore_mealy_logic.svg)
+![Digitale Automaten](moore_mealy_logic.svg)
 
 Bei den digitalen Automaten kommt neben dem schon bekannten Moore- und Mealy-Automat noch der Medwedew-Automat dazu. Dieser endliche Automat hat keine Ausgabefunktion sondern stellt die Ausgänge der einzelnen Speicherelemente direkt als Ausgänge zur Verfügung. Bei der Erstellung eines Medwedew-Automat müssen daher die Zustände entsprechend der gewünschten Ausgänge gewählt werden. Der Medwedew-Automat ist eine Sonderform des Moore-Automaten.

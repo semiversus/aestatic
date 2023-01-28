@@ -6,7 +6,7 @@ parent: uebersicht.md
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
 !!! panel-info "Informationen im Datenblatt"
-    Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf){: class="download" }
+    Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
     * *Seite 71-86*: Timer0 (8 Bit)
@@ -25,8 +25,8 @@ parent: uebersicht.md
 !!! panel-info "Anwendungen"
     Je nach Anwendung liefert die folgende Übersicht eine Hilfestellung beim Einstellen der Register:
 
-    * **Timer0**: [PWM]({filename}timer0_pwm.svg), [Periodische Events]({filename}timer0_ctc.svg), [Zählen]({filename}timer0_count.jpg)
-    * **Timer1**: [PWM]({filename}timer1_pwm.jpg), [Periodische Events]({filename}timer1_ctc.jpg), [Zählen]({filename}timer1_count.jpg), [Zeiten messen]({filename}timer1_measure.jpg)
+    * **Timer0**: [PWM](timer0_pwm.svg), [Periodische Events](timer0_ctc.svg), [Zählen](timer0_count.jpg)
+    * **Timer1**: [PWM](timer1_pwm.jpg), [Periodische Events](timer1_ctc.jpg), [Zählen](timer1_count.jpg), [Zeiten messen](timer1_measure.jpg)
 
 # Allgemeines
 Ein *Timer* ist ein spezieller Zähler, der Ereignisse zählt. Diese Ereignisse können sich auch vom Prozessortakt ableiten
@@ -44,7 +44,7 @@ den Nachteil, dass der Timer teilweise recht komplex in der Anwendung sein kann.
 Der ATMega16 enthält drei Timer. Timer 0 und 2 sind 8 Bit Timer, Time 1 ist ein 16 Bit Timer.
 
 # Timer 0 (8 Bit Timer)
-<figure><img src="{filename}avr_timer0.svg"><figcaption>Blockschaltbild des Timer 0 (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+<figure><img src="avr_timer0.svg"><figcaption>Blockschaltbild des Timer 0 (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
 Das Blockschaltbild des Timer 0 zeigt den prinzipiellen Aufbau des Timers welcher im folgenden beschrieben wird.
 
@@ -158,4 +158,4 @@ Siehe auch hier im Kapitel [PWM Erzeugung](avr_pwm.html).
 
 # Pins
 
-<figure><img src="{filename}avr_timer_pins.svg"><figcaption>Pins mit Timerfunktionalität (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+<figure><img src="avr_timer_pins.svg"><figcaption>Pins mit Timerfunktionalität (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>

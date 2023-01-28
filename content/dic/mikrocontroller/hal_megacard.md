@@ -3,7 +3,7 @@ parent: uebersicht.md
 
 # Allgemeines
 
-* Download des [Megacard Templates]({filename}embedded_template_hal.compress){: class="download" }
+* Download des [Megacard Templates](embedded_template_hal.compress){: class="download" }
 
 Die Verwendung der Hardwareabstraktion (kurz *HAL* für engl. *Hardware Abstraction Layer*) wird im folgenden erläutert.
 
@@ -157,4 +157,3 @@ Dezimaldarstellung rechnet. In diesem Beispiel wird statt in Grad Celsius in 1/1
     #!c
     int16 temperature=2782; // entspricht 27.82 Grad Celsius
     hal_lcd_printf(0, 0, "%d.%02d", temperature/100, temperature%100); // gibt "27.82" aus
-

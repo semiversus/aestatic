@@ -16,21 +16,21 @@ In bestimmten Anwendung ist die Übertragung von Gleichspannungsanteilen nicht m
 ## NRZ (Non Return to Zero)
 Im einfachsten Fall wird den logischen Zustände 0 und 1 ein Logikpegel auf der physischen Leitung zugeordnet.
 
-![NRZ]({filename}nrz.svg.tex)
+![NRZ](nrz.svg.tex)
 
 Bei der RS232 Schnittstelle steht (nicht wie im obigen Beispiel) eine negative Spannung für logisch 1 und eine positive Spannung für logisch 0.
 
 ### Bitstuffing
 Ein Nachteil bei der NRZ Kodierung sind die fehlenden Flanken bei der Übertragung von vielen gleichen Symbolen (viele logische 0 oder 1). Um für solche Fälle zusätzliche Taktflanken zu erzeugen, kann durch *Bitstuffing* (oder deutsch Bitstopfen) ein zusätzliches invertiertes Bit eingefügt werden. Mit *Bitweite* beschreibt man dabei die Anzahl der Bits mit gleichem Pegel die zum Einfügen eines *Stopfbits* führt. Der Empfänger muss nach dem gleichen Prinzip dieses Stopfbit wieder entfernen.
 
-<figure><img src="{filename}bitstuffing.svg"><figcaption>Bitstopfen mit Weite 5 (Bild: <a href="https://commons.wikimedia.org/wiki/File:Bitstuffing.svg">Mik81</a> Public Domain)</figcaption></figure>
+<figure><img src="bitstuffing.svg"><figcaption>Bitstopfen mit Weite 5 (Bild: <a href="https://commons.wikimedia.org/wiki/File:Bitstuffing.svg">Mik81</a> Public Domain)</figcaption></figure>
 
 Am obigen Beispiel sieht man das Einfügen eines Stopfbits bei Bitweite 5.
 
 ## NRZI
 Die *Non Return to Zero Invert* Kodierung ordnet einem der beiden Bit-Werte den bereits anliegenden Leitungszustand zu, dem anderen Bit-Wert einen Zustandswechsel (Invert). Daraus ergibt sich unmittelbar die Polaritätsfreiheit bei differentieller Übertragung: Ein Verpolen der Übertragungsleitung ändert nicht die Bitfolge. Wenn der Zustand, der keine Leitungszustandsänderung bringt, zu oft übertragen wird, kann auch durch die fehlenden Flanken die Synchronisation verloren gehen. Eine Lösung ist hier ebenfalls das Bitstuffing.
 
-![NRZI]({filename}nrzi.svg.tex)
+![NRZI](nrzi.svg.tex)
 
 Bei diesem Beispiel wird bei logisch 1 der Pegel geändert, bei logisch 0 beibehalten.
 
@@ -43,7 +43,7 @@ Hierdurch wird erreicht, dass
 
 Ein Nachteil dabei ist, dass sich die erforderliche Symbolrate am Übertragungskanal verdoppelt.
 
-![Machester Kodierung]({filename}manchester.svg.tex)
+![Machester Kodierung](manchester.svg.tex)
 
 Beim *differentiellen Manchestercode* steht ein Polaritätswechsel am Taktanfang für eine logische Null (zwei Flankenwechsel pro Bit), bei einer logischen Eins erfolgt kein Polaritätswechsel am Taktanfang (ein Flankenwechsel pro Bit).
 

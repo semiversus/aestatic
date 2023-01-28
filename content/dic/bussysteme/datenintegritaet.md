@@ -24,7 +24,7 @@ falsch übertragen.
 # Prüfsummen
 ## Beispiel EAN13
 
-![Strichkode]({filename}ean13.png)
+![Strichkode](ean13.png)
 
 Die *European Article Number* (EAN) stellt ein System zur Produktkennzeichnung dar. Hier wird eine Prüfsumme verwendet,
 um mögliche Lese- oder Tippfehler zu erkennen. Die letzt Ziffer stellt die Prüfziffer dar. Diese wird berechnet, indem
@@ -57,7 +57,7 @@ Durch das Paritätsbit können Einzelbitfehler erkannt werden. Wenn in einem Dat
 ## Blockparität
 Bei der Blockparität (auch Kreuzsicherung genannt) werden die einzelnen Bits in einer Matrix angeordnet und dann jeweils über die Zeilen und Spalten die Parität erweitert. Es ergibt sich auch eine Kreuzparität über die Spalten- und Zeilen-Paritätsbits.
 
-![Kreuzsicherung]({filename}kreuzsicherung.svg)
+![Kreuzsicherung](kreuzsicherung.svg)
 
 In den Beispielen wird die gerade Parität verwendet. Die Paritätsbits werden vom Sender beim Senden entsprechend erweitert und anschließend vom Empfänger kontrolliert. Bei einem Einzelbitfehler kann die Position ermittelt werden, egal um welches Bit es sich handelt (Datenbereich, Paritätsbereich oder das Kreuzparitätsbit).
 

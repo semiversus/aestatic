@@ -17,17 +17,17 @@ Es gibt je nach Programmierbarkeit folgende Klassifizierungen:
 # Kombinatorische Grundstruktur
 Einfache programmierbare Logikbausteine realisieren meist eine Grundstruktur, die es ermöglicht, die disjunktive Normalform von booleschen Gleichungen zu realisieren. Dazu werden die Eingänge mittels eines UND-Arrays zu Mintermen zusammengefasst. Die Minterme werden dann durch ein ODER-Array zur disjunktiven Normalform zusammengefasst und an die Ausgangspins geführt.
 
-![Realisierung mittels disjunktiver Minimalform]({filename}pla_extended.svg)
+![Realisierung mittels disjunktiver Minimalform](pla_extended.svg)
 
 Mit dieser Struktur können alle kombinatorischen Schaltungen realisiert werden, die keine kombinatorische Rückkopplung oder Schleife enthält. Man  unterscheidet bei den verschiedenen Bauformen, ob das UND- oder das ODER-Array programmierbar ist. Wird eine vom Anwender programmierbare Verbindung nicht genutzt, wird sichergestellt, dass dieses Signal einen Pegel hat, der die Funktionsweise nicht beeinträchtigt. So wird im UND-Array eine nicht verwendete Leitung auf einem <code>1</code>-Pegel gehalten und im ODER-Array auf einem <code>0</code>-Pegel.
 
 Um die Darstellung zu vereinfachen werden die parallelen Eingänge der UND und ODER Gatter meist zusammengefasst:
 
-![Vereinfachte Darstellung]({filename}pla.svg)
+![Vereinfachte Darstellung](pla.svg)
 
 # Realisierung
 ## ROM Baustein
-![Realisierung mittels ROM]({filename}pla_rom.svg)
+![Realisierung mittels ROM](pla_rom.svg)
 
 Eine programmierbare Logik kann auch mit einem Speicher realisiert werden, wobei die Eingänge die Adresse darstellen und die Ausgänge sind die entsprechenden Datenausgänge. Der Speicherinhalt wird dadurch zur Darstellung einer Wahrheitstabelle.
 
@@ -50,4 +50,4 @@ PALs (Programmable Array Logic) werden heute nicht mehr eingesetzt. Sie sind abe
 ## GAL
 Eine Weiterentwicklung der *PAL*s stellen die *GAL* (Generic Array Logic) Bausteine von Lattice dar. Diese sind durch UV-Licht oder elektrisch löschbar und dadurch wiederbeschreibbar. An jedem Ausgang befindet sich eine *OLMC* (Output Logic Macro Cell). Diese Ausgangszelle enthält neben der Option, den Ausgang zu invertieren auch die Möglichkeit, ein Flipflop zu verwenden. Es besteht die Möglichkeit, Signale der OLMC wieder als Eingänge zu benutzen. Es ist möglich, den Ausgangstreiber hochohmig zu schalten und damit diesen Pin als Eingang zu benutzen.
 
-![Generic Array Logic]({filename}gal.svg)
+![Generic Array Logic](gal.svg)

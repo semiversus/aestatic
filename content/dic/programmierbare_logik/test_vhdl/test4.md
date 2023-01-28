@@ -2,7 +2,7 @@ title: VHDL Test (4)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner]({filename}vhdl_test_4.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_test_4.compress){: class="download" } herunterladen und entpacken
 * Insgesamt gibt es <span class="badge">20 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
@@ -14,7 +14,7 @@ parent: uebersicht.md
 Um Daten zu Übertragen wird oft die serielle Schnittstelle verwendet. In diesem Beispiel soll ein Transmitter entsprechend
 RS232 realisiert werden.
 
-<figure><img src="{filename}../../bussysteme/rs232_timing.png"><figcaption>RS232 Timingdiagramm (Bild: <a href="https://commons.wikimedia.org/wiki/File:RS-232_timing.png">Gerald.deppe</a> Public Domain)</figcaption></figure>
+<figure><img src="../../bussysteme/rs232_timing.png"><figcaption>RS232 Timingdiagramm (Bild: <a href="https://commons.wikimedia.org/wiki/File:RS-232_timing.png">Gerald.deppe</a> Public Domain)</figcaption></figure>
 
 Zum Testen soll mittels der acht Umschaltern (<samp>SW0</samp> bis <samp>SW7</samp>) ein 8 Bit Datenwort definiert werden und
 durch Drücken des Tasters <samp>BTN0</samp> wird dieses dann *versendet*. Zum Versenden wird der Pegel der Sendeleitung
@@ -63,7 +63,7 @@ dem <code>data_i</code> Vektor zu holen (z.B. <code>data_i(0)</code> holt Bit 0 
 Dieses Blockschaltbild zeigt die einzelnen Komponenten der <samp>uart_tx</samp> Komponente. Die resultierende VHDL
 Beschreibung sollte äquvivalent zu diesem Blockschaltbild sein.
 
-![Blockschaltbild uart_tx]({filename}test4_uart_tx.jpg)
+![Blockschaltbild uart_tx](test4_uart_tx.jpg)
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>uart_tx_tb.vhd</samp>.
@@ -78,7 +78,7 @@ Einige benötigte Signale sind bereits vordefiniert.
 
 Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
-![Blockschaltbild transmitter]({filename}test4_transmitter.jpg)
+![Blockschaltbild transmitter](test4_transmitter.jpg)
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>transmitter_tb.vhd</samp>.
@@ -100,7 +100,7 @@ In der Datei <samp>transmitter.ucf</samp> ist nur das Signal <code>clk</code> de
 * <code>led_tx_o</code> liegt an Pin <code>M5</code>
 * <code>led_busy_o</code> liegt an Pin <code>M11</code>
 
-<figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+<figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 ## Test am Board
 <span class="badge">1 Punkt</span>

@@ -55,20 +55,20 @@ Im folgenden Beispiel senden drei Teilnehmer ein Packet. Die Identifikationsnumm
 * <samp>0x12A</samp> - Binär <samp>001 0010 1010</samp>
 * <samp>0x147</samp> - Binär <samp>001 0100 0111</samp>
 
-![CAN Arbitrierung]({filename}can_arbitrierung.svg)
+![CAN Arbitrierung](can_arbitrierung.svg)
 
 Als erstes scheidet ID 0x147 aus. Bei Bit <samp>ID6</samp> wird vom Teilnehmer eine logische 1 gesendet, am Bus hat sich
 aber die logische 0 der beiden anderen Teilnehmer durchgesetzt. Gleiches passiert bei ID 0x12A bei Bit <samp>ID3</samp>.
 
 # Sicherungsschicht
-<figure><img src="{filename}can_telegramm.svg"><figcaption>Aufbau eines CAN Telegramms im Base Frame Format (Bild: <a href="https://commons.wikimedia.org/wiki/File:CAN-Bus-frame_in_base_format_without_stuffbits.svg">Endres~commonswiki</a> CC BY-SA 3.0)</figcaption></figure>
+<figure><img src="can_telegramm.svg"><figcaption>Aufbau eines CAN Telegramms im Base Frame Format (Bild: <a href="https://commons.wikimedia.org/wiki/File:CAN-Bus-frame_in_base_format_without_stuffbits.svg">Endres~commonswiki</a> CC BY-SA 3.0)</figcaption></figure>
 
 Ein Datentelegramm beteht aus folgenden Feldern:
 
 * **Start of Frame** - markiert den Start eines Frames und ist logisch 0
 * **Arbitration Field** - überträgt die 11 Bit Identifikation und ein **Remote Transmission Request** Flag
 * **Control**
-  * **ID Extension** Bit - muss logisch 0 für eine 11 Bit Identifikation sein (logisch 1 bei 29 Bit) 
+  * **ID Extension** Bit - muss logisch 0 für eine 11 Bit Identifikation sein (logisch 1 bei 29 Bit)
   * **Data Length** - Anzahl an Datenbytes (0 bis 8)
 * **Data** - Datenbytes (im Bild wird ein Datenbyte übertragen)
 * **CRC Field** - CRC Prüfsumme

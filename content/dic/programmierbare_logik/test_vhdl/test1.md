@@ -2,7 +2,7 @@ title: VHDL Test (1)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner]({filename}vhdl_test_1.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_test_1.compress){: class="download" } herunterladen und entpacken
 * Insgesamt gibt es <span class="badge">29 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
@@ -32,7 +32,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Ausgang <code>timer_enable_o</code> ist im Zustand <code>DOZE</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 * Der Ausgang <code>timer_clear_o</code> ist im Zustand <code>LIGHT</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 
-![FSM für Lichtsteuerung]({filename}test1_led_control_fsm.svg.tex)
+![FSM für Lichtsteuerung](test1_led_control_fsm.svg.tex)
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>led_control_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
@@ -102,7 +102,7 @@ Ein PWM besteht aus einem Zähler, der ständig nach oben zählt. Bei einem Übe
 an. Der Zählerstand wird verglichen mit einem vorgegebenen Pegel(*N1*) - sind diese gleich wird der Ausgang auf '0' gesetzt.
 Bei einem Zählerstand von 0 wird der Ausgang auf '1' gesetzt (es sei den der vorgegebene Pegel ist 0).
 
-<figure><img src="{filename}test1_pwm.svg"><figcaption>PWM Signalerzeugung (Bild: <a href="https://commons.wikimedia.org/wiki/File:DMT_Messung-PuBrei.svg">Saure</a> CC BY-SA 3.0)</figcaption></figure>
+<figure><img src="test1_pwm.svg"><figcaption>PWM Signalerzeugung (Bild: <a href="https://commons.wikimedia.org/wiki/File:DMT_Messung-PuBrei.svg">Saure</a> CC BY-SA 3.0)</figcaption></figure>
 
 * Bearbeite die Datei <samp>pwm_generator.vhd</samp>.
 * Der interne Zähler <code>counter_reg</code> zählt bei jeder steigenden Taktflanke nach oben
@@ -113,7 +113,7 @@ Bei einem Zählerstand von 0 wird der Ausgang auf '1' gesetzt (es sei den der vo
 * Für den Vergleich des internen Zählers mit 0 wandle die 0 mittels <code>to_unsigned(0, WIDTH)</code> in ein <samp>unsigned</samp> um
 * Der Ausgang <code>pwm_o</code> wird vom Registers <code>pwm_reg</code> angesteuert
 
-![Blockschaltbild für PWM Erzeugung]({filename}test1_pwm_generator.jpg)
+![Blockschaltbild für PWM Erzeugung](test1_pwm_generator.jpg)
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>pwm_generator_tb.vhd</samp>.
@@ -150,7 +150,7 @@ Einige benötigte Signale sind bereits vordefiniert.
 
 Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
-![Top Level für LED PWM]({filename}test1_led_pwm.jpg)
+![Top Level für LED PWM](test1_led_pwm.jpg)
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>led_pwm_tb.vhd</samp>.

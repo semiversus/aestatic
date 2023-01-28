@@ -4,7 +4,7 @@ parent: uebersicht.md
 # Allgemeines
 
 !!! panel-info "Übungsblatt"
-    Zu diesem Teil gibt es ein [Übungsblatt]({filename}uebung_bitmanipulation.pdf){: class="download" }
+    Zu diesem Teil gibt es ein [Übungsblatt](uebung_bitmanipulation.pdf){: class="download" }
 
 Um bitweise Verknüpfungen zu machen gibt es unter C im wesentlichen vier Operatoren: <code>&</code> (für bitweises *AND*), <code>|</code> (für bitweises *OR*), <code>^</code> (für bitweises *XOR*) und <code>~</code> (für bitweise *NOT*). Die ersten drei Operatoren benötigen immer zwei Operanden, z.B. <code>var_a = var_a & var_b;</code>. Die bitweise Invertierung kann nur auf einen Operanden angewendet werden, z.B. <code>vara = ~varb;</code>.
 

@@ -5,8 +5,8 @@ parent: uebersicht.md
 Eine typische Anwendung für Transistoren ist das Schalten von Lastströmen. Der einfachste Fall ist eine Last, die keinen
 Bezug zum Massepontential braucht. Dies nennt man *Low-Side* schalten.
 
-# Low-Side Schalter 
-![Prinzipschaltbild]({filename}bipolarer_transistor_schalter.svg)
+# Low-Side Schalter
+![Prinzipschaltbild](bipolarer_transistor_schalter.svg)
 
 Für dieses Beispiel wird ein [TIP31A](https://www.onsemi.com/pub/Collateral/TIP31A-D.PDF){: class="external" } (NPN
 Transistor %%I_{C Max}%%=3A, %%U_{CE Max}%%=60V) verwendet.
@@ -18,7 +18,7 @@ eingeschaltete Zustand.
 Bei der Auswahl des Transistors ist es wichtig, dass die im ausgeschalteten Zustand anliegende Spannung %%V+%% an Kollektor
 und Emitter nicht zu einer Beschädigung führt. Im Datenblatt ist diese Maximale Spannung von %%U_{CE}%% meist mit %%U_{CE0}%%
 bzw. %%V_{CE0}%% beschrieben. Für den gegebenen Transistor ist diese Spannung 60V, d.h. die Betriebsspannung darf nicht
-höher 60 Volt sein. 
+höher 60 Volt sein.
 
 Ein zweiter Punkt der meist kein Problem darstellt ist der Abschaltstrom des Transistors. Wenn durch die Basis kein Strom
 fließt, aber eine Spannung %%U_{CE}%% anliegt so ist der Strom %%I_C%% nicht 0 sondern es fließt ein sehr kleiner *Abschaltstrom*.
@@ -44,7 +44,7 @@ Daraus ergibt sich für die Gesamtleistung %%P_{Transistor}=I_B \cdot U_{BE} + I
 Basisdiode viel kleiner ist gilt %%P_{Transistor} \approx I_C \cdot U_{CE Sat}%%.
 
 ## Berechnung des Basiswiderstand
-<figure><img src="{filename}transistor_npn_esb.svg"><figcaption>Vereinfachtes Ersatzschaltbild (Bild: <a href="https://commons.wikimedia.org/wiki/File:Simplified_Transportmodel_of_Bipolartransistor.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
+<figure><img src="transistor_npn_esb.svg"><figcaption>Vereinfachtes Ersatzschaltbild (Bild: <a href="https://commons.wikimedia.org/wiki/File:Simplified_Transportmodel_of_Bipolartransistor.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
 
 Um den Basiswiderstand zu berechnen hilft das vereinfachte Ersatzschaltbild des Transistors. Dieses zeigt für die Basis
 einen Spannungsabfall über eine Diode. Der Kollektorstrom %%I_C%% wird durch eine Stromquelle dargestellt, welche mittels

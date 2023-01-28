@@ -7,7 +7,7 @@ Speicher haben die Aufgabe Information zu speichern. Bei digitalen Speichern ist
 ## Historische Speicher
 Zu den ersten digitalen und von einer Maschine verarbeitbaren Speicher zählt die [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte){: class="external" }, die 1890 zur Volkszählung in der USA von Herman Hollerith eingeführt wurde und bis in die 1970er verwendet wurde.
 
-<figure><img src="{filename}lochkarte.jpg"><figcaption>Lochkarte(Bild: <a href="https://commons.wikimedia.org/wiki/File:Lochkarte-white_hg.jpg">Hannes Grobe/AWI</a> CC BY 3.0)</figcaption></figure>
+<figure><img src="lochkarte.jpg"><figcaption>Lochkarte(Bild: <a href="https://commons.wikimedia.org/wiki/File:Lochkarte-white_hg.jpg">Hannes Grobe/AWI</a> CC BY 3.0)</figcaption></figure>
 
 # Unterteilung
 Die Unterteilung von Speicher kann durch verschiedene Eigenschaften erfolgen. Die wichtigsten Merkmale sind in den folgenden Abschnitten aufgeführt.
@@ -18,7 +18,7 @@ Bei einem flüchtigen Speicher (englisch volatile memory) ist eine Betriebsspann
 Im Detail betrachtet sind einige Verfahren für eine Zeitdauer von mehreren Jahren nicht flüchtig, durch Einflüße aus der Umgebung oder vom Verfahren selbst bedingt kann es aber zu einem Verlust der Information kommen.
 
 ## Speichermedium
-Informationen können auf viele verschiedene Arten gespeichert werden. Die historisch älteste Art ist die Speicherung mittels mechanischer Veränderung eines Materials (z.B. Lochkarte). Die Information kann aber auch über einen Schaltungszustand gespeichert werden (z.B. Relais oder Flip-Flop). Weitere Möglichkeiten sind die magnetische und optische Speicherung. 
+Informationen können auf viele verschiedene Arten gespeichert werden. Die historisch älteste Art ist die Speicherung mittels mechanischer Veränderung eines Materials (z.B. Lochkarte). Die Information kann aber auch über einen Schaltungszustand gespeichert werden (z.B. Relais oder Flip-Flop). Weitere Möglichkeiten sind die magnetische und optische Speicherung.
 
 ## Beschreibbarkeit
 Hier unterscheidet man in Nur-Lese Speicher, der in der Anwendung nur gelesen werden kann und Schreib-Lese Speicher, der in der Anwendung sowohl beschrieben als auch gelesen werden kann. Eine Sonderform ist der sogenannte Einmal-Schreiben-Mehrfach-Lesen Speicher (englisch Write Once Read Many oder WORM). Hier kann der Speicher einmal beschrieben und dann mehrfach gelesen werden.
@@ -46,10 +46,10 @@ Die Zugriffsgeschwindigkeit ist abhängig vom Aufbau einer Speicherzelle bzw. de
 Teilweise sind Schreib bzw. Löschvorgänge nicht ohne Degeneration des Materials möglich. So kommt es beim Löschvorgang von Flash-Speichern zu einer allmählichen Zerstörung der Oxidschicht.
 
 ## Resistenz gegen Umwelteinflüsse
-Je nach Aufbau der Speicherzelle können verschiedene Umwelteinflüsse die Information im Speicher beeinflussen. Ein magnetischer Speicher ist empfindlich gegenüber magnetischen Feldern. Bei Halbleiterspeicher können auch elektromagnetische Felder die Information verfälschen. 
+Je nach Aufbau der Speicherzelle können verschiedene Umwelteinflüsse die Information im Speicher beeinflussen. Ein magnetischer Speicher ist empfindlich gegenüber magnetischen Feldern. Bei Halbleiterspeicher können auch elektromagnetische Felder die Information verfälschen.
 # Halbleiterspeicher
 
 ## Ansteuerung mittels Adress-/Datenbus
 Halbleiterspeicher haben im Allgemeinen über sogenannte Busse angesprochen. Die Adresse wird über den Adressbus übermittelt und beschreibt die Stelle im Speicher auf die zugegriffen wird. Die Daten werden über den Datenbus gelesen bzw. wenn möglich geschrieben. Der Zugriff wird über einen Kontrollbus gesteuert, welcher Steuer- und Statussignale zusammenfasst.
 
-![Busse zur Ansteuerung von Speicher]({filename}adressbus.png)
+![Busse zur Ansteuerung von Speicher](adressbus.png)

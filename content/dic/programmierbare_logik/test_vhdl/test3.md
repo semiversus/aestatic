@@ -2,7 +2,7 @@ title: VHDL Test (3)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner]({filename}vhdl_test_3.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_test_3.compress){: class="download" } herunterladen und entpacken
 * Insgesamt gibt es <span class="badge">29 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
@@ -66,7 +66,7 @@ In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal <code>clk</code> def
 * <code>led1_o</code> ist die LED <samp>LD0</samp>
 * <code>led2_o</code> ist die LED <samp>LD1</samp>
 
-<figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+<figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 ## Test am Board
 <span class="badge">1 Punkt</span>
@@ -150,7 +150,7 @@ von <code>COUNTER_WIDTH</code> und <code>COUNTER_MAXIMUM</code> ein:
 
 Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
-![Top Level für Lights]({filename}test3_lights.jpg)
+![Top Level für Lights](test3_lights.jpg)
 
 Gegebenenfalls müssen noch Signale definiert werden.
 

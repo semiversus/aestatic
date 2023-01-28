@@ -5,7 +5,7 @@ next: uebung2.md
 # Übungsaufgabe
 
 !!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
-    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
 
 In dieser Übung nutzen wir vier Schalter des BASYS2 Boards (SW0 bis SW3) um damit eine 4 Bit Zahl einzugeben. Im FPGA
 soll eine Kombinatorik entworfen werden, um mittels dieser 4 Bit Zahl eine 7 Segment Anzeige anzusteuern.
@@ -25,7 +25,7 @@ Ein|Aus|Aus|Ein|9
 
 # Vorbereitung
 
-* [Projektordner]({filename}vhdl_uebung_1.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_1.compress){: class="download" } herunterladen und entpacken
 * Projekt <code>seven_segments.xise</code> öffnen
 
 # Top Level <code>seven_segments.vhd</code>
@@ -58,7 +58,7 @@ Ein|Aus|Aus|Ein|9
 
 ## Pinout
 Die Signale <code>switches_i</code>, <code>an_o</code> und <code>segments_o</code> finden sich im folgenden Pinout des BASYS2 Boards:
-<figure><img src="{filename}basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+<figure><img src="basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 Das Pinout wird in der Datei <code>seven_segments.ucf</code> beschrieben. Für dieses VHDL Modell sieht es wie folgt aus:
 
@@ -83,7 +83,7 @@ Das Pinout wird in der Datei <code>seven_segments.ucf</code> beschrieben. Für d
 
 ## 7-Segment Anzeige
 In der folgenden Abbildung sieht man die Anordnung der einzelnen Segmente:
-<figure><img src="{filename}basys2_7segment.svg"><figcaption>7-Segment Anzeige des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+<figure><img src="basys2_7segment.svg"><figcaption>7-Segment Anzeige des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 # Aufgabe 1 - Erweitern der kombinatorischen Beschreibung
     #!vhdl

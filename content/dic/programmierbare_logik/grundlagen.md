@@ -54,4 +54,4 @@ Ein Beispiel:
 
 Diese VHDL Datei beschreibt ein D FlipFlop, dessen Eingang <code>data_i</code> bei einer steigenden Flanke von <code>clk</code> gespeichert wird. Das Signal <code>data_o</code> gibt den aktuellen zustand des FlipFlops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
 
-![D-Flipflop]({filename}dff.svg.tex)
+![D-Flipflop](dff.svg.tex)

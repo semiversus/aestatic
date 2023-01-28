@@ -3,6 +3,6 @@
 
 {% block content %}
   <header><h1>Seite nicht gefunden oder entfernt!</h1></header>
-  <p>Zurück zum <a href="{{ SITEURL }}">Index</a> oder nutze die Suche:</p>
-  <form role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"><label for="search">Suche innerhalb semiversus.com</label><input type="text" class="form-control" placeholder="Suchbegriff" name="q" id="search"></form>
+  <p>Zurück zum <a href="{{ root_path }}">Index</a> oder nutze die Suche:</p>
+  <form role="search" action="{{ root_path }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"><label for="search">Suche innerhalb semiversus.com</label><input type="text" class="form-control" placeholder="Suchbegriff" name="q" id="search"></form>
 {% endblock %}

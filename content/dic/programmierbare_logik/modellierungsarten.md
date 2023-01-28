@@ -69,7 +69,7 @@ Die Funktion soll wie folgt sein:
 * ansonsten soll der Zählerstand um <code></code>value<code></code> erhöht werden.
 
 ### Schaltung
-![Schaltung]({filename}vhdl_example_1.svg.tex)
+![Schaltung](vhdl_example_1.svg.tex)
 
 ### VHDL Entity
 
@@ -105,7 +105,7 @@ Die Funktion soll wie folgt sein:
 
 ### Timingdiagramm
 
-![Timingdiagramm]({filename}vhdl_example_1_timing.svg.tex)
+![Timingdiagramm](vhdl_example_1_timing.svg.tex)
 
 ### Test des Designs
 

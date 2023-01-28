@@ -12,4 +12,4 @@ parent: ../../uebersicht.md
 1. [Unittests](unittests.html)
 
 # Tests
-1. [Mustertest]({filename}python_test.zip) <!--- ([Musterlösung]({filename}python_test_sample_solution.zip)) -->
+1. [Mustertest](python_test.zip) <!--- ([Musterlösung](python_test_sample_solution.zip)) -->

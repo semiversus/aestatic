@@ -3,7 +3,7 @@ parent: uebersicht.md
 
 # Allgemeines
 Die Übungen sollten gut kommentiert werden. Ein Programm kann hinsichtlich Programmgröße oder Ausführungsgeschwindigkeit
-optimiert werden. Als Hilfe eignet sich die [Kurzübersicht]({filename}avr_assembler_befehle.pdf){: class="download" }
+optimiert werden. Als Hilfe eignet sich die [Kurzübersicht](avr_assembler_befehle.pdf){: class="download" }
 der AVR Assembler Befehle.
 
 # Daten vertauschen

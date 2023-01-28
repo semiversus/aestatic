@@ -8,7 +8,7 @@ In der Nachrichtentechnik versteht man ein System als eine Anordnung von verbund
 Aufgabenstellung. Ein System kann im mathematischen Sinne als Funktion(en) verstanden werden, die einen Zusammenhang
 zwischen Ein- und Ausgängen herstellt.
 
-![Systeme]({filename}system.svg.tex)
+![Systeme](system.svg.tex)
 
 Je nachdem nach welcher der drei Komponenten (Eingang, Ausgang oder System) gesucht wird unterscheidet man:
 

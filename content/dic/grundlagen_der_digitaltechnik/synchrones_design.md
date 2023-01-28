@@ -15,7 +15,7 @@ Wenn Setup- und Hold-Zeiten eingehalten werden, wird nach der vom Bauteil abhän
 ## Metastabilität
 Ein Flip-Flop kennt zwei stabilie Zustände. Diese werden als logisch 0 bzw. logisch 1 bezeichnet, entsprechen also dem Zustand, der am Ausgang *Q* dargestellt wird. Wird nun durch eine Taktflanke der Zustand des Eingangs übernommen, so befindet sich das Flip-Flop wieder in einem stabilen Zustand. Das ganze System kann auch folgendermaßen dargestellt werden:
 
-![Metastabilität]({filename}metastability.png)
+![Metastabilität](metastability.png)
 
 Die Kugel stellt den Zustand dar. Die logisch 0 und 1 ist der stabile Zustand links und rechts vom Hügel. Das ganze System ist labil, wenn sich die Kugel auf der Spitze des Hügels befindet. Nun ist es abhängig von zufälligen Ereignissen, wohin der Zustand des Flip-Flops kippt.
 

@@ -6,7 +6,7 @@ parent: uebersicht.md
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
 !!! panel-info "Informationen im Datenblatt"
-    Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf){: class="download" }
+    Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
     * *Seite 144-145*: Blockschaltbild und allgemeine Information
@@ -31,7 +31,7 @@ Außerdem stehen drei mögliche Interrupts für die UART zur Verfügung:
 
 Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden näher erläutert.
 
-<figure><img src="{filename}avr_uart.svg"><figcaption>AVR UART (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+<figure><img src="avr_uart.svg"><figcaption>AVR UART (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
 # Konfigurations- und Statusregister
 ## USARTA

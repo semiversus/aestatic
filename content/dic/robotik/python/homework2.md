@@ -3,7 +3,7 @@ parent: uebersicht.md
 
 # TODO App (3 Punkte)
 
-Verwende folgendes Template um mit der Übung zu starten: [Download]({filename}todo.zip)
+Verwende folgendes Template um mit der Übung zu starten: [Download](todo.zip)
 
 Erstellt wird eine TODO App. Die Verwendung sieht hier als Beispiel so aus:
 

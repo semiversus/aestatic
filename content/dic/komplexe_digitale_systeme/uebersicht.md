@@ -4,7 +4,7 @@ parent: ../uebersicht.md
 # Inhalt
 ## Linux Tutorial
 * [Installation von Virtualbox mit DICbian](dicbian.html)
-* [Unterlagen der Tuxcadamy]({filename}grd1-de-manual.pdf){: class="download" } (stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
+* [Unterlagen der Tuxcadamy](grd1-de-manual.pdf){: class="download" } (stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
   Lizenz).
 * Weitere Infos zur [Tuxcadamy](https://www.tuxcademy.org/){: class="external" }
 * [Tutorial 1](tutorial1.html) - Übersicht über *Linux*
@@ -21,4 +21,4 @@ parent: ../uebersicht.md
 * [Prozesssynchronisation](synchronisation.html)
 
 ### Tests
-* [Test 1]({filename}test_rtos_1.pdf), ohne Musterlösung
+* [Test 1](test_rtos_1.pdf), ohne Musterlösung

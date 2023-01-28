@@ -27,7 +27,7 @@ In der Digitaltechnik wird durchwegs 2 als Basis(<code>B</code>) verwendet. Um m
 
 In der *IEEE 754* wird die Anzahl und Position der Bits für Mantisse und Exponent definiert:
 
-<figure><img src="{filename}float_ieeee_754.svg"><figcaption>Floating Point Darstellung mittels IEEE 754 (Bild: <a href="https://commons.wikimedia.org/wiki/File:IEEE-754-single.svg">RokerHRO</a> Public Domain)</figcaption></figure>
+<figure><img src="float_ieeee_754.svg"><figcaption>Floating Point Darstellung mittels IEEE 754 (Bild: <a href="https://commons.wikimedia.org/wiki/File:IEEE-754-single.svg">RokerHRO</a> Public Domain)</figcaption></figure>
 
 ## Umrechnung
 Zur Berechnung des Wertes aus einer *IEEE 754* Darstellung wird folgende Methode verwendet.

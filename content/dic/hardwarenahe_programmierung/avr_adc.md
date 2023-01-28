@@ -6,7 +6,7 @@ parent: uebersicht.md
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
 !!! panel-info "Informationen im Datenblatt"
-    Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf){: class="download" }
+    Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
     * *Seite 204-221*: ADC
@@ -23,7 +23,7 @@ Die wichtigsten Eigenschaften des ADC:
 * Integrierte 2.56 V Referenzspannung
 
 # Aufbau
-<figure><img src="{filename}avr_adc.svg"><figcaption>Blockschaltbild des ADC (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+<figure><img src="avr_adc.svg"><figcaption>Blockschaltbild des ADC (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
 ## Eingänge
 Im linken unteren Segment sind die Eingänge, die über Multiplexer zum eigentlichen ADC geführt werden. Der Multiplexer "*Pos. Input Mux*" kann zwischen den 8 Pins *ADC0* bis *ADC7* sowie Masse und einer *Bandgap*-Referenz (typ. 1.23 V) wählen.
@@ -43,7 +43,7 @@ Als Referenz stehen drei Quellen zur Verfügung:
 # Register
 ## Register <code>ADMUX</code>
 
-![Register ADMUX]({filename}avr_adc_admux.svg)
+![Register ADMUX](avr_adc_admux.svg)
 
 Das Register <code>ADMUX</code> steuert die Auswahl der Referenzspannung, der Anordnung der Datenbits und die Auswahl des zu messenden Kanals.
 
@@ -53,7 +53,7 @@ Die Anordnung der Datenbits mittels <samp>ADLAR</samp> kann je nach Anwendung ei
 
 ## Register <code>ADCSRA</code>
 
-![Register ADCSRA]({filename}avr_adc_adcsra.svg)
+![Register ADCSRA](avr_adc_adcsra.svg)
 
 ### <samp>ADEN</samp> - ADC Enable
 

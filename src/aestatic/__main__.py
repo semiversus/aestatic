@@ -1,23 +1,18 @@
 import sys
-import shutil
-from pathlib import *
 
-from .markdown import process as md_process
+from .processor import Processor
+from .tasks import markdown, copy, compress, slides, sass
 
-file_type_register = {
-    '.md': md_process
-}
+processor = Processor()
 
-source_files = set(p for p in Path('content').rglob('*') if p.is_file())
+if '--no-cache' in sys.argv:
+    processor.cache_dict.clear()
 
-for suffix, function in file_type_register.items():
-    files = {f for f in source_files if f.suffix == suffix}
-    function(files)
-    source_files -= files
-
-for file in source_files:
-    output_path = 'output' / file.relative_to('content')
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy(file, output_path)
+processor.register(sass.SassTask())
+processor.register(compress.CompressTask())
+processor.register(slides.SlidesTask())
+processor.register(markdown.MarkdownTask())
+processor.register(copy.CopyTask())
+processor.run()
 
 sys.exit()

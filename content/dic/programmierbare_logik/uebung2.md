@@ -5,14 +5,14 @@ parent: uebersicht.md
 # Übungsaufgabe
 
 !!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
-    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
 
 In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz Takt, den das BASYS2 Board liefert.
 
 
 # Vorbereitung
 
-* [Projektordner]({filename}vhdl_uebung_2.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_2.compress){: class="download" } herunterladen und entpacken
 * Projekt <code>blink.xise</code> öffnen
 
 # Top Level <code>blink.vhd</code>
@@ -78,7 +78,7 @@ Wir erweitern dazu die Datei <code>blink.ucf</code> um folgende zwei Zeilen, um 
 
 Nachdem wir nun das Projekt synthetisieren betrachten wir die *Design Summary*:
 
-![Design Summary]({filename}screenshot_design_summary.png)
+![Design Summary](screenshot_design_summary.png)
 
 # Aufgabe 5 - Auswählbare Blinkfrequenz
 

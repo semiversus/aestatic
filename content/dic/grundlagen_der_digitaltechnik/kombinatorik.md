@@ -78,7 +78,7 @@ Bei den <code>NAND</code>- und <code>NOR</code>-Gatter handelt es sich jeweils u
 
 Am Beispiel des <code>NAND</code>-Gatters zeigt das folgende Bild die Möglichkeiten der Substitution:
 
-![Gatter Substitution]({filename}gatter_substitution.svg)
+![Gatter Substitution](gatter_substitution.svg)
 
 ## XOR-Gatter
 Das XOR-Gatter (von engl. *e**X**clusive **OR***) hat meist zwei (oder auch mehr) Eingänge und einem Ausgang. Bei einem XOR-Gatter mit zwei Eingängen ist der Ausgang auf logisch 1, wenn einer der beiden Eingänge auf logisch 1 ist, aber nicht beide gleichzeitig. Dies entspricht der ausschließenden Disjunktion. Für zwei oder mehr Eingänge ist der Ausgang auf logisch 1, wenn an einer ungerade Anzahl von Eingängen eine logische 1 anliegt.
@@ -97,7 +97,7 @@ Wahrheitstabelle:
 !!! panel-info "Der Ausgang eines <code>XOR</code> Gatter ist logisch 1, wenn an einer ungeraden Anzahl an Eingängen eine 1 anliegt."
 
 ## Darstellungsformen
-![Gatter Darstellungsformen]({filename}gatter.svg)
+![Gatter Darstellungsformen](gatter.svg)
 
 Im europäischen Raum wird für die Darstellung von Schaltsymbolen die Norm IEC 60617 verwendet. In Schaltplänen findet man auch recht häufig die im amerikanischen Raum verbreitete Darstellungsform nach der Norm US ANSI 91-1984. Die Darstellung nach DIN 40700 ist veraltet.
 

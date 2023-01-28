@@ -1,66 +1,90 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
   <title>{% block title %}Semiversus{% endblock %}</title>
-  <link rel="icon" href="{{ SITEURL }}/favicon.ico">
   <meta charset="utf-8">
-  <meta name="description" content="{% block description %}Blog von Günther Jena (vormals Jehle){% endblock %}">
-  <meta name="author" content="Günther Jena">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Günther Jena">
+  <meta name="description" content="{% block description %}Blog von Günther Jena (vormals Jehle){% endblock %}">
   <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
-  <meta name="msvalidate.01" content="70DFF0E672B42811AA384CC455C9406C" />
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.css">
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/semiversus.css">
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/tipuesearch.css">
-  <script async src="{{ SITEURL }}/theme/js/jquery.js"></script>
-  <script async src="{{ SITEURL }}/theme/js/bootstrap.js"></script>
-  <script async src="{{ SITEURL }}/theme/js/tipuesearch.js"></script>
-  <script async src="{{ SITEURL }}/theme/js/tipuesearch_set.js"></script>
+  <link rel="stylesheet" href="{{ root_path }}/theme/css/bulma.min.css">
+  <link rel="icon" href="{{ root_path }}/favicon.ico">
   {% block header %}{% endblock %}
 </head>
-<body data-spy="scroll" data-target="#sidebar" data-offset=30>
-  <div id="wrap">
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-          </button>
-          <a href="{{ SITEURL }}/index.html" class="navbar-brand">SEMIVERSUS</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="{{ SITEURL }}/index.html">Blog</a></li>
-            <li><a href="{{ SITEURL }}/dic/uebersicht.html">Unterricht</a></li>
-            <li><a href="{{ SITEURL }}/projekte/projekte.html">Projekte</a></li>
-            <li><a href="{{ SITEURL }}/about.html">Über mich</a></li>
-          </ul>
-          <form class="navbar-form navbar-right" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="form-control" placeholder="Suche" name="q" id="tipue_search_input"></form>
-          <ul class="nav navbar-nav navbar-right socialicons">
-            <li><a href="https://www.linkedin.com/in/guenther-jena" data-toggle="tooltip" data-placement="bottom" title="LinkedIn.com/Günther-Jena"><span class="linkedin icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Linkedin</span></a></li>
-            <li><a href="https://www.xing.com/profile/Guenther_Jena2" data-toggle="tooltip" data-placement="bottom" title="Xing.com/Günther-Jena"><span class="xing icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Xing</span></a></li>
-            <li><a href="https://stackoverflow.com/users/166605/g%C3%BCnther-jena" data-toggle="tooltip" data-placement="bottom" title="Stackoverflow.com/Semiversus"><span class="stackoverflow icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Stack Overflow</span></a></li>
-            <li><a href="https://github.com/semiversus" data-toggle="tooltip" data-placement="bottom" title="Github.com/Semiversus"><span class="github icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Github</span></a></li>
-            <li><a href="{{ SITEURL }}/semiversus.atom.xml" class="rss" data-toggle="tooltip" data-placement="bottom" title="RSS Feed"><span class="rss icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">RSS Feed</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<body style="display:flex; min-height:100vh; flex-direction:column;">
+  <nav class="navbar is-info">
     <div class="container">
-      {% block head %}{% endblock %}
-      <div class="row">
-        <div class="col-md-8" role="main">
-        {% block content %}{% endblock %}
-        </div>
-        <div class="col-md-4" role="complementary">
-        {% block sidebar %}{% endblock %}
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index.html">SEMIVERSUS</a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index.html">Blog</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/dic/uebersicht.html">Unterricht</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/projekte/projekte.html">Projekte</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/about.html">Über mich</a>
         </div>
       </div>
-      {% block foot %}{% endblock %}
     </div>
-  </div>
-  <footer class="footer hidden-print"><div class="container"><p class="text-muted credit">Günther Jena 2011 - {{ YEAR }} | Letztes Update am {{ GIT_DATE }} (Rev. <a href="https://github.com/semiversus/semiversus.github.io-source/commit/{{ GIT_REVISION }}">{{ GIT_REVISION }}</a>) <a href="https://plus.google.com/111972313670421914746/about" rel="author" class="hidden">Google+</a><a href="https://creativecommons.org/licenses/by-sa/3.0/de/" class="pull-right"><img src="{{ SITEURL }}/theme/img/cc_by_sa.svg" alt="Licence CC-BY-SA"/></a></p></div></footer>
-{% block javascript %}{% endblock %}
+  </nav>
+
+  <section class="hero is-info is-small">
+    <div class="hero-body">
+      <div class="container"><h1 class="title">{{ page.title }}</h1></div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-6">
+            <div class="content">
+            {{ page.content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer is-small">
+    <div class="content has-text-centered">
+      <p>Günther Jena |
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
 </body>
 </html>

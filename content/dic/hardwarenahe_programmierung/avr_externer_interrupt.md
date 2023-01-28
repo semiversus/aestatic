@@ -6,10 +6,10 @@ parent: uebersicht.md
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
 !!! panel-info "Informationen im Datenblatt"
-    Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf){: class="download" }
+    Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
-    * *Seite [68-70]({filename}atmel_atmega16.pdf){: class="download" }*: Externe Interrupts
+    * *Seite [68-70](atmel_atmega16.pdf){: class="download" }*: Externe Interrupts
 
 # Allgemeines
 
@@ -18,7 +18,7 @@ eigentliche Interruptquelle nicht innerhalb des Mikrocontrollers ist, sondern eb
 
 # Pinbelegung
 Die drei Pins sind in der folgenden Pinbelegung markiert.
-<figure><img src="{filename}avr_ext_interrupt_pins.svg"><figcaption>Externe Interrup Pins beim AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+<figure><img src="avr_ext_interrupt_pins.svg"><figcaption>Externe Interrup Pins beim AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
 * <code>INT0</code> - PORT D - Bit 2
 * <code>INT1</code> - PORT D - Bit 3

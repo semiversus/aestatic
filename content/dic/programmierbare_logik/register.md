@@ -44,7 +44,7 @@ realisiert werden (siehe [sequentielle Logik](../grundlagen_der_digitaltechnik/s
 
 Dem taktflanken getriggerten D FlipFlop wurde ein asynchroner Reset hinzugefügt. <code>rst</code> wurde der Sensitivitätsliste hinzugefügt, d.h. der <code>process</code> wird auch für Änderungen an <code>rst</code> getriggert. Innerhalb des <code>process</code> wird zuerst <code>rst</code> ausgewertet und erst dann auf eine steigende Taktflanke überprüft.
 
-![D-Flipflop mit asynchronem Reset]({filename}dff_async.svg.tex)
+![D-Flipflop mit asynchronem Reset](dff_async.svg.tex)
 
 ## Mit synchronem Reset
 
@@ -79,7 +79,7 @@ In diesem Beispiel soll der Zustand nur bei einer steigenden Taktflanke von <cod
 
 Die Sensitivity List besteht nur mehr aus dem <code>clk</code> Signal. Bei einer steigenden Taktflanke wird ausgewertet, ob <code>rst</code> gleich <code>1</code> ist. Wenn dies der Fall ist, wird der interne Zustand <code>data_o</code> auf <code>0</code> gesetzt, ansonsten wird der Wert von <code>data_i</code> übernommen.
 
-![D-Flipflop mit synchronem Reset]({filename}dff_sync.svg.tex)
+![D-Flipflop mit synchronem Reset](dff_sync.svg.tex)
 
 ## Mittels Initialisierung
 In FPGAs lässt sich der Zustand eines FlipFlops nach einem Ein-Ausschalt Zyklus auch durch die Initialisierung des

@@ -7,11 +7,11 @@ next: tutorial4.md
     sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
     Lizenz und somit auch dieses Tutorial.
 
-    Eine Kopie der Unterlagen kann man [hier]({filename}grd1-de-manual.pdf){: class="download" } herunterladen.
+    Eine Kopie der Unterlagen kann man [hier](grd1-de-manual.pdf){: class="download" } herunterladen.
 
 # Vorbereitung
 
-Für die folgende Übung benötigen wir die Datei [frosch.txt]({filename}frosch.txt){: class="download" } auf der virtuellen Maschine.
+Für die folgende Übung benötigen wir die Datei [frosch.txt](frosch.txt){: class="download" } auf der virtuellen Maschine.
 
 Dazu gibt es zwei Möglichkeiten: Download mittels <code>wget</code> oder Einrichten eines gemeinsamen Ordners. Es wird also nur
 ein Weg der zwei genannten benötigt.
@@ -25,14 +25,14 @@ Funktionsumfang, wir benötigen aber nur das notwendigste:
 
 Wenn eine Internetverbindung besteht sollte die Datei heruntergeladen werden und im aktuellen Verzeichnis abgelegt werden.
 
-![Download mittels wget]({filename}tutorial_wget.png)
+![Download mittels wget](tutorial_wget.png)
 
 ## Einrichten eines gemeinsamen Ordners
 
 Im VirtualBox Manager wird <samp>DICbian</samp> ausgewählt und in der Toolbar auf <samp>Ändern</samp> geklickt. Unter dem Punkt
 *Gemeinsame Ordner* wird ein entsprechender Eintrag hinzugefügt.
 
-![Gemeinsamer Ordner]({filename}tutorial_shared_folder.png)
+![Gemeinsamer Ordner](tutorial_shared_folder.png)
 
 * DICbian neu starten
 * Einloggen als normaler Nuter (<code>dic</code> mit Passwort <code>dic</code>)

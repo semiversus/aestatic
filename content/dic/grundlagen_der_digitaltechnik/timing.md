@@ -22,13 +22,13 @@ Die Verzögerung durch ein einzelnes logisches Gatter wird *Gatterlaufzeit* (ode
 
 Der kritische Pfad ist jener Pfad, der die größte Gesamtverzögerung aufweist. Im folgenden ist dieser Pfad rot eingezeichnet:
 
-![Kritischer Pfad bei einer kombinatorischen Schaltung]({filename}kritischer_pfad.png)
+![Kritischer Pfad bei einer kombinatorischen Schaltung](kritischer_pfad.png)
 
 Der kritische Pfad weist hier eine Verzögerung von 2ns + 5ns + 5ns, also 12ns auf.
 
 # Definitionen im Timingdiagramm
 
-![Timingdiagramm]({filename}timing_diagramm.svg)
+![Timingdiagramm](timing_diagramm.svg)
 
 ## Anstiegs- und Abfallzeiten
 Die *Signalanstiegszeit* (engl. *Rise Time*) beschreibt die Dauer eines Wechsels von logisch 0 auf logisch 1. Die Zeit wird gemessen zwischen dem Durchgang bei 10 und 90 Prozent Pegel des *High*-Pegels. Das gleiche gilt für die *Signalabfallzeit* (engl. *Fall Time*). Da je nach Technologie der Wechsel von logisch 0 auf 1 langsamer oder schneller als der umgekehrte Wechsel sein kann, werden diese Zeiten auch getrennt angegeben.
@@ -46,7 +46,7 @@ Bei einem *Hazard* handelt es sich um einen Störimpuls, der durch Verzögerunge
 
 ### Beispiel Multiplexer
 
-![Hazard bei einem Multiplexer]({filename}hazard_mux.svg)
+![Hazard bei einem Multiplexer](hazard_mux.svg)
 
 Am Beispiel eines Multiplexers sieht man das Auftreten eines *Static-1* Hazards. Ein *Static-1* Hazard ist ein Störimpuls bei einem Signal, welches rein kombinatorisch bei einer bestimmten Änderung eines Einganges vor und nach der Änderung logisch 1 ist. Der Hazard tritt nur auf, wenn <code>A</code> und <code>B</code> logisch 1 sind und <code>S</code> von logisch 1 auf 0 wechselt.
 
@@ -54,7 +54,7 @@ Die Schaltung ist mittels Disjunktiver Normalform aufgebaut. Zuerst werden die e
 
 Zeichnet man das KV-Diagramm auf, ergibt sich folgendes Bild:
 
-![KV-Diagramm des Multiplexers]({filename}hazard_mux_kv.svg)
+![KV-Diagramm des Multiplexers](hazard_mux_kv.svg)
 
 Man sieht die zwei unabhängige Minterme %%A\overline{S}%% und %%BS%%. Wird das Signal S gewechselt, wechseln auch die zuständigen Minterme. Dies ist ein Zeichen dafür, dass ein Hazard auftreten **kann**.
 
@@ -66,7 +66,7 @@ Damit ein logischer Hazard überhaupt auftreten kann, müssen folgende drei Bedi
 
 Durch zusätzliche Gatter können logische Hazards abgefangen werden. Wir haben gesehen, dass der Hazard beim Wechsel zwischen den beiden Mintermen auftritt (bei A und B gleich logisch 1). Um nun diesen Fall abzufangen fügen wir einen weiteren Minterm <code>AB</code> hinzu:
 
-![KV-Diagramm des Hazard-freien Multiplexers]({filename}hazard_free_mux_kv.svg)
+![KV-Diagramm des Hazard-freien Multiplexers](hazard_free_mux_kv.svg)
 
 Dieser zusätzliche Primimplikant ist aus rein kombinatorischer Sicht redundant, er verhindert aber den *Logik-Hazard*.
 
@@ -77,6 +77,6 @@ Dieser zusätzliche Primimplikant ist aus rein kombinatorischer Sicht redundant,
 
 Wenn wir in unserem Beispiel den Eingang A auf logisch 1 setzen und dann die Eingänge B und C gleichzeitig von 0 auf 1 ändern, kann es zu einem funktionalen Hazard kommen. Im KV-Diagramm sieht man diesen Wechsel. Der Weg kann über eine logische 0 oder 1 führen.
 
-![Zustandsänderung bei einem funktionalen Hazard]({filename}funktionaler_hazard.png)
+![Zustandsänderung bei einem funktionalen Hazard](funktionaler_hazard.png)
 
 Funktionale Hazards kann man in den meiste Fällen nicht durch Hinzufügen von redundanten Schaltelementen vermeiden.

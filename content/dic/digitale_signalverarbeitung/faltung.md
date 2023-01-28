@@ -21,11 +21,11 @@ Eingangssignals mit der Impulsantwort bezeichnet. Der Operator der Faltung heiß
 %%x[n]\ast h[n]=\sum\limits_{k=-\infty}^{\infty}x[k]\cdot h[n-k]%%
 
 ## Visuelle Darstellung
-<figure><img src="{filename}convolution1.gif"><figcaption>Faltung eines Rechtecksignals mit einem Rechteck (Bild: <a href="https://commons.wikimedia.org/wiki/File:Convolution_of_box_signal_with_itself.gif">Brian Amberg</a> CC BY-SA 3.0)</figcaption></figure>
+<figure><img src="convolution1.gif"><figcaption>Faltung eines Rechtecksignals mit einem Rechteck (Bild: <a href="https://commons.wikimedia.org/wiki/File:Convolution_of_box_signal_with_itself.gif">Brian Amberg</a> CC BY-SA 3.0)</figcaption></figure>
 
 Das zweite Beispiel zeigt ein System mit Tiefpasseigenschaft. Die Impulsantwort eines Tiefpasssystems ist %%e^{-t}%% für %%t\geq 0%%.
 
-<figure><img src="{filename}convolution2.gif"><figcaption>Faltung eines Rechtecksignals mit einer Exponentialfunktion (Bild: <a href="https://commons.wikimedia.org/wiki/File:Convolution_of_spiky_function_with_box2.gif">Brian Amberg/Tinos</a> CC BY-SA 3.0)</figcaption></figure>
+<figure><img src="convolution2.gif"><figcaption>Faltung eines Rechtecksignals mit einer Exponentialfunktion (Bild: <a href="https://commons.wikimedia.org/wiki/File:Convolution_of_spiky_function_with_box2.gif">Brian Amberg/Tinos</a> CC BY-SA 3.0)</figcaption></figure>
 
 ## Berechnung nach Wozny
 Eine einfache Art zur Durchführung der diskreten Faltung ist die Berechnung nach Wozny. Im folgenden Youtube Video findet
