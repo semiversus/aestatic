@@ -12,7 +12,7 @@ Ein Multiplexer (auch oft kurz "Mux") selektiert aus mehreren Eingängen einen e
 In der Wahrheitstabelle wird ersichtlich, dass nur der jeweils ausgewählte Eingang den Ausgang beeinflusst. Ist <code>s0</code>=0 so gilt <code>a</code>=<code>e0</code>, bei <code>s0</code>=1 gilt <code>a</code>=<code>e1</code>.
 
 s0|e1|e0|a
-:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:
 0|x|0|0
 0|x|1|1
 1|0|x|0
@@ -28,7 +28,7 @@ Der Halb-Addierer dient zur Addition von zwei einstelligen Binärzahlen. Als Aus
 ![Halbaddierer](halbaddierer_struktur.svg)
 
 x|y|s|c
-:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:
 0|0|0|0
 0|1|1|0
 1|0|1|0
@@ -54,7 +54,7 @@ Um mehrere Komparatoren zu kombinieren, sind Eingänge für "ist gleich", "grö�
 Der Prioritätsenkoder gibt die Nummer des aktiven Eingangs aus, der die höchste Priorität hat. Im folgenden Beispiel gibt es vier Eingänge (<code>i0</code> bis <code>i3</code>), wobei <code>i3</code> die höchste Priorität hat. Ist <code>i3</code> aktiv, wird am Ausgang der Wert 3 (<code>y1</code>=1, <code>y0</code>=1), unabhängig davon, welchen Zustand die anderen Eingänge haben.
 
 i3|i2|i1|i0|y1|y0|
-:-:|:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:|:---:
 0|0|0|0|0|0
 0|0|0|1|0|0
 0|0|1|x|0|1

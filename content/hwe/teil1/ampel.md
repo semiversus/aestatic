@@ -4,7 +4,7 @@ parent: uebersicht.md
 
 # Kurzbeschreibung
 Mittels 3 LEDs (grün, gelb und rot) soll das Ampelbild dargestellt werden. Dazu wird eine digitale
-Logik aufgebaut, die zur Ansteuerung der LEDs dient (siehe [Automatentheorie](/dic/grundlagen_der_digitaltechnik/automatentheorie.html)).
+Logik aufgebaut, die zur Ansteuerung der LEDs dient (siehe [Automatentheorie](../../dic/grundlagen_der_digitaltechnik/automatentheorie.html)).
 
 Ein Timer [NE555](https://de.wikipedia.org/wiki/NE555) dient als Taktgeber.
 

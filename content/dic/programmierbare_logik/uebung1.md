@@ -11,7 +11,7 @@ In dieser Übung nutzen wir vier Schalter des BASYS2 Boards (SW0 bis SW3) um dam
 soll eine Kombinatorik entworfen werden, um mittels dieser 4 Bit Zahl eine 7 Segment Anzeige anzusteuern.
 
 SW3|SW2|SW1|SW0|Ausgabe auf der 7 Segment Anzeige
-:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:
 Aus|Aus|Aus|Aus|0
 Aus|Aus|Aus|Ein|1
 Aus|Aus|Ein|Aus|2
@@ -103,7 +103,7 @@ Das Projekt soll synthetisiert und auf dem Board getestet werden.
 # Aufgabe 3 - Erweiterung um die Darstellung von Hexadezimalzahlen
 
 SW3|SW2|SW1|SW0|Ausgabe auf der 7 Segment Anzeige
-:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:
 Ein|Aus|Ein|Aus|A
 Ein|Aus|Ein|Ein|B
 Ein|Ein|Aus|Aus|C

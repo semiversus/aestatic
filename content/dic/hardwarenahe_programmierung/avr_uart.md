@@ -37,7 +37,7 @@ Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden 
 ## USARTA
 
 Bit|7|6|5|4|3|2|1|0
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|RXC|TXC|UDRE|FE|DOR|PE|U2X|MPCM
 Read/Write|R|R/W|R|R|R|R|R/W|R/W
 Init|0|0|1|0|0|0|0|0
@@ -80,7 +80,7 @@ benutzt. Für weitere Informationen dazu ist im Datenblatt nachzulesen.
 ## USARTB
 
 **Bit**|7|6|5|4|3|2|1|0
-:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 **Name**|RXCIE|TXCIE|UDRIE|RXEN|TXEN|UCSZ2|RXB8|TXB8
 **Read/Write**|R/W|R/W|R/W|R/W|R/W|R/W|R|R/W
 **Init**|0|0|0|0|0|0|0|0
@@ -106,7 +106,7 @@ Dieses Flag muss auf <code>1</code> sein, um den Sender der UART einzuschalten.
 ## USARTC
 
 **Bit**|7|6|5|4|3|2|1|0
-:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 **Name**|URSEL|UMSEL|UPM1|UPM0|USBS|UCSZ1|UCSZ0|UCPOL
 **Read/Write**|R/W|R/W|R/W|R/W|R/W|R/W|R|R/W
 **Init**|1|0|0|0|0|1|1|0

@@ -4,7 +4,7 @@ parent: uebersicht.md
 
 # Kurzbeschreibung
 Mittels 7 LEDs soll das Würfelbild dargestellt werden. Dazu wird eine digitale
-Logik aufgebaut, die zur Ansteuerung der LEDs dient (siehe [Automatentheorie](/dic/grundlagen_der_digitaltechnik/automatentheorie.html)).
+Logik aufgebaut, die zur Ansteuerung der LEDs dient (siehe [Automatentheorie](../../dic/grundlagen_der_digitaltechnik/automatentheorie.html)).
 
 Ein Timer [NE555](https://de.wikipedia.org/wiki/NE555) dient als Taktgeber. Durch das Drücken eines Tasters wird das
 Rechtecksignal des Tasters mit dem Takteingang des Automaten verbunden.

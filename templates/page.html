@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block head %}
-  {% if page.parent %}<nav class="breadcrumb"><ul>{% for p in page.parent_list[:-1] %}<li><a href="{{ root_path }}/{{p.url}}">{{p.title}}</a></li>{% endfor %}<li class="is-active"><a href="#">{{ page.title }}</a></li></ul></nav>{% endif %}
+  {% if page.parent %}<nav class="breadcrumb mb-2"><ul><li><a href="{{ root_path }}/index.html"><span class="icon"><i class="icon-home"></i></span></a></li>{% for p in page.parent %}<li><a href="{{ root_path }}/{{p.url}}">{{p.title}}</a></li>{% endfor %}<li class="is-active has-text-weight-medium"><a href="#">{{ page.title }}</a></li></ul></nav>{% endif %}
+  {% if page.next or page.prev %}<nav class="level">
+    <div class="level-left">{% if page.prev %}<div class="level-item"><a class="button is-link is-light is-small" href="{{ root_path}}/{{ page.prev.url }}"><span class="icon"><i class="icon-circle-left"></i></span><span>{{ page.prev.title }}</span></a></div>{% endif %}</div>
+    {% if page.next %}<div class="level-right"><div class="level-item"><a class="button is-link is-light is-small" href="{{ root_path}}/{{ page.next.url }}"><span>{{ page.next.title }}</span><span class="icon"><i class="icon-circle-right"></i></span></a></div></div>{% endif %}
+  </nav>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
   {{ page.content }}
-{% endblock %}
-
-{% block sidebar %}
-  {% if page.toc and not page.protected %}
-    <nav class="well well-sm" data-spy="affix" data-offset-top="0" id="sidebar">
-    {{ page.toc }}
-    </nav>
-  {% endif %}
 {% endblock %}

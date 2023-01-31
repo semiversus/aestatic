@@ -33,7 +33,7 @@ Der Anfangszustand <code>s0</code> ist ein Zustand aus der Zustandsmenge <code>S
 Die Zustandsübertragungsfunktion δ (klein Delta) beschreibt den Wechsel in einen neuen Zustand in Abhängigkeit des aktuellen Zustandes und der Eingabe. Die Zustandsübertragungsfunktion kann gut als Tabelle dargestellt werden:
 
 <code>δ</code>|**E0**|**E1**|**E2**
-:-:!|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:
 **Z0**|Z0|Z1|Z2
 **Z1**|Z2|Z2|Z0
 **Z2**|Z0|Z0|Z0
@@ -44,7 +44,7 @@ Bei diesem Beispiel ist <code>S</code>={<code>Z0</code>, <code>Z1</code>, <code>
 Die Ausgabefunktion <code>ω</code> (klein Omega) beschreibt die Ausgabe in Abhängigkeit von Zustand und Eingabe oder auch nur vom Zustand (vergleiche ''Moore''- und ''Mealy''-Automat). Falls die Ausgabefunktion von Zustand und Eingabe abhängig ist, lässt sich die Funktion auch gut als Tabelle darstellen:
 
 <code>ω</code>|**E0**|**E1**|**E2**
-:-:!|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:
 **Z0**|A0|A2|A0
 **Z1**|**A1**|A1|A2
 **Z2**|A2|A1|A1
@@ -82,7 +82,7 @@ Für das Erstellen der Zustandsübertragungsfunktion müssen wir definieren, wie
 **Zustandsübertragungsfunktion**:
 
 <code>δ</code> | **50 Cent** | **1 Euro** | **Rückgabetaste** | **Getränketaste**
-:-:!|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:
 **0 Euro** | 50 Cent | 1 Euro | 0 Euro | 0 Euro
 **50 Cent** | 1 Euro | 1 Euro | 0 Euro | 50 Cent
 **1 Euro** | 1 Euro | 1 Euro | 0 Euro | 0 Euro
@@ -92,7 +92,7 @@ Für die volle Funktionsbeschreibung unseres Getränkeautomaten benötigen wir n
 **Ausgabefunktion**:
 
 <code>ω</code> | **50 Cent** | **1 Euro** | **Rückgabetaste** | **Getränketaste**
-:-:!|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:
 **0 Euro** | Keine Ausgabe | Keine Ausgabe | Keine Ausgabe | Keine Ausgabe
 **50 Cent** | Keine Ausgabe | 50 Cent | 50 Cent | Keine Ausgabe
 **1 Euro** | 50 Cent | 1 Euro | 1 Euro | Getränk

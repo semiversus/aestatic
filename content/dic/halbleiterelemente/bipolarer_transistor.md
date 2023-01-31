@@ -27,7 +27,7 @@ Sind große Ströme gefordert, können mehrere Transistoren parallelgeschaltet w
 ## Funktionsweise
 <figure><img src="transistor_npn_basic_operation.svg"><figcaption>NPN Halbleitermodell (Bild: <a href="https://commons.wikimedia.org/wiki/File:NPN_BJT_Basic_Operation_(Active)_DE.svg">Inductiveload</a> Gemeinfrei)</figcaption></figure>
 
-Beim Bipolartransistor im analogen / linearen Betrieb wird durch einen elektrischen Strom %%I_{B}%% zwischen Basis und Emitter ein stärkerer Strom %%I_{C}%% zwischen Kollektor und Emitter gesteuert. Das Verhältnis der beiden Ströme, das im Bereich von etwa 4 bis 1000 liegt, ist vom Transistortyp und vom Absolutbetrag des Kollektorstromes abhängig und wird als statischer Stromverstärkungsfaktor %%B%% bezeichnet.
+Beim Bipolartransistor im analogen / linearen Betrieb wird durch einen elektrischen Strom %%I_{B}%% zwischen Basis und Emitter ein stärkerer Strom %%I_{C}%% zwischen Kollektor und Emitter gesteuert. Das Verhältnis der beiden Ströme, das im Bereich von etwa 4 bis 1000 liegt, ist vom Transistortyp und vom Absolutbetrag des Kollektorstromes abhängig und wird als statischer Stromverstärkungsfaktor B bezeichnet.
 
 Dieses Verhalten ist vergleichbar mit einem flussabhängigen Ventil bei einem Wasserkanal-Modell. Dieses Modell ist stark vereinfacht und dient nur zur generellen Veranschaulichung der fließenden Ströme, da für die Erklärung der realen Verhältnisse und der Funktionsweise des Bipolartransistors sowohl Elektronen als auch Defektelektronen (Löcher) verantwortlich sind.
 Ein Bipolartransistor wird durch drei Schichten unterschiedlicher Dotierung gebildet, die zwei p-n-Übergänge bilden. Die in der Mitte befindliche Basiszone ist die dünnste Schicht.
@@ -46,7 +46,7 @@ Die Wirkungsweise eines pnp-Transistors ist dazu analog, jedoch sind die Vorzeic
 # Vereinfachtes Ersatzschaltbild
 <figure><img src="transistor_npn_esb.svg"><figcaption>Vereinfachtes Ersatzschaltbild (Bild: <a href="https://commons.wikimedia.org/wiki/File:Simplified_Transportmodel_of_Bipolartransistor.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
 
-Das einfachste Modell besteht aus der Basis-Emitter-Diode und der durch den Basisstrom %%I_{B}%% gesteuerten Stromquelle (genauer gesagt einer Stromsenke, da keine Energieerzeugung erfolgt) hin zum Kollektor %%I_{C}%%. Der Transistor verstärkt den Basisstrom um den Faktor %%B%%. Voraussetzungen für die Gültigkeit des Modells sind: Die Basis-Emitter-Diode muss in Durchlassrichtung gepolt sein und die Basis-Kollektor-Diode in Sperrrichtung.
+Das einfachste Modell besteht aus der Basis-Emitter-Diode und der durch den Basisstrom %%I_{B}%% gesteuerten Stromquelle (genauer gesagt einer Stromsenke, da keine Energieerzeugung erfolgt) hin zum Kollektor %%I_{C}%%. Der Transistor verstärkt den Basisstrom um den Faktor B. Voraussetzungen für die Gültigkeit des Modells sind: Die Basis-Emitter-Diode muss in Durchlassrichtung gepolt sein und die Basis-Kollektor-Diode in Sperrrichtung.
 
 Dieses vereinfachte Modell leitet sich aus dem [Ebers-Moll-Modell](https://de.wikipedia.org/wiki/Ebers-Moll-Modell){: class="external" } ab und vereinfacht dieses durch Vernachlässigung von Sperrströmen und dynamischen Effekten. Die grundlegensde Eigenschaft der Verstärkung ergibt sich in diesem Modell durch %%I_{C}=I_{B} \cdot B_{N}%%, wobei %%B_{N}%% die Verstärkung im Normalbetrieb ist.
 

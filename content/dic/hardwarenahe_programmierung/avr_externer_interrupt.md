@@ -31,7 +31,7 @@ Bei entsprechender Konfiguration kann ein Interrupt ausgelöst werden, wenn sich
 Der Grund für das Auslösen eines Interrupts bei den beiden externen Interrupts INT0 und INT1 wird über das Register <code>MCUCR</code> (MCU Control Register) gesteuert.
 
 Bit|7|6|5|4|**3**|**2**|**1**|**0**
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|SM2|SE|SM1|SM0|**ISC11**|**ISC10**|**ISC01**|**ISC00**
 Read/Write|R/W|R/W|R/W|R/W|**R/W**|**R/W**|**R/W**|**R/W**
 Init|0|0|0|0|**0**|**0**|**0**|**0**
@@ -49,7 +49,7 @@ ISCx1 | ISCx0 | Beschreibung
 Der externe Interrupt für INT2 wird über das Register <code>MCUCSR</code> (MCU Control and Status Register) gesteuert.
 
 Bit|7|**6**|5|4|3|2|1|0
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|JTD|**ICS2**|-|JTRF|WDRF|BORF|EXTRF|PORF
 Read/Write|R/W|**R/W**|R|R/W|R/W|R/W|R/W|R/W
 Init|0|0|0|-|-|-|-|-
@@ -61,7 +61,7 @@ bei einer steigenden Flanke ausgelöst.
 Die Freigabe der Interrupts erfolgt über das Register <code>GICR</code> (General Interrupt Control Register).
 
 Bit|**7**|**6**|**5**|4|3|2|1|0
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|**INT1**|**INT0**|**INT2**|-|-|-|IVSEL|IVCE
 Read/Write|**R/W**|**R/W**|**R/W**|R|R|R|R/W|R/W
 Init|**0**|**0**|**0**|0|0|0|0|0
@@ -79,7 +79,7 @@ Für den Aufruf der entsprechenden Interruptrountine sind nun folgende Punkte no
 Detektion einer Pegeländerung genutzt werden soll, aber keine Interrupt Service Routine aufgerufen werden soll.
 
 Bit|**7**|**6**|**5**|4|3|2|1|0
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|**INTF1**|**INTF0**|**INTF2**|-|-|-|-|-
 Read/Write|**R/W**|**R/W**|**R/W**|R|R|R|R|R
 Init|**0**|**0**|**0**|0|0|0|0|0

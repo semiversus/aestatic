@@ -32,7 +32,7 @@ Anhand der Schaltung und des Impulsdiagramm können wir die Funktionsweise des R
 Im Impulsdiagramm sieht man folgenden Signalverlauf:
 
 Phase|S|R|Bemerkung
-:-:|:-:|:-:|-
+:---:|:---:|:---:|-
 0|0|0|Das Latch hält den aktuellen Zustand und ist stabil.
 1|1|0|Damit wechselt der Ausgang %%Q%% auf 1 und der Ausgang %%\overline{Q}%% wechselt auf 0.
 2|0|0|Das Latch hält den Zustand und ist stabil.
@@ -89,7 +89,7 @@ Durch Kombination von zwei Latches in dieser Master-Slave Anordnung lässt sich 
 Bei RS Flip-Flops gilt es nach wie vor den Zustand von gleichzeitig gesetztem <code>R</code> und <code>S</code> zu vermeiden. Durch eine zusätzliche Beschaltung wird ein RS-Flipflop zu einem JK-Flipflop. Für ein JK Flipflop gilt folgende Funktionstabelle:
 
 J|K|%%Q%%|%%\overline{Q}%%|Beschreibung
-:-:|:-:|:-:|:-:|-
+:---:|:---:|:---:|:---:|-
 0|0|%%Q_{-1}%%|%%\overline{Q_{-1}}%%|Halten
 0|1|0|1|Zurücksetzen
 1|0|1|0|Setzen

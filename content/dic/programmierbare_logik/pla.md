@@ -32,7 +32,7 @@ Um die Darstellung zu vereinfachen werden die parallelen Eingänge der UND und O
 Eine programmierbare Logik kann auch mit einem Speicher realisiert werden, wobei die Eingänge die Adresse darstellen und die Ausgänge sind die entsprechenden Datenausgänge. Der Speicherinhalt wird dadurch zur Darstellung einer Wahrheitstabelle.
 
 An | A2 | A1 | A0 | Dm | D3 | D2 | D1 | D0
-:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 0 | 0 | 0 | 0 | *0* | *0* | *0* | *0* | *1*
 0 | 0 | 0 | 1 | *0* | *0* | *1* | *1* | *1*
 0 | 0 | 1 | 0 | *1* | *1* | *0* | *0* | *0*

@@ -16,7 +16,7 @@ Ein gutes Scheduling-Verfahren zeichnet sich dadurch aus, dass es die folgenden 
 * **Verweilzeit**: Prozesse sollten möglichst schnell beendet sein.
 * **Einfach und schnell**: Für Implementierungen kann es sinnvoll sein, möglichst wenig Ressourcen im Scheduler selbst zu verbrauchen.
 
-# Präemptiv und Nicht-Präemptiv 
+# Präemptiv und Nicht-Präemptiv
 Beim nicht-präemptiven Verfahren übergibt ein Prozess die benötigten Ressourcen selbstständig, wenn diese nicht mehr benötigt werden. Dies gilt insbesondere für die Prozessorzeit. Wenn einem Prozess also Prozessorzeit zugeteilt wird kann dieser Prozess frei entscheiden, wann er die Kontrolle an das Betriebssystem zurück gibt. Dieses Verfahren wird auch kooperatives Verfahren genannt. Wenn ein Prozess durch einen Fehler die Kontrolle nicht zurück gibt bleibt das ganze System *hängen*. Dieses Verfahren kann aber große Vorteile bei Echtzeitbetriebssystemen haben, da es möglich ist, die Ressourcen sehr gut zu nutzen.
 
 Das präemtive (engl. preemptive) Verfahren hat die Möglichkeit, dem Prozess die Zuteilung des Prozessors zu entziehen. Dieses Verfahren wird meist mit festen Zeitschlitzen implementiert, nach deren Ende jeweils ein Prozesswechsel vollzogen wird.
@@ -30,7 +30,7 @@ Hierbei werden alle Prozesse in der Reihenfolge ihres Eingangs bearbeitet. Eine 
 Beispiel mit kooperativem Scheduling
 
 &nbsp; | Startzeit | Dauer
-:-:|:-:|:-:
+:---:|:---:|:---:
 Job A | 0 | 4
 Job B | 1 | 3
 Job C | 2 | 2
@@ -39,7 +39,7 @@ Job D | 5 | 1
 Ausführung:
 
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | A | A | A | A | B | B | B | C | C | D |
 
 ## Shortest-Job-Next (SJN), Shortest Job First (SJF), Shortest Processing Time (SPT)
@@ -48,7 +48,7 @@ Ein weiteres Verfahren, das nicht für Mehrbenutzersysteme geeignet ist. Es läs
 Ausführung (gleiche Angaben wie Beispiel davor):
 
 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 A | A | A | A | C | C | D | B | B | B
 
 ## Earliest Due Date (EDD)
@@ -62,7 +62,7 @@ Round-Robin behandelt alle Prozesse gleich, so dass einerseits kein Prozess unfa
 Beispiel mit präemptivem Scheduling:
 
 &nbsp; | Startzeit | Dauer
-:-:|:-:|:-:
+:---:|:---:|:---:
 Job A | 0 | 4
 Job B | 0 | 3
 Job C | 0 | 2
@@ -71,8 +71,8 @@ Job D | 3 | 1
 Ausführung:
 
 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
-A | B | C | A | B | C | D | A | B | A 
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+A | B | C | A | B | C | D | A | B | A
 
 ## Lotterie-Scheduling
 Hierbei handelt es sich um ein Wahrscheinlichkeits-Scheduling-Verfahren. Prozesse bekommen alle eine bestimmte Anzahl von Losen zugewiesen und der Prozess-Scheduler zieht ein Zufallslos, um den nächsten Prozess auszuwählen. Die Aufteilung der Lose muss nicht gleich sein. Wenn man einem Prozess mehr Lose zuweist, erhöht das seine relativen Chancen, ausgewählt zu werden. Diese Technik kann man benutzen, um sich anderen Scheduling-Verfahren, wie zum Beispiel dem Shortest-Job-Next-Verfahren und dem Fair-Share-Scheduling, anzunähern.

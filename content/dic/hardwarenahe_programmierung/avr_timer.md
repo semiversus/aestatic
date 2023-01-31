@@ -74,7 +74,7 @@ Funktionen benutzt werden:
 ## <code>TCCR0</code> - Timer Counter Control Register
 
 Bit|7|6|5|4|3|2|1|0
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|FOC0|WGM00|COM01|COM00|WGM01|CS02|CS01|CS00
 Read/Write|W|R/W|R/W|R/W|R/W|R/W|R/W|R/W
 Init|0|0|0|0|0|0|0|0
@@ -120,7 +120,7 @@ es wie bereits beschrieben die beiden Interrupts <code>TOIE0</code> (Timer Overf
 jeweiligen Interrupt zu aktivieren muss eine logische <code>1</code> an die entsprechende Stelle geschrieben werden.
 
 Bit|7|6|5|4|3|2|**1**|**0**
-:-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|OCIE2|TOIE2|TICIE1|OCIE1A|OCIE1B|TOIE1|**OCIE0**|**TOIE0**
 Read/Write|R/W|R/W|R/W|R/W|R/W|R/W|**R/W**|**R/W**
 Init|0|0|0|0|0|0|**0**|**0**

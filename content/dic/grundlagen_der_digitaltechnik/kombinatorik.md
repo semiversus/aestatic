@@ -12,12 +12,12 @@ Bei den Schaltnetzen im folgenden Kapitel werden die Schaltverzögerungen durch 
 Zu den gebräuchlichsten Logikgattern zählen <code>AND</code>, <code>OR</code>, <code>NOT</code> und <code>XOR</code>. Die Gatter <code>NAND</code>, <code>NOR</code> und <code>XNOR</code> können durch Kombination von <code>AND</code>, <code>OR</code> bzw. <code>XOR</code> mit einem <code>NOT</code> Gatter gebildet werden.
 
 ## <code>AND</code>-Gatter
-Ein <code>AND</code>- bzw. zu deutsch <code>UND</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. Die <code>AND</code>-Verknüpfung kann in booleschen Funktionen als "•" (Mal), "&" oder mittels "%%\land%%" dargestellt werden. In der klassischen Logik wird eine Aussage, die nur dann wahr ist, wenn zwei oder mehr Aussagen wahr sind als *Konjunktion* bezeichnet.
+Ein <code>AND</code>- bzw. zu deutsch <code>UND</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. Die <code>AND</code>-Verknüpfung kann in booleschen Funktionen als "•" (Mal), "&" oder mittels "∧" dargestellt werden. In der klassischen Logik wird eine Aussage, die nur dann wahr ist, wenn zwei oder mehr Aussagen wahr sind als *Konjunktion* bezeichnet.
 
 Die Wahrheitstabelle für ein Gatter mit zwei Eingängen:
 
-%%A%%|%%B%%|%%A \land B%%
-:-:|:-:|:-:
+A|B|A ∧ B
+:---:|:---:|:---:
 0|0|0
 0|1|0
 1|0|0
@@ -32,12 +32,12 @@ Betrachtet man die logisch 0 am Eingang stellt sich auch eine Besonderheit herau
 !!! panel-info "Der Ausgang eines <code>AND</code> Gatter ist logisch 0, wenn mindestens ein Eingang logisch 0 ist."
 
 ## <code>OR</code>-Gatter
-Ein <code>OR</code>- bzw. <code>ODER</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. In booleschen Funktionen wird die <code>OR</code>-Verknüpfung als "+" oder als "%%\lor%%" dargestellt. Eine *Disjunktion* ist in der klassischen Logik eine Aussage, die dann wahr ist, wenn mindestens eine Teil-Aussage wahr ist.
+Ein <code>OR</code>- bzw. <code>ODER</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. In booleschen Funktionen wird die <code>OR</code>-Verknüpfung als "+" oder als "∨" dargestellt. Eine *Disjunktion* ist in der klassischen Logik eine Aussage, die dann wahr ist, wenn mindestens eine Teil-Aussage wahr ist.
 
 Die Wahrheitstabelle für ein <code>OR</code>-Gatter mit zwei Eingängen:
 
-%%A%%|%%B%%|%%A \lor B%%
-:-:|:-:|:-:
+A|B|A ∨ B
+:---:|:---:|:---:
 0|0|0
 0|1|1
 1|0|1
@@ -54,14 +54,14 @@ Betrachtet man die logisch 0 am Eingang kommt man auf folgende Aussage:
 !!! panel-info "Der Ausgang eines <code>OR</code> Gatter ist nur dann logisch 0, wenn alle Eingänge logisch 0 sind."
 
 ## <code>NOT</code>-Gatter
-Das <code>NOT</code>-Gatter hat einen Eingang und einen Ausgang. Der Ausgang stellt die Invertierung (auch *Komplement* genannt) des Einganges dar. In booleschen Funktionen wird es mittels "%%\neg%%" dargestellt. In der klassischen Logik stellt es eine Verneinung einer Aussage dar.
+Das <code>NOT</code>-Gatter hat einen Eingang und einen Ausgang. Der Ausgang stellt die Invertierung (auch *Komplement* genannt) des Einganges dar. In booleschen Funktionen wird es mittels "¬" dargestellt. In der klassischen Logik stellt es eine Verneinung einer Aussage dar.
 
-Oft sieht man auch die Darstellung mittels Überstrich (z.B. %%\overline{\overline{A} \land {B}}%%)
+Oft sieht man auch die Darstellung mittels Überstrich (z.B. <span style="border-top: 1px solid black; padding-top: 3px;"><span style="border-top: 1px solid black;">A</span> ∧ B</span>)
 
 Wahrheitstabelle:
 
-%%A%%|%%\neg A%%
-:-:|:-:
+A|%%\neg A%%
+:---:|:---:
 0|1
 1|0
 
@@ -69,8 +69,8 @@ Wahrheitstabelle:
 ## <code>NAND</code>- und <code>NOR</code> Gatter
 Bei den <code>NAND</code>- und <code>NOR</code>-Gatter handelt es sich jeweils um ein <code>AND</code>- bzw. <code>OR</code>-Gatter dem ein <code>NOT</code>-Gatter nachgeschalten ist. Durch Kombination mehrerer <code>NAND</code>-Gatter (oder auch Kombination mehrer <code>NOR</code>-Gatter) lassen sich alle logischen Verknüpfungen realisieren.
 
-%%A%%|%%B%%|%%\overline{A \land B}%%|%%\overline{A \lor B}%%
-:-:|:-:|:-:|:-:
+A|B|%%\overline{A \land B}%%|%%\overline{A \lor B}%%
+:---:|:---:|:---:|:---:
 0|0|1|1
 0|1|1|0
 1|0|1|0
@@ -87,8 +87,8 @@ In booleschen Funktionen wird die XOR Verknüpfung mittels "%%\oplus%%" dargeste
 
 Wahrheitstabelle:
 
-%%A%%|%%B%%|%%A \oplus B%%
-:-:|:-:|:-:
+A|B|%%A \oplus B%%
+:---:|:---:|:---:
 0|0|0
 0|1|1
 1|0|1

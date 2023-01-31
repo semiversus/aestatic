@@ -2,13 +2,13 @@ title: LTI Systeme
 parent: uebersicht.md
 next: faltung.md
 
-#Allgemeines
+# Allgemeines
 
 In der Nachrichtentechnik versteht man ein System als eine Anordnung von verbundenen Komponenten zur Realisierung einer
 Aufgabenstellung. Ein System kann im mathematischen Sinne als Funktion(en) verstanden werden, die einen Zusammenhang
 zwischen Ein- und Ausgängen herstellt.
 
-![Systeme](system.svg.tex)
+![Systeme](system.svg)
 
 Je nachdem nach welcher der drei Komponenten (Eingang, Ausgang oder System) gesucht wird unterscheidet man:
 

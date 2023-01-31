@@ -101,7 +101,7 @@ Der Decoder wandelt den Eingang <code>value_i</code> (3 Bit) in die entsprechend
 wird folgende kodierung verwendet:
 
 LED6|LED5|LED4|LED3|LED2|LED1|LED0
-:-:|:-:|:-:|:-:|:-:|:-:|:-:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Aus|Aus|Aus|**Ein**|Aus|Aus|Aus
 Aus|Aus|**Ein**|Aus|**Ein**|Aus|Aus
 Aus|**Ein**|Aus|**Ein**|Aus|**Ein**|Aus

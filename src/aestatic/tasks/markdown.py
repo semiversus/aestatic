@@ -5,7 +5,7 @@ import os
 
 from aestatic.processor import Processor, BaseTask
 
-import markdown
+import mistletoe
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -22,7 +22,6 @@ class Page:
     parent: str = None
     next: str = None
     prev: str = None
-    parent_list: List[str] = None
 
     @classmethod
     def from_path(cls, path: Path) -> 'Page':
@@ -32,8 +31,8 @@ class Page:
         except Exception:
             raise ValueError(f'Problem parsing meta data from {path}')
 
-        html_content = markdown.markdown(source_content)
-        return Page(path.relative_to('content'), path.with_suffix('.html'), html_content, **meta)
+        html_content = mistletoe.markdown(source_content)
+        return Page(path.relative_to('content'), path.with_suffix('.html').relative_to('content'), html_content, **meta)
 
 
 class MarkdownTask(BaseTask):
@@ -46,20 +45,21 @@ class MarkdownTask(BaseTask):
         for page in pages:
             if page.next is not None:
                 next_path = resolve(page.path.parent / page.next)
-                lookup_files[next_path].prev = page
+                next_page = lookup_files[next_path]
+                next_page.prev = page
+                page.next = next_page
 
             if page.parent is not None:
-                current_page = page
-                parent_list = []
+                def resolve_parent(page):
+                    parent_path = resolve(page.path.parent / page.parent)
+                    parent_page = lookup_files[parent_path]
+                    if parent_page.parent is None:
+                        return [parent_page]
+                    if isinstance(parent_page.parent, list):
+                        return parent_page.parent + [parent_page]
+                    return resolve_parent(parent_page) + [parent_page]
 
-                while current_page.parent:
-                    assert len(parent_list) < 10, f'Recusion of "parent" in {page.path}'
-                    parent_path = resolve(current_page.path.parent / current_page.parent)
-                    current_page = lookup_files[parent_path]
-                    parent_list.append(current_page)
-
-                parent_list.reverse()
-                page.parent_list = parent_list
+                page.parent = resolve_parent(page)
 
         env = Environment(loader=FileSystemLoader('templates'))
         template = env.get_template('page.html')
