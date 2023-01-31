@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
-from typing import FrozenSet
+from typing import FrozenSet, List
 import os
 
 from aestatic.processor import Processor, BaseTask
@@ -22,6 +22,7 @@ class Page:
     parent: str = None
     next: str = None
     prev: str = None
+    parent_list: List[str] = None
 
     @classmethod
     def from_path(cls, path: Path) -> 'Page':
@@ -57,7 +58,8 @@ class MarkdownTask(BaseTask):
                     current_page = lookup_files[parent_path]
                     parent_list.append(current_page)
 
-                page.parent = parent_list.reverse()
+                parent_list.reverse()
+                page.parent_list = parent_list
 
         env = Environment(loader=FileSystemLoader('templates'))
         template = env.get_template('page.html')

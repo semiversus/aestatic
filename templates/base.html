@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Günther Jena">
-  <meta name="description" content="{% block description %}Blog von Günther Jena (vormals Jehle){% endblock %}">
   <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
   <link rel="stylesheet" href="{{ root_path }}/theme/css/semiversus.css">
   <link rel="icon" href="{{ root_path }}/favicon.ico">
@@ -38,14 +37,14 @@
       <div class="container"><h1 class="title">{{ page.title }}</h1></div>
     </div>
   </section>
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns">
           <div class="column">
+            {% block head %}{% endblock %}
             <div class="content">
-            {{ page.content }}
+              {% block content %}{% endblock %}
             </div>
           </div>
         </div>
