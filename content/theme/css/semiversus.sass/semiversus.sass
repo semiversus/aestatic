@@ -1,17 +1,19 @@
 @charset "utf-8"
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 
-$body-size: 14px;
-$desktop: 769px;
-$footer-padding: 0.5rem 1.5rem 0.5rem;
-
-.content
-    h1
-        border-bottom: 1px solid #aaa
-
 @import "icons"
 
 @import "utilities/_all"
+
+$body-size: 14px
+$desktop: 769px
+$footer-padding: 0.5rem 1.5rem 0.5rem
+$content-table-cell-border-width: 1px
+$content-table-head-cell-border-width: 1px
+$content-table-foot-cell-border-width: 1px
+$content-table-body-last-row-cell-border-bottom-width: 1px
+$border: $grey-dark
+
 @import "base/_all"
 @import "elements/_all"
 @import "form/_all"
@@ -19,3 +21,13 @@ $footer-padding: 0.5rem 1.5rem 0.5rem;
 @import "grid/_all"
 @import "helpers/_all"
 @import "layout/_all"
+
+.content
+    h1
+        border-bottom: 1px solid #aaa
+    table
+        width: auto
+    th
+        background: $grey-lighter
+    td
+        min-width: 50px

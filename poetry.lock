@@ -94,18 +94,18 @@ files = [
 ]
 
 [[package]]
-name = "mistletoe"
-version = "1.0.1"
-description = "A fast, extensible Markdown parser in pure Python."
+name = "mistune"
+version = "3.0.0rc4"
+description = "A sane Markdown parser with useful plugins and renderers"
 category = "main"
 optional = false
-python-versions = "~=3.5"
+python-versions = "*"
 files = [
-    {file = "mistletoe-1.0.1-py3-none-any.whl", hash = "sha256:c1e3d8a5a7fcd6354650977bb228d28f184f09a475456b8a1e122170038e2707"},
-    {file = "mistletoe-1.0.1.tar.gz", hash = "sha256:b1f89afb079a1b1a542e9ef2c08dd450a07a2bd935c03cab22c328ad7ca4d8e8"},
+    {file = "mistune-3.0.0rc4-py2.py3-none-any.whl", hash = "sha256:c5d2002dcfb14d963c9f70dc9cd95b907eb1330fbf99a481139b2c21c05bffd4"},
+    {file = "mistune-3.0.0rc4.tar.gz", hash = "sha256:04878ff4a582cfe22443be6f8292c9458c5e86396f7586f2bfaea199b43d0345"},
 ]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "8d4dd75eb93790d16aca19df40a629ca8f6ce2427dd34444a1f579c9f6c85d96"
+content-hash = "2a4556a2f09f266b0d0d40e307f8559dd43bf581a57eaa005df54ae58cfa2fd1"

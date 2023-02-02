@@ -5,7 +5,7 @@ import os
 
 from aestatic.processor import Processor, BaseTask
 
-import mistletoe
+import mistune
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -31,7 +31,7 @@ class Page:
         except Exception:
             raise ValueError(f'Problem parsing meta data from {path}')
 
-        html_content = mistletoe.markdown(source_content)
+        html_content = mistune.html(source_content)
         return Page(path.relative_to('content'), path.with_suffix('.html').relative_to('content'), html_content, **meta)
 
 
