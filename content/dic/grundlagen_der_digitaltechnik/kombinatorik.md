@@ -1,5 +1,6 @@
 title: Kombinatorik
 parent: uebersicht.md
+latex: true
 
 # Allgemeines
 Bei einer kombinatorischen Schaltung handelt es sich um eine Digital-Schaltung deren Ausgänge eindeutig durch die Eingänge bestimmt sind. Um dies zu erreichen darf die Schaltung keine speichernden Elemente aufweisen, d.h. die Schaltung ist *Zustandslos*. Ein weiteres Kennzeichen von kombinatorischen Schaltungen ist die *Zyklenfreiheit*. Eine Schaltung besitzt einen *Zyklus*, wenn der Ausgang eines Gatters auf den Eingang des selbigen rückwirken kann.
@@ -60,7 +61,7 @@ Oft sieht man auch die Darstellung mittels Überstrich (z.B. <span style="border
 
 Wahrheitstabelle:
 
-A|%%\neg A%%
+A|\\(\neg A\\)
 :---:|:---:
 0|1
 1|0
@@ -69,7 +70,7 @@ A|%%\neg A%%
 ## <code>NAND</code>- und <code>NOR</code> Gatter
 Bei den <code>NAND</code>- und <code>NOR</code>-Gatter handelt es sich jeweils um ein <code>AND</code>- bzw. <code>OR</code>-Gatter dem ein <code>NOT</code>-Gatter nachgeschalten ist. Durch Kombination mehrerer <code>NAND</code>-Gatter (oder auch Kombination mehrer <code>NOR</code>-Gatter) lassen sich alle logischen Verknüpfungen realisieren.
 
-A|B|%%\overline{A \land B}%%|%%\overline{A \lor B}%%
+A|B|\\(\overline{A \land B}\\)|\\(\overline{A \lor B}\\)
 :---:|:---:|:---:|:---:
 0|0|1|1
 0|1|1|0
@@ -81,13 +82,13 @@ Am Beispiel des <code>NAND</code>-Gatters zeigt das folgende Bild die Möglichke
 ![Gatter Substitution](gatter_substitution.svg)
 
 ## XOR-Gatter
-Das XOR-Gatter (von engl. *e**X**clusive **OR***) hat meist zwei (oder auch mehr) Eingänge und einem Ausgang. Bei einem XOR-Gatter mit zwei Eingängen ist der Ausgang auf logisch 1, wenn einer der beiden Eingänge auf logisch 1 ist, aber nicht beide gleichzeitig. Dies entspricht der ausschließenden Disjunktion. Für zwei oder mehr Eingänge ist der Ausgang auf logisch 1, wenn an einer ungerade Anzahl von Eingängen eine logische 1 anliegt.
+Das XOR-Gatter (von engl. <i>e**X**clusive **OR**</i>) hat meist zwei (oder auch mehr) Eingänge und einem Ausgang. Bei einem XOR-Gatter mit zwei Eingängen ist der Ausgang auf logisch 1, wenn einer der beiden Eingänge auf logisch 1 ist, aber nicht beide gleichzeitig. Dies entspricht der ausschließenden Disjunktion. Für zwei oder mehr Eingänge ist der Ausgang auf logisch 1, wenn an einer ungerade Anzahl von Eingängen eine logische 1 anliegt.
 
-In booleschen Funktionen wird die XOR Verknüpfung mittels "%%\oplus%%" dargestellt.
+In booleschen Funktionen wird die XOR Verknüpfung mittels "\\(\oplus\\)" dargestellt.
 
 Wahrheitstabelle:
 
-A|B|%%A \oplus B%%
+A|B|\\(A \oplus B\\)
 :---:|:---:|:---:
 0|0|0
 0|1|1
@@ -104,20 +105,21 @@ Im europäischen Raum wird für die Darstellung von Schaltsymbolen die Norm IEC 
 # Rechengesetze
 Für die Operatoren der booleschen Algebra gilt die folgende Rangfolge (in absteigender Wertigkeit):
 
-1. Negation (%%\neg%%)
-2. Konjunktion (%%\land%%)
-3. Disjunktion (%%\lor%%)
+1. Negation (\\(\neg\\))
+2. Konjunktion (\\(\land\\))
+3. Disjunktion (\\(\lor\\))
+
 
 Name | AND | OR
------|-----|----
-Kommutativgesetz | %%a \land b = b \land a%% | %%a \lor b = b \lor a%%
-Assoziativgesetz | %%( a \land b ) \land c = a \land ( b \land c )%% | %%(a \lor b) \lor c = a \lor (b \lor c)%%
-Idempotenzgesetz | %%a \land a=a%% | %%a \lor a=a%%
-Distributivgesetz | %%a \land (b \lor c) = (a \land b) \lor (a \land c)%% | %%a \lor (b \land c) = (a \lor b) \land (a \lor c)%%
-Neutralitätsgesetz | %%a \land 1 = a%% | %%a \lor 0 = a%%
-Extremalgesetz | %%a \land 0 = 0%% | %%a \lor 1 = 1%%
-Doppelnegationsgesetz | %%\overline{ \overline{a} } = a%%
-De Morgansche Gesetz | %%\overline{ a \land b } = \overline{ a } \lor \overline{b}%% | %%\overline{a \lor b} = \overline{a} \land \overline{b}%%
-Komplementärgesetz | %%a \land \overline{a} = 0%% | %%a \lor \overline{a} = 1%%
-Dualitätsgesetz | %%\overline{0} = 1%% | %%\overline{1} = 0%%
-Absorptionsgesetz | %%a \lor (a \land b) = a%% | %%a \land (a \lor b) = a%%
+:--- | :---: | :---:
+Kommutativgesetz | \\(a \land b = b \land a\\) | \\(a \lor b = b \lor a\\)
+Assoziativgesetz | \\(( a \land b ) \land c = a \land ( b \land c )\\) | \\((a \lor b) \lor c = a \lor (b \lor c)\\)
+Idempotenzgesetz | \\(a \land a=a\\) | \\(a \lor a=a\\)
+Distributivgesetz | \\(a \land (b \lor c) = (a \land b) \lor (a \land c)\\) | \\(a \lor (b \land c) = (a \lor b) \land (a \lor c)\\)
+Neutralitätsgesetz | \\(a \land 1 = a\\) | \\(a \lor 0 = a\\)
+Extremalgesetz | \\(a \land 0 = 0\\) | \\(a \lor 1 = 1\\)
+Doppelnegationsgesetz | \\(\overline{ \overline{a} } = a\\) |
+De Morgansche Gesetz | \\(\overline{ a \land b } = \overline{ a } \lor \overline{b}\\) | \\(\overline{a \lor b} = \overline{a} \land \overline{b}\\)
+Komplementärgesetz | \\(a \land \overline{a} = 0\\) | \\(a \lor \overline{a} = 1\\)
+Dualitätsgesetz | \\(\overline{0} = 1\\) | \\(\overline{1} = 0\\)
+Absorptionsgesetz | \\(a \lor (a \land b) = a\\) | \\(a \land (a \lor b) = a\\)

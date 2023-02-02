@@ -19,6 +19,7 @@ class Page:
     url: str
     content: str
     title: str
+    latex: str = None
     parent: str = None
     next: str = None
     prev: str = None
