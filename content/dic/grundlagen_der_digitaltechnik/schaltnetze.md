@@ -53,8 +53,8 @@ Um mehrere Komparatoren zu kombinieren, sind Eingänge für "ist gleich", "grö�
 ## Prioritätsenkoder
 Der Prioritätsenkoder gibt die Nummer des aktiven Eingangs aus, der die höchste Priorität hat. Im folgenden Beispiel gibt es vier Eingänge (<code>i0</code> bis <code>i3</code>), wobei <code>i3</code> die höchste Priorität hat. Ist <code>i3</code> aktiv, wird am Ausgang der Wert 3 (<code>y1</code>=1, <code>y0</code>=1), unabhängig davon, welchen Zustand die anderen Eingänge haben.
 
-i3|i2|i1|i0|y1|y0|
-:---:|:---:|:---:|:---:|:---:|:---:
+i3|i2|i1|i0|y1|y0
+:---: | :---: | :---: | :---: | :---: | :---:
 0|0|0|0|0|0
 0|0|0|1|0|0
 0|0|1|x|0|1

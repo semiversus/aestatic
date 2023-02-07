@@ -8,10 +8,13 @@ from aestatic.processor import Processor, BaseTask
 import mistune
 from jinja2 import Environment, FileSystemLoader
 
+from aestatic.tasks.markdown.renderer import AestaticRenderer
+
 
 def resolve(p: Path):
     return p.resolve().relative_to(Path('.').resolve())
 
+markdown_convert = mistune.create_markdown(escape=False, renderer=AestaticRenderer(escape=False), plugins=['strikethrough', 'footnotes', 'table', 'speedup'])
 
 @dataclass
 class Page:
@@ -32,7 +35,10 @@ class Page:
         except Exception:
             raise ValueError(f'Problem parsing meta data from {path}')
 
-        html_content = mistune.html(source_content)
+        html_content = markdown_convert(source_content)
+        for i, line in enumerate(html_content.splitlines()):
+            if '*' in line:
+                print(f'{path}:{i+1} {line}')
         return Page(path.relative_to('content'), path.with_suffix('.html').relative_to('content'), html_content, **meta)
 
 

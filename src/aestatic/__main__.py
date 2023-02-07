@@ -1,7 +1,9 @@
 import sys
 
+from .tasks.markdown import task
+
 from .processor import Processor
-from .tasks import markdown, copy, compress, slides, sass
+from .tasks import copy, compress, slides, sass
 
 processor = Processor()
 
@@ -11,7 +13,7 @@ if '--no-cache' in sys.argv:
 processor.register(sass.SassTask())
 processor.register(compress.CompressTask())
 processor.register(slides.SlidesTask())
-processor.register(markdown.MarkdownTask())
+processor.register(task.MarkdownTask())
 processor.register(copy.CopyTask())
 processor.run()
 
