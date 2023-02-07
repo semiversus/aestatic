@@ -10,7 +10,8 @@ title: Test - Hardwarenahe Programmierung
 
 # Frühere Tests
 
-!!! panel-info "Hinweis"
+.. info:: Hinweis
+
     Bei früheren Tests war das Stoffgebiet teilweise anders!
 
 * [Test 1](test_hardwarenahe_programmierung_1.pdf){: class="download" }, ohne Musterlösung

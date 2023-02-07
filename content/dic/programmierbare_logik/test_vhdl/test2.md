@@ -34,7 +34,8 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 
 ![FSM für Lichtsteuerung](test2_led_delay_fsm.svg.tex)
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_delay_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
     der gesamte Bereich zoomen.
 
@@ -66,7 +67,8 @@ Komponenten werden genutzt, um im Top Level <samp>led_delay.vhd</samp> die gewü
     * <code>overflow_o</code> ist mit dem Signal <code>timeout</code> verbunden
 * Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_delay_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
@@ -130,7 +132,8 @@ Erstelle die Komponente <code>shuffle</code> durch Bearbeitung der Datei <samp>s
 * Der interne Zähler soll von 0 bis 5 zählen
 * Das Register <code>result_reg</code> übernimmt bei einer steigenden Taktflanke den Wert von <code>counter_reg</code>, wenn <code>enable_i</code> gleich <code>'0'</code> ist
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>shuffle_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
@@ -139,7 +142,8 @@ Erstelle die Komponente <code>shuffle</code> durch Bearbeitung der Datei <samp>s
 Zur Verfügung stehen die Komponenten <samp>shuffle</samp>, <samp>decoder</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>dice.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>dice_tb.vhd</samp>.
 
 ## Test am Board

@@ -21,7 +21,8 @@ Je nachdem nach welcher der drei Komponenten (Eingang, Ausgang oder System) gesu
 ## Lineare Systeme
 *Linearität* bedeutet, dass der Zusammenhang des Eingangs und des Ausgangs eines Systems eine *Lineare Abbildung* ist.
 
-!!! panel-info "Linearität"
+.. info:: Linearität
+
     Wenn der Eingang \\(x_1[n]\\) zum Ausgang \\(y_1[n]\\) führt und \\(x_2[n]\\) zum Ausgang \\(y_2[n]\\) führt, dann muss der
     *addierte* und *skalierte* Eingang \\(a_1 x_1[n]+ a_2 x_2[n]\\) zum addierten und skalierten Ausgang
     \\(a_1 y_1[n]+ a_2 y_2[n]\\) führen.

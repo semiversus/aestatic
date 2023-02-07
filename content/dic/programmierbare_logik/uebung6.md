@@ -4,7 +4,8 @@ parent: uebersicht.md
 
 # Übungsaufgabe
 
-!!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
+.. info:: In dieser Übung wird das BASYS2 Board verwendet
+
     Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
 
 * Definition einer Zustandmaschine

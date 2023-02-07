@@ -1,11 +1,14 @@
 title: Timer beim Atmel AVR
 parent: uebersicht.md
+latex: true
 
-!!! panel-info "Diese Seite beschreibt die Timer des ATMega16"
+.. info:: Diese Seite beschreibt die Timer des ATMega16
+
     Prinzipiell lässt sich diese Information auch auf andere Mikrocontroller der AVR Serie übertragen, es empfiehlt sich
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
-!!! panel-info "Informationen im Datenblatt"
+.. info:: Informationen im Datenblatt
+
     Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
@@ -22,7 +25,8 @@ parent: uebersicht.md
         * *Seite 122-125*: Betriebsmodi
         * *Seite 128-130*: Registerbeschreibung
 
-!!! panel-info "Anwendungen"
+.. info:: Anwendungen
+
     Je nach Anwendung liefert die folgende Übersicht eine Hilfestellung beim Einstellen der Register:
 
     * **Timer0**: [PWM](timer0_pwm.svg), [Periodische Events](timer0_ctc.svg), [Zählen](timer0_count.jpg)
@@ -74,7 +78,7 @@ Funktionen benutzt werden:
 ## <code>TCCR0</code> - Timer Counter Control Register
 
 Bit|7|6|5|4|3|2|1|0
-:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|FOC0|WGM00|COM01|COM00|WGM01|CS02|CS01|CS00
 Read/Write|W|R/W|R/W|R/W|R/W|R/W|R/W|R/W
 Init|0|0|0|0|0|0|0|0
@@ -87,7 +91,7 @@ nachzulesen.
 Diese beiden Bits beschreiben die Betriebsmodi des Timers:
 
 Modus|WGM01|WGM00|Bezeichnung
--!|-|-!|-
+-|-|-|-
 0|0|0|Normaler Modus
 1|0|1|PWM, Phasenkorrekt
 2|1|0|CTC
@@ -103,7 +107,7 @@ Beschreibt die Funktionsweise des Pins *OC0*. Sind beide Bits auf <code>0</code>
 ### CS02, CS01 und CS00 - Clock Select
 
 CS02|CS01|CS00|Bezeichnung
--|-|-!|-
+-|-|-|-
 0|0|0|Kein Takt (Timer ist quasi abgeschaltet)
 0|0|1|Prozessortakt
 0|1|0|Prozessortakt / 8
@@ -120,7 +124,7 @@ es wie bereits beschrieben die beiden Interrupts <code>TOIE0</code> (Timer Overf
 jeweiligen Interrupt zu aktivieren muss eine logische <code>1</code> an die entsprechende Stelle geschrieben werden.
 
 Bit|7|6|5|4|3|2|**1**|**0**
-:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|OCIE2|TOIE2|TICIE1|OCIE1A|OCIE1B|TOIE1|**OCIE0**|**TOIE0**
 Read/Write|R/W|R/W|R/W|R/W|R/W|R/W|**R/W**|**R/W**
 Init|0|0|0|0|0|0|**0**|**0**
@@ -132,9 +136,9 @@ werden, dass beim Erreichen dieses Maximums der <code>TIMERn_OVF_vect</code> aus
 
 Die Frequenz, mit der ein Overflow bei Verwendung des Prozessortakts als Taktquelle auftritt ergibt sich mit:
 
-%%f_{TOVF}=\frac{f_{CLK}}{Prescaler\cdot N_{max}}%%
+$$f_{TOVF}=\frac{f_{CLK}}{Prescaler\cdot N_{max}}$$
 
-Als Prescaler stehen dabei 1, 8, 64, 256 und 1024 zur Verfügung. %%N_{max}%% ist dabei 256 für 8 Bit Timer und 65536 für
+Als Prescaler stehen dabei 1, 8, 64, 256 und 1024 zur Verfügung. \\(N_{max}\\) ist dabei 256 für 8 Bit Timer und 65536 für
 16 Bit Timer.
 
 Der Interrupt TIMERn_COMPx_vect kann aktiviert werden und wird ausgelöst, sobald das Timerregister <code>TCNTn</code> den
@@ -147,7 +151,7 @@ ausgelöst wird.
 
 Die Frequenz, mit der ein *Compare Match* bei Verwendung des Prozessortakts als Taktquelle auftritt ergibt sich mit:
 
-%%f_{COMP}=\frac{f_{CLK}}{Prescaler\cdot (OCRn + 1)}%%
+$$f_{COMP}=\frac{f_{CLK}}{Prescaler\cdot (OCRn + 1)}$$
 
 ## Fast PWM
 Beim Fast PWM zählt der Timer bis zum Maximum seines Zählberreichs. Das Register <code>OCRn</code> dient als Vergleich und abhängig

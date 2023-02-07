@@ -1,5 +1,6 @@
 title: Synchrones Design
 parent: uebersicht.md
+latex: true
 
 # Allgemeines
 Bei der Entwicklung digitaler Schaltwerke versucht man meist nach einer bestimmten Methodik vorzugehen, um bekannte Fehler ausschließen zu können. Im Folgenden werden die verschiedenen Schwierigkeiten beschrieben, die ohne Beachtung auftreten können. Anschließend wird der synchrone Schaltungsentwurf vorgestellt, der eine Methodik beschreibt, komplexe Schaltwerke deterministisch und sicher zu entwerfen und zu betreiben.
@@ -8,7 +9,7 @@ Bei der Entwicklung digitaler Schaltwerke versucht man meist nach einer bestimmt
 ## Setup- und Hold-Zeiten
 Das Datensignal eines Datensignals muss eine bestimmte Zeit vor der Flanke am Takteingang stabil anliegen. Diese Zeit wird *Setup*-Zeit genannt. Weiters muss das Datensignal nach der Flanke am Takteingang eine bestimmte Zeit stabil anliegen. Dies ist die *Hold*-Zeit.
 
-Wenn Setup- und Hold-Zeiten eingehalten werden, wird nach der vom Bauteil abhängigen Verzögerungszeit der Ausgang entsprechend geändert. Im Datenblatt ist diese Zeit meist als *Propagationdelay* bzw. %%t_{p}%% gekennzeichnet.
+Wenn Setup- und Hold-Zeiten eingehalten werden, wird nach der vom Bauteil abhängigen Verzögerungszeit der Ausgang entsprechend geändert. Im Datenblatt ist diese Zeit meist als *Propagationdelay* bzw. \\(t_{p}\\) gekennzeichnet.
 
 Ändert sich das Datensignal innerhalb der Setup- und Hold-Zeit, spricht man von einer Setup- bzw. Hold-Zeit Verletzung. Bei einer Verletzung besteht die Wahrscheinlichkeit, dass es zu einem metastabilen Zustand des Flip-Flops kommt. Dabei bleibt der Ausgang in einem Zustand zwischen logisch 0 und 1 (dem metastabilen Zustand) und wechselt nach einer undefinierbaren Zeit entweder nach logisch 0 oder 1. Dabei ist es auch möglich, dass die normale Verzögerungszeit weit überschritten wird.
 

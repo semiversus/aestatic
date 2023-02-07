@@ -8,33 +8,34 @@ beschreibenden Systems.
 
 Ein [Volladdierer](../grundlagen_der_digitaltechnik/schaltnetze.html#voll-addierer) lässt sich mittels Verhaltensmodellierung wie folgt beschreiben:
 
-    #!vhdl
-    entity fulladder is
-      port(
-        x, y, cin: in std_ulogic;
-        s, cout:out std_ulogic
-      );
-    end entity;
+```vhdl
+entity fulladder is
+  port(
+    x, y, cin: in std_ulogic;
+    s, cout:out std_ulogic
+  );
+end entity;
 
-    architecture behave of fulladder is
-    begin
-      s <= '0' when (x = '0' and y = '0' and cin = '0') else
-           '1' when (x = '0' and y = '0' and cin = '1') else
-           '1' when (x = '0' and y = '1' and cin = '0') else
-           '0' when (x = '0' and y = '1' and cin = '1') else
-           '1' when (x = '1' and y = '0' and cin = '0') else
-           '0' when (x = '1' and y = '0' and cin = '1') else
-           '0' when (x = '1' and y = '1' and cin = '0') else
-           '1' when (x = '1' and y = '1' and cin = '1');
-      cout <= '0' when (x = '0' and y = '0' and cin = '0') else
-              '0' when (x = '0' and y = '0' and cin = '1') else
-              '0' when (x = '0' and y = '1' and cin = '0') else
-              '1' when (x = '0' and y = '1' and cin = '1') else
-              '0' when (x = '1' and y = '0' and cin = '0') else
-              '1' when (x = '1' and y = '0' and cin = '1') else
-              '1' when (x = '1' and y = '1' and cin = '0') else
-              '1' when (x = '1' and y = '1' and cin = '1');
-    end architecture;
+architecture behave of fulladder is
+begin
+  s <= '0' when (x = '0' and y = '0' and cin = '0') else
+        '1' when (x = '0' and y = '0' and cin = '1') else
+        '1' when (x = '0' and y = '1' and cin = '0') else
+        '0' when (x = '0' and y = '1' and cin = '1') else
+        '1' when (x = '1' and y = '0' and cin = '0') else
+        '0' when (x = '1' and y = '0' and cin = '1') else
+        '0' when (x = '1' and y = '1' and cin = '0') else
+        '1' when (x = '1' and y = '1' and cin = '1');
+  cout <= '0' when (x = '0' and y = '0' and cin = '0') else
+          '0' when (x = '0' and y = '0' and cin = '1') else
+          '0' when (x = '0' and y = '1' and cin = '0') else
+          '1' when (x = '0' and y = '1' and cin = '1') else
+          '0' when (x = '1' and y = '0' and cin = '0') else
+          '1' when (x = '1' and y = '0' and cin = '1') else
+          '1' when (x = '1' and y = '1' and cin = '0') else
+          '1' when (x = '1' and y = '1' and cin = '1');
+end architecture;
+```
 
 In der Beschreibung wird das Verhalten dargestellt, in diesem Beispiel mittels Umsetzung der Wahrheitstabelle.
 
@@ -73,35 +74,37 @@ Die Funktion soll wie folgt sein:
 
 ### VHDL Entity
 
-    #!vhdl
-    entity sum is
-      port (
-        clk: in std_ulogic;
-        value: in unsigned(7 downto 0);
-        load: in std_ulogic;
-        clear: in std_ulogic;
-        result: out unsigned(7 downto 0)
-      );
-    end entity;
+```vhdl
+entity sum is
+  port (
+    clk: in std_ulogic;
+    value: in unsigned(7 downto 0);
+    load: in std_ulogic;
+    clear: in std_ulogic;
+    result: out unsigned(7 downto 0)
+  );
+end entity;
+```
 
 ### VHDL Architecture
 
-    #!vhdl
-    architecture behave of sum is
-    begin
-      process(clk)
-      begin
-        if rising_edge(clk) then
-          if clear='1' then
-            result<=(others=>'0');
-          elsif load='1' then
-            result<=value;
-          else
-            result<=result+value;
-          end if;
-        end if;
-      end process;
-    end architecture;
+```vhdl
+architecture behave of sum is
+begin
+  process(clk)
+  begin
+    if rising_edge(clk) then
+      if clear='1' then
+        result<=(others=>'0');
+      elsif load='1' then
+        result<=value;
+      else
+        result<=result+value;
+      end if;
+    end if;
+  end process;
+end architecture;
+```
 
 ### Timingdiagramm
 
@@ -112,36 +115,37 @@ Die Funktion soll wie folgt sein:
 * [Online VHDL Modell mit Testbench](http://www.edaplayground.com/x/EcA){: class="external" }
 
 ## Umsetzung des Volladdierers
-    #!vhdl
-    entity fulladder is
-      port(
-        x, y, cin: in std_ulogic;
-        s, cout:out std_ulogic
-      );
-    end entity;
+```vhdl
+entity fulladder is
+  port(
+    x, y, cin: in std_ulogic;
+    s, cout:out std_ulogic
+  );
+end entity;
 
-    architecture structural of fulladder is
-      signal halfadder1_s : std_ulogic ;
-      signal halfadder1_cout : std_ulogic ;
-      signal halfadder2_cout : std_ulogic ;
-    begin
-      halfadder1: entity work.halfadder
-        port map (
-          x => x,
-          y => y,
-          cout => halfadder1_cout,
-          s => halfadder1_s
-        );
-      halfadder2: entity work.halfadder
-        port map (
-          x => halfadder1_s,
-          y => cin,
-          cout => halfadder2_cout,
-          s => s
-        );
+architecture structural of fulladder is
+  signal halfadder1_s : std_ulogic ;
+  signal halfadder1_cout : std_ulogic ;
+  signal halfadder2_cout : std_ulogic ;
+begin
+  halfadder1: entity work.halfadder
+    port map (
+      x => x,
+      y => y,
+      cout => halfadder1_cout,
+      s => halfadder1_s
+    );
+  halfadder2: entity work.halfadder
+    port map (
+      x => halfadder1_s,
+      y => cin,
+      cout => halfadder2_cout,
+      s => s
+    );
 
-      cout <= halfadder1_cout or halfadder2_cout;
-    end architecture;
+  cout <= halfadder1_cout or halfadder2_cout;
+end architecture;
+```
 
 An diesem Beispiel für die strukturelle Modellierung sieht man den Aufbau mittels Komponenten. Dadurch
 ergibt sich eine Hierarchie der Komponenten.
@@ -150,16 +154,17 @@ ergibt sich eine Hierarchie der Komponenten.
 Bei der Datenfluss wird der *Fluss* der Daten modelliert. Dabei werden auf die Eingänge Transformationen
 angewendet, um die Ausgänge zu berechnen.
 
-    #!vhdl
-    entity fulladder is
-      port(
-        x, y, cin: in std_ulogic;
-        s, cout:out std_ulogic
-      );
-    end entity;
+```vhdl
+entity fulladder is
+  port(
+    x, y, cin: in std_ulogic;
+    s, cout:out std_ulogic
+  );
+end entity;
 
-    architecture dataflow of fulladder is
-    begin
-      s <= x xor y xor cin;
-      cout <= (x and y) or ( (x xor y) and cin);
-    end architecture;
+architecture dataflow of fulladder is
+begin
+  s <= x xor y xor cin;
+  cout <= (x and y) or ( (x xor y) and cin);
+end architecture;
+```

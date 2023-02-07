@@ -1,5 +1,6 @@
 title: Statische Datenspeicher
 parent: uebersicht.md
+latex: true
 
 # Allgemeines
 
@@ -75,9 +76,9 @@ MLC Flash Speicher erhöhen die Speicherdichte (mehr Bit auf gleiche Fläche), d
 
 ![SRAM Zelle mit 6 Transistoren](sram.png)
 
-SRAM Zellen werden heut meist mittels 6 Transistoren in einer CMOS Technologie gefertigt. Die Information wird in einer bistabilen Kippstufe (M1-M4) gespeichert. Die beiden Transistoren M5 und M6 dienen zum Adressieren der Speicherzelle. Um die gespeicherte Information auszulesen, werden die beiden Leitungen %%BL%% und %%\overline{BL}%% hochohmig gesetzt und die Transistoren M5 und M6 leiten. Dadurch ist der innere Zustand der Kippstufe auf den Leitungen %%BL%% und %%\overline{BL}%% lesbar.
+SRAM Zellen werden heut meist mittels 6 Transistoren in einer CMOS Technologie gefertigt. Die Information wird in einer bistabilen Kippstufe (M1-M4) gespeichert. Die beiden Transistoren M5 und M6 dienen zum Adressieren der Speicherzelle. Um die gespeicherte Information auszulesen, werden die beiden Leitungen \\(BL\\) und \\(\overline{BL}\\) hochohmig gesetzt und die Transistoren M5 und M6 leiten. Dadurch ist der innere Zustand der Kippstufe auf den Leitungen \\(BL\\) und \\(\overline{BL}\\) lesbar.
 
-Beim Schreiben werden die Leitungen %%BL%% und %%\overline{BL}%% entsprechend der zu speichernden Information gesetzt und die Speicherzelle mittels M5 und M6 adressiert. Der innere Zustand wird durch die Bitleitungen überschrieben.
+Beim Schreiben werden die Leitungen \\(BL\\) und \\(\overline{BL}\\) entsprechend der zu speichernden Information gesetzt und die Speicherzelle mittels M5 und M6 adressiert. Der innere Zustand wird durch die Bitleitungen überschrieben.
 
 Eine Sonderform stellt eine SRAM Zelle mit 4 Transistoren dar. Dabei werden die beiden p-Kanal FETs durch Widerstände ersetzt. Nachteilig ist die schlechte Fertigbarkeit in den heute üblichen Prozessen und der erhöhte Stromverbrauch.
 

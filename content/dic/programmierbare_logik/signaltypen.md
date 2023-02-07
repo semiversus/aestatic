@@ -13,17 +13,19 @@ nicht ausreichen.
 
 Signale werden wie folgt definiert:
 
-    #!vhdl
-    signal <name> : <typ>; -- Signal <name> ist vom Typ <typ> und wird nicht initialisert
-    signal <name> : <typ> := <default>; -- Signal <name> ist vom Typ <typ> und wird mit <default> initialisiert
+```vhdl
+signal <name> : <typ>; -- Signal <name> ist vom Typ <typ> und wird nicht initialisert
+signal <name> : <typ> := <default>; -- Signal <name> ist vom Typ <typ> und wird mit <default> initialisiert
+```
 
 # Standard Logic 1164
 Die der Bibliothek *Standard Logic 1164* werden Signaltypen definiert, die mehr als <code>0</code> und <code>1</code> darstellen können. Um
 diese Bibliothek in einer VHDL Datei zu verwenden sind folgende zwei Zeilen notwendig:
 
-    #!vhdl
-    library ieee ;
-    use ieee.std_logic_1164.all;
+```vhdl
+library ieee ;
+use ieee.std_logic_1164.all;
+```
 
 Diese Typen haben 9 Werte (d.h. werden sie auch *9-wertige Logik* genannt)
 
@@ -41,7 +43,7 @@ Diese Typen haben 9 Werte (d.h. werden sie auch *9-wertige Logik* genannt)
 Werden mehrere Ausgänge zusammengeschalten setzen sich starke Treiber gegenüber schwachen durch. Ein <code>U</code> setzt sich
 gegenüber aller anderen Werten durch. Die Funktion, die die Auflösung beschreibt nennt sich <code>resolution</code>-Funktion.
 
-!!! panel-warning "*Resolved* Signale"
+.. warning:: *Resolved* Signale
     Innerhalb eines FPGAs gibt es nie die Notwendigkeit mehrer Ausgänge **direkt** miteinander zu verbinden. Man hat
     immer die Möglichkeit, dies über eine Kombinatorik zu tun.
 
@@ -67,13 +69,15 @@ Was spricht für <code>std_ulogic</code>?
 
 Eine Umwandlung von <code>std_logic</code> zu <code>std_ulogic</code> und umgekehrt ist jederzeit möglich.
 
-!!! panel-info "In diesem Skriptum wird <code>std_ulogic</code> verwendet"
+.. info:: In diesem Skriptum wird <code>std_ulogic</code> verwendet
+
     Alle gezeigten Beispiele mit <code>std_ulogic</code> lassen sich auch mittels <code>std_logic</code> realisieren.
 
 ## Definition eines Signals mit <code>std_ulogic</code>
 
-    #!vhdl
-    signal led_reg : std_ulogic := '0'; -- Hier wird das Signal led_reg als std_ulogic definiert und mit '0' initialisiert
+```vhdl
+signal led_reg : std_ulogic := '0'; -- Hier wird das Signal led_reg als std_ulogic definiert und mit '0' initialisiert
+```
 
 # Busse mittels <code>std_ulogic_vector</code>
 In vielen Anwendungen werden mehrere Signale zu einem *Bus* zusammengefasst. Dazu wird der Signaltyp <code>std_ulogic_vector</code>
@@ -82,8 +86,9 @@ verwendet.
 Um einen Bus <code>data_reg</code> mit 8 Signalen zu definieren und diesen mit den Bits <code>"00000001"</code> zu initialisieren wird folgende
 Definition genutzt:
 
-    #!vhdl
-    signal data_reg : std_ulogic_vector(7 downto 0) := "00000001";
+```vhdl
+signal data_reg : std_ulogic_vector(7 downto 0) := "00000001";
+```
 
 ## <code>downto</code> und <code>to</code>
 Im obigen Beispiel wurde <code>downto</code> genutzt um innerhalb des Vektors die einzelnen Indizies zu definieren. Wir können auf
@@ -92,12 +97,14 @@ entspricht somit (wie erwartet) dem niederwertigsten Bit.
 
 Würde <code>data_reg</code> wie folgt definiert sein:
 
-    #!vhdl
-    signal data_reg : std_ulogic_vector(0 to 7) := "00000001";
+```vhdl
+signal data_reg : std_ulogic_vector(0 to 7) := "00000001";
+```
 
 würden wir bei <code>data_reg(0)</code> den Wert <code>'0'</code> zurückbekommen, da der Index 0 nun dem äußerst linken Bit entspricht.
 
-!!! panel-info "Verwende <code>downto</code>"
+.. info:: Verwende <code>downto</code>
+
     Da bei den meisten Darstellungen das höchstwertigste Bit links und das niederwertigste Bit rechts steht bietet sich
     <code>downto</code> an. Prinzipiell spricht nichts gegen eine Verwendung von <code>to</code> solange man weiß, was man tut!
 
@@ -108,8 +115,9 @@ mittels <code>x"01"</code> für die Darstellung mittels hexadezimaler Zahl.
 
 Eine andere Möglichkeit bietet die Darstellung mittels Mapping:
 
-    #!vhdl
-    signal data_reg : std_ulogic_vector(7 downto 0) := (0 => '1', others=>'0');
+```vhdl
+signal data_reg : std_ulogic_vector(7 downto 0) := (0 => '1', others=>'0');
+```
 
 Diese Definition setzt den Index 0 auf <code>'1'</code> und alle anderen Bits auf <code>'0'</code>.
 
@@ -118,39 +126,44 @@ Busse lassen sich beliebig zusammenführen und aufteilen. Im folgenden Beispiel 
 Teilbusse <code>low_nibble</code> und <code>high_nibble</code> mit jeweils 4 Bit aufgeteilt. Der 8 Bit Bus <code>data_out_reg</code> besteht aus den
 einzelnen 4 Bit Bussen, die in umgekehrter Reihenfolge wieder zusammengesetzt werden.
 
-    #!vhdl
-    signal data_in_reg : std_ulogic_vector(7 downto 0);
-    signal low_nibble : std_ulogic_vector(3 downto 0);
-    signal high_nibble : std_ulogic_vector(3 downto 0);
-    signal data_out_reg : std_ulogic_vector(7 dowto 0);
+```vhdl
+signal data_in_reg : std_ulogic_vector(7 downto 0);
+signal low_nibble : std_ulogic_vector(3 downto 0);
+signal high_nibble : std_ulogic_vector(3 downto 0);
+signal data_out_reg : std_ulogic_vector(7 dowto 0);
 
-    low_nibble <= data_in_reg(3 downto 0);
-    high_nibble <= data_in_reg(7 downto 4);
-    data_out_reg <= low_nibble & high_nibble;
+low_nibble <= data_in_reg(3 downto 0);
+high_nibble <= data_in_reg(7 downto 4);
+data_out_reg <= low_nibble & high_nibble;
+```
 
 Das gleiche würde sich auch wie folgt realisieren lassen:
 
-    #!vhdl
-    data_out_reg <= data_in_reg(3 downto 0) & data_in_reg(7 downto 4);
+```vhdl
+data_out_reg <= data_in_reg(3 downto 0) & data_in_reg(7 downto 4);
+```
 
 # Numerische Signaltypen <code>unsigned</code> und <code>signed</code>
 Der Signaltyp <code>std_ulogic_vector</code> ist eine einfache Ansammlung einzelner <code>std_ulogic</code> Signale. Damit zu rechnen ist
 nicht unmittelbar möglich. Für diese Anwendungsfälle gibt es die Bibliothek <code>numeric_std</code> mit den Signaltypen <code>unsigned</code>
 und <code>signed</code>.
 
-    #!vhdl
-    library ieee ;
-    use ieee.numeric_std.all;
+```vhdl
+library ieee ;
+use ieee.numeric_std.all;
+```
 
 Die Definition selbst entspricht der Definition von Bussen mittels <code>std_ulogic_vector</code>:
 
-    #!vhdl
-    signal counter_reg : unsigned(7 downto 0);
+```vhdl
+signal counter_reg : unsigned(7 downto 0);
+```
 
 Damit werden nun Addition und Subtraktion mit anderen <code>unsigned</code> bzw. <code>signed</code> Typen sowie *Integern* möglich:
 
-    #!vhdl
-    counter_reg <= counter_reg + 1;
+```vhdl
+counter_reg <= counter_reg + 1;
+```
 
 # Ganzzahlen mittels <code>integer</code>
 
@@ -165,10 +178,11 @@ die einzelnen Bits zuzugreifen. Für solche Zwecke gibt folgende Ganzzahl Signal
 Für Signale kann der Wertebereich der Ganzzahltypen weiter eingeschränkt werden. Für einen Zähler im Dezimalsystem
 bietet sich eventuell folgende Definition an:
 
-    #!vhdl
-    signal dec_counter_reg : integer range 0 to 9;
+```vhdl
+signal dec_counter_reg : integer range 0 to 9;
+```
 
-!!! panel-warning "Überlauf bei <code>integer</code>"
+.. warning:: Überlauf bei <code>integer</code>
     Wenn wie im obigen Beispiel der Bereich auf 0 bis 9 eingeschränkt ist, bedeutet dies nicht, dass bei einem Überlauf
     (9+1) das Ergebnis auf 0 überläuft. Es ist ein Hinweis für Simulation und Synthese, die im Falle eine Warnung
     ausgeben können, der Überlauf selbst muss aber durch eine eigene Beschreibung abgefangen werden.
@@ -182,18 +196,20 @@ Umwandlung von einem <code>integer</code> zu einem Vektor benötigt man die Info
 
 Für die folgenden Beispiele gehen wir von folgender Definition aus:
 
-    #!vhdl
-    signal sul_vector : std_ulogic_vector(7 downto 0);
-    signal u_vector : unsigned(7 downto 0);
-    signal s_vector : signed(7 downto 0);
-    signal int : integer range 0 to 255;
+```vhdl
+signal sul_vector : std_ulogic_vector(7 downto 0);
+signal u_vector : unsigned(7 downto 0);
+signal s_vector : signed(7 downto 0);
+signal int : integer range 0 to 255;
+```
 
 ## <code>std_ulogic_vector</code>
 
-    #!vhdl
-    u_vector <= unsigned(sul_vector);
-    s_vector <= signed(sul_vector);
-    int <= to_integer(unsigned(sul_vector));
+```vhdl
+u_vector <= unsigned(sul_vector);
+s_vector <= signed(sul_vector);
+int <= to_integer(unsigned(sul_vector));
+```
 
 Die Umwandlung eines <code>std_ulogic_vector</code> in <code>unsigned</code> und <code>signed</code> geht einfach, da es sich nur die Interpretation der
 Bits ändert.
@@ -204,23 +220,25 @@ von Bits ist, ohne eine Wertigkeit vorzugeben. Die Umwandlung zu <code>integer</
 
 ## <code>unsigned</code> und <code>signed</code>
 
-    #!vhdl
-    -- Umwandlung von unsigned
-    sul_vector <= std_ulogic_vector(u_vector);
-    int <= to_integer(u_vector);
+```vhdl
+-- Umwandlung von unsigned
+sul_vector <= std_ulogic_vector(u_vector);
+int <= to_integer(u_vector);
 
-    -- Umwandlung von signed
-    sul_vector <= std_ulogic_vector(s_vector);
-    int <= to_integer(s_vector);
+-- Umwandlung von signed
+sul_vector <= std_ulogic_vector(s_vector);
+int <= to_integer(s_vector);
+```
 
 Die Umwandlung funktioniert hier änhlich zu <code>std_ulogic_vector</code>.
 
 ## <code>integer</code>
 
-    #!vhdl
-    u_vector <= to_unsigned(int, 8);
-    s_vector <= to_signed(int, 8);
-    sul_vector <= std_ulogic_vector(to_unsigned(int, 8));
+```vhdl
+u_vector <= to_unsigned(int, 8);
+s_vector <= to_signed(int, 8);
+sul_vector <= std_ulogic_vector(to_unsigned(int, 8));
+```
 
 Bei der Konvertierung eines <code>integer</code>s in einen Vektor sind entsprechende Konvertierungsfunktionen zu nutzen. Der Weg
 von <code>integer</code> zu <code>std_ulogic_vector</code> kann dabei je nach Anwendung über <code>to_unsigned</code> und <code>to_signed</code> führen.

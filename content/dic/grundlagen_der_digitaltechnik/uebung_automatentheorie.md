@@ -22,7 +22,7 @@ Der Zustand wird über die beiden D-Flip-Flop <code>z1</code> und <code>z0</code
 
 ## Zustandsübertragungsfunktion
 
-<code>δ</code> | **E0** | **E1** | **E2**
+δ | **E0** | **E1** | **E2**
 :---:|:---:|:---:|:---:
 **Z0** | Z0 | Z0 | Z1
 **Z1** | Z2 | Z2 | Z2
@@ -30,7 +30,7 @@ Der Zustand wird über die beiden D-Flip-Flop <code>z1</code> und <code>z0</code
 
 ## Ausgabefunktion
 
-<code>ω</code> | **E0** | **E1** | **E2**
+ω | **E0** | **E1** | **E2**
 :---:|:---:|:---:|:---:
 **Z0** | A0 | A0 | A0
 **Z1** | A0 | A1 | A0

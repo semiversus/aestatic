@@ -1,11 +1,14 @@
 title: Die UART des Atmel AVR
 parent: uebersicht.md
+latex: true
 
-!!! panel-info "Diese Seite beschreibt die UART des ATMega16"
+.. info:: Diese Seite beschreibt die UART des ATMega16
+
     Prinzipiell lässt sich diese Information auch auf andere Mikrocontroller der AVR Serie übertragen, es empfiehlt sich
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
-!!! panel-info "Informationen im Datenblatt"
+.. info:: Informationen im Datenblatt
+
     Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
@@ -37,7 +40,7 @@ Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden 
 ## USARTA
 
 Bit|7|6|5|4|3|2|1|0
-:---:!|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Name|RXC|TXC|UDRE|FE|DOR|PE|U2X|MPCM
 Read/Write|R|R/W|R|R|R|R|R/W|R/W
 Init|0|0|1|0|0|0|0|0
@@ -114,8 +117,8 @@ Dieses Flag muss auf <code>1</code> sein, um den Sender der UART einzuschalten.
 # Baudrate Generierung
 Zur Generierung der Baudrate gilt folgende Formel:
 
-%%f_{Baudrate}=\frac{f_{CLK}}{16\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{16\cdot f_{Baudrate}}-1%%
+$$f_{Baudrate}=\frac{f_{CLK}}{16\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{16\cdot f_{Baudrate}}-1$$
 
 Diese Formel gilt wenn das <code>U2X</code> in <code>UCSRA</code> gleich <code>0</code> ist. Für <code>U2X</code> gleich <code>1</code> gilt folgende Formel:
 
-%%f_{Baudrate}=\frac{f_{CLK}}{8\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{8\cdot f_{Baudrate}}-1%%
+$$f_{Baudrate}=\frac{f_{CLK}}{8\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{8\cdot f_{Baudrate}}-1$$

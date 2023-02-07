@@ -4,7 +4,8 @@ parent: uebersicht.md
 
 # Übungsaufgabe
 
-!!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
+.. info:: In dieser Übung wird das BASYS2 Board verwendet
+
     Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
 
 * Entwurf einer universeller Zählerkomponente
@@ -16,7 +17,7 @@ Die Stoppuhr entspricht in ihrer Bedienung einer klassichen digitalen Stoppuhr. 
 aus:
 
 * **Start/Stop** - die Zeitnehmung wird gestartet bzw. gestopped
-* **Reset/Lap** - die Zeitnumung wird zurückgesetzt bzw. die Zwischenzeit angezeigt
+* **Reset/Lap** - die Zeitnehmung wird zurückgesetzt bzw. die Zwischenzeit angezeigt
 
 Die vier 7-Segment Anzeigen werden für die Ausgabe der Zeit verwendet (hier 0 Minuten, 13 Sekunden und 5
 Zehntelsekunden):
@@ -90,7 +91,7 @@ Die Zustandsmaschine für die Stoppuhr soll im ersten Schritt drei Zustände umf
     * Zeit läuft nicht
     * Stoppuhr steht auf "0:00:0"
     * Mittels *Start/Stopp* soll die Zeitnehmung starten
-    * *Reset/Lap+ hat keine Auswirkung
+    * *Reset/Lap* hat keine Auswirkung
 * <code>RUNNING</code>
     * Zeit läuft
     * Zeigt die aktuelle Zeit an
@@ -115,31 +116,32 @@ definiert. Die Behandlung des Zustands <code>CLEARED</code> und die Ausgabe von 
 
 Der Ausgang <code>mode_o</code> wird erst später benötigt und soll vorerst nur <code>'0'</code> ausgeben.
 
-    #!vhdl
-    architecture behave of stopwatch_fsm is
-      type state_t is (CLEARED, RUNNING, STOPPED);
-      signal state : state_t := CLEARED;
-    begin
-      fsm_process: process (clk)
-      begin
-        if rising_edge(clk) then
-          case state is
-            when CLEARED =>
-              if ss_i='1' then
-                state <= RUNNING;
-              end if;
-            when RUNNING =>
-              -- TODO
-            when others => -- includes STOPPED
-              -- TODO
-          end case;
-        end if;
-      end process;
+```vhdl
+architecture behave of stopwatch_fsm is
+  type state_t is (CLEARED, RUNNING, STOPPED);
+  signal state : state_t := CLEARED;
+begin
+  fsm_process: process (clk)
+  begin
+    if rising_edge(clk) then
+      case state is
+        when CLEARED =>
+          if ss_i='1' then
+            state <= RUNNING;
+          end if;
+        when RUNNING =>
+          -- TODO
+        when others => -- includes STOPPED
+          -- TODO
+      end case;
+    end if;
+  end process;
 
-      clear_o <= '1' when state=CLEARED else '0';
-      enable_o <= '0'; -- <<< TODO
-      mode_o <= '0';
-    end architecture;
+  clear_o <= '1' when state=CLEARED else '0';
+  enable_o <= '0'; -- <<< TODO
+  mode_o <= '0';
+end architecture;
+```
 
 ## Test mittels Testbench
 Teste die Zustandmaschine  mittels der Testbench <code>stopwatch_fsm_simple_tb</code> (Achte auf das <code>simple</code> im Name!).
@@ -148,18 +150,19 @@ Teste die Zustandmaschine  mittels der Testbench <code>stopwatch_fsm_simple_tb</
 Mit den erstellten Komponenten wird nun ein Stoppuhr-Design aufgebaut. Dazu erweitern wird das Top Level Design in
 <code>stopwatch.vhd</code>.
 
-## Tastendruckerkennung`
+## Tastendruckerkennung
 
 Die Komponente <code>button_dect</code> wird verwendet, um das Signal <code>button_ss_i</code> und <code>button_rl_i</code> einzusynchronisieren und auf
 eine steigende Flanke zu überprüfen. Dazu wird folgende Komponente in der <code>architecture</code> von <code>stopwatch.vhd</code> hinzugefügt:
 
-    #!vhdl
-    button_ss_detect_component: entity work.button_detect
-    port map (
-      clk => clk,
-      button_i => button_ss_i,
-      detect_o => button_ss_detect
-    );
+```vhdl
+button_ss_detect_component: entity work.button_detect
+port map (
+  clk => clk,
+  button_i => button_ss_i,
+  detect_o => button_ss_detect
+);
+```
 
 Analoges Vorgehen für die Taste <code>button_rl_i</code>.
 
@@ -179,19 +182,20 @@ Die Zustandmaschine wird nun auch entsprechend eingebunden.
 
 Um Zehntelsekunden zu erzeugen wird ein Vorteiler mit dem Faktor 5 Millionen verwendet.
 
-    #!vhdl
-    prescale_component: entity work.counter
-    generic map (
-      WIDTH => 23,
-      MAXIMUM => 5000000
-    )
-    port map (
-      clk => clk,
-      reset_i => clear,
-      enable_i => enable,
-      value_o => open,
-      overflow_o => tenth_second_enable
-    );
+```vhdl
+prescale_component: entity work.counter
+generic map (
+  WIDTH => 23,
+  MAXIMUM => 5000000
+)
+port map (
+  clk => clk,
+  reset_i => clear,
+  enable_i => enable,
+  value_o => open,
+  overflow_o => tenth_second_enable
+);
+```
 
 * Diese <code>counter</code> wird über das <code>generic map</code> als Zähler mit 23 Bit und Maximum bei 5 Millionen definiert
 * Der Ausgang <code>value_o</code> wird nicht verwendet (wird durch <code>open</code> signalisiert)
@@ -229,18 +233,19 @@ Um Zehntelsekunden zu erzeugen wird ein Vorteiler mit dem Faktor 5 Millionen ver
 
 ## <code>display</code> hinzufügen
 
-    #!vhdl
-    display_component: entity work.display
-    port map (
-      clk => clk,
-      digit0_i => digit0,
-      digit1_i => digit1,
-      digit2_i => digit2,
-      digit3_i => digit3,
-      dots_i => "1010",
-      segments_o => segments_o,
-      an_o => an_o
-    );
+```vhdl
+display_component: entity work.display
+port map (
+  clk => clk,
+  digit0_i => digit0,
+  digit1_i => digit1,
+  digit2_i => digit2,
+  digit3_i => digit3,
+  dots_i => "1010",
+  segments_o => segments_o,
+  an_o => an_o
+);
+```
 
 ## Test auf der Hardware
 Wechsle in die Implementierungsansicht und synthetisiere das Top Level Desgin <code>stopwatch</code>. Teste die Funktionsweise

@@ -65,7 +65,8 @@ Beschreibung sollte äquvivalent zu diesem Blockschaltbild sein.
 
 ![Blockschaltbild uart_tx](test4_uart_tx.jpg)
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>uart_tx_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
@@ -80,7 +81,8 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
 ![Blockschaltbild transmitter](test4_transmitter.jpg)
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>transmitter_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei

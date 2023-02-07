@@ -25,8 +25,8 @@ Bei aktivem Ausgangstreiber wird der Ausgang entsprechend diesem Bit gesteuert. 
 ## Pin Konfiguration
 Mittels der Register <code>DDRx</code> und <code>PORTx</code> können folgende Konfigurationen eingestellt werden:
 
-<code>DDRxn</code> | <code>PORTxn</code> | I/O | Pull-Up | Kommentar
--|-!|-|-|-
+DDRxn | PORTxn | I/O | Pull-Up | Kommentar
+-|-|-|-|-
 0 | 0 |  Eingang | Nein | Hochohmiger Eingang (Tri-State)
 0 | 1 |  Eingang | Ja | Eingang mit Pull Up
 1 | 0 |  Ausgang | Nein | Ausgang Low

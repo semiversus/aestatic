@@ -21,25 +21,26 @@ Mittels "Tools" → "Board: *...*" wird folgendes ESP32 Board ausgewählt: "ESP3
 
 ## Erstes Beispiel
 
-    #!c
-    #define LED_GPIO 12
+```c
+#define LED_GPIO 12
 
-    void setup() {
-      pinMode(LED_GPIO, OUTPUT);
-    }
+void setup() {
+  pinMode(LED_GPIO, OUTPUT);
+}
 
-    void loop() {
-      digitalWrite(LED_GPIO, HIGH);
-      delay(300);
-      digitalWrite(LED_GPIO, LOW);
-      delay(300);
-      while(1);
-    }
+void loop() {
+  digitalWrite(LED_GPIO, HIGH);
+  delay(300);
+  digitalWrite(LED_GPIO, LOW);
+  delay(300);
+  while(1);
+}
+```
 
 Auf dem Steckbrett werden folgende Verbindungen gemacht:
 
 * **Pin 12** über Vorwiderstand zur Anode der LED
-* **Pin GND** zur Kathode der LED (abgeflacht Seite) 
+* **Pin GND** zur Kathode der LED (abgeflacht Seite)
 
 ![Board](board.png)
 

@@ -1,5 +1,6 @@
 title: Fest- und Gleitkommazahlen
 parent: uebersicht.md
+latex: true
 
 # Allgemeines
 Im Vergleich zu einer Zahl ohne Nachkommastellen (*Integer*-Zahl bzw. Ganzzahl) benötigt man für die Speicherung und Verarbeitung von Zahlen mit Nachkommastellen eigene Zahlenformate.
@@ -11,7 +12,7 @@ Beispiel <code>3.5</code> Format und der Binärzahl <code>01101011</code>:
 
 0 | 1 | 1**,** | 0 | 1 | 0 | 1 | 1
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-%%2^\{2\}%% | %%2^\{1\}%% | %%2^\{0\}%% | %%2^\{-1\}%% | %%2^\{-2\}%% | %%2^\{-3\}%% | %%2^\{-4\}%% | %%2^\{-5\}%%
+$$2^\{2\}\\) | \\(2^\{1\}\\) | \\(2^\{0\}\\) | \\(2^\{-1\}\\) | \\(2^\{-2\}\\) | \\(2^\{-3\}\\) | \\(2^\{-4\}\\) | \\(2^\{-5\}$$
 4 | 2 | 1 | 0.5 | 0.25 | 0.125 | 0.0625 | 0.03125
 
 Die oben dargestellte Zahl hat den Wert (**0** * 4) + (**1** * 2) + (**1** * 1) + (**0** * 0.5) + (**1** * 0.25) + (**0** * 0.125) + (**1** * 0.0625) + (**1** * 0.03125) = **3.34375**
@@ -21,7 +22,7 @@ Bei der Addition und Subtraktion können die Zahlen als reine Integer betrachtet
 ## Gleitkomma Zahlen
 Bei der Gleitkommazahl (auch *Fließkommazahl* genannt) wird die Darstellung mittels *Mantisse*(<code>M</code>) und *Exponent*(<code>E</code>) genutzt. Das Vorzeichen wird durch die Variable <code>S</code> beschrieben. Bei <code>S</code>=0 ist die Zahl Positiv, bei <code>S</code>=1 negativ.
 
-%%x=-1^{S} \cdot M \cdot B^{E}%%
+$$x=-1^{S} \cdot M \cdot B^{E}$$
 
 In der Digitaltechnik wird durchwegs 2 als Basis(<code>B</code>) verwendet. Um mit Gleitkommazahlen zu Rechnen sind genau Vorgaben zum Zahlenformat und zur Durchführung mathematischer Operationen, insbesondere für Rundungen, notwendig. Die Norm *IEEE 754* stellt eine solche Beschreibung dar.
 

@@ -7,7 +7,8 @@ Mittels *VHDL* kann eine digitale Schaltung beschrieben werden. VHDL steht für 
 **H**ardware **D**escription **L**anguage. Die wichtigste Beschreibunssprache neben VHDL ist *Verilog*, welche in
 der USA weite Verbreitung findet.
 
-!!! panel-info "Beschreibungssprache"
+.. info:: Beschreibungssprache
+
     Da mittels VHDL eine digitale Schaltung *beschrieben* wird, ist VHDL eine *Beschreibungssprache*. Sehr oft wird es
     mit einer *Programmiersprache* verwechselt!
 
@@ -20,7 +21,8 @@ Eine Komponente, die mittels VHDL beschrieben wird besteht aus den folgenden bei
 In einer VHDL Datei können mehrere Komponenten beschrieben werden, es ist allerdings üblich pro Komponente eine Datei zu
 nutzen.
 
-!!! panel-info "Groß- und Kleinschreibung"
+.. info:: Groß- und Kleinschreibung
+
     Bei VHDL spielt die Groß- und Kleinschreibung keine Rolle. Dies gilt für Schlüsselwörter wie <code>entity</code> (kann auch
     <code>Entity</code>, <code>ENTITY</code> oder auch <code>eNTity</code> heißen), sowie für Signalnamen.
 
@@ -30,27 +32,28 @@ Am Begin einer Datei werden die benötigten Bibliotheken deklariert.
 
 Ein Beispiel:
 
-    #!vhdl
-    library ieee ;
-    use ieee.std_logic_1164.all;
+```vhdl
+library ieee ;
+use ieee.std_logic_1164.all;
 
-    entity dff is
-      port(
-        data_i:  in std_ulogic;
-        clk:    in std_ulogic;
-        data_o: out std_ulogic
-      );
-    end entity;
+entity dff is
+  port(
+    data_i:  in std_ulogic;
+    clk:    in std_ulogic;
+    data_o: out std_ulogic
+  );
+end entity;
 
-    architecture behave of dff is
+architecture behave of dff is
+begin
+    process(clk)
     begin
-        process(clk)
-        begin
-          if rising_edge(clk) then
-            data_o <= data_i;
-          end if;
-        end process;
-    end architecture;
+      if rising_edge(clk) then
+        data_o <= data_i;
+      end if;
+    end process;
+end architecture;
+```
 
 Diese VHDL Datei beschreibt ein D FlipFlop, dessen Eingang <code>data_i</code> bei einer steigenden Flanke von <code>clk</code> gespeichert wird. Das Signal <code>data_o</code> gibt den aktuellen zustand des FlipFlops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
 

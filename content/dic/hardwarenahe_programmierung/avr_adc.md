@@ -1,11 +1,14 @@
 title: Analog-Digital Konverter beim Atmel AVR
 parent: uebersicht.md
+latex: true
 
-!!! panel-info "Diese Seite beschreibt den ADC des ATMega16"
+.. info:: Diese Seite beschreibt den ADC des ATMega16
+
     Prinzipiell lässt sich diese Information auch auf andere Mikrocontroller der AVR Serie übertragen, es empfiehlt sich
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
-!!! panel-info "Informationen im Datenblatt"
+.. info:: Informationen im Datenblatt
+
     Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
@@ -79,20 +82,20 @@ Aktiviert den ADC Interrupt (siehe Beispiele)
 
 Wählt den Teiler für die Wandlung des ADCs. Der ADC arbeitet mit einer Frequenz zwischen 50kHz und 200kHz. Diese Frequenz wird aus dem Prozessortakt und diesem Teiler erzeugt.
 
-%%f_{ADC}=\frac{f_{CLK}}{Teiler}%%
+$$f_{ADC}=\frac{f_{CLK}}{Teiler}$$
 
 # Umrechnung
 
 Bei der Umrechnung einer Spannung am Eingang des ADC hin zum Wert als Zahl wird die Eingangsspannung im Verhältnis zur
 Referenzspannung betrachtet und entsprechend der Auflösung (in Bits} des ADC umgewandelt:
 
-%%Wert_{ADC}=\frac{U_{Eingang}}{U_{Referenz}} \cdot 2^{Bits}%%
+$$Wert_{ADC}=\frac{U_{Eingang}}{U_{Referenz}} \cdot 2^{Bits}$$
 
 Der Umgekehrte Fall ist dann die Umrechnung von einem Wert in die anliegende Spannung:
 
-%%U_{Eingang}=\frac{Wert_{ADC}}{2^{Bits}} \cdot U_{Referenz}%%
+$$U_{Eingang}=\frac{Wert_{ADC}}{2^{Bits}} \cdot U_{Referenz}$$
 
-Beim ATMega16 ist die Auflösung 10 Bit, d.h. es können %%2^{10}=1024%% *verschiedene Spannungen unterschieden* werden.
+Beim ATMega16 ist die Auflösung 10 Bit, d.h. es können \\(2^{10}=1024\\) *verschiedene Spannungen unterschieden* werden.
 
 # Beispiele
 Im folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Referenz dient die Spannung am Pin AREF. Vom
@@ -100,47 +103,49 @@ Im folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Refer
 
 ## Ohne Interrupt
 
-    #!c
-    #include <avr/io.h>
+```c
+#include <avr/io.h>
 
-    int main (void) {
-      DDRC  = 0xFF;   // Port C.0-7 = Ausgang
-      PORTC = 0x00;   // LEDs loeschen
+int main (void) {
+  DDRC  = 0xFF;   // Port C.0-7 = Ausgang
+  PORTC = 0x00;   // LEDs loeschen
 
-      ADMUX = 0x05;                                 // Eingang 5 festlegen
-      ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, Teiler auf 64
-      while (1) {
-        ADCSRA |= (1<<ADSC);          // ADC Wandlung starten
-        while(!(ADCSRA & (1<<ADIF))); // Auf Abschluss der Konvertierung warten (ADIF-bit)
-        PORTC = ADC>>2;               // Ausgabe der oberen 8 Bit auf PORTC
-      }
-      return 0;
-    }
+  ADMUX = 0x05;                                 // Eingang 5 festlegen
+  ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, Teiler auf 64
+  while (1) {
+    ADCSRA |= (1<<ADSC);          // ADC Wandlung starten
+    while(!(ADCSRA & (1<<ADIF))); // Auf Abschluss der Konvertierung warten (ADIF-bit)
+    PORTC = ADC>>2;               // Ausgabe der oberen 8 Bit auf PORTC
+  }
+  return 0;
+}
+```
 
 ## Mit Interrupt
 Bei jedem Aufruf der Interruptservice Routine <code>ADC_vect</code> wird das Ergebnis der AD Wandlung ausgewertet (mittels <code>ADC</code>) und
 eine neue Wandlung gestartet.
 
-    #!c
-    #include <avr/io.h>
-    #include <avr/interrupt.h>
+```c
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
-    ISR(ADC_vect) {
-      PORTC = ADC>>2;           // Ausgabe der oberen 8 Bit auf PORTC
-      ADCSRA |= (1<<ADSC);      // ADC Wandlung starten
-    }
+ISR(ADC_vect) {
+  PORTC = ADC>>2;           // Ausgabe der oberen 8 Bit auf PORTC
+  ADCSRA |= (1<<ADSC);      // ADC Wandlung starten
+}
 
-    int main (void) {
-      DDRC  = 0xFF;   // Port C.0-7 = Ausgang
-      PORTC = 0x00;   // LEDs loeschen
+int main (void) {
+  DDRC  = 0xFF;   // Port C.0-7 = Ausgang
+  PORTC = 0x00;   // LEDs loeschen
 
-      ADMUX = 0x05;   // Eingang 5 festlegen
-      ADCSRA = (1<<ADEN) | (1<<ADSC) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1); // ADC enable,
-                                        //Wandlung starten, Interrupt enable, Teiler auf 64
-      sei();
+  ADMUX = 0x05;   // Eingang 5 festlegen
+  ADCSRA = (1<<ADEN) | (1<<ADSC) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1); // ADC enable,
+                                    //Wandlung starten, Interrupt enable, Teiler auf 64
+  sei();
 
-      while (1) {
-        // main loop
-      }
-      return 0;
-    }
+  while (1) {
+    // main loop
+  }
+  return 0;
+}
+```

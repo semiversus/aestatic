@@ -1,7 +1,8 @@
 title: AVR Assembler
 parent: uebersicht.md
 
-!!! panel-info "Übungsblatt"
+.. info:: Übungsblatt
+
     Zu diesem Teil gibt es [Übungsaufgaben](uebung_avr_assembler.html)
 
 # Allgemeines

@@ -24,8 +24,9 @@ Zur Ansteuerung der LEDs gibt es zwei Funktionen.
 
 ## Einzelne LED steuern
 
-    #!c
-    void hal_led_set(uint8_t index, uint8_t value);
+```c
+void hal_led_set(uint8_t index, uint8_t value);
+```
 
 * <code>index</code> wählt die gewünschte LED aus (zwischen <code>0</code> und <code>7</code>)
 * Ist <code>index</code> größer 7 wird der Zustand der LEDs nicht verändert
@@ -33,16 +34,18 @@ Zur Ansteuerung der LEDs gibt es zwei Funktionen.
 
 ## Alle LEDs steuern
 
-    #!c
-    void hal_leds_set(uint8_t value);
+```c
+void hal_leds_set(uint8_t value);
+```
 
 * Der 8 Bit Wert <code>value</code> gibt das Muster vor, mit dem die LEDs leuchten sollen (z.B. 0xFF für alle ein)
 
 # Auswerten der Tasten
 Die Tasten *S0* bis *S3* werden durch die Hardwareabstraktion automatisch entprellt.
 
-    #!c
-    uint8_t hal_key_get();
+```c
+uint8_t hal_key_get();
+```
 
 * Diese Funktion gibt <code>0</code> zurück, wenn keine Taste gedrückt wurde
 * Der Rückgabewert ungleich <code>0</code> beschreibt die Taste, die gedrückt (genauer losgelassen) wurde
@@ -52,13 +55,14 @@ Die Tasten *S0* bis *S3* werden durch die Hardwareabstraktion automatisch entpre
 
 Zur Ausgabe von Tönen wird innerhalb der HAL der Timer 1 verwendet.
 
-    #!c
-    void hal_sound_play(uint16_t frequency);
+```c
+void hal_sound_play(uint16_t frequency);
+```
 
 * Die Frequenz wird über <code>frequency</code> in Hertz angegeben
 * Um die Ausgabe abzuschalten wird als Argument für <code>frequency</code> <code>0</code> verwendet
 
-!!! panel-warning "Tonausgabe und Ansteuerung des LC Displays ist nicht gemeinsam möglich"
+.. warning:: Tonausgabe und Ansteuerung des LC Displays ist nicht gemeinsam möglich
     Es ist leider nicht möglich diese beiden Komponenten gleichzeitig zu verwenden, da sie einen gemeinsamen Pin des
     Mikrocontrollers benutzen.
 
@@ -84,16 +88,17 @@ Es gibt drei Makros, um das Setzen der Variable auf die gewünschte Zeitdauer le
 
 Das folgende Beispiel zeigt die Verwendung:
 
-    #!c
-    #include "hal.h"
-    timer_var_t timer_app=TIMER_SEC(3);
+```c
+#include "hal.h"
+timer_var_t timer_app=TIMER_SEC(3);
 
-    void app_process(void) {
-      if (timer_app) {
-        return; // Zeit ist noch nicht abgelaufen
-      }
-      // ...
+void app_process(void) {
+    if (timer_app) {
+    return; // Zeit ist noch nicht abgelaufen
     }
+    // ...
+}
+```
 
 Wird ein Timer nicht verwendet, gibt es den speziellen Wert <code>TIMER_DISABLED</code> (entspricht dem Wert <code>-1</code>). Damit wird
 signalisiert, dass die Timervariable im Moment nicht genutzt wird.
@@ -104,21 +109,24 @@ Datei <code>main.c</code> vorbereitet.
 
 Angenommen es gibt zwei Timer: <code>timer_led</code> und <code>timer_off</code>. Dann werden diese wie folgt registriert:
 
-    #!c
-    TIMERS(&timer_led, &timer_off);
+```c
+TIMERS(&timer_led, &timer_off);
+```
 
 # LC Display
 ## Löschen der Anzeige
 Beim Löschen der Anzeige werden alle Zeichen des 8x2 Displays gelöscht (genauer gesagt wird überall ein Leerzeichen
 ausgegeben).
 
-    #!c
-    void hal_lcd_clear(void);
+```c
+void hal_lcd_clear(void);
+```
 
 ## Ausgabe eines Textes
 
-    #!c
-    void hal_lcd_printf(uint8_t line, uint8_t pos, char *fmt, ...);
+```c
+void hal_lcd_printf(uint8_t line, uint8_t pos, char *fmt, ...);
+```
 
 * <code>line</code> gibt die gewünschte Zeile an (0 oder 1)
 * <code>pos</code> gibt die gewünschte Position an (zwischen 0 oder 7)
@@ -140,20 +148,23 @@ eingefügt: <code>%04d</code>.
 
 ## Beispiele
 
-    #!c
-    hal_lcd_printf(0, 0, "Test"); // gibt "Test" aus
-    hal_lcd_printf(0, 0, "%d", -117); // gibt "-117" aus
-    hal_lcd_printf(0, 0, "%3dX%3d", 2, 17); // gibt "  2X 17" aus
+```c
+hal_lcd_printf(0, 0, "Test"); // gibt "Test" aus
+hal_lcd_printf(0, 0, "%d", -117); // gibt "-117" aus
+hal_lcd_printf(0, 0, "%3dX%3d", 2, 17); // gibt "  2X 17" aus
+```
 
 Die Ausgabe von Floatzahlen wird nicht direkt unterstützt, es kann aber emuliert werden:
 
-    #!c
-    float temperature=27.82;
-    hal_lcd_printf(0, 0, "%d.%02d", (int16_t)temperature, (int16_t)((temperature*100)%100)); // gibt "27.82" aus
+```c
+float temperature=27.82;
+hal_lcd_printf(0, 0, "%d.%02d", (int16_t)temperature, (int16_t)((temperature*100)%100)); // gibt "27.82" aus
+```
 
 Alternativ kann in solchen Fällen auch ganz auf Float verzichtet werden, indem man einfach mit Integer in entsprechender
 Dezimaldarstellung rechnet. In diesem Beispiel wird statt in Grad Celsius in 1/100 Grad Celsius gerechnet
 
-    #!c
-    int16 temperature=2782; // entspricht 27.82 Grad Celsius
-    hal_lcd_printf(0, 0, "%d.%02d", temperature/100, temperature%100); // gibt "27.82" aus
+```c
+int16 temperature=2782; // entspricht 27.82 Grad Celsius
+hal_lcd_printf(0, 0, "%d.%02d", temperature/100, temperature%100); // gibt "27.82" aus
+```

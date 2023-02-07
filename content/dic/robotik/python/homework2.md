@@ -7,18 +7,19 @@ Verwende folgendes Template um mit der Übung zu starten: [Download](todo.zip)
 
 Erstellt wird eine TODO App. Die Verwendung sieht hier als Beispiel so aus:
 
-    #!bash
-    > add WDIC Hausübung
-    > add Äpfel einkaufen
-    > list
-    1. WDIC Hausübung
-    2. Äpfel einkaufen
-    > add "Krieg und Frieden" lesen
-    > remove 2
-    > list
-    1. WDIC Hausübung
-    2. "Krieg und Frieden" lesen
-    > exit
+```bash
+> add WDIC Hausübung
+> add Äpfel einkaufen
+> list
+1. WDIC Hausübung
+2. Äpfel einkaufen
+> add "Krieg und Frieden" lesen
+> remove 2
+> list
+1. WDIC Hausübung
+2. "Krieg und Frieden" lesen
+> exit
+```
 
 Im Beispiel enthalten sind auch Unittests, die die vorhandene Spezifikation testen.
 
@@ -56,9 +57,10 @@ Schreibe eine Funktion <code>build_hashtag_dict</code>, die eine Liste mit Strin
 
 Hier ein Beispiel:
 
-    #!python
-    >>> items = ['#Hausübung WDIC', 'Matheübung #korrigieren', '#Hausübung Deutsch #korrigieren', 'Ausschlafen']
-    >>> build_hashtag_dict(items)
-    {'Hausübung': ['#Hausübung WDIC', '#Hausübung Deutsch #korrigieren'], 'korrigieren': ['Matheübung korrigieren', '#Hausübung Deutsch #korrigieren']}
+```python
+>>> items = ['#Hausübung WDIC', 'Matheübung #korrigieren', '#Hausübung Deutsch #korrigieren', 'Ausschlafen']
+>>> build_hashtag_dict(items)
+{'Hausübung': ['#Hausübung WDIC', '#Hausübung Deutsch #korrigieren'], 'korrigieren': ['Matheübung korrigieren', '#Hausübung Deutsch #korrigieren']}
+```
 
 Abgabe über Teams.

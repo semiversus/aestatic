@@ -4,7 +4,8 @@ parent: uebersicht.md
 
 # Übungsaufgabe
 
-!!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
+.. info:: In dieser Übung wird das BASYS2 Board verwendet
+
     Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
 
 In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz Takt, den das BASYS2 Board liefert.
@@ -17,22 +18,23 @@ In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz T
 
 # Top Level <code>blink.vhd</code>
 
-    #!vhdl
-    library ieee;
-    use ieee.std_logic_1164.all;
-    use ieee.numeric_std.all;
+```vhdl
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-    entity blink is
-      port (
-        clk : in std_ulogic; -- 50 MHz clock
-        led_o : out std_ulogic
-      );
-    end entity;
+entity blink is
+  port (
+    clk : in std_ulogic; -- 50 MHz clock
+    led_o : out std_ulogic
+  );
+end entity;
 
-    architecture behave of blink is
-    begin
-      led_o <= '1';
-    end architecture;
+architecture behave of blink is
+begin
+  led_o <= '1';
+end architecture;
+```
 
 # Aufgabe 1 - Erstellen der UCF Datei
 * Der Takt <code>clk</code> befindet sich am Pin <code>B8</code>.
@@ -43,25 +45,26 @@ In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz T
 Um nun eine LED blinken zu lassen benötigen wir einen Zähler. Wenn 50 Millionen Taktzyklen gezählt sind ist eine Sekunde
 vergangen. Dazu ändern wir die <code>architecture</code> wie folgt ab:
 
-    #!vhdl
-    architecture behave of blink is
-      signal counter_reg : unsigned(31 downto 0) := (others => '0');
-      signal led_reg : std_ulogic := '0';
-    begin
-      counter_proc: process(CLK)
-      begin
-        if rising_edge(CLK) then
-          if counter_reg=50000000 then
-            counter_reg <= (others => '0');
-            led_reg <= not led_reg;
-          else
-            counter_reg <= counter_reg + 1;
-          end if;
-        end if;
-      end process;
+```vhdl
+architecture behave of blink is
+  signal counter_reg : unsigned(31 downto 0) := (others => '0');
+  signal led_reg : std_ulogic := '0';
+begin
+  counter_proc: process(CLK)
+  begin
+    if rising_edge(CLK) then
+      if counter_reg=50000000 then
+        counter_reg <= (others => '0');
+        led_reg <= not led_reg;
+      else
+        counter_reg <= counter_reg + 1;
+      end if;
+    end if;
+  end process;
 
-      led_o <= led_reg;
-    end architecture;
+  led_o <= led_reg;
+end architecture;
+```
 
 # Aufgabe 3 - Überprüfung der Funktionsweise
 Synthetisiere das Design und lade es auf das Board. Kontrolliere die korrekte Funktion.
@@ -72,9 +75,10 @@ Es gibt im Moment keine Vorgaben an die Taktfrequenz. Um eine solche Vorgabe zu 
 
 Wir erweitern dazu die Datei <code>blink.ucf</code> um folgende zwei Zeilen, um einen Takt von 50 Mhz zu spezifizieren.
 
-    #!bash
-    NET "clk" TNM_NET = CLK;
-    TIMESPEC TS_CLK = PERIOD "clk" 50 MHz HIGH 50%;
+```bash
+NET "clk" TNM_NET = CLK;
+TIMESPEC TS_CLK = PERIOD "clk" 50 MHz HIGH 50%;
+```
 
 Nachdem wir nun das Projekt synthetisieren betrachten wir die *Design Summary*:
 
@@ -86,13 +90,14 @@ Nachdem wir nun das Projekt synthetisieren betrachten wir die *Design Summary*:
 
 Hinzufügen eines Eingangs in der Entity
 
-    #!vhdl
-    entity blink is
-      port (
-        clk : in std_ulogic; -- 50 MHz clock
-        switch_i : in std_ulogic;
-        led_o : out std_ulogic
-      );
-    end blink;
+```vhdl
+entity blink is
+  port (
+    clk : in std_ulogic; -- 50 MHz clock
+    switch_i : in std_ulogic;
+    led_o : out std_ulogic
+  );
+end blink;
+```
 
 Nun soll die Blinkperiode bei <code>switch_i</code> gleich <code>0</code> eine Sekunde sein, bei <code>1</code> eine Zehntelsekunde.

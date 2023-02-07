@@ -44,7 +44,8 @@ Dazu übertragen die Teilnehmer Bit für Bit der Identifikationsnummer, startend
 Je niedriger die Identifikationsnummer, desto höher die Priorität. Ein Packet mit der ID 0 hat alle Bits auf logisch 0 und
 diese wird sich gegen alle anderen IDs durchsetzen.
 
-!!! panel-info "Eindeutigkeit der ID"
+.. info:: Eindeutigkeit der ID
+
     Identifikationsnummern identifizieren das Datentelegramm, nicht den Teilnehmer selbst! Für ein CAN System
     muss sichergestellt werden, dass Identifikationsnummern eindeutig sind.
 

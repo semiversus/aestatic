@@ -2,7 +2,8 @@ title: Tutorial 3 - Reguläre Ausdrücke
 parent: uebersicht.md
 next: tutorial4.md
 
-!!! panel-info "Unterlagen der Tuxcadamy"
+.. info:: Unterlagen der Tuxcadamy
+
     Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/){: class="external" } auf. Auch Aufgabenstellungen
     sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
     Lizenz und somit auch dieses Tutorial.
@@ -20,8 +21,9 @@ ein Weg der zwei genannten benötigt.
 <code>wget</code> ist ein Kommandozeilentool um Dateien mittels <samp>http://</samp> Protokoll herunterzuladen. <code>wget</code> hat einen riesigen
 Funktionsumfang, wir benötigen aber nur das notwendigste:
 
-    #!bash
-    wget http://semiversus.com/dic/komplexe_digitale_systeme/frosch.txt
+```bash
+wget http://semiversus.com/dic/komplexe_digitale_systeme/frosch.txt
+```
 
 Wenn eine Internetverbindung besteht sollte die Datei heruntergeladen werden und im aktuellen Verzeichnis abgelegt werden.
 

@@ -30,7 +30,8 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Ausgang <code>led1_o</code> ist auf <code>'1'</code>, wenn die Zustandmaschine im Zustand <code>LED1</code> ist
 * Der Ausgang <code>led2_o</code> ist auf <code>'1'</code>, wenn die Zustandmaschine im Zustand <code>LED2</code> ist
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_toggle_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
     der gesamte Bereich zoomen.
 
@@ -53,7 +54,8 @@ Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gew�
     * <code>led2_o</code> ist mit dem Ausgang <code>led2_o</code> verbunden
 * Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_toggle_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
@@ -122,7 +124,8 @@ Erstelle die Komponente <code>lights_fsm</code> durch Bearbeitung der Datei <sam
 * Ist die Ampel im Zustand <code>OFF</code> und <code>mode_i</code> ist <code>'1'</code> soll der nächste Zustand <code>ORANGE</code> sein
 * Der Startzustand ist <code>ORANGE</code>
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>lights_fsm_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
@@ -135,18 +138,19 @@ Mit dem <samp>counter</samp> soll ein 700 Millisekunden Takt generiert werden. W
 notwendig und wieviel Bits werden benötigt, um diesen Wert darstellen zu können? Trage diese Werte in der Default-Einstellung
 von <code>COUNTER_WIDTH</code> und <code>COUNTER_MAXIMUM</code> ein:
 
-    #!vhdl
-    entity lights is
-      generic (
-        COUNTER_WIDTH : integer := 4; -- <<< TODO
-        COUNTER_MAXIMUM : integer := 9 -- <<< TODO
-      );
-      port (
-        clk : in std_ulogic; -- 50 MHz clock
-        mode_i : in std_ulogic;
-        leds_o : out std_ulogic_vector(2 downto 0)
-      );
-    end entity;
+```vhdl
+entity lights is
+    generic (
+    COUNTER_WIDTH : integer := 4; -- <<< TODO
+    COUNTER_MAXIMUM : integer := 9 -- <<< TODO
+    );
+    port (
+    clk : in std_ulogic; -- 50 MHz clock
+    mode_i : in std_ulogic;
+    leds_o : out std_ulogic_vector(2 downto 0)
+    );
+end entity;
+```
 
 Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
@@ -154,7 +158,8 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
 Gegebenenfalls müssen noch Signale definiert werden.
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>lights_tb.vhd</samp>.
 
 ## Test am Board

@@ -1,5 +1,6 @@
 title: Timing in der Digitaltechnik
 parent: uebersicht.md
+latex: true
 
 # Allgemeines
 Bisher wurden die Elemente der kombinatorischen Schaltnetze und der sequentiellen Schaltwerke so betrachtet, dass jede Änderung eines diskreten Zustandes (logisch 0 oder 1) unmittelbar zu einer Änderung führt. Für reale Bauelemente gilt dies nicht, da jede Änderung mit einer bestimmten Verzögerung behaftet ist. Diese Verzögerungen kommen teils durch die Ausbreitungsgeschwindigkeit selbst oder durch Ladevorgänge innerhalb der Bauteile.
@@ -56,7 +57,7 @@ Zeichnet man das KV-Diagramm auf, ergibt sich folgendes Bild:
 
 ![KV-Diagramm des Multiplexers](hazard_mux_kv.svg)
 
-Man sieht die zwei unabhängige Minterme %%A\overline{S}%% und %%BS%%. Wird das Signal S gewechselt, wechseln auch die zuständigen Minterme. Dies ist ein Zeichen dafür, dass ein Hazard auftreten **kann**.
+Man sieht die zwei unabhängige Minterme \\(A\overline{S}\\) und \\(BS\\). Wird das Signal S gewechselt, wechseln auch die zuständigen Minterme. Dies ist ein Zeichen dafür, dass ein Hazard auftreten **kann**.
 
 Damit ein logischer Hazard überhaupt auftreten kann, müssen folgende drei Bedingungen erfüllt sein:
 

@@ -1,9 +1,11 @@
 title: Übung Safe
 parent: uebersicht.md
+latex: true
 
 # Übungsaufgabe
 
-!!! panel-info "In dieser Übung wird die Megacard verwendet"
+.. info:: In dieser Übung wird die Megacard verwendet
+
 
 In diesem Beispiel soll ein Tresor (engl. *Safe*) implementiert werden. Dazu werden die vier Tasten *S0*-*S3* genutzt,
 um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.).
@@ -43,28 +45,31 @@ Es wird ein Array der Länge vier genutzt, um die einzelnen Ziffern zu speichern
 zur Speicherung des geforderten Codes und eines, das den Code während der Eingabe speichert. Der  und entsprechend mit
 dem Standardcode initialisiert ("1234").
 
-    #!c
-    uint8_t code_stored[4]={1,2,3,4};
-    uint8_t code_actual[4];
+```c
+uint8_t code_stored[4]={1,2,3,4};
+uint8_t code_actual[4];
+```
 
 Tippt der Anwender den Code ein wird jede Ziffer an der entsprechenden Stelle im Array gespeichert:
 
-    #!c
-    code_actual[index]=key; // index gibt die aktuelle Codepostion an, key die zu speichernde Ziffer
+```c
+code_actual[index]=key; // index gibt die aktuelle Codepostion an, key die zu speichernde Ziffer
+```
 
 Um den Code anschließend zu vergleichen:
 
-    #!c
-    if (code_actual[0]==code_stored[0] && code_actual[1]==code_stored[1] && code_actual[2]==code_stored[2] &&
-        code_actual[3]==code_stored[3])
-    {
-      // Code ist richtig
-    }
-    else {
-      // Code ist falsch
-    }
+```c
+if (code_actual[0]==code_stored[0] && code_actual[1]==code_stored[1] && code_actual[2]==code_stored[2] &&
+    code_actual[3]==code_stored[3])
+{
+  // Code ist richtig
+}
+else {
+  // Code ist falsch
+}
+```
 
-!!! panel-warning "Beim Array Vergleich muss jeder Wert einzeln geprüft werden"
+.. warning:: Beim Array Vergleich muss jeder Wert einzeln geprüft werden
     Es funktioniert **nicht** einen Vergleich von <code>code_actual==code_stored</code> zu machen. Da <code>code_actual</code> und
     <code>code_stored</code> jeweils Arrays und damit Zeiger auf eine Speicherstelle sind werden auch nur diese Zeiger verglichen.
     Und diese werden immer auf unterschiedliche Positionen im Speicher zeigen!
@@ -73,28 +78,31 @@ Um den Code anschließend zu vergleichen:
 Der Code kann aber auch direkt als Integer gespeichert werden. Wieder sind zwei Variablen notwendig: eine zur Speicherung
 des geforderten Codes und eine, die den Code während der Eingabe speichert.
 
-    #!c
-    uint16_t code_stored=1234;
-    uint16_t code_actual;
+```c
+uint16_t code_stored=1234;
+uint16_t code_actual;
+```
 
-Die größte zu darzustellende Zahl ist 4444, welche mit einem 16 Bit Integer dargestellt werden kann (%%2^{16}=65535%%).
+Die größte zu darzustellende Zahl ist 4444, welche mit einem 16 Bit Integer dargestellt werden kann (\\(2^{16}=65535\\)).
 
 Tippt der Anwender eine neue Ziffer ein wird die aktuelle Zahl mit 10 multipliziert und die eingetippte Ziffer
 hinzuaddiert. Durch die Multiplikation mit 10 wird der bisher eingegebene Code um eine Dezimalstelle nach links geschoben.
 
-    #!c
-    code_actual=code_actual*10+key; // key beinhaltet die zu speichernde Ziffer
+```c
+code_actual=code_actual*10+key; // key beinhaltet die zu speichernde Ziffer
+```
 
 Die Überprüfung des Codes wird nun wesentlich einfacher:
 
-    #!c
-    if (code_actual==code_stored)
-    {
-      // Code ist richtig
-    }
-    else {
-      // Code ist falsch
-    }
+```c
+if (code_actual==code_stored)
+{
+  // Code ist richtig
+}
+else {
+  // Code ist falsch
+}
+```
 
 ## Ausgaben am LC Display
 Eine LCD Ausgabe entweder je nach Zustand bei jedem <code>safe_process</code> gemacht werden oder bei einem Zustandswechsel.
@@ -106,22 +114,23 @@ Buchstaben von "CLOSED".
 
 Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display mittels <code>hal_lcd_clear</code> gelöscht.
 
-    #!c
-    void safe_process(void) {
-      uint8_t key=hal_key_get(); // handle keys (0 - no key is pressed, 1 to 4 - corresponding key was pressed)
+```c
+void safe_process(void) {
+  uint8_t key=hal_key_get(); // handle keys (0 - no key is pressed, 1 to 4 - corresponding key was pressed)
 
-      switch (safe_state) {
-        // ... other cases
-        case WRONG_CODE:
-          hal_lcd_printf(0,0,"WRONG ");
-          hal_lcd_printf(1,0,"CODE");
-          if (key || timer_safe==0) {
-            safe_state=CLOSED;
-            hal_lcd_clear();
-          }
-          break;
+  switch (safe_state) {
+    // ... other cases
+    case WRONG_CODE:
+      hal_lcd_printf(0,0,"WRONG ");
+      hal_lcd_printf(1,0,"CODE");
+      if (key || timer_safe==0) {
+        safe_state=CLOSED;
+        hal_lcd_clear();
       }
-
+      break;
+  }
+}
+```
 
 # Musterlösung
 Ein Implementierung dieser Übung befindet sich hier zum Download:

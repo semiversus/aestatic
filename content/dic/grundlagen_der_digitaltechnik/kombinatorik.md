@@ -26,11 +26,13 @@ A|B|A ∧ B
 
 Der Ausgang ist also auf logisch 1 wenn A **und** B auf logisch 1 sind.
 
-!!! panel-info "Der Ausgang eines <code>AND</code> Gatter ist nur dann logisch 1, wenn alle Eingänge logisch 1 sind."
+.. info:: Der Ausgang eines <code>AND</code> Gatter ist nur dann logisch 1, wenn alle Eingänge logisch 1 sind.
+
 
 Betrachtet man die logisch 0 am Eingang stellt sich auch eine Besonderheit heraus:
 
-!!! panel-info "Der Ausgang eines <code>AND</code> Gatter ist logisch 0, wenn mindestens ein Eingang logisch 0 ist."
+.. info:: Der Ausgang eines <code>AND</code> Gatter ist logisch 0, wenn mindestens ein Eingang logisch 0 ist.
+
 
 ## <code>OR</code>-Gatter
 Ein <code>OR</code>- bzw. <code>ODER</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. In booleschen Funktionen wird die <code>OR</code>-Verknüpfung als "+" oder als "∨" dargestellt. Eine *Disjunktion* ist in der klassischen Logik eine Aussage, die dann wahr ist, wenn mindestens eine Teil-Aussage wahr ist.
@@ -48,11 +50,11 @@ Der Ausgang ist auf logisch 1 wenn A **oder** B auf logisch 1 sind. In der klass
 
 Allgemein gilt für ein <code>OR</code>-Gatter:
 
-!!! panel-info "Der Ausgang eines <code>OR</code> Gatter ist logisch 1, wenn mindestens ein Eingang logisch 1 ist."
+.. info:: Der Ausgang eines <code>OR</code> Gatter ist logisch 1, wenn mindestens ein Eingang logisch 1 ist.
 
 Betrachtet man die logisch 0 am Eingang kommt man auf folgende Aussage:
 
-!!! panel-info "Der Ausgang eines <code>OR</code> Gatter ist nur dann logisch 0, wenn alle Eingänge logisch 0 sind."
+.. info:: Der Ausgang eines <code>OR</code> Gatter ist nur dann logisch 0, wenn alle Eingänge logisch 0 sind.
 
 ## <code>NOT</code>-Gatter
 Das <code>NOT</code>-Gatter hat einen Eingang und einen Ausgang. Der Ausgang stellt die Invertierung (auch *Komplement* genannt) des Einganges dar. In booleschen Funktionen wird es mittels "¬" dargestellt. In der klassischen Logik stellt es eine Verneinung einer Aussage dar.
@@ -95,7 +97,8 @@ A|B|\\(A \oplus B\\)
 1|0|1
 1|1|0
 
-!!! panel-info "Der Ausgang eines <code>XOR</code> Gatter ist logisch 1, wenn an einer ungeraden Anzahl an Eingängen eine 1 anliegt."
+.. info:: Der Ausgang eines <code>XOR</code> Gatter ist logisch 1, wenn an einer ungeraden Anzahl an Eingängen eine 1 anliegt.
+
 
 ## Darstellungsformen
 ![Gatter Darstellungsformen](gatter.svg)

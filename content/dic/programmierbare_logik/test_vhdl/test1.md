@@ -34,7 +34,8 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 
 ![FSM für Lichtsteuerung](test1_led_control_fsm.svg.tex)
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_control_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
     der gesamte Bereich zoomen.
 
@@ -66,7 +67,8 @@ Komponenten werden genutzt, um im Top Level <samp>led_control.vhd</samp> die gew
     * <code>overflow_o</code> ist mit dem Signal <code>timeout</code> verbunden
 * Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_control_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
@@ -115,7 +117,8 @@ Bei einem Zählerstand von 0 wird der Ausgang auf '1' gesetzt (es sei den der vo
 
 ![Blockschaltbild für PWM Erzeugung](test1_pwm_generator.jpg)
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>pwm_generator_tb.vhd</samp>.
 
 ## Helligkeitseinstellung
@@ -134,7 +137,8 @@ Die Ausgabe der Komponente ist der Ausgang <code>level_o</code>.
 * Wenn <code>level_reg</code> am Maximum ist und <code>up_i</code> aktiv ist sollte der Wert sich nicht verändern
 * Wenn <code>level_reg</code> am Minimum (0) ist und <code>down_i</code> aktiv ist sollte der Wert sich nicht verändern
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>level_adjust_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
@@ -152,7 +156,8 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 
 ![Top Level für LED PWM](test1_led_pwm.jpg)
 
-!!! panel-info "Testbench"
+.. info:: Testbench
+
     Teste die Implementierung mittels der Testbench <samp>led_pwm_tb.vhd</samp>.
 
 ## Test am Board

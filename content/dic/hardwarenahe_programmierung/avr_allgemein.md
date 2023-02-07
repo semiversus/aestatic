@@ -45,10 +45,10 @@ Für den ATMega16 Mikrocontroller gibt es verschiedene Taktquellen auf der einen
 
 Komponenten die mit einem Takt versorgt werden sind dabei:
 
-* %%clk_{CPU}%%: Dieser Takt steuert die Abläufe innerhalb des Prozessorkerns und dem SRAM Speicher.
-* %%clk_{I/O}%%: Die meisten Peripheriebausteine innerhalb des ATMega16 werden mittels diesem Takt gesteuert. Dazu zählen etwa die USART und der Timer/Counter.
-* %%clk_{ADC}%%: Der ADC hat eine eigene Taktversorgung. Dies erlaubt das Anhalten des Prozessor und I/O Taktes, um eine möglichst störungsfreie Analogumsetzung zu ermöglichen.
-* %%clk_{ASY}%%: Dieser Takt kann von einem externen 32kHz Quarzoszillator erzeugt werden. Dadurch wird es möglich, eine Echtzeitmessung auch innerhalb eines Stromspar Modus durchzuführen.
+* \\(clk_{CPU}\\): Dieser Takt steuert die Abläufe innerhalb des Prozessorkerns und dem SRAM Speicher.
+* \\(clk_{I/O}\\): Die meisten Peripheriebausteine innerhalb des ATMega16 werden mittels diesem Takt gesteuert. Dazu zählen etwa die USART und der Timer/Counter.
+* \\(clk_{ADC}\\): Der ADC hat eine eigene Taktversorgung. Dies erlaubt das Anhalten des Prozessor und I/O Taktes, um eine möglichst störungsfreie Analogumsetzung zu ermöglichen.
+* \\(clk_{ASY}\\): Dieser Takt kann von einem externen 32kHz Quarzoszillator erzeugt werden. Dadurch wird es möglich, eine Echtzeitmessung auch innerhalb eines Stromspar Modus durchzuführen.
 
 Der Watchdog Timer wird von einem eigenen Oszillator betrieben. Die Frequenz ist abhängig von Temperatur und Versorgungsspannung (Seite 321).
 

@@ -14,13 +14,14 @@ Die Übungen mit der Megacard werden mittels AVR Studio 5 durchgeführt. Das Ins
 
 # "Hello World" Beispiel
 
-    #!c
-    #include <stdio.h>
+```c
+#include <stdio.h>
 
-    int main() {
-      printf("Hello World!");
-      return 0;
-    }
+int main() {
+  printf("Hello World!");
+  return 0;
+}
+```
 
 Jedes Programm benötigt eine Funktion mit dem Namen <code>main</code>. Diese Funktion gibt einen Wert zurück, der den Erfolg der Ausführung anzeigt. Der Wert 0 wird meist als erfolgreiche Ausführung interpretiert, andere Werte können Fehler oder vorzeitige Abbrüche darstellen.
 
@@ -49,42 +50,46 @@ Die Unterscheidung, ob man auf eine Lösung mittels <code>#define</code> Direkti
 ### Symbol
 Ein Symbol kann definiert werden um es für eine bedingte Kompilierung zu nutzen. Dazu werden die Direktiven <code>#ifdef</code>, <code>#ifndef</code>, <code>#else</code> und <code>#endif</code> verwendet.
 
-    #!c
-    #define DEBUG
+```c
+#define DEBUG
 
-    #ifdef DEBUG
-      // Code der kompiliert wird, wenn DEBUG definiert wurde
-    #else
-      // Code der kompiliert wird, wenn DEBUG nicht definiert wurde
-    #endif
+#ifdef DEBUG
+  // Code der kompiliert wird, wenn DEBUG definiert wurde
+#else
+  // Code der kompiliert wird, wenn DEBUG nicht definiert wurde
+#endif
+```
 
 ### Konstante
 Durch die Definition einer Konstante wird einem *Bezeichner* eine *Konstante* zugewiesen. Der Präprozessor ersetzt dann bei jedem Vorkommen des Bezeichners diesen durch die Konstante.
 
-    #!c
-    #define PI 3.1415
-    #define MESSAGE "Hello World!"
+```c
+#define PI 3.1415
+#define MESSAGE "Hello World!"
 
-    float angle=PI;
-    printf(MESSAGE);
+float angle=PI;
+printf(MESSAGE);
+```
 
 Konstanten können auch ohne Präprozessor mittels <code>const</code> erzeugt werden.
 
 ### Makro
 Ein Makro ist eine Ersetzung mittels einer Funktion und deren Argumente.
 
-    #!c
-    #define MEAN (a,b) ( (a+b)/2 )
-    printf("Der Durchschnitt von 5 und 11 ist %d.", MEAN(5,11) );
+```c
+#define MEAN (a,b) ( (a+b)/2 )
+printf("Der Durchschnitt von 5 und 11 ist %d.", MEAN(5,11) );
+```
 
 Das Makro <code>MEAN</code> ist unabhängig vom Datentyp, da es sich um eine reine Textersetzung handelt. Dieses Makro kann auch mit einer C Funktion implementiert werden. Der Unterschied ist das Laufzeitverhalten, da ein Funktionsaufruf zusätzlich Zeit benötigt. Trotzdem ist die Verwendung von Makros nur für Programmierer mit Praxiserfahrung empfehlenswert.
 
 Ersetzung mittels C Funktion (mittels <code>int</code> Datentypen):
 
-    #!c
-    int mean(int a, int b) {
-      return (a+b)/2;
-    }
+```c
+int mean(int a, int b) {
+  return (a+b)/2;
+}
+```
 
 # Variablen
 Um innerhalb eines Programmes mit Variablen arbeiten zu können, müssen diese *definiert* werden. Bei der Definition wird einem Bezeichner ein Datentyp zugewiesen.
@@ -103,16 +108,17 @@ Die Größe des Zahlenbereichs der einzelnen Datentypen ist Plattform- und Compi
 
 Beispiele:
 
-    #!c
-    int c;
-    // c ist ein (vorzeichenbehafteter) Integer
+```c
+int c;
+// c ist ein (vorzeichenbehafteter) Integer
 
-    unsigned long speed = 0;
-    // speed ist ein vorzeichenloser long Integer und wird mit 0 initialisiert.
+unsigned long speed = 0;
+// speed ist ein vorzeichenloser long Integer und wird mit 0 initialisiert.
 
-    char minimum, maximum = 10;
-    // minimum und maximum sind Variablen vom Datentyp char.
-    // maximum wird mit 10 initialisiert (minimum ist uninitialisiert).
+char minimum, maximum = 10;
+// minimum und maximum sind Variablen vom Datentyp char.
+// maximum wird mit 10 initialisiert (minimum ist uninitialisiert).
+```
 
 ### Plattformunabhängigkeit
 Steht ein *C99* kompatibler C-Compiler zur Verfügung (gilt mittlerweile für den Großteil der Compiler) hilft die Verwendung der Datei <code>stdint.h</code>. Mittels <code>#include <stdint.h></code> werden neue Datentypen definiert, die eine bestimmte Größe haben.

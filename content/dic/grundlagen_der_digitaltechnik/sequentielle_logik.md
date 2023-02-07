@@ -1,5 +1,6 @@
 title: Sequentielle Logik
 parent: uebersicht.md
+latex: true
 
 # Allgemeines
 Bei der Betrachtung von kombinatorischen Schaltungen geht man von einer Zustandslosigkeit des Schaltnetzes aus. Damit können keine Informationen (über die Schaltungsfunktion selbst hinaus) gespeichert werden. Die sequentielle Logik ist das Teilgebiet der Digitaltechnik, welches sich mit dem Speichern von Information beschäftigt.
@@ -28,26 +29,26 @@ Laut Definition ist ein *Latch* ein Speicherelement, welches abhängig vom Pegel
 
 ![Latch-Realisierung mittels NOR Gatter](rs_latch_nor.svg)
 
-Anhand der Schaltung und des Impulsdiagramm können wir die Funktionsweise des RS Latch nachvollziehen. Angenommen wird ein Anfangszustand von %%Q%% gleich 0 und %%\overline{Q}%% gleich 1.
+Anhand der Schaltung und des Impulsdiagramm können wir die Funktionsweise des RS Latch nachvollziehen. Angenommen wird ein Anfangszustand von \\(Q\\) gleich 0 und \\(\overline{Q}\\) gleich 1.
 Im Impulsdiagramm sieht man folgenden Signalverlauf:
 
 Phase|S|R|Bemerkung
 :---:|:---:|:---:|-
 0|0|0|Das Latch hält den aktuellen Zustand und ist stabil.
-1|1|0|Damit wechselt der Ausgang %%Q%% auf 1 und der Ausgang %%\overline{Q}%% wechselt auf 0.
+1|1|0|Damit wechselt der Ausgang \\(Q\\) auf 1 und der Ausgang \\(\overline{Q}\\) wechselt auf 0.
 2|0|0|Das Latch hält den Zustand und ist stabil.
-3|0|1|Damit wechselt der Ausgang %%Q%% auf 0 und der Ausgang %%\overline{Q}%% wechselt auf 1.
+3|0|1|Damit wechselt der Ausgang \\(Q\\) auf 0 und der Ausgang \\(\overline{Q}\\) wechselt auf 1.
 4|0|0|Das Verhalten entspricht wieder Phase 0.
-5|1|0|Der Ausgang %%Q%% wechselt auf 1 und der Ausgang %%\overline{Q}%% auf 0.
-6|1|1|Der Ausgang %%Q%% und %%\overline{Q}%% sind gleich 0.
+5|1|0|Der Ausgang \\(Q\\) wechselt auf 1 und der Ausgang \\(\overline{Q}\\) auf 0.
+6|1|1|Der Ausgang \\(Q\\) und \\(\overline{Q}\\) sind gleich 0.
 7|0|0|Das Verhalten ist nicht definiert. Es kommt zur Metastabilität.
 
 Aufgrund des Verhaltens können wir folgende Punkte zusammen fassen:
 
 * Ist <code>R</code> und <code>S</code> auf 0, wird der momentane Zustand behalten.
-* Ist <code>R</code> auf 0 und <code>S</code> auf 1, wird der Ausgang %%Q%% auf 1 und %%\overline{Q}%% auf 0 gesetzt. Deshalb spricht man beim Eingang <code>S</code> vom *Set*-Eingang.
-* Ist <code>R</code> auf 1 und <code>S</code> auf 0, wird der Ausgang %%Q%% auf 0 und %%\overline{Q}%% auf 1 gesetzt. Deshalb spricht man beim Eingang <code>R</code> vom *Reset*-Eingang.
-* Für die jetzigen Verhalten sind die Ausgänge %%Q%% und %%\overline{Q}%% immer invertiert zu einander, deshalb auch diese Bezeichnung.
+* Ist <code>R</code> auf 0 und <code>S</code> auf 1, wird der Ausgang \\(Q\\) auf 1 und \\(\overline{Q}\\) auf 0 gesetzt. Deshalb spricht man beim Eingang <code>S</code> vom *Set*-Eingang.
+* Ist <code>R</code> auf 1 und <code>S</code> auf 0, wird der Ausgang \\(Q\\) auf 0 und \\(\overline{Q}\\) auf 1 gesetzt. Deshalb spricht man beim Eingang <code>R</code> vom *Reset*-Eingang.
+* Für die jetzigen Verhalten sind die Ausgänge \\(Q\\) und \\(\overline{Q}\\) immer invertiert zu einander, deshalb auch diese Bezeichnung.
 * Der Zustand <code>R</code> und <code>S</code> gleich 1 ist zu vermeiden. Während diesem Zustand ist das Latch zwar stabil, die Ausgänge sind aber nicht mehr invertiert zu einander, sondern beide auf 0.
 * Undefiniert wird das Verhalten, wenn beide Eingänge auf 1 sind und gleichzeitig auf 0 wechseln.
 
@@ -88,12 +89,12 @@ Durch Kombination von zwei Latches in dieser Master-Slave Anordnung lässt sich 
 ## JK Flip-Flops
 Bei RS Flip-Flops gilt es nach wie vor den Zustand von gleichzeitig gesetztem <code>R</code> und <code>S</code> zu vermeiden. Durch eine zusätzliche Beschaltung wird ein RS-Flipflop zu einem JK-Flipflop. Für ein JK Flipflop gilt folgende Funktionstabelle:
 
-J|K|%%Q%%|%%\overline{Q}%%|Beschreibung
+J|K|\\(Q\\)|\\(\overline{Q}\\)|Beschreibung
 :---:|:---:|:---:|:---:|-
-0|0|%%Q_{-1}%%|%%\overline{Q_{-1}}%%|Halten
+0|0|\\(Q_{-1}\\)|\\(\overline{Q_{-1}}\\)|Halten
 0|1|0|1|Zurücksetzen
 1|0|1|0|Setzen
-1|1|%%\overline{Q_{-1}}%%|%%Q_{-1}%%|Toggeln
+1|1|\\(\overline{Q_{-1}}\\)|\\(Q_{-1}\\)|Toggeln
 
 Hier wird also das gleichzeitige Setzen der Eingänge genutzt, um eine neue Funktion einzuführen: Das Invertieren des aktuellen Zustandes.
 

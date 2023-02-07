@@ -43,22 +43,23 @@ Diese Zeit richtet sich nach der Dauer des Prellens der Taste.
 
 Im folgenden Beispiel wird die Funktion <code>process_key</code> in der Main Loop aufgerufen. Die Durchlaufszeit einer Iteration der Main Loop sollte dabei kürzer als einige Millisekunden sein, damit auch kurze Tastendrücke detektiert werden können.
 
-    #!c
-    uint8_t process_key(uint8_t key_state) {
-      static uint8_t old_key_state=0; // old_key_state speichert den Zustand der vorhergehenden Iteration
-      uint8_t result=0;               // Initialisere den Rückgabewert mit 0
+```c
+uint8_t process_key(uint8_t key_state) {
+  static uint8_t old_key_state=0; // old_key_state speichert den Zustand der vorhergehenden Iteration
+  uint8_t result=0;               // Initialisere den Rückgabewert mit 0
 
-      if (key_state!=old_key_state) { // Überprüfe Zustandsänderung
-        if (key_state==1) {           // Wenn der neue Zustand "geschlossen" ist
-          result=1;                   // gib 1 als Wert zurück
-        }
-        _delay_ms(5);                 // Werte 5 Millisekunden (blockierend!)
-      }
-
-      old_key_state=key_state;        // speichere den aktuellen Zustand für die nächste Iteration
-
-      return result;
+  if (key_state!=old_key_state) { // Überprüfe Zustandsänderung
+    if (key_state==1) {           // Wenn der neue Zustand "geschlossen" ist
+      result=1;                   // gib 1 als Wert zurück
     }
+    _delay_ms(5);                 // Werte 5 Millisekunden (blockierend!)
+  }
+
+  old_key_state=key_state;        // speichere den aktuellen Zustand für die nächste Iteration
+
+  return result;
+}
+```
 
 Diese Implementierung hat ein großes Problem: Die Wartezeit von 5 Millisekunden, die den Prozessor für diese Zeit blockiert.
 
@@ -72,26 +73,27 @@ auch das Warten wie im vorherigen Beispiel.
 Eine Vorfilterung lässt sich implementieren, indem man einen softwareinternen Zustand des Tasters realisiert, der erst
 nach einer bestimmten Anzahl an Zuständen der gleichen Art umgestellt wird.
 
-    #!c
-    #define MIN_ITERATION_COUNT 20
+```c
+#define MIN_ITERATION_COUNT 20
 
-    uint8_t process_key(uint8_t key_state) {
-      static uint8_t internal_key_state=0; // softwareinterner Zustand
-      static uint8_t count=0;              // Anzahl an Zuständen gleicher Art
+uint8_t process_key(uint8_t key_state) {
+  static uint8_t internal_key_state=0; // softwareinterner Zustand
+  static uint8_t count=0;              // Anzahl an Zuständen gleicher Art
 
-      if (key_state!=internal_key_state) { // Wenn sich der interne Zustand vom externen unterscheidet
-        count++;                           // Erhöhe den Zähler um eins
-        if (count==MIN_ITERATION_COUNT) {  // bis die Mindestanzahl erreicht wurde
-          internal_key_state=key_state;    // Stelle den internen Zustand um
-          return key_state;                // Gib 1 zurück, wenn der neue Zustand 1 ist (ansonsten 0)
-        }
-      }
-      else {
-        count=0;                           // Wenn interner gleich externer Zustand ist setze Zähler auf 0
-      }
-
-      return 0;                            // Gib 0 für alle anderen Fälle zurück
+  if (key_state!=internal_key_state) { // Wenn sich der interne Zustand vom externen unterscheidet
+    count++;                           // Erhöhe den Zähler um eins
+    if (count==MIN_ITERATION_COUNT) {  // bis die Mindestanzahl erreicht wurde
+      internal_key_state=key_state;    // Stelle den internen Zustand um
+      return key_state;                // Gib 1 zurück, wenn der neue Zustand 1 ist (ansonsten 0)
     }
+  }
+  else {
+    count=0;                           // Wenn interner gleich externer Zustand ist setze Zähler auf 0
+  }
+
+  return 0;                            // Gib 0 für alle anderen Fälle zurück
+}
+```
 
 ## Nachbildung eines analogen Tiefpasses
 Das was ein analoger Tiefpass bei der hardwaremäßigen Entprellung macht kann auch durch Software nachgebildet werden.

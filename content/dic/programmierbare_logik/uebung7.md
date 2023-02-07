@@ -30,9 +30,10 @@ Erweitere die Datei <samp>shifter_tb.vhd</samp>.
 
 Beispiel:
 
-    #!vhdl
-    wait for 10 ns;
-    assert leds_o="0001" report "Nach dem Reset sollte der Ausgang auf 0001 sein";
+```vhdl
+wait for 10 ns;
+assert leds_o="0001" report "Nach dem Reset sollte der Ausgang auf 0001 sein";
+```
 
 Der Teil mit <code>report</code> ist optional. Ein <code>wait for 0 ns</code> wertet einmal alle Signale aus, dies hilft oft direkt nach dem
 Start der Simulation (unmittelbar nach dem Start sind alle Signale *uninitialised*-<code>'U'</code>).

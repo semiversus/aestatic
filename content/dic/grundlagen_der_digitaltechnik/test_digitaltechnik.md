@@ -14,7 +14,8 @@ title: Test - Allgemeine Digitaltechnik
 
 # Frühere Tests
 
-!!! panel-info "Hinweis"
+.. info:: Hinweis
+
     Bei früheren Tests war Datenintegrität (Prüfsummen und Paritäten) enthalten.
 
 * [Test 1](test_digitaltechnik_1.pdf), [Musterlösung](test_digitaltechnik_1_loesung.pdf){: class="download" }

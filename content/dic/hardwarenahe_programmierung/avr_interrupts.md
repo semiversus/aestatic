@@ -1,7 +1,8 @@
 title: Interrupts bei Atmel AVR
 parent: uebersicht.md
 
-!!! panel-info "Diese Seite beschreibt die Interrupts des ATMega16"
+.. info:: Diese Seite beschreibt die Interrupts des ATMega16
+
     Prinzipiell lässt sich diese Information auch auf andere Mikrocontroller der AVR Serie übertragen, es empfiehlt sich
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
@@ -65,13 +66,14 @@ zuzugreifen, muss <code>avr/interrupt.h</code> inkludiert werden.
 
 Beispiel:
 
-    #!c
-    #include <avr/interrupt.h>
+```c
+#include <avr/interrupt.h>
 
-    ISR(ADC_vect) { // Interrupt Service Routine für den Analog/Digitalwandler
-      // Dieser Code wird beim Auslösen des Interrupts ausgeführt
-      // ...
-    }
+ISR(ADC_vect) { // Interrupt Service Routine für den Analog/Digitalwandler
+  // Dieser Code wird beim Auslösen des Interrupts ausgeführt
+  // ...
+}
+```
 
 ### Einrichten eines Interrupts
 Damit ein Interrupt zur Ausführung kommt, werden folgende Punkte benötigt:
@@ -83,7 +85,7 @@ Damit ein Interrupt zur Ausführung kommt, werden folgende Punkte benötigt:
 
 Als Beispiel für einen einfachen Interrupt wird auf [externe Interrupts](avr_externer_interrupt.html) verwiesen.
 
-!!! panel-warning "Interrupt ohne Service Routine"
+.. warning:: Interrupt ohne Service Routine
     Wird eine Komponente so konfiguriert, dass sie einen Interrupt auslösen kann, die entsprechende Interruptroutine aber
     nicht vorhanden ist kommt es zu einem unerwarteten Ereignis: Der Mikrocontroller führt einen Neustart (Reset) durch.
 
@@ -94,7 +96,8 @@ Es ist möglich eine eigene Funktion für <code>BADISR_vect</code> zu definieren
 schnell bei der Fehlersuche passieren kann, dass eine Service Routine gelöscht oder fälschlicherweise ein Interrupt
 freigegeben wird. Die Implementierung ist wie folgt möglich:
 
-    #!c
-    ISR(BADISR_vect) { // Interrupt Service Routine für alle nicht definierten Interrupt Routinen
-      // ... dies Funktion kann auch einfach leer bleiben
-    }
+```c
+ISR(BADISR_vect) { // Interrupt Service Routine für alle nicht definierten Interrupt Routinen
+  // ... dies Funktion kann auch einfach leer bleiben
+}
+```
