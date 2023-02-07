@@ -4,4 +4,4 @@ title: Suchalgorithmen
 * [Foliensatz](slides/search.html)
 
 # Tests
-* [Test 1](test1.pdf){: class="download" }
+* [Test 1](test1.pdf)

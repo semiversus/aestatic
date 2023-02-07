@@ -18,9 +18,9 @@ title: Test - Allgemeine Digitaltechnik
 
     Bei früheren Tests war Datenintegrität (Prüfsummen und Paritäten) enthalten.
 
-* [Test 1](test_digitaltechnik_1.pdf), [Musterlösung](test_digitaltechnik_1_loesung.pdf){: class="download" }
-* [Test 2](test_digitaltechnik_2.pdf), [Musterlösung](test_digitaltechnik_2_loesung.pdf){: class="download" }
-* [Test 3](test_digitaltechnik_3.pdf), [Musterlösung](test_digitaltechnik_3_loesung.pdf){: class="download" }
+* [Test 1](test_digitaltechnik_1.pdf), [Musterlösung](test_digitaltechnik_1_loesung.pdf)
+* [Test 2](test_digitaltechnik_2.pdf), [Musterlösung](test_digitaltechnik_2_loesung.pdf)
+* [Test 3](test_digitaltechnik_3.pdf), [Musterlösung](test_digitaltechnik_3_loesung.pdf)
 
 # Testablauf
 * schriftlich, 30 Minuten

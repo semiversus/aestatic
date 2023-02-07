@@ -2,8 +2,8 @@ title: VHDL Test (3)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner](vhdl_test_3.compress){: class="download" } herunterladen und entpacken
-* Insgesamt gibt es <span class="badge">29 Punkte</span>
+* [Projektordner](vhdl_test_3.zip) herunterladen und entpacken
+* Insgesamt gibt es <span class="tag is-rounded is-info">29 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
 # Einschaltverzögerung
@@ -17,7 +17,7 @@ Zwei LEDs sollen mittels zwei Taster angesteuert werden.
 * <code>button_off</code> - Schaltet die LEDs aus
 
 ## Entwurf der Zustandsmaschine
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Realisierung wird eine Zustandsmaschine genutzt.
 
@@ -36,7 +36,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
     der gesamte Bereich zoomen.
 
 ## Implementierung des Top Levels
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>led_toggle_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -59,7 +59,7 @@ Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gew�
     Teste die Implementierung mittels der Testbench <samp>led_toggle_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
-<span class="badge">2 Punkte</span>
+<span class="tag is-rounded is-info">2 Punkte</span>
 
 In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
@@ -71,7 +71,7 @@ In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal <code>clk</code> def
 <figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board
 
@@ -97,7 +97,7 @@ Zusätzlich soll eine *Überwachung* vorhanden sein, die feststellt, ob es zu un
 wenn Rot und Grün gleichzeitig leuchten). Die Überwachung würde in diesem Fall die Ampel Rot leuchten lassen.
 
 ## Überwachung
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Die Komponente <code>supervisor</code> (deutsch *Überwacher*) soll die Zustände der drei Lampen überprüfen. Dazu hat die Komponente
 den Eingang <code>monitor_i</code> und den Ausgang <code>result_o</code>.
@@ -113,7 +113,7 @@ Erstelle in der Datei <samp>supervisor_tb.vhd</samp> eine Testbench, die herausf
 funktioniert (es ist genau eine).
 
 ## Komponente <code>lights_fsm</code>
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Erstelle die Komponente <code>lights_fsm</code> durch Bearbeitung der Datei <samp>lights_fsm.vhd</samp>.
 
@@ -129,7 +129,7 @@ Erstelle die Komponente <code>lights_fsm</code> durch Bearbeitung der Datei <sam
     Teste die Implementierung mittels der Testbench <samp>lights_fsm_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>light_fsm</samp> und <samp>supervisor</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>lights.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -163,6 +163,6 @@ Gegebenenfalls müssen noch Signale definiert werden.
     Teste die Implementierung mittels der Testbench <samp>lights_tb.vhd</samp>.
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board

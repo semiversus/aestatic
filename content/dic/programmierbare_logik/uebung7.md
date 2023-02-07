@@ -7,7 +7,7 @@ In dieser Übung geht es um Testbenches.
 
 # Vorbereitung
 
-* [Projektordner](vhdl_uebung_7.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_7.zip) herunterladen und entpacken
 * Projekt <code>testbench.xise</code> öffnen
 
 # Schreiben der Testbench

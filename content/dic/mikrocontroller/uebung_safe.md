@@ -12,7 +12,7 @@ um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.)
 
 # Vorbereitung
 
-* [Projektordner](embedded_uebung_safe.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](embedded_uebung_safe.zip) herunterladen und entpacken
 * Projekt <code>safe.avrgccproj</code> öffnen
 
 # Spezifikation
@@ -53,14 +53,15 @@ uint8_t code_actual[4];
 Tippt der Anwender den Code ein wird jede Ziffer an der entsprechenden Stelle im Array gespeichert:
 
 ```c
-code_actual[index]=key; // index gibt die aktuelle Codepostion an, key die zu speichernde Ziffer
+code_actual[index]=key; // index gibt die aktuelle Codepostion an,
+                        // key die zu speichernde Ziffer
 ```
 
 Um den Code anschließend zu vergleichen:
 
 ```c
-if (code_actual[0]==code_stored[0] && code_actual[1]==code_stored[1] && code_actual[2]==code_stored[2] &&
-    code_actual[3]==code_stored[3])
+if (code_actual[0]==code_stored[0] && code_actual[1]==code_stored[1]
+    && code_actual[2]==code_stored[2] && code_actual[3]==code_stored[3])
 {
   // Code ist richtig
 }
@@ -135,4 +136,4 @@ void safe_process(void) {
 # Musterlösung
 Ein Implementierung dieser Übung befindet sich hier zum Download:
 
-* [Musterlösung](embedded_uebung_safe_loesung.compress){: class="download" }
+* [Musterlösung](embedded_uebung_safe_loesung.zip)

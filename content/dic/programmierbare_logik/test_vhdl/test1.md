@@ -2,8 +2,8 @@ title: VHDL Test (1)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner](vhdl_test_1.compress){: class="download" } herunterladen und entpacken
-* Insgesamt gibt es <span class="badge">29 Punkte</span>
+* [Projektordner](vhdl_test_1.zip) herunterladen und entpacken
+* Insgesamt gibt es <span class="tag is-rounded is-info">29 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
 # Lichtsteuerung
@@ -18,7 +18,7 @@ bedient:
 * <code>button_off</code> - Schaltet das Licht in 5 Sekunden aus
 
 ## Entwurf der Zustandsmaschine
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Realisierung wird eine Zustandsmaschine genutzt.
 
@@ -32,7 +32,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Ausgang <code>timer_enable_o</code> ist im Zustand <code>DOZE</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 * Der Ausgang <code>timer_clear_o</code> ist im Zustand <code>LIGHT</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 
-![FSM für Lichtsteuerung](test1_led_control_fsm.svg.tex)
+![FSM für Lichtsteuerung](test1_led_control_fsm.svg)
 
 .. info:: Testbench
 
@@ -40,7 +40,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
     der gesamte Bereich zoomen.
 
 ## Implementierung des Top Levels
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>button_dectect</samp> und <samp>led_control_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_control.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -72,7 +72,7 @@ Komponenten werden genutzt, um im Top Level <samp>led_control.vhd</samp> die gew
     Teste die Implementierung mittels der Testbench <samp>led_control_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
-<span class="badge">2 Punkte</span>
+<span class="tag is-rounded is-info">2 Punkte</span>
 
 In der Datei <samp>led_control.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
@@ -81,7 +81,7 @@ In der Datei <samp>led_control.ucf</samp> ist nur das Signal <code>clk</code> de
 * <code>led_o</code> liegt an Pin <code>M5</code>
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board
 
@@ -98,7 +98,7 @@ Die LED wird in diesem Beispiel mittels PWM angesteuert. Zwei Tasten steuern dab
 Insgesamt gibt es 8 Helligkeitsstufen (3 Bit).
 
 ## PWM Erzeugung
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Ein PWM besteht aus einem Zähler, der ständig nach oben zählt. Bei einem Überlauf (im Bild mit *N2* beschrieben) fängt der Zähler einfach bei 0 wieder
 an. Der Zählerstand wird verglichen mit einem vorgegebenen Pegel(*N1*) - sind diese gleich wird der Ausgang auf '0' gesetzt.
@@ -122,7 +122,7 @@ Bei einem Zählerstand von 0 wird der Ausgang auf '1' gesetzt (es sei den der vo
     Teste die Implementierung mittels der Testbench <samp>pwm_generator_tb.vhd</samp>.
 
 ## Helligkeitseinstellung
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Um einen Pegel für die PWM vorzugeben benötigen wir eine Komponente den einen Pegel abhängig von Tastendrücken ändern kann.
 Diese Komponente hat folgende Eingänge:
@@ -142,7 +142,7 @@ Die Ausgabe der Komponente ist der Ausgang <code>level_o</code>.
     Teste die Implementierung mittels der Testbench <samp>level_adjust_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>button_dectect</samp>, <samp>pwm_generator</samp> und <samp>level_adjust</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_pwm.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -161,6 +161,6 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
     Teste die Implementierung mittels der Testbench <samp>led_pwm_tb.vhd</samp>.
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board

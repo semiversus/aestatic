@@ -9,7 +9,7 @@ latex: true
 
 .. info:: Informationen im Datenblatt
 
-    Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf){: class="download" }
+    Die Informationen dieser Seite entstammen dem originalen [Datenblatt](atmel_atmega16.pdf)
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
     * *Seite 71-86*: Timer0 (8 Bit)

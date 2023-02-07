@@ -6,7 +6,7 @@ parent: uebersicht.md
 
 .. info:: In dieser Übung wird das BASYS2 Board verwendet
 
-    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf) konsultieren.
 
 * Entwurf einer universeller Zählerkomponente
 * Erkennung eines Tastendrucks
@@ -26,7 +26,7 @@ Zehntelsekunden):
 
 # Vorbereitung
 
-* [Projektordner](vhdl_uebung_5.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_5.zip) herunterladen und entpacken
 * Projekt <code>stopwatch.xise</code> öffnen
 
 # Entwicklung einer universellen Zählerkomponente
@@ -67,7 +67,7 @@ der Ausgang <code>detect_o</code> für einen Taktzyklus lang auf <code>1</code> 
 
 ## Timingdiagramm
 
-![Timingdiagramm](uebung5_timing.svg.tex)
+![Timingdiagramm](uebung5_timing.svg)
 
 ## Implementierung
 Bearbeite dazu die Datei <code>button_detect.vhd</code>. Die beiden Register <code>button_reg1</code> und <code>button_reg2</code> dienen der

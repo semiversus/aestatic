@@ -2,8 +2,8 @@ title: VHDL Test (2)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner](vhdl_test_2.compress){: class="download" } herunterladen und entpacken
-* Insgesamt gibt es <span class="badge">29 Punkte</span>
+* [Projektordner](vhdl_test_2.zip) herunterladen und entpacken
+* Insgesamt gibt es <span class="tag is-rounded is-info">29 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
 # Einschaltverzögerung
@@ -18,7 +18,7 @@ bedient:
 * <code>button_on</code> - Schaltet das Licht in 3 Sekunden ein
 
 ## Entwurf der Zustandsmaschine
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Realisierung wird eine Zustandsmaschine genutzt.
 
@@ -32,7 +32,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Ausgang <code>timer_enable_o</code> ist im Zustand <code>DELAY</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 * Der Ausgang <code>timer_clear_o</code> ist im Zustand <code>OFF</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 
-![FSM für Lichtsteuerung](test2_led_delay_fsm.svg.tex)
+![FSM für Lichtsteuerung](test2_led_delay_fsm.svg)
 
 .. info:: Testbench
 
@@ -40,7 +40,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
     der gesamte Bereich zoomen.
 
 ## Implementierung des Top Levels
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>button_dectect</samp> und <samp>led_delay_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_delay.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -72,7 +72,7 @@ Komponenten werden genutzt, um im Top Level <samp>led_delay.vhd</samp> die gewü
     Teste die Implementierung mittels der Testbench <samp>led_delay_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
-<span class="badge">2 Punkte</span>
+<span class="tag is-rounded is-info">2 Punkte</span>
 
 In der Datei <samp>led_delay.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
@@ -83,7 +83,7 @@ In der Datei <samp>led_delay.ucf</samp> ist nur das Signal <code>clk</code> defi
 <figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board
 
@@ -97,7 +97,7 @@ Loslassen wird das Ergebnis angezeigt. Dieser *Zufallsgenerator* ist ein Zähler
 durchwechselt.
 
 ## Decoder testen
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Der Decoder wandelt den Eingang <code>value_i</code> (3 Bit) in die entsprechende 7 LEDs Darstellung <code>leds_o</code> (7 Bit) um. Dabei
 wird folgende kodierung verwendet:
@@ -122,7 +122,7 @@ Erstelle in der Datei <samp>decoder_tb.vhd</samp> eine Testbench, die herausfind
 funktioniert (es ist genau eine).
 
 ## Komponente <code>shuffle</code>
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Erstelle die Komponente <code>shuffle</code> durch Bearbeitung der Datei <samp>shuffle.vhd</samp> nach folgender Skizze:
 
@@ -137,7 +137,7 @@ Erstelle die Komponente <code>shuffle</code> durch Bearbeitung der Datei <samp>s
     Teste die Implementierung mittels der Testbench <samp>shuffle_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
-<span class="badge">5 Punkte</span>
+<span class="tag is-rounded is-info">5 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>shuffle</samp>, <samp>decoder</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>dice.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -147,6 +147,6 @@ Komponenten werden genutzt, um im Top Level <samp>dice.vhd</samp> die gewünscht
     Teste die Implementierung mittels der Testbench <samp>dice_tb.vhd</samp>.
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board

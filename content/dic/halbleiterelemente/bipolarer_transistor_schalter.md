@@ -9,7 +9,7 @@ Bezug zum Massepontential braucht. Dies nennt man *Low-Side* schalten.
 # Low-Side Schalter
 ![Prinzipschaltbild](bipolarer_transistor_schalter.svg)
 
-Für dieses Beispiel wird ein [TIP31A](https://www.onsemi.com/pub/Collateral/TIP31A-D.PDF){: class="external" } (NPN
+Für dieses Beispiel wird ein [TIP31A](https://www.onsemi.com/pub/Collateral/TIP31A-D.PDF) (NPN
 Transistor \\(I_{C Max}\\)=3A, \\(U_{CE Max}\\)=60V) verwendet.
 
 Für die Auswahl des Transistors und der Berechnung von \\(R_B\\) müssen zwei Fälle betrachtet werden. Der ausgeschaltete und der

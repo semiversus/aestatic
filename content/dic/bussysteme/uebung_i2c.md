@@ -2,7 +2,7 @@ title: I&sup2;C Übungsaufgaben
 parent: i2c.md
 
 # Aufgabe ADXL345
-In dieser Übung wird der Beschleunigungssensor [ADXL345](http://www.analog.com/en/products/mems/mems-accelerometers/adxl345.html){: class="external" } von [Analog Devices](http://www.analog.com/){: class="external" } angesteuert. Die angaben stammen aus dem entsprechenden [Datenblatt](http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf){: class="download" }.
+In dieser Übung wird der Beschleunigungssensor [ADXL345](http://www.analog.com/en/products/mems/mems-accelerometers/adxl345.html) von [Analog Devices](http://www.analog.com/) angesteuert. Die angaben stammen aus dem entsprechenden [Datenblatt](http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf).
 
 Die 7-Bit Adresse des Bausteins wird für diese Übung mit <samp>001 1101</samp> (0x1D) angenommen.
 

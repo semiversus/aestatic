@@ -6,13 +6,13 @@ parent: uebersicht.md
 
 .. info:: In dieser Übung wird das BASYS2 Board verwendet
 
-    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf) konsultieren.
 
 In dieser Übung wird die Unterteilung in mehrere Komponenten gezeigt.
 
 # Vorbereitung
 
-* [Projektordner](vhdl_uebung_4.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_4.zip) herunterladen und entpacken
 * Projekt <code>structural.xise</code> öffnen
 
 # Aufgabe 1 - Zeichne eine Schaltung für <code>display.vhd</code>

@@ -70,7 +70,7 @@ Die Funktion soll wie folgt sein:
 * ansonsten soll der Zählerstand um <code></code>value<code></code> erhöht werden.
 
 ### Schaltung
-![Schaltung](vhdl_example_1.svg.tex)
+![Schaltung](vhdl_example_1.svg)
 
 ### VHDL Entity
 
@@ -108,11 +108,11 @@ end architecture;
 
 ### Timingdiagramm
 
-![Timingdiagramm](vhdl_example_1_timing.svg.tex)
+![Timingdiagramm](vhdl_example_1_timing.svg)
 
 ### Test des Designs
 
-* [Online VHDL Modell mit Testbench](http://www.edaplayground.com/x/EcA){: class="external" }
+* [Online VHDL Modell mit Testbench](http://www.edaplayground.com/x/EcA)
 
 ## Umsetzung des Volladdierers
 ```vhdl

@@ -6,14 +6,14 @@ next: tutorial2.md
 
 .. info:: Unterlagen der Tuxcadamy
 
-    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/){: class="external" } auf. Auch Aufgabenstellungen
-    sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
+    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/) auf. Auch Aufgabenstellungen
+    sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/)
     Lizenz und somit auch dieses Tutorial.
 
-    Eine Kopie der Unterlagen kann man [hier](grd1-de-manual.pdf){: class="download" } herunterladen.
+    Eine Kopie der Unterlagen kann man [hier](grd1-de-manual.pdf) herunterladen.
 
 # Entstehungsgeschichte zu Linux
-<span class="badge">30 Minuten</span>
+<span class="tag is-rounded is-info">30 Minuten</span>
 
 Lies Kapitel 1.1 und 1.2 (Seite 13 bis 16) über die Entstehungsgeschichte von Linux.
 
@@ -23,7 +23,7 @@ Beantworte folgende Fragen:
 * Was hat *Linus Torvalds* mit *Linux* zu tun?
 
 # Opensource Lizenzen
-<span class="badge">60 Minuten</span>
+<span class="tag is-rounded is-info">60 Minuten</span>
 
 Lies Kapitel 1.3 (Seite 16 bis 20) und gib Antworten auf die Übungen am Ende des Kapitels.
 
@@ -31,7 +31,7 @@ Lies Kapitel 1.3 (Seite 16 bis 20) und gib Antworten auf die Übungen am Ende de
 * Welche Vor- und Nachteile hat es für Anwender, Hobby-Programmierer und Firmen?
 
 ## Gruppendiskussion
-<span class="badge">20 Minuten</span>
+<span class="tag is-rounded is-info">20 Minuten</span>
 
 Diskutiere in der Gruppe über die Vor- und Nachteile. Themen sollten sein:
 

@@ -6,14 +6,14 @@ parent: uebersicht.md
 
 .. info:: In dieser Übung wird das BASYS2 Board verwendet
 
-    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf) konsultieren.
 
 * Definition einer Zustandmaschine
 * Integration der Komponenten im Top Level
 
 # Vorbereitung
 
-* [Projektordner](vhdl_uebung_6.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_6.zip) herunterladen und entpacken
 * Projekt <code>clicker.xise</code> öffnen
 
 # Aufbau des Top Levels

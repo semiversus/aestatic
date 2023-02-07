@@ -1,5 +1,8 @@
 import mistune
 from mistune.directives import DirectivePlugin
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters import html as pygments_html
 
 from slugify import slugify
 
@@ -8,6 +11,24 @@ class AestaticRenderer(mistune.HTMLRenderer):
         anchor = slugify(text)
         return f"<h{level} id=\"{anchor}\">{text}<a href=\"#{anchor}\"><span class=\"icon has-text-grey-light ml-4 is-size-5\"><i class=\"icon-link\"></i></span></a></h{level}>\n"
 
+    def block_code(self, code, info=None):
+        if info:
+            lexer = get_lexer_by_name(info, stripall=True)
+            formatter = pygments_html.HtmlFormatter(nowrap=True)
+            highlighted = highlight(code, lexer, formatter)
+            return '<pre>' + highlighted + '</pre>'
+        return '<pre><code>' + mistune.escape(code) + '</code></pre>'
+
+    def link(self, text: str, url: str, title=None):
+        if url.startswith('http'):
+            icon = f'<span class="icon"><i class="icon-share"></i></span>'
+        elif not url.partition('#')[0].endswith('html'):
+            icon = f'<span class="icon"><i class="icon-download2"></i></span>'
+        else:
+            icon = ''
+
+        return f'<a href="{self.safe_url(url)}">{text}{icon}</a>'
+        return s + '</a>'
 
 class Admonition(DirectivePlugin):
     SUPPORTED_NAMES = {"info", "warning", "danger"}

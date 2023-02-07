@@ -3,7 +3,7 @@ parent: uebersicht.md
 
 # Allgemeines
 
-* Download des [Megacard Templates](embedded_template_hal.compress){: class="download" }
+* Download des [Megacard Templates](embedded_template_hal.zip)
 
 Die Verwendung der Hardwareabstraktion (kurz *HAL* für engl. *Hardware Abstraction Layer*) wird im folgenden erläutert.
 

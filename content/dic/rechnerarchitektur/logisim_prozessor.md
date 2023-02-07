@@ -9,7 +9,7 @@ Vorgaben:
 - Befehls- und Datenspeicher: jeweils 256 Bytes
 - Register: Akkumulator A, Indexregister IX
 
-Das [vollständige Prozessormodell für Logisim](prozessor.circ){: class="download" } steht für Übungszwecke zur Verfügung.
+Das [vollständige Prozessormodell für Logisim](prozessor.circ) steht für Übungszwecke zur Verfügung.
 
 # Aufbau
 ## Datenpfad

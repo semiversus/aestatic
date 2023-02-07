@@ -1,6 +1,6 @@
 title: Günther Jena
 
-<figure class="image is-2by3"><img src="assets/guenther_jena_jehle.jpg" alt="Foto von Günther Jena"></figure>
+<figure class="image is-pulled-right"><img src="assets/guenther_jena_jehle.jpg" alt="Foto von Günther Jena"></figure>
 
 Mein Name ist Günther Jena und komme aus Kappl in Österreich. Ich wohne und arbeite in Rankweil. Vor meiner Hochzeit hieß ich noch Günther Jehle und Jena ist nun die Zusammensetzung aus meinem bisherigen Nachnamen "Jehle" und dem bisherigen Nachnamen meiner Frau "Nagel".
 

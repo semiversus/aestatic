@@ -106,6 +106,21 @@ files = [
 ]
 
 [[package]]
+name = "pygments"
+version = "2.14.0"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "Pygments-2.14.0-py3-none-any.whl", hash = "sha256:fa7bd7bd2771287c0de303af8bfdfc731f51bd2c6a47ab69d117138893b82717"},
+    {file = "Pygments-2.14.0.tar.gz", hash = "sha256:b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"},
+]
+
+[package.extras]
+plugins = ["importlib-metadata"]
+
+[[package]]
 name = "python-slugify"
 version = "8.0.0"
 description = "A Python slugify application that also handles Unicode"
@@ -138,4 +153,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "fb933dd9d80162263fd0ff1ed8d8e7965c9c4a8b04104714a23d306e890c3a99"
+content-hash = "3f3e5f18e2753ae8e44732a97aed83887463b932db80dcd5ce0134855b280fce"

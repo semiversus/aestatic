@@ -6,7 +6,7 @@ next: uebung2.md
 
 .. info:: In dieser Übung wird das BASYS2 Board verwendet
 
-    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf){: class="download" } konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf) konsultieren.
 
 In dieser Übung nutzen wir vier Schalter des BASYS2 Boards (SW0 bis SW3) um damit eine 4 Bit Zahl einzugeben. Im FPGA
 soll eine Kombinatorik entworfen werden, um mittels dieser 4 Bit Zahl eine 7 Segment Anzeige anzusteuern.
@@ -26,7 +26,7 @@ Ein|Aus|Aus|Ein|9
 
 # Vorbereitung
 
-* [Projektordner](vhdl_uebung_1.compress){: class="download" } herunterladen und entpacken
+* [Projektordner](vhdl_uebung_1.zip) herunterladen und entpacken
 * Projekt <code>seven_segments.xise</code> öffnen
 
 # Top Level <code>seven_segments.vhd</code>

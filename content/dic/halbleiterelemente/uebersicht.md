@@ -16,7 +16,7 @@ parent: ../uebersicht.md
 * [Datenspeicher Übersicht](datenspeicher.html)
 * [Statische Datenspeicher](statische_datenspeicher.html)
 * [Dynamische Datenspeicher](dynamische_datenspeicher.html)
-* Übung ["Expertenrunde Speicher"](halbleiterspeicher.compress)
+* Übung ["Expertenrunde Speicher"](halbleiterspeicher.zip)
 
 # Tests
 * [Schriftliche Tests](test_transistor.html)

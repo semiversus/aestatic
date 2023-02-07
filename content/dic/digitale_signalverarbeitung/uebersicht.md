@@ -8,4 +8,4 @@ parent: ../uebersicht.md
 * [Faltung](faltung.html)
 
 # Tests
-* [Test 1](test_digitale_signalverarbeitung_1.pdf){: class="download" }, keine Musterlösung
+* [Test 1](test_digitale_signalverarbeitung_1.pdf), keine Musterlösung

@@ -8,6 +8,7 @@
   <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
   <link rel="stylesheet" href="{{ root_path }}/theme/css/semiversus.css">
   <link rel="icon" href="{{ root_path }}/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
   {% block header %}{% endblock %}
 </head>
 <body>
@@ -42,7 +43,7 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns">
-          <div class="column">
+          <div class="column is-three-quarters">
             {% block head %}{% endblock %}
             <div class="content">
               {% block content %}{% endblock %}
@@ -61,22 +62,12 @@
   </footer>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-
-      // Get all "navbar-burger" elements
       const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-      // Check if there are any navbar burgers
       if ($navbarBurgers.length > 0) {
-
-        // Add a click event on each of them
         $navbarBurgers.forEach(el => {
           el.addEventListener('click', () => {
-
-            // Get the target from the "data-target" attribute
             const target = el.dataset.target;
             const $target = document.getElementById(target);
-
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
             el.classList.toggle('is-active');
             $target.classList.toggle('is-active');
 

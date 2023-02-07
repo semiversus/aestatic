@@ -14,9 +14,9 @@ title: Test - Hardwarenahe Programmierung
 
     Bei früheren Tests war das Stoffgebiet teilweise anders!
 
-* [Test 1](test_hardwarenahe_programmierung_1.pdf){: class="download" }, ohne Musterlösung
-* [Test 2](test_hardwarenahe_programmierung_2.pdf), [Musterlösung](test_hardwarenahe_programmierung_2_loesung.pdf){: class="download" }
-* [Test 3](test_hardwarenahe_programmierung_3.pdf), [Musterlösung](test_hardwarenahe_programmierung_3_loesung.pdf){: class="download" }
+* [Test 1](test_hardwarenahe_programmierung_1.pdf), ohne Musterlösung
+* [Test 2](test_hardwarenahe_programmierung_2.pdf), [Musterlösung](test_hardwarenahe_programmierung_2_loesung.pdf)
+* [Test 3](test_hardwarenahe_programmierung_3.pdf), [Musterlösung](test_hardwarenahe_programmierung_3_loesung.pdf)
 
 # Testablauf
 * schriftlich, 30 Minuten

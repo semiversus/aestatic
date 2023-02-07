@@ -2,8 +2,8 @@ title: VHDL Test (4)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner](vhdl_test_4.compress){: class="download" } herunterladen und entpacken
-* Insgesamt gibt es <span class="badge">20 Punkte</span>
+* [Projektordner](vhdl_test_4.zip) herunterladen und entpacken
+* Insgesamt gibt es <span class="tag is-rounded is-info">20 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 
 # Serielle Datenübertragung
@@ -23,7 +23,7 @@ mittels LED angezeigt. Die Baudrate wird auf 1 Baud gestellt.
 ## <samp>uart_tx</samp> Komponente
 
 ### Zustandsmaschine
-<span class="badge">10 Punkte</span>
+<span class="tag is-rounded is-info">10 Punkte</span>
 
 * Die erforderliche Zustandsmaschine hat die Zustände <code>IDLE</code>, <code>START</code>, <code>DATA</code> und <code>STOP</code>
 * Eingänge:
@@ -44,13 +44,13 @@ mittels LED angezeigt. Die Baudrate wird auf 1 Baud gestellt.
     * Entspricht während <code>DATA</code> dem zu übertragenden Datenbit
 
 ### Baudratengenerierung
-<span class="badge">2 Punkte</span>
+<span class="tag is-rounded is-info">2 Punkte</span>
 
 Für die Baudratengenerierung wird der bestehende Zähler (<samp>counter</samp>) verwendet. Die Entity enthält die beiden
 Generics <samp>BAUDRATE_WIDTH</samp> und <samp>BAUDRATE_DIVIDER</samp>, die den Zähler konfigurieren.
 
 ### Bit Zähler
-<span class="badge">2 Punkte</span>
+<span class="tag is-rounded is-info">2 Punkte</span>
 
 Um die einzelnen Datenbits zu zählen (während des Zustands <code>DATA</code>) wird eine weitere Zählerinstanz verwendet. Diese
 Zählerinstanz zählt von 0 bis 7.
@@ -70,7 +70,7 @@ Beschreibung sollte äquvivalent zu diesem Blockschaltbild sein.
     Teste die Implementierung mittels der Testbench <samp>uart_tx_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
-<span class="badge">3 Punkte</span>
+<span class="tag is-rounded is-info">3 Punkte</span>
 
 Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>uart_tx</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>transmitter.vhd</samp> die gewünschte Funktionalität zu realisieren.
@@ -86,7 +86,7 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
     Teste die Implementierung mittels der Testbench <samp>transmitter_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
-<span class="badge">2 Punkte</span>
+<span class="tag is-rounded is-info">2 Punkte</span>
 
 In der Datei <samp>transmitter.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
@@ -105,6 +105,6 @@ In der Datei <samp>transmitter.ucf</samp> ist nur das Signal <code>clk</code> de
 <figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
 ## Test am Board
-<span class="badge">1 Punkt</span>
+<span class="tag is-rounded is-info">1 Punkt</span>
 
 Synthetisiere das Projekt und teste das Ergebnis am Board
