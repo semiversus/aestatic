@@ -119,10 +119,11 @@ end process;
     Der Syntax von VHDL ist oft nicht sehr konsistent. Das gleiche Ergebnis lässt sich durch folgende Zuweisung als
     *nebenläufige* Anweisung realisieren:
 
-        #!vhdl
-        result <= (others => '0') when clear='1' else
-                  input when load='1' else
-                  counter + 1;
+    ```vhdl
+    result <= (others => '0') when clear='1' else
+              input when load='1' else
+              counter + 1;
+    ```
 
     Es gilt die unterschiedliche Anordnung zu beachten. Die Funktionalität ist identisch.
 
@@ -151,13 +152,14 @@ end process;
 
     Hier der Vergleich mit der entsprechenden <code>with</code>/<code>select</code> Anweisung als *nebenläufige* Anweisung:
 
-        #!vhdl
-        with digit_i select segments_o <=
-          "0000001" when "0000", -- display 0
-          "1001111" when "0001", -- display 1
-          "0010010" when "0010", -- display 2
-          -- ...
-          "1111111" when others;
+    ```vhdl
+    with digit_i select segments_o <=
+      "0000001" when "0000", -- display 0
+      "1001111" when "0001", -- display 1
+      "0010010" when "0010", -- display 2
+      -- ...
+      "1111111" when others;
+    ```
 
     Auch hier ist die Funktionalität identisch, die Schreibweise unterscheidet sich aber stark.
 

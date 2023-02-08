@@ -21,9 +21,9 @@ class AestaticRenderer(mistune.HTMLRenderer):
 
     def link(self, text: str, url: str, title=None):
         if url.startswith('http'):
-            icon = f'<span class="icon"><i class="icon-share"></i></span>'
+            icon = f'<span class="icon"><i class="icon-share is-size-7"></i></span>'
         elif not url.partition('#')[0].endswith('html'):
-            icon = f'<span class="icon"><i class="icon-download2"></i></span>'
+            icon = f'<span class="icon"><i class="icon-download2 is-size-7"></i></span>'
         else:
             icon = ''
 
