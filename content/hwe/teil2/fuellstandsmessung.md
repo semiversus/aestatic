@@ -3,7 +3,7 @@ next: schrittmotor.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
-Mittels Megacard wird der Füllstand eines Behälters gemessen. Dazu wird das Projekt aus dem 1. Teil verwendet ([Füllstandsmessung](../teil1/fuellstand.md)).
+Mittels Megacard wird der Füllstand eines Behälters gemessen. Dazu wird das Projekt aus dem 1. Teil verwendet ([Füllstandsmessung](../teil1/fuellstand.html)).
 
 # Stufe 1
 * Es wird eine Frequenzmessung realisiert, die die Frequenz an einem Pin misst

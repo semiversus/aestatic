@@ -1,7 +1,7 @@
 title: Wieso gibt es kein logisches XOR in C?
 date: 2016-02-15
 
-In C gibt es vier bitweise Operatoren (Details dazu im [Skriptum](/dic/mikrocontroller/bitmanipulation.md)):
+In C gibt es vier bitweise Operatoren (Details dazu im [Skriptum](../../dic/mikrocontroller/bitmanipulation.html)):
 
 * *UND* Operator - `&`
 * *ODER* Operator - `|`

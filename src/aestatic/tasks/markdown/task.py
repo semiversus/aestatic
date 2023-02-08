@@ -78,6 +78,8 @@ class MarkdownTask(BaseTask):
 
                 page.parent = resolve_parent(page)
 
+        processor.environment['articles'].sort(key=lambda p: p.date, reverse=True)
+
         env = Environment(loader=FileSystemLoader('templates'))
 
         for page in pages:

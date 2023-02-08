@@ -1,6 +1,7 @@
 title: Interessante Korrelation entdecken mittels <samp>wdiff</samp>
 date: 2016-01-31
 image: meld_tb.png
+latex: true
 
 Abschreiben als solches zu erkennen ist keine einfache Sache, da der Aufwand massiv mit der Anzahl der zu vergleichenden
 Arbeiten steigt. Bei 5 Arbeiten sind insgesamt 10 Vergleiche zu machen: Die erste Aufgabe wird mit den vier anderen
@@ -10,7 +11,7 @@ Mit <samp>wdiff</samp> habe ich ein Tool gefunden, um einfache Textvergleiche ma
 
 Die Anzahl der Vergleiche ergibt sich dabei mittels den Binomialkoeffizienten zu:
 
-%%N_{Vergleiche}={N_{Arbeiten} \choose 2}=\frac{N_{Arbeiten}!}{(N_{Arbeiten}-2)!\cdot 2!}%%
+$$N_{Vergleiche}={N_{Arbeiten} \choose 2}=\frac{N_{Arbeiten}!}{(N_{Arbeiten}-2)!\cdot 2!}$$
 
 Anzahl der Arbeiten|Anzahl der Vergleiche
 :-:|:-:
@@ -21,7 +22,7 @@ Anzahl der Arbeiten|Anzahl der Vergleiche
 25|300
 30|435
 
-In der Informatik spricht man auch von einer Laufzeitkomplexität von %%\mathcal O(n^2)%%, sprich mit doppelter Anzahl
+In der Informatik spricht man auch von einer Laufzeitkomplexität von \\(\mathcal O(n^2)\\), sprich mit doppelter Anzahl
 an Arbeiten steigt die Anzahl der Vergleiche um (etwas mehr als) das Vierfache.
 
 # Nutzen von Tools

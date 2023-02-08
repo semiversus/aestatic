@@ -23,5 +23,3 @@ Evolutionäre Algorithmen finden für solche Systeme Lösungen auf eine effizien
 Das Projekt Nesolution (auf Github) nutzt die Emulation einer Spielkonsole um mittels eines evolutionären Algorithmus Spiele mit einem vorgegebenen Ziel zu spielen. Dazu werden Tastenfolgen als Muster gespeichert und durch den Emulator abgespielt. Während der Emulation wird mit einer Bewertungsfunktion das Ergebnis beurteilt.
 
 Beim Start wird mit einem leeren Muster der Tastenfolgen gestartet. Davon werden Kopien gemacht, die jeweils zufällig verändert werden. Jede dieser veränderten Kopien wird nun emuliert und bewertet. Zum Schluss wird die Kopie mit dem besten Ergebnis als Basis für die nächste Iteration genutzt.
-
-Das Projekt steht als freie Software unter [Github](https://github.com/semiversus/nesolution) zur Verfügung.
