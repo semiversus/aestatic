@@ -1,4 +1,4 @@
-title: Unterrichtsmaterial
+title: Unterricht
 
 # Digitale Systeme und Computersysteme
 * [Grundlagen der Digitaltechnik](grundlagen_der_digitaltechnik/uebersicht.html)
@@ -30,8 +30,7 @@ Rechtschreibfehler - ich bin für jeden Hinweis dankbar!
 Bisher habe ich von folgenden Personen Korrekturhinweise bekommen:
 
 * Patrick Zgubic - viele Korrekturen im Bereich Digitale Signalverarbeitung
-* Florian Burtscher (@[Github](https://github.com/burtscherflorian-scritex), @[Stackoverflow](https://stackoverflow.com/users/7292877/burtscher-florian),
- [Homepage](http://www.scritex.com/)) - Korrekturen im Bereich Digitale Signalverarbeitung
+* Florian Burtscher - Korrekturen im Bereich Digitale Signalverarbeitung
 * Herbert Hart - Korrekturen im Bereich Digitale Signalverarbeitung
 * Claus-Peter Bergmeier (<a href="mailto:cpu@bigcpb.de">Email</a>) - Hinweise zu defektem Downloadlink des Logisim Prozessors. Er arbeitet selbst auch an einem eigenen Logisim Prozessor!
 

@@ -1,4 +1,4 @@
-title: Günther Jena
+title: Über mich
 
 <figure class="image is-pulled-right"><img src="assets/guenther_jena_jehle.jpg" alt="Foto von Günther Jena"></figure>
 

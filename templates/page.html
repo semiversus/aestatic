@@ -6,6 +6,10 @@
   {% if page.latex %}<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>{% endif %}
 {% endblock %}
 
+{% block source_link %}
+<a href="https://github.com/semiversus/aestatic/tree/{{ env['git_sha'] }}/content/{{ page.path }}" class="headerlink" title="Quelldatei"><span class="icon ml-3 is-size-5"><i class="icon-file-text2"></i></span></a>
+{% endblock %}
+
 {% block head %}
   {% if page.parent %}<nav class="breadcrumb"><ul><li><a href="{{ root_path }}/{{page.parent[0].url}}"><span class="icon"><i class="icon-home"></i></span></a></li>{% for p in page.parent[1:] %}<li><a href="{{ root_path }}/{{p.url}}">{{p.title}}</a></li>{% endfor %}<li class="is-active has-text-weight-medium"><a href="#">{{ page.title }}</a></li></ul></nav>{% endif %}
   {% if page.next or page.prev %}<nav class="level">
