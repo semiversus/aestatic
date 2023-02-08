@@ -54,6 +54,7 @@ class BaseTask(ABC):
 class Processor:
     def __init__(self):
         self._cache_file = Path('.cache/cache.json')
+        self.environment = dict()
 
         try:
             self._cache_dict = json.loads(self._cache_file.read_text())

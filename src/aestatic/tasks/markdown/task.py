@@ -26,6 +26,7 @@ class Page:
     content: str
     title: str
     latex: str = None
+    template: str = 'page.html'
     parent: str = None
     next: str = None
     prev: str = None
@@ -69,10 +70,10 @@ class MarkdownTask(BaseTask):
                 page.parent = resolve_parent(page)
 
         env = Environment(loader=FileSystemLoader('templates'))
-        template = env.get_template('page.html')
 
         for page in pages:
             output_path = 'output' / page.path.with_suffix('.html')
             output_path.parent.mkdir(parents=True, exist_ok=True)
-            output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent)))
+            template = env.get_template(page.template)
+            output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent), env=processor.environment))
             processor.add_cache_entry(page.path, page.path.with_suffix('.html'))

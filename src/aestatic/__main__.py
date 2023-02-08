@@ -1,4 +1,6 @@
 import sys
+import git
+from datetime import datetime
 
 from .tasks.markdown import task
 
@@ -15,6 +17,12 @@ processor.register(compress.CompressTask())
 processor.register(slides.SlidesTask())
 processor.register(task.MarkdownTask())
 processor.register(copy.CopyTask())
+
+
+repo = git.Repo()
+processor.environment['git_sha'] = repo.git.rev_parse(repo.head.object.hexsha)
+processor.environment['timestamp'] = repo.head.commit.committed_datetime
+
 processor.run()
 
 sys.exit()
