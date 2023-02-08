@@ -45,7 +45,11 @@ Daraus ergibt sich für die Gesamtleistung \\(P_{Transistor}=I_B \cdot U_{BE} + 
 Basisdiode viel kleiner ist gilt \\(P_{Transistor} \approx I_C \cdot U_{CE Sat}\\).
 
 ## Berechnung des Basiswiderstand
-<figure><img src="transistor_npn_esb.svg"><figcaption>Vereinfachtes Ersatzschaltbild (Bild: <a href="https://commons.wikimedia.org/wiki/File:Simplified_Transportmodel_of_Bipolartransistor.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
+.. figure:: transistor_npn_esb.svg
+    :title: Vereinfachtes Ersatzschaltbild
+    :author: Biezl
+    :source: https://commons.wikimedia.org/wiki/File:Simplified_Transportmodel_of_Bipolartransistor.svg
+    :license: Gemeinfrei
 
 Um den Basiswiderstand zu berechnen hilft das vereinfachte Ersatzschaltbild des Transistors. Dieses zeigt für die Basis
 einen Spannungsabfall über eine Diode. Der Kollektorstrom \\(I_C\\) wird durch eine Stromquelle dargestellt, welche mittels

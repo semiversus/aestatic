@@ -9,7 +9,11 @@ Die interne Beschaltung jedes IO Port Pins beinhaltet folgende Komponenten:
 * Aktivierbare Ausgangsstufe
 * Eingänge besitzen Schmitt-Trigger und Synchronisierung
 
-<figure><img src="avr_io_pin.svg"><figcaption>AVR IO Pin (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_io_pin.svg
+    :title: AVR IO Pin
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation
 
 Um von der Firmware aus auf einen IO Port Pin zuzugreifen, werden drei Register benötigt. Diese drei Register fassen jeweils 8 IO Pins zusammen. Die Gruppierung von 8 IO Pins wird auch *Port* genannt. Der ATMega16 hat 4 solcher Ports: Port *A*, *B*, *C* und *D*. Im folgenden wird statt des Portnamens ein `x` verwendet.
 

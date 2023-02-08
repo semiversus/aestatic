@@ -48,7 +48,11 @@ den Nachteil, dass der Timer teilweise recht komplex in der Anwendung sein kann.
 Der ATMega16 enthält drei Timer. Timer 0 und 2 sind 8 Bit Timer, Time 1 ist ein 16 Bit Timer.
 
 # Timer 0 (8 Bit Timer)
-<figure><img src="avr_timer0.svg"><figcaption>Blockschaltbild des Timer 0 (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_timer0.svg
+    :title: Blockschaltbild des Timer 0
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation
 
 Das Blockschaltbild des Timer 0 zeigt den prinzipiellen Aufbau des Timers welcher im folgenden beschrieben wird.
 
@@ -162,4 +166,8 @@ Siehe auch hier im Kapitel [PWM Erzeugung](avr_pwm.html).
 
 # Pins
 
-<figure><img src="avr_timer_pins.svg"><figcaption>Pins mit Timerfunktionalität (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_timer_pins.svg
+    :title: Pins mit Timerfunktionalität
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation

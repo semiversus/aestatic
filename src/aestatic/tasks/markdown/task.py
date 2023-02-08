@@ -9,14 +9,14 @@ import mistune
 from mistune.directives import RSTDirective
 from jinja2 import Environment, FileSystemLoader
 
-from aestatic.tasks.markdown.renderer import AestaticRenderer, Admonition
+from aestatic.tasks.markdown.renderer import AestaticRenderer, Admonition, Figure
 
 
 def resolve(p: Path):
     return p.resolve().relative_to(Path('.').resolve())
 
 renderer = AestaticRenderer(escape=False)
-markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
+markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition(), Figure()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
 
 
 @dataclass

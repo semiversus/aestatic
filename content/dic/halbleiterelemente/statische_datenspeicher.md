@@ -48,7 +48,11 @@ Um nun die Information zu Löschen bzw. den Speicherbaustein auf seinen Ausliefe
 
 Damit dies überhaupt möglich wird, ist ein Quarzglas im Chip notwendig. Nach dem Löschen wird dies meist mit einem nicht transparenten Aufkleber abgedeckt.
 
-<figure><img src="eprom.jpg"><figcaption>EPROM mit Quarzfenster (Bild: <a href="https://commons.wikimedia.org/wiki/File:16Mbit_EPROM_ST_Microelectronics_M27C160_(1).jpg">yellowcloud</a> CC BY 2.0)</figcaption></figure>
+.. figure:: eprom.jpg
+    :title: EPROM mit Quarzfenster
+    :author: yellowcloud
+    :source: https://commons.wikimedia.org/wiki/File:16Mbit_EPROM_ST_Microelectronics_M27C160_(1).jpg
+    :license: CC BY 2.0
 
 Der Löschvorgang dauert je nach Intensität zwischen 20 Minuten und mehreren Stunden. Da die Isolationsschicht sich bei jedem Löschvorgang verschlechtert geben die Hersteller meist eine Beschreibbarkeit (oder genauer Löschbarkeit) von einigen Hundert Zyklen an.
 

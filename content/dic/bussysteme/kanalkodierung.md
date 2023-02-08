@@ -23,7 +23,11 @@ Bei der RS232 Schnittstelle steht (nicht wie im obigen Beispiel) eine negative S
 ### Bitstuffing
 Ein Nachteil bei der NRZ Kodierung sind die fehlenden Flanken bei der Übertragung von vielen gleichen Symbolen (viele logische 0 oder 1). Um für solche Fälle zusätzliche Taktflanken zu erzeugen, kann durch *Bitstuffing* (oder deutsch Bitstopfen) ein zusätzliches invertiertes Bit eingefügt werden. Mit *Bitweite* beschreibt man dabei die Anzahl der Bits mit gleichem Pegel die zum Einfügen eines *Stopfbits* führt. Der Empfänger muss nach dem gleichen Prinzip dieses Stopfbit wieder entfernen.
 
-<figure><img src="bitstuffing.svg"><figcaption>Bitstopfen mit Weite 5 (Bild: <a href="https://commons.wikimedia.org/wiki/File:Bitstuffing.svg">Mik81</a> Public Domain)</figcaption></figure>
+.. figure:: bitstuffing.svg
+    :title: Bitstopfen mit Weite 5
+    :author: Mik81
+    :source: https://commons.wikimedia.org/wiki/File:Bitstuffing.svg
+    :license: Public Domain
 
 Am obigen Beispiel sieht man das Einfügen eines Stopfbits bei Bitweite 5.
 

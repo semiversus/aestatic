@@ -7,7 +7,11 @@ Speicher haben die Aufgabe Information zu speichern. Bei digitalen Speichern ist
 ## Historische Speicher
 Zu den ersten digitalen und von einer Maschine verarbeitbaren Speicher zählt die [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte), die 1890 zur Volkszählung in der USA von Herman Hollerith eingeführt wurde und bis in die 1970er verwendet wurde.
 
-<figure><img src="lochkarte.jpg"><figcaption>Lochkarte(Bild: <a href="https://commons.wikimedia.org/wiki/File:Lochkarte-white_hg.jpg">Hannes Grobe/AWI</a> CC BY 3.0)</figcaption></figure>
+.. figure:: lochkarte.jpg
+    :title: Lochkarte
+    :author: Hannes Grobe/AWI
+    :source: https://commons.wikimedia.org/wiki/File:Lochkarte-white_hg.jpg
+    :license: CC BY 3.0
 
 # Unterteilung
 Die Unterteilung von Speicher kann durch verschiedene Eigenschaften erfolgen. Die wichtigsten Merkmale sind in den folgenden Abschnitten aufgeführt.

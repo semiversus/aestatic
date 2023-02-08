@@ -60,7 +60,11 @@ end architecture;
 
 ## Pinout
 Die Signale `switches_i`, `an_o` und `segments_o` finden sich im folgenden Pinout des BASYS2 Boards:
-<figure><img src="basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+.. figure:: basys2_pinout.svg
+    :title: Pinout des BASYS2 Boards
+    :author: Digilent Inc. BASYS2 Manual
+    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :license: &copy; Digilent
 
 Das Pinout wird in der Datei `seven_segments.ucf` beschrieben. Für dieses VHDL Modell sieht es wie folgt aus:
 
@@ -86,7 +90,11 @@ NET "segments_o(0)" LOC = "M12"; # segment G
 
 ## 7-Segment Anzeige
 In der folgenden Abbildung sieht man die Anordnung der einzelnen Segmente:
-<figure><img src="basys2_7segment.svg"><figcaption>7-Segment Anzeige des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+.. figure:: basys2_7segment.svg
+    :title: 7-Segment Anzeige des BASYS2 Boards
+    :author: Digilent Inc. BASYS2 Manual
+    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :license: &copy; Digilent
 
 # Aufgabe 1 - Erweitern der kombinatorischen Beschreibung
 ```vhdl

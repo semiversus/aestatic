@@ -9,7 +9,7 @@ from slugify import slugify
 class AestaticRenderer(mistune.HTMLRenderer):
     def heading(self, text, level, **attrs):
         anchor = slugify(text)
-        return f"<h{level} id=\"{anchor}\">{text}<a href=\"#{anchor}\"><span class=\"icon has-text-grey-light ml-4 is-size-5\"><i class=\"icon-link\"></i></span></a></h{level}>\n"
+        return f'<h{level} id="{anchor}">{text}<a href="#{anchor}" class="headerlink" title="Permalink zu dieser Überschrift"><span class="icon ml-4 is-size-5"><i class="icon-link"></i></span></a></h{level}>\n'
 
     def block_code(self, code, info=None):
         if info:
@@ -85,3 +85,32 @@ class Admonition(DirectivePlugin):
 
     def render_admonition_content(self, text):
         return '<div class="message-body">' + text + '</div>\n'
+
+
+class Figure(DirectivePlugin):
+    def parse(self, block, m, state):
+        attrs = dict(self.parse_options(m))
+        attrs['image'] = self.parse_title(m)
+        attrs['source'] = attrs.get('source', '')
+
+        return {
+            'type': 'figure',
+            'attrs': attrs,
+        }
+
+    def __call__(self, directive, md):
+        directive.register('figure', self.parse)
+
+        if md.renderer.NAME == 'html':
+            md.renderer.register('figure', Figure.render)
+
+    def render(self, image, title, author='', source='', license=''):
+        h = f'<div class="card mb-4"><div class="card-image"><figure class="image"><img src="{image}"></figure></div><div class="card-content has-text-centered">{title}'
+
+        if author:
+            h += f' (Quelle: <a href="{source}">{author}</a>'
+            if license:
+                h += f', Lizenz {license}'
+            h += ')'
+
+        return h + '</div></div>'

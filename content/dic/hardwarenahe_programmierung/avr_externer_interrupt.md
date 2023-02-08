@@ -20,7 +20,11 @@ eigentliche Interruptquelle nicht innerhalb des Mikrocontrollers ist, sondern eb
 
 # Pinbelegung
 Die drei Pins sind in der folgenden Pinbelegung markiert.
-<figure><img src="avr_ext_interrupt_pins.svg"><figcaption>Externe Interrup Pins beim AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_ext_interrupt_pins.svg
+    :title: Externe Interrup Pins beim AVR
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation
 
 * `INT0` - PORT D - Bit 2
 * `INT1` - PORT D - Bit 3

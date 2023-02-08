@@ -34,7 +34,11 @@ Außerdem stehen drei mögliche Interrupts für die UART zur Verfügung:
 
 Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden näher erläutert.
 
-<figure><img src="avr_uart.svg"><figcaption>AVR UART (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_uart.svg
+    :title: AVR UART
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation
 
 # Konfigurations- und Statusregister
 ## USARTA

@@ -12,7 +12,11 @@ Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entw
 * [Auszug](avr_assembler_befehle.pdf) der wichtigsten Befehle
 
 ## Blockschaltbild
-<figure><img src="avr_blockschaltbild.svg"><figcaption>Blockschaltbild des AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_blockschaltbild.svg
+    :title: Blockschaltbild des AVR
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation
 
 Im Blockschaltbild des Atmel AVR ATMega16 erkennt man am oberen und unteren Ende die vier IO-Ports.
 

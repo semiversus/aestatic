@@ -26,7 +26,11 @@ Die wichtigsten Eigenschaften des ADC:
 * Integrierte 2.56 V Referenzspannung
 
 # Aufbau
-<figure><img src="avr_adc.svg"><figcaption>Blockschaltbild des ADC (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
+.. figure:: avr_adc.svg
+    :title: Blockschaltbild des ADC
+    :author: Datenblatt ATMega16
+    :source: http://www.atmel.com/images/doc2466.pdf
+    :license: &copy; Atmel Corporation
 
 ## Eingänge
 Im linken unteren Segment sind die Eingänge, die über Multiplexer zum eigentlichen ADC geführt werden. Der Multiplexer "*Pos. Input Mux*" kann zwischen den 8 Pins *ADC0* bis *ADC7* sowie Masse und einer *Bandgap*-Referenz (typ. 1.23 V) wählen.

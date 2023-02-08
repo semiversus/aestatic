@@ -62,7 +62,12 @@ Als erstes scheidet ID 0x147 aus. Bei Bit <samp>ID6</samp> wird vom Teilnehmer e
 aber die logische 0 der beiden anderen Teilnehmer durchgesetzt. Gleiches passiert bei ID 0x12A bei Bit <samp>ID3</samp>.
 
 # Sicherungsschicht
-<figure><img src="can_telegramm.svg"><figcaption>Aufbau eines CAN Telegramms im Base Frame Format (Bild: <a href="https://commons.wikimedia.org/wiki/File:CAN-Bus-frame_in_base_format_without_stuffbits.svg">Endres~commonswiki</a> CC BY-SA 3.0)</figcaption></figure>
+
+.. figure:: can_telegramm.svg
+    :title: Aufbau eines CAN Telegramms im Base Frame Format
+    :author: Endres~commonswiki
+    :source: https://commons.wikimedia.org/wiki/File:CAN-Bus-frame_in_base_format_without_stuffbits.svg
+    :license: CC BY-SA 3.0
 
 Ein Datentelegramm beteht aus folgenden Feldern:
 

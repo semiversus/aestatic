@@ -22,11 +22,19 @@ Eingangssignals mit der Impulsantwort bezeichnet. Der Operator der Faltung heiß
 $$x[n]\ast h[n]=\sum\limits_{k=-\infty}^{\infty}x[k]\cdot h[n-k]$$
 
 ## Visuelle Darstellung
-<figure><img src="convolution1.gif"><figcaption>Faltung eines Rechtecksignals mit einem Rechteck (Bild: <a href="https://commons.wikimedia.org/wiki/File:Convolution_of_box_signal_with_itself.gif">Brian Amberg</a> CC BY-SA 3.0)</figcaption></figure>
+.. figure:: convolution1.gif
+    :title: Faltung eines Rechtecksignals mit einem Rechteck
+    :author: Brian Amberg
+    :source: https://commons.wikimedia.org/wiki/File:Convolution_of_box_signal_with_itself.gif
+    :license: CC BY-SA 3.0
 
 Das zweite Beispiel zeigt ein System mit Tiefpasseigenschaft. Die Impulsantwort eines Tiefpasssystems ist \\(e^{-t}\\) für \\(t\geq 0\\).
 
-<figure><img src="convolution2.gif"><figcaption>Faltung eines Rechtecksignals mit einer Exponentialfunktion (Bild: <a href="https://commons.wikimedia.org/wiki/File:Convolution_of_spiky_function_with_box2.gif">Brian Amberg/Tinos</a> CC BY-SA 3.0)</figcaption></figure>
+.. figure:: convolution2.gif
+    :title: Faltung eines Rechtecksignals mit einer Exponentialfunktion
+    :author: Brian Amberg/Tinos
+    :source: https://commons.wikimedia.org/wiki/File:Convolution_of_spiky_function_with_box2.gif
+    :license: CC BY-SA 3.0
 
 ## Berechnung nach Wozny
 Eine einfache Art zur Durchführung der diskreten Faltung ist die Berechnung nach Wozny. Im folgenden Youtube Video findet

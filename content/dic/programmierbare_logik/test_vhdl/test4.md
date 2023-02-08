@@ -14,7 +14,11 @@ parent: uebersicht.md
 Um Daten zu Übertragen wird oft die serielle Schnittstelle verwendet. In diesem Beispiel soll ein Transmitter entsprechend
 RS232 realisiert werden.
 
-<figure><img src="../../bussysteme/rs232_timing.png"><figcaption>RS232 Timingdiagramm (Bild: <a href="https://commons.wikimedia.org/wiki/File:RS-232_timing.png">Gerald.deppe</a> Public Domain)</figcaption></figure>
+.. figure:: ../../bussysteme/rs232_timing.png
+    :title: RS232 Timingdiagramm
+    :author: Gerald.deppe
+    :source: https://commons.wikimedia.org/wiki/File:RS-232_timing.png
+    :license: Public Domain
 
 Zum Testen soll mittels der acht Umschaltern (<samp>SW0</samp> bis <samp>SW7</samp>) ein 8 Bit Datenwort definiert werden und
 durch Drücken des Tasters <samp>BTN0</samp> wird dieses dann *versendet*. Zum Versenden wird der Pegel der Sendeleitung
@@ -102,7 +106,11 @@ In der Datei <samp>transmitter.ucf</samp> ist nur das Signal `clk` definiert. Er
 * `led_tx_o` liegt an Pin `M5`
 * `led_busy_o` liegt an Pin `M11`
 
-<figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+.. figure:: ../basys2_pinout.svg
+    :title: Pinout des BASYS2 Boards
+    :author: Digilent Inc. BASYS2 Manual
+    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :license: &copy; Digilent
 
 ## Test am Board
 <span class="tag is-rounded is-info">1 Punkt</span>

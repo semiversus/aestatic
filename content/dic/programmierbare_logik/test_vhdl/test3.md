@@ -68,7 +68,11 @@ In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal `clk` definiert. Erw
 * `led1_o` ist die LED <samp>LD0</samp>
 * `led2_o` ist die LED <samp>LD1</samp>
 
-<figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+.. figure:: ../basys2_pinout.svg
+    :title: Pinout des BASYS2 Boards
+    :author: Digilent Inc. BASYS2 Manual
+    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :license: &copy; Digilent
 
 ## Test am Board
 <span class="tag is-rounded is-info">1 Punkt</span>

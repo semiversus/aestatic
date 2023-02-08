@@ -80,7 +80,11 @@ In der Datei <samp>led_delay.ucf</samp> ist nur das Signal `clk` definiert. Erwe
 * `button_on_i` wird durch den Taster <samp>BTN1</samp> angesteuert
 * `led_o` ist die LED <samp>LD0</samp>
 
-<figure><img src="../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
+.. figure:: ../basys2_pinout.svg
+    :title: Pinout des BASYS2 Boards
+    :author: Digilent Inc. BASYS2 Manual
+    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :license: &copy; Digilent
 
 ## Test am Board
 <span class="tag is-rounded is-info">1 Punkt</span>

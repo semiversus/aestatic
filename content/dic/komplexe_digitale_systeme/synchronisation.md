@@ -21,7 +21,11 @@ Mit Hilfe von Semaphoren lassen sich auch kritische Abschnitte realisieren. Daru
 
 Das folgende Beispiel zeigt die Inkrementierung einer Variable `s` durch zwei Prozesse. Dazu wird eine Kopie von `s` in ein Register geladen, um eins erhöht und wieder zurückgeschrieben. Im linken Teil wird der erste Prozess unterbrochen und der zweite Prozess kommt zur Ausführung. Die Variable ist nun nicht auf 2 sondern auf 1. Im rechten Teil sind die kritischen Abschnitte atomar ausgeführt (sprich nicht unterbrechbar).
 
-<figure><img src="kritischer_abschnitt.svg"><figcaption>Kritischer Abschnitt (Bild: <a href="https://commons.wikimedia.org/wiki/File:Kritischer_abschnitt.svg">miracula_de</a> CC0 1.0)</figcaption></figure>
+.. figure:: kritischer_abschnitt.svg
+    :title: Kritischer Abschnitt
+    :author: miracula_de
+    :source: https://commons.wikimedia.org/wiki/File:Kritischer_abschnitt.svg
+    :license: CC0 1.0
 
 ## Deadlock
 Deadlock oder Verklemmung bezeichnet einen Zustand, bei dem ein oder mehrere Prozesse auf Betriebsmittel warten, die dem Prozess selbst oder einem anderen beteiligten Prozess zugeteilt sind.

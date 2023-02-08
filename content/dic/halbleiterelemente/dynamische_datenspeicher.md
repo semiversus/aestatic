@@ -9,7 +9,11 @@ Bei der Realisierung von DRAM Speichern sind die Kondensatoren für die Speicher
 
 ## 3T1C Speicherzelle
 
-<figure><img src="dram_3t1c.jpg"><figcaption>3T1C Speicherzelle (Bild: <a href="https://commons.wikimedia.org/wiki/File:Intel_i1103.JPG">Chrihern</a> CC BY-SA 3.0)</figcaption></figure>
+.. figure:: dram_3t1c.jpg
+    :title: 3T1C Speicherzelle
+    :author: Chrihern
+    :source: https://commons.wikimedia.org/wiki/File:Intel_i1103.JPG
+    :license: CC BY-SA 3.0
 
 Um die Information, die im Kondensator gespeichert ist nun schreiben und lesen zu können wurden anfangs 3 Transistoren pro Kondensator verwendet (deswegen 3T1C). Mittels Q3 wird die Speicherzelle zum Schreiben ausgewählt. Nun kann Ladung von der Leitung *Data In* zum Kondensator fließen (Schreiben einer logischen 1), oder der Kondensator entladen werden (Schreiben einer logischen 0). Über Q2 kann die Information ausgelesen werden. Q1 dient als Verstärker, der den aktuellen Zustand verstärkt und damit die Kapazität der Leitung *Data Out* umladen kann.
 
@@ -17,7 +21,11 @@ Im Laufe der Zeit wurde diese 3T1C Zelle durch die 1T1C Zelle abgelöst, die wes
 
 ## 1T1C Speicherzelle
 
-<figure><img src="dram_1t1c.png"><figcaption>1T1C Speicherzelle (Bild: <a href="https://commons.wikimedia.org/wiki/File:DRAM_Cell_Structure_(Model_of_Single_Circuit_Cell).PNG">Tosaka</a> CC BY 3.0)</figcaption></figure>
+.. figure:: dram_1t1c.png
+    :title: 1T1C Speicherzelle
+    :author: Tosaka
+    :source: https://commons.wikimedia.org/wiki/File:DRAM_Cell_Structure_(Model_of_Single_Circuit_Cell).PNG
+    :license: CC BY 3.0
 
 Zum Schreiben wird die Datenleitung (Bit Line) auf den gewünschten Pegel gebracht und anschließend wird der Transistor durchgeschaltet. Dadurch wird die Kapazität entsprechend dem Pegel der Datenleitung geladen bzw. entladen.
 

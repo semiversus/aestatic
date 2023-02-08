@@ -104,7 +104,11 @@ Ein PWM besteht aus einem Zähler, der ständig nach oben zählt. Bei einem Übe
 an. Der Zählerstand wird verglichen mit einem vorgegebenen Pegel(*N1*) - sind diese gleich wird der Ausgang auf '0' gesetzt.
 Bei einem Zählerstand von 0 wird der Ausgang auf '1' gesetzt (es sei den der vorgegebene Pegel ist 0).
 
-<figure><img src="test1_pwm.svg"><figcaption>PWM Signalerzeugung (Bild: <a href="https://commons.wikimedia.org/wiki/File:DMT_Messung-PuBrei.svg">Saure</a> CC BY-SA 3.0)</figcaption></figure>
+.. figure:: test1_pwm.svg
+    :title: PWM Signalerzeugung
+    :author: Saure
+    :source: https://commons.wikimedia.org/wiki/File:DMT_Messung-PuBrei.svg
+    :license: CC BY-SA 3.0
 
 * Bearbeite die Datei <samp>pwm_generator.vhd</samp>.
 * Der interne Zähler `counter_reg` zählt bei jeder steigenden Taktflanke nach oben
