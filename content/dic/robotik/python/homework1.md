@@ -10,7 +10,7 @@ kann dabei entweder eine Zahl eintippen oder zum Beenden der Abfrage einfach
 
 Nach der Abfrage soll folgende Ausgabe am Bildschirm erscheinen (Beispiel):
 
-<code>Minimum: 3, Maximum: 17, Average: 6</code>
+`Minimum: 3, Maximum: 17, Average: 6`
 
 Stichworte: *while* Schleife, *break*, [*input*](https://docs.python.org/3/library/functions.html#input), [*min*](https://docs.python.org/3/library/functions.html#min), [*max*](https://docs.python.org/3/library/functions.html#max), [*sum*](https://docs.python.org/3/library/functions.html#sum), Arbeiten mit [Listen](https://www.python-kurs.eu/python3_listen.php)
 

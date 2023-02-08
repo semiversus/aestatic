@@ -9,7 +9,7 @@ parent: ../uebersicht.md
     * [Signaltypen](signaltypen.html)
     * [Operatoren](operatoren.html)
     * [Nebenläufigkeit](nebenlaeufigkeit.html)
-    * [<code>process</code> Statment](process.html)
+    * [`process` Statment](process.html)
 * VHDL Beschreibung für Grundkomponenten
     * [Register](register.html)
     * [Synchronisierung asynchroner Signale](synchronisierung.html)

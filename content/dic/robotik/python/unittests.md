@@ -5,15 +5,15 @@ parent: uebersicht.md
 
 Vorbereitungen:
 
-1. Neues Verzeichnis erstellen (Name <code>unittests</code>)
+1. Neues Verzeichnis erstellen (Name `unittests`)
 1. Dieses Verzeichnis mit VS Code öffnen
-1. In VS Code das Terminal öffnen und <code>python -m venv .venv</code> ausführen
+1. In VS Code das Terminal öffnen und `python -m venv .venv` ausführen
 1. VS Code sollte nun die virtuelle Umgebung erkennen und fragen, ob man es auswählen will -> Dies mit "Ja" (bzw. "Yes") bestätigen
-1. Das Paket pytest mittels <code>python -m pip install pytest</code> installieren
+1. Das Paket pytest mittels `python -m pip install pytest` installieren
 
 ## Übung Durchschnittsalter
-* Dateiname: <code>average_age.py</code>
-* Funktion: <code>def get_average_age(persons_dict: dict) -> float:</code>
+* Dateiname: `average_age.py`
+* Funktion: `def get_average_age(persons_dict: dict) -> float:`
 
 Der Funktion wird ein *Dictionary* übergeben. Die *Keys* sind Personennamen (*Strings*) und die *Values* sind das Alter.
 
@@ -25,14 +25,14 @@ Beispiel:
 ```
 
 ### Unittest
-* Dateiname: <code>test_average_age.py</code>
+* Dateiname: `test_average_age.py`
 
-* Der Unittest soll die Funktion <code>get_average_age</code> sinvoll testen.
+* Der Unittest soll die Funktion `get_average_age` sinvoll testen.
 * Sind die Anforderungen vollständig definiert?
 
 ## Übung Median
-* Dateiname: <code>median.py</code> bzw. <code>test_median.py</code>
-* Funktion: <code>def calc_median(numbers: list) -> float:</code>
+* Dateiname: `median.py` bzw. `test_median.py`
+* Funktion: `def calc_median(numbers: list) -> float:`
 
 Der Funktion wird eine Liste an Zahlen übergeben. Zurückgegeben wird der sogenannte [Median](https://de.wikipedia.org/wiki/Median) -> die Zahl, die in der Mitte steht, wenn die Liste sortiert ist.
 
@@ -46,8 +46,8 @@ Beispiel:
 Auch in dieser Übung ist der entsprechende Unittest zu entwerfen
 
 ## Übung Progressive Steuern
-* Dateiname: <code>progressive_tax.py</code> bzw. <code>test_progressive_tax.py</code>
-* Funktion: <code>def calc_tax(earnings: float) -> float:</code>
+* Dateiname: `progressive_tax.py` bzw. `test_progressive_tax.py`
+* Funktion: `def calc_tax(earnings: float) -> float:`
 
 Implementiere eine Funktion die die progressiven Steuern laut [Österreichischer Einkommenssteuertabelle](https://www.finanz.at/steuern/lohnsteuertabelle/) berechnet.
 
@@ -61,10 +61,10 @@ Beispiel:
 ```
 
 ## Übung Zinseszins
-* Dateiname: <code>compound_interest.py</code> bzw. <code>test_compound_interest.py</code>
-* Funktion: <code>def calc_compound_interest(value: float, years: int, interest: float) -> float:</code>
+* Dateiname: `compound_interest.py` bzw. `test_compound_interest.py`
+* Funktion: `def calc_compound_interest(value: float, years: int, interest: float) -> float:`
 
-Wir berechnen den [Zinseszins](https://de.wikipedia.org/wiki/Zinseszins). Dazu starten wir mit einem Kapital (<code>value</code>), legen es für eine bestimmte Anzahl an Jahren (<code>years</code>) an zu einem bestimmten Zinssatz in Prozent (<code>interest</code>).
+Wir berechnen den [Zinseszins](https://de.wikipedia.org/wiki/Zinseszins). Dazu starten wir mit einem Kapital (`value`), legen es für eine bestimmte Anzahl an Jahren (`years`) an zu einem bestimmten Zinssatz in Prozent (`interest`).
 
 Beispiel:
 
@@ -76,8 +76,8 @@ Beispiel:
 ```
 
 ## Übung Elemente zählen
-* Dateiname: <code>enumerate_list.py</code> bzw. <code>test_enumerate_list.py</code>
-* Funktion: <code>def enumerate_list(elements: list) -> dict:</code>
+* Dateiname: `enumerate_list.py` bzw. `test_enumerate_list.py`
+* Funktion: `def enumerate_list(elements: list) -> dict:`
 
 Aus einer Liste an Elemente soll ein Dictionary erstellt werden, welches die Anzahl der enthaltenen Elemente angibt.
 
@@ -91,8 +91,8 @@ Beispiel:
 ```
 
 ## Übung Gemeinsamkeiten
-* Dateiname: <code>common_list.py</code> bzw. <code>test_common_list.py</code>
-* Funktion: <code>def get_common_elements(list1: list, list2: list) -> list:</code>
+* Dateiname: `common_list.py` bzw. `test_common_list.py`
+* Funktion: `def get_common_elements(list1: list, list2: list) -> list:`
 
 Die Funktion ermittelt die Elemente, die in beiden Listen sind. Die Ausgabe ist selbst wieder
 eine Liste, deren Sortierung aber beliebig sein kann.
@@ -107,8 +107,8 @@ Beispiel:
 ```
 
 ## Übung Wörter durcheinander würfeln
-* Dateiname: <code>shuffle.py</code> bzw. <code>shuffle.py</code>
-* Funktion: <code>def shuffle_words(message: str) -> str:</code>
+* Dateiname: `shuffle.py` bzw. `shuffle.py`
+* Funktion: `def shuffle_words(message: str) -> str:`
 
 Ein String bestehend aus mehreren Wörtern soll wortweise durcheinander gewürfelt werden. Dabei
 soll jeweils der erste und letzte Buchstabe eines Wortes unverändert bleiben.
@@ -124,11 +124,11 @@ Hinweise:
 
 * Um einen String zufällig zu sortieren seht ihr hier in der ersten Antwort ein Beispiel: [Stackoverflow](https://stackoverflow.com/a/2668366/166605)
 * Beim Testen wird es auch etwas schwieriger, weil ihr überprüfen müsst, ob das Resultat gültig ist. [sorted()](https://docs.python.org/3/library/functions.html#sorted) kann hier hilfreich sein!
-* Im String kommen keine Satzzeichen vor (<code>.</code>, <code>,</code>, ...)
+* Im String kommen keine Satzzeichen vor (`.`, `,`, ...)
 
 ## Übung Niedrigster Preis
-* Dateiname: <code>lowest_price.py</code> bzw. <code>test_lowest_price.py</code>
-* Funktion: <code>def lowest_price(items: dict) -> list:</code>
+* Dateiname: `lowest_price.py` bzw. `test_lowest_price.py`
+* Funktion: `def lowest_price(items: dict) -> list:`
 
 Der Funktion wird ein Dictionary mit Artikelnamen und deren Preisen gegeben. Zurückgegeben werden soll eine Liste mit den drei günstigsten Artikeln.
 

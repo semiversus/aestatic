@@ -27,12 +27,12 @@ Ein|Aus|Aus|Ein|9
 # Vorbereitung
 
 * [Projektordner](vhdl_uebung_1.zip) herunterladen und entpacken
-* Projekt <code>seven_segments.xise</code> öffnen
+* Projekt `seven_segments.xise` öffnen
 
-# Top Level <code>seven_segments.vhd</code>
+# Top Level `seven_segments.vhd`
 
-<code>seven_segments.vhd</code> ist das Top Level Design und definiert die oberste Ebene, d.h. diese Entity beschreibt mit ihrer
-<code>port</code>-Direktive die Pins des FPGA Bausteins.
+`seven_segments.vhd` ist das Top Level Design und definiert die oberste Ebene, d.h. diese Entity beschreibt mit ihrer
+`port`-Direktive die Pins des FPGA Bausteins.
 
 ```vhdl
 library ieee;
@@ -59,10 +59,10 @@ end architecture;
 ```
 
 ## Pinout
-Die Signale <code>switches_i</code>, <code>an_o</code> und <code>segments_o</code> finden sich im folgenden Pinout des BASYS2 Boards:
+Die Signale `switches_i`, `an_o` und `segments_o` finden sich im folgenden Pinout des BASYS2 Boards:
 <figure><img src="basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
-Das Pinout wird in der Datei <code>seven_segments.ucf</code> beschrieben. Für dieses VHDL Modell sieht es wie folgt aus:
+Das Pinout wird in der Datei `seven_segments.ucf` beschrieben. Für dieses VHDL Modell sieht es wie folgt aus:
 
 ```bash
 NET "switches_i(3)" LOC = "B4";
@@ -115,5 +115,5 @@ Ein|Ein|Aus|Ein|D
 Ein|Ein|Ein|Aus|E
 Ein|Ein|Ein|Ein|F
 
-* Überlege dir, wie die einzelnen Segmente angesteuert werden sollen, um die Buchstaben <code>A</code> bis <code>F</code> darzustellen.
+* Überlege dir, wie die einzelnen Segmente angesteuert werden sollen, um die Buchstaben `A` bis `F` darzustellen.
 * Teste das Design auf dem BASYS2 Board

@@ -22,15 +22,15 @@ eigentliche Interruptquelle nicht innerhalb des Mikrocontrollers ist, sondern eb
 Die drei Pins sind in der folgenden Pinbelegung markiert.
 <figure><img src="avr_ext_interrupt_pins.svg"><figcaption>Externe Interrup Pins beim AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
-* <code>INT0</code> - PORT D - Bit 2
-* <code>INT1</code> - PORT D - Bit 3
-* <code>INT2</code> - PORT B - Bit 2 (zusätzliche Mehrfachbelegung mit dem analogen Komperator)
+* `INT0` - PORT D - Bit 2
+* `INT1` - PORT D - Bit 3
+* `INT2` - PORT B - Bit 2 (zusätzliche Mehrfachbelegung mit dem analogen Komperator)
 
 Bei entsprechender Konfiguration kann ein Interrupt ausgelöst werden, wenn sich der Pegel am entsprechenden Pin ändert.
 
 # Register zur Konfiguration
 ## MCUCR
-Der Grund für das Auslösen eines Interrupts bei den beiden externen Interrupts INT0 und INT1 wird über das Register <code>MCUCR</code> (MCU Control Register) gesteuert.
+Der Grund für das Auslösen eines Interrupts bei den beiden externen Interrupts INT0 und INT1 wird über das Register `MCUCR` (MCU Control Register) gesteuert.
 
 Bit|7|6|5|4|**3**|**2**|**1**|**0**
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -42,13 +42,13 @@ Dazu haben wir vier verschiedene Konfigurationsmöglichkeiten für INT0 und INT1
 
 ISCx1 | ISCx0 | Beschreibung
 -|-|-
-0|0|Löst bei logisch <code>0</code> Pegel aus
+0|0|Löst bei logisch `0` Pegel aus
 0|1|Löst bei deiner Pegeländerung aus (steigende oder fallende Flanke)
 1|0|Löst bei fallende Flanke (Pegeländerung von logisch '1' auf '0')
 1|1|Löst bei steigender Flanke (Pegeländerung von logisch '0' auf '1')
 
 ## MCUCSR
-Der externe Interrupt für INT2 wird über das Register <code>MCUCSR</code> (MCU Control and Status Register) gesteuert.
+Der externe Interrupt für INT2 wird über das Register `MCUCSR` (MCU Control and Status Register) gesteuert.
 
 Bit|7|**6**|5|4|3|2|1|0
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -56,11 +56,11 @@ Name|JTD|**ICS2**|-|JTRF|WDRF|BORF|EXTRF|PORF
 Read/Write|R/W|**R/W**|R|R/W|R/W|R/W|R/W|R/W
 Init|0|0|0|-|-|-|-|-
 
-Ist <code>ISC2</code> auf logisch <code>0</code> wird der Interrupt bei einer fallenden Flanke ausgelöst. Bei logisch <code>1</code> wird entsprechend
+Ist `ISC2` auf logisch `0` wird der Interrupt bei einer fallenden Flanke ausgelöst. Bei logisch `1` wird entsprechend
 bei einer steigenden Flanke ausgelöst.
 
 ## GICR
-Die Freigabe der Interrupts erfolgt über das Register <code>GICR</code> (General Interrupt Control Register).
+Die Freigabe der Interrupts erfolgt über das Register `GICR` (General Interrupt Control Register).
 
 Bit|**7**|**6**|**5**|4|3|2|1|0
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -72,9 +72,9 @@ Die Bits INT0, INT1 und INT2 aktivieren die Interruptfreigabe.
 
 Für den Aufruf der entsprechenden Interruptrountine sind nun folgende Punkte notwendig:
 
-* Das entsprechende Bit bei <code>GICR</code> ist gesetzt, damit der Interrupt freigegeben ist
-* Über <code>sei()</code> wurde die globale Interruptfreigabe aktiviert (siehe [Interrupts](avr_interrupts.html) im Skriptum)
-* Eine Pegeländerung entsprechend der Konfiguration unter <code>MCUCR</code> bzw. <code>MCUCSR</code> tritt beim entsprechenden Pin auf
+* Das entsprechende Bit bei `GICR` ist gesetzt, damit der Interrupt freigegeben ist
+* Über `sei()` wurde die globale Interruptfreigabe aktiviert (siehe [Interrupts](avr_interrupts.html) im Skriptum)
+* Eine Pegeländerung entsprechend der Konfiguration unter `MCUCR` bzw. `MCUCSR` tritt beim entsprechenden Pin auf
 
 ## GIFR
 Über dieses Register kann das Statusflag beim entsprechenden Interrupt abgefragt werden. Dies ist notwendig, wenn die
@@ -86,8 +86,8 @@ Name|**INTF1**|**INTF0**|**INTF2**|-|-|-|-|-
 Read/Write|**R/W**|**R/W**|**R/W**|R|R|R|R|R
 Init|**0**|**0**|**0**|0|0|0|0|0
 
-Tritt die konfigurierte Pegeländerung auf wird das entsprechende <code>INTFx</code> Flag gesetzt. Zurückgesetzt wird das Flag,
-indem entwededer die Interrupt Service Routine aufgerufen wurde oder indem man eine logische <code>1</code> an das entsprechende
+Tritt die konfigurierte Pegeländerung auf wird das entsprechende `INTFx` Flag gesetzt. Zurückgesetzt wird das Flag,
+indem entwededer die Interrupt Service Routine aufgerufen wurde oder indem man eine logische `1` an das entsprechende
 Bit schreibt.
 
 # Beispiel

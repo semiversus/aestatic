@@ -26,4 +26,4 @@ auch genutzt werden.
 
 ![DICbian importieren](dicbian_login.png)
 
-* Benutzername ist <code>dic</code>, Passwort ist <code>dic</code> (das root-Passwort ist <code>htl</code>)
+* Benutzername ist `dic`, Passwort ist `dic` (das root-Passwort ist `htl`)

@@ -3,9 +3,9 @@ parent: ../uebersicht.md
 
 # Inhalt
 ## Reproduktion (VHDL Grundlagen)
-* <code>entity</code>, <code>architecture</code>
-* <code>signals</code> und die Typen <code>std_ulogic</code>, <code>std_ulogic_vector</code>, <code>unsigned</code> und <code>integer</code>
-* <code>process</code> und *concurrent statments*
+* `entity`, `architecture`
+* `signals` und die Typen `std_ulogic`, `std_ulogic_vector`, `unsigned` und `integer`
+* `process` und *concurrent statments*
 
 ## Transfer (Aufbau von Designs)
 * Kombinatorische Elemente: *Addierer*, *Multiplexer*, *Vergleicher*, usw.

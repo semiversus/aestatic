@@ -14,7 +14,7 @@ Tastendruck soll die LED ein sein, nach einem weiteren Tastendruck soll die LED 
 # Vorbereitung
 
 * [Projektordner](vhdl_uebung_3.zip) herunterladen und entpacken
-* Projekt <code>toggle.xise</code> öffnen
+* Projekt `toggle.xise` öffnen
 
 # Aufgabe 1 - Erste Implementierung
 

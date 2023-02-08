@@ -4,7 +4,7 @@ next: datentypen.md
 
 ## Beispiel 1
 
-Starten wir direkt mit einem Beispiel, welches über <code>Hello, World!</code> hinausgeht. Was macht das folgende Programm?
+Starten wir direkt mit einem Beispiel, welches über `Hello, World!` hinausgeht. Was macht das folgende Programm?
 Was fällt auf im Vergleich zu anderen Programmiersprachen?
 
 ```python
@@ -66,5 +66,5 @@ print('Your guess was correct!')
 ```
 
 # Aufgaben
-* Füge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: <code>Your guess was correct! It took 3 attempts.</code>
-* Füge eine Abfrage des oberen Limits ein. Dazu sollte folgende Abfrage am Anfang erscheinen: <code>What should be the upper limit? number: </code>
+* Füge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: `Your guess was correct! It took 3 attempts.`
+* Füge eine Abfrage des oberen Limits ein. Dazu sollte folgende Abfrage am Anfang erscheinen: `What should be the upper limit? number: `

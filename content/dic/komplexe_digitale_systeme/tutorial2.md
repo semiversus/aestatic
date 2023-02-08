@@ -23,7 +23,7 @@ next: tutorial3.md
   Umgangssprache meist der Kommandozeileninterpreter als Shell gemeint.
 
 # Vorbereitung
-Starte [DICbian](dicbian.html) und logge dich mittels dem Benutzernamen <code>dic</code> und dem Passwort <code>dic</code> ein.
+Starte [DICbian](dicbian.html) und logge dich mittels dem Benutzernamen `dic` und dem Passwort `dic` ein.
 
 ![DICbian nach dem Login](dicbian_shell.png)
 
@@ -35,10 +35,10 @@ beantworte die jeweiligen Übungen.
 <figure><img src="tutorial_uebung.png"><figcaption>Beispiel für eine Übung aus den Unterlagen (Bild: Tuxcadamy CC BY-SA 4.0)</figcaption></figure>
 
 ## Editor
-Ein einfacher Editor für Linux ist <code>nano</code>. Dieser ist auf den meisten Linux Systemen installiert und lässt sich leicht
-über die Kombinationen mit <kbd>STRG</kbd> bedienen. Weiter Infos über <code>nano</code> gibt es [hier](https://wiki.ubuntuusers.de/Nano/).
+Ein einfacher Editor für Linux ist `nano`. Dieser ist auf den meisten Linux Systemen installiert und lässt sich leicht
+über die Kombinationen mit <kbd>STRG</kbd> bedienen. Weiter Infos über `nano` gibt es [hier](https://wiki.ubuntuusers.de/Nano/).
 
-Die wichtigsten Tastenkombinationen für <code>nano</code>:
+Die wichtigsten Tastenkombinationen für `nano`:
 
 * <kbd>STRG</kbd>+<kbd>o</kbd> bzw. <kbd>F3</kbd> - Datei speichern
 * <kbd>STRG</kbd>+<kbd>x</kbd> bzw. <kbd>F2</kbd> - Datei schließen
@@ -47,6 +47,6 @@ Die wichtigsten Tastenkombinationen für <code>nano</code>:
 
 ## System herunterfahren
 Wenn man DICbian in der Virtualbox herunterfahren möchte muss man sich erst als *Superuser* anmelden. Dies wird mittels
-<code>su</code> gemacht (Passwort ist <code>htl</code>). Anschließend kann man mittels <code>poweroff</code> das System herunterfahren.
+`su` gemacht (Passwort ist `htl`). Anschließend kann man mittels `poweroff` das System herunterfahren.
 
 <figure><img src="tutorial_poweroff.png"><figcaption>Herunterfahren von DICbian</figcaption></figure>

@@ -5,15 +5,15 @@ latex: true
 # Allgemeines
 Bei einer kombinatorischen Schaltung handelt es sich um eine Digital-Schaltung deren Ausgänge eindeutig durch die Eingänge bestimmt sind. Um dies zu erreichen darf die Schaltung keine speichernden Elemente aufweisen, d.h. die Schaltung ist *Zustandslos*. Ein weiteres Kennzeichen von kombinatorischen Schaltungen ist die *Zyklenfreiheit*. Eine Schaltung besitzt einen *Zyklus*, wenn der Ausgang eines Gatters auf den Eingang des selbigen rückwirken kann.
 
-Ein solches Schaltnetz kann durch die elementaren logischen Schaltglieder (*Gatter*) dargestellt werden: <code>AND</code>, <code>OR</code>, <code>XOR</code> und <code>NOT</code>. Darstellungsformen sind unter anderem *Boolesche Funktionen*, *Wahrheitstabellen* oder zeichnerische Verknüpfungen von logischen Schaltglieder.
+Ein solches Schaltnetz kann durch die elementaren logischen Schaltglieder (*Gatter*) dargestellt werden: `AND`, `OR`, `XOR` und `NOT`. Darstellungsformen sind unter anderem *Boolesche Funktionen*, *Wahrheitstabellen* oder zeichnerische Verknüpfungen von logischen Schaltglieder.
 
 Bei den Schaltnetzen im folgenden Kapitel werden die Schaltverzögerungen durch Gatterlaufzeiten bzw. Signallaufzeiten nicht betrachtet.
 
 # Logische Gatter
-Zu den gebräuchlichsten Logikgattern zählen <code>AND</code>, <code>OR</code>, <code>NOT</code> und <code>XOR</code>. Die Gatter <code>NAND</code>, <code>NOR</code> und <code>XNOR</code> können durch Kombination von <code>AND</code>, <code>OR</code> bzw. <code>XOR</code> mit einem <code>NOT</code> Gatter gebildet werden.
+Zu den gebräuchlichsten Logikgattern zählen `AND`, `OR`, `NOT` und `XOR`. Die Gatter `NAND`, `NOR` und `XNOR` können durch Kombination von `AND`, `OR` bzw. `XOR` mit einem `NOT` Gatter gebildet werden.
 
-## <code>AND</code>-Gatter
-Ein <code>AND</code>- bzw. zu deutsch <code>UND</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. Die <code>AND</code>-Verknüpfung kann in booleschen Funktionen als "•" (Mal), "&" oder mittels "∧" dargestellt werden. In der klassischen Logik wird eine Aussage, die nur dann wahr ist, wenn zwei oder mehr Aussagen wahr sind als *Konjunktion* bezeichnet.
+## `AND`-Gatter
+Ein `AND`- bzw. zu deutsch `UND`-Gatter hat zwei oder mehr Eingänge und einen Ausgang. Die `AND`-Verknüpfung kann in booleschen Funktionen als "•" (Mal), "&" oder mittels "∧" dargestellt werden. In der klassischen Logik wird eine Aussage, die nur dann wahr ist, wenn zwei oder mehr Aussagen wahr sind als *Konjunktion* bezeichnet.
 
 Die Wahrheitstabelle für ein Gatter mit zwei Eingängen:
 
@@ -26,18 +26,18 @@ A|B|A ∧ B
 
 Der Ausgang ist also auf logisch 1 wenn A **und** B auf logisch 1 sind.
 
-.. info:: Der Ausgang eines <code>AND</code> Gatter ist nur dann logisch 1, wenn alle Eingänge logisch 1 sind.
+.. info:: Der Ausgang eines `AND` Gatter ist nur dann logisch 1, wenn alle Eingänge logisch 1 sind.
 
 
 Betrachtet man die logisch 0 am Eingang stellt sich auch eine Besonderheit heraus:
 
-.. info:: Der Ausgang eines <code>AND</code> Gatter ist logisch 0, wenn mindestens ein Eingang logisch 0 ist.
+.. info:: Der Ausgang eines `AND` Gatter ist logisch 0, wenn mindestens ein Eingang logisch 0 ist.
 
 
-## <code>OR</code>-Gatter
-Ein <code>OR</code>- bzw. <code>ODER</code>-Gatter hat zwei oder mehr Eingänge und einen Ausgang. In booleschen Funktionen wird die <code>OR</code>-Verknüpfung als "+" oder als "∨" dargestellt. Eine *Disjunktion* ist in der klassischen Logik eine Aussage, die dann wahr ist, wenn mindestens eine Teil-Aussage wahr ist.
+## `OR`-Gatter
+Ein `OR`- bzw. `ODER`-Gatter hat zwei oder mehr Eingänge und einen Ausgang. In booleschen Funktionen wird die `OR`-Verknüpfung als "+" oder als "∨" dargestellt. Eine *Disjunktion* ist in der klassischen Logik eine Aussage, die dann wahr ist, wenn mindestens eine Teil-Aussage wahr ist.
 
-Die Wahrheitstabelle für ein <code>OR</code>-Gatter mit zwei Eingängen:
+Die Wahrheitstabelle für ein `OR`-Gatter mit zwei Eingängen:
 
 A|B|A ∨ B
 :---:|:---:|:---:
@@ -46,20 +46,20 @@ A|B|A ∨ B
 1|0|1
 1|1|1
 
-Der Ausgang ist auf logisch 1 wenn A **oder** B auf logisch 1 sind. In der klassischen Logik gibt die Unterscheidung zwischen der ausschließenden und der nicht-ausschließenden Disjunktion. Bei einer ausschließenden Disjunktion können nicht beide Teilaussagen wahr sein, z.B.:"Wir gehen nach Italien oder nach Schweden". Das <code>OR</code>-Gatter bedient sich der nicht-ausschließenden Disjunktion.
+Der Ausgang ist auf logisch 1 wenn A **oder** B auf logisch 1 sind. In der klassischen Logik gibt die Unterscheidung zwischen der ausschließenden und der nicht-ausschließenden Disjunktion. Bei einer ausschließenden Disjunktion können nicht beide Teilaussagen wahr sein, z.B.:"Wir gehen nach Italien oder nach Schweden". Das `OR`-Gatter bedient sich der nicht-ausschließenden Disjunktion.
 
-Allgemein gilt für ein <code>OR</code>-Gatter:
+Allgemein gilt für ein `OR`-Gatter:
 
-.. info:: Der Ausgang eines <code>OR</code> Gatter ist logisch 1, wenn mindestens ein Eingang logisch 1 ist.
+.. info:: Der Ausgang eines `OR` Gatter ist logisch 1, wenn mindestens ein Eingang logisch 1 ist.
 
 Betrachtet man die logisch 0 am Eingang kommt man auf folgende Aussage:
 
-.. info:: Der Ausgang eines <code>OR</code> Gatter ist nur dann logisch 0, wenn alle Eingänge logisch 0 sind.
+.. info:: Der Ausgang eines `OR` Gatter ist nur dann logisch 0, wenn alle Eingänge logisch 0 sind.
 
-## <code>NOT</code>-Gatter
-Das <code>NOT</code>-Gatter hat einen Eingang und einen Ausgang. Der Ausgang stellt die Invertierung (auch *Komplement* genannt) des Einganges dar. In booleschen Funktionen wird es mittels "¬" dargestellt. In der klassischen Logik stellt es eine Verneinung einer Aussage dar.
+## `NOT`-Gatter
+Das `NOT`-Gatter hat einen Eingang und einen Ausgang. Der Ausgang stellt die Invertierung (auch *Komplement* genannt) des Einganges dar. In booleschen Funktionen wird es mittels "¬" dargestellt. In der klassischen Logik stellt es eine Verneinung einer Aussage dar.
 
-Oft sieht man auch die Darstellung mittels Überstrich (z.B. <span style="border-top: 1px solid black; padding-top: 3px;"><span style="border-top: 1px solid black;">A</span> ∧ B</span>)
+Oft sieht man auch die Darstellung mittels Überstrich (z.B. \\(\overline{\overline{A} \land {B}}\\))
 
 Wahrheitstabelle:
 
@@ -69,8 +69,8 @@ A|\\(\neg A\\)
 1|0
 
 # Weitere Verknüpfungen
-## <code>NAND</code>- und <code>NOR</code> Gatter
-Bei den <code>NAND</code>- und <code>NOR</code>-Gatter handelt es sich jeweils um ein <code>AND</code>- bzw. <code>OR</code>-Gatter dem ein <code>NOT</code>-Gatter nachgeschalten ist. Durch Kombination mehrerer <code>NAND</code>-Gatter (oder auch Kombination mehrer <code>NOR</code>-Gatter) lassen sich alle logischen Verknüpfungen realisieren.
+## `NAND`- und `NOR` Gatter
+Bei den `NAND`- und `NOR`-Gatter handelt es sich jeweils um ein `AND`- bzw. `OR`-Gatter dem ein `NOT`-Gatter nachgeschalten ist. Durch Kombination mehrerer `NAND`-Gatter (oder auch Kombination mehrer `NOR`-Gatter) lassen sich alle logischen Verknüpfungen realisieren.
 
 A|B|\\(\overline{A \land B}\\)|\\(\overline{A \lor B}\\)
 :---:|:---:|:---:|:---:
@@ -79,7 +79,7 @@ A|B|\\(\overline{A \land B}\\)|\\(\overline{A \lor B}\\)
 1|0|1|0
 1|1|0|0
 
-Am Beispiel des <code>NAND</code>-Gatters zeigt das folgende Bild die Möglichkeiten der Substitution:
+Am Beispiel des `NAND`-Gatters zeigt das folgende Bild die Möglichkeiten der Substitution:
 
 ![Gatter Substitution](gatter_substitution.svg)
 
@@ -97,7 +97,7 @@ A|B|\\(A \oplus B\\)
 1|0|1
 1|1|0
 
-.. info:: Der Ausgang eines <code>XOR</code> Gatter ist logisch 1, wenn an einer ungeraden Anzahl an Eingängen eine 1 anliegt.
+.. info:: Der Ausgang eines `XOR` Gatter ist logisch 1, wenn an einer ungeraden Anzahl an Eingängen eine 1 anliegt.
 
 
 ## Darstellungsformen

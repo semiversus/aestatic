@@ -13,7 +13,7 @@ Wir benötigen eine Python Installation mit Version >= 3.6.
 
 Es gibt viele Möglichkeiten Python zu installieren und manche Plattformen liefern Python direkt mit (MacOS/Linux). Sollte dies nicht der Fall sein oder nur eine alte Version vorhanden sein, gibt es eine Downloadmöglichkeit hier: [Python Download](https://www.python.org/downloads/)
 
-**Wichtig**: Unter Windows sollte der Pfad zu Python in der <code>PATH</code> Umgebungsvariable sein. Dazu bei der Installation folgende Option setzen:
+**Wichtig**: Unter Windows sollte der Pfad zu Python in der `PATH` Umgebungsvariable sein. Dazu bei der Installation folgende Option setzen:
 
 ![Umgebungsvariable bei der Installation setzen](add_Python_to_Path.png)
 
@@ -26,7 +26,7 @@ Nach dem Start von Visual Studio Code gibt es auf der linken Seite eine Toolbar.
 # Test der Installation
 
 1. Erstelle eine neue Datei (<kbd>Ctrl</kbd> + <kbd>n</kbd>)
-2. Schreibe folgendes in diese Datei: <code>print('Hello world!')</code>
-3. Speichern dieser Datei (<kbd>Ctrl</kbd> + <kbd>s</kbd>) unter <code>test.py</code>
+2. Schreibe folgendes in diese Datei: `print('Hello world!')`
+3. Speichern dieser Datei (<kbd>Ctrl</kbd> + <kbd>s</kbd>) unter `test.py`
 4. Ausführen dieser Datei mittels <kbd>Ctrl</kbd> + <kbd>F5</kbd>
-5. Unten sollte im Terminal (neben anderen Meldungen) <code>Hello world!</code> erscheinen
+5. Unten sollte im Terminal (neben anderen Meldungen) `Hello world!` erscheinen

@@ -3,12 +3,12 @@ next: register.md
 parent: uebersicht.md
 
 # Allgemeines
-Ein <code>process</code> hat folgende Eigenschaften:
+Ein `process` hat folgende Eigenschaften:
 
 * Er besteht aus sequentiellen Anweisungen.
 * Eine *Sensitivity List* definiert die Signale, bei deren Änderung die Anweisungen ausgewertet werden.
-* Die "Ausführung" läuft parallel zu allen anderen <code>process</code> Statements
-* Der <code>process</code> selbst enthält keine nebenläufige Statements
+* Die "Ausführung" läuft parallel zu allen anderen `process` Statements
+* Der `process` selbst enthält keine nebenläufige Statements
 * Es erlaubt eine funktionale Beschreibung ähnlich zu einer Programmiersprache
 
 # Prozess für kombinatorische Schaltungen
@@ -23,13 +23,13 @@ begin
 end process;
 ```
 
-Dieser Prozess wertet den Ausdruck <code>a_i and b_i</code> aus und weist das Ergebnis <code>carry_o</code> zu. Diese Auswertung geschieht
-sobald sich <code>a_i</code> oder <code>b_i</code> ändert.
+Dieser Prozess wertet den Ausdruck `a_i and b_i` aus und weist das Ergebnis `carry_o` zu. Diese Auswertung geschieht
+sobald sich `a_i` oder `b_i` ändert.
 
 Einen kombinatorischen Prozess zeichnet aus, dass bei der Auswertung nur die Pegel der Signale ausgewertet werden.
 
 .. warning:: Unvollständige Sensitivity Liste
-    Für kombinatorische Prozesse ist eine vollständige Sensitivity Liste wichtig. Wird im obigen Beispiel etwa <code>a_i</code>
+    Für kombinatorische Prozesse ist eine vollständige Sensitivity Liste wichtig. Wird im obigen Beispiel etwa `a_i`
     vergessen baut die Synthese ein speicherndes Element ein (Latch)!
 
 Das obige Beispiel entspricht genau der folgenden nebenläufigen Anweisung:
@@ -50,13 +50,13 @@ der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert.
 
 .. info:: Name für das Taktsignal
 
-    Es steht dem Entwickler frei, einen Namen für das Taktsignal zu wählen. In der Praxis wird meist <code>clk</code> oder <code>clock</code>
-    gewählt, sofern es nur einen Takt im Design gibt. Gibt es mehrere Takte bieter sich ein *Postfix* wie <code>clk_master</code>
+    Es steht dem Entwickler frei, einen Namen für das Taktsignal zu wählen. In der Praxis wird meist `clk` oder `clock`
+    gewählt, sofern es nur einen Takt im Design gibt. Gibt es mehrere Takte bieter sich ein *Postfix* wie `clk_master`
     an.
 
-    In diesem Skriptum wird das Taktsignal mit <code>clk</code> bezeichnet.
+    In diesem Skriptum wird das Taktsignal mit `clk` bezeichnet.
 
-Im folgenden Beispiel wird die Verwendung der Funktion <code>rising_edge</code> gezeigt, um auf eine steigende Flanke an <code>clk</code> zu
+Im folgenden Beispiel wird die Verwendung der Funktion `rising_edge` gezeigt, um auf eine steigende Flanke an `clk` zu
 reagieren:
 
 ## Beispiel
@@ -83,7 +83,7 @@ begin
 end architecture;
 ```
 
-Statt der Funktion <code>rising_edge</code> lässt sich auch folgendes Konstrukt verwenden:
+Statt der Funktion `rising_edge` lässt sich auch folgendes Konstrukt verwenden:
 
 ```vhdl
 process(clk)
@@ -95,9 +95,9 @@ end process;
 ```
 
 # Anweisung innerhalb eines Prozesses
-## <code>if</code>-Anweisung
-Die <code>if</code>-Answeisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
-Zweig (<code>else</code>) oder eine andere Bedingung aus (<code>elsif</code>). Die <code>if</code> Anweisung wird mit <code>endif;</code> beendet.
+## `if`-Anweisung
+Die `if`-Answeisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
+Zweig (`else`) oder eine andere Bedingung aus (`elsif`). Die `if` Anweisung wird mit `endif;` beendet.
 
 ### Beispiel
 
@@ -127,8 +127,8 @@ end process;
 
     Es gilt die unterschiedliche Anordnung zu beachten. Die Funktionalität ist identisch.
 
-## <code>case</code>-Anweisung
-Die <code>case</code>-Anweisung überprüft den Zustand eines Signals und führt davon abhängig eine Anweisung aus.
+## `case`-Anweisung
+Die `case`-Anweisung überprüft den Zustand eines Signals und führt davon abhängig eine Anweisung aus.
 
 ### Beispiel
 ```vhdl
@@ -150,7 +150,7 @@ end process;
 
 .. info:: Vergleich mit *nebenläufiger* Anweisung
 
-    Hier der Vergleich mit der entsprechenden <code>with</code>/<code>select</code> Anweisung als *nebenläufige* Anweisung:
+    Hier der Vergleich mit der entsprechenden `with`/`select` Anweisung als *nebenläufige* Anweisung:
 
     ```vhdl
     with digit_i select segments_o <=
@@ -163,8 +163,8 @@ end process;
 
     Auch hier ist die Funktionalität identisch, die Schreibweise unterscheidet sich aber stark.
 
-## <code>for</code>-Schleife
-Die <code>for</code> Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
+## `for`-Schleife
+Die `for` Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
 
 ### Beispiel
 ```vhdl
@@ -179,4 +179,4 @@ begin
 end process;
 ```
 
-Die Laufvariable <code>i</code> muss nicht eigens definiert werden. Der Typ für <code>i</code> ergibt sich aus den Elementen des Bereichs.
+Die Laufvariable `i` muss nicht eigens definiert werden. Der Typ für `i` ergibt sich aus den Elementen des Bereichs.

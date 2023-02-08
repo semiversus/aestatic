@@ -15,7 +15,7 @@ Signalpfade <samp>CAN+</samp> und <samp>CAN-</samp> (oft auch <samp>CAN_HIGH</sa
 Der Bus arbeitet nach dem Multi-Master Prinzip, d.h. jede Komponente kann aktiv auf den Bus zugreifen. Ein
 <abbr title="Carrier Sense Multiple Access/Collision Resolution">CSMA/CR</abbr>-Verfahren stellt sicher, dass Nachrichten
 mit höher Priorität nicht durch gleichzeitig startende Nachrichten mit niedriger Prioriät beschädigt werden
-(siehe <a href="#arbitrierung">Arbitrierung</a>).
+(siehe [Arbitrierung](can.html#arbitrierung)).
 
 Die beiden logischen Wert 0 und 1 werden mittels zweier Zustände übermittelt. Die logische 1 wird dabei *rezessiv* übertragen,
 die logische 0 wird *dominant* übertragen. Durch diese zwei Zustände setzt sich am Bus eine logische 0 gegenüber einer gleichzeitig

@@ -3,7 +3,7 @@ title: Übung Github/Gitlab
 # Notwendige Vorbereitungen
 1. Anlegen eines Benutzeraccounts auf [GitHub](http://github.com) bzw. [GitLab](http://gitlab.com)
 1. Installation von [VS Code](https://code.visualstudio.com/)
-1. Installation von [Git (for Windows)](https://gitforwindows.org/) mit <code>PATH</code> Variable (Option 2 oder 3)!
+1. Installation von [Git (for Windows)](https://gitforwindows.org/) mit `PATH` Variable (Option 2 oder 3)!
 
 ![Git Installation](git_installer.png)
 
@@ -21,7 +21,7 @@ title: Übung Github/Gitlab
 1. Anlegen eines *Issues* (z.B. "Improve README")
 1. Aus diesem Issue einen *Merge Request* erstellen
 1. Diesen *Merge Request* bearbeiten (z.B. ändern der README Datei in der WebIDE)
-1. *Mergen* des *Merge Request* 
+1. *Mergen* des *Merge Request*
 1. Herunterladen der Dateien als Zip-Datei
 
 ## Teil 2 - Mitarbeit an einem anderen Projekt
@@ -43,7 +43,7 @@ Arbeit in zweier (evtl. dreier) Teams
 ## Teil 1
 1. Anlegen des Projektes "WDIC Übung"
 1. Anlegen eines *Issues* (z.B. "Improve README")
-1. Aus diesem Issue einen neuen Branch erstellen (im Issue in der rechten Sidebar unter "Development") 
+1. Aus diesem Issue einen neuen Branch erstellen (im Issue in der rechten Sidebar unter "Development")
 1. Diesen *Branch* bearbeiten (z.B. ändern der README Datei)
 1. Erstellen eines *Pull Requests*
 1. *Mergen* des *Pull Requests*

@@ -8,17 +8,17 @@ Stelle das Beispiel des [Getränke-Automaten](automatentheorie.html#beispiel-get
 Realisiere mittels Logisim den folgenden Automaten:
 
 ## Eingabealphabet
-Σ={E0,E1,E2}={<code>00</code>,<code>01</code>,<code>10</code>}
+Σ={E0,E1,E2}={`00`,`01`,`10`}
 
-Eingabe wird über die beiden Leitungen <code>e1</code> und <code>e0</code> realisiert.
+Eingabe wird über die beiden Leitungen `e1` und `e0` realisiert.
 ## Ausgabealphabet
-Γ={A0, A1}={<code>01</code>,<code>10</code>}
+Γ={A0, A1}={`01`,`10`}
 
-Ausgabe wird über die beiden Leitungen <code>a1</code> und <code>a0</code> realisiert.
+Ausgabe wird über die beiden Leitungen `a1` und `a0` realisiert.
 ## Zustandsmenge
-Z={Z0,Z1,Z2}={<code>00</code>,<code>01</code>,<code>10</code>}
+Z={Z0,Z1,Z2}={`00`,`01`,`10`}
 
-Der Zustand wird über die beiden D-Flip-Flop <code>z1</code> und <code>z0</code> realisiert.
+Der Zustand wird über die beiden D-Flip-Flop `z1` und `z0` realisiert.
 
 ## Zustandsübertragungsfunktion
 
