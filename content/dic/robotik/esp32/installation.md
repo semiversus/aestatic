@@ -1,5 +1,5 @@
 title: Installation ESP32
-parent: ../../uebersicht.md
+parent: ../../../unterricht.md
 
 # Installation der Arduino IDE
 

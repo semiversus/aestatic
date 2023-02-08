@@ -1,6 +1,6 @@
 title: Mikrocontroller
 next: ../hardwarenahe_programmierung/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 ## Einführung C

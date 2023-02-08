@@ -1,5 +1,5 @@
 title: Python
-parent: ../../uebersicht.md
+parent: ../../../unterricht.md
 
 # Tutorial
 1. [Vorbereitungen](installation.html)

@@ -1,3 +1,4 @@
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import FrozenSet, List
@@ -26,6 +27,8 @@ class Page:
     content: str
     title: str
     latex: str = None
+    date: str = None
+    image: str = None
     template: str = 'page.html'
     parent: str = None
     next: str = None
@@ -47,10 +50,16 @@ class MarkdownTask(BaseTask):
     filename_suffix = '.md'
 
     def process(self, files: FrozenSet[Path], processor: Processor):
+        processor.environment['articles'] = list()
+
         pages = [Page.from_path(p) for p in files]
         lookup_files = {page.path: page for page in pages}
 
         for page in pages:
+            if page.path.parts[0] == 'blog':
+                page.template = 'article.html'
+                processor.environment['articles'].append(page)
+
             if page.next is not None:
                 next_path = resolve(page.path.parent / page.next)
                 next_page = lookup_files[next_path]

@@ -1,26 +1,26 @@
 title: Unterricht
 
 # Digitale Systeme und Computersysteme
-* [Grundlagen der Digitaltechnik](grundlagen_der_digitaltechnik/uebersicht.html)
-* [Programmierbare Logik](programmierbare_logik/uebersicht.html)
-* [Mikrocontroller](mikrocontroller/uebersicht.html)
-* [Hardwarenahe Programmierung](hardwarenahe_programmierung/uebersicht.html)
-* [Halbleiterelemente](halbleiterelemente/uebersicht.html)
-* [Bussysteme](bussysteme/uebersicht.html)
-* [Rechnerarchitektur](rechnerarchitektur/uebersicht.html)
-* [Digitale Signalverarbeitung](digitale_signalverarbeitung/uebersicht.html)
-* [Komplexe digitale Systeme](komplexe_digitale_systeme/uebersicht.html)
+* [Grundlagen der Digitaltechnik](dic/grundlagen_der_digitaltechnik/uebersicht.html)
+* [Programmierbare Logik](dic/programmierbare_logik/uebersicht.html)
+* [Mikrocontroller](dic/mikrocontroller/uebersicht.html)
+* [Hardwarenahe Programmierung](dic/hardwarenahe_programmierung/uebersicht.html)
+* [Halbleiterelemente](dic/halbleiterelemente/uebersicht.html)
+* [Bussysteme](dic/bussysteme/uebersicht.html)
+* [Rechnerarchitektur](dic/rechnerarchitektur/uebersicht.html)
+* [Digitale Signalverarbeitung](dic/digitale_signalverarbeitung/uebersicht.html)
+* [Komplexe digitale Systeme](dic/komplexe_digitale_systeme/uebersicht.html)
 
 # Robotik und Embedded Systems
-* [Projektmanagment](robotik/projektmanagment/uebersicht.html)
-* [Python](robotik/python/uebersicht.html)
-* [RaspberryPi](robotik/raspberry.html)
-* [Suchalgorithmen](robotik/search/uebersicht.html)
-* [ESP32](robotik/esp32/installation.html)
+* [Projektmanagment](dic/robotik/projektmanagment/uebersicht.html)
+* [Python](dic/robotik/python/uebersicht.html)
+* [RaspberryPi](dic/robotik/raspberry.html)
+* [Suchalgorithmen](dic/robotik/search/uebersicht.html)
+* [ESP32](dic/robotik/esp32/installation.html)
 
 # Hardwareentwicklung
-* [Projekte Teil 1](../hwe/teil1/uebersicht.html)
-* [Projekte Teil 2](../hwe/teil2/uebersicht.html)
+* [Projekte Teil 1](hwe/teil1/uebersicht.html)
+* [Projekte Teil 2](hwe/teil2/uebersicht.html)
 
 
 # Korrekturen

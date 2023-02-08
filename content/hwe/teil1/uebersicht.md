@@ -1,5 +1,5 @@
 title: Hardwareentwicklung Teil 1
-parent: ../../dic/uebersicht.md
+parent: ../../unterricht.md
 
 # Übersicht Projekte
 * [Temperaturregelung](temperaturregelung.html)

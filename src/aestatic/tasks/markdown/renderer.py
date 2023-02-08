@@ -28,7 +28,7 @@ class AestaticRenderer(mistune.HTMLRenderer):
             icon = ''
 
         return f'<a href="{self.safe_url(url)}">{text}{icon}</a>'
-        return s + '</a>'
+
 
 class Admonition(DirectivePlugin):
     SUPPORTED_NAMES = {"info", "warning", "danger"}

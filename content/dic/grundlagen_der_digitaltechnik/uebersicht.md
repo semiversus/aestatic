@@ -1,6 +1,6 @@
 title: Grundlagen der Digitaltechnik
 next: ../programmierbare_logik/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 ## Kombinatorik

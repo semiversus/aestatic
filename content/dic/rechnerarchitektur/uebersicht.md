@@ -1,6 +1,6 @@
 title: Rechnerarchitektur
 next: ../digitale_signalverarbeitung/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Allgemeines
 

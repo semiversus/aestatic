@@ -1,6 +1,6 @@
 title: Programmierbare Logik
 next: ../mikrocontroller/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 * [Programmierbare Logische Anordnungen](pla.html)

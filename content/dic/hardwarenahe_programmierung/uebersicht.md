@@ -1,6 +1,6 @@
 title: Hardwarenahe Programmierung
 next: ../halbleiterelemente/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 ## Allgemeines

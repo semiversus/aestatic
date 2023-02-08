@@ -1,6 +1,6 @@
 title: Halbleiterelemente
 next: ../bussysteme/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 ## Bipolarer Transistor

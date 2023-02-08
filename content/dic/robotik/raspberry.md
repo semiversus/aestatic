@@ -1,5 +1,5 @@
 title: RaspberryPi
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inbetriebnahme
 ## Vorbereitungen

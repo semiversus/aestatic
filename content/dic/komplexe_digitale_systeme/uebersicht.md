@@ -1,5 +1,5 @@
 title: Komplexe digitale Systeme
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 ## Linux Tutorial

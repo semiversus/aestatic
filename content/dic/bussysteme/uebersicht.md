@@ -1,6 +1,6 @@
 title: Bussysteme
 next: ../rechnerarchitektur/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 ## Allgemeines

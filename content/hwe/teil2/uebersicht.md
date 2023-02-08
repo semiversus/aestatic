@@ -1,5 +1,5 @@
 title: Hardwareentwicklung Teil 2
-parent: ../../dic/uebersicht.md
+parent: ../../unterricht.md
 
 Im zweiten Teil konzentrieren wir uns auf Firmware Projekte.
 

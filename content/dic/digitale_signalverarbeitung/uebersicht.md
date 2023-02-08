@@ -1,6 +1,6 @@
 title: Digitale Signalverarbeitung
 next: ../komplexe_digitale_systeme/uebersicht.md
-parent: ../uebersicht.md
+parent: ../../unterricht.md
 
 # Inhalt
 * [Signale](signale.html)
