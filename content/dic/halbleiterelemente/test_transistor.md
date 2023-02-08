@@ -1,4 +1,5 @@
 title: Test Transistor
+parent: uebersicht.md
 
 # Inhalt
 ## Bipolarer Transistor

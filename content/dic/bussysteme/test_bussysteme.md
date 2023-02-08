@@ -1,4 +1,5 @@
 title: Test - Bussysteme
+parent: uebersicht.md
 
 # Inhalt
 * Kanalkodierung

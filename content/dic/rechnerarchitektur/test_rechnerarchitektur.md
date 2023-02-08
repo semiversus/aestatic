@@ -1,4 +1,5 @@
 title: Test - Rechnerarchitektur
+parent: uebersicht.md
 
 # Inhalt
 ## Theorie Rechnerarchitektur

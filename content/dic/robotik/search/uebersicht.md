@@ -1,4 +1,5 @@
 title: Suchalgorithmen
+parent: ../../uebersicht.md
 
 # Inhalt
 * [Foliensatz](slides/search.html)

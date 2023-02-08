@@ -1,4 +1,5 @@
 title: Projektmanagment
+parent: ../../uebersicht.md
 
 # Inhalt
 * [GitHub/GitLab](uebung_github.html)

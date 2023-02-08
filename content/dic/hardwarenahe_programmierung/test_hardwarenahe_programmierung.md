@@ -1,4 +1,5 @@
 title: Test - Hardwarenahe Programmierung
+parent: uebersicht.md
 
 # Inhalt
 * C für Mikrocontroller

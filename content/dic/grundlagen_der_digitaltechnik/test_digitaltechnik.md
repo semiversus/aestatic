@@ -1,4 +1,5 @@
 title: Test - Allgemeine Digitaltechnik
+parent: uebersicht.md
 
 # Inhalt
 ## Automatentheorie

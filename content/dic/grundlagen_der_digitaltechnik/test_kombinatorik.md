@@ -1,4 +1,5 @@
 title: Test - Kombinatorik und Sequentielle Logik
+parent: uebersicht.md
 
 # Inhalt
 ## Kombinatorik

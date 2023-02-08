@@ -1,4 +1,5 @@
 title: Übung Github/Gitlab
+parent: uebersicht.md
 
 # Notwendige Vorbereitungen
 1. Anlegen eines Benutzeraccounts auf [GitHub](http://github.com) bzw. [GitLab](http://gitlab.com)
