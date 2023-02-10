@@ -1,11 +1,10 @@
-from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import FrozenSet, List
 import os
 
 from aestatic.processor import Processor, BaseTask
-
+from bs4 import BeautifulSoup
 import mistune
 from mistune.directives import RSTDirective
 from jinja2 import Environment, FileSystemLoader
@@ -25,6 +24,7 @@ class Page:
     path: Path
     url: str
     content: str
+    summary :str
     title: str
     latex: str = None
     date: str = None
@@ -43,6 +43,7 @@ class Page:
             raise ValueError(f'Problem parsing meta data from {path}')
 
         html_content = markdown_convert(source_content)
+
         return Page(path.relative_to('content'), path.with_suffix('.html').relative_to('content'), html_content, **meta)
 
 
@@ -50,7 +51,7 @@ class MarkdownTask(BaseTask):
     filename_suffix = '.md'
 
     def process(self, files: FrozenSet[Path], processor: Processor):
-        processor.environment['articles'] = list()
+        articles: List[Page] = list()
 
         pages = [Page.from_path(p) for p in files]
         lookup_files = {page.path: page for page in pages}
@@ -58,7 +59,7 @@ class MarkdownTask(BaseTask):
         for page in pages:
             if page.path.parts[0] == 'blog':
                 page.template = 'article.html'
-                processor.environment['articles'].append(page)
+                articles.append(page)
 
             if page.next is not None:
                 next_path = resolve(page.path.parent / page.next)
@@ -78,7 +79,13 @@ class MarkdownTask(BaseTask):
 
                 page.parent = resolve_parent(page)
 
-        processor.environment['articles'].sort(key=lambda p: p.date, reverse=True)
+        articles.sort(key=lambda p: p.date, reverse=True)
+
+        for page, next_page in zip(articles, articles[1:]):
+            page.next = next_page
+            next_page.prev = page
+
+        processor.environment['articles'] = articles
 
         env = Environment(loader=FileSystemLoader('templates'))
 

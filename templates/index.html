@@ -3,24 +3,20 @@
   {{ page.content }}
 
   {% for article in env['articles'] %}
-    <article>
-      <h2><a href="{{ root_path }}/{{ article.url }}">{{ article.title }}</a></h2>
-      <div class="summary">
-        {% if article.featured_image %}
-          <a href="{{ root_path }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img" alt="{{ article.title }}"></a>
-        {% endif %}
-        {% if article._summary %}
-          {{ article._summary }}
-        {% else %}
-          {{ article.summary }}
-        {% endif %}
-        {% if article.summary != article.content %}
-          <a class="btn btn-default btn-xs" href="{{ root_path }}/{{ article.url }}">Weiterlesen...</a>
-        {% endif %}
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+          </div>
+          <div class="media-content">
+            <p class="title is-4">{{ article.title }}</p>
+          </div>
+        </div>
+        <div class="content">
+          {{ article.content }}
+        </div>
       </div>
-    <div class="clearfix"></div>
-    </article>
-  {% if not loop.last %}<hr />{% endif %}
+    </div>
   {% endfor %}
 
 {% endblock content %}
