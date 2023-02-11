@@ -3,17 +3,17 @@
   {{ page.content }}
 
   {% for article in env['articles'] %}
-    <div class="card">
+    <div class="card mb-5">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
           </div>
           <div class="media-content">
-            <p class="title is-4">{{ article.title }}</p>
+            <p class="title is-4"><a href="{{ root_path }}/{{ article.url }}">{{ article.title }}</a></p>
           </div>
         </div>
         <div class="content">
-          {{ article.content }}
+          {{ article.summary }}
         </div>
       </div>
     </div>

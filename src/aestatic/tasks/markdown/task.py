@@ -19,6 +19,25 @@ renderer = AestaticRenderer(escape=False)
 markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition(), Figure()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
 
 
+def get_summary(html_doc: str):
+    paragraphs = BeautifulSoup(html_doc, 'html.parser').find_all('p')
+    if not paragraphs:
+        return ''
+
+    summary = []
+    for paragraph in paragraphs:
+        if paragraph.img:
+            continue
+        summary.append(paragraph)
+        if sum(len(p.text) for p in summary) > 300:
+            if len(summary) == 1:
+                continue
+            summary.pop()
+            break
+
+    return ''.join(str(p) for p in summary)
+
+
 @dataclass
 class Page:
     path: Path
@@ -43,7 +62,7 @@ class Page:
             raise ValueError(f'Problem parsing meta data from {path}')
 
         html_content = markdown_convert(source_content)
-
+        meta['summary'] = get_summary(html_content)
         return Page(path.relative_to('content'), path.with_suffix('.html').relative_to('content'), html_content, **meta)
 
 
