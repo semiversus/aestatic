@@ -51,4 +51,4 @@ class SlidesTask(BaseTask):
             output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent), env=processor.environment))
             qr_img = qrcode.make('https://semiversus.com/' + str(page.url))
             qr_img.save(str(output_path).replace('.html', '_qr.png'))
-            processor.add_cache_entry(page.path, page.path.with_suffix('.html'))
+            processor.add_cache_entry(page.path, (page.path.with_suffix('.html'), page.path.parent / (page.path.stem + '_qr.png')))
