@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Günther Jena">
+		<meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA">
+		<link rel="icon" href="{{ root_path }}/favicon.ico">
+		<link rel="stylesheet" href="{{ root_path }}/theme/css/slides.css">
+		{% if page.latex %}<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>{% endif %}
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>{{ page.title }}</h1>
+					<p>semiversus.com</p>
+				</section>
+				{{ page.content }}
+			</div>
+		</div>
+
+		<script src="{{ root_path }}/theme/js/reveal.js"></script>
+		<script src="{{ root_path }}/theme/js/reveal_notes.js"></script>
+		<script>
+			Reveal.initialize({plugins: [ RevealNotes ]});
+		</script>
+	</body>
+</html>

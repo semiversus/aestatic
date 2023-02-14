@@ -6,7 +6,8 @@ from pygments.formatters import html as pygments_html
 
 from slugify import slugify
 
-class AestaticRenderer(mistune.HTMLRenderer):
+
+class PageRenderer(mistune.HTMLRenderer):
     def heading(self, text, level, **attrs):
         anchor = slugify(text)
         return f'<h{level} id="{anchor}">{text}<a href="#{anchor}" class="headerlink" title="Permalink zu dieser Überschrift"><span class="icon ml-4 is-size-5"><i class="icon-link"></i></span></a></h{level}>\n'

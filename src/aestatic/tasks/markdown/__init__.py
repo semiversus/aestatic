@@ -1,1 +1,2 @@
-from .task import *
+from .page_task import *
+from .slides_task import *

@@ -2,10 +2,10 @@ import sys
 import git
 from datetime import datetime
 
-from .tasks.markdown import task
+from .tasks.markdown import PageTask, SlidesTask
 
 from .processor import Processor
-from .tasks import copy, compress, slides, sass
+from .tasks import copy, compress, sass, markdown
 
 processor = Processor()
 
@@ -14,8 +14,8 @@ if '--no-cache' in sys.argv:
 
 processor.register(sass.SassTask())
 processor.register(compress.CompressTask())
-processor.register(slides.SlidesTask())
-processor.register(task.MarkdownTask())
+processor.register(markdown.SlidesTask())
+processor.register(markdown.PageTask())
 processor.register(copy.CopyTask())
 
 
