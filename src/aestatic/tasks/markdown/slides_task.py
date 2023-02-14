@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from jinja2 import Environment, FileSystemLoader
 import mistune
 from mistune.directives import RSTDirective
+import qrcode
 
 from aestatic.processor import Processor, BaseTask
 from aestatic.tasks.markdown.slides_renderer import SlideRenderer, Figure, Notes
@@ -39,8 +40,6 @@ class SlidesTask(BaseTask):
     filename_suffix = '.slides'
 
     def process(self, files: FrozenSet[Path], processor: Processor):
-        articles: List[Slide] = list()
-
         pages = [Slide.from_path(p) for p in files]
 
         env = Environment(loader=FileSystemLoader('templates'))
@@ -50,4 +49,6 @@ class SlidesTask(BaseTask):
             output_path.parent.mkdir(parents=True, exist_ok=True)
             template = env.get_template('slides.html')
             output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent), env=processor.environment))
+            qr_img = qrcode.make('https://semiversus.com/' + str(page.url))
+            qr_img.save(str(output_path).replace('.html', '_qr.png'))
             processor.add_cache_entry(page.path, page.path.with_suffix('.html'))

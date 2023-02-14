@@ -15,7 +15,11 @@
 			<div class="slides">
 				<section>
 					<h1>{{ page.title }}</h1>
-					<p>semiversus.com</p>
+					<p>Günther Jena</p>
+
+					<figure style="text-align: right;"><img src="{{ root_path }}/{{ page.url.parent }}/{{ page.url.stem }}_qr.png" style="width: 20%; height: 20%;">
+						<figcaption>https://semiversus.com/{{ page.url }}</figcaption>
+					</figure>
 				</section>
 				{{ page.content }}
 			</div>
