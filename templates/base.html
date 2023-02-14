@@ -35,20 +35,16 @@
 
   <section class="hero is-info is-small">
     <div class="hero-body">
-      <div class="container is-max-desktop"><h1 class="title">{{ page.title }}{% block source_link %}{% endblock %}</h1></div>
+      <div class="container"><h1 class="title">{{ page.title }}{% block source_link %}{% endblock %}</h1></div>
     </div>
   </section>
 
   <section class="hero is-small">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns">
-          <div class="column is-three-quarters">
-            {% block head %}{% endblock %}
-            <div class="content">
-              {% block content %}{% endblock %}
-            </div>
-          </div>
+      <div class="container">
+        {% block head %}{% endblock %}
+        <div class="content">
+          {% block content %}{% endblock %}
         </div>
       </div>
     </div>
