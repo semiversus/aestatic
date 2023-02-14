@@ -5,15 +5,19 @@
   {% for article in env['articles'] %}
     <div class="card mb-5">
       <div class="card-content">
+        <p class="title is-4"><a href="{{ root_path }}/{{ article.url }}">{{ article.title }}</a></p>
         <div class="media">
-          <div class="media-left">
-          </div>
           <div class="media-content">
-            <p class="title is-4"><a href="{{ root_path }}/{{ article.url }}">{{ article.title }}</a></p>
+            <p>{{ article.date.strftime('%-d.%-m.%Y') }}</p>
+            {{ article.summary }}
+            <p><a href="{{ root_path }}/{{ article.url }}">Weiterlesen...</a></p>
+
           </div>
-        </div>
-        <div class="content">
-          {{ article.summary }}
+          {% if article.image %}
+          <div class="media-right">
+            <img src="{{ root_path }}/{{ article.url.parent }}/{{ article.image }}">
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>

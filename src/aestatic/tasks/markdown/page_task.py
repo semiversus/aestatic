@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import FrozenSet, List
 import os
+from datetime import datetime
 
 from aestatic.processor import Processor, BaseTask
 from bs4 import BeautifulSoup
@@ -60,6 +61,9 @@ class Page:
             meta = dict([tuple(n.strip() for n in l.split(':', maxsplit=1)) for l in meta_block.splitlines()])
         except Exception:
             raise ValueError(f'Problem parsing meta data from {path}')
+
+        if meta.get('date', False):
+            meta['date'] = datetime.strptime(meta['date'], '%Y-%m-%d')
 
         html_content = markdown_convert(source_content)
         meta['summary'] = get_summary(html_content)
