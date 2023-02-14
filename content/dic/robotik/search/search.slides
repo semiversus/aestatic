@@ -19,11 +19,15 @@ Hier die möglichen Wege für nur 11 Pakete...
 
 ---
 
+Wieviel Möglichkeiten gibt es?
+
 * Für die erste Fahrt gibt es 20 Möglichkeiten, für die zweite 19, ...
-* Also gibt es 20 * 19 * 18 * 17 * 16 * ... * 2 Möglichkeiten
-* also 20! (sprich 20 Fakultät)
+* Also gibt es 20 * 19 * 18 * 17 * 16 * ... * 2 Möglichkeiten (20!)
+* 2.432.902.008.176.640.000 Möglichkeiten
 
 ---
+
+Wie lange dauert die Berechnung?
 
 * Angenommen wir schaffen 1 Milliarde Möglichkeiten pro Sekunde zu berechnen...
 * ... benötigen wir über 77 Jahre
