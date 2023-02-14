@@ -10,7 +10,7 @@ I'm working as a software and electronics developer at [Spectra Physics](http://
 My interests are software development and electronics. With this website I want to share my projects and use the blog as public notepad.
 
 ## Contact
-E-Mail: <a href="mailto:guadther@jada.at" onmouseover="this.href=this.href.replace('ad','en')">guenther@jena.at</a><br />
+E-Mail: <a href="mailto:guenther@jena.at">guenther@jena.at</a><br />
 GnuPG Key: <a href="assets/jena.asc"><samp>ADD6 34D7 ADE7 72D2 B2D1  A3D0 03B8 2F59 6F67 72C2</samp></a><br />
 
 LinkedIn: <a href="https://www.linkedin.com/in/guenther-jena">Günther Jena</a><br />
