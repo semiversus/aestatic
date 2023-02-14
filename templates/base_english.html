@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html language="de-AT">
+<html language="en">
 <head>
   <title>{% block title %}Semiversus{% endblock %}</title>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
   <nav class="navbar is-info">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index.html">SEMIVERSUS</a>
+        <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index_en.html">SEMIVERSUS</a>
         <span class="navbar-burger burger" data-target="navbarMenu">
           <span></span>
           <span></span>
@@ -24,11 +24,10 @@
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index.html">Blog</a>
-          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/unterricht.html">Unterricht</a>
-          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/projekte.html">Projekte</a>
-          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/about.html">Über mich</a>
-          <div class="navbar-item"><div class="buttons"><a class="button" href="{{ root_path }}/index_en.html">english</a></div></div>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index_en.html">Blog</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/projects.html">Projects</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/about_en.html">About me</a>
+          <div class="navbar-item"><div class="buttons"><a class="button" href="{{ root_path }}/index.html">deutsch</a></div></div>
         </div>
       </div>
     </div>
@@ -53,7 +52,7 @@
 
   <footer class="footer is-small">
     <div class="content has-text-centered">
-      <p>Günther Jena 2011 - {{ env['timestamp'].year }} | Letztes Update am {{ env['timestamp'].strftime('%-d.%-m.%Y') }} (Rev. <a href="https://github.com/semiversus/aestatic/tree/{{ env['git_sha'] }}">{{ env['git_sha'][:7] }}</a>)
+      <p>Günther Jena 2011 - {{ env['timestamp'].year }} | Last update on {{ env['timestamp'].strftime('%-d.%-m.%Y') }} (Rev. <a href="https://github.com/semiversus/aestatic/tree/{{ env['git_sha'] }}">{{ env['git_sha'][:7] }}</a>)
       </p>
     </div>
   </footer>

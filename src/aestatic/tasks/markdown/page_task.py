@@ -46,10 +46,11 @@ class Page:
     content: str
     summary :str
     title: str
+    language: str = 'deutsch'
     latex: str = None
     date: str = None
     image: str = None
-    template: str = 'page.html'
+    template: str = None
     parent: str = None
     next: str = None
     prev: str = None
@@ -64,6 +65,9 @@ class Page:
 
         if meta.get('date', False):
             meta['date'] = datetime.strptime(meta['date'], '%Y-%m-%d')
+
+        if meta.get('template', None) is None:
+            meta['template'] = 'page.html' if meta.get('language', 'deutsch') == 'deutsch' else 'page_english.html'
 
         html_content = markdown_convert(source_content)
         meta['summary'] = get_summary(html_content)
@@ -81,7 +85,7 @@ class PageTask(BaseTask):
 
         for page in pages:
             if page.path.parts[0] == 'blog':
-                page.template = 'article.html'
+                page.template = 'article.html' if page.language == 'deutsch' else 'article_english.html'
                 articles.append(page)
 
             if page.next is not None:
@@ -113,6 +117,7 @@ class PageTask(BaseTask):
         env = Environment(loader=FileSystemLoader('templates'))
 
         for page in pages:
+            assert page.language in ('deutsch', 'english')
             output_path = 'output' / page.path.with_suffix('.html')
             output_path.parent.mkdir(parents=True, exist_ok=True)
             template = env.get_template(page.template)
