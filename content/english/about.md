@@ -1,6 +1,7 @@
 title: About me
 english: true
 translation: ../about.html
+comments: false
 
 <figure class="image is-pulled-right"><img src="../assets/guenther_jena_jehle.jpg" alt="Foto von Günther Jena"></figure>
 

@@ -48,6 +48,7 @@ class Page:
     title: str
     english: bool = False
     latex: bool = False
+    comments: bool = True
     date: datetime = None
     thumbnail: Path = None
     translation: Path = None
@@ -71,6 +72,7 @@ class Page:
         meta['content'] = markdown_convert(source_content)
         meta['summary'] = get_summary(meta['content'])
         meta['latex'] = (meta.get('latex', '').lower() == 'true')
+        meta['comments'] = (meta.get('comments', 'true').lower() == 'true')
 
         if meta.get('date', False):
             meta['date'] = datetime.strptime(meta['date'], '%Y-%m-%d')
