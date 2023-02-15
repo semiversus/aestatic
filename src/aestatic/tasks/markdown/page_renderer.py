@@ -10,7 +10,7 @@ from slugify import slugify
 class PageRenderer(mistune.HTMLRenderer):
     def heading(self, text, level, **attrs):
         anchor = slugify(text)
-        return f'<h{level} id="{anchor}">{text}<a href="#{anchor}" class="headerlink" title="Permalink zu dieser Überschrift"><span class="icon ml-4 is-size-5"><i class="icon-link"></i></span></a></h{level}>\n'
+        return f'<h{level} id="{anchor}">{text}<a href="#{anchor}" class="headerlink" title="Permalink"><span class="icon ml-4 is-size-5"><i class="icon-link"></i></span></a></h{level}>\n'
 
     def block_code(self, code, info=None):
         if info:
@@ -109,9 +109,9 @@ class Figure(DirectivePlugin):
         h = f'<div class="card mb-4"><div class="card-image"><figure class="image"><img src="{image}"></figure></div><div class="card-content has-text-centered">{title}'
 
         if author:
-            h += f' (Quelle: <a href="{source}">{author}</a>'
+            h += f' ({"Source" if self.english else "Quelle"}: <a href="{source}">{author}</a>'
             if license:
-                h += f', Lizenz {license}'
+                h += f', {"license" if self.english else "Lizenz"} {license}'
             h += ')'
 
         return h + '</div></div>'

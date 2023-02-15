@@ -66,9 +66,10 @@ class Page:
 
         meta['path'] = path.relative_to('content')
         meta['url'] = path.with_suffix('.html').relative_to('content')
+        meta['english'] = (meta.get('english', '').lower() == 'true')
+        renderer.english = meta['english']
         meta['content'] = markdown_convert(source_content)
         meta['summary'] = get_summary(meta['content'])
-        meta['english'] = (meta.get('english', '').lower() == 'true')
         meta['latex'] = (meta.get('latex', '').lower() == 'true')
 
         if meta.get('date', False):

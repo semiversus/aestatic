@@ -6,14 +6,14 @@
     <div class="box mb-5">
       <p class="title is-4"><a href="{{ root_path }}/{{ article.url }}">{{ article.title }}</a></p>
       <div class="columns">
-        <div class="column is-two-thirds">
+        <div class="column{% if article.thumbnail %} is-two-thirds{% endif %}">
           <p>{{ article.date.strftime('%-d.%-m.%Y') }}</p>
           {{ article.summary }}
-          <p><a href="{{ root_path }}/{{ article.url }}">Weiterlesen...</a></p>
+          <p><a href="{{ root_path }}/{{ article.url }}">{{ 'Read more...' if page.english else 'Weiterlesen...'}}</a></p>
         </div>
-        {% if article.image %}
+        {% if article.thumbnail %}
         <div class="column">
-          <img src="{{ root_path }}/{{ article.url.parent }}/{{ article.image }}">
+          <img src="{{ root_path }}/{{ article.thumbnail }}">
         </div>
         {% endif %}
       </div>
