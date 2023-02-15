@@ -1,24 +1,93 @@
-{% extends "base.html" %}
-
-{% block title %}{{ page.title }}{% endblock %}
-
-{% block header %}
+<!DOCTYPE html>
+<html language="{{ 'en' if page.english else 'de-AT' }}">
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Günther Jena">
+  <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA">
+  <link rel="stylesheet" href="{{ root_path }}/theme/css/semiversus.css">
+  <link rel="icon" href="{{ root_path }}/favicon.ico">
   {% if page.latex %}<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>{% endif %}
-{% endblock %}
-
-{% block source_link %}
-<a href="https://github.com/semiversus/aestatic/tree/main/content/{{ page.path }}" class="sourcelink" title="Quelldatei"><span class="icon ml-3 is-size-5"><i class="icon-file-text2"></i></span></a>
-{% endblock %}
-
-{% block head %}
-  {% if page.parent %}<nav class="breadcrumb"><ul><li><a href="{{ root_path }}/{{page.parent[0].url}}"><span class="icon"><i class="icon-home"></i></span></a></li>{% for p in page.parent[1:] %}<li><a href="{{ root_path }}/{{p.url}}">{{p.title}}</a></li>{% endfor %}<li class="is-active has-text-weight-medium"><a href="#">{{ page.title }}</a></li></ul></nav>{% endif %}
-  {% if page.next or page.prev %}<nav class="level">
-    <div class="level-left">{% if page.prev %}<div class="level-item"><a class="button is-link is-light is-small" href="{{ root_path}}/{{ page.prev.url }}"><span class="icon"><i class="icon-circle-left"></i></span><span>{{ page.prev.title }}</span></a></div>{% endif %}</div>
-    {% if page.next %}<div class="level-right"><div class="level-item"><a class="button is-link is-light is-small" href="{{ root_path}}/{{ page.next.url }}"><span>{{ page.next.title }}</span><span class="icon"><i class="icon-circle-right"></i></span></a></div></div>{% endif %}
+</head>
+<body>
+  <nav class="navbar is-info">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index.html">SEMIVERSUS</a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          {% if page.english %}
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/english/index.html">Blog</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/english/projects.html">Projects</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/english/about.html">About me</a>
+          <div class="navbar-item"><div class="buttons"><a class="button" href="{% if page.translation %}{{ root_path }}/{{ page.translation }}{% else %}{{ root_path }}/index.html{% endif %}">deutsch</a></div></div>
+          {% else %}
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/index.html">Blog</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/unterricht.html">Unterricht</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/projekte.html">Projekte</a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href="{{ root_path }}/about.html">Über mich</a>
+          <div class="navbar-item"><div class="buttons"><a class="button" href="{% if page.translation %}{{ root_path }}/{{ page.translation }}{% else %}{{ root_path }}/english/index.html{% endif %}">english</a></div></div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </nav>
-  {% endif %}
-{% endblock %}
 
-{% block content %}
-  {{ page.content }}
-{% endblock %}
+  <section class="hero is-info is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{ page.title }}
+          <a href="https://github.com/semiversus/aestatic/tree/main/content/{{ page.path }}" class="sourcelink" title="Quelldatei"><span class="icon ml-3 is-size-5"><i class="icon-file-text2"></i></span></a>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        {% if page.parent %}<nav class="breadcrumb"><ul><li><a href="{{ root_path }}/{{page.parent[0].url}}"><span class="icon"><i class="icon-home"></i></span></a></li>{% for p in page.parent[1:] %}<li><a href="{{ root_path }}/{{p.url}}">{{p.title}}</a></li>{% endfor %}<li class="is-active has-text-weight-medium"><a href="#">{{ page.title }}</a></li></ul></nav>{% endif %}
+        {% if page.next or page.prev %}
+          <nav class="level">
+            <div class="level-left">{% if page.prev %}<div class="level-item"><a class="button is-link is-light is-small" href="{{ root_path}}/{{ page.prev.url }}"><span class="icon"><i class="icon-circle-left"></i></span><span>{{ page.prev.title }}</span></a></div>{% endif %}</div>
+            {% if page.next %}<div class="level-right"><div class="level-item"><a class="button is-link is-light is-small" href="{{ root_path}}/{{ page.next.url }}"><span>{{ page.next.title }}</span><span class="icon"><i class="icon-circle-right"></i></span></a></div></div>{% endif %}
+          </nav>
+        {% endif %}
+        <div class="content">
+          {% block content %}{{ page.content }}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer is-small">
+    <div class="content has-text-centered">
+      <p>Günther Jena 2011 - {{ env['timestamp'].year }} | Letztes Update am {{ env['timestamp'].strftime('%-d.%-m.%Y') }} (Rev. <a href="https://github.com/semiversus/aestatic/tree/{{ env['git_sha'] }}">{{ env['git_sha'][:7] }}</a>)</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>

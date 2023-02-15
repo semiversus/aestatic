@@ -46,11 +46,12 @@ class Page:
     content: str
     summary :str
     title: str
-    language: str = 'deutsch'
-    latex: str = None
-    date: str = None
-    image: str = None
-    template: str = None
+    english: bool = False
+    latex: bool = False
+    date: datetime = None
+    thumbnail: Path = None
+    translation: Path = None
+    template: str = 'page.html'
     parent: str = None
     next: str = None
     prev: str = None
@@ -63,15 +64,23 @@ class Page:
         except Exception:
             raise ValueError(f'Problem parsing meta data from {path}')
 
+        meta['path'] = path.relative_to('content')
+        meta['url'] = path.with_suffix('.html').relative_to('content')
+        meta['content'] = markdown_convert(source_content)
+        meta['summary'] = get_summary(meta['content'])
+        meta['english'] = (meta.get('english', '').lower() == 'true')
+        meta['latex'] = (meta.get('latex', '').lower() == 'true')
+
         if meta.get('date', False):
             meta['date'] = datetime.strptime(meta['date'], '%Y-%m-%d')
 
-        if meta.get('template', None) is None:
-            meta['template'] = 'page.html' if meta.get('language', 'deutsch') == 'deutsch' else 'page_english.html'
+        if meta.get('thumbnail', False):
+            meta['thumbnail'] = meta['path'].parent / meta['thumbnail']
 
-        html_content = markdown_convert(source_content)
-        meta['summary'] = get_summary(html_content)
-        return Page(path.relative_to('content'), path.with_suffix('.html').relative_to('content'), html_content, **meta)
+        if meta.get('translation', False):
+            meta['translation'] = meta['path'].parent / meta['translation']
+
+        return Page(**meta)
 
 
 class PageTask(BaseTask):
@@ -85,7 +94,6 @@ class PageTask(BaseTask):
 
         for page in pages:
             if page.path.parts[0] == 'blog':
-                page.template = 'article.html' if page.language == 'deutsch' else 'article_english.html'
                 articles.append(page)
 
             if page.next is not None:
@@ -117,7 +125,6 @@ class PageTask(BaseTask):
         env = Environment(loader=FileSystemLoader('templates'))
 
         for page in pages:
-            assert page.language in ('deutsch', 'english')
             output_path = 'output' / page.path.with_suffix('.html')
             output_path.parent.mkdir(parents=True, exist_ok=True)
             template = env.get_template(page.template)

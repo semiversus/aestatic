@@ -1,6 +1,6 @@
 title: Jubiläumsplan
 date: 2016-02-11
-image: anniversary_tb.png
+thumbnail: anniversary_tb.png
 
 Wieso Jubiläen immer nur nach ganzen Jahren feiern? Wieso nicht bei einer Million Sekunden Lebenszeit? Oder bei Tausend Wochen?
 

@@ -1,6 +1,6 @@
 title: Reflection meets tree
 date: 2016-03-29
-image: tree_tb.jpg
+thumbnail: tree_tb.jpg
 
 ![Baum nah ohne Sonne](tree2.jpg)
 

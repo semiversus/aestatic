@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
 {% block content %}
   {{ page.content }}
 
-  {% for article in env['articles']  if article.language == 'deutsch' %}
+  {% for article in env['articles'] if page.english == article.english %}
     <div class="box mb-5">
       <p class="title is-4"><a href="{{ root_path }}/{{ article.url }}">{{ article.title }}</a></p>
       <div class="columns">

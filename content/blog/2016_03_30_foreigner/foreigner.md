@@ -1,6 +1,6 @@
 title: Wenn Muttersprache weh tut...
 date: 2016-03-30
-image: pinwall_tb.jpg
+thumbnail: pinwall_tb.jpg
 
 ![Kommentar](pinwall.jpg)
 

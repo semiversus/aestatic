@@ -1,6 +1,6 @@
 title: Interessante Korrelation entdecken mittels <samp>wdiff</samp>
 date: 2016-01-31
-image: meld_tb.png
+thumbnail: meld_tb.png
 latex: true
 
 Abschreiben als solches zu erkennen ist keine einfache Sache, da der Aufwand massiv mit der Anzahl der zu vergleichenden

@@ -1,6 +1,6 @@
 title: Künstliche Intelligenz spielt Super Mario
 date: 2017-01-10
-image: nesolution_tb.png
+thumbnail: nesolution_tb.png
 
 Optimierung von Systemen kann sehr schnell zu einer komplexen Aufgabe werden. Schwierig wird es, wenn Variablen nicht mehr getrennt voneinander optimiert werden können, sondern einander beeinflussen.
 

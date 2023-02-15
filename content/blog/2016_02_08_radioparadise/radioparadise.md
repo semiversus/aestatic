@@ -1,6 +1,6 @@
 title: Webstream Radio Paradise
 date: 2016-02-08
-image: logo.svg
+thumbnail: logo.svg
 
 ![Logo Radio Paradise](logo.svg)
 
