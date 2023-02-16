@@ -2,13 +2,13 @@ title: Der Tempel des Snofru
 date: 2016-03-31
 thumbnail: snofru_tb.gif
 
-Das Spiel (hier zum [Download](snofru.zip)) habe ich im Alter von 14 geschrieben und
+Das Spiel habe ich im Alter von 14 geschrieben und
 ist eine Sokoban-Variante (siehe [Wikipedia](https://de.wikipedia.org/wiki/Sokoban)). Ich dachte
 eigentlich, dass das Spiel verschollen ist, doch Internet sei Dank hab ich es wieder gefunden.
 
 ![Gameplay](snofru.gif)
 
-Das Spiel ist ziemlich einfach gestrickt. Man steuert eine Spielfigur mittels Pfeiltasten durch ein Labyrinth mit Hindernissen
+Das Spiel (hier zum [Download](snofru.zip)) ist ziemlich einfach gestrickt. Man steuert eine Spielfigur mittels Pfeiltasten durch ein Labyrinth mit Hindernissen
 in Form von verschiebbaren Steinen und herumlaufenden Soldaten.
 
 ## Archive.org

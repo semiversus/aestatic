@@ -13,7 +13,7 @@
         </div>
         {% if article.thumbnail %}
         <div class="column">
-          <img src="{{ root_path }}/{{ article.thumbnail }}">
+          <img src="{{ root_path }}/{{ article.thumbnail }}" alt="{{ 'Thumbnail for' if page.english else 'Vorschaubild für' }} {{ article.title }}">
         </div>
         {% endif %}
       </div>
