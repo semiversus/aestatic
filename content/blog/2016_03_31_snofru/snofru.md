@@ -20,8 +20,8 @@ die früheste Version meiner [Homepage](https://web.archive.org/web/201102010227
 
 Und weil beim Archivieren des Internets wahrscheinlich nicht genug Daten anfallen archivieren sie auch viele frei zugängliche CDs, DVDs usw.
 
-Das Spiel wurde damals auf der beiliegenden CD zur GameStar 7/1998 veröffentlicht - und diese CD gibts auch auf
-[Archive.org](https://archive.org/details/cdgs0798) zum Download.
+Das Spiel wurde damals auf der beiliegenden CD zur GameStar 7/1998 veröffentlicht - und diese CD gab es auch auf
+Archive.org zum Download. Leider wurde es mittlerweile wieder entfernt.
 
 ## Das Spiel
 Viele Dinge würde ich heute anders machen:

@@ -24,5 +24,5 @@ Die Frequenzen soll der C-Dur Tonleiter entsprechen
 * Wie wird sich die Toleranz der Bauteile auf die Frequenz auswirken?
 
 # Spezifikation
-* Die Frequenz der einzelnen Töne soll auf 10 [Cent](https://de.wikipedia.org/wiki/Cent_(Musik)) genau sein
+* Die Frequenz der einzelnen Töne soll auf 10 [Cent](https://de.wikipedia.org/wiki/Cent_\(Musik\)) genau sein
 * Die Versorgungsspannung soll bei 5 Volt liegen, welche mittels Linearregler aus der Eingangsspannung "erzeugt" wird
