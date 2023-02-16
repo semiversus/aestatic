@@ -1,11 +1,8 @@
 import sys
 import git
-from datetime import datetime
-
-from .tasks.markdown import PageTask, SlidesTask
 
 from .processor import Processor
-from .tasks import copy, compress, sass, markdown
+from .tasks import copy, compress, sass, markdown, source
 
 processor = Processor()
 
@@ -16,6 +13,7 @@ processor.register(sass.SassTask())
 processor.register(compress.CompressTask())
 processor.register(markdown.SlidesTask())
 processor.register(markdown.PageTask())
+processor.register(source.SourceTask())
 processor.register(copy.CopyTask())
 
 

@@ -12,7 +12,12 @@ Das Spiel (hier zum [Download](snofru.zip)) ist ziemlich einfach gestrickt. Man 
 in Form von verschiebbaren Steinen und herumlaufenden Soldaten.
 
 ## Archive.org
-<figure class="pull-right"><img src="gamestar.jpg"><figcaption>GameStar 7/1998 (Bild: <a href="http://de.videospielzeitschriften.wikia.com/wiki/Datei:GameStar_1998-07.jpg">Maniacfan</a>, Urheberrechtlich geschützt durch <a href="http://www.gamestar.de/impressum/">GameStar</a>)</figcaption></figure>
+
+.. figure:: gamestar.jpg
+    :title: GameStar 7/1998
+    :author: Maniacfan
+    :source: http://de.videospielzeitschriften.wikia.com/wiki/Datei:GameStar_1998-07.jpg
+    :license: Urheberrechtlich geschützt durch GameStar
 
 Wer [Archive.org](https://archive.org) nicht kennt, sollte es sich unbedingt anschauen. Ein Projekt
   zum Archivieren des Internets - und das nicht nur einmal, sondern in vielen Kopien zu verschiedenen Zeiten: Hier ist

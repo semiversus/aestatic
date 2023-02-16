@@ -32,7 +32,7 @@ Bisher habe ich von folgenden Personen Korrekturhinweise bekommen:
 * Patrick Zgubic - viele Korrekturen im Bereich Digitale Signalverarbeitung
 * Florian Burtscher - Korrekturen im Bereich Digitale Signalverarbeitung
 * Herbert Hart - Korrekturen im Bereich Digitale Signalverarbeitung
-* Claus-Peter Bergmeier (<a href="mailto:cpu@bigcpb.de">Email</a>) - Hinweise zu defektem Downloadlink des Logisim Prozessors. Er arbeitet selbst auch an einem eigenen Logisim Prozessor!
+* Claus-Peter Bergmeier - Hinweise zu defektem Downloadlink des [Logisim Prozessors](dic/rechnerarchitektur/logisim_prozessor.html). Er arbeitet selbst auch an einem eigenen Logisim Prozessor!
 
 Weitere Personen haben mir Korrekturen zugeschickt, bleiben aber lieber ohne Hinweis. Vielen Dank für eure Mitarbeit!
 

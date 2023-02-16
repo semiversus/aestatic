@@ -18,10 +18,10 @@ class BaseTask(ABC):
 
     def select_files(self, files: MutableSet[Path]) -> MutableSet[Path]:
         if self.filename_suffix is not None:
-            return set(f for f in files if f.suffix == self.filename_suffix and f.is_file())
+            return set(f for f in files if self.filename_suffix in (f.name, f.suffix) and f.is_file())
 
         if self.folder_suffix is not None:
-            folders = set(f for f in files if f.suffix == self.folder_suffix and f.is_dir())
+            folders = set(f for f in files if self.folder_suffix in (f.name, f.suffix) and f.is_dir())
             for folder in folders:
                 files.difference_update(folder.rglob('*'))
             return folders

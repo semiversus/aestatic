@@ -2,9 +2,9 @@ title: Tutorial 2 - Einstieg in die Shell
 parent: uebersicht.md
 next: tutorial3.md
 
-.. info:: Unterlagen der Tuxcadamy
+.. info:: Unterlagen der Tuxcademy
 
-    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/) auf. Auch Aufgabenstellungen
+    Dieses Tutorial baut auf den Unterlagen der [Tuxcademy](https://www.tuxcademy.org/) auf. Auch Aufgabenstellungen
     sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
     Lizenz und somit auch dieses Tutorial.
 
@@ -35,7 +35,7 @@ beantworte die jeweiligen Übungen.
 
 .. figure:: tutorial_uebung.png
     :title: Beispiel für eine Übung aus den Unterlagen
-    :author:Tuxacadamy
+    :author:Tuxcademy
     :source: https://www.tuxcademy.org/
     :license: CC-BY-SA 4.0
 

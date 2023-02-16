@@ -12,5 +12,3 @@ Im zweiten Teil konzentrieren wir uns auf Firmware Projekte.
 * [Codeschloss](codeschloss.html)
 * [Servoansteuerung](servo.html)
 * [Morse-Uhr](morseuhr.html)
-<!-- * [Füllstandsmessung](fuellstandsmessung.html) -->
-<!-- * [micro:bit Rust](rust.html) -->

@@ -106,7 +106,7 @@ class Figure(DirectivePlugin):
             md.renderer.register('figure', Figure.render)
 
     def render(self, image, title, author='', source='', license=''):
-        h = f'<div class="card mb-4"><div class="card-image"><figure class="image"><img src="{image}"></figure></div><div class="card-content has-text-centered">{title}'
+        h = f'<div class="card mb-4"><div class="card-image"><figure><img src="{image}"></figure></div><div class="card-content has-text-centered">{title}'
 
         if author:
             h += f' ({"Source" if self.english else "Quelle"}: <a href="{source}">{author}</a>'

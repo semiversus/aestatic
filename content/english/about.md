@@ -15,6 +15,7 @@ My interests are software development and electronics. With this website I want 
 E-Mail: <a href="mailto:guenther@jena.at">guenther@jena.at</a><br />
 GnuPG Key: <a href="../assets/jena.asc"><samp>ADD6 34D7 ADE7 72D2 B2D1  A3D0 03B8 2F59 6F67 72C2</samp></a><br />
 
-LinkedIn: <a href="https://www.linkedin.com/in/guenther-jena">Günther Jena</a><br />
-Github: <a href="https://github.com/semiversus">Semiversus</a><br />
-Stack Overflow: <a href="https://stackoverflow.com/users/166605">Günther Jena</a>
+<span class="is-size-2"><a href="https://www.linkedin.com/in/guenther-jena" title="Linkedin"><i class="icon icon-linkedin mr-5"></i></a>
+ <a href="https://github.com/semiversus" title="Github"><i class="icon icon-github mr-5"></i></a>
+ <a href="https://stackoverflow.com/users/166605" title="Stackoverflow"><i class="icon icon-stackoverflow"></i></a>
+</span>
