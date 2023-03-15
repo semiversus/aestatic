@@ -29,7 +29,7 @@ jobs:
     - name: Deploy website
       uses: burnett01/rsync-deployments@5.2.1
       with:
-        switches: -avz
+        switches: -avz -vvv
         path: output/
         remote_path: ~/website
         remote_host: semiversus.com
