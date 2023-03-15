@@ -26,3 +26,12 @@ jobs:
     - name: Build website
       run: |
         aestatic --no-cache
+    - name: Deploy website
+      uses: burnett01/rsync-deployments@5.2.1
+      with:
+        switches: -avz
+        path: output/
+        remote_path: ~/website
+        remote_host: semiversus.com
+        remote_user: deploy_website
+        remote_key: ${{ secrets.REMOTE_KEY }}
