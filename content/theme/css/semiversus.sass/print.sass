@@ -1,0 +1,29 @@
+@media print 
+  img
+    transform: scale(0.7)
+
+  h1
+    font-size: 1.2em
+  
+  h2
+    font-size: 1em
+
+  h3, h4, h5, p
+    font-size: 0.8em
+
+  .is-hidden-print
+    display: none !important
+
+  a:not(.is-not-linked-print)[href]::after 
+    content: "(" attr(href) ")"
+    padding-left: 0.25rem
+
+  h1, h2, h3, h4, h5
+    page-break-after: avoid
+
+  table, figure, .card
+    page-break-inside: avoid
+
+@media not print 
+  .is-print-only 
+    display: none !important;
