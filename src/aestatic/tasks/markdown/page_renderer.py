@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import mistune
 from mistune.directives import DirectivePlugin
 from pygments import highlight
@@ -5,6 +7,15 @@ from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html as pygments_html
 
 from slugify import slugify
+
+
+def human_readable_size(size):
+    """ taken from https://stackoverflow.com/a/43690506 """
+    for unit in ['B', 'KiB', 'MiB', 'GiB']:
+        if size < 1024.0 or unit == 'GiB':
+            break
+        size /= 1024.0
+    return f"{size:.1f} {unit}"
 
 
 class PageRenderer(mistune.HTMLRenderer):
@@ -21,14 +32,16 @@ class PageRenderer(mistune.HTMLRenderer):
         return '<pre><code>' + mistune.escape(code) + '</code></pre>'
 
     def link(self, text: str, url: str, title=None):
-        if url.startswith('http'):
+        if url.startswith('http') or url.startswith('#'):
             icon = f'<span class="icon"><i class="icon-share is-size-7"></i></span>'
-        elif not url.partition('#')[0].endswith('html'):
-            icon = f'<span class="icon"><i class="icon-download2 is-size-7"></i></span>'
-        else:
-            icon = ''
+            return f'<a href="{self.safe_url(url)}">{text}{icon}</a>'
 
-        return f'<a href="{self.safe_url(url)}">{text}{icon}</a>'
+        if not url.partition('#')[0].endswith('html'):
+            file_size = (self.path / url).stat().st_size
+            icon = f'<span class="icon"><i class="icon-download2 is-size-7"></i></span>'
+            return f'<a href="{self.safe_url(url)}" title="{Path(url).name} - {human_readable_size(file_size)}">{text}{icon}</a>'
+
+        return f'<a href="{self.safe_url(url)}">{text}</a>'
 
 
 class Admonition(DirectivePlugin):

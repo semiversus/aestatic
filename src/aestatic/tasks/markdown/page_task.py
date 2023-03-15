@@ -16,6 +16,7 @@ from aestatic.tasks.markdown.page_renderer import PageRenderer, Admonition, Figu
 def resolve(p: Path):
     return p.resolve().relative_to(Path('.').resolve())
 
+
 renderer = PageRenderer(escape=False)
 markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition(), Figure()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
 
@@ -69,6 +70,7 @@ class Page:
         meta['url'] = path.with_suffix('.html').relative_to('content')
         meta['english'] = (meta.get('english', '').lower() == 'true')
         renderer.english = meta['english']
+        renderer.path = 'output' / meta['path'].parent
         meta['content'] = markdown_convert(source_content)
         meta['summary'] = get_summary(meta['content'])
         meta['latex'] = (meta.get('latex', '').lower() == 'true')

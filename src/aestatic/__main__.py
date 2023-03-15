@@ -12,10 +12,9 @@ if '--no-cache' in sys.argv:
 processor.register(sass.SassTask())
 processor.register(compress.CompressTask())
 processor.register(markdown.SlidesTask())
-processor.register(markdown.PageTask())
-processor.register(source.SourceTask())
+processor.register(source.SourceTask()) 
 processor.register(copy.CopyTask())
-
+processor.register(markdown.PageTask())
 
 repo = git.Repo()
 processor.environment['git_sha'] = repo.git.rev_parse(repo.head.object.hexsha)

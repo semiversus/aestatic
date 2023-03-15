@@ -11,7 +11,7 @@ Ich beschäftige mich mit Softwareentwicklung und Elektronik, arbeite als Entwic
 Auf dieser Seite möchte ich ein paar meiner Projekte vorstellen und den Blog als einen öffentlichen Notizzettel nutzen.
 
 ## Kontakt
-E-Mail: [guenther@jena.at](mailto:guenther@jena.at)<br />
+E-Mail: <a href="mailto:guenther@jena.at">guenther@jena.at</a><br />
 GnuPG Key: [<samp>ADD6 34D7 ADE7 72D2 B2D1  A3D0 03B8 2F59 6F67 72C2</samp>](assets/jena.asc)
 
 <span class="is-size-2">
