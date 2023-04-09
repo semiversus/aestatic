@@ -12,11 +12,12 @@ title: Unterricht
 * [Komplexe digitale Systeme](dic/komplexe_digitale_systeme/uebersicht.html)
 
 # Robotik und Embedded Systems
-* [Projektmanagment](dic/robotik/projektmanagment/uebersicht.html)
-* [Python](dic/robotik/python/uebersicht.html)
-* [RaspberryPi](dic/robotik/raspberry.html)
-* [Suchalgorithmen](dic/robotik/search/uebersicht.html)
-* [ESP32](dic/robotik/esp32/installation.html)
+* [Projektmanagment](wdic/projektmanagment/uebersicht.html)
+* [Python](wdic/python/uebersicht.html)
+* [RaspberryPi](wdic/raspberry.html)
+* [Suchalgorithmen](wdic/search/uebersicht.html)
+* [ESP32](wdic/esp32/installation.html)
+* [Maschinelles Lernen](wdic/maschinelles_lernen.html)
 
 # Hardwareentwicklung
 * [Projekte Teil 1](hwe/teil1/uebersicht.html)

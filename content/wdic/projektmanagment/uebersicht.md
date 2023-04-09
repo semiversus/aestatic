@@ -1,5 +1,5 @@
 title: Projektmanagment
-parent: ../../../unterricht.md
+parent: ../../unterricht.md
 
 # Inhalt
 * [GitHub/GitLab](uebung_github.html)
