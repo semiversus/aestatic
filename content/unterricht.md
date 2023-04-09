@@ -17,7 +17,7 @@ title: Unterricht
 * [RaspberryPi](wdic/raspberry.html)
 * [Suchalgorithmen](wdic/search/uebersicht.html)
 * [ESP32](wdic/esp32/installation.html)
-* [Maschinelles Lernen](wdic/maschinelles_lernen.html)
+* [Maschinelles Lernen](wdic/maschinelles_lernen/ml.html)
 
 # Hardwareentwicklung
 * [Projekte Teil 1](hwe/teil1/uebersicht.html)

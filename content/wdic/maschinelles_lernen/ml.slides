@@ -1,0 +1,40 @@
+title: Machine Learning
+
+### Anwendungsgebiete
+
+* EMail Spam Filter
+* Virtuelle Assistenten (Siri, Alexa, Google Assistant, ...)
+* Schrifterkennung
+* Produktempfehlungen
+* Betrugserkennung
+* Medizinische Diagnose
+* Dynamische Preisgestaltung
+* ...
+
+.. notes::
+    Autonomes Fahren, ChatGPT
+
+---
+
+Arthur Samuel prägt 1959 den Begriff *Machine Learning*
+
+> ... without explicitly programmed to do so <small>[Referenz](https://en.wikipedia.org/wiki/Machine_learning#cite_note-2)</small>
+
+---
+
+### Supervised Learning
+
+* Datensatz mit bekannten Ergebnissen existiert
+* Regression/Klassifikation
+
+.. notes::
+    Beispiel für Regression: Position/Zeit s=s0 + v*t
+    Beispiel für Klassifikation: Google Ad für Computerspiel -> gekauft/nicht gekauft übers Alter, Zweidimensional mit Einkommen
+    Beispiel für Maximumssuche: https://www.geogebra.org/graphing/rtk3xmax
+
+---
+
+### Unsupervised Learning
+
+* Datensatz hat beschreibende Eigenschaften, aber keine *Labels*
+* Aufgaben: Finde Gruppen, finde Anomalien
