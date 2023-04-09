@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Günther Jena">
     <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA">
-    <link rel="stylesheet" href="{{ root_path }}/theme/css/semiversus.css">
+    <link rel="stylesheet" href="{{ root_path }}/theme/css/semiversus.{{ env['git_sha'][:7] }}.css">
     <link rel="icon" href="{{ root_path }}/favicon.ico">
     {% if page.latex %}<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>{% endif %}
   </head>

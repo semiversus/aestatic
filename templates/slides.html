@@ -7,7 +7,7 @@
 		<meta name="author" content="Günther Jena">
 		<meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA">
 		<link rel="icon" href="{{ root_path }}/favicon.ico">
-		<link rel="stylesheet" href="{{ root_path }}/theme/css/slides.css">
+		<link rel="stylesheet" href="{{ root_path }}/theme/css/slides.{{ env['git_sha'][:7] }}.css">
 		{% if page.latex %}<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>{% endif %}
 	</head>
 	<body>
