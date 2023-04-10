@@ -5,7 +5,7 @@ description = ""
 authors = ["Günther Jena <guenther@jena.at>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.10,<3.12"
 jinja2 = "^3.1.2"
 libsass = "^0.22.0"
 mistune = "3.0.0rc5"
@@ -19,6 +19,19 @@ qrcode = "^7.4.2"
 
 [tool.poetry.scripts]
 aestatic = 'aestatic.__main__:main'
+
+[tool.poetry.group.jupyter]
+optional = true
+
+[tool.poetry.group.jupyter.dependencies]
+pandas = "^2.0.0"
+tensorflow = "^2.12.0"
+numpy = ">=1.23.0,<1.24.0"
+matplotlib = "^3.7.1"
+notebook = "^6.5.4"
+ipykernel = "^6.22.0"
+seaborn = "^0.12.2"
+scikit-learn = "^1.2.2"
 
 [virtualenvs]
 in-project = true

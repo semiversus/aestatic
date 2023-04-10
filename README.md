@@ -11,3 +11,4 @@ There are still too few static website building tools out there. Here's mine.
 ### Using `poetry`
 * run `poetry shell` and then `poetry install`
 * run `aestatic` - result is in folder ./output
+* optionally install jupyter notebooks with tensorflow and others using `poetry install --with jupyter`
