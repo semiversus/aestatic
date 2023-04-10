@@ -31,6 +31,8 @@ Arthur Samuel prägt 1959 den Begriff *Machine Learning*
     Beispiel für Regression: Position/Zeit s=s0 + v*t
     Beispiel für Klassifikation: Google Ad für Computerspiel -> gekauft/nicht gekauft übers Alter, Zweidimensional mit Einkommen
     Beispiel für Maximumssuche: https://www.geogebra.org/graphing/rtk3xmax
+    Beispiel für [lineare Regression](./lineare_regression.html)
+
 
 ---
 
@@ -38,3 +40,10 @@ Arthur Samuel prägt 1959 den Begriff *Machine Learning*
 
 * Datensatz hat beschreibende Eigenschaften, aber keine *Labels*
 * Aufgaben: Finde Gruppen, finde Anomalien
+
+---
+
+### Neuronale Netze
+
+.. notes::
+    Einstiegsvideo https://youtu.be/9NeKnO4OPdE
