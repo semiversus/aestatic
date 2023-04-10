@@ -49,7 +49,7 @@ class Figure(DirectivePlugin):
 
 class Notes(DirectivePlugin):
     def parse(self, block, m, state):
-        self.parse_name(m)
+        #self.parse_type(m)
         title = self.parse_title(m)
         content = self.parse_content(m).strip()
 

@@ -48,7 +48,7 @@ class Admonition(DirectivePlugin):
     SUPPORTED_NAMES = {"info", "warning", "danger"}
 
     def parse(self, block, m, state):
-        name = self.parse_name(m)
+        name = self.parse_type(m)
         attrs = {'name': name}
 
         title = self.parse_title(m)
