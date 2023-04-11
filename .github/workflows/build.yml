@@ -20,36 +20,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ env.PYTHON_VERSION }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
-    # Caching was taken from https://gist.github.com/gh640/233a6daf68e9e937115371c0ecd39c61
-    - name: Cache Poetry cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pypoetry
-        key: poetry-cache-${{ runner.os }}-${{ steps.setup_python.outputs.python-version }}-${{ env.POETRY_VERSION }}
-    - name: Cache Packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.local
-        key: poetry-local-${{ runner.os }}-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/*.yml') }}
-    - name: Install Poetry ${{ env.POETRY_VERSION }}
-      run: |
-        curl -sSL ${{ env.POETRY_URL }} | python - --version ${{ env.POETRY_VERSION }}
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
-    - name: Build website
-      run: |
-        poetry install
-        poetry run aestatic --no-cache
-    - name: Deploy website
-      uses: burnett01/rsync-deployments@5.2.1
-      with:
-        switches: -avz
-        path: output/
-        remote_path: ~/website
-        remote_host: semiversus.com
-        remote_user: deploy_website
-        remote_key: ${{ secrets.REMOTE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Poetry
+        run: |
+          pipx install poetry
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: poetry
+          cache-dependency-path: poetry.lock
+      - name: Set Poetry environment
+        run: |
+          poetry env use 3.11
+      - name: Install dependencies
+        run: |
+          poetry install --no-root
+      - name: Build website
+        run: |
+          poetry run aestatic --no-cache
+      - name: Deploy website
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avz
+          path: output/
+          remote_path: ~/website
+          remote_host: semiversus.com
+          remote_user: deploy_website
+          remote_key: ${{ secrets.REMOTE_KEY }}
