@@ -36,7 +36,7 @@ jobs:
           poetry env use 3.11
       - name: Install dependencies
         run: |
-          poetry install --no-root
+          poetry install
       - name: Build website
         run: |
           poetry run aestatic --no-cache
