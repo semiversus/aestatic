@@ -1,18 +1,18 @@
-import mistune
-from mistune.directives import DirectivePlugin
+import mistune_
+from mistune_.directives import DirectivePlugin
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html as pygments_html
 
 
-class SlideRenderer(mistune.HTMLRenderer):
+class SlideRenderer(mistune_.HTMLRenderer):
     def block_code(self, code, info=None):
         if info:
             lexer = get_lexer_by_name(info, stripall=True)
             formatter = pygments_html.HtmlFormatter(nowrap=True)
             highlighted = highlight(code, lexer, formatter)
             return '<pre>' + highlighted + '</pre>'
-        return '<pre><code>' + mistune.escape(code) + '</code></pre>'
+        return '<pre><code>' + mistune_.escape(code) + '</code></pre>'
 
     def list_item(self, text: str) -> str:
         return '<li class="fragment">' + text + '</li>\n'

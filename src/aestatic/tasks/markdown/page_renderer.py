@@ -1,7 +1,7 @@
 from pathlib import Path
 
-import mistune
-from mistune.directives import DirectivePlugin
+import mistune_
+from mistune_.directives import DirectivePlugin
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html as pygments_html
@@ -18,7 +18,7 @@ def human_readable_size(size):
     return f"{size:.1f} {unit}"
 
 
-class PageRenderer(mistune.HTMLRenderer):
+class PageRenderer(mistune_.HTMLRenderer):
     def heading(self, text, level, **attrs):
         anchor = slugify(text)
         return f'<h{level} id="{anchor}">{text}<a href="#{anchor}" class="headerlink" title="Permalink"><span class="icon ml-4 is-size-5"><i class="icon-link"></i></span></a></h{level}>\n'
@@ -29,7 +29,7 @@ class PageRenderer(mistune.HTMLRenderer):
             formatter = pygments_html.HtmlFormatter(nowrap=True)
             highlighted = highlight(code, lexer, formatter)
             return '<pre>' + highlighted + '</pre>'
-        return '<pre><code>' + mistune.escape(code) + '</code></pre>'
+        return '<pre><code>' + mistune_.escape(code) + '</code></pre>'
 
     def link(self, text: str, url: str, title=None):
         if url.startswith('http') or url.startswith('#'):
