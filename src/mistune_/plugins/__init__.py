@@ -1,21 +1,21 @@
 from importlib import import_module
 
 _plugins = {
-    'speedup': 'mistune.plugins.speedup.speedup',
-    'strikethrough': 'mistune.plugins.formatting.strikethrough',
-    'mark': 'mistune.plugins.formatting.mark',
-    'insert': 'mistune.plugins.formatting.insert',
-    'superscript': 'mistune.plugins.formatting.superscript',
-    'subscript': 'mistune.plugins.formatting.subscript',
-    'footnotes': 'mistune.plugins.footnotes.footnotes',
-    'table': 'mistune.plugins.table.table',
-    'url': 'mistune.plugins.url.url',
-    'abbr': 'mistune.plugins.abbr.abbr',
-    'def_list': 'mistune.plugins.def_list.def_list',
-    'math': 'mistune.plugins.math.math',
-    'ruby': 'mistune.plugins.ruby.ruby',
-    'task_lists': 'mistune.plugins.task_lists.task_lists',
-    'spoiler': 'mistune.plugins.spoiler.spoiler',
+    'speedup': 'mistune_.plugins.speedup.speedup',
+    'strikethrough': 'mistune_.plugins.formatting.strikethrough',
+    'mark': 'mistune_.plugins.formatting.mark',
+    'insert': 'mistune_.plugins.formatting.insert',
+    'superscript': 'mistune_.plugins.formatting.superscript',
+    'subscript': 'mistune_.plugins.formatting.subscript',
+    'footnotes': 'mistune_.plugins.footnotes.footnotes',
+    'table': 'mistune_.plugins.table.table',
+    'url': 'mistune_.plugins.url.url',
+    'abbr': 'mistune_.plugins.abbr.abbr',
+    'def_list': 'mistune_.plugins.def_list.def_list',
+    'math': 'mistune_.plugins.math.math',
+    'ruby': 'mistune_.plugins.ruby.ruby',
+    'task_lists': 'mistune_.plugins.task_lists.task_lists',
+    'spoiler': 'mistune_.plugins.spoiler.spoiler',
 }
 _cached_modules = {}
 
