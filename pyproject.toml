@@ -33,9 +33,6 @@ seaborn = "^0.12.2"
 scikit-learn = "^1.2.2"
 nbconvert = "^7.3.1"
 
-[virtualenvs]
-in-project = true
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
