@@ -21,18 +21,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
       uses: actions/setup-python@v4
       with:
         python-version: ${{ env.PYTHON_VERSION }}
-    # Poetry cache depends on OS, Python version and Poetry version
     # Caching was taken from https://gist.github.com/gh640/233a6daf68e9e937115371c0ecd39c61
     - name: Cache Poetry cache
       uses: actions/cache@v3
       with:
         path: ~/.cache/pypoetry
         key: poetry-cache-${{ runner.os }}-${{ steps.setup_python.outputs.python-version }}-${{ env.POETRY_VERSION }}
-    # virtualenv cache should depends on OS, Python version and `poetry.lock` (and optionally workflow files).
     - name: Cache Packages
       uses: actions/cache@v3
       with:
