@@ -6,7 +6,7 @@ comments: false
 
 Mein Name ist Günther Jena und komme aus Kappl in Österreich. Vor meiner Hochzeit hieß ich noch Günther Jehle und Jena ist nun die Zusammensetzung aus meinem bisherigen Nachnamen "Jehle" und dem bisherigen Nachnamen meiner Frau "Nagel".
 
-Ich beschäftige mich mit Softwareentwicklung und Elektronik, arbeite als Elektronik/Software Entwickler und als Lehrer an der [HTL Rankweil](http://www.htl-rankweil.at).
+Ich arbeite als Elektronik/Software Entwickler und als Lehrer an der [HTL Rankweil](http://www.htl-rankweil.at).
 
 Auf dieser Seite möchte ich ein paar meiner Projekte vorstellen und den Blog als einen öffentlichen Notizzettel nutzen.
 
