@@ -5,9 +5,9 @@ comments: false
 
 <figure class="image is-pulled-right"><img src="../assets/guenther_jena_jehle.jpg" alt="Foto von Günther Jena"></figure>
 
-My name is Günther Jena and I'm from Kappl in Austria. I'm living and working in Rankweil. Before my wedding my name was Günther Jehle and Jena is the concatenation of my former name "Jehle" and the former name of my wife "Nagel".
+My name is Günther Jena and I'm from Kappl in Austria. Before my wedding my name was Günther Jehle and Jena is the concatenation of my former name "Jehle" and the former name of my wife "Nagel".
 
-I'm working as a software and electronics developer at [Spectra Physics](http://www.spectra-physics.com/company/rankweil-en) and I'm teaching at the polytechnical school [HTL Rankweil](http://www.htl-rankweil.at).
+I'm working as a software/electronics developer and I'm teaching at the polytechnical school [HTL Rankweil](http://www.htl-rankweil.at).
 
 My interests are software development and electronics. With this website I want to share my projects and use the blog as public notepad.
 
