@@ -1,0 +1,14 @@
+name: Link Checker
+on:
+  schedule:
+    - cron:  '0 12 1 * *'  # on every 1. day in a month at 12 o'clock
+jobs:
+  linkchecker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install linkchecker
+        run: >
+          sudo apt-get update && sudo apt-get install linkchecker
+      - name: Run linkchecker
+        run: |
+          linkchecker https://semiversus.com
