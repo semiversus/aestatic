@@ -50,6 +50,9 @@ class BaseTask(ABC):
     def process(self, env: Dict):
         raise NotImplementedError()
 
+    def __repr__(self):
+        return self.__class__.__name__
+
 
 class Processor:
     def __init__(self):
@@ -94,7 +97,11 @@ class Processor:
             number_of_selected_files = len(files)
             files = task.process_cache(files, self)
             number_of_processed_files = len(files)
-            task.process(files, self)
+            try:
+                task.process(files, self)
+            except Exception as e:
+                raise ValueError(f'Exception while running task "{task}" for these files: {", ".join(str(f) for f in files)}') from e
+            
             print(f'{task.__class__.__name__}: {number_of_selected_files} files selected, {number_of_processed_files} files processed')
 
         self._cache_file.parent.mkdir(exist_ok=True)

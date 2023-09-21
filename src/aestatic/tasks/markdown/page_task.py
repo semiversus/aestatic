@@ -57,6 +57,7 @@ class Page:
     parent: str = None
     next: str = None
     prev: str = None
+    draft: bool = False
 
     @classmethod
     def from_path(cls, path: Path) -> 'Page':
@@ -75,6 +76,7 @@ class Page:
         meta['summary'] = get_summary(meta['content'])
         meta['latex'] = (meta.get('latex', '').lower() == 'true')
         meta['comments'] = (meta.get('comments', 'true').lower() == 'true')
+        meta['draft'] = (meta.get('draft', 'false').lower() == 'true')
 
         if meta.get('date', False):
             meta['date'] = datetime.strptime(meta['date'], '%Y-%m-%d')
