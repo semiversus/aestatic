@@ -1,4 +1,4 @@
-from typing import Dict, List, MutableSet
+from typing import List, MutableSet
 from pathlib import Path
 import shutil
 from abc import ABC, abstractmethod
@@ -29,8 +29,8 @@ class BaseTask(ABC):
         return set(f for f in files if f.is_file())
 
     @abstractmethod
-    def process(self, env: Dict):
-        raise NotImplementedError()
+    def process(self, files: List[Path], processor: "Processor"):
+        """ process the given files """
 
     def __repr__(self):
         return self.__class__.__name__
