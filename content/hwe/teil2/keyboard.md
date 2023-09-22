@@ -7,7 +7,7 @@ Die Signale einer PS/2 Tastatur sollen ausgelesen werden und über eine UART Üb
 
 # Stufe 1
 * Mittels Adapter wird eine PS2 Tastatur an die Megacard angesteckt
-* Informationen zur PS/2 Ansteuerung finden sich [hier](https://www.marjorie.de/ps2/ps2.pdf)
+* Informationen zur PS/2 Ansteuerung finden sich [hier](https://www.marjorie.de/ps2/ps2.pd)
 * GPIOs werden entsprechend konfiguriert
 * Wird das Drücken der Taste 'A' erfolgreich erkannt, wird eine LED aktiviert
 
