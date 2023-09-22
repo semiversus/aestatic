@@ -6,8 +6,8 @@ from datetime import datetime
 
 from aestatic.processor import Processor, BaseTask
 from bs4 import BeautifulSoup
-import mistune_
-from mistune_.directives import RSTDirective
+import mistune
+from mistune.directives import RSTDirective
 from jinja2 import Environment, FileSystemLoader
 
 from aestatic.tasks.markdown.page_renderer import PageRenderer, Admonition, Figure
@@ -18,7 +18,7 @@ def resolve(p: Path):
 
 
 renderer = PageRenderer(escape=False)
-markdown_convert = mistune_.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition(), Figure()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
+markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition(), Figure()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
 
 
 def get_summary(html_doc: str):
@@ -136,4 +136,3 @@ class PageTask(BaseTask):
             output_path.parent.mkdir(parents=True, exist_ok=True)
             template = env.get_template(page.template)
             output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent), env=processor.environment))
-            processor.add_cache_entry(page.path, page.path.with_suffix('.html'))

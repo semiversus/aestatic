@@ -4,8 +4,8 @@ import os
 from dataclasses import dataclass
 
 from jinja2 import Environment, FileSystemLoader
-import mistune_
-from mistune_.directives import RSTDirective
+import mistune
+from mistune.directives import RSTDirective
 import qrcode
 
 from aestatic.processor import Processor, BaseTask
@@ -13,7 +13,7 @@ from aestatic.tasks.markdown.slides_renderer import SlideRenderer, Figure, Notes
 
 
 renderer = SlideRenderer(escape=False)
-markdown_convert = mistune_.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Figure(), Notes()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
+markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Figure(), Notes()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
 
 @dataclass
 class Slide:
@@ -51,4 +51,3 @@ class SlidesTask(BaseTask):
             output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent), env=processor.environment))
             qr_img = qrcode.make('https://semiversus.com/' + str(page.url))
             qr_img.save(str(output_path).replace('.html', '_qr.png'))
-            processor.add_cache_entry(page.path, (page.path.with_suffix('.html'), page.path.parent / (page.path.stem + '_qr.png')))

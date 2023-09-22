@@ -13,4 +13,3 @@ class SassTask(BaseTask):
             output_path.parent.mkdir(parents=True, exist_ok=True)
             css = sass.compile(filename=str(file / file.name), output_style='compressed')
             output_path.write_text(css)
-            processor.add_cache_entry(file.relative_to('content'), output_path.relative_to('output'))

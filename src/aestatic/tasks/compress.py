@@ -12,4 +12,3 @@ class CompressTask(BaseTask):
             shutil.copytree(file, output_path.parent / output_path.stem)
             shutil.make_archive(output_path.with_suffix(''), 'zip', output_path.parent, output_path.stem)
             shutil.rmtree(output_path.with_suffix(''))
-            processor.add_cache_entry(file.relative_to('content'), output_path.relative_to('output'))
