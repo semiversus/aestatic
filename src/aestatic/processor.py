@@ -1,15 +1,7 @@
-import json
-from typing import Dict, FrozenSet, List, MutableSet, Union
+from typing import Dict, List, MutableSet
 from pathlib import Path
 import shutil
 from abc import ABC, abstractmethod
-
-
-def get_mtime(file: Path):
-    if file.is_dir():
-        return max(f.stat().st_mtime for f in file.rglob("*"))
-
-    return file.stat().st_mtime
 
 
 class BaseTask(ABC):
