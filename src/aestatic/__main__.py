@@ -7,9 +7,6 @@ from .tasks import copy, compress, sass, markdown, source
 
 processor = Processor()
 
-if "--no-cache" in sys.argv:
-    processor.cache_dict.clear()
-
 processor.register(sass.SassTask())
 processor.register(compress.CompressTask())
 processor.register(markdown.SlidesTask())

@@ -39,7 +39,7 @@ jobs:
           poetry install
       - name: Build website
         run: |
-          poetry run aestatic --no-cache
+          poetry run aestatic
       - name: Deploy website
         uses: burnett01/rsync-deployments@5.2.1
         with:
