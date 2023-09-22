@@ -14,17 +14,27 @@ from aestatic.tasks.markdown.page_renderer import PageRenderer, Admonition, Figu
 
 
 def resolve(p: Path):
-    return p.resolve().relative_to(Path('.').resolve())
+    return p.resolve().relative_to(Path(".").resolve())
 
 
 renderer = PageRenderer(escape=False)
-markdown_convert = mistune.create_markdown(escape=False, renderer=renderer, plugins=[RSTDirective([Admonition(), Figure()]), 'strikethrough', 'footnotes', 'table', 'speedup'])
+markdown_convert = mistune.create_markdown(
+    escape=False,
+    renderer=renderer,
+    plugins=[
+        RSTDirective([Admonition(), Figure()]),
+        "strikethrough",
+        "footnotes",
+        "table",
+        "speedup",
+    ],
+)
 
 
 def get_summary(html_doc: str):
-    paragraphs = BeautifulSoup(html_doc, 'html.parser').find_all('p')
+    paragraphs = BeautifulSoup(html_doc, "html.parser").find_all("p")
     if not paragraphs:
-        return ''
+        return ""
 
     summary = []
     for paragraph in paragraphs:
@@ -37,7 +47,7 @@ def get_summary(html_doc: str):
             summary.pop()
             break
 
-    return ''.join(str(p) for p in summary)
+    return "".join(str(p) for p in summary)
 
 
 @dataclass
@@ -45,7 +55,7 @@ class Page:
     path: Path
     url: str
     content: str
-    summary :str
+    summary: str
     title: str
     english: bool = False
     latex: bool = False
@@ -53,45 +63,50 @@ class Page:
     date: datetime = None
     thumbnail: Path = None
     translation: Path = None
-    template: str = 'page.html'
+    template: str = "page.html"
     parent: str = None
     next: str = None
     prev: str = None
     draft: bool = False
 
     @classmethod
-    def from_path(cls, path: Path) -> 'Page':
+    def from_path(cls, path: Path) -> "Page":
         try:
-            meta_block, source_content = path.read_text().split('\n\n', maxsplit=1)
-            meta = dict([tuple(n.strip() for n in l.split(':', maxsplit=1)) for l in meta_block.splitlines()])
+            meta_block, source_content = path.read_text().split("\n\n", maxsplit=1)
+            meta = dict(
+                [
+                    tuple(n.strip() for n in l.split(":", maxsplit=1))
+                    for l in meta_block.splitlines()
+                ]
+            )
         except Exception:
-            raise ValueError(f'Problem parsing meta data from {path}')
+            raise ValueError(f"Problem parsing meta data from {path}")
 
-        meta['path'] = path.relative_to('content')
-        meta['url'] = path.with_suffix('.html').relative_to('content')
-        meta['english'] = (meta.get('english', '').lower() == 'true')
-        renderer.english = meta['english']
-        renderer.path = 'output' / meta['path'].parent
-        meta['content'] = markdown_convert(source_content)
-        meta['summary'] = get_summary(meta['content'])
-        meta['latex'] = (meta.get('latex', '').lower() == 'true')
-        meta['comments'] = (meta.get('comments', 'true').lower() == 'true')
-        meta['draft'] = (meta.get('draft', 'false').lower() == 'true')
+        meta["path"] = path.relative_to("content")
+        meta["url"] = path.with_suffix(".html").relative_to("content")
+        meta["english"] = meta.get("english", "").lower() == "true"
+        renderer.english = meta["english"]
+        renderer.path = "output" / meta["path"].parent
+        meta["content"] = markdown_convert(source_content)
+        meta["summary"] = get_summary(meta["content"])
+        meta["latex"] = meta.get("latex", "").lower() == "true"
+        meta["comments"] = meta.get("comments", "true").lower() == "true"
+        meta["draft"] = meta.get("draft", "false").lower() == "true"
 
-        if meta.get('date', False):
-            meta['date'] = datetime.strptime(meta['date'], '%Y-%m-%d')
+        if meta.get("date", False):
+            meta["date"] = datetime.strptime(meta["date"], "%Y-%m-%d")
 
-        if meta.get('thumbnail', False):
-            meta['thumbnail'] = meta['path'].parent / meta['thumbnail']
+        if meta.get("thumbnail", False):
+            meta["thumbnail"] = meta["path"].parent / meta["thumbnail"]
 
-        if meta.get('translation', False):
-            meta['translation'] = meta['path'].parent / meta['translation']
+        if meta.get("translation", False):
+            meta["translation"] = meta["path"].parent / meta["translation"]
 
         return Page(**meta)
 
 
 class PageTask(BaseTask):
-    filename_suffix = '.md'
+    filename_suffix = ".md"
 
     def process(self, files: FrozenSet[Path], processor: Processor):
         articles: List[Page] = list()
@@ -100,7 +115,7 @@ class PageTask(BaseTask):
         lookup_files = {page.path: page for page in pages}
 
         for page in pages:
-            if page.path.parts[0] == 'blog':
+            if page.path.parts[0] == "blog":
                 articles.append(page)
 
             if page.next is not None:
@@ -110,6 +125,7 @@ class PageTask(BaseTask):
                 page.next = next_page
 
             if page.parent is not None:
+
                 def resolve_parent(page):
                     parent_path = resolve(page.path.parent / page.parent)
                     parent_page = lookup_files[parent_path]
@@ -127,12 +143,18 @@ class PageTask(BaseTask):
             page.next = next_page
             next_page.prev = page
 
-        processor.environment['articles'] = articles
+        processor.environment["articles"] = articles
 
-        env = Environment(loader=FileSystemLoader('templates'))
+        env = Environment(loader=FileSystemLoader("templates"))
 
         for page in pages:
-            output_path = 'output' / page.path.with_suffix('.html')
+            output_path = "output" / page.path.with_suffix(".html")
             output_path.parent.mkdir(parents=True, exist_ok=True)
             template = env.get_template(page.template)
-            output_path.write_text(template.render(page=page, root_path=os.path.relpath('output', output_path.parent), env=processor.environment))
+            output_path.write_text(
+                template.render(
+                    page=page,
+                    root_path=os.path.relpath("output", output_path.parent),
+                    env=processor.environment,
+                )
+            )

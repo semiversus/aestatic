@@ -11,58 +11,58 @@ class SlideRenderer(mistune.HTMLRenderer):
             lexer = get_lexer_by_name(info, stripall=True)
             formatter = pygments_html.HtmlFormatter(nowrap=True)
             highlighted = highlight(code, lexer, formatter)
-            return '<pre>' + highlighted + '</pre>'
-        return '<pre><code>' + mistune.escape(code) + '</code></pre>'
+            return "<pre>" + highlighted + "</pre>"
+        return "<pre><code>" + mistune.escape(code) + "</code></pre>"
 
     def list_item(self, text: str) -> str:
-        return '<li class="fragment">' + text + '</li>\n'
+        return '<li class="fragment">' + text + "</li>\n"
 
 
 class Figure(DirectivePlugin):
     def parse(self, block, m, state):
         attrs = dict(self.parse_options(m))
-        attrs['image'] = self.parse_title(m)
-        attrs['source'] = attrs.get('source', '')
+        attrs["image"] = self.parse_title(m)
+        attrs["source"] = attrs.get("source", "")
 
         return {
-            'type': 'figure',
-            'attrs': attrs,
+            "type": "figure",
+            "attrs": attrs,
         }
 
     def __call__(self, directive, md):
-        directive.register('figure', self.parse)
+        directive.register("figure", self.parse)
 
-        if md.renderer.NAME == 'html':
-            md.renderer.register('figure', Figure.render)
+        if md.renderer.NAME == "html":
+            md.renderer.register("figure", Figure.render)
 
-    def render(self, image, title, author='', source='', license='', scale=50):
+    def render(self, image, title, author="", source="", license="", scale=50):
         h = f'<figure><img src="{image}" style="height: {scale}; width: {scale}"><figcaption>{title}'
 
         if author:
             h += f' (Quelle: <a href="{source}">{author}</a>'
             if license:
-                h += f', Lizenz {license}'
-            h += ')'
+                h += f", Lizenz {license}"
+            h += ")"
 
-        return h + '</figcaption></figure>'
+        return h + "</figcaption></figure>"
 
 
 class Notes(DirectivePlugin):
     def parse(self, block, m, state):
-        #self.parse_type(m)
+        # self.parse_type(m)
         title = self.parse_title(m)
         content = self.parse_content(m).strip()
 
         return {
-                    'type': 'notes',
-                    'children': self.parse_tokens(block, content, state),
-                }
+            "type": "notes",
+            "children": self.parse_tokens(block, content, state),
+        }
 
     def __call__(self, directive, md):
-        directive.register('notes', self.parse)
+        directive.register("notes", self.parse)
 
-        if md.renderer.NAME == 'html':
-            md.renderer.register('notes', Notes.render)
+        if md.renderer.NAME == "html":
+            md.renderer.register("notes", Notes.render)
 
     def render(self, text):
         return f'<aside class="notes">{text}</aside>'
