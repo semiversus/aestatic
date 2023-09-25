@@ -33,7 +33,7 @@ Ziffer neben der eigentlichen Prüfziffer. Die Prüfziffer ist dann die Differen
 
 Für das obige Beispiel bedeutet dies:
 
-> 5*3 + 4*1 + 3*3 + 2*1 + 1*3 + 4*1 + 3*3 + 2*1 + 1*3 + 0*1 + 9*3 + 5*1=83
+> **5**\*3 + **4**\*1 + **3**\*3 + **2**\*1 + **1**\*3 + **4**\*1 + **3**\*3 + **2**\*1 + **1**\*3 + **0**\*1 + **9**\*3 + **5**\*1=83
 
 Die Differenz zum nächsten Vielfachen von 10 (83 -> 90) ist **7**.
 
