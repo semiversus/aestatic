@@ -10,6 +10,7 @@ parent: ../../unterricht.md
 1. [VSCode und erste Übung](homework1.html)
 1. [TODO](homework2.html)
 1. [Unittests](unittests.html)
+<!-- Shuffle für Lieder -->
 
 # Tests
-1. [Mustertest](python_test.zip) <!--- ([Musterlösung](python_test_sample_solution.zip)) -->
+1. [Mustertest](python_test.zip) ([Musterlösung](python_test_sample_solution.zip))
