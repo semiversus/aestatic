@@ -13,4 +13,4 @@ parent: ../../unterricht.md
 <!-- Shuffle für Lieder -->
 
 # Tests
-1. [Mustertest](python_test.zip) ([Musterlösung](python_test_sample_solution.zip))
+1. [Mustertest](python_test.zip)
