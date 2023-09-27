@@ -127,8 +127,13 @@ class Figure(DirectivePlugin):
     def render(self, image, title, author="", source="", license=""):
         h = f'<div class="card mb-4"><div class="card-image"><figure><img src="{image}"></figure></div><div class="card-content has-text-centered">{title}'
 
-        if author:
-            h += f' ({"Source" if self.english else "Quelle"}: <a href="{source}">{author}</a>'
+        if author or source:
+            if source and not author:
+                h += f' (<a href="{source}">{"Source" if self.english else "Quelle"}</a>'
+            elif source:
+                h += f' ({"Source" if self.english else "Quelle"}: <a href="{source}">{author}</a>'
+            else:
+                h += f' ({"Source" if self.english else "Quelle"}: {author}'
             if license:
                 h += f', {"license" if self.english else "Lizenz"} {license}'
             h += ")"

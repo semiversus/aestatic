@@ -38,8 +38,13 @@ class Figure(DirectivePlugin):
     def render(self, image, title, author="", source="", license="", scale=50):
         h = f'<figure><img src="{image}" style="height: {scale}; width: {scale}"><figcaption>{title}'
 
-        if author:
-            h += f' (Quelle: <a href="{source}">{author}</a>'
+        if author or source:
+            if source and not author:
+                h += f' (<a href="{source}">Quelle</a>'
+            elif source:
+                h += f' (Quelle: <a href="{source}">{author}</a>'
+            else:
+                h += f' (Quelle: {author}'
             if license:
                 h += f", Lizenz {license}"
             h += ")"

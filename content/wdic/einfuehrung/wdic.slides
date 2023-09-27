@@ -79,6 +79,8 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
+### Inhalt 4. Klasse
+
 * Einführung in mobile Roboter
 * Zeitmessung/-steuerung mit dem TimerCounter1
 * Aktoren: Motoren, Servo, Schrittmotor
@@ -87,7 +89,7 @@ author: Franz Lauritsch, Günther Jena
 * Kommunikation: Roboter – PC/Handy zur Steuerung und Datenaufzeichnung
 * Schnittstellen: BT, Funk, GSM, WLAN…
 * PC: C#-Programmierung
-*   Kleines individuelles Projekt mit dem WASP
+* Kleines individuelles Projekt mit dem WASP
 
 ---
 
