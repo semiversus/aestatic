@@ -1,0 +1,111 @@
+title: WDIC
+author: Franz Lauritsch, Günther Jena
+
+### Zwei Themengebiete
+* Embedded Systems
+* Robotik
+
+---
+
+### Embedded Systems
+<blockquote>Embedded Systems sind spezialisierte Computersysteme, bestehend aus Hardware und Software, die in Geräten oder Anlagen integriert sind, um spezifische, aufgabenorientierte Funktionen effizient und zuverlässig auszuführen.</blockquote>
+
+---
+
+### Robotik
+<blockquote>Robotik ist ein interdisziplinäres Fachgebiet, das sich mit Konstruktion, Entwicklung, Steuerung und Anwendung von Robotern befasst, welche mechanische, elektronische und programmierbare Elemente kombinieren, um autonome Aktionen auszuführen und Aufgaben in einer Vielzahl von Anwendungen zu erledigen.</blockquote>
+
+---
+
+### Beispiele
+
+.. figure:: miele_waschmaschine.webp
+    :title: Waschmaschine
+    :scale: 20%
+    :author: Miele
+    :source: https://www.miele.de/e/w1-waschmaschine-frontlader-wcr860wps-pwash2-0undtdosxlundwifi-lotosweiss-10931210-p
+
+.. notes::
+    Einige Dutzend bis 100 Embedded Systems im Haushalt
+    Haushaltsgeräte, Unterhaltungselektronik, Smart-Home-Geräte, Sicherheitssysteme, Gesundheits- und Fitnessgeräte
+
+---
+
+### Beispiele
+
+.. figure:: nasa_ingenuity.png
+    :title: Ingenuity
+    :scale: 40%
+    :author: NASA
+    :source: https://mars.nasa.gov/mars2020/multimedia/raw-images/SI1_0046_0671022109_238ECM_N0031416SRLC07021_000085J
+    :license: Public Domain
+
+.. notes::
+    Helikopterdrohne auf dem Mars
+    Erstflug am 19. April 2021
+    Betriebssystem: Linux, [Flugsoftware](https://github.com/nasa/fprime) is Open Source
+    bereits [60 Flüge](https://mars.nasa.gov/technology/helicopter/#Flight-Log)
+
+---
+
+### Beispiele
+
+.. figure:: carbon_robotics.png
+    :title: Laser Weeder
+    :scale: 40%
+    :author: Carbon Robotics
+    :source: https://carbonrobotics.com/
+
+[Demo Video](https://www.youtube.com/watch?v=5fAMZp3OKIQ)
+
+---
+
+### Beispiele
+
+.. figure:: kopswerk.jpg
+    :title: Kopswerk II
+    :scale: 40%
+    :author: illwerke vkw
+    :source: https://gruppen.vorarlberg.travel/en/excursion/kopswerk
+    :license: © Patrick Säly
+
+---
+
+### Inhalt 4. Klasse
+
+* Vertiefung im Bereich der Digital- und Steuerungstechnik anhand von Robotern
+* Jeder baut sich seinen eigenen Roboter
+* Hardware: Megacard, Roboter, Raspberry Pi, ESP32
+
+---
+
+* Einführung in mobile Roboter
+* Zeitmessung/-steuerung mit dem TimerCounter1
+* Aktoren: Motoren, Servo, Schrittmotor
+* Sensoren: Abstand, Position, Navigation…
+* Algorithmen zur Steuerung von Robotern
+* Kommunikation: Roboter – PC/Handy zur Steuerung und Datenaufzeichnung
+* Schnittstellen: BT, Funk, GSM, WLAN…
+* PC: C#-Programmierung
+*   Kleines individuelles Projekt mit dem WASP
+
+---
+
+### Roboter
+
+.. figure:: roboter.jpg
+    :title: Megacard Roboter
+    :scale: 40%
+    :author: HTL Rankweil
+
+* Mechanik: Bausatz
+* Elektronik: Megacard + Treiberplatine, HWE Projekt 4AHEL, Kosten ca. 30€
+
+---
+
+### Inhalt 5. Klasse
+
+* Python (Fokus auf Embedded Systems)
+* Algorithmen zur Suche
+* Internet of Things (MQTT, ...)
+* Projekte mit ESP32 und RaspberryPi

@@ -12,6 +12,7 @@ title: Unterricht
 * [Komplexe digitale Systeme](dic/komplexe_digitale_systeme/uebersicht.html)
 
 # Robotik und Embedded Systems
+* [Einführung](wdic/einfuehrung/wdic.html)
 * [Projektmanagment](wdic/projektmanagment/uebersicht.html)
 * [Python](wdic/python/uebersicht.html)
 * [RaspberryPi](wdic/raspberry.html)
