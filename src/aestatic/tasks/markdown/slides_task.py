@@ -32,6 +32,7 @@ class Slide:
     url: str
     content: str
     title: str
+    author: str = "Günther Jena"
     latex: str = None
 
     @classmethod

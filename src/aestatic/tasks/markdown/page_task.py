@@ -116,7 +116,7 @@ class PageTask(BaseTask):
         lookup_files = {page.path: page for page in pages}
 
         for page in pages:
-            if page.path.parts[0] == "blog":
+            if page.path.parts[0] == "blog" and not page.draft:
                 articles.append(page)
 
             if page.next is not None:
