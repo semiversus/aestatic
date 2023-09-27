@@ -16,7 +16,7 @@ in Form von verschiebbaren Steinen und herumlaufenden Soldaten.
 .. figure:: gamestar.jpg
     :title: GameStar 7/1998
     :author: Maniacfan
-    :source: http://de.videospielzeitschriften.wikia.com/wiki/Datei:GameStar_1998-07.jpg
+    :source: https://videospielzeitschriften.fandom.com/de/wiki/GameStar#1998
     :license: Urheberrechtlich geschützt durch GameStar
 
 Wer [Archive.org](https://archive.org) nicht kennt, sollte es sich unbedingt anschauen. Ein Projekt

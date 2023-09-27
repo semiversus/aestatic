@@ -80,7 +80,7 @@ arbeit20.c arbeit17.c 290 Wörter  54 19% gleich  13 4% eingefügt  223 77% ver�
 
 Es fällt der zweite Eintrag auf: 97% Übereinstimmung. Da muss sehr viel Zufall im Spiel sein, oder auch nicht.
 
-Ein direkter Vergleich mittels [Meld](http://meldmerge.org/) zeigt:
+Ein direkter Vergleich mittels [Meld](https://meldmerge.org/) zeigt:
 
 ![Vergleich von arbeit14.c und arbeit20.c](meld.png)
 

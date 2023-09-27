@@ -2,7 +2,7 @@ title: Übung Github/Gitlab
 parent: uebersicht.md
 
 # Notwendige Vorbereitungen
-1. Anlegen eines Benutzeraccounts auf [GitHub](http://github.com) bzw. [GitLab](http://gitlab.com)
+1. Anlegen eines Benutzeraccounts auf [GitHub](https://github.com) bzw. [GitLab](https://about.gitlab.com/)
 1. Installation von [VS Code](https://code.visualstudio.com/)
 1. Installation von [Git (for Windows)](https://gitforwindows.org/) mit `PATH` Variable (Option 2 oder 3)!
 
@@ -16,7 +16,7 @@ parent: uebersicht.md
 * Merge Request/Pull Request
 * Fork
 
-# Übung [GitLab](http://gitlab.com)
+# Übung [GitLab](https://about.gitlab.com/)
 ## Teil 1 - Eigenes Projekt
 1. Anlegen des Projektes "WDIC Übung"
 1. Anlegen eines *Issues* (z.B. "Improve README")
@@ -40,7 +40,7 @@ Arbeit in zweier (evtl. dreier) Teams
 1. *Approven* des Merge Requests
 1. *Mergen* des *Merge Requests*
 
-# Übung [Github](http://github.com)
+# Übung [Github](https://github.com)
 ## Teil 1
 1. Anlegen des Projektes "WDIC Übung"
 1. Anlegen eines *Issues* (z.B. "Improve README")

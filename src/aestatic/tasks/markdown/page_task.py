@@ -87,6 +87,7 @@ class Page:
         meta["english"] = meta.get("english", "").lower() == "true"
         renderer.english = meta["english"]
         renderer.path = "output" / meta["path"].parent
+        renderer.root_path = os.path.relpath("output", renderer.path)
         meta["content"] = markdown_convert(source_content)
         meta["summary"] = get_summary(meta["content"])
         meta["latex"] = meta.get("latex", "").lower() == "true"

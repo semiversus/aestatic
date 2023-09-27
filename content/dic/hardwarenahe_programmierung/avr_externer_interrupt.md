@@ -23,7 +23,7 @@ Die drei Pins sind in der folgenden Pinbelegung markiert.
 .. figure:: avr_ext_interrupt_pins.svg
     :title: Externe Interrup Pins beim AVR
     :author: Datenblatt ATMega16
-    :source: http://www.atmel.com/images/doc2466.pdf
+    :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
 * `INT0` - PORT D - Bit 2

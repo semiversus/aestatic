@@ -40,8 +40,7 @@ Weitere Personen haben mir Korrekturen zugeschickt, bleiben aber lieber ohne Hin
 # Links
 Eine kleine Übersicht über Seiten, die mir zur Recherche dienten (neben den üblichen Verdächtigen wie Wikipedia und Co.):
 
-* [rn-wissen.de](http://rn-wissen.de/)
-* [mosfetkiller.de](http://mosfetkiller.de/)
+* [rn-wissen.de](https://rn-wissen.de/wiki/index.php?title=Hauptseite)
+* [mosfetkiller.de](https://mosfetkiller.de/)
 * [nmp24.de](http://nmp24.de/)
-* [mikrocontroller.net](http://www.mikrocontroller.net/)
-* [stiny-leonhard.de](http://www.stiny-leonhard.de/)
+* [mikrocontroller.net](https://www.mikrocontroller.net/)

@@ -3,7 +3,7 @@ parent: ../../unterricht.md
 
 # Installation der Arduino IDE
 
-Über die offizielle [Arduino](https://www.arduino.cc/en/software) Seite die IDE herunterladen und installieren.
+Über die offizielle [Arduino](https://www.arduino.cc/en/software/) Seite die IDE herunterladen und installieren.
 
 ![Arduino IDE](arduino.png)
 

@@ -5,6 +5,6 @@ parent: ../unterricht.md
 ## Vorbereitungen
 
 * Netzwerkkabel (ausgekreuzt) zur Verbindung zwischen Notebook und RaspberryPi
-* SD- bzw. MicroSD-Karte mit aktuellem [Raspian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
+* SD- bzw. MicroSD-Karte mit aktuellem [Raspian Jessie](https://www.raspberrypi.com/software/)
 * RaspberryPi (funktioniert mit allen Versionen)
 * Versorgung für RaspberryPi (Netzteil mit Micro-USB Stecker oder über Notebook) Achtung: Spezifiziert mit bis zu 2 Ampere!

@@ -29,7 +29,7 @@ Die wichtigsten Eigenschaften des ADC:
 .. figure:: avr_adc.svg
     :title: Blockschaltbild des ADC
     :author: Datenblatt ATMega16
-    :source: http://www.atmel.com/images/doc2466.pdf
+    :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
 ## Eingänge

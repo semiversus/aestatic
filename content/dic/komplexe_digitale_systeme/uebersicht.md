@@ -4,7 +4,7 @@ parent: ../../unterricht.md
 # Inhalt
 ## Linux Tutorial
 * [Installation von Virtualbox mit DICbian](dicbian.html)
-* [Unterlagen der Tuxcadamy](grd1-de-manual.pdf) (stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/)
+* [Unterlagen der Tuxcadamy](grd1-de-manual.pdf) (stehen unter der [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
   Lizenz).
 * Weitere Infos zur [Tuxcadamy](https://www.tuxcademy.org/)
 * [Tutorial 1](tutorial1.html) - Übersicht über *Linux*

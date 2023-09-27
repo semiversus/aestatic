@@ -27,7 +27,7 @@ Abzugeben sind (in digitaler Form):
 ## Vollständigkeit der Daten (5 Punkte)
 * siehe oben
 ## Technische Ausführung (35 Punkte)
-* Allgemeine Regeln zum PCB Design eingehalten (siehe z.B. [Sieben Sünden beim PCB Design](https://www.elektronikpraxis.vogel.de/pcb-design-regeln-sieben-suenden-beim-leiterplatten-design-a-356703/))
+* Allgemeine Regeln zum PCB Design eingehalten (siehe z.B. [Sieben Sünden beim PCB Design](https://www.elektronikpraxis.de/pcb-design-regeln-sieben-suenden-beim-leiterplatten-design-a-356703/))
 * Bohrlöcher zur Befestigung
 * Stecker gut erreichbar
 * Kein unnötiger Platzverbrauch

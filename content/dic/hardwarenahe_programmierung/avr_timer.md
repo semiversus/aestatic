@@ -51,7 +51,7 @@ Der ATMega16 enthält drei Timer. Timer 0 und 2 sind 8 Bit Timer, Time 1 ist ein
 .. figure:: avr_timer0.svg
     :title: Blockschaltbild des Timer 0
     :author: Datenblatt ATMega16
-    :source: http://www.atmel.com/images/doc2466.pdf
+    :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
 Das Blockschaltbild des Timer 0 zeigt den prinzipiellen Aufbau des Timers welcher im folgenden beschrieben wird.
@@ -169,5 +169,5 @@ Siehe auch hier im Kapitel [PWM Erzeugung](avr_pwm.html).
 .. figure:: avr_timer_pins.svg
     :title: Pins mit Timerfunktionalität
     :author: Datenblatt ATMega16
-    :source: http://www.atmel.com/images/doc2466.pdf
+    :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation

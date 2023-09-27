@@ -109,7 +109,7 @@ In der Datei <samp>transmitter.ucf</samp> ist nur das Signal `clk` definiert. Er
 .. figure:: ../basys2_pinout.svg
     :title: Pinout des BASYS2 Boards
     :author: Digilent Inc. BASYS2 Manual
-    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :source: https://digilent.com/shop/about-fpga-boards/
     :license: &copy; Digilent
 
 ## Test am Board

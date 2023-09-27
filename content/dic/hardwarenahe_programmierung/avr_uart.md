@@ -37,7 +37,7 @@ Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden 
 .. figure:: avr_uart.svg
     :title: AVR UART
     :author: Datenblatt ATMega16
-    :source: http://www.atmel.com/images/doc2466.pdf
+    :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
 # Konfigurations- und Statusregister

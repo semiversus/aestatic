@@ -21,7 +21,7 @@ def human_readable_size(size):
 class PageRenderer(mistune.HTMLRenderer):
     def heading(self, text, level, **attrs):
         anchor = slugify(text)
-        return f'<h{level} id="{anchor}">{text}<a href="#{anchor}" class="headerlink" title="Permalink"><span class="icon ml-4 is-size-5"><i class="icon-link"></i></span></a></h{level}>\n'
+        return f'<h{level} id="{anchor}">{text} <a href="#{anchor}" class="headerlink" title="Permalink"><span class="icon"><img src="{self.root_path}/theme/img/link.svg"></span></a></h{level}>\n'
 
     def block_code(self, code, info=None):
         if info:
@@ -33,12 +33,12 @@ class PageRenderer(mistune.HTMLRenderer):
 
     def link(self, text: str, url: str, title=None):
         if url.startswith("http") or url.startswith("#"):
-            icon = f'<span class="icon"><i class="icon-share is-size-7"></i></span>'
+            icon = f' <span class="icon"><img src="{self.root_path}/theme/img/share.svg"></span>'
             return f'<a href="{self.safe_url(url)}">{text}{icon}</a>'
 
         if not url.partition("#")[0].endswith("html"):
             file_size = (self.path / url).stat().st_size
-            icon = f'<span class="icon"><i class="icon-download2 is-size-7"></i></span>'
+            icon = f' <span class="icon"><img src="{self.root_path}/theme/img/download.svg"></span>'
             return f'<a href="{self.safe_url(url)}" title="{Path(url).name} - {human_readable_size(file_size)}">{text}{icon}</a>'
 
         return f'<a href="{self.safe_url(url)}">{text}</a>'
@@ -100,7 +100,7 @@ class Admonition(DirectivePlugin):
         return (
             '<div class="message-header"><span>'
             + text
-            + f'</span><span class="icon"><i class="icon-{icon}"></i></span></div>\n'
+            + f'</span><span class="icon"><img src="{self.root_path}//theme/img/{icon}.svg"></span></div>\n'
         )
 
     def render_admonition_content(self, text):

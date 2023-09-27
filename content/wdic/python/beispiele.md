@@ -40,7 +40,7 @@ Was fällt im Vergleich zu anderen Programmiersprachen auf?
 
 ## Beispiel2
 
-Zum Ausprobieren gibt es das Beispiel auch hier: [Online Python Beispiel](https://onlinegdb.com/B19ue-gOH)
+Zum Ausprobieren gibt es das Beispiel auch hier: [Online Python Beispiel](https://www.onlinegdb.com/B19ue-gOH)
 
 ```python
 from random import randint

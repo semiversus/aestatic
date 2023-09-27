@@ -63,7 +63,7 @@ Die Signale `switches_i`, `an_o` und `segments_o` finden sich im folgenden Pinou
 .. figure:: basys2_pinout.svg
     :title: Pinout des BASYS2 Boards
     :author: Digilent Inc. BASYS2 Manual
-    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :source: https://digilent.com/shop/about-fpga-boards/
     :license: &copy; Digilent
 
 Das Pinout wird in der Datei `seven_segments.ucf` beschrieben. Für dieses VHDL Modell sieht es wie folgt aus:
@@ -93,7 +93,7 @@ In der folgenden Abbildung sieht man die Anordnung der einzelnen Segmente:
 .. figure:: basys2_7segment.svg
     :title: 7-Segment Anzeige des BASYS2 Boards
     :author: Digilent Inc. BASYS2 Manual
-    :source: http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2
+    :source: https://digilent.com/shop/about-fpga-boards/
     :license: &copy; Digilent
 
 # Aufgabe 1 - Erweitern der kombinatorischen Beschreibung

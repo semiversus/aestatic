@@ -112,7 +112,7 @@ end architecture;
 
 ### Test des Designs
 
-* [Online VHDL Modell mit Testbench](http://www.edaplayground.com/x/EcA)
+* [Online VHDL Modell mit Testbench](https://www.edaplayground.com/x/EcA)
 
 ## Umsetzung des Volladdierers
 ```vhdl

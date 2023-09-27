@@ -2,7 +2,7 @@ title: I&sup2;C Übungsaufgaben
 parent: i2c.md
 
 # Aufgabe ADXL345
-In dieser Übung wird der Beschleunigungssensor [ADXL345](http://www.analog.com/en/products/mems/mems-accelerometers/adxl345.html) von [Analog Devices](http://www.analog.com/) angesteuert. Die angaben stammen aus dem entsprechenden [Datenblatt](http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf).
+In dieser Übung wird der Beschleunigungssensor [ADXL345](https://www.analog.com/en/products/adxl345.html) von [Analog Devices](https://www.analog.com/en/index.html) angesteuert. Die angaben stammen aus dem entsprechenden [Datenblatt](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf).
 
 Die 7-Bit Adresse des Bausteins wird für diese Übung mit <samp>001 1101</samp> (0x1D) angenommen.
 
@@ -11,7 +11,7 @@ Der Baustein verfügt intern über mehrere Register. Jeder Register ist ein Byte
 .. figure:: adxl345_registers.svg
     :title: Registerübersicht
     :author: Datenblatt ADXL345
-    :source: http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf
+    :source: https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf
     :license: &copy;Analog Devices
 
 In der folgenden Abbildung sieht man insgesamt vier Übertragungsarten:
@@ -24,7 +24,7 @@ In der folgenden Abbildung sieht man insgesamt vier Übertragungsarten:
 .. figure:: adxl345_overview.svg
     :title: Lesen und Schreiben einzelner sowie mehrer Bytes
     :author: Datenblatt ADXL345
-    :source: http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf
+    :source: https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf
     :license: &copy;Analog Devices
 Hinweise zum Bild:
 
