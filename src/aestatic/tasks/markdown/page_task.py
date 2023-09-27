@@ -113,10 +113,12 @@ class PageTask(BaseTask):
         articles: List[Page] = list()
 
         pages = [Page.from_path(p) for p in files]
+        pages = [p for p in pages if not p.draft]
+        
         lookup_files = {page.path: page for page in pages}
 
         for page in pages:
-            if page.path.parts[0] == "blog" and not page.draft:
+            if page.path.parts[0] == "blog":
                 articles.append(page)
 
             if page.next is not None:
