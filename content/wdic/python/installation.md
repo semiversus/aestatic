@@ -3,6 +3,11 @@ parent: uebersicht.md
 next: beispiele.md
 
 # Vorbereitungen fürs Tutorial
+Für unsere Arbeit benötigen wir:
+* *Python** (einfach eine möglichst aktuelle Version spricher ab ~3.8)
+* *Visual Studio Code**
+  * Extension für Python
+
 Für das Tutorial ist es egal, unter welcher Plattform gearbeitet wird (Windows/Linux/MacOS/...). Um eine gemeinsame Basis für die Entwicklungsumgebung zu bieten, möchte ich euch **Visual Studio Code** (nicht zu verwechseln mit *Visual Studio*!) empfehlen.
 
 # Installation Visual Studio Code
