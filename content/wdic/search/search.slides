@@ -98,7 +98,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ### Breiten- und Tiefensuche
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7RCp2jNwxjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7RCp2jNwxjQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -110,7 +110,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 <small>Unnötige Äste im Suchbaum werden nicht weiter untersucht (abgeschnitten)</small>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5D4pjWX56Po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5D4pjWX56Po" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 .. notes::
     ![Branch-and-Bound Beispiel](branch_and_bound_sample.png)
@@ -131,7 +131,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ### A* Beispiel
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fI9PGLoRE2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fI9PGLoRE2E" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <small>Für weitere Beispiele siehe [Graph Search Visualizer](https://huakunshen.github.io/GraphSearchVisualizer/)</small>
 
@@ -139,4 +139,4 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ### Huffman Kodierung
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6vgkip3z83s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6vgkip3z83s" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -18,7 +18,7 @@ Evolutionäre Algorithmen finden für solche Systeme Lösungen auf eine effizien
 3. Selektion - die einzelnen Lösungen werden bewertet und die besten ausgewählt
 
 # Nesolution
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D3tzE5VU0bU" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D3tzE5VU0bU" allowfullscreen></iframe>
 
 Das Projekt Nesolution nutzt die Emulation einer Spielkonsole um mittels eines evolutionären Algorithmus Spiele mit einem vorgegebenen Ziel zu spielen. Dazu werden Tastenfolgen als Muster gespeichert und durch den Emulator abgespielt. Während der Emulation wird mit einer Bewertungsfunktion das Ergebnis beurteilt.
 

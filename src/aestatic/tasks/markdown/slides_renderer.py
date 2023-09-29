@@ -36,7 +36,7 @@ class Figure(DirectivePlugin):
             md.renderer.register("figure", Figure.render)
 
     def render(self, image, title, author="", source="", license="", scale=50):
-        h = f'<figure><img src="{image}" style="height: {scale}; width: {scale}"><figcaption>{title}'
+        h = f'<figure><img src="{image}" style="height: {scale}; width: {scale}" alt="{title}"><figcaption>{title}'
 
         if author or source:
             if source and not author:

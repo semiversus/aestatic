@@ -125,7 +125,7 @@ class Figure(DirectivePlugin):
             md.renderer.register("figure", Figure.render)
 
     def render(self, image, title, author="", source="", license=""):
-        h = f'<div class="card mb-4"><div class="card-image"><figure><img src="{image}"></figure></div><div class="card-content has-text-centered">{title}'
+        h = f'<div class="card mb-4"><div class="card-image"><figure><img src="{image}" alt="{title}"></figure></div><div class="card-content has-text-centered">{title}'
 
         if author or source:
             if source and not author:
