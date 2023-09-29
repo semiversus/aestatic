@@ -142,9 +142,12 @@ class PageTask(BaseTask):
 
         articles.sort(key=lambda p: p.date, reverse=True)
 
-        for page, next_page in zip(articles, articles[1:]):
-            page.next = next_page
-            next_page.prev = page
+        for is_english in (True, False):
+            lang_articles = [p for p in articles if is_english == p.english]
+
+            for page, next_page in zip(lang_articles, lang_articles[1:]):
+                page.next = next_page
+                next_page.prev = page
 
         processor.environment["articles"] = articles
 

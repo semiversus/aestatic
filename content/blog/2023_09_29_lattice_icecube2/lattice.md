@@ -2,7 +2,6 @@ title: Install Lattice iCEcube2 on 32 bit Linux
 date: 2023-09-29
 thumbnail: lattice_tb.jpg
 english: true
-draft: true
 
 Do you have troubles installing iCEcube2 on your Linux computer? Lattice is providing a Linux installation for iCEcube2 [here](https://www.latticesemi.com/Products/DesignSoftwareAndIP/FPGAandLDS/iCEcube2).
 
@@ -19,13 +18,34 @@ $ chmod +x iCEcube2setup_Dec_10_2020_2012
 
 ```console
 $ ./iCEcube2setup_Dec_10_2020_2012
-bash: ./iCEcube2setup_Dec_10_2020_2012: Permission denied
+bash: ./iCEcube2setup_Dec_10_2020_2012: cannot execute: required file not found
 ```
 
 *iCEcube2* is a 32 bit executable and very probably you're running a 64 bit Linux. The solution? Install the 32 bit dependencies.
 
+## General advice `cannot execute: required file not found`
+This message is not really helpful. Use `file` do see if the executable is a 32-bit file (or maybe even another processor architecture).
+
+```console
+$ file iCEcube2setup_Dec_10_2020_2012
+iCEcube2setup_Dec_10_2020_2012: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.2.5, not stripped
+```
+
+The first thing missing here is `glibc` for the required architecture. See the following chapters how to install.
+```console
+$ sudo dnf install glibc.i686  # or whatever is needed to get glibc for the required architecture onto your system
+```
+
+After installing `glibc`, you get more information.
+```console
+$ ./iCEcube2setup_Dec_10_2020_2012
+./iCEcube2setup_Dec_10_2020_2012: error while loading shared libraries: libz.so.1: cannot open shared object file: No such file or directory
+````
+
+Now we have at least a clue about what is missing...
+
 ### Fedora
-Tested with Fedora 38
+To get iCEcube2 installed on Fedora (tested on Fedora 38):
 
 ```console
 $ sudo dnf install glibc.i686 libXext.i686 libSM.i686 libXi.i686 libXrender.i686 libXrandr.i686 libXfixes.i686 libXcursor.i686 libXinerama.i686 freetype.i686 libpng12.i686
