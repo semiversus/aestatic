@@ -94,7 +94,7 @@ class Admonition(DirectivePlugin):
             )
 
     def render_admonition(self, text, name):
-        return f'<section class="message is-{name}">{text}</section>\n'
+        return f'<div class="message is-{name}">{text}</section>\n'
 
     def render_admonition_title(self, text, icon):
         return (
