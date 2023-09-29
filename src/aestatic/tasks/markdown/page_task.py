@@ -31,31 +31,11 @@ markdown_convert = mistune.create_markdown(
 )
 
 
-def get_summary(html_doc: str):
-    paragraphs = BeautifulSoup(html_doc, "html.parser").find_all("p")
-    if not paragraphs:
-        return ""
-
-    summary = []
-    for paragraph in paragraphs:
-        if paragraph.img:
-            continue
-        summary.append(paragraph)
-        if sum(len(p.text) for p in summary) > 300:
-            if len(summary) == 1:
-                continue
-            summary.pop()
-            break
-
-    return "".join(str(p) for p in summary)
-
-
 @dataclass
 class Page:
     path: Path
     url: str
     content: str
-    summary: str
     title: str
     english: bool = False
     latex: bool = False
@@ -68,6 +48,28 @@ class Page:
     next: str = None
     prev: str = None
     draft: bool = False
+
+    @property
+    def summary(self) -> str:
+        paragraphs = BeautifulSoup(self.content, "html.parser").find_all(['p', 'ul', 'ol'])
+        
+        if not paragraphs:
+            return ""
+
+        summary = []
+        for paragraph in paragraphs:
+            if paragraph.contents[0].name == 'img':
+                continue
+
+            summary.append(paragraph)
+            
+            if sum(len(p.text) for p in summary) > 300:
+                if len(summary) == 1:
+                    continue
+                summary.pop()
+                break
+
+        return "".join(str(p) for p in summary)
 
     @classmethod
     def from_path(cls, path: Path) -> "Page":
@@ -89,7 +91,6 @@ class Page:
         renderer.path = "output" / meta["path"].parent
         renderer.root_path = os.path.relpath("output", renderer.path)
         meta["content"] = markdown_convert(source_content)
-        meta["summary"] = get_summary(meta["content"])
         meta["latex"] = meta.get("latex", "").lower() == "true"
         meta["comments"] = meta.get("comments", "true").lower() == "true"
         meta["draft"] = meta.get("draft", "false").lower() == "true"
