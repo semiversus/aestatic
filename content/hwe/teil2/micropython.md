@@ -3,7 +3,7 @@ next: codeschloss.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
-Mithilfe des [BBC micro:bit](https://microbit.org/REMOVE) soll die Programmiersprache [MicroPython](https://micropython.orgREMOVE/) ausprobiert werden. Statt der Dokumentation soll ein Tutorial zur Inbetriebnahme entstehen.
+Mithilfe des [BBC micro:bit](https://microbit.org/) soll die Programmiersprache [MicroPython](https://micropython.org/) ausprobiert werden. Statt der Dokumentation soll ein Tutorial zur Inbetriebnahme entstehen.
 
 # Stufe 1
 * Entwicklungsumgebung in Betrieb nehmen und erstes Beispiel zum Laufen bringen

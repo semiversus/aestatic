@@ -75,33 +75,98 @@ author: Franz Lauritsch, Günther Jena
 
 * Vertiefung im Bereich der Digital- und Steuerungstechnik anhand von Robotern
 * Jeder baut sich seinen eigenen Roboter
-* Hardware: Megacard, Roboter, Raspberry Pi, ESP32
+* Hardware: Megacard, Roboter, ESP32, Raspberry Pi
+
+---
+
+### 1. Roboter
+
+<figure style="float: right; width: 40%"><img src="roboter1.png" alt="NIBObee"><figcaption>NIBObee (<a href="https://www.nicai-systems.com">Quelle</a>, Lizenz © Nicai Systems)</figcaption></figure>
+
+* Bausatz
+* ATMEGA16
+* Fertige Libraryfunktionen
+* Billige, anfällige Mechanik
+* Kosten: ca. 50€
+
+---
+
+### 2. Roboter
+
+<figure style="float: right; width:40%"><img src="roboter2.png" alt="Roboter"><figcaption>Roboter (HTL Rankweil)</figcaption></figure>
+
+* Mechanik: Bausatz
+* Elektronik
+  * Megacard
+  * Treiberplatine
+* HWE Projekt 4HEL
+* Treiberprogrammierung
+* Kosten: ca. 35€
+
+---
+
+### 3. Roboter
+
+<figure style="float: right; width: 40%;"><img src="roboter3.png" alt="AlphaBot" style=""><figcaption>AlphaBot (<a href="https://www.waveshare.com/product/robotics/mobile-robots/raspberry-pi-robots/alphabot-pi3-b-plus.htm">Quelle</a>, Lizenz © Waveshare)</figcaption></figure>
+
+* Bestückter Bausatz
+* Arduino und RPI kompatibel
+* Eigene uC-Adapter
+* Viele Sensoren
+* Erweiterbar
+* Kosten: ca. 70€
+
+---
+
+### Adapterplatinen
+
+<figure style="float: right; width: 30%;"><img src="adapter.png" alt="Adapter"><figcaption>Adapter (Quelle: HTL Rankweil)</figcaption></figure>
+
+* Atmel xplained
+<br><br><br><br>
+* Atmega16 mit BT-Download
+<br><br><br><br>
+* ESP32
 
 ---
 
 ### Inhalt 4. Klasse
 
 * Einführung in mobile Roboter
+* Modularisierung
 * Zeitmessung/-steuerung mit dem TimerCounter1
-* Aktoren: Motoren, Servo, Schrittmotor
-* Sensoren: Abstand, Position, Navigation…
-* Algorithmen zur Steuerung von Robotern
-* Kommunikation: Roboter – PC/Handy zur Steuerung und Datenaufzeichnung
-* Schnittstellen: BT, Funk, GSM, WLAN…
-* PC: C#-Programmierung
-* Kleines individuelles Projekt mit dem WASP
+  * Bsp.: Abstandssensor HC-SR04
+
+<div class="fragment">
+    <img height="150" src="distance.jpg">
+    <img height="150" src="distance_time.png">
+</div>
 
 ---
 
-### Roboter
+### Inhalt 4. Klasse
 
-.. figure:: roboter.jpg
-    :title: Megacard Roboter
-    :scale: 40%
-    :author: HTL Rankweil
+* Sensoren
+  * Abstand
+  * Odometrie
+  * Position
+  * Navigation	
+* Aktoren 
+  * Motoren
+  * Servo
+  * Schrittmotor
 
-* Mechanik: Bausatz
-* Elektronik: Megacard + Treiberplatine, HWE Projekt 4AHEL, Kosten ca. 30€
+---
+
+### Inhalt 4. Klasse
+
+* Algorithmen zur Steuerung von Robotern:
+  * Chaosfahren, Geradefahren, Linienfolger, Wandfolger (Labyrinth)
+* Kommunikation: Roboter <–> PC/Handy
+  * BT, GSM, WIFI
+  * PC: C#-Programmierung
+  * Einfache Protokolle
+* ESP32-Einführung mit eigenen kleinen Projekten
 
 ---
 
@@ -111,3 +176,40 @@ author: Franz Lauritsch, Günther Jena
 * Algorithmen zur Suche
 * Internet of Things (MQTT, ...)
 * Projekte mit ESP32 und RaspberryPi
+
+---
+
+### Python
+
+* Zählt zu den beliebtesten Programmiersprachen
+<br><small>Quellen [Github](https://pypl.github.io/PYPL.html), [TIOBE](https://www.tiobe.com/tiobe-index/)</small>
+* Zählt zu den meist verwendeten Programmiersprachen
+<br><small>Quellen [Stackoverflow](https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages), [Microsoft](https://devblogs.microsoft.com/python/supporting-the-python-community/)</small>
+
+---
+
+### Algorithmen
+<section>
+    <ul>
+        <li>Graphentheorie</li>
+            <ul><li>Suche</li><li>Spieltheorie</li></ul>
+        <li>Evolutinäre Algorithmen</li>
+        <li>Neuronale Netze</li>
+    </ul>
+</section>
+<section><img alt"Evolutionäre Algorithmen" src="smb.png"></section>
+<section><video controls width="500"><source src="i2.webm" type="video/webm"/></video><p>Iteration 1</p></section>
+<section><video controls width="500"><source src="i4.webm" type="video/webm"/></video><p>Iteration 4</p></section>
+<section><video controls width="500"><source src="i11.webm" type="video/webm"/></video><p>Iteration 11</p></section>
+
+---
+
+### Internet of Things
+
+* MQTT Protokoll
+* ESP32 & Raspberry Pi
+* Safety & Security
+
+---
+
+## Zusammenfassung
