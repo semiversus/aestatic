@@ -191,6 +191,7 @@ author: Franz Lauritsch, Günther Jena
 ### Algorithmen
 <section>
     <ul>
+        <li>Inverse Kinematik</li>
         <li>Graphentheorie</li>
             <ul><li>Suche</li><li>Spieltheorie</li></ul>
         <li>Evolutinäre Algorithmen</li>
