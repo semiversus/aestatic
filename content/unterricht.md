@@ -26,7 +26,7 @@ title: Unterricht
 
 
 # Korrekturen
-Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Unkorrektheit bzw. Tipp- und
+Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Inkorrektheit bzw. Tipp- und
 Rechtschreibfehler - ich bin für jeden Hinweis dankbar!
 
 Bisher habe ich von folgenden Personen Korrekturhinweise bekommen:
