@@ -6,9 +6,11 @@ jobs:
   linkchecker:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Install linkchecker
         run: >
           sudo apt-get update && sudo apt-get install linkchecker
       - name: Run linkchecker
         run: |
-          linkchecker --check-extern -f ./linkcheckerrc https://semiversus.com
+          linkchecker --check-extern --no-status -f ./linkcheckerrc https://semiversus.com
