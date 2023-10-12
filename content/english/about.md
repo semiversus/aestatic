@@ -7,7 +7,7 @@ comments: false
 
 My name is Günther Jena and I'm from Kappl in Austria. Before my wedding my name was Günther Jehle and Jena is the concatenation of my former name "Jehle" and the former name of my wife "Nagel".
 
-I'm working as a software/electronics developer and I'm teaching at the polytechnical school [HTL Rankweil](https://www.htl-rankweil.at).
+I'm working as a software/electronics developer at [LaserAtWork](https://laseratwork.com) and I'm teaching at the polytechnical school [HTL Rankweil](https://www.htl-rankweil.at).
 
 My interests are software development and electronics. With this website I want to share my projects and use the blog as public notepad.
 
