@@ -60,7 +60,7 @@ Beispiel:
 >>> calc_tax(700)
 0
 >>> calc_tax(2000)
-252.734
+242.366  # using data from 2023: 985.42€: 0%, 1605,50€: 20%, 2683.92€: 30%
 ```
 
 ## Übung Zinseszins
