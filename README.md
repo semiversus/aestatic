@@ -8,6 +8,7 @@ There are still too few static website building tools out there. Here's mine.
 * install via `pip install .` (or `pip install -e .` if you want to work on the source code)
 * run `aestatic` - result is in folder ./output
 
+
 ### Using `poetry`
 * run `poetry shell` and then `poetry install`
 * run `aestatic` - result is in folder ./output
