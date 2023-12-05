@@ -8,7 +8,7 @@ Im zweiten Teil konzentrieren wir uns auf Firmware Projekte.
 * [PS2 Keyboard](keyboard.html)
 * [Wecker](wecker.html)
 * [Schrittmotorsteuerung](schrittmotor.html)
-* [micro:bit MicroPython](micropython.html)
+<!-- * [micro:bit MicroPython](micropython.html) -->
 * [Codeschloss](codeschloss.html)
 * [Servoansteuerung](servo.html)
 * [Morse-Uhr](morseuhr.html)
