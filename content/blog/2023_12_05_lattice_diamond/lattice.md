@@ -1,6 +1,6 @@
 title: Install Lattice Diamond on Linux
 date: 2023-12-05
-thumbnail: lattice_tb.jpg
+thumbnail: ../2023_09_29_lattice_icecube2/lattice_tb.jpg
 english: true
 
 Do you have troubles with segmentation faults using Diamond on your Linux computer? Lattice is providing a Linux installation for Diamond [here](https://www.latticesemi.com/latticediamond).
