@@ -1,3 +1,6 @@
+title: Typische Probleme
+parent: uebersicht.md
+
 # Sammlung an typischen Problemen
 
 Manche Skripte haben Probleme mit folgenden Dingen:
