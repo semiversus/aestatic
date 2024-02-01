@@ -23,6 +23,7 @@ title: Unterricht
 # Hardwareentwicklung
 * [Projekte Teil 1](hwe/teil1/uebersicht.html)
 * [Projekte Teil 2](hwe/teil2/uebersicht.html)
+* [Projekte Teil 3](hwe/teil3/uebersicht.html)
 
 
 # Korrekturen

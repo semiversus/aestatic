@@ -6,6 +6,8 @@ parent: ../../unterricht.md
 1. [Erste Beispiele](beispiele.html)
 1. [Datentypen](datentypen.html)
 
+[Wenn was nicht funktioniert...](problem.html)
+
 # Übungen
 1. [VSCode und erste Übung](homework1.html)
 1. [TODO](homework2.html)
