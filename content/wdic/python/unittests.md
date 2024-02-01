@@ -7,8 +7,11 @@ Vorbereitungen:
 
 1. Neues Verzeichnis erstellen (Name `unittests`)
 1. Dieses Verzeichnis mit VS Code öffnen
+1. Eine leere Datei `main.py` in diesem Ordner erstellen
 1. In VS Code das Terminal öffnen und `python -m venv .venv` ausführen
-1. VS Code sollte nun die virtuelle Umgebung erkennen und fragen, ob man es auswählen will -> Dies mit "Ja" (bzw. "Yes") bestätigen
+1. Nun gibt es zwei Varianten:
+  1. VS Code sollte nun die virtuelle Umgebung erkennen und fragen, ob man es auswählen will -> Dies mit "Ja" (bzw. "Yes") bestätigen
+  2. Falls VS Code nicht nachfragt, hilft es das aktuelle Terminal zu schließen (Mülleimer-Symbol) und wieder zu öffnen
 1. Das Paket pytest mittels `python -m pip install pytest` installieren
 
 ## Übung Durchschnittsalter
@@ -57,7 +60,7 @@ Beispiel:
 >>> calc_tax(700)
 0
 >>> calc_tax(2000)
-252.734
+242.366  # using data from 2023: 985.42€: 0%, 1605,50€: 20%, 2683.92€: 30%
 ```
 
 ## Übung Zinseszins
