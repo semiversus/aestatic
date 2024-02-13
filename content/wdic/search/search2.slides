@@ -1,4 +1,4 @@
-title: Suche
+title: Suche (2)
 
 ### Beispiele für Suchprobleme
 
@@ -12,7 +12,14 @@ title: Suche
 
 ### Terminologie
 
-* Agent
+* *Agent*
+* *Zustand* (und *Initialer Zustand*)
+* *Aktionen*
+* *Übergangsmodel*
+* *Zustandsraum*
+* *Zieltest*
+* *Pfadkosten*
+* *Lösung*
 
 ---
 
@@ -31,6 +38,67 @@ Ein *Zustand* ist eine Konfiguration der Umgebung und des Agenten.
 ### Initialer Zustand
 
 Der Zustand, mit dem ein Agent anfängt zu arbeiten.
+
+---
+
+### Aktionen
+
+Alle Maßnahmen, die ein Agent nutzen kann, um von einem Zustand in einen anderen zu kommen.
+
+Meist sind die möglichen Aktionen abhängig vom aktuellen Zustand.
+
+`actions(state: State) -> set[Action]`
+
+---
+
+### Übergangsmodel
+
+Liefert uns den nächsten Zustand, abhängig vom aktuellen Zustand und der gewählten Aktion.
+
+`result(state: State, action: Action) -> State`
+
+---
+
+### Zustandsraum
+
+Die Gesamtheit aller Zustände und der Übergänge dazwischen.
+
+---
+
+### Zieltest
+
+Stellt fest, ob der aktuelle Zustand ein Zielzustand ist.
+
+`goal(state: State) -> bool`
+
+---
+
+### Pfadkosten
+
+Maßeinheit für die Kosten, die bei einem Pfad über mehrere Zustände entstehen.
+
+<small>Es gibt viele Wege zwischen Wien und Berlin, aber wir suchen den kürzsten oder schnellsten</small>
+
+---
+
+### Suchproblem
+* Initialer Zustand
+* Aktionen
+* Übergangsmodel
+* Zieltest
+* Pfadkosten
+
+---
+
+### Lösung
+
+Eine Abfolge von *Aktionen* die vom *initialen Zustand* zu einem *Zustand*, welcher den *Zieltest* besteht, führt.
+
+---
+
+### Optimale Lösung
+
+Die Lösung mit den niedrigsten *Pfadkosten*
 
 ---
 
