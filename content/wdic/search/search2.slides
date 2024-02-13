@@ -1,0 +1,36 @@
+title: Suche
+
+### Beispiele für Suchprobleme
+
+* Lösen des 15-Puzzle oder Zauberwürfels
+* Routenplanung
+* Spiel-KI für Schach oder Go
+* Genomsequenzierung
+* Optimierungsprobleme
+
+---
+
+### Terminologie
+
+* Agent
+
+---
+
+### Agent
+
+Ein *Agent* kann seine Umgebung wahrnehmen und in irgendeiner Weise auf diese Umgebung einwirken.
+
+---
+
+### Zustand
+
+Ein *Zustand* ist eine Konfiguration der Umgebung und des Agenten.
+
+---
+
+### Initialer Zustand
+
+Der Zustand, mit dem ein Agent anfängt zu arbeiten.
+
+---
+
