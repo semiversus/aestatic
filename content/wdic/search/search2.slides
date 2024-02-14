@@ -102,3 +102,11 @@ Die Lösung mit den niedrigsten *Pfadkosten*
 
 ---
 
+### Lösungsansatz
+
+* Start mit einer offenen Liste, die anfangs nur den initialen Zustand beinhaltet
+* Wiederhole folgende Punkte
+  * Wenn die offene Liste leer ist gibt es keine Lösung
+  * Entnehme einen Zustand aus der offenen Liste
+  * Wenn der Zustand den Zieltest besteht, habe wir eine Lösung
+  * Finde weitere Zustand und füge sie zur offenen Liste
