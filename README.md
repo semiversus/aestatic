@@ -21,15 +21,16 @@ Bisher wurden die Elemente der kombinatorischen Schaltnetze und der sequentielle
 ## Icons for links
 Internal links are rendered as usual. Download links are rendered like this and have a tool tip telling filename and size:
 
-![Download Link](documentation/download_link.png)
+<img src='./documentation/download_link.png' style="border: 2px solid  gray; border-radius:15px">
 
 External links are also marked as such:
 
-![External Link](documentation/external_link.png)
+<img src='./documentation/external_link.png' style="border: 2px solid  gray; border-radius:15px">
+
 
 ## Breadcrumbs and forward/backward navigation
-![Navigation](documentation/navigation.png)
 
+<img src='./documentation/navigation.png' style="border: 2px solid  gray; border-radius:15px">
 
 ## How to build the website
 ### Using `venv` and `pip`
