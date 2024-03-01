@@ -4,7 +4,7 @@ parent: uebersicht.md
 
 # Kurzbeschreibung
 Die Änderung der Kapazität zwischen zwei leitenden Platten ist eine Möglichkeit den Füllstand in einem Behälter
-zu messen (siehe [kapazitive Füllstandsmessung](https://de.wikipedia.org/wiki/Kapazitive_F%C3%BCllstandmessung)).
+zu messen (siehe [kapazitive Füllstandsmessung](https://de.wikipedia.org/wiki/Kapazitive_Füllstandmessung)).
 
 Mittels des Bausteins Timer [NE555](https://de.wikipedia.org/wiki/NE555) wird eine [astabile Kippstufe](https://de.wikipedia.org/wiki/NE555#Astabile_Kippstufe)
 betrieben. Die Frequenz des erzeugtenRechtecksignal ist dann abhängig vom Füllstand im Behälter.

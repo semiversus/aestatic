@@ -16,8 +16,7 @@ Neben den bitweisen Operatoren gibt es noch die logischen Verknüpfungen, die de
 
 Hier fehlt offensichtlich die Exklusive *ODER* Verknüpfung - wieso gibt es kein `^^`?
 
-Eine gute Antwort findet sich auf dieser [Seite](https://benpfaff.org/writings/clc/logical-xor.html)
-von Ben Pfaff. Und hier eine kurze Zusammenfassung:
+Mögliche Gründe sind:
 
 * Eine logische *Exklusiv ODER* Verknüpfung ist sehr selten.
 * Die Kurzschlussauswertung wird nicht ermöglicht - Ist bei einer *UND* Verknüpfung der erste Term falsch muss der zweite nicht
