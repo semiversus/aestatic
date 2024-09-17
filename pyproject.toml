@@ -5,7 +5,7 @@ description = ""
 authors = ["Günther Jena <guenther@jena.at>"]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"
+python = ">=3.10"
 jinja2 = "^3.1.2"
 libsass = "^0.22.0"
 python-slugify = "^8.0.0"

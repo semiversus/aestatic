@@ -4,7 +4,7 @@ next: beispiele.md
 
 # Vorbereitungen fürs Tutorial
 Für unsere Arbeit benötigen wir:
-* **Python** (einfach eine möglichst aktuelle Version spricher ab ~3.8)
+* **Python** (einfach eine möglichst aktuelle Version)
 * **Visual Studio Code**
   * Extension für Python
 
@@ -14,7 +14,7 @@ Für das Tutorial ist es egal, unter welcher Plattform gearbeitet wird (Windows/
 Hier geht's zum Download: [Visual Studio Code Download](https://code.visualstudio.com/download) . Wählt die für euch passende Plattform aus und führt die Installation durch.
 
 # Installation Python
-Wir benötigen eine Python Installation mit Version >= 3.6.
+Wir benötigen eine Python Installation mit Version >= 3.8.
 
 Es gibt viele Möglichkeiten Python zu installieren und manche Plattformen liefern Python direkt mit (MacOS/Linux). Sollte dies nicht der Fall sein oder nur eine alte Version vorhanden sein, gibt es eine Downloadmöglichkeit hier: [Python Download](https://www.python.org/downloads/)
 
