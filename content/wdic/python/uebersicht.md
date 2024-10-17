@@ -12,6 +12,7 @@ parent: ../../unterricht.md
 1. [VSCode und erste Übung](homework1.html)
 1. [TODO](homework2.html)
 1. [Unittests](unittests.html)
+1. [Kleine Beispiele](homework3.html)
 <!-- Shuffle für Lieder -->
 
 # Tests
