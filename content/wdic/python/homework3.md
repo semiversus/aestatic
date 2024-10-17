@@ -3,7 +3,8 @@ parent: uebersicht.md
 
 Für alle Übungen sollte man sich das Verhalten bei Grenzfällen überlegen und entsprechende Fehlerausgaben implementieren. Jede Übung ergebt Punkte, aufgeteilt auf die eigentliche Übung und eine Erweiterung.
 
-# Namen sortieren <span class="tag is-rounded is-info">1 + 2 Punkte</span>
+# Namen sortieren
+<span class="tag is-rounded is-info">1 + 2 Punkte</span>
 Der Benutzer soll eine Liste an Namen eingeben können. Wenn der Nutzer statt einers Namens einfach Enter betätigt, sollen die Namen in sortierter Reihenfolge ausgegeben werden.
 
 ```
@@ -20,7 +21,8 @@ Susanne Sonne
 
 Erweiterung: Die Sortierung soll nicht nach dem Vornamen sondern dem Nachnamen erfolgen. Dazu gehen wir davon aus, dass das letzte Wort der Nachname ist.
 
-# Tabelle zeichnen <span class="tag is-rounded is-info">2 + 2 Punkte</span>
+# Tabelle zeichnen
+<span class="tag is-rounded is-info">2 + 2 Punkte</span>
 Der Benutzer wird nach Breite und Höhe einer Tabelle gefragt und diese wird im Anschluss gezeichnet.
 
 ```
@@ -42,7 +44,8 @@ Erweiterung: In die Kästchen sollen abwechselnd die Zeichen X und O eingefügt 
 +-+-+-+-+-+
 ```
 
-# Hangman <span class="tag is-rounded is-info">3 + 1 Punkte</span>
+# Hangman
+<span class="tag is-rounded is-info">3 + 1 Punkte</span>
 Beim Spiel Hangman soll der Spieler probieren ein Wort zu raten, in dem er Buchstaben vorgibt. Ist der Buchstabe richtig, werden die richtigen Buchstaben angezeigt. Bei einem Fehler wird die Anzahl der möglichen Versuche verringert (es startet mit 5 Versuchen)
 
 ```
@@ -65,7 +68,8 @@ ROBOTIK – Richtig!
 
 Erweiterung: Bei der Eingabe und beim Wort sollen Groß- und Kleinschreibung ignoriert werden.
 
-# Kleinste Differenz <span class="tag is-rounded is-info">2 + 2 Punkte</span>
+# Kleinste Differenz
+<span class="tag is-rounded is-info">2 + 2 Punkte</span>
 Der Benutzer soll eine Liste an Zahlen eingeben können. Wenn der Nutzer statt einer Zahl einfach Enter betätigt, sollen die beiden Zahlen mit der kleinsten Differenz ausgegeben werden
 
 ```
@@ -78,7 +82,8 @@ Die beiden Zahlen mit der kleinsten Differenz sind 7 und 8
 
 Erweiterung: Erlaube die Verarbeitung von Kommazahlen. Dabei soll der Nutzer `.` und `,` als Dezimaltrennzeichen verwenden können.
 
-# Häufigster Buchstabe <span class="tag is-rounded is-info">2 + 1 Punkte</span>
+# Häufigster Buchstabe
+<span class="tag is-rounded is-info">2 + 1 Punkte</span>
 Der Benutzer soll einen Satz eingeben können und das Programm ermittelt, welcher Buchstabe am häufigsten vorkommt.
 
 ```
@@ -88,7 +93,8 @@ Der häufigste Buchstabe ist e
 
 Mögliche Erweiterung: Die Groß- und Kleinschreibung soll ignoriert werden. Es soll außerdem der zweit und dritthäufigste Buchstabe angezeigt werden.
 
-# Geldausgabe <span class="tag is-rounded is-info">3 + 3 Punkte</span>
+# Geldausgabe
+<span class="tag is-rounded is-info">3 + 3 Punkte</span>
 Wir gehen von der 1 Euro Münze bis zum 100 Euro Schein aus. Der Benutzer wird nach einem Betrag gefragt und das Programm gibt aus welche Scheine und Münzen man minimal benötigt, um diesen Betrag abzubilden.
 
 ```
@@ -101,7 +107,8 @@ Betrag: 149
 
 Mögliche Erweiterung: Nutze Kommazahlen als Betrag und Erweitere die Ausgabe um Cent Münzen. Erweitere die Ausgabe um das Wort “Schein” und “Münze” (z.B. 1x100 Schein)
 
-# Zeitangabe <span class="tag is-rounded is-info">3 + 3 Punkte</span>
+# Zeitangabe
+<span class="tag is-rounded is-info">3 + 3 Punkte</span>
 Der Benutzer trägt einen Wert in Sekunden ein und die Ausgabe wird in Jahre, Tage, Stunden, Minuten und Sekunden angezeigt.
 
 ```
