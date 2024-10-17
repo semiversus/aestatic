@@ -5,6 +5,7 @@ Für alle Übungen sollte man sich das Verhalten bei Grenzfällen überlegen und
 
 # Namen sortieren
 <span class="tag is-rounded is-info">1 + 2 Punkte</span>
+
 Der Benutzer soll eine Liste an Namen eingeben können. Wenn der Nutzer statt einers Namens einfach Enter betätigt, sollen die Namen in sortierter Reihenfolge ausgegeben werden.
 
 ```
@@ -23,6 +24,7 @@ Erweiterung: Die Sortierung soll nicht nach dem Vornamen sondern dem Nachnamen e
 
 # Tabelle zeichnen
 <span class="tag is-rounded is-info">2 + 2 Punkte</span>
+
 Der Benutzer wird nach Breite und Höhe einer Tabelle gefragt und diese wird im Anschluss gezeichnet.
 
 ```
@@ -46,6 +48,7 @@ Erweiterung: In die Kästchen sollen abwechselnd die Zeichen X und O eingefügt 
 
 # Hangman
 <span class="tag is-rounded is-info">3 + 1 Punkte</span>
+
 Beim Spiel Hangman soll der Spieler probieren ein Wort zu raten, in dem er Buchstaben vorgibt. Ist der Buchstabe richtig, werden die richtigen Buchstaben angezeigt. Bei einem Fehler wird die Anzahl der möglichen Versuche verringert (es startet mit 5 Versuchen)
 
 ```
@@ -70,6 +73,7 @@ Erweiterung: Bei der Eingabe und beim Wort sollen Groß- und Kleinschreibung ign
 
 # Kleinste Differenz
 <span class="tag is-rounded is-info">2 + 2 Punkte</span>
+
 Der Benutzer soll eine Liste an Zahlen eingeben können. Wenn der Nutzer statt einer Zahl einfach Enter betätigt, sollen die beiden Zahlen mit der kleinsten Differenz ausgegeben werden
 
 ```
@@ -84,6 +88,7 @@ Erweiterung: Erlaube die Verarbeitung von Kommazahlen. Dabei soll der Nutzer `.`
 
 # Häufigster Buchstabe
 <span class="tag is-rounded is-info">2 + 1 Punkte</span>
+
 Der Benutzer soll einen Satz eingeben können und das Programm ermittelt, welcher Buchstabe am häufigsten vorkommt.
 
 ```
@@ -95,6 +100,7 @@ Mögliche Erweiterung: Die Groß- und Kleinschreibung soll ignoriert werden. Es 
 
 # Geldausgabe
 <span class="tag is-rounded is-info">3 + 3 Punkte</span>
+
 Wir gehen von der 1 Euro Münze bis zum 100 Euro Schein aus. Der Benutzer wird nach einem Betrag gefragt und das Programm gibt aus welche Scheine und Münzen man minimal benötigt, um diesen Betrag abzubilden.
 
 ```
@@ -109,6 +115,7 @@ Mögliche Erweiterung: Nutze Kommazahlen als Betrag und Erweitere die Ausgabe um
 
 # Zeitangabe
 <span class="tag is-rounded is-info">3 + 3 Punkte</span>
+
 Der Benutzer trägt einen Wert in Sekunden ein und die Ausgabe wird in Jahre, Tage, Stunden, Minuten und Sekunden angezeigt.
 
 ```
@@ -118,7 +125,9 @@ Anzahl an Sekunden: 94200
 
 Erweiterung: Statt der Kurzzeichen soll Stunden/Stunde usw. ausgeben werden. Bei Anzahl 0 soll der entsprechende Wert nicht ausgegeben werden. Die Ausgabe wird durch Beistriche getrennt und der letzte Wert mit ` und ` ausgegeben z.B. `1 Tag, 2 Stunden und 10 Minuten`.
 
-# Zahlen in Worte wandeln <span class="tag is-rounded is-info">3 + 3 Punkte</span>
+# Zahlen in Worte wandeln
+<span class="tag is-rounded is-info">3 + 3 Punkte</span>
+
 Der Benutzer gibt eine Zahl kleiner Hundert ein und diese Zahl wird dann in Worten ausgegeben.
 
 ```
