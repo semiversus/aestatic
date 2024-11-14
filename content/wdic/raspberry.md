@@ -8,6 +8,8 @@ parent: ../unterricht.md
   * 64 Bit Version wird bevorzugt (32 Bit geht aber auch)
   * Die *Lite* Version ist die minimale Installation und reicht für unsere Anwendungen vollkommen aus
 * Kopieren der Datei [firstrun.sh](./raspberry/firstrun.sh) auf die SD Karte (in die FAT32 Bootpartition)
+* Editieren der Datei `cmdline.txt`
+  * Falls es keinen Eintrag `systemd.run=/boot/firstrun.sh`... gibt, diesen hinzufügen 
 * Öffne die Datei und ändere in der 3. Zeile den Namen ("max_muster" ist voreingestellt)
 * SD Karte in den Raspberry Pi stecken und booten
 
