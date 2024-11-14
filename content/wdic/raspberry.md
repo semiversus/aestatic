@@ -4,7 +4,13 @@ parent: ../unterricht.md
 # Inbetriebnahme
 ## Vorbereitungen
 
-* Netzwerkkabel (ausgekreuzt) zur Verbindung zwischen Notebook und RaspberryPi
-* SD- bzw. MicroSD-Karte mit aktuellem [Raspian Jessie](https://www.raspberrypi.com/software/)
-* RaspberryPi (funktioniert mit allen Versionen)
-* Versorgung für RaspberryPi (Netzteil mit Micro-USB Stecker oder über Notebook) Achtung: Spezifiziert mit bis zu 2 Ampere!
+* Flashen des aktuellen Raspberry Pi OS mittels [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+  * 64 Bit Version wird bevorzugt (32 Bit geht aber auch)
+  * Die *Lite* Version ist die minimale Installation und reicht für unsere Anwendungen vollkommen aus
+* Kopieren der Datei [firstrun.sh](./raspberry/firstrun.sh) auf die SD Karte (in die FAT32 Bootpartition)
+* Öffne die Datei und ändere in der 3. Zeile den Namen ("max_muster" ist voreingestellt)
+* SD Karte in den Raspberry Pi stecken und booten
+
+Der Raspberry Pi verbindet sich nun mit dem Wifi "wdic" (Passwort "raspberry"). Nun kann mittels [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) über SSH zugegriffen werden.
+
+* Der Benutzername ist "pi" (Passwort "raspberry")
