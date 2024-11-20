@@ -1,4 +1,4 @@
-title: Digital Signange
+title: Raspberry Pi Pico 2 Mainboard
 next: aggregator.md
 parent: uebersicht.md
 

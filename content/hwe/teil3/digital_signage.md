@@ -1,4 +1,4 @@
-title: Digital Signange
+title: Digital Signage
 next: pico2_mainboard.md
 parent: uebersicht.md
 
