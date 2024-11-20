@@ -2,12 +2,14 @@ title: Hardwareentwicklung Teil 3
 parent: ../../unterricht.md
 
 # Übersicht Projekte
-* Sumo Roboter (können zwei Gruppen wählen)
-* LED Panel mit RP2040 (C), RaspberryPi (Python), ESP32 (Micropython)
-* OLED Oszi
-* LoRa Kommunikation
-* Prozessor mit Transistoren
+* [Digital Signage](digital_signage.html)
+* [Raspberry Pi Pico 2 Mainboard](pico2_mainboard.html)
+* [Datenaggregator](aggregator.html)
+* [Prozessor](prozessor.html)
+* [FPGA Mainboard](fpga.html)
+* [Besucherzähler](visitor.html)
+
+## Weitere Ideen
 * IOT Schulklingel
 * GPS Logger
-* Vistor Counter
-* IOTify Megacard
+* [IOT](https://de.wikipedia.org/wiki/Internet_der_Dinge)ify Megacard
