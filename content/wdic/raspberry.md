@@ -9,7 +9,7 @@ parent: ../unterricht.md
   * Die *Lite* Version ist die minimale Installation und reicht für unsere Anwendungen vollkommen aus
 * Kopieren der Datei [firstrun.sh](./raspberry/firstrun.sh) auf die SD Karte (in die FAT32 Bootpartition)
 * Editieren der Datei `cmdline.txt`
-  * Falls es keinen Eintrag `systemd.run=/boot/firstrun.sh`... gibt, diesen hinzufügen 
+  * Falls es keinen Eintrag `systemd.run=/boot/firstrun.sh systemd.run_success_action=reboot systemd.unit=kernel-command-line.target` gibt, diesen hinzufügen 
 * Öffne die Datei und ändere in der 3. Zeile den Namen ("max_muster" ist voreingestellt)
 * SD Karte in den Raspberry Pi stecken und booten
 
