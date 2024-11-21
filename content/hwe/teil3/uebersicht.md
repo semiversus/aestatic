@@ -8,6 +8,7 @@ parent: ../../unterricht.md
 * [Prozessor](prozessor.html)
 * [FPGA Mainboard](fpga.html)
 * [Besucherzähler](visitor.html)
+* [Fanuc Roboterarm](fanuc.html)
 
 ## Weitere Ideen
 * IOT Schulklingel

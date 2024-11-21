@@ -1,4 +1,5 @@
 title: Besucherzähler
+next: fanuc.md
 parent: uebersicht.md
 
 # Projekt: Besucherzähler mittels Bluetooth MAC Adressen und MQTT
