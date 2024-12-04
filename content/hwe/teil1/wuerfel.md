@@ -18,7 +18,7 @@ Das zentrale Bauteil ist der *NE555*
 
 * Wie ist ein NE555 aufgebaut?
 * Wie lässt sich die Frequenz einstellen?
-* Welche Probleme kommen auf, wenn die Zeitdauer mehrere Minuten umfasst
+* Wodurch wird die maximale Frequenz limitiert?
 
 # Spezifikation
 * Die Frequenz des Timers soll zwischen 10kHz und 100kHz liegen
