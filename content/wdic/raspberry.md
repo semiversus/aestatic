@@ -16,3 +16,8 @@ parent: ../unterricht.md
 Der Raspberry Pi verbindet sich nun mit dem Wifi "wdic" (Passwort "raspberry"). Nun kann mittels [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) über SSH zugegriffen werden.
 
 * Der Benutzername ist "pi" (Passwort "raspberry")
+
+## Verbinden über VS Code
+VS Code bietet die Möglichkeit sich per SSH mit dem RaspberryPi zu verbinden und dann direkt auf dem RaspberryPi zu arbeiten. Dazu ist die VS Code Extension "Remote Explorer" notwendig.
+
+Weitere Infos gibt es hier: [Raspberry Pi Remote Development Based On VSCode Tutorial](https://www.waveshare.com/wiki/Raspberry_Pi_Remote_Development_Based_On_vscode_Tutorial)
