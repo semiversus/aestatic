@@ -23,3 +23,8 @@ VS Code bietet die Möglichkeit sich per SSH mit dem RaspberryPi zu verbinden un
 Weitere Infos gibt es hier:
 * [Raspberry Pi Remote Development Based On VSCode Tutorial](https://www.waveshare.com/wiki/Raspberry_Pi_Remote_Development_Based_On_vscode_Tutorial)
 * [https://code.visualstudio.com/docs/remote/ssh](https://code.visualstudio.com/docs/remote/ssh)
+
+## Git `user.name` und `user.email`
+Im Terminal (am Raspberry) folgenden Befehl ausführen:
+* `git config --global user.name "Max Muster"`
+* `git config --global user.email "max@muster.com"`
