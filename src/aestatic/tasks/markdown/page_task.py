@@ -53,7 +53,7 @@ class Page:
     @property
     def summary(self) -> str:
         paragraphs = BeautifulSoup(self.content, "html.parser").find_all(['p', 'ul', 'ol'])
-        
+
         if not paragraphs:
             return ""
 
@@ -63,7 +63,7 @@ class Page:
                 continue
 
             summary.append(paragraph)
-            
+
             if sum(len(p.text) for p in summary) > 300:
                 if len(summary) == 1:
                     continue
@@ -91,7 +91,11 @@ class Page:
         renderer.english = meta["english"]
         renderer.path = "output" / meta["path"].parent
         renderer.root_path = os.path.relpath("output", renderer.path)
-        meta["content"] = markdown_convert(source_content)
+        try:
+            meta["content"] = markdown_convert(source_content)
+        except Exception as e:
+            raise ValueError(f"Problem parsing content from {path}") from e
+
         meta["latex"] = meta.get("latex", "").lower() == "true"
         meta["comments"] = meta.get("comments", "true").lower() == "true"
         meta["draft"] = meta.get("draft", "false").lower() == "true"
@@ -116,7 +120,7 @@ class PageTask(BaseTask):
 
         pages = [Page.from_path(p) for p in files]
         pages = [p for p in pages if not p.draft]
-        
+
         lookup_files = {page.path: page for page in pages}
 
         for page in pages:

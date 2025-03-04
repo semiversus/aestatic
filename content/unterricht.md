@@ -16,9 +16,8 @@ title: Unterricht
 * [Projektmanagment](wdic/projektmanagment/uebersicht.html)
 * [Python](wdic/python/uebersicht.html)
 * [RaspberryPi](wdic/raspberry.html)
-* [Suchalgorithmen](wdic/search/uebersicht.html)
 * [ESP32](wdic/esp32/installation.html)
-* [Maschinelles Lernen](wdic/maschinelles_lernen/ml.html)
+* [Maschinelles Lernen](wdic/maschinelles_lernen/uebersicht.html)
 
 # Hardwareentwicklung
 * [Projekte Teil 1](hwe/teil1/uebersicht.html)
