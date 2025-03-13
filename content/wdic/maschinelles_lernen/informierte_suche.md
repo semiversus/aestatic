@@ -1,5 +1,6 @@
 title: Informierte Suche
 parent: uebersicht.md
+next: dijkstra.md
 
 
 Die *informierte Suche* ist ein wichtiges Konzept in der Graphentheorie und des maschinellen Lernens. Im Gegensatz zur uninformierten Suche nutzt sie zusätzliches Wissen über das Problem, um die Effizienz des Suchverfahrens zu verbessern.

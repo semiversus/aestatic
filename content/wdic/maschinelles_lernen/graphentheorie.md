@@ -1,6 +1,6 @@
 title: Graphentheorie
 parent: uebersicht.md
-next: uninformierte_suche.md
+next: huffman.md
 
 # Allgemeines
 

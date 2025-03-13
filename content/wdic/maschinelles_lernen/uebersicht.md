@@ -6,13 +6,10 @@ parent: ../../unterricht.md
 * [Huffman Kodierung](huffman.html)
 * [Uninformierte Suche](uninformierte_suche.html)
 * [Informierte Suche](informierte_suche.html)
+  * [Dijkstra Algorithmus](dijkstra.html)
   * [A* Suche](a_star.html)
 * [Spieltheorie](spieltheorie.html)
 * [Beispiele](beispiele.html)
-
-# Foliensatz
-* [Graphentheorie](search.html)
-* [Maschinelles Lernen](search2.html)
 
 # Tests
 * [Test 1](test1.pdf)
