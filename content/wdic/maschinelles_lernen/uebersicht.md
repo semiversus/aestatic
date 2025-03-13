@@ -8,7 +8,7 @@ parent: ../../unterricht.md
 * [Informierte Suche](informierte_suche.html)
   * [Dijkstra Algorithmus](dijkstra.html)
   * [A* Suche](a_star.html)
-* [Spieltheorie](spieltheorie.html)
+* [Min-Max Algorithmus](minmax.html)
 * [Beispiele](beispiele.html)
 
 # Tests
