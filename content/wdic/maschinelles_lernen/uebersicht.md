@@ -6,8 +6,8 @@ parent: ../../unterricht.md
 * [Huffman Kodierung](huffman.html)
 * [Uninformierte Suche](uninformierte_suche.html)
 * [Informierte Suche](informierte_suche.html)
-  * [Dijkstra Algorithmus](dijkstra.html)
   * [A* Suche](a_star.html)
+  * [Dijkstra Algorithmus](dijkstra.html)
 * [Min-Max Algorithmus](minmax.html)
 * [Beispiele](beispiele.html)
 
