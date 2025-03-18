@@ -1,6 +1,6 @@
 title: A* Algorithmus
 parent: informierte_suche.md
-next: minmax.md
+next: dijkstra.md
 
 # Einleitung
 Der *A*-Algorithmus ist ein informiertes Suchverfahren, das in der Graphentheorie und der künstlichen Intelligenz eingesetzt wird. Er kombiniert die Vorteile der Breitensuche mit einer heuristischen Schätzung der Kosten und findet so den kürzesten Pfad von einem Startknoten zu einem Zielknoten.

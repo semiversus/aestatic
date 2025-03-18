@@ -1,6 +1,6 @@
 title: Dijkstra Algorithmus
 parent: informierte_suche.md
-next: a_star.md
+next: minmax.md
 
 # Einleitung
 Der *Dijkstra Algorithmus* ist ein Verfahren aus der Graphentheorie, das zur Bestimmung des kürzesten Pfades in einem gewichteten Graphen eingesetzt wird. Der Algorithmus wurde von dem niederländischen Informatiker [Edsger W. Dijkstra](https://de.wikipedia.org/wiki/Edsger_W._Dijkstra) entwickelt und erstmals 1959 veröffentlicht.
