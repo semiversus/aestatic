@@ -30,3 +30,19 @@ Wählt der erste Spieler zum Beispiel die Aufteilung in die Teilgruppen 2 und 5,
 Die möglichen Züge und deren Konsequenzen können in einem Spielbaum dargestellt werden. Jeder Knoten im Baum repräsentiert einen Spielzustand, der durch die Anzahl der Streichhölzer und den Spieler bestimmt wird. Die Kanten des Baumes stellen die möglichen Züge dar, die zu einem neuen Spielzustand führen.
 
 Die folgende Abbildung zeigt den Spielbaum für das Nim-Spiel mit 7 Streichhölzern:
+![Nim](nim1.jpg)
+
+## Min-Max Anwendung
+* Wir starten mit der Zuordnung der Spieler. Hier startet unser Gegenspieler "They".
+* Ist gibt drei Endzustände in diesem Spiel:
+  * 1-1-1-1-1-2: Diesen Zug hat unser Gegenspieler gemacht und wir verlieren. Es wird mit -1 markiert
+  * 1-1-1-2-2: Diesen Zug haben wir gemacht und dadurch gewinnen wir. Es wird mit +1 markiert
+  * 1-2-2-2: Diesen Zug hat wieder unser Gegenspieler gemacht und wir verlieren. Es wird mit -1 markiert
+
+Nun werden die einzelnen Knoten bewertet. Unser Gegenspieler wird den Knoten wählen, der zu einem Minimum führt,
+wir wählen den Knoten der zu einem Maximum führt.
+
+Vollständiger gelöster Baum:
+![Nim](nim2.jpg)
+
+Wir sehen, dass unser Gegenspieler keine Chance auf einen Sieg hat, sofern wir keinen Fehler machen.
