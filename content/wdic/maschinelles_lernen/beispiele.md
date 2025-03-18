@@ -61,3 +61,4 @@ parent: uebersicht.md
 
 # Min-Max
 
+[Min Max Beispiel](minmax.html#beispiel-nim-spiel-variante)
