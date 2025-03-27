@@ -22,6 +22,12 @@ Arthur Samuel prägt 1959 den Begriff *Machine Learning*
 
 ---
 
+Tom Mitchell definiert 1998
+
+> Ein Programm lernt aus seiner Erfahrung *E* bezüglich einer Aufgabe *A* und eines Performance-Maßes *P*, wenn seine Leistung bei *A*, gemessen durch *P*, sich mit der Erfahrung *E* verbessert.
+
+---
+
 ### Supervised Learning
 
 * Datensatz mit bekannten Ergebnissen existiert
@@ -33,6 +39,14 @@ Arthur Samuel prägt 1959 den Begriff *Machine Learning*
     Beispiel für Maximumssuche: https://www.geogebra.org/graphing/rtk3xmax
     Beispiel für [lineare Regression](./lineare_regression.html)
 
+---
+
+### Supervised Learning
+
+Daten haben beschreibende Eigenschaften und Labels sind bekannt.
+
+.. notes::
+    [Anscombe's Quartett](https://en.wikipedia.org/wiki/Anscombe%27s_quartet)
 
 ---
 
@@ -40,6 +54,18 @@ Arthur Samuel prägt 1959 den Begriff *Machine Learning*
 
 * Datensatz hat beschreibende Eigenschaften, aber keine *Labels*
 * Aufgaben: Finde Gruppen, finde Anomalien
+
+---
+
+### k-means Clustering
+
+[Visualisierung](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
+
+---
+
+### DBSCAN
+
+[Visualisierung](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/)
 
 ---
 
