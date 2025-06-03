@@ -3,35 +3,32 @@ next: operatoren.md
 parent: uebersicht.md
 
 # Allgemeines
-Um eine digitale Schaltung beschreiben zu können benötigt man Leitungen, um einzelne Komponenten miteinander zu
-verbinden. *Leitungen* entsprechen bei VHDL sogennanten Signalen (Schlüsselwort `signal`). Um in VHDL ein Signal zu
-definiere muss das Signal einen bestimmten Signaltyp haben.
+Um eine digitale Schaltung beschreiben zu können, benötigt man Leitungen, um einzelne Komponenten miteinander zu
+verbinden. *Leitungen* entsprechen in VHDL den sogenannten Signalen (Schlüsselwort `signal`). Um in VHDL ein Signal zu
+definieren, muss dieses einen bestimmten Signaltyp besitzen.
 
-Der einfachste Signaltyp ist `bit`. Dieser Signaltyp kennt die beiden Werte `0` und `1`. Dies mag für digitale
-Schaltungen auf den ersten Blick ausreichend erscheinen, es gibt aber einige Situationen, in denen diese beiden Werte
-nicht ausreichen.
+Der einfachste Signaltyp ist `bit`. Dieser kennt die beiden Werte `0` und `1`. Das mag auf den ersten Blick für digitale Schaltungen ausreichend erscheinen, in der Praxis reichen diese beiden Werte jedoch oft nicht aus.
 
 Signale werden wie folgt definiert:
 
 ```vhdl
-signal <name> : <typ>; -- Signal <name> ist vom Typ <typ> und wird nicht initialisert
+signal <name> : <typ>; -- Signal <name> ist vom Typ <typ> und wird nicht initialisiert
 signal <name> : <typ> := <default>; -- Signal <name> ist vom Typ <typ> und wird mit <default> initialisiert
 ```
 
 # Standard Logic 1164
-Die der Bibliothek *Standard Logic 1164* werden Signaltypen definiert, die mehr als `0` und `1` darstellen können. Um
-diese Bibliothek in einer VHDL Datei zu verwenden sind folgende zwei Zeilen notwendig:
+In der Bibliothek *Standard Logic 1164* sind Signaltypen definiert, die mehr als nur `0` und `1` darstellen können. Um
+diese Bibliothek in einer VHDL-Datei zu verwenden, sind folgende zwei Zeilen erforderlich:
 
 ```vhdl
-library ieee ;
+library ieee;
 use ieee.std_logic_1164.all;
 ```
 
-Diese Typen haben 9 Werte (d.h. werden sie auch *9-wertige Logik* genannt)
+Diese Typen verfügen über neun Werte – daher spricht man auch von einer *9-wertigen Logik*:
 
-* `U`: *undefiniert* - wird für nichtinitalisierte Signale in der Simulation verwendet
-* `X`: *unbekannt* (starker Treiber) - wenn zwei Ausgänge miteinander verbunden werden, die gegeneinander treiben
-  (`0` und `1`)
+* `U`: *undefiniert* – wird in der Simulation für nicht initialisierte Signale verwendet
+* `X`: *unbekannt* (starker Treiber) – wenn zwei Ausgänge miteinander verbunden sind, die gegensätzliche Werte treiben (`0` und `1`)
 * `0`: *logische Null* (starker Treiber)
 * `1`: *logische Eins* (starker Treiber)
 * `Z`: *hochohmig*
@@ -40,43 +37,34 @@ Diese Typen haben 9 Werte (d.h. werden sie auch *9-wertige Logik* genannt)
 * `H`: *logische Eins* (schwacher Treiber)
 * `-`: *unwichtig* (vgl. *don't care* in KV-Diagrammen)
 
-Werden mehrere Ausgänge zusammengeschalten setzen sich starke Treiber gegenüber schwachen durch. Ein `U` setzt sich
-gegenüber aller anderen Werten durch. Die Funktion, die die Auflösung beschreibt nennt sich `resolution`-Funktion.
+Werden mehrere Ausgänge zusammengeschaltet, setzen sich starke Treiber gegen schwache durch. Ein `U` dominiert
+gegenüber allen anderen Werten. Die Funktion, die dieses Verhalten beschreibt, nennt sich *Resolution*-Funktion.
 
 .. warning:: *Resolved* Signale
-    Innerhalb eines FPGAs gibt es nie die Notwendigkeit mehrer Ausgänge **direkt** miteinander zu verbinden. Man hat
-    immer die Möglichkeit, dies über eine Kombinatorik zu tun.
+    Innerhalb eines FPGAs besteht keine Notwendigkeit, mehrere Ausgänge **direkt** miteinander zu verbinden. Solche Fälle lassen sich immer über eine kombinatorische Logik lösen.
 
 ## `std_logic` und `std_ulogic`
-Der Signaltyp `std_logic` wird in der Bibliothek *Standard Logic 1164* definiert und nutzt die oben gezeigte 9-wertige
-Logik. Der Signaltype `std_logic` ist *resolved*, d.h. es ist möglich mehrere Ausgänge direkt miteinander zu verbinden.
-Dies kann eine Fehlersuche erschweren, wenn versehentlich ein Signal von zwei Treibern angesteuert wird. Je nach Synthese-
-Tool wird kein Fehler angezeigt.
+Der Signaltyp `std_logic` aus der *Standard Logic 1164*-Bibliothek nutzt die oben beschriebene 9-wertige Logik. Er ist *resolved*, d. h. mehrere Treiber können gleichzeitig ein Signal ansteuern. Das kann die Fehlersuche erschweren – insbesondere, wenn das Synthese-Tool keine Warnung ausgibt.
 
-Um nun zu verhindern, dass versehentlich zwei Treiber ein Signal ansteuern gibt es den Signaltyp `std_ulogic`. Das *U*
-steht dabei für *unresolved* - es wird also bei mehreren Treibern nicht aufgelöst. Das Synthese-Tool gibt also auf
-alle Fälle einen Fehler aus.
+Zur Vermeidung solcher Fehler gibt es `std_ulogic`. Das *U* steht für *unresolved*, also nicht aufgelöst. Bei mehreren Treibern erzeugt das Tool einen Fehler.
 
-Was spricht für `std_logic`?
+Vorteile von `std_logic`:
+* Häufig in bestehenden Beispielen und Vorlagen verwendet
+* Viele VHDL-Generatoren nutzen `std_logic`
 
-* Viele bestehende Beispiele und Lösungen verwenden `std_logic`
-* Generierte VHDL Beschreibungen enthalten oft `std_logic`
+Vorteile von `std_ulogic`:
+* Fehler durch mehrfaches Treiben werden zuverlässig erkannt
+* Simulationen können (je nach Tool) schneller laufen, da keine Resolution notwendig ist
 
-Was spricht für `std_ulogic`?
-
-* Es ist nicht versehentlich möglich, mit mehreren Treibern ein Signal anzusteuern
-* Simulationen sind (manchmal) schneller, da es die *Resolution*-Funktion nicht benötigt
-
-Eine Umwandlung von `std_logic` zu `std_ulogic` und umgekehrt ist jederzeit möglich.
+Die Umwandlung zwischen `std_logic` und `std_ulogic` ist jederzeit möglich.
 
 .. info:: In diesem Skriptum wird `std_ulogic` verwendet
 
-    Alle gezeigten Beispiele mit `std_ulogic` lassen sich auch mittels `std_logic` realisieren.
+    Alle gezeigten Beispiele lassen sich auch mit `std_logic` realisieren.
 
 ## Definition eines Signals mit `std_ulogic`
-
 ```vhdl
-signal led_reg : std_ulogic := '0'; -- Hier wird das Signal led_reg als std_ulogic definiert und mit '0' initialisiert
+signal led_reg : std_ulogic := '0'; -- Signal vom Typ std_ulogic, initialisiert mit '0'
 ```
 
 # Busse mittels `std_ulogic_vector`
