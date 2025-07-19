@@ -24,6 +24,10 @@ title: Unterricht
 * [Projekte Teil 2](hwe/teil2/uebersicht.html)
 * [Projekte Teil 3](hwe/teil3/uebersicht.html)
 
+Bis 2025:
+* [Projekte Teil 1](hwe/teil1_alt/uebersicht.html)
+* [Projekte Teil 2](hwe/teil2_alt/uebersicht.html)
+
 
 # Korrekturen
 Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Inkorrektheit bzw. Tipp- und
