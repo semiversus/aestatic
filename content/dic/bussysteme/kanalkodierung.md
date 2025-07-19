@@ -2,26 +2,27 @@ title: Kanalkodierung
 parent: uebersicht.md
 
 # Allgemeines
-Um Information in digitaler Form zu Übertragen muss es über ein physkalisches Medium transportiert werden. Die Kanalkodierung bzw. genauer der Leitungskode beschreibt die Pegelfolgen, in der die Daten auf der Leitung liegen. Dies kann in elektrischer Form aber auch in optischer oder elektro-magnetischer Form beschrieben werden.
+Um Informationen in digitaler Form zu übertragen, müssen sie über ein physikalisches Medium transportiert werden. Die Kanalkodierung – genauer: der Leitungskode – beschreibt die Pegelfolgen, in denen die Daten auf der Leitung dargestellt werden. Dies kann in elektrischer, optischer oder elektromagnetischer Form erfolgen.
 
-## Synchrone und Asynchrone Übertragung
-Bei der synchronen Übertragung wird ein Taktsignal mitgeschickt. Der Empfänger kann sich dadurch mit dem Sender synchronisieren und die Daten empfangen.
+## Synchrone und asynchrone Übertragung
+Bei der **synchronen Übertragung** wird ein Taktsignal mitgeschickt. Der Empfänger kann sich dadurch mit dem Sender synchronisieren und die Daten korrekt empfangen.
 
-Bei der asynchronen Übertragung laufen Sender und Empfänger jeweils mit einer eigenen Taktfrequenz. Die Übertragung der einzelnen Symbole muss entweder mit einer genau definierten Symbolrate übertragen werden oder die einzelnen Symbole ermöglichen die Rückgewinnung des Taktes. Zur Rückgewinnung des Taktes werden die Taktflanken genutzt.
+Bei der **asynchronen Übertragung** arbeiten Sender und Empfänger mit jeweils eigener Taktfrequenz. Die Übertragung erfolgt entweder mit einer genau definierten Symbolrate oder die Symbole selbst ermöglichen die Rückgewinnung des Takts (z. B. durch Flankenwechsel im Signalverlauf).
 
 ## Gleichspannungsfreiheit
-In bestimmten Anwendung ist die Übertragung von Gleichspannungsanteilen nicht möglich. Dies ist z.B. der Fall, wenn das Signal zwecks galvanischer Trennung über einen Impulstransformator geführt wird. Das Potential sollte also im Mittel idealerweise bei 0 liegen. Kodes die dies ermöglichen werden als *gleichspannungsfrei* bezeichnet.
+In bestimmten Anwendungen ist die Übertragung von Gleichspannungsanteilen nicht möglich – etwa wenn das Signal zur galvanischen Trennung über einen Impulstransformator geführt wird. Das Signal sollte daher im Mittel einen Spannungswert von null aufweisen. Kodierungen, die dies gewährleisten, werden als *gleichspannungsfrei* bezeichnet.
 
 # Binäre Leitungskodes
+
 ## NRZ (Non Return to Zero)
-Im einfachsten Fall wird den logischen Zustände 0 und 1 ein Logikpegel auf der physischen Leitung zugeordnet.
+Im einfachsten Fall werden den logischen Zuständen 0 und 1 jeweils feste Pegel auf der physischen Leitung zugeordnet.
 
 ![NRZ](nrz.svg)
 
-Bei der RS232 Schnittstelle steht (nicht wie im obigen Beispiel) eine negative Spannung für logisch 1 und eine positive Spannung für logisch 0.
+Bei der RS232-Schnittstelle steht (entgegen dem obigen Beispiel) eine **negative** Spannung für logisch 1 und eine **positive** Spannung für logisch 0.
 
 ### Bitstuffing
-Ein Nachteil bei der NRZ Kodierung sind die fehlenden Flanken bei der Übertragung von vielen gleichen Symbolen (viele logische 0 oder 1). Um für solche Fälle zusätzliche Taktflanken zu erzeugen, kann durch *Bitstuffing* (oder deutsch Bitstopfen) ein zusätzliches invertiertes Bit eingefügt werden. Mit *Bitweite* beschreibt man dabei die Anzahl der Bits mit gleichem Pegel die zum Einfügen eines *Stopfbits* führt. Der Empfänger muss nach dem gleichen Prinzip dieses Stopfbit wieder entfernen.
+Ein Nachteil der NRZ-Kodierung ist das Fehlen von Signalflanken bei langen Folgen gleicher Bits (viele logische 0 oder 1). Um zusätzliche Taktflanken zu erzeugen, kann durch *Bitstuffing* (auch *Bitstopfen*) ein zusätzliches invertiertes Bit eingefügt werden. Mit *Bitweite* bezeichnet man dabei die maximale Anzahl gleicher Bits, nach der ein Stopfbit eingefügt wird. Der Empfänger muss dieses Stopfbit nach dem gleichen Prinzip wieder entfernen.
 
 .. figure:: bitstuffing.svg
     :title: Bitstopfen mit Weite 5
@@ -29,33 +30,36 @@ Ein Nachteil bei der NRZ Kodierung sind die fehlenden Flanken bei der Übertragu
     :source: https://commons.wikimedia.org/wiki/File:Bitstuffing.svg
     :license: Public Domain
 
-Am obigen Beispiel sieht man das Einfügen eines Stopfbits bei Bitweite 5.
+Im obigen Beispiel wird ein Stopfbit nach fünf gleichen Bits eingefügt.
 
-## NRZI
-Die *Non Return to Zero Invert* Kodierung ordnet einem der beiden Bit-Werte den bereits anliegenden Leitungszustand zu, dem anderen Bit-Wert einen Zustandswechsel (Invert). Daraus ergibt sich unmittelbar die Polaritätsfreiheit bei differentieller Übertragung: Ein Verpolen der Übertragungsleitung ändert nicht die Bitfolge. Wenn der Zustand, der keine Leitungszustandsänderung bringt, zu oft übertragen wird, kann auch durch die fehlenden Flanken die Synchronisation verloren gehen. Eine Lösung ist hier ebenfalls das Bitstuffing.
+## NRZI (Non Return to Zero Inverted)
+Bei der *NRZI-Kodierung* wird einem der beiden Bitwerte (z. B. logisch 0) der aktuelle Leitungszustand zugeordnet, dem anderen (z. B. logisch 1) ein Wechsel des Pegels (Inversion). Dadurch ist NRZI bei differentieller Übertragung polaritätsunempfindlich: Ein Verpolen der Leitung ändert die Bitfolge nicht.
+
+Längere Folgen ohne Pegelwechsel können jedoch zur Synchronisationsverlust führen – auch hier kann Bitstuffing helfen.
 
 ![NRZI](nrzi.svg)
 
-Bei diesem Beispiel wird bei logisch 1 der Pegel geändert, bei logisch 0 beibehalten.
+In diesem Beispiel bedeutet logisch 1 einen Pegelwechsel, logisch 0 keine Änderung.
 
-# Manchester Kodierung
-Bei der Manchesterkodierung entspricht eine Null-Eins-Folge einer logischen Null (steigende Flanke), eine Eins-Null-Folge (fallende Flanke) einer logischen Eins:
-Hierdurch wird erreicht, dass
+# Manchester-Kodierung
+Bei der Manchester-Kodierung wird eine logische 0 durch eine steigende Flanke (0→1), eine logische 1 durch eine fallende Flanke (1→0) innerhalb eines Bitintervalls dargestellt. Dadurch werden:
 
-* stets Pegelwechsel zur Taktrückgewinnung vorhanden sind
-* der Gleichanteil im Mittel immer gleich Null ist
+* stets Pegelwechsel zur Taktrückgewinnung gewährleistet,
+* und der Gleichspannungsanteil des Signals bleibt im Mittel null.
 
-Ein Nachteil dabei ist, dass sich die erforderliche Symbolrate am Übertragungskanal verdoppelt.
+Ein Nachteil ist die Verdopplung der benötigten Symbolrate gegenüber der reinen Bitrate.
 
-![Machester Kodierung](manchester.svg)
+![Manchester Kodierung](manchester.svg)
 
-Beim *differentiellen Manchestercode* steht ein Polaritätswechsel am Taktanfang für eine logische Null (zwei Flankenwechsel pro Bit), bei einer logischen Eins erfolgt kein Polaritätswechsel am Taktanfang (ein Flankenwechsel pro Bit).
+Beim **differentiellen Manchester-Code** bedeutet ein Flankenwechsel am Taktanfang eine logische 0 (zwei Flankenwechsel pro Bit), während bei einer logischen 1 kein Wechsel am Taktanfang erfolgt (nur ein Flankenwechsel pro Bit).
 
 # Blockcodes
-Bei Blockcodes werden verschiedene Symbole zusammengefasst und durch eine alternative Symbolgruppe übertragen.
+Bei Blockcodes werden mehrere Bits zu Symbolgruppen zusammengefasst und in alternative Codewörter überführt.
 
-**4B5B** ist ein Code, der jeweils 4 Bits auf 5 Bits abbildet, also 16 Block-Codes auf 32 Leitungscodes. Der Code ist nicht gleichstromfrei, besitzt aber immer zumindest einen Bitwechsel, um den Takt rückzugewinnen.
+Der **4B5B-Code** bildet je 4 Bit auf 5-Bit-Codewörter ab – also 16 mögliche Datenworte auf 32 verschiedene Codes. Dieser Code ist nicht gleichspannungsfrei, enthält aber stets mindestens einen Pegelwechsel zur Taktrückgewinnung.
 
-Der **8B10B**-Code ist ein Leitungscode in der Telekommunikationstechnik. Dabei werden 8 Bit Daten mit 10 Bit kodiert, sodass zum einen ein Gleichspannungsausgleich gewährleistet ist und zum anderen Taktrückgewinnung aus dem Datensignal möglich ist. Der erzeugte Datenstrom hat einen Overhead von 25% gegenüber dem originalen. Ein ähnlicher, aber deutlich effizienterer Code ist der **64B66B**-Code, welcher 64 Bits auf 66 Bits abbildet und daher nur ca. 3% Overhead erzeugt.
+Der **8B10B-Code** wird häufig in der Telekommunikation eingesetzt. Dabei werden 8 Datenbits auf 10 Leitungssymbole abgebildet. Dadurch ist eine Gleichspannungsfreiheit gewährleistet und der Takt kann aus dem Signal zurückgewonnen werden. Der Overhead beträgt hier 25 %.
 
-Blockcodes können zur Fehlererkennung und Fehlerkorrektur bei der Übertragung von Daten über fehlerbehaftete Kanäle verwendet werden. Dabei ordnet der Sender dem zu übertragenen Informationswort der Länge m ein Codewort der Länge n zu, wobei n>m gilt. Durch das Hinzufügen der  zusätzlichen Symbole entsteht Redundanz und die Informationsrate sinkt; jedoch kann der Empfänger die redundante Information nun dazu nutzen Übertragungsfehler zu erkennen und zu korrigieren.
+Ein effizienterer Code ist der **64B66B-Code**, der 64 Bit auf 66 Leitungssymbole abbildet und somit nur etwa 3 % Overhead erzeugt.
+
+Blockcodes können auch zur Fehlererkennung und -korrektur verwendet werden. Dazu wird jedem Informationswort der Länge *m* ein Codewort der Länge *n* zugeordnet (wobei *n > m*). Die hinzugefügte Redundanz senkt zwar die Informationsrate, ermöglicht dem Empfänger jedoch die Erkennung und ggf. Korrektur von Übertragungsfehlern.
