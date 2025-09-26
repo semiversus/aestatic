@@ -4,7 +4,7 @@ parent: uebersicht.md
 # Allgemeines
 Der erste naive Ansatz Firmware für Mikrocontroller zu entwickeln wird nach den ersten Erfolgen schnell durch die
 wachsende Komplexität gebremst. Man kann den Quellcode in mehrere Dateien (bzw. C Module) unterteilen. Hängen diese
-aber zu stark von einander ab steigt die Komplexität durch diese Aufteilung weiter an.
+aber zu stark voneinander ab steigt die Komplexität durch diese Aufteilung weiter an.
 
 Ein erster wichtiger Schritt hin zu strukturierten Softwareentwicklung ist die Einführung von Abstraktionen.
 

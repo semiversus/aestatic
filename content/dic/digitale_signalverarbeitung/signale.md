@@ -93,7 +93,7 @@ gestaucht. Bei einer Stauchung gehen unmittelbar Werte verloren:
 .. figure:: signal_scale2.svg
     :title: Skalierung um Faktor 2
 
-Ist der Faktor kleiner als 1 wird das Signal gestreckt. Nicht definierte Indexe werden mit dem Wert 0 ausgegeben:
+Ist der Faktor kleiner als 1 wird das Signal gestreckt. Nicht definierte Indizes werden mit dem Wert 0 ausgegeben:
 .. figure:: signal_scale1_2.svg
     :title: Skalierung um Faktor 0.5
 

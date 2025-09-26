@@ -3,7 +3,7 @@ next: ampel.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
-Das Sirenensignal besteht aus einem sich in der Frequenz änderndem Rechtecksignal. Konkret soll zwischen zwei Frequenzen
+Das Sirenensignal besteht aus einem sich in der Frequenz änderndem Rechteck-Signal. Konkret soll zwischen zwei Frequenzen
 umgeschalten werden.
 
 Realisieren lässt sich das ganze mittels zwei Timer. Ein Timer [NE555](https://de.wikipedia.org/wiki/NE555) dient als

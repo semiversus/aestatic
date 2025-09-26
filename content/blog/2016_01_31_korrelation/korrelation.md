@@ -42,7 +42,7 @@ Bei dem Vergleich sollten Zeilenumbrüche, Leerzeichen, usw. keine Rolle spielen
     arbeit2.c: 140 Wörter  48 34% gleich  7 5% eingefügt  85 61% verändert
 
 Der Vergleich von <samp>arbeit1.c</samp> mit <samp>arbeit2.c</samp> liefert ein anderes Ergebnis als der umgekehrte Vergleich und
-hängt vorallem mit der unterschiedlichen Anzahl an Gesamtworten zusammen.
+hängt vor allem mit der unterschiedlichen Anzahl an Gesamtworten zusammen.
 
 Zum Vergleich von 25 Arbeiten müssen nun 300 dieser Aufrufe gemacht werden. Dazu dient folgendes <samp>bash</samp>-Skript:
 

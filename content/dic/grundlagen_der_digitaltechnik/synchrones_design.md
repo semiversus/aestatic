@@ -23,7 +23,7 @@ Die Kugel stellt den Zustand dar. Die logisch 0 und 1 ist der stabile Zustand li
 # Synchrones Design
 Beim synchronen Design versucht man die Schwierigkeiten, die sich durch die Metastabilität ergeben zu beheben, indem alle Flip-Flops auf einen gemeinsamen globalen Takt reagieren. Dazu wird außerdem sichergestellt, dass an den Eingängen der Speicherelementen stabile Signale anliegen, bevor die nächste Taktflanke kommt.
 
-Als Takt wird beim synchronen Design ein periodischer Rechtecksignal mit einer festen Frequenz verwendet. Um die maximale Frequenz zu bestimmen wird der kritische Pfad zwischen den Ausgängen der Speicherelementen und dem Eingang ebendieser gesucht.
+Als Takt wird beim synchronen Design ein periodisches Rechtecksignal mit einer festen Frequenz verwendet. Um die maximale Frequenz zu bestimmen wird der kritische Pfad zwischen den Ausgängen der Speicherelemente und dem Eingang ebendieser gesucht.
 
 Die minimale Periodendauer (Kehrwert der maximalen Taktfrequenz) ist nun die Summe aus folgenden Zeit:
 
