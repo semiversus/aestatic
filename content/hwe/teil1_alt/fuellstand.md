@@ -1,4 +1,4 @@
-title: Füllstandmessung
+title: Füllstandsmessung
 next: pomodoro.md
 parent: uebersicht.md
 
@@ -7,13 +7,13 @@ Die Änderung der Kapazität zwischen zwei leitenden Platten ist eine Möglichke
 zu messen (siehe [kapazitive Füllstandsmessung](https://de.wikipedia.org/wiki/Kapazitive_Füllstandmessung)).
 
 Mittels des Bausteins Timer [NE555](https://de.wikipedia.org/wiki/NE555) wird eine [astabile Kippstufe](https://de.wikipedia.org/wiki/NE555#Astabile_Kippstufe)
-betrieben. Die Frequenz des erzeugtenRechtecksignal ist dann abhängig vom Füllstand im Behälter.
+betrieben. Die Frequenz des erzeugten Rechteck-Signal ist dann abhängig vom Füllstand im Behälter.
 
 Anschlüsse:
 
 * Klemme mit 2 Anschlüssen für die Versorgung (9 - 15 Volt)
 * Klemme mit 2 Anschlüssen für die zwei leitenden Platten zur Füllstandsmessung.
-* Klemme mit 2 Anschlüssen als Ausgang (Rechtecksignal)
+* Klemme mit 2 Anschlüssen als Ausgang (Rechteck-Signal)
 
 # Recherche
 Ein wichtiger Punkt ist die Dimensionierung der Mess-Kapazität

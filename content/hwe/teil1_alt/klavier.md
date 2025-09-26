@@ -5,7 +5,7 @@ parent: uebersicht.md
 # Kurzbeschreibung
 Mittels des Bausteins Timer [NE555](https://de.wikipedia.org/wiki/NE555) soll ein Klavier aufgebaut werden.
 Dazu wird der Timer Baustein als [astabile Kippstufe](https://de.wikipedia.org/wiki/NE555#Astabile_Kippstufe)
-betrieben, um ein Rechtecksignal zu erzeugen. Mittels 7 Tasten soll die Frequenz entsprechend eingestellt werden.
+betrieben, um ein Rechteck-Signal zu erzeugen. Mittels 7 Tasten soll die Frequenz entsprechend eingestellt werden.
 
 Anschlüsse:
 

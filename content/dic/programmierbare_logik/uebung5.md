@@ -62,7 +62,7 @@ Fehlerausgaben:
 # Tastendruck Erkennung
 ## Spezifikation
 Tasteneingänge sind asynchron zum globalen Takt, deswegen müssen sie einsynchronisiert werden. Nachdem der Eingang
-synchronisiert ist benötigt man im allgemeinen eine synchrone Flankenerkennung, d.h. bei einer steigenden Flanke soll
+synchronisiert ist benötigt man im Allgemeinen eine synchrone Flankenerkennung, d.h. bei einer steigenden Flanke soll
 der Ausgang `detect_o` für einen Taktzyklus lang auf `1` sein. Eine fallende Flanke soll ignoriert werden.
 
 ## Timingdiagramm
