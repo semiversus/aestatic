@@ -77,7 +77,7 @@ Applikation auf eine gewünschte *Zeit* gesetzt (in Mikrosekunden). Die Hardware
 entsprechend der vergangen Zeit herunter, bis sie schlussendlich auf `0` angekommen sind.
 
 ## Verwendung
-Die Applikation kann die Timervariable auswerten, um zu uberprüfen, ob die gewünschte Zeit bereits vergangen ist. Ist
+Die Applikation kann die Timervariable auswerten, um zu überprüfen, ob die gewünschte Zeit bereits vergangen ist. Ist
 der Wert ungleich `0` ist die Zeit noch nicht vergangen.
 
 Es gibt drei Makros, um das Setzen der Variable auf die gewünschte Zeitdauer lesbarer zu machen:

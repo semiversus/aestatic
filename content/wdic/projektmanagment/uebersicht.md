@@ -1,4 +1,4 @@
-title: Projektmanagment
+title: Projektmanagement
 parent: ../../unterricht.md
 
 # Inhalt

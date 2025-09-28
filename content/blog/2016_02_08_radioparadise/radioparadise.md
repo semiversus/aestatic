@@ -7,5 +7,5 @@ thumbnail: logo.svg
 Die meisten Webradios scheitern an mindestens einem der folgenden Punkte: Kostenlos, gute Qualität, keine Werbung, ...
 oder gute Musik.
 
-Ein Webradio das ich sehr empfehlen kann ist [Radio Paradise](https://www.radioparadise.com).
+Ein Webradio, das ich sehr empfehlen kann, ist [Radio Paradise](https://www.radioparadise.com).
 Finanziert wird Radio Paradise mittels Unterstützung durch die Hörer.

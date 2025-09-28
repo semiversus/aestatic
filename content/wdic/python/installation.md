@@ -32,6 +32,6 @@ Nach dem Start von Visual Studio Code gibt es auf der linken Seite eine Toolbar.
 
 1. Erstelle eine neue Datei (<kbd>Ctrl</kbd> + <kbd>n</kbd>)
 2. Schreibe folgendes in diese Datei: `print('Hello world!')`
-3. Speichern dieser Datei (<kbd>Ctrl</kbd> + <kbd>s</kbd>) unter `test.py`
-4. Ausführen dieser Datei mittels <kbd>Ctrl</kbd> + <kbd>F5</kbd>
+3. Speichere diese Datei (<kbd>Ctrl</kbd> + <kbd>s</kbd>) unter `test.py`
+4. Führe diese Datei aus mittels <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 5. Unten sollte im Terminal (neben anderen Meldungen) `Hello world!` erscheinen

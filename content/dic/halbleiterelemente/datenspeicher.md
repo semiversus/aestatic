@@ -19,7 +19,7 @@ Die Unterteilung von Speicher kann durch verschiedene Eigenschaften erfolgen. Di
 ## Flüchtig oder Nicht-Flüchtig
 Bei einem flüchtigen Speicher (englisch volatile memory) ist eine Betriebsspannung und teilweise eine zusätzliche Ansteuerung notwendig, um die Information speichern zu können. Fehlen diese Grundvoraussetzungen (z.B. Betriebsspannung fällt aus) geht die Information verloren. Bei einem nicht-flüchtigen Speicher (non-volatile memory) wird keine Betriebsspannung benötigt. Die Information wird hier entweder magnetisch (z.B. Festplatte), optisch (z.B. DVD) oder durch eine elektrische Ladung in einem isolierten Bereich (z.B. EPROM).
 
-Im Detail betrachtet sind einige Verfahren für eine Zeitdauer von mehreren Jahren nicht flüchtig, durch Einflüße aus der Umgebung oder vom Verfahren selbst bedingt kann es aber zu einem Verlust der Information kommen.
+Im Detail betrachtet sind einige Verfahren für eine Zeitdauer von mehreren Jahren nicht flüchtig, durch Einflüsse aus der Umgebung oder vom Verfahren selbst bedingt kann es aber zu einem Verlust der Information kommen.
 
 ## Speichermedium
 Informationen können auf viele verschiedene Arten gespeichert werden. Die historisch älteste Art ist die Speicherung mittels mechanischer Veränderung eines Materials (z.B. Lochkarte). Die Information kann aber auch über einen Schaltungszustand gespeichert werden (z.B. Relais oder Flip-Flop). Weitere Möglichkeiten sind die magnetische und optische Speicherung.

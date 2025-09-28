@@ -9,13 +9,13 @@ nicht eine *"mechanische"* Beschädigung vorangegangen ist, aber das was der Bau
 
 ![Baum mit Verkehrsspiegel](mirror.jpg)
 
-Die Hinterseite eines Verkehrsspiegels ist in diesem Fall refelektierend ausgeführt (dumme Idee!) und wenn die Sonne
+Die Hinterseite eines Verkehrsspiegels ist in diesem Fall reflektierend ausgeführt (dumme Idee!) und wenn die Sonne
 richtig steht bündeln sich die Sonnenstrahlen auf einem gemeinsamen Punkt - und dort steht dann der Baum.
 
 Hier der Baum im Detail:
 
 ![Baum nah](tree.jpg)
 
-Und hier der Überltäter:
+Und hier der Übeltäter:
 
 ![Spiegel von hinten](mirror2.jpg)

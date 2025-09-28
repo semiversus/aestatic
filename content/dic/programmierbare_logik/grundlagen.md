@@ -3,9 +3,9 @@ next: signaltypen.md
 parent: uebersicht.md
 
 # Allgemeines
-Mittels *VHDL* kann eine digitale Schaltung beschrieben werden. VHDL steht für **V**ery High Speed Integrated Cricuit
-**H**ardware **D**escription **L**anguage. Die wichtigste Beschreibunssprache neben VHDL ist *Verilog*, welche in
-der USA weite Verbreitung findet.
+Mittels *VHDL* kann eine digitale Schaltung beschrieben werden. VHDL steht für **V**ery High Speed Integrated Circuit
+**H**ardware **D**escription **L**anguage. Die wichtigste Beschreibungssprache neben VHDL ist *Verilog*, welche in
+den USA weite Verbreitung findet.
 
 .. info:: Beschreibungssprache
 

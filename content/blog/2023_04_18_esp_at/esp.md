@@ -10,9 +10,9 @@ werden.
 
 ## Kommunikation über TTL UART
 Im folgenden wird ein Dev. Kit Modul mit ESP32-WROOM-32 verwendet. Für andere ESP32 lässt sich die Information
-entsprechend adaptieren. 
+entsprechend adaptieren.
 
-Typischerweise besitzen ESP Microcontroller drei serielle Schnittellen:
+Typischerweise besitzen ESP Microcontroller drei serielle Schnittstellen:
 * **UART0** zum Flashen mittels Desktop PC über USB-UART Konverter
 * **UART1** wird intern verwendet und steht nicht unmittelbar zur Verfügung
 * **UART2** eine TTL UART für die eigentliche Anwendung
@@ -64,7 +64,7 @@ ESP32 die Installation vorbereitet werden soll.
 
 ```console
 $ sudo ./build.py install
-[sudo] password for user: 
+[sudo] password for user:
 Ready to install ESP-IDF prerequisites..
 Reading package lists... Done
 ...

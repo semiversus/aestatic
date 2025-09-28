@@ -124,7 +124,7 @@ Ein Signal ist gerade wenn gilt \\(x[n]=x[-n]\\), d.h. wenn das Signal gleich de
     :title: Beispiel für ein gerades Signal
 
 Ein Signal ist ungerade wenn gilt \\(x[n]=-x[-n]\\), d.h. wenn das Signal gleich dem um den 0-Punkt um 180 Grad rotierten
-Signal ist. Diese Symmetrie forder auch, dass der Wert an der Position 0 gleich 0 ist.
+Signal ist. Diese Symmetrie fordert auch, dass der Wert an der Position 0 gleich 0 ist.
 
 .. figure:: signal_odd.svg
     :title: Beispiel für ein ungerades Signal

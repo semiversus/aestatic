@@ -4,7 +4,7 @@ thumbnail: anniversary_tb.png
 
 Wieso Jubiläen immer nur nach ganzen Jahren feiern? Wieso nicht bei einer Million Sekunden Lebenszeit? Oder bei Tausend Wochen?
 
-Interessant ist die logarithmische Verteilung: Hat man eine Million Sekunden bereits nach elf einhalb Tagen erlebt,
+Interessant ist die logarithmische Verteilung: Hat man eine Million Sekunden bereits nach elf und einem halben Tag erlebt,
 braucht man für 10 Millionen Sekunden bereits fast vier Monate. 100 Millionen Sekunden sind nach knapp 3 Jahren erreicht
 und bei einer Milliarde Sekunden ist man fast 32 Jahre alt.
 

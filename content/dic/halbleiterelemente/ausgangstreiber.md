@@ -24,7 +24,7 @@ Ein Totem-Pole Ausgang kann also die beiden logischen Pegel 0 und 1 ausgeben.
     :source: https://commons.wikimedia.org/wiki/User:MichaelFrey
     :license: CC BY-SA 2.0
 
-Bei Open-Collector Ausgang wird nur ein Transistor verwendet, dessen Kollektor als Ausgang dient. Damit kann das Potential am Ausgang auf Masse gezogen werden, aber es kann kein hohes Potential (logisch 1) ausgegeben werden. Um ein hohes Potential zu erhalten wird ein externer Pull-Up Widerstand verwendet. Dieser verbindet den Ausgang mit der Versorgung. Der Ausgang ist auf logisch 1 wenn der Transistor sperrt und damit der Ausgang über den Pull-Up Widerstand versorgt wird. Eine logische 0 wird ausgegeben indem der Transistor leitet und damit das Potenital auf Masse zieht.
+Bei Open-Collector Ausgang wird nur ein Transistor verwendet, dessen Kollektor als Ausgang dient. Damit kann das Potential am Ausgang auf Masse gezogen werden, aber es kann kein hohes Potential (logisch 1) ausgegeben werden. Um ein hohes Potential zu erhalten wird ein externer Pull-Up Widerstand verwendet. Dieser verbindet den Ausgang mit der Versorgung. Der Ausgang ist auf logisch 1 wenn der Transistor sperrt und damit der Ausgang über den Pull-Up Widerstand versorgt wird. Eine logische 0 wird ausgegeben indem der Transistor leitet und damit das Potential auf Masse zieht.
 
 Vorteile des Open-Collector Ausganges:
 
@@ -48,6 +48,6 @@ Betrachtet man den Open-Collector Ausgang ohne Pull-Up kann dieser die logische 
     :source: https://commons.wikimedia.org/wiki/User:Mik81
     :license: CC BY 2.0
 
-Bei Tri-State Ausgang wird ein Totem-Pole Ausgang so erweitert, dass keiner der beiden Transistor leitet, d.h. weder logisch 0 noch logisch 1 ausgegeben wird. Dadurch ist der Ausgang *hochohmig*. Dieser dritte Zustand wird genutzt, um mehrere Ausgänge zusammenzuschalten. Dabei ist nur ein Eingang aktiv auf logisch 0 oder 1 und alle anderen Ausgänge sind hochohmig.
+Bei Tri-State Ausgang wird ein Totem-Pole Ausgang so erweitert, dass keiner der beiden Transistoren leitet, d.h. weder logisch 0 noch logisch 1 ausgegeben wird. Dadurch ist der Ausgang *hochohmig*. Dieser dritte Zustand wird genutzt, um mehrere Ausgänge zusammenzuschalten. Dabei ist nur ein Eingang aktiv auf logisch 0 oder 1 und alle anderen Ausgänge sind hochohmig.
 
 Der Tri-State Ausgang kann also logisch 0 und 1 ausgeben oder hochohmig sein.

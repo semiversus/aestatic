@@ -14,7 +14,7 @@ Wenn Setup- und Hold-Zeiten eingehalten werden, wird nach der vom Bauteil abhän
 Ändert sich das Datensignal innerhalb der Setup- und Hold-Zeit, spricht man von einer Setup- bzw. Hold-Zeit Verletzung. Bei einer Verletzung besteht die Wahrscheinlichkeit, dass es zu einem metastabilen Zustand des Flip-Flops kommt. Dabei bleibt der Ausgang in einem Zustand zwischen logisch 0 und 1 (dem metastabilen Zustand) und wechselt nach einer undefinierbaren Zeit entweder nach logisch 0 oder 1. Dabei ist es auch möglich, dass die normale Verzögerungszeit weit überschritten wird.
 
 ## Metastabilität
-Ein Flip-Flop kennt zwei stabilie Zustände. Diese werden als logisch 0 bzw. logisch 1 bezeichnet, entsprechen also dem Zustand, der am Ausgang *Q* dargestellt wird. Wird nun durch eine Taktflanke der Zustand des Eingangs übernommen, so befindet sich das Flip-Flop wieder in einem stabilen Zustand. Das ganze System kann auch folgendermaßen dargestellt werden:
+Ein Flip-Flop kennt zwei stabile Zustände. Diese werden als logisch 0 bzw. logisch 1 bezeichnet, entsprechen also dem Zustand, der am Ausgang *Q* dargestellt wird. Wird nun durch eine Taktflanke der Zustand des Eingangs übernommen, so befindet sich das Flip-Flop wieder in einem stabilen Zustand. Das ganze System kann auch folgendermaßen dargestellt werden:
 
 ![Metastabilität](metastability.png)
 
@@ -32,7 +32,7 @@ Die minimale Periodendauer (Kehrwert der maximalen Taktfrequenz) ist nun die Sum
 * notwendige Setup Zeit der Flip-Flops
 
 ## Synchronisierung von asynchronen Signalen
-Da Eingänge der Schaltung in vielen Fällen nicht synchron zum globalen Takt sind, müssen diese synchronisiert werden. Wird keine Synchronisierung verwendet, kann es zur Verletzung von Setup- und Hold-Zeiten kommen und damit zu Metastabilität. Wenn bedingt durch die Metastabilität es zu einem verspäteten Stabilieseren am Ausgang des Flip-Flops kommt, so kann sich dies auf die weiteren Schaltungsteile auswirken und dort wieder zur Metastabilität und damit zu Fehlern kommen.
+Da Eingänge der Schaltung in vielen Fällen nicht synchron zum globalen Takt sind, müssen diese synchronisiert werden. Wird keine Synchronisierung verwendet, kann es zur Verletzung von Setup- und Hold-Zeiten kommen und damit zu Metastabilität. Wenn bedingt durch die Metastabilität es zu einem verspäteten Stabilisieren am Ausgang des Flip-Flops kommt, so kann sich dies auf die weiteren Schaltungsteile auswirken und dort wieder zur Metastabilität und damit zu Fehlern kommen.
 
 Zur Synchronisierung werden ein- bzw. mehrere Flip-Flops hintereinander geschaltet. Mit jeder Stufe kann die Wahrscheinlichkeit der Metastabilität vermindert werden. In der Praxis reichen meist zwei hintereinandergeschaltete Flip-Flops aus.
 

@@ -92,8 +92,8 @@ Erweiterung: Erlaube die Verarbeitung von Kommazahlen. Dabei soll der Nutzer `.`
 Der Benutzer soll einen Satz eingeben können und das Programm ermittelt, welcher Buchstabe am häufigsten vorkommt.
 
 ```
-Satz: Also lautet ein Beschluß - Daß der Mensch was lernen muß.
-Der häufigste Buchstabe ist e
+Satz: Also lautet ein Beschluss - Dass der Mensch was lernen muss.
+Der häufigste Buchstabe ist 's'
 ```
 
 Mögliche Erweiterung: Die Groß- und Kleinschreibung soll ignoriert werden. Es soll außerdem der zweit und dritthäufigste Buchstabe angezeigt werden.

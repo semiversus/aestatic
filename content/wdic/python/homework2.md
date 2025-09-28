@@ -29,7 +29,7 @@ Im Beispiel enthalten sind auch Unittests, die die vorhandene Spezifikation test
 1. Mittels Visual Studio Code den Ordner öffnen
 1. Im Terminal mittels `python.exe -m venv .venv` den Ordner für die virtuelle Umgebung erstellen
 1. Mittels `.venv/Scripts/activate.bat` die virtuelle Umgebung starten
-1. Die erforderlichen Packete mittels `pip.exe install -r requirements.txt`
+1. Die erforderlichen Pakete mittels `pip.exe install -r requirements.txt`
 
 ## Spezifikation
 

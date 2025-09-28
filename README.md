@@ -41,8 +41,8 @@ When a folder should be compressed to a `.zip` folder, add a suffix of `.compres
 
 ### CSS file generation
 
-CSS file is generated from SASS files. A suffix based on the git commit sha is automatically added to invalidate the 
-webbrowser cache, when the content is updated.
+CSS file is generated from SASS files. A suffix based on the git commit sha is automatically added to invalidate the
+web browser cache, when the content is updated.
 
 ### Permalinks for headings
 

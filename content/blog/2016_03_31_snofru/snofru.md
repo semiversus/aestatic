@@ -2,8 +2,8 @@ title: Der Tempel des Snofru
 date: 2016-03-31
 thumbnail: snofru_tb.gif
 
-Das Spiel habe ich im Alter von 14 geschrieben und
-ist eine Sokoban-Variante (siehe [Wikipedia](https://de.wikipedia.org/wiki/Sokoban)). Ich dachte
+Das Spiel habe ich in jungen Jahren geschrieben und
+es ist eine Sokoban-Variante (siehe [Wikipedia](https://de.wikipedia.org/wiki/Sokoban)). Ich dachte
 eigentlich, dass das Spiel verschollen ist, doch Internet sei Dank hab ich es wieder gefunden.
 
 ![Gameplay](snofru.gif)

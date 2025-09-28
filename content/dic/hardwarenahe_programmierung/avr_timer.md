@@ -45,7 +45,7 @@ und von daher kommt die Bezeichnung *Timer*. Prinzipiell ist ein Timer für folg
 Diese Funktionalitäten werden in der Praxis sehr oft benötigt. Die universellen Einsatzmöglichkeiten haben allerdings
 den Nachteil, dass der Timer teilweise recht komplex in der Anwendung sein kann.
 
-Der ATMega16 enthält drei Timer. Timer 0 und 2 sind 8 Bit Timer, Time 1 ist ein 16 Bit Timer.
+Der ATMega16 enthält drei Timer. Timer 0 und 2 sind 8 Bit Timer, Timer 1 ist ein 16 Bit Timer.
 
 # Timer 0 (8 Bit Timer)
 .. figure:: avr_timer0.svg

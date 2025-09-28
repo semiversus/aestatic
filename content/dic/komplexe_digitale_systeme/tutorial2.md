@@ -24,7 +24,7 @@ next: tutorial3.md
     Umgangssprache meist der Kommandozeileninterpreter als Shell gemeint.
 
 # Vorbereitung
-Starte [DICbian](dicbian.html) und logge dich mittels dem Benutzernamen `dic` und dem Passwort `dic` ein.
+Starte [DICbian](dicbian.html) und logge dich mittels des Benutzernamens `dic` und des Passworts `dic` ein.
 
 ![DICbian nach dem Login](dicbian_shell.png)
 

@@ -9,7 +9,7 @@ verglichen, dann die zweite Arbeit mit den drei verbleibenden, usw.
 
 Mit <samp>wdiff</samp> habe ich ein Tool gefunden, um einfache Textvergleiche machen zu können.
 
-Die Anzahl der Vergleiche ergibt sich dabei mittels den Binomialkoeffizienten zu:
+Die Anzahl der Vergleiche ergibt sich dabei mittels der Binomialkoeffizienten zu:
 
 $$N_{Vergleiche}={N_{Arbeiten} \choose 2}=\frac{N_{Arbeiten}!}{(N_{Arbeiten}-2)!\cdot 2!}$$
 
