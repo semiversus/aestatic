@@ -5,7 +5,7 @@ parent: uebersicht.md
 Speicher haben die Aufgabe Information zu speichern. Bei digitalen Speichern ist diese Information ein diskreter Zustand, in den meisten Fällen die Speicherung einer logisch 0 oder 1. Von Informationsverlust spricht man, wenn eine gepeicherte Information nicht mehr richtig wieder gelesen werden kann, bzw. der Zustand einer Speicherzelle sich ungewollt verändert hat.
 
 ## Historische Speicher
-Zu den ersten digitalen und von einer Maschine verarbeitbaren Speicher zählt die [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte), die 1890 zur Volkszählung in der USA von Herman Hollerith eingeführt wurde und bis in die 1970er verwendet wurde.
+Zu den ersten digitalen und von einer Maschine verarbeitbaren Speicher zählt die [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte), die 1890 zur Volkszählung in den USA von Herman Hollerith eingeführt wurde und bis in die 1970er verwendet wurde.
 
 .. figure:: lochkarte.jpg
     :title: Lochkarte
@@ -45,7 +45,6 @@ Die Speicherorganisation beschreibt die Anordnung der Speicherzellen bzw. die Br
 
 ## Zugriffsgeschwindigkeit
 Die Zugriffsgeschwindigkeit ist abhängig vom Aufbau einer Speicherzelle bzw. dem Verfahren das genutzt wird, um eine Information zu Schreiben und zu Lesen. Bei der Zugriffsgeschwindigkeit wird zwischen Datenrate und Zugriffszeit. Bei der Datenrate geht es um die Geschwindigkeit, in der Daten sequentiell ausgelesen werden können. Die Zugriffszeit beschreibt die Dauer für einen wahlfreien Zugriff.
-:
 ## Maximale Anzahl der Schreibzyklen
 Teilweise sind Schreib bzw. Löschvorgänge nicht ohne Degeneration des Materials möglich. So kommt es beim Löschvorgang von Flash-Speichern zu einer allmählichen Zerstörung der Oxidschicht.
 

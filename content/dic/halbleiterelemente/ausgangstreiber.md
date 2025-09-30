@@ -31,7 +31,7 @@ Vorteile des Open-Collector Ausganges:
 * Anpassung an verschiedene Betriebsspannungen: Die externe Betriebsspannung kann höher oder niedriger sein als die Betriebsspannung des Bausteils.
 * Zusammenschalten mehrerer Ausgänge: Wenn mehrere Open-Collector Ausgänge zusammengeschaltet werden, setzt sich eine logische 0 durch, da damit das Potential auf Masse geschaltet wird
 
-Folgende Punkte sind weiters zu beachten:
+Folgende Punkte sind zu beachten:
 
 * Wird der Pull-Up zu niederohmig dimensioniert, kann der maximal erlaubte Strom des Ausgangstransistors überschritten werden. Damit wird entweder das Bauteil zerstört oder das Potential kann nicht auf Masse gezogen werden.
 * Wird der Pull-Up zu hochohmig dimensioniert, reicht der Strom nicht mehr aus, das Potential auf logisch 1 zu ziehen.
