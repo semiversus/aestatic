@@ -44,14 +44,14 @@ Sequentiellen Schaltungen werden mittels speichernden Elementen (*Register*) rea
 einem globalen Takt und reagieren auf die gleiche Taktflanke. Typischerweise wird die steigende Taktflanke gewählt,
 prinzipiell lässt sich aber auch die fallende Taktflanke wählen.
 
-## Erkennung einer Takflanke
+## Erkennung einer Taktflanke
 Um eine Taktflanke erkennen zu können ist es notwendig, das Taktsignal in der Sensitivitätsliste hinzuzufügen. Damit wird
 der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert.
 
 .. info:: Name für das Taktsignal
 
     Es steht dem Entwickler frei, einen Namen für das Taktsignal zu wählen. In der Praxis wird meist `clk` oder `clock`
-    gewählt, sofern es nur einen Takt im Design gibt. Gibt es mehrere Takte bieter sich ein *Postfix* wie `clk_master`
+    gewählt, sofern es nur einen Takt im Design gibt. Gibt es mehrere Takte bietet sich ein *Postfix* wie `clk_master`
     an.
 
     In diesem Skriptum wird das Taktsignal mit `clk` bezeichnet.
@@ -96,7 +96,7 @@ end process;
 
 # Anweisung innerhalb eines Prozesses
 ## `if`-Anweisung
-Die `if`-Answeisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
+Die `if`-Anweisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
 Zweig (`else`) oder eine andere Bedingung aus (`elsif`). Die `if` Anweisung wird mit `endif;` beendet.
 
 ### Beispiel

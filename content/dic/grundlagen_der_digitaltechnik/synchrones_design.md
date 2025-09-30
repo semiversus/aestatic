@@ -7,7 +7,7 @@ Bei der Entwicklung digitaler Schaltwerke versucht man meist nach einer bestimmt
 
 # Begriffe
 ## Setup- und Hold-Zeiten
-Das Datensignal eines Datensignals muss eine bestimmte Zeit vor der Flanke am Takteingang stabil anliegen. Diese Zeit wird *Setup*-Zeit genannt. Weiters muss das Datensignal nach der Flanke am Takteingang eine bestimmte Zeit stabil anliegen. Dies ist die *Hold*-Zeit.
+Das Datensignal muss eine bestimmte Zeit vor der Flanke am Takteingang stabil anliegen. Diese Zeit wird *Setup*-Zeit genannt. Weiters muss das Datensignal nach der Flanke am Takteingang eine bestimmte Zeit stabil anliegen. Dies ist die *Hold*-Zeit.
 
 Wenn Setup- und Hold-Zeiten eingehalten werden, wird nach der vom Bauteil abhängigen Verzögerungszeit der Ausgang entsprechend geändert. Im Datenblatt ist diese Zeit meist als *Propagationdelay* bzw. \\(t_{p}\\) gekennzeichnet.
 
@@ -25,14 +25,14 @@ Beim synchronen Design versucht man die Schwierigkeiten, die sich durch die Meta
 
 Als Takt wird beim synchronen Design ein periodisches Rechtecksignal mit einer festen Frequenz verwendet. Um die maximale Frequenz zu bestimmen wird der kritische Pfad zwischen den Ausgängen der Speicherelemente und dem Eingang ebendieser gesucht.
 
-Die minimale Periodendauer (Kehrwert der maximalen Taktfrequenz) ist nun die Summe aus folgenden Zeit:
+Die minimale Periodendauer (Kehrwert der maximalen Taktfrequenz) ist nun die Summe aus folgenden Zeiten:
 
 * Verzögerungszeit durch das Flip-Flop (von der Taktflanke bis zum Ausgang des Flip-Flops)
 * Laufzeit durch den kritischen Pfad der Kombinatorik
 * notwendige Setup Zeit der Flip-Flops
 
 ## Synchronisierung von asynchronen Signalen
-Da Eingänge der Schaltung in vielen Fällen nicht synchron zum globalen Takt sind, müssen diese synchronisiert werden. Wird keine Synchronisierung verwendet, kann es zur Verletzung von Setup- und Hold-Zeiten kommen und damit zu Metastabilität. Wenn bedingt durch die Metastabilität es zu einem verspäteten Stabilisieren am Ausgang des Flip-Flops kommt, so kann sich dies auf die weiteren Schaltungsteile auswirken und dort wieder zur Metastabilität und damit zu Fehlern kommen.
+Da Eingänge der Schaltung in vielen Fällen nicht synchron zum globalen Takt sind, müssen diese synchronisiert werden. Wird keine Synchronisierung verwendet, kann es zur Verletzung von Setup- und Hold-Zeiten kommen und damit zu Metastabilität. Wenn es bedingt durch die Metastabilität zu einem verspäteten Stabilisieren am Ausgang des Flip-Flops kommt, so kann sich dies auf die weiteren Schaltungsteile auswirken und dort wieder zur Metastabilität und damit zu Fehlern führen.
 
 Zur Synchronisierung werden ein- bzw. mehrere Flip-Flops hintereinander geschaltet. Mit jeder Stufe kann die Wahrscheinlichkeit der Metastabilität vermindert werden. In der Praxis reichen meist zwei hintereinandergeschaltete Flip-Flops aus.
 
@@ -52,4 +52,4 @@ Um den *Clock-Skew* zu minimieren sind folgende Punkte zu beachten:
 Alle Speicherelemente sollten nur über den synchronen Takteingang in einen neuen Zustand überführt werden. Bei der Verwendung von asynchronen Set und Reset Eingängen kann es auch wieder zur Metastabilität führen.
 
 ### Fan-Out beachten
-*Fan-Out* beschreibt das Verhältnis von Eingängen, die an einen Ausgang geschaltet werden. Dabei werden immer Gatter einer Logikfamilie verglichen. Ein Fan-Out von 10 bedeutet, dass 10 Eingänge von einem Ausgang angesteuert werden kann. Wird der Fan-Out überschritten, können die Verzögerungszeiten nicht mehr eingehalten werden, da es unter erhöhter Last länger dauert, bis sich der Logikpegel geändert hat.
+*Fan-Out* beschreibt die Anzahl von Eingängen, die an einen Ausgang geschaltet werden. Dabei werden immer Gatter einer Logikfamilie verglichen. Ein Fan-Out von 10 bedeutet, dass 10 Eingänge von einem Ausgang angesteuert werden kann. Wird der Fan-Out überschritten, können die Verzögerungszeiten nicht mehr eingehalten werden, da es unter erhöhter Last länger dauert, bis sich der Logikpegel geändert hat.

@@ -50,7 +50,7 @@ Dem taktflanken getriggerten D FlipFlop wurde ein asynchroner Reset hinzugefügt
 
 ## Mit synchronem Reset
 
-In diesem Beispiel soll der Zustand nur bei einer steigenden Taktflanke von `clk` und bei `rst` auf `1` zurüclgesetzt werden. Das Zurücksetzen erfolgt also synchron zum Takt.
+In diesem Beispiel soll der Zustand nur bei einer steigenden Taktflanke von `clk` und bei `rst` auf `1` zurückgesetzt werden. Das Zurücksetzen erfolgt also synchron zum Takt.
 
 ```vhdl
 library ieee ;
@@ -85,7 +85,7 @@ Die Sensitivity List besteht nur mehr aus dem `clk` Signal. Bei einer steigenden
 ![D-Flipflop mit synchronem Reset](dff_sync.svg)
 
 ## Mittels Initialisierung
-In FPGAs lässt sich der Zustand eines FlipFlops nach einem Ein-Ausschalt Zyklus auch durch die Initialisierung des
+In FPGAs lässt sich der Zustand eines Flip-Flops nach einem Ein-Aus-Zyklus auch durch die Initialisierung des
 entsprechenden Signals realisieren. Das Register hält dann den entsprechenden Initialisierungswert, nachdem der FPGA
 sein Design geladen.
 

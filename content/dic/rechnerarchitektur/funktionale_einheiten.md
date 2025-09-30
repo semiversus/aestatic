@@ -2,15 +2,15 @@ title: Funktionale Einheiten eines Prozessors
 parent: uebersicht.md
 
 # Allgemeines
-Ein Rechner besteht aus verschiedenen Komponenten, die je nach Rechnerarchitektur unterschiedlich aufgebaut sind. Allgemein kann man aber folgende Komponenten Unterscheiden:
+Ein Rechner besteht aus verschiedenen Komponenten, die je nach Rechnerarchitektur unterschiedlich aufgebaut sind. Allgemein kann man aber folgende Komponenten unterscheiden:
 
 * Prozessorkern
 * Programm- und Datenspeicher
 * Peripherie Einheiten
 
-Man spricht von einer Von-Neumann Architektur wenn Programme- und Datenspeicher in einem gemeinsamen Adressraum liegen. Da bei einem Befehl, der auf den Datenspeicher zugreift, insgesamt zwei Speicherzugriffe notwendig sind (Befehl selbst aus dem Speicher holen, Zugriff auf Daten), ergibt sich die Notwendigkeit, dass der Befehl mindesten zwei Takte benötigt. Dies wird auch als *Von-Neumann Flaschenhals* bezeichnet. Da historisch die Geschwindigkeit der Prozessoren wesentlich schneller stieg als die Geschwindigkeit der Speicherzugriffe wurde dieser Flaschenhals immer relevanter.
+Man spricht von einer Von-Neumann Architektur wenn Programm- und Datenspeicher in einem gemeinsamen Adressraum liegen. Da bei einem Befehl, der auf den Datenspeicher zugreift, insgesamt zwei Speicherzugriffe notwendig sind (Befehl selbst aus dem Speicher holen, Zugriff auf Daten), ergibt sich die Notwendigkeit, dass der Befehl mindesten zwei Takte benötigt. Dies wird auch als *Von-Neumann Flaschenhals* bezeichnet. Da historisch die Geschwindigkeit der Prozessoren wesentlich schneller stieg als die Geschwindigkeit der Speicherzugriffe wurde dieser Flaschenhals immer relevanter.
 
-Ein Verbesserung bringt die Aufteilung in einen Programmspeicher und einen Datenspeicher, die unabhängig voneinander arbeiten können. Dies ist die *Harvard*-Architektur. Der Programmspeicher kann als Nur-Lese Speicher realisiert werden.
+Eine Verbesserung bringt die Aufteilung in einen Programmspeicher und einen Datenspeicher, die unabhängig voneinander arbeiten können. Dies ist die *Harvard*-Architektur. Der Programmspeicher kann als Nur-Lese Speicher realisiert werden.
 
 # Datenpfad
 Der Prozessorkern besteht aus einem Datenpfad und einem Steuerwerk. Der Datenpfad enthält die Register und Datenspeicher, das Rechenwerk und die Busse zwischen den einzelnen Komponenten.
@@ -34,7 +34,7 @@ Typische Operationen die eine ALU durchführen kann:
 * Addition
 * Subtraktion
 * Zweierkomplement
-* Logische AND, OR, XOR Vernüpfung
+* Logische AND, OR, XOR Verknüpfung
 * Invertierung
 * Schiebeoperationen
 
@@ -52,7 +52,7 @@ Der Datenspeicher ist meist so ausgelegt, dass während einem Takt ein Lese- ode
 Die Register und Funktionseinheiten sind über Busse miteinander verbunden. Ein Bus kann entweder als Punkt-zu-Punkt Verbindung implementiert werden. Dabei dienen Multiplexer als Schalter zwischen zwei verschiedenen Eingaben. Es gibt aber auch die Realisierung von Bussen, auf die mehrere Teilnehmer mittels Tri-State Ausgangstreiber zugreifen können.
 
 # Steuerwerk
-Das Steuerwerk steuert den Ablauf im Datenpfad. Um einen Befehl Abzuarbeiten nimmt man typischerweise einen Von-Neumann-Zyklus an. Je nach Prozessorarchitektur können die 5 Teilschritte zusammengefasst werden oder auch ein Teilschritt auf mehrere Takte ausgeweitet werden.
+Das Steuerwerk steuert den Ablauf im Datenpfad. Um einen Befehl abzuarbeiten nimmt man typischerweise einen Von-Neumann-Zyklus an. Je nach Prozessorarchitektur können die 5 Teilschritte zusammengefasst werden oder auch ein Teilschritt auf mehrere Takte ausgeweitet werden.
 
 ## Fetch Instruction (1)
 Der aktuell vom Befehlszähler adressierte Befehl wird aus dem Befehlsspeicher in das Befehlsregister geladen. Der Befehlszähler wird erhöht, um auf den nächsten Befehl zu zeigen.

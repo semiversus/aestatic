@@ -30,7 +30,7 @@ Außerdem stehen drei mögliche Interrupts für die UART zur Verfügung:
 
 * *Receive Complete* (`USART_RX_vect`) - signalisiert ein empfangenes Byte empfangen wurde
 * *Transmit Complete* (`USART_TX_vect`) - signalisiert ein vollständig gesendetes Byte (inklusive Stopbit)
-* *UART Data Register Empty* (`USART_UDRE_vect`) - signalisert einenen freien Sendebuffer
+* *UART Data Register Empty* (`USART_UDRE_vect`) - signalisiert einen freien Sendebuffer
 
 Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden näher erläutert.
 
@@ -61,7 +61,7 @@ geschrieben wird. Dieses Flags löste den *Transmit Complete* Interrupt aus, sof
 
 ### UDRE - USART Date Register Empty
 Dieses Flag ist auf `1`, wenn das Senderegister (wieder) leer ist. Dieses Flag löst den *USART Date Register Empty*
-Interrupt aus, sogern dieser aktiviert ist. Das Flag liefert `0`, sobald auf `UDR` geschrieben wird. Nach dem Reset
+Interrupt aus, sofern dieser aktiviert ist. Das Flag liefert `0`, sobald auf `UDR` geschrieben wird. Nach dem Reset
 ist dieses Flag `1`, um das leere `UDR` zu signalisieren.
 
 ### FE - Frame Error

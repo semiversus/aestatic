@@ -11,16 +11,16 @@ Das *Programmiermodell* (engl. *Instruction Set Architecture* oder kurz *ISA*) b
 * Zeitverhalten (Anzahl der benötigten Taktzyklen)
 
 # Befehlssatz
-Die Gesamtheit aller Befehle eines Prozessors wird auch Befehlssatz genannt. Je nach Umfang des Befehlssatzes wird zwischen der *CISC* und *RISC* Designphilosophie unterschieden. Bei der *Complex Instruction Set Computer* Philosophie gibt es Befehle, die sehr komplexe Operationen ausführen können. Diese benötigen aber meist mehrere Taktzyklen. Viele klassische Prozessorarchitekturen (zum Beispiel Intel x86, Zilog Z80 und Motorola 68k) gelten als typische Vertreter von Prozessorarchitekturen mit *CISC*-Befehlssätzen.
+Die Gesamtheit aller Befehle eines Prozessors wird auch Befehlssatz genannt. Je nach Umfang des Befehlssatzes wird zwischen den *CISC*- und *RISC*-Designphilosophien unterschieden. Bei der *Complex Instruction Set Computer* Philosophie gibt es Befehle, die sehr komplexe Operationen ausführen können. Diese benötigen aber meist mehrere Taktzyklen. Viele klassische Prozessorarchitekturen (zum Beispiel Intel x86, Zilog Z80 und Motorola 68k) gelten als typische Vertreter von Prozessorarchitekturen mit *CISC*-Befehlssätzen.
 
-Der Begriff *CISC* wurde nachträglich eingeführt, um die bis damals vorherrschende Befehlssätze von neuartigen Design zu unterscheiden, die als *RISC* (*Reduced Instruction Set Computer*) Befehlssätze bezeichnet wurden. Bei *RISC* Befehlssätzen wird auf komplexe Befehle verzichtet, dadurch wird ein einfacheres Chipdesign ermöglicht.
+Der Begriff *CISC* wurde nachträglich eingeführt, um die bis damals vorherrschenden Befehlssätze von neuartigen Design zu unterscheiden, die als *RISC* (*Reduced Instruction Set Computer*) Befehlssätze bezeichnet wurden. Bei *RISC* Befehlssätzen wird auf komplexe Befehle verzichtet, dadurch wird ein einfacheres Chipdesign ermöglicht.
 
 ## CISC
 
-* benötigt im Vergleich weniger Programmspeicher, da die einzelnen Befehle komplexer sind und dadurch "mehr" ausführen können
+* benötigt im Vergleich zu RISC weniger Programmspeicher, da die einzelnen Befehle komplexer sind und dadurch "mehr" ausführen können
 * Meist benötigt ein Befehl mehrere Takte
 
-Die Realisierung eines CISC Prozessors wird oft mittels *Mikrocode* realisiert. Zur Ausführung eines Befehl führt das Steuerwerk den entsprechenden Mikrocode aus. Dieser Mikrocode steuert den Datenpfad des Prozessors an. Dadurch können komplexe Befehle realisiert werden.
+Die Realisierung eines CISC Prozessors wird oft mittels *Mikrocode* realisiert. Zur Ausführung eines Befehls führt das Steuerwerk den entsprechenden Mikrocode aus. Dieser Mikrocode steuert den Datenpfad des Prozessors an. Dadurch können komplexe Befehle realisiert werden.
 
 ## RISC
 Für die meisten Prozessoren mit *RISC*-Befehlssatz gilt:
@@ -39,13 +39,13 @@ Transferbefehle werden verwendet, um Information innerhalb eines Prozessors oder
 Eine Sondergruppe bilden Befehle, die mit dem Stack arbeiten. Es können Daten auf den Stack kopiert (`push`) oder vom Stack geholt (`pop`) werden.
 
 ## Arithmetische und logische Befehle
-Bei diesem Befehlen wird eine arithmetische Operation (Addition, Subtraktion, Multiplikation, usw.) oder eine logische Operation (UND-, ODER-Verknüpfung, usw.). Auch Schiebe- und Rotationsoperationen gehören hier dazu. Die Operationen selbst werden im Prozessor mittels einer *Arithmetisch-Logischen Einheit* (engl. *arithmetic logic unit* oder kurz *ALU*) durchgeführt.
+Bei diesen Befehlen wird eine arithmetische Operation (Addition, Subtraktion, Multiplikation, usw.) oder eine logische Operation (UND-, ODER-Verknüpfung, usw.) durchgeführt. Auch Schiebe- und Rotationsoperationen gehören hier dazu. Die Operationen selbst werden im Prozessor mittels einer *Arithmetisch-Logischen Einheit* (engl. *arithmetic logic unit* oder kurz *ALU*) durchgeführt.
 
 ## Sprungbefehle
 Sprungbefehle dienen zum Ändern des Programmablaufes. Dabei wird zwischen unbedingten und bedingten Sprüngen unterschieden. Unbedingte Sprünge werden immer ausgeführt, bedingte Sprünge sind abhängig von einem Prozessorstatus. Bei Sprüngen wird darüber hinaus zwischen absoluten Sprüngen (referenziert auf die Befehlsspeicheradresse 0) oder relativen Sprüngen (relativ zum aktuellen Befehlszähler) unterschieden. Bei allen Nicht-Sprung Befehlen wird der Programmablauf mit dem nachfolgenden Befehl fortgesetzt.
 
 ## Sonstige Befehle
-Es gibt noch weitere Befehle, die in keine der aufgeführten Kategorien passen. Dazu zählen Befehle zum Umgang mit Interrupts, aktivierung bestimmter Betriebsarten (z.B. Sleep Modes) oder der häufig vorhandene `No Operation` Befehl, der während seiner Ausführung keine Änderung vornimmt und somit nur Zeit "verbraucht".
+Es gibt noch weitere Befehle, die in keine der aufgeführten Kategorien passen. Dazu zählen Befehle zum Umgang mit Interrupts, Aktivierung bestimmter Betriebsarten (z.B. Sleep Modes) oder der häufig vorhandene `No Operation` Befehl, der während seiner Ausführung keine Änderung vornimmt und somit nur Zeit "verbraucht".
 
 # Adressierungsarten
 Die Adressierungsarten beschreiben die Möglichkeiten, wie ein Prozessor auf die Daten für eine Operation zugreift. Dies gilt für die Operanden sowie für das Ergebnis einer Operation.
@@ -57,7 +57,7 @@ Der benötigte Wert ist unmittelbar im Befehl selbst kodiert. Bei den meisten Pr
 Bei der Registeradressierung wird das gewünschte Register angegeben.
 
 ## Absolute Adressierung
-Bei der absoluten Adressierung wird  eine Adresse im Speicher übergeben. Geladen wird der Wert an dieser Adresse.
+Bei der absoluten Adressierung wird eine Adresse im Speicher übergeben. Geladen wird der Wert an dieser Adresse.
 
 ## Relative Adressierung
 Die Relative Adressierung bezieht sich auf den Befehlszähler und wird für einen relativen Sprung verwendet. Dabei wird ein Wert zum Befehlszähler addiert bzw. subtrahiert.

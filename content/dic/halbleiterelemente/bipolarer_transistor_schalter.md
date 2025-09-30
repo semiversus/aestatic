@@ -39,7 +39,7 @@ im Datenblatt ermittelt. Für kleine Ströme \\(I_C\\) (<100mA) wird sie oft mit
 Die Verlustleistung am Transistor besteht aus zwei Komponenten:
 
 * Über die Basis fließt der Basisstrom, wobei die Basisspannung \\(U_{BE}\\) abfällt
-* Über den Kollektor fließt der Kollektorstrom, wobei die Sättingungsspannung abfällt
+* Über den Kollektor fließt der Kollektorstrom, wobei die Sättigungsspannung abfällt
 
 Daraus ergibt sich für die Gesamtleistung \\(P_{Transistor}=I_B \cdot U_{BE} + I_C \cdot U_{CE Sat}\\). Da der Anteil über die
 Basisdiode viel kleiner ist gilt \\(P_{Transistor} \approx I_C \cdot U_{CE Sat}\\).

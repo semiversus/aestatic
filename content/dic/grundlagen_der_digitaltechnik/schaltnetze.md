@@ -5,7 +5,7 @@ parent: uebersicht.md
 Es gibt viele Schaltnetze, deren Funktion häufig eingesetzt wird. Dabei werden die Schaltnetze nicht mehr auf der Ebene der Logikgatter betrachtet, sondern die Funktionalität wird abstrahiert.
 
 ## Multiplexer
-Ein Multiplexer (auch oft kurz "Mux") selektiert aus mehreren Eingängen einen einzelnen aus und gibt den Wert, der an diesem Eingang anliegt am Ausgang aus. Man unterscheidet die Multiplexer nach Anzahl der Eingänge. Die einfachste Form ist ein Multiplexer mit zwei Eingängen.
+Ein Multiplexer (auch oft kurz „Mux“) selektiert aus mehreren Eingängen einen einzelnen aus und gibt den Wert, der an diesem Eingang anliegt am Ausgang aus. Man unterscheidet die Multiplexer nach Anzahl der Eingänge. Die einfachste Form ist ein Multiplexer mit zwei Eingängen.
 
 ![Multiplexer mit 2 Eingängen](mux2_symbol.svg)
 
@@ -23,7 +23,7 @@ Bei mehr als zwei Eingängen ist auch mehr als ein Selektionseingang notwendig.
 ![Multiplexer mit 4 Eingängen](mux4_symbol.svg)
 
 ## Halb-Addierer
-Der Halb-Addierer dient zur Addition von zwei einstelligen Binärzahlen. Als Ausgang stehen das Summenbit und ein Übertragsbit (engl. `Carry`)  zur Verfügung. Der Übertrag wird benötigt, sobald man zwei mindestens zweistellige Binärzahlen addieren will.
+Der Halb-Addierer dient zur Addition von zwei einstelligen Binärzahlen. Als Ausgänge stehen das Summenbit und ein Übertragsbit (engl. „Carry“) zur Verfügung. Der Übertrag wird benötigt, sobald man zwei mindestens zweistellige Binärzahlen addieren will.
 
 ![Halbaddierer](halbaddierer_struktur.svg)
 

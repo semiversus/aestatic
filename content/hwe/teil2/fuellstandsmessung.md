@@ -17,5 +17,5 @@ Erweiterung von Stufe 1
 
 # Stufe 3
 * Die Frequenzen bei den Füllständen für 0%, 10%, 20% ... 100% werden im Microcontroller hinterlegt
-* Anhand dieser Stützstellen wird wird die Frequenz linear interpoliert
+* Anhand dieser Stützstellen wird die Frequenz linear interpoliert
 * Wird ein Füllstand von 80% überschritten, wird über den Lautsprecher ein Alarmsignal ausgegeben

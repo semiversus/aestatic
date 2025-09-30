@@ -20,4 +20,3 @@ Folgendes wird benötigt:
 * Bearbeiten der Datei `cmdline.txt` (auch auf der FAT32 Partition)
   * Füge folgenden Text hinter `rootwait` hinzu: `modules-load=dwc2,g_ether`
 * Klicke auf "Auswerfen" bei der MicroSD Karte und stecke sie in den Raspberry Pi Zero
-*

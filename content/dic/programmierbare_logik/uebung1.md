@@ -38,7 +38,7 @@ Ein|Aus|Aus|Ein|9
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity seven_segment is
+entity seven_segments is
   port (
     switches_i : in std_ulogic_vector(3 downto 0);
     an_o : out std_ulogic_vector(3 downto 0);
@@ -46,7 +46,7 @@ entity seven_segment is
   );
 end entity;
 
-architecture behave of seven_segment is
+architecture behave of seven_segments is
 begin
   with switches_i select segments_o <=
     "0000001" when "0000", -- display 0

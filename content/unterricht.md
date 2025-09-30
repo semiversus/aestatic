@@ -25,20 +25,20 @@ title: Unterricht
 * [Projekte Teil 3](hwe/teil3/uebersicht.html)
 
 # Korrekturen
-Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Inkorrektheit bzw. Tipp- und
-Rechtschreibfehler - ich bin für jeden Hinweis dankbar!
+Mit der Zeit haben sich sicher einige Fehler eingeschlichen. Egal ob sachliche Ungenauigkeiten oder Tipp- und
+Rechtschreibfehler—ich bin für jeden Hinweis dankbar!
 
 Bisher habe ich von folgenden Personen Korrekturhinweise bekommen:
 
 * Patrick Zgubic - viele Korrekturen im Bereich Digitale Signalverarbeitung
 * Florian Burtscher - Korrekturen im Bereich Digitale Signalverarbeitung
 * Herbert Hart - Korrekturen im Bereich Digitale Signalverarbeitung
-* Claus-Peter Bergmeier - Hinweise zu defektem Downloadlink des [Logisim Prozessors](dic/rechnerarchitektur/logisim_prozessor.html). Er arbeitet selbst auch an einem eigenen Logisim Prozessor!
+* Claus-Peter Bergmeier - Hinweise zu einem defekten Downloadlink des [Logisim Prozessors](dic/rechnerarchitektur/logisim_prozessor.html). Er arbeitet selbst auch an einem eigenen Logisim Prozessor!
 
-Weitere Personen haben mir Korrekturen zugeschickt, bleiben aber lieber ohne Hinweis. Vielen Dank für eure Mitarbeit!
+Weitere Personen haben mir Korrekturen zugeschickt, möchten aber lieber nicht namentlich erwähnt werden. Vielen Dank für eure Mitarbeit!
 
 # Links
-Eine kleine Übersicht über Seiten, die mir zur Recherche dienten (neben den üblichen Verdächtigen wie Wikipedia und Co.):
+Eine kleine Übersicht über Websites, die mir bei der Recherche geholfen haben (neben den üblichen Verdächtigen wie Wikipedia und Co.):
 
 * [rn-wissen.de](https://rn-wissen.de/wiki/index.php?title=Hauptseite)
 * [mosfetkiller.de](https://mosfetkiller.de/)

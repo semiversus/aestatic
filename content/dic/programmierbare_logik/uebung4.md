@@ -17,7 +17,7 @@ In dieser Übung wird die Unterteilung in mehrere Komponenten gezeigt.
 
 # Aufgabe 1 - Zeichne eine Schaltung für `display.vhd`
 In der Datei `display.vhd` werden die vier 7-Segment Anzeigen angesteuert. Dazu wird das Display mittels "Multiplex"
-angesteuert, sprich jeds einzelme 7-Segment Anzeige ist nur abwechselnd nur kurze Zeit aktiv. Durch den schnellen
+angesteuert, sprich jede einzelne 7-Segment Anzeige ist nur abwechselnd kurze Zeit aktiv. Durch den schnellen
 Wechsel bekommt das träge Auge des Menschen eine scheinbar "stehende" Anzeige zu sehen.
 
 # Aufgabe 2 - `CLK_DIVIDER`
@@ -57,8 +57,8 @@ architecture behave of structural is
   signal counter_reg : unsigned(15 downto 0) := (others => '0');
 begin
   --
-  -- < Hier > Implementierung der Zähler
-  ---
+  -- Hier: Implementierung der Zähler
+  --
 
   display_component: entity work.display
     port map (

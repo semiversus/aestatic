@@ -8,7 +8,7 @@ Bei der Betrachtung von kombinatorischen Schaltungen geht man von einer Zustands
 Die Ausgänge einer Schaltung mit sequentieller Logik hängen nun also nicht mehr ausschließlich von den Eingängen ab sondern zusätzlich vom Zustand der enthaltenen Speicherelemente.
 
 # Speicherelement
-Ein Speicherelement kann ein Bit speichern und besitzt zwei stabile Zusände (0 oder 1). Es wird deshalb auch als *bistabile Kippstufe* bezeichnet. Gewöhnlicherweise wird der Zustand nur gespeichert, solange eine Spannungsversorgung vorhanden ist.
+Ein Speicherelement kann ein Bit speichern und besitzt zwei stabile Zustände (0 oder 1). Es wird deshalb auch als *bistabile Kippstufe* bezeichnet. Gewöhnlicherweise wird der Zustand nur gespeichert, solange eine Spannungsversorgung vorhanden ist.
 
 ## Prinzip der Rückkopplung
 
@@ -56,19 +56,19 @@ Das hier gezeigt RS Latch ist mittels `NOR`-Gatter aufgebaut, deswegen spricht m
 
 ![Latch-Realisierung mittels NAND Gatter](rs_latch_nand.svg)
 
-## Taktzustandgesteuertes RS Latch
+## Taktzustandsgesteuertes RS Latch
 
 Bei einem taktzustandgesteuertem RS Latch wird ein zusätzlicher Eingang `C` hinzugefügt. Von diesem Eingang `C` hängt nun ab, ob das Latch *transparent* (`R` und `S` können den Zustand ändern) oder ob es im *Halte* Modus betrieben wird. Im *Halte* Modus können die Eingänge `R` und `S` den Zustand nicht ändern, der momentane Zustand wird also gehalten.
 
 ![Taktzustandsgesteuertes RS Latch](rs_latch_taktzustandsgesteuert.svg)
 
-## Taktzustandgesteuertes D Latch
+## Taktzustandsgesteuertes D Latch
 
 In der Praxis gibt es viele Anwendungen, in denen ein Bit gespeichert werden soll. Die Schaltung eines taktzustandgesteuerten RS Latch wird also so erweitert, dass ein einzelner Eingang die Funktion von `R` und `S` übernimmt.
 
 ![Taktzustandsgesteuertes D Latch](d_latch.svg)
 
-Hier werden die ursprünglichen Eingänge `R` und `S` durch den Eingang `D` ersetzt. Dieser Eingang hat steuert direkt den ursprünglichen *Set*-Eingang an und in invertierter Form den ursprünglichen *Reset*-Eingang. Für den Eingang `C` gleich 1 gilt: Ist Eingang `D` gleich 1 wird das RS Latch gesetzt, bei `D` gleich 0 wird es zurückgesetzt. Ist der Eingang `C` auf 0 ist das D Latch im *Halte* Modus.
+Hier werden die ursprünglichen Eingänge `R` und `S` durch den Eingang `D` ersetzt. Dieser Eingang steuert direkt den ursprünglichen *Set*-Eingang an und in invertierter Form den ursprünglichen *Reset*-Eingang. Für den Eingang `C` gleich 1 gilt: Ist Eingang `D` gleich 1 wird das RS Latch gesetzt, bei `D` gleich 0 wird es zurückgesetzt. Ist der Eingang `C` auf 0 ist das D Latch im *Halte* Modus.
 
 # Flankengetriggerte Flip-Flops
 

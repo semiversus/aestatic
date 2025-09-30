@@ -55,6 +55,6 @@ begin
 end architecture;
 ```
 
-Diese VHDL Datei beschreibt ein D FlipFlop, dessen Eingang `data_i` bei einer steigenden Flanke von `clk` gespeichert wird. Das Signal `data_o` gibt den aktuellen zustand des FlipFlops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
+Diese VHDL Datei beschreibt ein D Flip-Flop, dessen Eingang `data_i` bei einer steigenden Flanke von `clk` gespeichert wird. Das Signal `data_o` gibt den aktuellen Zustand des Flip-Flops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
 
 ![D-Flipflop](dff.svg)

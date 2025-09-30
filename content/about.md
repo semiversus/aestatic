@@ -4,11 +4,11 @@ comments: false
 
 <figure class="image is-pulled-right"><img src="assets/guenther_jena_jehle.jpg" alt="Foto von Günther Jena"></figure>
 
-Mein Name ist Günther Jena und ich komme aus Kappl in Österreich. Vor meiner Hochzeit hieß ich noch Günther Jehle und Jena ist nun die Zusammensetzung aus meinem bisherigen Nachnamen "Jehle" und dem bisherigen Nachnamen meiner Frau "Nagel".
+Mein Name ist Günther Jena und ich komme aus Kappl in Österreich. Vor meiner Hochzeit hieß ich noch Günther Jehle. Jena ist nun die Zusammensetzung aus meinem bisherigen Nachnamen "Jehle" und dem bisherigen Nachnamen meiner Frau "Nagel".
 
-Ich arbeite als Elektronik/Software Entwickler bei [LaserAtWork](https://laseratwork.com) und als Lehrer an der [HTL Rankweil](https://www.htl-rankweil.at).
+Ich arbeite als Elektronik- und Software-Entwickler bei [LaserAtWork](https://laseratwork.com) und als Lehrer an der [HTL Rankweil](https://www.htl-rankweil.at).
 
-Auf dieser Seite möchte ich ein paar meiner Projekte vorstellen und den Blog als einen öffentlichen Notizzettel nutzen.
+Auf dieser Seite möchte ich ein paar meiner Projekte vorstellen und den Blog als öffentlichen Notizzettel nutzen.
 
 ## Kontakt
 E-Mail: <a href="mailto:guenther@jena.at">guenther@jena.at</a><br />

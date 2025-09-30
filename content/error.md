@@ -1,8 +1,8 @@
-title: Seite nicht gefunden/ Site not found
+title: Seite nicht gefunden / Site not found
 comments: false
 template: error.html
 
-.. warning:: Diese Seite ist nicht vorhanden oder wurde eventuell verschoben.
+.. warning:: Diese Seite existiert nicht oder wurde möglicherweise verschoben.
 
 .. warning:: This site is not available or was moved.
 

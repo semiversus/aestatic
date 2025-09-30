@@ -15,7 +15,7 @@ parent: uebersicht.md
 
 # Allgemeines
 
-Der ATMega16 hat drei Pins, die einen *externen Interrupt* auslösen können. *Extern* bedeuted in diesem Fall, dass die
+Der ATMega16 hat drei Pins, die einen *externen Interrupt* auslösen können. *Extern* bedeutet in diesem Fall, dass die
 eigentliche Interruptquelle nicht innerhalb des Mikrocontrollers ist, sondern eben extern.
 
 # Pinbelegung
@@ -47,7 +47,7 @@ Dazu haben wir vier verschiedene Konfigurationsmöglichkeiten für INT0 und INT1
 ISCx1 | ISCx0 | Beschreibung
 -|-|-
 0|0|Löst bei logisch `0` Pegel aus
-0|1|Löst bei deiner Pegeländerung aus (steigende oder fallende Flanke)
+0|1|Löst bei jeder Pegeländerung aus (steigende oder fallende Flanke)
 1|0|Löst bei fallende Flanke (Pegeländerung von logisch '1' auf '0')
 1|1|Löst bei steigender Flanke (Pegeländerung von logisch '0' auf '1')
 

@@ -6,7 +6,7 @@ parent: uebersicht.md
 * Erstellen einer Wahrheitstabelle mittels textueller Beschreibung
 * Erstellen und Auswerten eines KV-Diagramms mit 3 oder 4 Variablen (DNF)
 * Boolesche Funktionen als Schaltungen darstellen
-* Umformen und Vereinfachen von Boole'schen Gleichungen
+* Umformen und Vereinfachen von booleschen Gleichungen
 * Wichtige Schaltnetze
 
 ## Sequentielle Logik

@@ -4,8 +4,8 @@ parent: uebersicht.md
 
 # Allgemeines
 Die `architecture` beschreibt den inneren Aufbau der Schaltung einer Komponente. Für diese Beschreibung stehen mehrere
-Anweisungen zur Verfügung, die eine *Nebenläufigkeit* ermöglichen. Betrachtet man die Komponeten eine digitale Schaltung
-laufen diese jede für sich gesehen unabhängig von der anderen. Die unabhängigkeit lässt sich auch mittels *Nebenläufigkeit*
+Anweisungen zur Verfügung, die eine *Nebenläufigkeit* ermöglichen. Betrachtet man die Komponenten einer digitalen Schaltung
+laufen diese jede für sich gesehen unabhängig von der anderen. Die Unabhängigkeit lässt sich auch mittels *Nebenläufigkeit*
 (engl. *concurrent*) beschreiben, deswegen heißen diese Anweisungen auch engl. *concurrent statements*.
 
 Es gibt folgende *concurrent statements*:
@@ -50,7 +50,7 @@ signal <= expr_true when cond else expr_false;
 ```
 
 Als konkretes Beispiel können wir wieder den Halbaddierer verwenden. Das Exklusiv-Oder lässt sich auch mittels Bedingung
-realisieren. Ist der Eingang `b_i` gleich `0` enstpricht der Ausgang `a_i`, ansonsten entspricht der Ausgang `not a_i`:
+realisieren. Ist der Eingang `b_i` gleich `0` entspricht die Ausgabe `a_i`, ansonsten entspricht die Ausgabe `not a_i`:
 
 ## Beispiel
 

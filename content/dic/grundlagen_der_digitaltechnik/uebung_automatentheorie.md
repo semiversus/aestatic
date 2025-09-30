@@ -1,8 +1,8 @@
 title: Übung zur Automatentheorie
 parent: automatentheorie.md
 
-# Graphische Darstellung des Getränke-Automaten
-Stelle das Beispiel des [Getränke-Automaten](automatentheorie.html#beispiel-getrankeautomat) graphisch dar
+# Grafische Darstellung des Getränke-Automaten
+Stelle das Beispiel des [Getränke-Automaten](automatentheorie.html#beispiel-getrankeautomat) grafisch dar
 
 # Automat mittels Logisim
 Realisiere mittels Logisim den folgenden Automaten:

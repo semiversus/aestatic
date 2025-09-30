@@ -3,7 +3,7 @@ next: wecker.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
-Die Signale einer PS/2 Tastatur sollen ausgelesen werden und über eine UART Übertragen werden.
+Die Signale einer PS/2 Tastatur sollen ausgelesen werden und über eine UART übertragen werden.
 
 # Stufe 1
 * Mittels Adapter wird eine PS2 Tastatur an die Megacard angesteckt
@@ -20,4 +20,4 @@ Erweiterung von Stufe 1
 # Stufe 3
 * Auf einem externen Display wird der eingegeben Text angezeigt
 * Dabei soll auch die Rückstelltaste richtig funktionieren
-* *Enter*-Taste löscht den angezeigten Text`
+* *Enter*-Taste löscht den angezeigten Text

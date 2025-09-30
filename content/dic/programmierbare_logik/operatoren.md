@@ -4,7 +4,7 @@ parent: uebersicht.md
 
 # Allgemeines
 ## Logische Operatoren
-Als stehen folgende logische Operatoren zur Verfügung:
+Es stehen folgende logische Operatoren zur Verfügung:
 
 * `and`
 * `or`

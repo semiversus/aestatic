@@ -9,7 +9,7 @@ Bisher wurden die Elemente der kombinatorischen Schaltnetze und der sequentielle
 Die Ausbreitungsgeschwindigkeit von Licht im Vakuum ist 299 792 458 Meter pro Sekunde. Elektronen bzw. genauer gesagt die Auswirkung einer Elektronenbewegung innerhalb eines Leiters bewegt sich annähernd mit Lichtgeschwindigkeit. So benötigt ein Impuls ca. 0.33 Nanosekunden für eine Strecke von 10 Zentimeter.
 
 ## Gatterlaufzeit
-Die Verzögerung durch ein einzelnes logisches Gatter wird *Gatterlaufzeit* (oder Englisch "*propagation delay*") genannt und bewegt sich je nach verwendeter Technologie des Bausteins zwischen etwa 100ps bis 100ns.
+Die Verzögerung durch ein einzelnes logisches Gatter wird *Gatterlaufzeit* (oder englisch "*propagation delay*") genannt und bewegt sich je nach verwendeter Technologie des Bausteins zwischen etwa 100ps bis 100ns.
 
 | Logikfamilie | Leistung pro Gatter | Gatterlaufzeit |
 | :--- | :---: | :---: |

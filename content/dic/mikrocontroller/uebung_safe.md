@@ -42,7 +42,7 @@ im Array und Speicherung als Integer.
 
 ### Speicherung im Array
 Es wird ein Array der Länge vier genutzt, um die einzelnen Ziffern zu speichern. Es werden zwei Arrays benötigt: eines
-zur Speicherung des geforderten Codes und eines, das den Code während der Eingabe speichert. Der  und entsprechend mit
+zur Speicherung des geforderten Codes und eines, das den Code während der Eingabe speichert. Das Array wird entsprechend mit
 dem Standardcode initialisiert ("1234").
 
 ```c

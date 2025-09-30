@@ -2,7 +2,7 @@ title: Einführung C Programmierung
 parent: uebersicht.md
 
 # Übersicht
-Einen guten Übersicht über C Programmierung bietet das Open Book [C von A bis Z](https://openbook.rheinwerk-verlag.de/c_von_a_bis_z/) aus dem Verlag Galileo Computing und das Wikibook [C-Programmierung](https://de.wikibooks.org/wiki/C-Programmierung).
+Eine gute Übersicht über C Programmierung bietet das Open Book [C von A bis Z](https://openbook.rheinwerk-verlag.de/c_von_a_bis_z/) aus dem Verlag Galileo Computing und das Wikibook [C-Programmierung](https://de.wikibooks.org/wiki/C-Programmierung).
 
 Um die allgemeinen Beispiele leicht testen zu können, stehen Online Compiler zur Verfügung:
 
@@ -24,13 +24,13 @@ int main() {
 
 Jedes Programm benötigt eine Funktion mit dem Namen `main`. Diese Funktion gibt einen Wert zurück, der den Erfolg der Ausführung anzeigt. Der Wert 0 wird meist als erfolgreiche Ausführung interpretiert, andere Werte können Fehler oder vorzeitige Abbrüche darstellen.
 
-Der Funktion `main` können vom Betriebssystem auch Parameter mitgegeben werden . Bei Microcontroller-Anwendungen ist dies üblicherweise nicht der Fall.
+Der Funktion `main` können vom Betriebssystem auch Parameter übergeben werden. Bei Microcontroller-Anwendungen ist dies üblicherweise nicht der Fall.
 
-Die Funktion `printf` wird verwendet um Ausgaben auf die `Standardausgabe` zu machen. Die Standardausgabe ist abhängig von der Art des Programmes. Bei Kommandozeilenprogrammen wird die Ausgabe direkt auf der Kommandozeile angezeigt. Bei Microcontrollern ist dies Implementierungsabhängig. Hier kann die serielle Schnittstelle oder ein Display genutzt werden.
+Die Funktion `printf` wird verwendet um Ausgaben auf der `Standardausgabe` zu machen. Die Standardausgabe ist abhängig von der Art des Programmes. Bei Kommandozeilenprogrammen wird die Ausgabe direkt auf der Kommandozeile angezeigt. Bei Microcontrollern ist dies Implementierungsabhängig. Hier kann die serielle Schnittstelle oder ein Display genutzt werden.
 
 Um dieses Quellcode nun auszuführen bedarf es mehrerer Schritte, welche grob so zusammengefasst werden können:
 
-1. **Präprozessor**: Anweisungen an den Präprozessor werden *Direktiven* genannt und haben ein '#' vorangstellt. Im obigen Beispiel wird mittels `#include <stdio.h>` die Datei stdio.h in diese Datei hineinkopiert.
+1. **Präprozessor**: Anweisungen an den Präprozessor werden *Direktiven* genannt und haben ein '#' vorangestellt. Im obigen Beispiel wird mittels `#include <stdio.h>` die Datei stdio.h in diese Datei hineinkopiert.
 2. **Kompilierung**: Die Ausgabe des Präprozessors wird nun kompiliert, d.h. der C Quellcode wird in Maschinensprache übersetzt. Das Ergebnis wird Objektcode genannt.
 3. **Linken**: Da jede C Quellcode-Datei einzeln in eine Objektcode-Datei umgewandelt wurde, wird nun durch das Linken eine ausführbare Datei erstellt, die die einzelnen Funktionen und Verweise der Objektcode-Dateien zu einer gemeinsamen Datei zusammenführt.
 4. **Ausführen**: Beim Ausführen ruft das Betriebssystem oder der Startup-Code des Microcontrollers die Funktion `main` auf.
@@ -101,7 +101,7 @@ Um Ganzzahlen (Zahlen ohne Nachkomma) zu definieren, gibt es in C folgende Daten
 * `int`: meist 16 oder 32 Bit
 * `long int` bzw. `long`: größerer Zahlenbereich als `int`
 
-Eine Variable kann vorzeichenbehaftet sein oder vorzeichenlos sein. Um eine vorzeichenlose Variable zu definieren muss `unsigned` vorgestellt werden (z.B. `unsigned int`). Durch `signed` kann eine Variable explizit vorzeichenbehaftet definiert werden. Wenn eine Variable nicht explizit mittels `signed` oder `unsigned` ausgezeichnet wird, ist die Variable vorzeichenbehaftet.
+Eine Variable kann vorzeichenbehaftet oder vorzeichenlos sein. Um eine vorzeichenlose Variable zu definieren muss `unsigned` vorgestellt werden (z.B. `unsigned int`). Durch `signed` kann eine Variable explizit vorzeichenbehaftet definiert werden. Wenn eine Variable nicht explizit mittels `signed` oder `unsigned` ausgezeichnet wird, ist die Variable vorzeichenbehaftet.
 
 Die Größe des Zahlenbereichs der einzelnen Datentypen ist Plattform- und Compilerabhängig. So kann ein `int` 16 Bit (0-65535) oder 32 Bit (0-4294967295) groß sein. Die tatsächliche Größe eines Typs ist in der Datei `limits.h` abgelegt.
 
@@ -127,10 +127,10 @@ Dadurch werden unter anderem folgende Datentypen zur Verfügung gestellt:
 * `uint8_t`, `uint16_t`, `uint32_t` und `uint64_t`: Vorzeichenlose Datentypen mit 8, 16, 32 bzw. 64 Bit
 * `int8_t`, `int16_t`, `int32_t` und `int64_t`: Vorzeichenbehaftete Datentypen mit 8, 16, 32 bzw. 64 Bit
 
-## Fließkommazahlen
-Fließkommazahlen sind Zahlen mit Nachkommastellen bzw. sehr große Zahlen. Intern wird die Mantisse und der Exponent getrennt gespeichert. C stellt dafür folgende zwei Datentypen zur Verfügung:
+## Gleitkommazahlen
+Gleitkommazahlen sind Zahlen mit Nachkommastellen bzw. sehr große Zahlen. Intern wird die Mantisse und der Exponent getrennt gespeichert. C stellt dafür folgende zwei Datentypen zur Verfügung:
 
 * `float`: Zahlen mit einfacher Genauigkeit (32Bit)
 * `double`: Zahlen mit doppelter Genauigkeit (64Bit)
 
-Fließkommazahlen sind immer vorzeichenbehaftet. Fließkommazahlen können auch die Sonderwerte *positiv unendlich*, *negativ unendlich* und *NaN* (*Not a Number*) annehmen.
+Gleitkommazahlen sind immer vorzeichenbehaftet. Gleitkommazahlen können auch die Sonderwerte *positiv unendlich*, *negativ unendlich* und *NaN* (*Not a Number*) annehmen.

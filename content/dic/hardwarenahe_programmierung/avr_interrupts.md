@@ -93,7 +93,7 @@ Interrupts, die keine eigene Service Routine haben führen die Serviceroutine `B
 Reset aus.
 
 Es ist möglich eine eigene Funktion für `BADISR_vect` zu definieren. Für große Projekte empfiehlt sich dies auch, da es
-schnell bei der Fehlersuche passieren kann, dass eine Service Routine gelöscht oder fälschlicherweise ein Interrupt
+schnell bei der Fehlersuche passieren kann, dass eine Service Routine gelöscht oder fälschlich ein Interrupt
 freigegeben wird. Die Implementierung ist wie folgt möglich:
 
 ```c

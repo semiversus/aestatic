@@ -5,7 +5,7 @@ latex: true
 # Allgemeines
 Im Vergleich zu einer Zahl ohne Nachkommastellen (*Integer*-Zahl bzw. Ganzzahl) benötigt man für die Speicherung und Verarbeitung von Zahlen mit Nachkommastellen eigene Zahlenformate.
 
-## Festkomma Zahlen
+## Festkommazahlen
 Die Anzahl der Nachkommastellen ist hier fix. Bei der Angabe des Formats gibt man oft die Anzahl der Vorkommastellen (bezeichnet mittels *I*) und die Anzahl der Nachkommastellen an (bezeichnet mittels *Q*). Das `I.Q` Format `32.0` beschreibt dabei eine 32 Bit Integerzahl. Bei einem `I.Q` Format von `1.31` hat die Zahl ein Bit als Vorkommastelle und 31 Bit als Nachkommastelle.
 
 Beispiel `3.5` Format und der Binärzahl `01101011`:
@@ -24,7 +24,7 @@ Bei der Gleitkommazahl (auch *Fließkommazahl* genannt) wird die Darstellung mit
 
 $$x=-1^{S} \cdot M \cdot B^{E}$$
 
-In der Digitaltechnik wird durchwegs 2 als Basis(`B`) verwendet. Um mit Gleitkommazahlen zu Rechnen sind genau Vorgaben zum Zahlenformat und zur Durchführung mathematischer Operationen, insbesondere für Rundungen, notwendig. Die Norm *IEEE 754* stellt eine solche Beschreibung dar.
+In der Digitaltechnik wird durchweg 2 als Basis(`B`) verwendet. Um mit Gleitkommazahlen zu rechnen sind genaue Vorgaben zum Zahlenformat und zur Durchführung mathematischer Operationen, insbesondere für Rundungen, notwendig. Die Norm *IEEE 754* stellt eine solche Beschreibung dar.
 
 In der *IEEE 754* wird die Anzahl und Position der Bits für Mantisse und Exponent definiert:
 

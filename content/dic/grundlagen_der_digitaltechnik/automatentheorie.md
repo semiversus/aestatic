@@ -6,7 +6,7 @@ parent: uebersicht.md
     Zu diesem Teil gibt es [Übungsaufgaben](uebung_automatentheorie.html)
 
 # Allgemeines
-Die Automatentheorie beschreibt Modelle, die durch die im Automat vorhandenen Zustände, den akzeptierten Eingaben und durch die Ausgaben beschrieben werden können. Wenn ein Automat nur endlich viele Zustände einnehmen kann, spricht man von einem ''endlichen Automaten''. Andere Ausdrücke sind Zustandsmaschine oder der englische Ausdruck ''Finite State Machine''.
+Die Automatentheorie beschreibt Modelle, die durch die im Automat vorhandenen Zustände, den akzeptierten Eingaben und durch die Ausgaben beschrieben werden können. Wenn ein Automat nur endlich viele Zustände einnehmen kann, spricht man von einem „endlichen Automaten“. Andere Ausdrücke sind Zustandsmaschine oder der englische Ausdruck „Finite State Machine“.
 
 ## Mathematische Beschreibung
 ### Eingabealphabet `Σ`
@@ -53,13 +53,13 @@ Die Ausgabefunktion `ω` (klein Omega) beschreibt die Ausgabe in Abhängigkeit v
 In diesem Beispiel ist `Γ`={`A0`, `A1`, `A2`}. Hier wird als Beispiel beim Zustand `Z1` und der Eingabe `E0` die Ausgabe `A1` gemacht.
 
 ## Moore- und Mealy-Automat
-Bei der Ausgabefunktion gibt es zwei verschiedene Definitionen: Einmal hängt die Ausgabe von Zustand und Eingabe ab und das andere mal nur vom Zustand. Ein Automat, dessen Ausgabe von Zustand und Eingabe abhängt wird ''Mealy''-Automat genannt. Im Gegensatz dazu hängt bei einem ''Moore''-Automat die Ausgabe nur vom aktuellen Zustand ab.
+Bei der Ausgabefunktion gibt es zwei verschiedene Definitionen: Einmal hängt die Ausgabe von Zustand und Eingabe ab und das andere mal nur vom Zustand. Ein Automat, dessen Ausgabe von Zustand und Eingabe abhängt wird „Mealy“-Automat genannt. Im Gegensatz dazu hängt bei einem „Moore“-Automat die Ausgabe nur vom aktuellen Zustand ab.
 
 Dies kann in folgendem Diagramm zusammengefasst werden:
 
 ![Mealy- und Moore-Automat](moore_mealy.svg)
 
-Es ist möglich, einen gegebenen Mealy-Automaten in einen Moore-Automaten umzuwandeln und umgekehrt. Für viele Aufgabenstellungen kommt der Mealy-Automat mit weniger Zuständen aus, da die Eingänge auch direkt die Ausgänge beeinflussen können. Um das selbe zu erreichen, benötigt der Moore-Automat mehr Zustände, da die Ausgänge immer vom aktuellen Zustand abgeleitet werden.
+Es ist möglich, einen gegebenen „Mealy“-Automaten in einen „Moore“-Automaten umzuwandeln und umgekehrt. Für viele Aufgabenstellungen kommt der „Mealy“-Automat mit weniger Zuständen aus, da die Eingänge auch direkt die Ausgänge beeinflussen können. Um das selbe zu erreichen, benötigt der „Moore“-Automat mehr Zustände, da die Ausgänge immer vom aktuellen Zustand abgeleitet werden.
 
 ## Beispiel Getränkeautomat
 Als Beispiel wird ein Getränkeautomat entworfen, der 50 Cent und 1 Euro Geldstücke akzeptiert. Außerdem gibt es eine Taste für die Getränkeausgabe und die Geldrückgabe. Der Getränkeautomat kann 50 Cent und 1 Euro Stücke zurückgeben, sowie ein Getränk ausgeben. Ein Getränk kostet 1 Euro.
@@ -68,7 +68,7 @@ Dadurch können wir unsere Ein- und Ausgabemenge definieren:
 
 **Eingabemenge**: `Σ`={"50 Cent", "1 Euro", "Rückgabetaste", "Getränketaste"}
 
-**Ausgabemenge**: `Γ`={"50 Cent", "1 Euro", "Getränk", "Keine Ausgabe"}}
+**Ausgabemenge**: `Γ`={"50 Cent", "1 Euro", "Getränk", "Keine Ausgabe"}
 
 Als Zustände des Automaten definieren wir das aktuelle Guthaben.
 

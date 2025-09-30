@@ -7,11 +7,11 @@ verbunden oder getrennt sind. Man spricht auch von den Zuständen *geschlossen* 
 
 Im mechanischen Aufbau des Tasters wird oft eine Feder benutzt, um die Kontakte zu trennen. Im *ungedrückten* Zustand
 ist dieser Taster *offen*. Diese Konfiguration bezeichnet man als *Normally open* (kurz *NO*) Taster. Im gegensatz dazu
-sind bei Tastern in der Konfiguration *Normally closed* (*NO*)die Kontakte per Feder *geschlossen* und erst durch
+sind bei Tastern in der Konfiguration *Normally closed* (*NC*) die Kontakte per Feder *geschlossen* und erst durch
 mechanische Betätigung werden die Kontakte getrennt.
 
 Bedingt durch den Aufbau und der Feder wechselt bei einer Betätigung der Zustand nicht unmittelbar von *offen* zu
-*geschlossen* (und umgekehrt) sonder es kommt zu einer mechanischen Schwingung, die diese Kontakte mehrfach aufeinander
+*geschlossen* (und umgekehrt) sondern es kommt zu einer mechanischen Schwingung, die diese Kontakte mehrfach aufeinander
 prellen lässt. Daher die Bezeichnung *Tastenprellen* oder genauer *Kontaktprellen*.
 
 Im folgenden Oszibild sieht man ein solches Prellen, welches in diesem Fall beim Loslassen der Taste aufgenommen wurde (0V entspricht *geschlossen*, 5V entspricht *offen*):
@@ -23,7 +23,7 @@ auch stark variieren.
 
 Das Problem beim Tastenprellen ist die Auswertung der Taste selbst. Zur Auswertung ob eine Taste gedrückt wurde wird
 nach einer Flanke gesucht, sprich ein Zustandswechsel von *offen* zu *geschlossen* (oder umgekehrt). Je nach Implementierung
-dieser Detektion kann durch das Prellen ein Tasterdruck mehrfach detektiert werden. Dies kann zu Problemen in der Anwendung kommen.
+dieser Detektion kann durch das Prellen ein Tasterdruck mehrfach detektiert werden. Dies kann zu Problemen in der Anwendung führen.
 
 # Entprellen
 Es gibt verschiedene Möglichkeiten, einen Taster zu entprellen. Unterschieden wird zwischen Hardware- und Softwarelösungen.
@@ -52,7 +52,7 @@ uint8_t process_key(uint8_t key_state) {
     if (key_state==1) {           // Wenn der neue Zustand "geschlossen" ist
       result=1;                   // gib 1 als Wert zurück
     }
-    _delay_ms(5);                 // Werte 5 Millisekunden (blockierend!)
+    _delay_ms(5);                 // Warte 5 Millisekunden (blockierend!)
   }
 
   old_key_state=key_state;        // speichere den aktuellen Zustand für die nächste Iteration

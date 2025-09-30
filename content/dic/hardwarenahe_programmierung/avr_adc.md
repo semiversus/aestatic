@@ -38,7 +38,7 @@ Im linken unteren Segment sind die Eingänge, die über Multiplexer zum eigentli
 Für differentielle Messungen wird jeweils ein zweiter Kanal benötigt, der über den Multiplexer "*Neg. Input Mux*" ausgewählt wird. Der positive und negative Kanal wird durch eine einstellbare Verstärkung (*Gain Amplifier*) zu einem Multiplexer geführt, der auswählt, ob eine sog. *Single Ended* oder eine differentielle Messung durchgeführt wird.
 
 ## AD Wandlung
-Der ADC arbeitet mittels einer 10 Bit sukzessiven Approximation. Dazu wird ein 10 Bit DAC schrittweise auf die zu messende Spannung eingestellt. Mit jedem Bit mehr Auflösung wird über einen Komperator (*Sample & Hold Comperator*) entschieden, ob das nächste Bit 0 oder 1 sein soll. Als Konsequenz dieses Ablaufs benötigt diese Art von ADC mehrere Takte für die Umwandlung.
+Der ADC arbeitet mittels einer 10 Bit sukzessiven Approximation. Dazu wird ein 10 Bit DAC schrittweise auf die zu messende Spannung eingestellt. Mit jedem Bit mehr Auflösung wird über einen Komparator (*Sample & Hold Comparator*) entschieden, ob das nächste Bit 0 oder 1 sein soll. Als Konsequenz dieses Ablaufs benötigt diese Art von ADC mehrere Takte für die Umwandlung.
 
 ## Referenz
 Als Referenz stehen drei Quellen zur Verfügung:
@@ -56,7 +56,7 @@ Das Register `ADMUX` steuert die Auswahl der Referenzspannung, der Anordnung der
 
 Wird als Referenzspannung die interne 2.56 Volt Referenz oder die Betriebsspannung AVCC gewählt empfiehlt es sich, an den Pin AREF einen Kondensator zu schalten, um Rauschen zu minimieren und die Referenzspannung möglichst stabil zu halten. In diesen zwei Fällen sollte auf keinen Fall eine externe Spannung am Pin AREF anliegen!
 
-Die Anordnung der Datenbits mittels <samp>ADLAR</samp> kann je nach Anwendung eingestellt werden. Wird der 10 Bit Wert verwendet, kann beim <samp>avr-gcc</samp> Compiler mittels <samp>ADC</samp> auf die Kombination von <samp>ADCH</samp> und <samp>ADCL</samp> zugegriffen werden. Wenn einzeln auf die Register zugegriffen wird muss <samp>ADCL</samp> vor <samp>ADCH</samp> ausgelsen werden.
+Die Anordnung der Datenbits mittels <samp>ADLAR</samp> kann je nach Anwendung eingestellt werden. Wird der 10 Bit Wert verwendet, kann beim <samp>avr-gcc</samp> Compiler mittels <samp>ADC</samp> auf die Kombination von <samp>ADCH</samp> und <samp>ADCL</samp> zugegriffen werden. Wenn einzeln auf die Register zugegriffen wird muss <samp>ADCL</samp> vor <samp>ADCH</samp> ausgelesen werden.
 
 ## Register `ADCSRA`
 

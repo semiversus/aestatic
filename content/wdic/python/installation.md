@@ -18,7 +18,7 @@ Wir benötigen eine Python Installation mit Version >= 3.8.
 
 Es gibt viele Möglichkeiten Python zu installieren und manche Plattformen liefern Python direkt mit (MacOS/Linux). Sollte dies nicht der Fall sein oder nur eine alte Version vorhanden sein, gibt es eine Downloadmöglichkeit hier: [Python Download](https://www.python.org/downloads/)
 
-**Wichtig**: Unter Windows sollte der Pfad zu Python in der `PATH` Umgebungsvariable sein. Dazu bei der Installation folgende Option setzen:
+**Wichtig**: Unter Windows sollte der Pfad zu Python in der `PATH`-Umgebungsvariable enthalten sein. Dazu bei der Installation folgende Option setzen:
 
 ![Umgebungsvariable bei der Installation setzen](add_Python_to_Path.png)
 

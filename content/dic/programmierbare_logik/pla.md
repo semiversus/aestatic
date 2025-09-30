@@ -10,7 +10,7 @@ Programmierbare Logik hat im Vergleich zu festverdrahten Logikbausteinen folgend
 
 Es gibt je nach Programmierbarkeit folgende Klassifizierungen:
 
-* **ASIC**s (Application Specific Integrated Circuits) sind integrierte Schaltkreise, die für ganz bestimmten Einsatzzweck entwickelt und gefertigt werden. Die Logik wird mittels *Standardzellenentwurf* entwickelt. Die Grundkosten sind sehr hoch, bei großen Stückzahlen sind die Kosten pro IC aber sehr gering.
+* **ASIC**s (Application Specific Integrated Circuits) sind integrierte Schaltkreise, die für einen ganz bestimmten Einsatzzweck entwickelt und gefertigt werden. Die Logik wird mittels *Standardzellenentwurf* entwickelt. Die Grundkosten sind sehr hoch, bei großen Stückzahlen sind die Kosten pro IC aber sehr gering.
 * **OTP** (One Time Programmable) sind programmierbare Logikbausteine, die einmal programmierbar sind. Für die Speicherzellen wird dabei meist die *Anti-Fuse* Technologie genutzt.
 * **Mehrfach Wiederbeschreibbar** sind programmierbare Logikbausteine, wenn als Speicherzellen EEPROM, Flash oder SRAM Zellen verwendet werden.
 

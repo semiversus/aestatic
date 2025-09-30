@@ -30,7 +30,7 @@ PORTB |= 0x03; // 0x03->0b00000011
 Mittels ver*UND*ung:
 
 * `A AND 0=0` (Extremalgesetz)
-* `A AND 1=A` (Neutralistätsgesetz)
+* `A AND 1=A` (Neutralitätsgesetz)
 
 Das Bitmuster, welches vorgibt, welche Bits auf 0 gesetzt werden und welche auf ihrem ursprünglichen Wert bleiben wird auch *Maske* genannt. Diese Maskierung wird sehr oft bei Abfragen verwendet, weil man nur den Zustand bestimmter Bits kennen möchte.
 
@@ -58,7 +58,7 @@ Eine Anweisung soll nur ausführt werden, wenn Bit 1 im Register `PINA` auf 1 is
 
 ```c
 if (PINA&0x02) { // 0x02->0b00000010
-    // Answeisung
+    // Anweisung
 }
 ```
 

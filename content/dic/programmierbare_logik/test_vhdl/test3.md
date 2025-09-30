@@ -38,7 +38,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 ## Implementierung des Top Levels
 <span class="tag is-rounded is-info">5 Punkte</span>
 
-Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>led_toggle_fsm</samp>. Diese
+Zur Verfügung stehen die Komponenten <samp>button_detect</samp> und <samp>led_toggle_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
 * Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen `toggle_detect_component` ist bereits erstellt

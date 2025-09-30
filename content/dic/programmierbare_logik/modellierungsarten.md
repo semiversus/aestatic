@@ -2,7 +2,7 @@ title: Modellierungsarten
 parent: uebersicht.md
 
 # Verhaltensmodellierung
-Bei der Verhaltensmodellierung wird ein System durch einen Algorithmus in VHDL Notation veschrieben. Es werden keine
+Bei der Verhaltensmodellierung wird ein System durch einen Algorithmus in VHDL Notation beschrieben. Es werden keine
 Gatter oder komplexere Komponenten direkt verwendet. Ein Verhaltensmodell ist im Prinzip eine *Black Box* Sicht des zu
 beschreibenden Systems.
 
@@ -43,13 +43,13 @@ In der Beschreibung wird das Verhalten dargestellt, in diesem Beispiel mittels U
 Die Basis für den strukturellen VHDL Entwurf ist ein synchrones Design. Prinzipiell besteht jedes synchrone Design aus
 Kombinatorik und Flip-Flops (meist Register genannt), die alle auf einen gemeinsamen Takt synchronisiert sind.
 
-Um das Design zu strukturieren wird meist das Design meist als Datenpfades aufgebaut. Elemente eines
+Um das Design zu strukturieren wird meist das Design als Datenpfad aufgebaut. Elemente eines
 Datenpfades sind dabei:
 
 * Multiplexer
 * Arithmetische Operatoren (Addierer, Subtrahierer, usw.)
 * Logische Operatoren
-* Komperatoren
+* Komparatoren
 * Register
 * Diverse andere Elemente wie Vorzeichenerweiterung usw.
 
@@ -151,7 +151,7 @@ An diesem Beispiel für die strukturelle Modellierung sieht man den Aufbau mitte
 ergibt sich eine Hierarchie der Komponenten.
 
 # Datenflussmodellierung
-Bei der Datenfluss wird der *Fluss* der Daten modelliert. Dabei werden auf die Eingänge Transformationen
+Bei der Datenflussmodellierung wird der *Fluss* der Daten modelliert. Dabei werden auf die Eingänge Transformationen
 angewendet, um die Ausgänge zu berechnen.
 
 ```vhdl

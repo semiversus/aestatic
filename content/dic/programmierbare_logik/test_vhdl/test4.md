@@ -11,7 +11,7 @@ parent: uebersicht.md
 * Projekt <samp>transmitter.xise</samp> öffnen
 
 ## Aufgabenstellung
-Um Daten zu Übertragen wird oft die serielle Schnittstelle verwendet. In diesem Beispiel soll ein Transmitter entsprechend
+Um Daten zu übertragen wird oft die serielle Schnittstelle verwendet. In diesem Beispiel soll ein Transmitter entsprechend
 RS232 realisiert werden.
 
 .. figure:: ../../bussysteme/rs232_timing.png
@@ -65,7 +65,7 @@ dem `data_i` Vektor zu holen (z.B. `data_i(0)` holt Bit 0 des Vektors).
 
 ### Blockschaltbild
 Dieses Blockschaltbild zeigt die einzelnen Komponenten der <samp>uart_tx</samp> Komponente. Die resultierende VHDL
-Beschreibung sollte äquvivalent zu diesem Blockschaltbild sein.
+Beschreibung sollte äquivalent zu diesem Blockschaltbild sein.
 
 ![Blockschaltbild uart_tx](test4_uart_tx.jpg)
 
@@ -76,7 +76,7 @@ Beschreibung sollte äquvivalent zu diesem Blockschaltbild sein.
 ## Implementierung des Top Levels
 <span class="tag is-rounded is-info">3 Punkte</span>
 
-Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>uart_tx</samp>. Diese
+Zur Verfügung stehen die Komponenten <samp>button_detect</samp> und <samp>uart_tx</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>transmitter.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
 Einige benötigte Signale sind bereits vordefiniert.

@@ -16,7 +16,7 @@ Folgende Hardwareeinheiten werden von der HAL angesteuert:
 * Timer1 für Soundausgabe
 * LCD (Port A und Port B)
 
-Die globale Interruptfreigabe wird durch bei der Initialisierung gesetzt (mittels `sei()`).
+Die globale Interruptfreigabe wird bei der Initialisierung gesetzt (mittels `sei()`).
 
 # Ansteuerung der LEDs
 
@@ -49,7 +49,7 @@ uint8_t hal_key_get();
 
 * Diese Funktion gibt `0` zurück, wenn keine Taste gedrückt wurde
 * Der Rückgabewert ungleich `0` beschreibt die Taste, die gedrückt (genauer losgelassen) wurde
-* Wurden mehrere Tasten gleichzeitig losgelassen, wird beim ersten Aufruf die niedrigste Nummer zurückgeben, danach die nächsthöhere usw.
+* Wurden mehrere Tasten gleichzeitig losgelassen, wird beim ersten Aufruf die niedrigste Nummer zurückgegeben, danach die nächsthöhere usw.
 
 # Ausgabe von Tönen
 
@@ -68,7 +68,7 @@ void hal_sound_play(uint16_t frequency);
 
 # Timerabstraktion
 ## Allgemeines
-Ein großer Teil an Funktionen innerhalb einer Anwendung sind durch Zeiten definiert. Da die Anzahl an hardwarebasierten
+Ein großer Teil der Funktionen innerhalb einer Anwendung sind durch Zeiten definiert. Da die Anzahl an hardwarebasierten
 Timern begrenzt ist müssen Timer mehrfachverwendet werden. Innerhalb der Hardwareabstraktion wird ein Timer verwendet,
 um für die Applikation beliebig viele abstrahierte Timervariablen zur Verfügung zu stellen.
 
@@ -165,6 +165,6 @@ Alternativ kann in solchen Fällen auch ganz auf Float verzichtet werden, indem 
 Dezimaldarstellung rechnet. In diesem Beispiel wird statt in Grad Celsius in 1/100 Grad Celsius gerechnet
 
 ```c
-int16 temperature=2782; // entspricht 27.82 Grad Celsius
+int16_t temperature=2782; // entspricht 27.82 Grad Celsius
 hal_lcd_printf(0, 0, "%d.%02d", temperature/100, temperature%100); // gibt "27.82" aus
 ```

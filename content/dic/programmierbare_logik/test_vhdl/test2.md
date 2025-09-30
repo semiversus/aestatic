@@ -104,7 +104,7 @@ durchwechselt.
 <span class="tag is-rounded is-info">5 Punkte</span>
 
 Der Decoder wandelt den Eingang `value_i` (3 Bit) in die entsprechende 7 LEDs Darstellung `leds_o` (7 Bit) um. Dabei
-wird folgende kodierung verwendet:
+wird folgende Kodierung verwendet:
 
 LED6|LED5|LED4|LED3|LED2|LED1|LED0
 :---:|:---:|:---:|:---:|:---:|:---:|:---:

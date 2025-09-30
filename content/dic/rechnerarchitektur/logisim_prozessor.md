@@ -18,7 +18,7 @@ Das [vollständige Prozessormodell für Logisim](prozessor.circ) steht für Übu
 Der Datenpfad stellt mittels Multiplexer und Enable Signale die Verbindung der einzelnen Register und Funktionseinheiten her. Im Datenpfad sieht man die Register (A, IX), die Arithmetisch-Logische Recheneinheit (kurz ALU) und den Datenspeicher.
 
 ### ALU
-Die Arithmetisch-Logische Einheit besitzt zwei Eingänge für Operanden (A, B), einen Eingang zur Auswahl der durchzuführenden Rechenaoperation (OpALU), eine Ergebnisausgang und zwei Statusflags (Carry, Zero).
+Die Arithmetisch-Logische Einheit besitzt zwei Eingänge für Operanden (A, B), einen Eingang zur Auswahl der durchzuführenden Rechenoperation (OpALU), einen Ergebnisausgang und zwei Statusflags (Carry, Zero).
 
 Übersicht über die Operationen:
 

@@ -5,7 +5,7 @@ parent: uebersicht.md
 ## Automatentheorie
 * Erstellung, Auswertung und Überprüfung von allgemeinen Automaten
 * Graphische - und tabellenartige Darstellung
-* Transistionen
+* Transitionen
 * Digitale Automaten
 
 ## Timing, Asynchrones/Synchrones Design

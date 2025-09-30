@@ -28,7 +28,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Eingang `toggle_i` wechselt von `OFF` nach `LIGHT` bzw. von `LIGHT` oder `DOZE` nach `OFF`
 * Der Eingang `off_i` wechselt von `LIGHT` nach `DOZE`, bei den anderen Zuständen hat er keine Auswirkung
 * Der Eingang `timeout_i` bewirkt ein Wechsel von `DOZE` nach `OFF`, bei den anderen Zuständen hat er keine Auswirkung
-* Der Ausgang `led_o` ist auf `'1'`, wenn die Zustandmaschine im Zustand `LIGHT` oder `DOZE` ist
+* Der Ausgang `led_o` ist auf `'1'`, wenn die Zustandsmaschine im Zustand `LIGHT` oder `DOZE` ist
 * Der Ausgang `timer_enable_o` ist im Zustand `DOZE` auf `'1'`, ansonsten `'0'`
 * Der Ausgang `timer_clear_o` ist im Zustand `LIGHT` auf `'1'`, ansonsten `'0'`
 
@@ -42,7 +42,7 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 ## Implementierung des Top Levels
 <span class="tag is-rounded is-info">5 Punkte</span>
 
-Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>button_dectect</samp> und <samp>led_control_fsm</samp>. Diese
+Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>button_detect</samp> und <samp>led_control_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_control.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
 * Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen `toggle_detect_component` ist bereits erstellt

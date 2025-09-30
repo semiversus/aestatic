@@ -75,8 +75,8 @@ Vergleich mit `OCR0`.
 Das Register `OCR0` ist ein 8 Bit Register das für den Vergleich mit `TCNT0` genutzt wird. Der Vergleich kann für drei
 Funktionen benutzt werden:
 
-* Die Generierung eines PWM Signals mittels *Waveform Generetion* am Pin *OC0*
-* Das Auslösen des Interrupts `TIMER0_COMP_vect` bei Äquvivalenz mit `TCNT0`
+* Die Generierung eines PWM Signals mittels *Waveform Generation* am Pin *OC0*
+* Das Auslösen des Interrupts `TIMER0_COMP_vect` bei Äquivalenz mit `TCNT0`
 * Die Auswertung mittels der Steuerung des Timer 0
 
 ## `TCCR0` - Timer Counter Control Register
@@ -158,7 +158,7 @@ Die Frequenz, mit der ein *Compare Match* bei Verwendung des Prozessortakts als 
 $$f_{COMP}=\frac{f_{CLK}}{Prescaler\cdot (OCRn + 1)}$$
 
 ## Fast PWM
-Beim Fast PWM zählt der Timer bis zum Maximum seines Zählberreichs. Das Register `OCRn` dient als Vergleich und abhängig
+Beim Fast PWM zählt der Timer bis zum Maximum seines Zählbereichs. Das Register `OCRn` dient als Vergleich und abhängig
 davon, ob `TCNTn` kleiner oder größer `OCRn` ist, kann der OCn Pin auf logisch `0` oder `1` gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung](avr_pwm.html).
 
 ## PWM, Phasenkorrekt

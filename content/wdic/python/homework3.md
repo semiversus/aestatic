@@ -1,12 +1,12 @@
 title: Python Hausübung 3
 parent: uebersicht.md
 
-Für alle Übungen sollte man sich das Verhalten bei Grenzfällen überlegen und entsprechende Fehlerausgaben implementieren. Jede Übung ergebt Punkte, aufgeteilt auf die eigentliche Übung und eine Erweiterung.
+Für alle Übungen sollte man sich das Verhalten bei Grenzfällen überlegen und entsprechende Fehlerausgaben implementieren. Jede Übung ergibt Punkte, aufgeteilt auf die eigentliche Übung und eine Erweiterung.
 
 # Namen sortieren
 <span class="tag is-rounded is-info">1 + 2 Punkte</span>
 
-Der Benutzer soll eine Liste an Namen eingeben können. Wenn der Nutzer statt einers Namens einfach Enter betätigt, sollen die Namen in sortierter Reihenfolge ausgegeben werden.
+Der Benutzer soll eine Liste an Namen eingeben können. Wenn der Nutzer statt eines Namens einfach Enter betätigt, sollen die Namen in sortierter Reihenfolge ausgegeben werden.
 
 ```
 Name: Roman Huber
@@ -96,7 +96,7 @@ Satz: Also lautet ein Beschluss - Dass der Mensch was lernen muss.
 Der häufigste Buchstabe ist 's'
 ```
 
-Mögliche Erweiterung: Die Groß- und Kleinschreibung soll ignoriert werden. Es soll außerdem der zweit und dritthäufigste Buchstabe angezeigt werden.
+Mögliche Erweiterung: Die Groß- und Kleinschreibung soll ignoriert werden. Es soll außerdem der zweit- und dritthäufigste Buchstabe angezeigt werden.
 
 # Geldausgabe
 <span class="tag is-rounded is-info">3 + 3 Punkte</span>

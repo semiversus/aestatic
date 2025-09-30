@@ -25,7 +25,7 @@ Die Versorgungspannung ist abhängig vom verwendeten Typ. Beim ATMega16 gibt es 
 ATMega16 | bis 16Mhz | 4.5V bis 5.5V
 ATMega16L | bis 8Mhz | 2.7V bis 5.5V
 
-Die Stromaufnahme ist abhängig von der Betriebsspannung, der Betriebsart und der Taktfrequenz (siehe Seite 299-311). Generell kann gesagt werden, dass je kleiner die Betriebsspannung und die Taktfrequenz ist, desto kleiner ist der Stromverbrauch. Die verschiedenen Betriebsmodie helfen, den Stromverbrauch zu reduzieren, indem der Microcontroller seinen Betrieb einstellt und in verschiedene Stromsparmodis wechselt.
+Die Stromaufnahme ist abhängig von der Betriebsspannung, der Betriebsart und der Taktfrequenz (siehe Seite 299-311). Generell kann gesagt werden, dass je kleiner die Betriebsspannung und die Taktfrequenz ist, desto kleiner ist der Stromverbrauch. Die verschiedenen Betriebsmodi helfen, den Stromverbrauch zu reduzieren, indem der Microcontroller seinen Betrieb einstellt und in verschiedene Stromsparmodis wechselt.
 
 Bei der Versorgung wird zwischen der digitalen Versorgung für den eigentlichen Mikroprozessorkern und der analogen Versorgung für den ADC unterschieden.
 

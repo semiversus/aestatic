@@ -3,9 +3,9 @@ parent: uebersicht.md
 latex: true
 
 # Allgemeines
-Bei einer kombinatorischen Schaltung handelt es sich um eine Digital-Schaltung deren Ausgänge eindeutig durch die Eingänge bestimmt sind. Um dies zu erreichen darf die Schaltung keine speichernden Elemente aufweisen, d.h. die Schaltung ist *Zustandslos*. Ein weiteres Kennzeichen von kombinatorischen Schaltungen ist die *Zyklenfreiheit*. Eine Schaltung besitzt einen *Zyklus*, wenn der Ausgang eines Gatters auf den Eingang des selbigen rückwirken kann.
+Bei einer kombinatorischen Schaltung handelt es sich um eine Digitalschaltung, deren Ausgänge eindeutig durch die Eingänge bestimmt sind. Um dies zu erreichen darf die Schaltung keine speichernden Elemente aufweisen, d.h. die Schaltung ist *Zustandslos*. Ein weiteres Kennzeichen von kombinatorischen Schaltungen ist die *Zyklenfreiheit*. Eine Schaltung besitzt einen *Zyklus*, wenn der Ausgang eines Gatters auf den Eingang des selbigen rückwirken kann.
 
-Ein solches Schaltnetz kann durch die elementaren logischen Schaltglieder (*Gatter*) dargestellt werden: `AND`, `OR`, `XOR` und `NOT`. Darstellungsformen sind unter anderem *Boolesche Funktionen*, *Wahrheitstabellen* oder zeichnerische Verknüpfungen von logischen Schaltglieder.
+Ein solches Schaltnetz kann durch die elementaren logischen Schaltglieder (*Gatter*) dargestellt werden: `AND`, `OR`, `XOR` und `NOT`. Darstellungsformen sind unter anderem *Boolesche Funktionen*, *Wahrheitstabellen* oder zeichnerische Verknüpfungen von logischen Schaltgliedern.
 
 Bei den Schaltnetzen im folgenden Kapitel werden die Schaltverzögerungen durch Gatterlaufzeiten bzw. Signallaufzeiten nicht betrachtet.
 

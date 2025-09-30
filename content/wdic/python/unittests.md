@@ -30,7 +30,7 @@ Beispiel:
 ### Unittest
 * Dateiname: `test_average_age.py`
 
-* Der Unittest soll die Funktion `get_average_age` sinvoll testen.
+* Der Unittest soll die Funktion `get_average_age` sinnvoll testen.
 * Sind die Anforderungen vollständig definiert?
 
 ## Übung Median
@@ -110,7 +110,7 @@ Beispiel:
 ```
 
 ## Übung Wörter durcheinander würfeln
-* Dateiname: `shuffle.py` bzw. `shuffle.py`
+* Dateiname: `shuffle.py` bzw. `test_shuffle.py`
 * Funktion: `def shuffle_words(message: str) -> str:`
 
 Ein String bestehend aus mehreren Wörtern soll wortweise durcheinander gewürfelt werden. Dabei
@@ -138,7 +138,7 @@ Der Funktion wird ein Dictionary mit Artikelnamen und deren Preisen gegeben. Zur
 Beispiel:
 
 ```python
->>> get_cheapest_articles({'Allegro': 17.5, 'Adagio': 3.5, 'Forte': 15, 'Largo': 5, 'Legato': 18})
+>>> lowest_price({'Allegro': 17.5, 'Adagio': 3.5, 'Forte': 15, 'Largo': 5, 'Legato': 18})
 ['Adagio', 'Largo', 'Forte']
 ```
 

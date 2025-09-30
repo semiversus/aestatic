@@ -8,12 +8,12 @@ parent: uebersicht.md
 
     Für weitere Fragen zum Board bitte das [Manual](basys2_manual.pdf) konsultieren.
 
-* Entwurf einer universeller Zählerkomponente
+* Entwurf einer universellen Zählerkomponente
 * Erkennung eines Tastendrucks
 * Implementierung einer Zustandsmaschine
 * Aufbau eines Top Levels
 
-Die Stoppuhr entspricht in ihrer Bedienung einer klassichen digitalen Stoppuhr. Zwei Tasten reichen für die Bedienung
+Die Stoppuhr entspricht in ihrer Bedienung einer klassischen digitalen Stoppuhr. Zwei Tasten reichen für die Bedienung
 aus:
 
 * **Start/Stop** - die Zeitnehmung wird gestartet bzw. gestopped
@@ -37,7 +37,7 @@ Der Zähler soll folgende Spezifikation erfüllen (immer synchron zur steigenden
 * Wenn `enable_i` auf `1` ist soll der Zähler sich um eins erhöhen
 * Wenn der Zählerstand `MAXIMUM` erreicht soll der Zähler (im nächsten Schritt) auf 0 gesetzt werden
 * Solange `reset_i` auf `1` ist, soll der Zählerstand auf 0 gesetzt werden
-* Ein gesetzes `reset_i` hat eine höhere Priorität als ein gesetzes `enable_i`
+* Ein gesetztes `reset_i` hat eine höhere Priorität als ein gesetztes `enable_i`
 * `value_o` entspricht dem internen Zählerstand
 * `overflow_o` ist `1`, wenn der interne Zählerstand bei `MAXIMUM` steht und `enable_i` auf `1` ist (kombinatorisch
 verknüpft)
@@ -255,7 +255,7 @@ auf dem Basys2 Board aus.
 ## Spezifikation
 Im letzen Schritt gibt es eine Erweiterung des bestehenden Designs: Die Zwischenzeitnehmung.
 
-* Im Zustand `RUNNING` wird durch Drücken von *Reset/Lap* in den Zustand `LAP` gwechselt werden
+* Im Zustand `RUNNING` wird durch Drücken von *Reset/Lap* in den Zustand `LAP` gewechselt werden
 * In `LAP` wird nicht die aktuelle Zeit angezeigt, sondern eine *zwischengespeicherter* Zeit
 * Im Zustand `LAP` wird durch Drücken von *Reset/Lap* wieder zurück in den Zustand `RUNNING` gewechselt werden
 * Im Zustand `LAP` wird durch Drücken von *Start/Stopp* in den Zustand `LAP_STOPPED` gewechselt werden
