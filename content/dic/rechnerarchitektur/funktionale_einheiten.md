@@ -6,7 +6,7 @@ Ein Rechner besteht aus verschiedenen Komponenten, die je nach Rechnerarchitektu
 
 * Prozessorkern
 * Programm- und Datenspeicher
-* Peripherie Einheiten
+* Peripherieeinheiten
 
 Man spricht von einer Von-Neumann Architektur wenn Programm- und Datenspeicher in einem gemeinsamen Adressraum liegen. Da bei einem Befehl, der auf den Datenspeicher zugreift, insgesamt zwei Speicherzugriffe notwendig sind (Befehl selbst aus dem Speicher holen, Zugriff auf Daten), ergibt sich die Notwendigkeit, dass der Befehl mindesten zwei Takte benötigt. Dies wird auch als *Von-Neumann Flaschenhals* bezeichnet. Da historisch die Geschwindigkeit der Prozessoren wesentlich schneller stieg als die Geschwindigkeit der Speicherzugriffe wurde dieser Flaschenhals immer relevanter.
 
@@ -77,5 +77,5 @@ Das Steuerwerk kann auf zwei verschiedene Arten realisiert werden:
 * *Fest verdrahtet*: Die Logik für die einzelnen Befehle ist beim Design mittels konkreter Logik realisiert
 * *Mikrocode*: Das Steuerwerk ist selbst ein kleiner Prozessor, der für jeden Befehl einen sogenannten Mikrocode hinterlegt hat, der ausgeführt wird.
 
-Die Realisierung mittels Mikrocode ist sehr flexibel und es besteht die Möglichkeit, bei schon ausgelieferten Prozessoren nachträglich die Mikrokodierung zu verändern. Der Nachteil ist der langsamer Ablauf im Vergleich zur fest verdrahteten Logik.
+Die Realisierung mittels Mikrocode ist sehr flexibel und es besteht die Möglichkeit, bei schon ausgelieferten Prozessoren nachträglich die Mikrokodierung zu verändern. Der Nachteil ist der langsamere Ablauf im Vergleich zur fest verdrahteten Logik.
 

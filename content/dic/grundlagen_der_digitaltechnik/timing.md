@@ -3,7 +3,7 @@ parent: uebersicht.md
 latex: true
 
 # Allgemeines
-Bisher wurden die Elemente der kombinatorischen Schaltnetze und der sequentiellen Schaltwerke so betrachtet, dass jede Änderung eines diskreten Zustandes (logisch 0 oder 1) unmittelbar zu einer Änderung führt. Für reale Bauelemente gilt dies nicht, da jede Änderung mit einer bestimmten Verzögerung behaftet ist. Diese Verzögerungen kommen teils durch die Ausbreitungsgeschwindigkeit selbst oder durch Ladevorgänge innerhalb der Bauteile.
+Bisher wurden die Elemente der kombinatorischen Schaltnetze und der sequentiellen Schaltwerke so betrachtet, dass jede Änderung eines diskreten Zustandes (logisch 0 oder 1) unmittelbar zu einer Änderung führt. Für reale Bauelemente gilt dies nicht, da jede Änderung mit einer bestimmten Verzögerung behaftet ist. Diese Verzögerungen entstehen teils durch die Ausbreitungsgeschwindigkeit selbst oder durch Ladevorgänge innerhalb der Bauteile.
 
 ## Ausbreitungsgeschwindigkeit
 Die Ausbreitungsgeschwindigkeit von Licht im Vakuum ist 299 792 458 Meter pro Sekunde. Elektronen bzw. genauer gesagt die Auswirkung einer Elektronenbewegung innerhalb eines Leiters bewegt sich annähernd mit Lichtgeschwindigkeit. So benötigt ein Impuls ca. 0.33 Nanosekunden für eine Strecke von 10 Zentimeter.
@@ -65,7 +65,7 @@ Damit ein logischer Hazard überhaupt auftreten kann, müssen folgende drei Bedi
 - Die verschiedenen Pfade müssen unterschiedliche Laufzeiten aufweisen.
 - Die Pfade müssen über logische Verknüpfungen wieder an einem Ausgang zusammengefasst werden.
 
-Durch zusätzliche Gatter können logische Hazards abgefangen werden. Wir haben gesehen, dass der Hazard beim Wechsel zwischen den beiden Mintermen auftritt (bei A und B gleich logisch 1). Um nun diesen Fall abzufangen fügen wir einen weiteren Minterm `AB` hinzu:
+Durch zusätzliche Gatter können logische Hazards abgefangen werden. Wir haben gesehen, dass der Hazard beim Wechsel zwischen den beiden Mintermen auftritt (bei A und B gleich logisch 1). Um nun diesen Fall abzufangen, fügen wir einen weiteren Minterm `AB` hinzu:
 
 ![KV-Diagramm des Hazard-freien Multiplexers](hazard_free_mux_kv.svg)
 

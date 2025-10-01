@@ -6,7 +6,7 @@ parent: uebersicht.md
     Zu diesem Teil gibt es [Übungsaufgaben](uebung_avr_assembler.html)
 
 # Allgemeines
-Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entwicklung der AVR Reihe stand vor allem eine möglichst effiziente Nutzung durch C-Compiler im Vordergrund.
+Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entwicklung der AVR-Reihe stand vor allem eine möglichst effiziente Nutzung durch C-Compiler im Vordergrund.
 
 * [Komplette Übersicht](https://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf) über den Befehlssatz von Atmel
 * [Auszug](avr_assembler_befehle.pdf) der wichtigsten Befehle
@@ -33,7 +33,7 @@ Rund um den Prozessorkern (*AVR CPU*) befindet sich folgende Peripheriebausteine
 * SPI auf Port B
 * Komperator
 
-Diese Peripheriebausteine sind über einen Adress/Datenbus mit dem Prozessorkern verbunden.
+Diese Peripheriebauteile sind über einen Adress/Datenbus mit dem Prozessorkern verbunden.
 
 Der Prozessorkern besteht aus dem Flash Speicher für das eigentliche Programm und dem SRAM für die Laufzeitvariablen.
 Der Programmzeiger (*Program Counter*) zeigt auf den aktuellen Befehl der vom *Instruction Register* zwischengespeichert
@@ -43,8 +43,7 @@ Der *Stack Pointer* dient zum Ablegen von Werten und Rücksprungadressen im SRAM
 *ALU* werden die Register R0 bis R31 genutzt. 3 16Bit Indexregister (X, Y und Z) dienen der indirekten Adressierung
 des SRAMs. Das Statusregister ist unter anderem für die Flags der ALU zuständig (*Carry*, *Overflow*, usw.).
 
-Im Prozessorkern sieht man auch die Harvardarchitektur, da der SRAM Speicher und der Flash Speicher durch getrennte
-Adress/Datenbusse angesteuert werden.
+Im Prozessorkern sieht man auch die Harvard-Architektur, da der SRAM-Speicher und der Flash-Speicher durch getrennte Adress/Datenbusse angesteuert werden.
 
 # Registersatz
 Die AVR Serie besitzt 32 allgemein verwendbare Register(`R0` bis `R31`). Die Register `R0` bis `R15` sind nicht verfügbar

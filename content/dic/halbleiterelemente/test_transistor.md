@@ -7,7 +7,7 @@ parent: uebersicht.md
 * Rechenbeispiele
 * Schalten von induktiven Lasten
 ## Unipolarer Transistor
-* Funktionsweise der verscheidenen Typen, Aufbau des Halbleiters
+* Funktionsweise der verschiedenen Typen, Aufbau des Halbleiters
 * Arbeiten mit den Kennlinienfeldern
 * Rechenbeispiele aus dem Unterricht
 # Testablauf

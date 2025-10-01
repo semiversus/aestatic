@@ -49,7 +49,7 @@ Aufgrund des Verhaltens können wir folgende Punkte zusammen fassen:
 * Ist `R` auf 0 und `S` auf 1, wird der Ausgang \\(Q\\) auf 1 und \\(\overline{Q}\\) auf 0 gesetzt. Deshalb spricht man beim Eingang `S` vom *Set*-Eingang.
 * Ist `R` auf 1 und `S` auf 0, wird der Ausgang \\(Q\\) auf 0 und \\(\overline{Q}\\) auf 1 gesetzt. Deshalb spricht man beim Eingang `R` vom *Reset*-Eingang.
 * Für die jetzigen Verhalten sind die Ausgänge \\(Q\\) und \\(\overline{Q}\\) immer invertiert zu einander, deshalb auch diese Bezeichnung.
-* Der Zustand `R` und `S` gleich 1 ist zu vermeiden. Während diesem Zustand ist das Latch zwar stabil, die Ausgänge sind aber nicht mehr invertiert zu einander, sondern beide auf 0.
+* Der Zustand `R` und `S` gleich 1 ist zu vermeiden. Während diesem Zustand ist das Latch zwar stabil, die Ausgänge sind aber nicht mehr invertiert zueinander, sondern beide auf 0.
 * Undefiniert wird das Verhalten, wenn beide Eingänge auf 1 sind und gleichzeitig auf 0 wechseln.
 
 Das hier gezeigt RS Latch ist mittels `NOR`-Gatter aufgebaut, deswegen spricht man auch vom RS-NOR-Latch. Im folgenden sieht man ein RS Latch, welches mittels `NAND`-Gatter aufgebaut ist. Man spricht dann vom RS-NAND-Latch.
