@@ -33,7 +33,7 @@ Rund um den Prozessorkern (*AVR CPU*) befindet sich folgende Peripheriebausteine
 * SPI auf Port B
 * Komperator
 
-Diese Peripheriebauteile sind über einen Adress/Datenbus mit dem Prozessorkern verbunden.
+Diese Peripheriebausteine sind über einen Adress/Datenbus mit dem Prozessorkern verbunden.
 
 Der Prozessorkern besteht aus dem Flash Speicher für das eigentliche Programm und dem SRAM für die Laufzeitvariablen.
 Der Programmzeiger (*Program Counter*) zeigt auf den aktuellen Befehl der vom *Instruction Register* zwischengespeichert
