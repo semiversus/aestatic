@@ -5,6 +5,7 @@ parent: ../../unterricht.md
 1. [Vorbereitungen](installation.html)
 1. [Erste Beispiele](beispiele.html)
 1. [Datentypen](datentypen.html)
+1. [Funktionen](funktionen.html)
 
 [Wenn was nicht funktioniert...](problem.html)
 
