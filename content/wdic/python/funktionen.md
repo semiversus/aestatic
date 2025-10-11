@@ -153,18 +153,3 @@ print(f"New price: {new_price}")  # Output: New price: 80.0
 3. **Type Hints verwenden**: Mache Datentypen explizit
 4. **Eine Aufgabe pro Funktion**: Halte Funktionen fokussiert
 5. **Sinnvolle Standardwerte**: Verwende sinnvolle Default-Parameter
-6. **Immutable Default-Argumente**: Vermeide mutable Objekte als Standardwerte
-
-```python
-# Bad: Mutable Default-Argument
-def bad_function(items=[]):  # Dangerous!
-    items.append("new")
-    return items
-
-# Better: Use None as default
-def good_function(items=None):
-    if items is None:
-        items = []
-    items.append("new")
-    return items
-```
