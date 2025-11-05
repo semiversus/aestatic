@@ -24,7 +24,7 @@ parent: uebersicht.md
   1. Pull Request mergen
 
 ## Teil 2 (Hausübung)
-* Anlegen des Projekts "WDIC Hausübung"
+* Anlegen des Projekts "WDIC Hausübung" (Projekt sollte *public* sein)
 * Klonen des Projekts auf den lokalen Computer
 * Folgenden Text in der README Datei hinzufügen: "Das ist Teil der Hausübung"
 * Diese Änderung commiten und pushen
@@ -32,7 +32,7 @@ parent: uebersicht.md
 * Folgenden Text in der README Datei hinzufügen: "Arbeit an Feature 1"
 * Die Änderung commiten und pushen
 * Über github.com einen Pull Request erstellen und mergen
-
+* Über Teams Aufgaben den Link auf das Repository mitteilen
 
 # Begriffe
 * Commit
