@@ -10,7 +10,7 @@ parent: uebersicht.md
 
 # Übung [Github](https://github.com)
 ## Teil 1
-1. Anlegen des Projektes "WDIC Übung"
+1. Anlegen des Projektes "WDIC"
 1. Anlegen eines *Issues* (z.B. "Improve README")
 1. Klonen des Projekts auf den lokalen Computer
 1. Hinzufügen einer lokalen Datei
@@ -24,7 +24,7 @@ parent: uebersicht.md
   1. Pull Request mergen
 
 ## Teil 2 (Hausübung)
-* Anlegen des Projekts "WDIC Hausübung" (Projekt sollte *public* sein)
+* Anlegen des Projekts "WDIC_Aufgabe" (Projekt sollte *public* sein)
 * Klonen des Projekts auf den lokalen Computer
 * Folgenden Text in der README Datei hinzufügen: "Das ist Teil der Hausübung"
 * Diese Änderung commiten und pushen
