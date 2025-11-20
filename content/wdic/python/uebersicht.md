@@ -17,4 +17,6 @@ parent: ../../unterricht.md
 <!-- Shuffle für Lieder -->
 
 # Tests
-1. [Mustertest](python_test.zip)
+[Vorbereitung](vorbereitung.html)
+
+1. [Mustertest](python_test.zip) (pre ChatGPT)
