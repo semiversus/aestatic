@@ -42,6 +42,10 @@ parent: uebersicht.md
 * Generatoren und Iteratoren (z.B. `range`)
 * List Comprehensions
 
+# Links
+* [python-lernen.de](https://www.python-lernen.de/)
+* [Offizielles Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+
 # Beispielaufgaben
 ## Aufgabe 1
 
@@ -55,8 +59,7 @@ for i in range(1, 6):
         count += 1
     else:
         total -= i
-
-print(count, total)
+    print(count, total)
 ```
 
 Welche Ausgabe erzeugt der obige Code?
@@ -121,10 +124,69 @@ for p in people:
         p["age"] = str(p["age"]) + "?"
 
 people_dict = {i: p["name"][0] for i, p in enumerate(people)}
-
-print(people)
-print("removed:", removed)
-print("x:", x)
-print("names:", names)
-print("people_dict:", people_dict)
 ```
+
+Variable|Wert
+:---:|:---:
+`people`|
+`removed`|
+`x`|
+`names`|
+`people_dict`|
+
+## Aufgabe 5
+```python
+a = {1, 2, 3, 3, 2}
+b = set(3, 4)
+a.add(5)
+a.remove(1)
+c = a.union(b)
+d = a.intersection(b)
+e = a - b
+```
+
+Welche Werte sind in den Variablen `a`, `b`, `c`, `d` und `e` nach Ausführung des Codes enthalten?
+
+## Aufgabe 5
+```python
+class Counter:
+    total = 0   # Klassenvariable
+
+    def __init__(self, start=0):
+        self.value = start
+
+    def inc(self):
+        self.value += 1
+        Counter.total += 1
+
+    def __repr__(self):
+        return f"Counter(value={self.value}, total={Counter.total})"
+
+
+class LimitedCounter(Counter):
+    def __init__(self, start=0, limit=2):
+        super().__init__(start)
+        self.limit = limit
+
+    def inc(self):
+        if self.value < self.limit:
+            super().inc()
+        else:
+            print("limit reached")
+
+    def reset(self):
+        # Achtung: verändert bewusst die Klassenvariable!
+        Counter.total = 0
+        self.value = 0
+
+
+c1 = Counter()
+c2 = LimitedCounter(start=1, limit=2)
+```
+
+Befehl|c1.value|c2.value|c1.total|c2.total
+:---:|:---:|:---:|:---:|:---:
+`c1.inc()`| | | |
+`c2.inc()`| | | |
+`c2.inc()`| | | |
+`c2.reset()`| | | |
