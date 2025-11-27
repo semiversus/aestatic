@@ -147,7 +147,7 @@ e = a - b
 
 Welche Werte sind in den Variablen `a`, `b`, `c`, `d` und `e` nach Ausführung des Codes enthalten?
 
-## Aufgabe 5
+## Aufgabe 6
 ```python
 class Counter:
     total = 0   # Klassenvariable
