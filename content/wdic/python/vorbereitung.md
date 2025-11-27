@@ -85,7 +85,7 @@ print(transform([1, 2, 3, 4, 5, 6]))
 
 ## Aufgabe 3
 ``` python
-def say_hello(name: str, greeting: str = "Hello", end: str = "!") -> str:
+def say_hello(name: str, greeting: str = "Hello", end: str = "!"):
     print(f"{greeting} {name}{end}")
 
 say_hello(greeting="Hi", name="Alice", end=".")
