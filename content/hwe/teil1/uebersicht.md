@@ -18,9 +18,8 @@ parent: ../../unterricht.md
 * Zeichnen der Schaltung in KiCAD
 * Simulation der Schaltung in LTSpice
 * Erstellen der Fertigungsdaten
-  * als THT **und** SMD Variante
 * Ausarbeitung, wie die Inbetriebnahme erfolgen soll (Testpunkte, Erwartungen, ...)
-* Aufbau der THT Schaltung
+* Aufbau der Schaltung
 * Vergleich Berechnung, Simulation und Messung an der realen Hardware
 * Welche Bausteine bestimmen die Grenzwerte der Schaltung?
 * Sammeln von LLM Interaktionen
