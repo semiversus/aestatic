@@ -40,6 +40,11 @@ Trage hier als SSID "wdic" und als Passwort "raspberry" ein.
 Dieser Schritt ist optional. Es benötigt einen Account bei Raspberry Pi und bietet einen weiteren Weg, sich mit dem Raspberry zu verbinden.
 ![Imager 9](raspberry/imager_screen9.png)
 
+## Vebinden über Putty
+
+Putty kann hier heruntergeladen werden: [Putty](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe)
+
+![Putty](raspberry/putty.png)
 
 ## Verbinden über VS Code
 VS Code bietet die Möglichkeit sich per SSH mit dem RaspberryPi zu verbinden und dann direkt auf dem RaspberryPi zu arbeiten. Dazu ist die VS Code Extension **Remote Explorer** und **Remote SSH** notwendig.
