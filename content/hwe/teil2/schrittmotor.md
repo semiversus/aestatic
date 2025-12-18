@@ -1,5 +1,5 @@
 title: Schrittmotoransteuerung
-next: micropython.md
+next: codeschloss.md
 parent: uebersicht.md
 
 # Kurzbeschreibung

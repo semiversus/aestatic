@@ -1,5 +1,5 @@
 title: Reaktionsspiel
-next: keyboard.md
+next: wecker.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
