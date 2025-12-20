@@ -19,14 +19,14 @@ Wähle die entsprechende SD-Karte aus.
 ![Imager 3](raspberry/imager_screen3.png)
 
 ### Hostname
-Verwende deinen Namen als Hostname, z.B. hier "guentherjena". Punkt und Unterstrich ist nicht erlaubt, aber Bindestrich geht.
+Verwende deinen Namen als Hostname, z.B. hier "PiGuentherJena". Punkt und Unterstrich ist nicht erlaubt, aber Bindestrich geht.
 ![Imager 4](raspberry/imager_screen4.png)
 
 ### Localisation
 ![Imager 5](raspberry/imager_screen5.png)
 
 ### Username und Passwort
-Standardmäßig ist der Username "pi" und das Passwort "raspberry". Es kann (und sollte) ein eigenes Passwort gewählt werden.
+Standardmäßig ist der Username "pi" und das Passwort "raspberry". Nach der ersten Anmeldung wird das Passwort geändert.
 ![Imager 6](raspberry/imager_screen6.png)
 
 ### WLAN Einstellungen
@@ -42,7 +42,13 @@ Dieser Schritt ist optional. Es benötigt einen Account bei Raspberry Pi und bie
 
 ## Vebinden über Putty
 
+Das eigene Notebook wird jetzt auch im Wifi "wdic" angemeldet.
+
 Putty kann hier heruntergeladen werden: [Putty](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe)
+
+```
+login as: pi
+```
 
 ![Putty](raspberry/putty.png)
 
@@ -57,3 +63,5 @@ Weitere Infos gibt es hier:
 Im Terminal (am Raspberry) folgenden Befehl ausführen:
 * `git config --global user.name "Max Muster"`
 * `git config --global user.email "max@muster.com"`
+
+# Projekte
