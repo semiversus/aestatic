@@ -5,11 +5,11 @@ Im zweiten Teil konzentrieren wir uns auf Firmware Projekte mit dem AVR. Eventue
 
 # Übersicht Projekte
 * [Reaktionsspiel](reaktionsspiel.html)
-<!-- * [Füllstandsmessung](fuellstandsmessung.html) -->
-<!-- * [PS2 Keyboard](keyboard.html) -->
-<!-- * [micro:bit MicroPython](micropython.html) -->
 * [Wecker](wecker.html)
 * [Schrittmotorsteuerung](schrittmotor.html)
 * [Codeschloss](codeschloss.html)
 * [Servoansteuerung](servo.html)
 * [Morse-Uhr](morseuhr.html)
+<!-- * [Füllstandsmessung](fuellstandsmessung.html) -->
+<!-- * [PS2 Keyboard](keyboard.html) -->
+<!-- * [micro:bit MicroPython](micropython.html) -->
