@@ -35,6 +35,7 @@ Die Dokumentation sollte folgende Inhalte haben:
 * Beschreibung der Inbetriebnahme
 * Messergebnisse und deren Vergleich mit den Berechnungen und Simulationen
 * Mögliche Verbesserungen der Schaltung und des Layouts
+* Die Dokumentation sollte als PDF abgegeben werden, um sicherzustellen, dass das Layout erhalten bleibt.
 
 Zusätzlich bitte folgende Dateien abgaben:
 * KiCAD Projektdateien, mit denen das PCB bestellt wurde
