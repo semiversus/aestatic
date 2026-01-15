@@ -54,7 +54,7 @@ Der ATMega16 enthält drei Timer. Timer 0 und 2 sind 8 Bit Timer, Timer 1 ist ei
     :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
-Das Blockschaltbild des Timer 0 zeigt den prinzipiellen Aufbau des Timers welcher im folgenden beschrieben wird.
+Das Blockschaltbild des Timer 0 zeigt den prinzipiellen Aufbau des Timers, welcher im Folgenden beschrieben wird.
 
 ## Interrupts
 Der Timer 0 nutzt zwei Interruptquellen:
@@ -125,7 +125,7 @@ CS02|CS01|CS00|Bezeichnung
 
 Über das *Timer Interrupt Mask Register* werden die Interruptfreigaben für alle drei Timer gesetzt. Für den Timer0 gibt
 es wie bereits beschrieben die beiden Interrupts `TOIE0` (Timer Overflow) und `OCIE0` (Output Compare Match). Um den
-jeweiligen Interrupt zu aktivieren muss eine logische `1` an die entsprechende Stelle geschrieben werden.
+jeweiligen Interrupt zu aktivieren, muss eine logische `1` an die entsprechende Stelle geschrieben werden.
 
 Bit|7|6|5|4|3|2|**1**|**0**
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -142,8 +142,8 @@ Die Frequenz, mit der ein Overflow bei Verwendung des Prozessortakts als Taktque
 
 $$f_{TOVF}=\frac{f_{CLK}}{Prescaler\cdot N_{max}}$$
 
-Als Prescaler stehen dabei 1, 8, 64, 256 und 1024 zur Verfügung. \\(N_{max}\\) ist dabei 256 für 8 Bit Timer und 65536 für
-16 Bit Timer.
+Als Prescaler stehen dabei 1, 8, 64, 256 und 1024 zur Verfügung. \\(N_{max}\\) ist dabei 256 für 8-Bit-Timer und 65536 für
+16-Bit-Timer.
 
 Der Interrupt TIMERn_COMPx_vect kann aktiviert werden und wird ausgelöst, sobald das Timerregister `TCNTn` den
 Vergleichswert `OCRn` erreicht.
@@ -159,7 +159,7 @@ $$f_{COMP}=\frac{f_{CLK}}{Prescaler\cdot (OCRn + 1)}$$
 
 ## Fast PWM
 Beim Fast PWM zählt der Timer bis zum Maximum seines Zählbereichs. Das Register `OCRn` dient als Vergleich und abhängig
-davon, ob `TCNTn` kleiner oder größer `OCRn` ist, kann der OCn Pin auf logisch `0` oder `1` gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung](avr_pwm.html).
+davon, ob `TCNTn` kleiner oder größer als `OCRn` ist, kann der OCn Pin auf logisch `0` oder `1` gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung](avr_pwm.html).
 
 ## PWM, Phasenkorrekt
 Siehe auch hier im Kapitel [PWM Erzeugung](avr_pwm.html).

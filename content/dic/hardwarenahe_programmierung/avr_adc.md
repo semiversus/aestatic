@@ -1,4 +1,4 @@
-title: Analog-Digital Konverter beim Atmel AVR
+title: Analog-Digital-Konverter beim Atmel AVR
 parent: uebersicht.md
 latex: true
 
@@ -54,9 +54,9 @@ Als Referenz stehen drei Quellen zur Verfügung:
 
 Das Register `ADMUX` steuert die Auswahl der Referenzspannung, der Anordnung der Datenbits und die Auswahl des zu messenden Kanals.
 
-Wird als Referenzspannung die interne 2.56 Volt Referenz oder die Betriebsspannung AVCC gewählt empfiehlt es sich, an den Pin AREF einen Kondensator zu schalten, um Rauschen zu minimieren und die Referenzspannung möglichst stabil zu halten. In diesen zwei Fällen sollte auf keinen Fall eine externe Spannung am Pin AREF anliegen!
+Wird als Referenzspannung die interne 2.56 Volt Referenz oder die Betriebsspannung AVCC gewählt, empfiehlt es sich, an den Pin AREF einen Kondensator zu schalten, um Rauschen zu minimieren und die Referenzspannung möglichst stabil zu halten. In diesen zwei Fällen sollte auf keinen Fall eine externe Spannung am Pin AREF anliegen!
 
-Die Anordnung der Datenbits mittels <samp>ADLAR</samp> kann je nach Anwendung eingestellt werden. Wird der 10 Bit Wert verwendet, kann beim <samp>avr-gcc</samp> Compiler mittels <samp>ADC</samp> auf die Kombination von <samp>ADCH</samp> und <samp>ADCL</samp> zugegriffen werden. Wenn einzeln auf die Register zugegriffen wird muss <samp>ADCL</samp> vor <samp>ADCH</samp> ausgelesen werden.
+Die Anordnung der Datenbits mittels <samp>ADLAR</samp> kann je nach Anwendung eingestellt werden. Wird der 10 Bit Wert verwendet, kann beim <samp>avr-gcc</samp> Compiler mittels <samp>ADC</samp> auf die Kombination von <samp>ADCH</samp> und <samp>ADCL</samp> zugegriffen werden. Wenn einzeln auf die Register zugegriffen wird, muss <samp>ADCL</samp> vor <samp>ADCH</samp> ausgelesen werden.
 
 ## Register `ADCSRA`
 
@@ -68,7 +68,7 @@ Schaltet den ADC ein.
 
 ### <samp>ADSC</samp> - ADC Start Conversion
 
-Um eine Wandlung zu starten wird dieses Bit mit `1` beschrieben. Beim Lesen liefert dieses Bit eine `1` solange eine Wandlung läuft.
+Um eine Wandlung zu starten wird dieses Bit mit `1` beschrieben. Beim Lesen liefert dieses Bit eine `1`, solange eine Wandlung läuft.
 
 ### <samp>ADATE</samp> - ADC Auto Trigger Enable
 
@@ -76,7 +76,7 @@ Es gibt zahlreiche Möglichkeiten, eine Wandlung durch Trigger starten zu lassen
 
 ### <samp>ADIF</samp> - ADC Interrupt Flag
 
-Wenn eine Wandlung beendet wurde wird dieses Bit auf `1` gesetzt. Eine eventuell aktivierte Interruptroutine des ADCs setzt dieses Bit wieder auf `0`, sobald die entsprechende Interruptroutine aufgerufen wurde. Wird ohne Interrupts gearbeitet kann mittels schreiben einer `1` auf dieses Bit das Bit zurückgesetzt werden.
+Wenn eine Wandlung beendet wurde, wird dieses Bit auf `1` gesetzt. Eine eventuell aktivierte Interruptroutine des ADCs setzt dieses Bit wieder auf `0`, sobald die entsprechende Interruptroutine aufgerufen wurde. Wird ohne Interrupts gearbeitet kann mittels schreiben einer `1` auf dieses Bit das Bit zurückgesetzt werden.
 
 ### <samp>ADIE</samp> -ADC Interrupt Enable
 
@@ -91,7 +91,7 @@ $$f_{ADC}=\frac{f_{CLK}}{Teiler}$$
 # Umrechnung
 
 Bei der Umrechnung einer Spannung am Eingang des ADC hin zum Wert als Zahl wird die Eingangsspannung im Verhältnis zur
-Referenzspannung betrachtet und entsprechend der Auflösung (in Bits} des ADC umgewandelt:
+Referenzspannung betrachtet und entsprechend der Auflösung (in Bits) des ADC umgewandelt:
 
 $$Wert_{ADC}=\frac{U_{Eingang}}{U_{Referenz}} \cdot 2^{Bits}$$
 
@@ -102,7 +102,7 @@ $$U_{Eingang}=\frac{Wert_{ADC}}{2^{Bits}} \cdot U_{Referenz}$$
 Beim ATMega16 ist die Auflösung 10 Bit, d.h. es können \\(2^{10}=1024\\) *verschiedene Spannungen unterschieden* werden.
 
 # Beispiele
-Im folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Referenz dient die Spannung am Pin AREF. Vom
+Im Folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Referenz dient die Spannung am Pin AREF. Vom
 10 Bit Ergebnis werden die oberen 8 Bit auf dem Port C ausgegeben.
 
 ## Ohne Interrupt
@@ -126,7 +126,7 @@ int main (void) {
 ```
 
 ## Mit Interrupt
-Bei jedem Aufruf der Interruptservice Routine `ADC_vect` wird das Ergebnis der AD Wandlung ausgewertet (mittels `ADC`) und
+Bei jedem Aufruf der Interruptservice-Routine `ADC_vect` wird das Ergebnis der AD-Wandlung ausgewertet (mittels `ADC`) und
 eine neue Wandlung gestartet.
 
 ```c

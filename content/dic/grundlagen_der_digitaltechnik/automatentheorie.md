@@ -39,7 +39,7 @@ Die Zustandsübertragungsfunktion δ (klein Delta) beschreibt den Wechsel in ein
 **Z1**|Z2|Z2|Z0
 **Z2**|Z0|Z0|Z0
 
-Bei diesem Beispiel ist `S`={`Z0`, `Z1`, `Z2`} und `Σ`={`E0`, `E1`, `E2`}. In den Zeilen sind alle Zustände, in den Spalten alle Eingänge dargestellt. Nun kann bei einem bestimmten Zustand und einer bestimmten Eingabe abgelesen werden, in welchen Zustand dadurch gewechselt wird. Als Beispiel wird im Zustand `Z0` wird bei der Eingabe `E1` in den Zustand `Z1` gewechselt.
+Bei diesem Beispiel ist `S`={`Z0`, `Z1`, `Z2`} und `Σ`={`E0`, `E1`, `E2`}. In den Zeilen sind alle Zustände, in den Spalten alle Eingänge dargestellt. Nun kann bei einem bestimmten Zustand und einer bestimmten Eingabe abgelesen werden, in welchen Zustand dadurch gewechselt wird. Als Beispiel wird im Zustand `Z0` bei der Eingabe `E1` in den Zustand `Z1` gewechselt.
 
 ### Ausgabefunktion `ω`
 Die Ausgabefunktion `ω` (klein Omega) beschreibt die Ausgabe in Abhängigkeit von Zustand und Eingabe oder auch nur vom Zustand (vergleiche ''Moore''- und ''Mealy''-Automat). Falls die Ausgabefunktion von Zustand und Eingabe abhängig ist, lässt sich die Funktion auch gut als Tabelle darstellen:
@@ -53,13 +53,13 @@ Die Ausgabefunktion `ω` (klein Omega) beschreibt die Ausgabe in Abhängigkeit v
 In diesem Beispiel ist `Γ`={`A0`, `A1`, `A2`}. Hier wird als Beispiel beim Zustand `Z1` und der Eingabe `E0` die Ausgabe `A1` gemacht.
 
 ## Moore- und Mealy-Automat
-Bei der Ausgabefunktion gibt es zwei verschiedene Definitionen: Einmal hängt die Ausgabe von Zustand und Eingabe ab und das andere mal nur vom Zustand. Ein Automat, dessen Ausgabe von Zustand und Eingabe abhängt wird „Mealy“-Automat genannt. Im Gegensatz dazu hängt bei einem „Moore“-Automat die Ausgabe nur vom aktuellen Zustand ab.
+Bei der Ausgabefunktion gibt es zwei verschiedene Definitionen: Einmal hängt die Ausgabe von Zustand und Eingabe ab und das andere Mal nur vom Zustand. Ein Automat, dessen Ausgabe von Zustand und Eingabe abhängt wird „Mealy“-Automat genannt. Im Gegensatz dazu hängt bei einem „Moore“-Automat die Ausgabe nur vom aktuellen Zustand ab.
 
 Dies kann in folgendem Diagramm zusammengefasst werden:
 
 ![Mealy- und Moore-Automat](moore_mealy.svg)
 
-Es ist möglich, einen gegebenen „Mealy“-Automaten in einen „Moore“-Automaten umzuwandeln und umgekehrt. Für viele Aufgabenstellungen kommt der „Mealy“-Automat mit weniger Zuständen aus, da die Eingänge auch direkt die Ausgänge beeinflussen können. Um das selbe zu erreichen, benötigt der „Moore“-Automat mehr Zustände, da die Ausgänge immer vom aktuellen Zustand abgeleitet werden.
+Es ist möglich, einen gegebenen „Mealy“-Automaten in einen „Moore“-Automaten umzuwandeln und umgekehrt. Für viele Aufgabenstellungen kommt der „Mealy“-Automat mit weniger Zuständen aus, da die Eingänge auch direkt die Ausgänge beeinflussen können. Um dasselbe zu erreichen, benötigt der „Moore“-Automat mehr Zustände, da die Ausgänge immer vom aktuellen Zustand abgeleitet werden.
 
 ## Beispiel Getränkeautomat
 Als Beispiel wird ein Getränkeautomat entworfen, der 50 Cent und 1 Euro Geldstücke akzeptiert. Außerdem gibt es eine Taste für die Getränkeausgabe und die Geldrückgabe. Der Getränkeautomat kann 50 Cent und 1 Euro Stücke zurückgeben, sowie ein Getränk ausgeben. Ein Getränk kostet 1 Euro.
@@ -107,10 +107,10 @@ Die Darstellungsform für Mealy- oder Moore-Automat unterscheiden sich:
 
 ![Graphische Darstellung: Mealy- und Moore-Automat](moore_mealy_graphen.svg)
 
-Zustände werden als Kreise dargestellt. Die Bezeichnung des Zustands befindet sich innerhalb des Kreises. Der Startzustand wird mit einem Pfeil markiert, der keinen Zustand als Ursprung hat (hier `Z0`). Die Übergänge werden mittels Pfeilen dargestellt. Der Beschreibung des Pfeils enthält die Eingabe, die für diesen Zustandswechsel notwendig ist. Beim Mealy-Automat sind die Ausgaben vom Zustand und der Eingabe abhängig, deshalb wird die Ausgabe in der Beschreibung des entsprechenden Pfeils hinzugefügt. Beim Moore-Automat ist die Ausgabe nur vom Zustand abhängig, deshalb wird die Ausgabe innerhalb des Kreises hinzugefügt.
+Zustände werden als Kreise dargestellt. Die Bezeichnung des Zustands befindet sich innerhalb des Kreises. Der Startzustand wird mit einem Pfeil markiert, der keinen Zustand als Ursprung hat (hier `Z0`). Die Übergänge werden mittels Pfeilen dargestellt. Die Beschreibung des Pfeils enthält die Eingabe, die für diesen Zustandswechsel notwendig ist. Beim Mealy-Automat sind die Ausgaben vom Zustand und der Eingabe abhängig, deshalb wird die Ausgabe in der Beschreibung des entsprechenden Pfeils hinzugefügt. Beim Moore-Automat ist die Ausgabe nur vom Zustand abhängig, deshalb wird die Ausgabe innerhalb des Kreises hinzugefügt.
 
 # Anwendung in der Digitaltechnik
-Bisher gingen wir von allgemeinen Ein- und Ausgaben aus. In der Digitaltechnik sind dies nun Ein- und Ausgänge, die ausschließlich mit den beiden digitalen Zuständen 0 und 1 arbeiten. Die Kennwerte für einen digitalen Automat sind die Anzahl der Ein- und Ausgänge sowie die Anzahl der Flip-Flops.
+Bisher gingen wir von allgemeinen Ein- und Ausgaben aus. In der Digitaltechnik sind dies nun Ein- und Ausgänge, die ausschließlich mit den beiden digitalen Zuständen 0 und 1 arbeiten. Die Kennwerte für einen digitalen Automaten sind die Anzahl der Ein- und Ausgänge sowie die Anzahl der Flip-Flops.
 
 Mit `n` Flip-Flops lassen sich `2^n` Zustände darstellen.
 

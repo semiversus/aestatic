@@ -26,9 +26,9 @@ Jedes Programm benötigt eine Funktion mit dem Namen `main`. Diese Funktion gibt
 
 Der Funktion `main` können vom Betriebssystem auch Parameter übergeben werden. Bei Microcontroller-Anwendungen ist dies üblicherweise nicht der Fall.
 
-Die Funktion `printf` wird verwendet um Ausgaben auf der `Standardausgabe` zu machen. Die Standardausgabe ist abhängig von der Art des Programmes. Bei Kommandozeilenprogrammen wird die Ausgabe direkt auf der Kommandozeile angezeigt. Bei Microcontrollern ist dies Implementierungsabhängig. Hier kann die serielle Schnittstelle oder ein Display genutzt werden.
+Die Funktion `printf` wird verwendet, um Ausgaben auf der `Standardausgabe` zu machen. Die Standardausgabe ist abhängig von der Art des Programmes. Bei Kommandozeilenprogrammen wird die Ausgabe direkt auf der Kommandozeile angezeigt. Bei Mikrocontrollern ist dies implementierungsabhängig. Hier kann die serielle Schnittstelle oder ein Display genutzt werden.
 
-Um dieses Quellcode nun auszuführen bedarf es mehrerer Schritte, welche grob so zusammengefasst werden können:
+Um diesen Quellcode nun auszuführen, bedarf es mehrerer Schritte, welche grob so zusammengefasst werden können:
 
 1. **Präprozessor**: Anweisungen an den Präprozessor werden *Direktiven* genannt und haben ein '#' vorangestellt. Im obigen Beispiel wird mittels `#include <stdio.h>` die Datei stdio.h in diese Datei hineinkopiert.
 2. **Kompilierung**: Die Ausgabe des Präprozessors wird nun kompiliert, d.h. der C Quellcode wird in Maschinensprache übersetzt. Das Ergebnis wird Objektcode genannt.
@@ -39,7 +39,7 @@ In der Literatur sieht man oft als Ergebnis der Kompilierung eine Assemblerdatei
 
 # Präprozessor Direktiven
 ## `#include` Direktive
-Mittels `#include` werden Dateien an der Stelle der `#include` Anweisung eingefügt. Die `#include` Anweisung ermöglicht das unter C übliche Modulkonzept, um Teile eines Programmes gekapselt in einem Modul zu verwalten. Ein Modul besteht dabei aus einer "`.c`" Datei (*Source*), die die Implementierung enthält und einer dazugehörigen "`.h`" Datei (*Header*), die die Funktionen und Variablen definiert, die das Modul exportiert, d.h. an andere Programmteile zur Verfügung stellt.
+Mittels `#include` werden Dateien an der Stelle der `#include` Anweisung eingefügt. Die `#include` Anweisung ermöglicht das unter C übliche Modulkonzept, um Teile eines Programmes gekapselt in einem Modul zu verwalten. Ein Modul besteht dabei aus einer "`.c`" Datei (*Source*), die die Implementierung enthält und einer dazugehörigen "`.h`" Datei (*Header*), die die Funktionen und Variablen definiert, die das Modul exportiert, d.h. anderen Programmteilen zur Verfügung stellt.
 
 ## `#define` Direktive
 `#define` hat verschiedene Anwendungen. Es wird verwendet um *Symbole*, *Konstanten* und *Makros* zu definieren.
@@ -101,7 +101,7 @@ Um Ganzzahlen (Zahlen ohne Nachkomma) zu definieren, gibt es in C folgende Daten
 * `int`: meist 16 oder 32 Bit
 * `long int` bzw. `long`: größerer Zahlenbereich als `int`
 
-Eine Variable kann vorzeichenbehaftet oder vorzeichenlos sein. Um eine vorzeichenlose Variable zu definieren muss `unsigned` vorgestellt werden (z.B. `unsigned int`). Durch `signed` kann eine Variable explizit vorzeichenbehaftet definiert werden. Wenn eine Variable nicht explizit mittels `signed` oder `unsigned` ausgezeichnet wird, ist die Variable vorzeichenbehaftet.
+Eine Variable kann vorzeichenbehaftet oder vorzeichenlos sein. Um eine vorzeichenlose Variable zu definieren, muss `unsigned` vorgestellt werden (z.B. `unsigned int`). Durch `signed` kann eine Variable explizit vorzeichenbehaftet definiert werden. Wenn eine Variable nicht explizit mittels `signed` oder `unsigned` ausgezeichnet wird, ist die Variable vorzeichenbehaftet.
 
 Die Größe des Zahlenbereichs der einzelnen Datentypen ist Plattform- und Compilerabhängig. So kann ein `int` 16 Bit (0-65535) oder 32 Bit (0-4294967295) groß sein. Die tatsächliche Größe eines Typs ist in der Datei `limits.h` abgelegt.
 
@@ -120,7 +120,7 @@ char minimum, maximum = 10;
 ```
 
 ### Plattformunabhängigkeit
-Steht ein *C99* kompatibler C-Compiler zur Verfügung (gilt mittlerweile für den Großteil der Compiler) hilft die Verwendung der Datei `stdint.h`. Mittels `#include <stdint.h>` werden neue Datentypen definiert, die eine bestimmte Größe haben.
+Steht ein *C99* kompatibler C-Compiler zur Verfügung (gilt mittlerweile für den Großteil der Compiler), hilft die Verwendung der Datei `stdint.h`. Mittels `#include <stdint.h>` werden neue Datentypen definiert, die eine bestimmte Größe haben.
 
 Dadurch werden unter anderem folgende Datentypen zur Verfügung gestellt:
 
@@ -128,7 +128,7 @@ Dadurch werden unter anderem folgende Datentypen zur Verfügung gestellt:
 * `int8_t`, `int16_t`, `int32_t` und `int64_t`: Vorzeichenbehaftete Datentypen mit 8, 16, 32 bzw. 64 Bit
 
 ## Gleitkommazahlen
-Gleitkommazahlen sind Zahlen mit Nachkommastellen bzw. sehr große Zahlen. Intern wird die Mantisse und der Exponent getrennt gespeichert. C stellt dafür folgende zwei Datentypen zur Verfügung:
+Gleitkommazahlen sind Zahlen mit Nachkommastellen bzw. sehr große Zahlen. Intern werden die Mantisse und der Exponent getrennt gespeichert. C stellt dafür folgende zwei Datentypen zur Verfügung:
 
 * `float`: Zahlen mit einfacher Genauigkeit (32Bit)
 * `double`: Zahlen mit doppelter Genauigkeit (64Bit)

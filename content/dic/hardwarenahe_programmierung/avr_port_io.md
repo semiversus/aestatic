@@ -15,10 +15,10 @@ Die interne Beschaltung jedes IO Port Pins beinhaltet folgende Komponenten:
     :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
-Um von der Firmware aus auf einen IO Port Pin zuzugreifen, werden drei Register benötigt. Diese drei Register fassen jeweils 8 IO Pins zusammen. Die Gruppierung von 8 IO Pins wird auch *Port* genannt. Der ATMega16 hat 4 solcher Ports: Port *A*, *B*, *C* und *D*. Im folgenden wird statt des Portnamens ein `x` verwendet.
+Um von der Firmware aus auf einen IO Port Pin zuzugreifen, werden drei Register benötigt. Diese drei Register fassen jeweils 8 IO Pins zusammen. Die Gruppierung von 8 IO Pins wird auch *Port* genannt. Der ATMega16 hat 4 solcher Ports: Port *A*, *B*, *C* und *D*. Im Folgenden wird statt des Portnamens ein `x` verwendet.
 
 ## `PINx` - das Eingangsregister
-Das Eingangsregister zeigt den aktuellen Zustand der Pins an. Der aktuelle Zustand wird auch eingelesen, wenn der Pin als Ausgang beschalten ist. Die notwendigen Pegel zur Detektion einer `0` oder `1` ist abhängig von Versorgungsspannung und Temperatur.
+Das Eingangsregister zeigt den aktuellen Zustand der Pins an. Der aktuelle Zustand wird auch eingelesen, wenn der Pin als Ausgang beschaltet ist. Die notwendigen Pegel zur Detektion einer `0` oder `1` ist abhängig von Versorgungsspannung und Temperatur.
 
 ## `DDRx` - das Richtungsregister
 Das *Data Direction Register* legt fest, ob die jeweiligen Ausgangstreiber aktiv sind oder nicht. Bei aktivem Ausgangstreiber (`DDR`-Bit auf `1`) wird der Pegel des entsprechenden `PORTx` Registerbits auf den Ausgang gelegt.
@@ -32,6 +32,6 @@ Mittels der Register `DDRx` und `PORTx` können folgende Konfigurationen eingest
 DDRxn | PORTxn | I/O | Pull-Up | Kommentar
 -|-|-|-|-
 0 | 0 |  Eingang | Nein | Hochohmiger Eingang (Tri-State)
-0 | 1 |  Eingang | Ja | Eingang mit Pull Up
+0 | 1 |  Eingang | Ja | Eingang mit Pull-Up
 1 | 0 |  Ausgang | Nein | Ausgang Low
 1 | 1 |  Ausgang | Nein | Ausgang High

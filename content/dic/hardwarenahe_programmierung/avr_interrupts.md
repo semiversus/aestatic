@@ -22,7 +22,7 @@ einer Zustandsänderung gekommen ist.
 Dieses System hat einige Nachteile:
 
 * Die Überprüfung benötigt Zeit und diese Zeit wird bei jedem Hauptschleifendurchlauf *"verbraucht"*
-* Die Schlafmodies des Mikrocontrollers können nicht benutzt werden, um Strom zu sparen
+* Die Schlafmodi des Mikrocontrollers können nicht benutzt werden, um Strom zu sparen
 * Zwischen zwei Überprüfungen benötigt die Hauptschleife Zeit für den Rest und es ist nur in diesen Abständen möglich zu prüfen
 
 Es gibt auch Vorteile:
@@ -33,7 +33,7 @@ Es gibt auch Vorteile:
 
 ## Interrupts
 Im oben beschriebenen Beispiel mit der Uhr wäre ein Interrupt vergleichbar mit dem Alarm eines Weckers. Der Wecker kann
-auf 6:15 Uhr gestellt werden und wir können uns auf andere Tätigkeiten konzentrieren oder auch komplett Schlafen. Die
+auf 6:15 Uhr gestellt werden und wir können uns auf andere Tätigkeiten konzentrieren oder auch komplett schlafen. Die
 Konfiguration des Weckers ist gut vergleichbar mit der Konfiguration von Interrupts.
 
 In einem Mikrocontroller gibt es fest vorgegebene *Quellen* für Interrupts. Der ATMega16 unterstützt etwa folgende Interrupts:
@@ -60,7 +60,7 @@ In einem Mikrocontroller gibt es fest vorgegebene *Quellen* für Interrupts. Der
 * `SPM_RDY_vect` - Store Program Memory Ready
 
 ### Interrupt Service Routinen
-Eine *Interrupt Service Routine* ist der Programmcode der ausgeführt wird, wenn der Interrupt ausgelöst wurde. Diese
+Eine *Interrupt Service Routine* ist der Programmcode, der ausgeführt wird, wenn der Interrupt ausgelöst wurde. Diese
 wird im Sourcecode über das `ISR()` Makro definiert. Um auf dieses Makro und andere Interruptfunktionalitäten
 zuzugreifen, muss `avr/interrupt.h` inkludiert werden.
 
@@ -87,12 +87,12 @@ Als Beispiel für einen einfachen Interrupt wird auf [externe Interrupts](avr_ex
 
 .. warning:: Interrupt ohne Service Routine
     Wird eine Komponente so konfiguriert, dass sie einen Interrupt auslösen kann, die entsprechende Interruptroutine aber
-    nicht vorhanden ist kommt es zu einem unerwarteten Ereignis: Der Mikrocontroller führt einen Neustart (Reset) durch.
+    nicht vorhanden ist, kommt es zu einem unerwarteten Ereignis: Der Mikrocontroller führt einen Neustart (Reset) durch.
 
 Interrupts, die keine eigene Service Routine haben führen die Serviceroutine `BADISR_vect` aus. Diese Routine führt einen
 Reset aus.
 
-Es ist möglich eine eigene Funktion für `BADISR_vect` zu definieren. Für große Projekte empfiehlt sich dies auch, da es
+Es ist möglich, eine eigene Funktion für `BADISR_vect` zu definieren. Für große Projekte empfiehlt sich dies auch, da es
 schnell bei der Fehlersuche passieren kann, dass eine Service Routine gelöscht oder fälschlich ein Interrupt
 freigegeben wird. Die Implementierung ist wie folgt möglich:
 

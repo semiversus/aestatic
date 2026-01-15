@@ -21,14 +21,14 @@ eigentliche Interruptquelle nicht innerhalb des Mikrocontrollers ist, sondern eb
 # Pinbelegung
 Die drei Pins sind in der folgenden Pinbelegung markiert.
 .. figure:: avr_ext_interrupt_pins.svg
-    :title: Externe Interrup Pins beim AVR
+    :title: Externe Interrupt Pins beim AVR
     :author: Datenblatt ATMega16
     :source: https://ww1.microchip.com/downloads/en/devicedoc/doc2466.pdf
     :license: &copy; Atmel Corporation
 
 * `INT0` - PORT D - Bit 2
 * `INT1` - PORT D - Bit 3
-* `INT2` - PORT B - Bit 2 (zusätzliche Mehrfachbelegung mit dem analogen Komperator)
+* `INT2` - PORT B - Bit 2 (zusätzliche Mehrfachbelegung mit dem analogen Komparator)
 
 Bei entsprechender Konfiguration kann ein Interrupt ausgelöst werden, wenn sich der Pegel am entsprechenden Pin ändert.
 
@@ -48,7 +48,7 @@ ISCx1 | ISCx0 | Beschreibung
 -|-|-
 0|0|Löst bei logisch `0` Pegel aus
 0|1|Löst bei jeder Pegeländerung aus (steigende oder fallende Flanke)
-1|0|Löst bei fallende Flanke (Pegeländerung von logisch '1' auf '0')
+1|0|Löst bei fallender Flanke (Pegeländerung von logisch '1' auf '0')
 1|1|Löst bei steigender Flanke (Pegeländerung von logisch '0' auf '1')
 
 ## MCUCSR
@@ -74,7 +74,7 @@ Init|**0**|**0**|**0**|0|0|0|0|0
 
 Die Bits INT0, INT1 und INT2 aktivieren die Interruptfreigabe.
 
-Für den Aufruf der entsprechenden Interruptrountine sind nun folgende Punkte notwendig:
+Für den Aufruf der entsprechenden Interruptroutine sind nun folgende Punkte notwendig:
 
 * Das entsprechende Bit bei `GICR` ist gesetzt, damit der Interrupt freigegeben ist
 * Über `sei()` wurde die globale Interruptfreigabe aktiviert (siehe [Interrupts](avr_interrupts.html) im Skriptum)
@@ -90,8 +90,8 @@ Name|**INTF1**|**INTF0**|**INTF2**|-|-|-|-|-
 Read/Write|**R/W**|**R/W**|**R/W**|R|R|R|R|R
 Init|**0**|**0**|**0**|0|0|0|0|0
 
-Tritt die konfigurierte Pegeländerung auf wird das entsprechende `INTFx` Flag gesetzt. Zurückgesetzt wird das Flag,
-indem entwededer die Interrupt Service Routine aufgerufen wurde oder indem man eine logische `1` an das entsprechende
+Tritt die konfigurierte Pegeländerung auf, wird das entsprechende `INTFx` Flag gesetzt. Zurückgesetzt wird das Flag,
+indem entweder die Interrupt Service Routine aufgerufen wurde oder indem man eine logische `1` an das entsprechende
 Bit schreibt.
 
 # Beispiel

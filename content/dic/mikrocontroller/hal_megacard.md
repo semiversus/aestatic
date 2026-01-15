@@ -5,7 +5,7 @@ parent: uebersicht.md
 
 * Download des [Megacard Templates](embedded_template_hal.zip)
 
-Die Verwendung der Hardwareabstraktion (kurz *HAL* für engl. *Hardware Abstraction Layer*) wird im folgenden erläutert.
+Die Verwendung der Hardwareabstraktion (kurz *HAL* für engl. *Hardware Abstraction Layer*) wird im Folgenden erläutert.
 
 Folgende Hardwareeinheiten werden von der HAL angesteuert:
 
@@ -63,24 +63,24 @@ void hal_sound_play(uint16_t frequency);
 * Um die Ausgabe abzuschalten wird als Argument für `frequency` `0` verwendet
 
 .. warning:: Tonausgabe und Ansteuerung des LC Displays ist nicht gemeinsam möglich
-    Es ist leider nicht möglich diese beiden Komponenten gleichzeitig zu verwenden, da sie einen gemeinsamen Pin des
+    Es ist leider nicht möglich, diese beiden Komponenten gleichzeitig zu verwenden, da sie einen gemeinsamen Pin des
     Mikrocontrollers benutzen.
 
 # Timerabstraktion
 ## Allgemeines
 Ein großer Teil der Funktionen innerhalb einer Anwendung sind durch Zeiten definiert. Da die Anzahl an hardwarebasierten
-Timern begrenzt ist müssen Timer mehrfachverwendet werden. Innerhalb der Hardwareabstraktion wird ein Timer verwendet,
+Timern begrenzt ist, müssen Timer mehrfach verwendet werden. Innerhalb der Hardwareabstraktion wird ein Timer verwendet,
 um für die Applikation beliebig viele abstrahierte Timervariablen zur Verfügung zu stellen.
 
 Alle verwendeten Timervariablen werden in einem Array über Zeiger registriert. Die Timervariablen werden durch die
 Applikation auf eine gewünschte *Zeit* gesetzt (in Mikrosekunden). Die Hardwareabstraktion zählt diese Timervariablen
-entsprechend der vergangen Zeit herunter, bis sie schlussendlich auf `0` angekommen sind.
+entsprechend der vergangenen Zeit herunter, bis sie schlussendlich auf `0` angekommen sind.
 
 ## Verwendung
 Die Applikation kann die Timervariable auswerten, um zu überprüfen, ob die gewünschte Zeit bereits vergangen ist. Ist
 der Wert ungleich `0` ist die Zeit noch nicht vergangen.
 
-Es gibt drei Makros, um das Setzen der Variable auf die gewünschte Zeitdauer lesbarer zu machen:
+Es gibt drei Makros, um das Setzen der Variablen auf die gewünschte Zeitdauer lesbarer zu machen:
 
 * `TIMER_MSEC(val)` multipliziert den Wert mit Tausend (entspricht dann Millisekunden)
 * `TIMER_SEC(val)` multipliziert den Wert mit einer Million (entspricht dann Sekunden)
@@ -104,7 +104,7 @@ Wird ein Timer nicht verwendet, gibt es den speziellen Wert `TIMER_DISABLED` (en
 signalisiert, dass die Timervariable im Moment nicht genutzt wird.
 
 ## Registrierung
-Um die Timer in der Applikation zu registrieren wird das Makro `TIMERS` verwenden. Es ist im Template bereits in der
+Um die Timer in der Applikation zu registrieren, wird das Makro `TIMERS` verwendet. Es ist im Template bereits in der
 Datei `main.c` vorbereitet.
 
 Angenommen es gibt zwei Timer: `timer_led` und `timer_off`. Dann werden diese wie folgt registriert:
@@ -130,7 +130,7 @@ void hal_lcd_printf(uint8_t line, uint8_t pos, char *fmt, ...);
 
 * `line` gibt die gewünschte Zeile an (0 oder 1)
 * `pos` gibt die gewünschte Position an (zwischen 0 oder 7)
-* Sind `line` oder `pos` außerhalb des Bereichs wird am Displayinhalt nicht verändert
+* Sind `line` oder `pos` außerhalb des Bereichs, wird am Displayinhalt nichts verändert
 * `fmt` und falls erforderlich die nachfolgenden Argumente entsprechen der Verwendung von `printf`
 
 Folgende Platzhalter sind definiert:
@@ -143,7 +143,7 @@ Folgende Platzhalter sind definiert:
 * `%%` gibt das Prozentzeichen aus
 
 Es kann auch eine fixe Breite definiert werden, so werden bei `%4d` vier Stellen reserviert. Ist die auszugebende Zahl
-von der Breite her kleiner werden links Leerzeichen eingefügt. Um `0` einzufügen wird eine `0` beim Platzhalter
+von der Breite her kleiner, werden links Leerzeichen eingefügt. Um `0` einzufügen wird eine `0` beim Platzhalter
 eingefügt: `%04d`.
 
 ## Beispiele

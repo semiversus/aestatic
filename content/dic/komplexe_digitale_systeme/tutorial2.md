@@ -41,7 +41,7 @@ beantworte die jeweiligen Übungen.
 
 ## Editor
 Ein einfacher Editor für Linux ist `nano`. Dieser ist auf den meisten Linux Systemen installiert und lässt sich leicht
-über die Kombinationen mit <kbd>STRG</kbd> bedienen. Weiter Infos über `nano` gibt es [hier](https://wiki.ubuntuusers.de/Nano/).
+über die Kombinationen mit <kbd>STRG</kbd> bedienen. Weitere Infos über `nano` gibt es [hier](https://wiki.ubuntuusers.de/Nano/).
 
 Die wichtigsten Tastenkombinationen für `nano`:
 
@@ -55,7 +55,7 @@ Die wichtigsten Tastenkombinationen für `nano`:
     :license: CC BY-NC-SA 2.0 DE
 
 ## System herunterfahren
-Wenn man DICbian in der Virtualbox herunterfahren möchte muss man sich erst als *Superuser* anmelden. Dies wird mittels
+Wenn man DICbian in der Virtualbox herunterfahren möchte, muss man sich erst als *Superuser* anmelden. Dies wird mittels
 `su` gemacht (Passwort ist `htl`). Anschließend kann man mittels `poweroff` das System herunterfahren.
 
 .. figure:: tutorial_poweroff.png

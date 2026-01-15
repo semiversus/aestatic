@@ -21,7 +21,7 @@ Ein Flip-Flop kennt zwei stabile Zustände. Diese werden als logisch 0 bzw. logi
 Die Kugel stellt den Zustand dar. Die logisch 0 und 1 ist der stabile Zustand links und rechts vom Hügel. Das ganze System ist labil, wenn sich die Kugel auf der Spitze des Hügels befindet. Nun ist es abhängig von zufälligen Ereignissen, wohin der Zustand des Flip-Flops kippt.
 
 # Synchrones Design
-Beim synchronen Design versucht man die Schwierigkeiten, die sich durch die Metastabilität ergeben zu beheben, indem alle Flip-Flops auf einen gemeinsamen globalen Takt reagieren. Dazu wird außerdem sichergestellt, dass an den Eingängen der Speicherelementen stabile Signale anliegen, bevor die nächste Taktflanke kommt.
+Beim synchronen Design versucht man die Schwierigkeiten, die sich durch die Metastabilität ergeben zu beheben, indem alle Flip-Flops auf einen gemeinsamen globalen Takt reagieren. Dazu wird außerdem sichergestellt, dass an den Eingängen der Speicherelemente stabile Signale anliegen, bevor die nächste Taktflanke kommt.
 
 Als Takt wird beim synchronen Design ein periodisches Rechtecksignal mit einer festen Frequenz verwendet. Um die maximale Frequenz zu bestimmen wird der kritische Pfad zwischen den Ausgängen der Speicherelemente und dem Eingang ebendieser gesucht.
 
@@ -37,7 +37,7 @@ Da Eingänge der Schaltung in vielen Fällen nicht synchron zum globalen Takt si
 Zur Synchronisierung werden ein- bzw. mehrere Flip-Flops hintereinander geschaltet. Mit jeder Stufe kann die Wahrscheinlichkeit der Metastabilität vermindert werden. In der Praxis reichen meist zwei hintereinandergeschaltete Flip-Flops aus.
 
 ## Schaltungsentwurf
-Um einen durchgängig synchronen Entwurf zu realisieren sind einige Dinge zu beachten, die im folgenden erläutert werden.
+Um einen durchgängig synchronen Entwurf zu realisieren sind einige Dinge zu beachten, die im Folgenden erläutert werden.
 
 ### Skew des Taktsignals
 Unter *Clock-Skew* versteht man den maximalen Zeitunterschied in der Ankunftszeit des Taktsignals aller Speicherelemente. Im Idealfall kommt bei jedem Speicherelement die Taktflanke zum exakt gleichen Moment. Ein *Clock-Skew* von 10ns bedeutet also, dass es zwei Speicherelemente mit 10ns Unterschied bei der Ankunft der Taktflanke gibt.
@@ -52,4 +52,4 @@ Um den *Clock-Skew* zu minimieren sind folgende Punkte zu beachten:
 Alle Speicherelemente sollten nur über den synchronen Takteingang in einen neuen Zustand überführt werden. Bei der Verwendung von asynchronen Set und Reset Eingängen kann es auch wieder zur Metastabilität führen.
 
 ### Fan-Out beachten
-*Fan-Out* beschreibt die Anzahl von Eingängen, die an einen Ausgang geschaltet werden. Dabei werden immer Gatter einer Logikfamilie verglichen. Ein Fan-Out von 10 bedeutet, dass 10 Eingänge von einem Ausgang angesteuert werden kann. Wird der Fan-Out überschritten, können die Verzögerungszeiten nicht mehr eingehalten werden, da es unter erhöhter Last länger dauert, bis sich der Logikpegel geändert hat.
+*Fan-Out* beschreibt die Anzahl von Eingängen, die an einen Ausgang geschaltet werden. Dabei werden immer Gatter einer Logikfamilie verglichen. Ein Fan-Out von 10 bedeutet, dass 10 Eingänge von einem Ausgang angesteuert werden können. Wird der Fan-Out überschritten, können die Verzögerungszeiten nicht mehr eingehalten werden, da es unter erhöhter Last länger dauert, bis sich der Logikpegel geändert hat.

@@ -6,7 +6,7 @@ Die bekannteste Form von Schaltern und Tastern arbeitet elektromechanisch, indem
 verbunden oder getrennt sind. Man spricht auch von den Zuständen *geschlossen* und *offen*.
 
 Im mechanischen Aufbau des Tasters wird oft eine Feder benutzt, um die Kontakte zu trennen. Im *ungedrückten* Zustand
-ist dieser Taster *offen*. Diese Konfiguration bezeichnet man als *Normally open* (kurz *NO*) Taster. Im gegensatz dazu
+ist dieser Taster *offen*. Diese Konfiguration bezeichnet man als *Normally open* (kurz *NO*) Taster. Im Gegensatz dazu
 sind bei Tastern in der Konfiguration *Normally closed* (*NC*) die Kontakte per Feder *geschlossen* und erst durch
 mechanische Betätigung werden die Kontakte getrennt.
 
@@ -14,14 +14,14 @@ Bedingt durch den Aufbau und der Feder wechselt bei einer Betätigung der Zustan
 *geschlossen* (und umgekehrt) sondern es kommt zu einer mechanischen Schwingung, die diese Kontakte mehrfach aufeinander
 prellen lässt. Daher die Bezeichnung *Tastenprellen* oder genauer *Kontaktprellen*.
 
-Im folgenden Oszibild sieht man ein solches Prellen, welches in diesem Fall beim Loslassen der Taste aufgenommen wurde (0V entspricht *geschlossen*, 5V entspricht *offen*):
+Im Folgenden Oszibild sieht man ein solches Prellen, welches in diesem Fall beim Loslassen der Taste aufgenommen wurde (0V entspricht *geschlossen*, 5V entspricht *offen*):
 
 ![Tastenprellen](tastenprellen.png)
 
 Im Bild sieht man das Prellen über eine Zeitdauer von ca. 1.5ms . Dies ist ein typischer Wert, kann aber je nach Bauart
 auch stark variieren.
 
-Das Problem beim Tastenprellen ist die Auswertung der Taste selbst. Zur Auswertung ob eine Taste gedrückt wurde wird
+Das Problem beim Tastenprellen ist die Auswertung der Taste selbst. Zur Auswertung, ob eine Taste gedrückt wurde, wird
 nach einer Flanke gesucht, sprich ein Zustandswechsel von *offen* zu *geschlossen* (oder umgekehrt). Je nach Implementierung
 dieser Detektion kann durch das Prellen ein Tasterdruck mehrfach detektiert werden. Dies kann zu Problemen in der Anwendung führen.
 
@@ -46,7 +46,7 @@ Im folgenden Beispiel wird die Funktion `process_key` in der Main Loop aufgerufe
 ```c
 uint8_t process_key(uint8_t key_state) {
   static uint8_t old_key_state=0; // old_key_state speichert den Zustand der vorhergehenden Iteration
-  uint8_t result=0;               // Initialisere den Rückgabewert mit 0
+  uint8_t result=0;               // Initialisiere den Rückgabewert mit 0
 
   if (key_state!=old_key_state) { // Überprüfe Zustandsänderung
     if (key_state==1) {           // Wenn der neue Zustand "geschlossen" ist
@@ -98,5 +98,5 @@ uint8_t process_key(uint8_t key_state) {
 ## Nachbildung eines analogen Tiefpasses
 Das was ein analoger Tiefpass bei der hardwaremäßigen Entprellung macht kann auch durch Software nachgebildet werden.
 
-Dazu wird der Zustand des Tasters gemittelt. Wird ein bestimmter Schwellwert überschritten so wird der entsprechende
+Dazu wird der Zustand des Tasters gemittelt. Wird ein bestimmter Schwellwert überschritten, so wird der entsprechende
 Zustand softwareintern gesetzt. Bei der Unterschreitung eines niedrigeren Schwellwertes wird der Zustand wieder zurückgesetzt.

@@ -13,7 +13,7 @@ parent: ../../unterricht.md
 * VHDL Beschreibung für Grundkomponenten
     * [Register](register.html)
     * [Synchronisierung asynchroner Signale](synchronisierung.html)
-    * [Synchrone Flankerkennung](flankenerkennung.html)
+    * [Synchrone Flankenerkennung](flankenerkennung.html)
     * [Zähler](zaehler.html)
     * [Zustandsmaschine](zustandsmaschine.html)
 * [Modellierungsarten](modellierungsarten.html)
@@ -22,7 +22,7 @@ parent: ../../unterricht.md
 * [Übung 1](uebung1.html) - Kombinatorische Umsetzung eines BCD auf 7 Segment Dekoders
 * [Übung 2](uebung2.html) - Blinken einer LED
 * [Übung 3](uebung3.html) - Toggeln einer LED mittels Taster
-* [Übung 4](uebung4.html) - Unterteilung eines Design in Komponenten
+* [Übung 4](uebung4.html) - Unterteilung eines Designs in Komponenten
 * [Übung 5](uebung5.html) - Stoppuhr (universeller Zähler und Zustandsautomat)
 * [Übung 6](uebung6.html) - Clicker (kleines Geschwindigkeitsspiel)
 * [Übung 7](uebung7.html) - Testbench

@@ -4,8 +4,8 @@ parent: uebersicht.md
 
 # Allgemeines
 Die `architecture` beschreibt den inneren Aufbau der Schaltung einer Komponente. Für diese Beschreibung stehen mehrere
-Anweisungen zur Verfügung, die eine *Nebenläufigkeit* ermöglichen. Betrachtet man die Komponenten einer digitalen Schaltung
-laufen diese jede für sich gesehen unabhängig von der anderen. Die Unabhängigkeit lässt sich auch mittels *Nebenläufigkeit*
+Anweisungen zur Verfügung, die eine *Nebenläufigkeit* ermöglichen. Betrachtet man die Komponenten einer digitalen Schaltung,
+laufen diese jede für sich gesehen unabhängig von den anderen. Die Unabhängigkeit lässt sich auch mittels *Nebenläufigkeit*
 (engl. *concurrent*) beschreiben, deswegen heißen diese Anweisungen auch engl. *concurrent statements*.
 
 Es gibt folgende *concurrent statements*:
@@ -43,7 +43,7 @@ beschrieben. Bei den Signalzuweisungen von `sum_o` und `carry_o` handelt es sich
 der rechten Seite der Zuweisung steht ein Ausdruck, der durch Kombinatorik ausgewertet werden kann.
 
 # Bedingte Signalzuweisung mittels `when`
-Für eine bedingte Signalzuweisung wird folgender Syntax verwendet:
+Für eine bedingte Signalzuweisung wird folgende Syntax verwendet:
 
 ```vhdl
 signal <= expr_true when cond else expr_false;
@@ -71,7 +71,7 @@ result <= (others => '0') when clear='1' else
 ```
 
 # Selektive Signalzuweisung mittels `with`/`select`
-Die *selektive* Signalzuweisung erlaubt den Aufbau eines Multiplexers mit mehreren Eingängen. Dazu wird folgender
+Die *selektive* Signalzuweisung erlaubt den Aufbau eines Multiplexers mit mehreren Eingängen. Dazu wird folgende
 Syntax verwendet:
 
 ```vhdl

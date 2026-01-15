@@ -7,9 +7,9 @@ Ein `process` hat folgende Eigenschaften:
 
 * Er besteht aus sequentiellen Anweisungen.
 * Eine *Sensitivity List* definiert die Signale, bei deren Änderung die Anweisungen ausgewertet werden.
-* Die "Ausführung" läuft parallel zu allen anderen `process` Statements
-* Der `process` selbst enthält keine nebenläufige Statements
-* Es erlaubt eine funktionale Beschreibung ähnlich zu einer Programmiersprache
+* Die "Ausführung" läuft parallel zu allen anderen `process` Statements.
+* Der `process` selbst enthält keine nebenläufigen Statements.
+* Er erlaubt eine funktionale Beschreibung ähnlich zu einer Programmiersprache.
 
 # Prozess für kombinatorische Schaltungen
 Bei kombinatorischen Schaltungen gibt es keine speichernden Elemente. Die Ausgänge sind direkt von den Eingängen abhängig.
@@ -28,9 +28,9 @@ sobald sich `a_i` oder `b_i` ändert.
 
 Einen kombinatorischen Prozess zeichnet aus, dass bei der Auswertung nur die Pegel der Signale ausgewertet werden.
 
-.. warning:: Unvollständige Sensitivity Liste
-    Für kombinatorische Prozesse ist eine vollständige Sensitivity Liste wichtig. Wird im obigen Beispiel etwa `a_i`
-    vergessen baut die Synthese ein speicherndes Element ein (Latch)!
+.. warning:: Unvollständige Sensitivitätsliste
+    Für kombinatorische Prozesse ist eine vollständige Sensitivitätsliste wichtig. Wird im obigen Beispiel etwa `a_i`
+    vergessen, baut die Synthese ein speicherndes Element ein (Latch)!
 
 Das obige Beispiel entspricht genau der folgenden nebenläufigen Anweisung:
 
@@ -39,13 +39,13 @@ Das obige Beispiel entspricht genau der folgenden nebenläufigen Anweisung:
 ```
 
 # Prozess für sequentielle Schaltungen
-Sequentiellen Schaltungen werden mittels speichernden Elementen (*Register*) realisiert. Bei
+Sequentielle Schaltungen werden mittels speichernden Elementen (*Register*) realisiert. Bei
 [synchronen Schaltungen](../grundlagen_der_digitaltechnik/synchrones_design.html) arbeiten alle Register mit
 einem globalen Takt und reagieren auf die gleiche Taktflanke. Typischerweise wird die steigende Taktflanke gewählt,
 prinzipiell lässt sich aber auch die fallende Taktflanke wählen.
 
 ## Erkennung einer Taktflanke
-Um eine Taktflanke erkennen zu können ist es notwendig, das Taktsignal in der Sensitivitätsliste hinzuzufügen. Damit wird
+Um eine Taktflanke erkennen zu können, ist es notwendig, das Taktsignal in der Sensitivitätsliste hinzuzufügen. Damit wird
 der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert.
 
 .. info:: Name für das Taktsignal
@@ -96,8 +96,7 @@ end process;
 
 # Anweisung innerhalb eines Prozesses
 ## `if`-Anweisung
-Die `if`-Anweisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
-Zweig (`else`) oder eine andere Bedingung aus (`elsif`). Die `if` Anweisung wird mit `endif;` beendet.
+Die `if`-Anweisung wertet die Bedingung aus und entscheidet dann für den *Wahr*-Zweig oder gegebenenfalls den *Falsch*-Zweig (`else`) oder eine andere Bedingung (`elsif`). Die `if`-Anweisung wird mit `end if;` beendet.
 
 ### Beispiel
 
@@ -107,7 +106,7 @@ begin
   if clear='1' then
     result <= (others => '0');
   elsif load='1' then
-    result <= input
+    result <= input;
   else
     result <= counter + 1;
   end if;
@@ -116,7 +115,7 @@ end process;
 
 .. info:: Vergleich mit *nebenläufiger* Anweisung
 
-    Der Syntax von VHDL ist oft nicht sehr konsistent. Das gleiche Ergebnis lässt sich durch folgende Zuweisung als
+    Die Syntax von VHDL ist oft nicht sehr konsistent. Das gleiche Ergebnis lässt sich durch folgende Zuweisung als
     *nebenläufige* Anweisung realisieren:
 
     ```vhdl
@@ -164,7 +163,7 @@ end process;
     Auch hier ist die Funktionalität identisch, die Schreibweise unterscheidet sich aber stark.
 
 ## `for`-Schleife
-Die `for` Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
+Die `for`-Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
 
 ### Beispiel
 ```vhdl

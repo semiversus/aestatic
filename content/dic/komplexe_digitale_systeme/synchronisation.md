@@ -8,7 +8,7 @@ Der Zweck der Koordinierung ist zumeist einer der folgenden:
 
 * Gemeinsamer Zugriff auf Daten. Dabei muss verhindert werden, dass durch gleichzeitigen Zugriff Inkonsistenzen in den Daten entstehen. Dies wird durch Mutex-Verfahren zum gegenseitigen Ausschluss realisiert.
 * Gemeinsame Nutzung beschränkter Betriebsmittel wie zum Beispiel von Peripheriegeräten. Hierbei können ebenfalls Mutex-Verfahren eingesetzt werden, häufig werden aber komplexere Methoden des Schedulings benötigt.
-* Übergabe von Daten bzw. Nachrichten von einem Prozess an einen Anderen, also Interprozesskommunikation.
+* Übergabe von Daten bzw. Nachrichten von einem Prozess an einen anderen, also Interprozesskommunikation.
 * Steuerung von Unterprozessen durch Signale, insbesondere das Abbrechen von Prozessen oder das Warten darauf, dass sie terminieren.
 
 # Semaphor
@@ -19,7 +19,7 @@ Meist wird die Ganzzahl (Zähler) beim Start des Semaphors mit dem Zahlenwert de
 ## Kritischer Abschnitt
 Mit Hilfe von Semaphoren lassen sich auch kritische Abschnitte realisieren. Darunter wird ein Abschnitt eines Programms bezeichnet, in dem Ressourcen (z.B. Datenstrukturen, Verbindungen, Geräte usw.) verändert werden und der nicht parallel oder zeitlich verzahnt zu Programmabschnitten anderer Prozesse/Threads ausgeführt werden darf, in denen die gleichen Ressourcen ebenfalls verändert werden. Andernfalls kommt es zu inkonsistenten Zuständen der Betriebsmittel.
 
-Das folgende Beispiel zeigt die Inkrementierung einer Variable `s` durch zwei Prozesse. Dazu wird eine Kopie von `s` in ein Register geladen, um eins erhöht und wieder zurückgeschrieben. Im linken Teil wird der erste Prozess unterbrochen und der zweite Prozess kommt zur Ausführung. Die Variable ist nun nicht auf 2 sondern auf 1. Im rechten Teil sind die kritischen Abschnitte atomar ausgeführt (sprich nicht unterbrechbar).
+Das folgende Beispiel zeigt die Inkrementierung einer Variablen `s` durch zwei Prozesse. Dazu wird eine Kopie von `s` in ein Register geladen, um eins erhöht und wieder zurückgeschrieben. Im linken Teil wird der erste Prozess unterbrochen und der zweite Prozess kommt zur Ausführung. Die Variable ist nun nicht auf 2, sondern auf 1. Im rechten Teil sind die kritischen Abschnitte atomar ausgeführt (sprich nicht unterbrechbar).
 
 .. figure:: kritischer_abschnitt.svg
     :title: Kritischer Abschnitt

@@ -18,7 +18,7 @@ latex: true
 
 # Allgemeines
 Um eine serielle Schnittstelle (siehe [RS232](../bussysteme/rs232.html)) zu realisieren stellt der Atmel AVR eine *USART*
-(engl. für *Universal Synchronous and Asynchrouns Serial Receiver and Transmitter*) zur Verfügung.
+(engl. für *Universal Synchronous and Asynchronous Serial Receiver and Transmitter*) zur Verfügung.
 
 Zur Arbeit mit dem *USART* werden fünf Register genutzt:
 
@@ -32,7 +32,7 @@ Außerdem stehen drei mögliche Interrupts für die UART zur Verfügung:
 * *Transmit Complete* (`USART_TX_vect`) - signalisiert ein vollständig gesendetes Byte (inklusive Stopbit)
 * *UART Data Register Empty* (`USART_UDRE_vect`) - signalisiert einen freien Sendebuffer
 
-Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden näher erläutert.
+Die Konfigurations- und Statusregister sowie die Interrupts werden im Folgenden näher erläutert.
 
 .. figure:: avr_uart.svg
     :title: AVR UART
@@ -57,10 +57,10 @@ dieser aktiviert ist.
 ### TXC - Transmit Complete
 Das Flag wird auf `1` gesetzt, wenn ein komplettes Frame (inklusive Stopbit) gesendet wurde. Dieses Flag wird gelöscht,
 wenn der *Transmit Complete* Interrupt aufgerufen wird oder kann direkt gelöscht werden, indem das Flag mit einer `1`
-geschrieben wird. Dieses Flags löste den *Transmit Complete* Interrupt aus, sofern dieser aktiviert ist.
+geschrieben wird. Dieses Flag löst den *Transmit Complete* Interrupt aus, sofern dieser aktiviert ist.
 
-### UDRE - USART Date Register Empty
-Dieses Flag ist auf `1`, wenn das Senderegister (wieder) leer ist. Dieses Flag löst den *USART Date Register Empty*
+### UDRE - USART Data Register Empty
+Dieses Flag ist auf `1`, wenn das Senderegister (wieder) leer ist. Dieses Flag löst den *USART Data Register Empty*
 Interrupt aus, sofern dieser aktiviert ist. Das Flag liefert `0`, sobald auf `UDR` geschrieben wird. Nach dem Reset
 ist dieses Flag `1`, um das leere `UDR` zu signalisieren.
 
@@ -73,7 +73,7 @@ Ein *Data OverRun* tritt auf, wenn ein Byte empfangen wurde, der Empfangsbuffer 
 ausgelesen). Sobald dies eintritt, wird das Flag auf `1` gesetzt. Zurückgesetzt wird es mit dem Lesen von `UDR`.
 
 ### PE - Parity Error
-Wenn der Paritätscheck eingeschalten ist und das Paritätsbit der Übertragung nicht mit der Berechnung über die Datenbits
+Wenn der Paritätscheck eingeschaltet ist und das Paritätsbit der Übertragung nicht mit der Berechnung über die Datenbits
 zusammen stimmt wird dieses Flag auf `1` gesetzt. Zurückgesetzt wird es mit dem Lesen von `UDR`.
 
 ### U2X - USART Double Speed
@@ -107,7 +107,7 @@ Um den Interruptvektor zu aktivieren, muss dieses Flag auf `1` sein. Der entspre
 ### RXEN - Receive Enable
 Dieses Flag muss auf `1` sein, um den Empfänger der UART einzuschalten.
 
-### RXEN - Transmit Enable
+### TXEN - Transmit Enable
 Dieses Flag muss auf `1` sein, um den Sender der UART einzuschalten.
 
 ## USARTC

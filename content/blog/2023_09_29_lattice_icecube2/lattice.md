@@ -97,7 +97,7 @@ Now starting should work as expected.
 You find a detailed installation guide on [vhdlwiz.com](https://vhdlwhiz.com/lattice-icecube2-ubuntu-20-04-icestick/).
 
 ## General advice `cannot execute: required file not found`
-This message is not really helpful. Use `file` do see if the executable is a 32-bit file (or maybe even another processor architecture).
+This message is not really helpful. Use `file` to see if the executable is a 32-bit file (or maybe even another processor architecture).
 
 ```console
 $ file iCEcube2setup_Dec_10_2020_2012

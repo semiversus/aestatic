@@ -46,7 +46,7 @@ A|B|A ∨ B
 1|0|1
 1|1|1
 
-Der Ausgang ist auf logisch 1 wenn A **oder** B auf logisch 1 sind. In der klassischen Logik gibt die Unterscheidung zwischen der ausschließenden und der nicht-ausschließenden Disjunktion. Bei einer ausschließenden Disjunktion können nicht beide Teilaussagen wahr sein, z.B.:"Wir gehen nach Italien oder nach Schweden". Das `OR`-Gatter bedient sich der nicht-ausschließenden Disjunktion.
+Der Ausgang ist auf logisch 1 wenn A **oder** B auf logisch 1 sind. In der klassischen Logik gibt es die Unterscheidung zwischen der ausschließenden und der nicht-ausschließenden Disjunktion. Bei einer ausschließenden Disjunktion können nicht beide Teilaussagen wahr sein, z.B.:"Wir gehen nach Italien oder nach Schweden". Das `OR`-Gatter bedient sich der nicht-ausschließenden Disjunktion.
 
 Allgemein gilt für ein `OR`-Gatter:
 
@@ -84,7 +84,7 @@ Am Beispiel des `NAND`-Gatters zeigt das folgende Bild die Möglichkeiten der Su
 ![Gatter Substitution](gatter_substitution.svg)
 
 ## XOR-Gatter
-Das XOR-Gatter (von engl. <i>e**X**clusive **OR**</i>) hat meist zwei (oder auch mehr) Eingänge und einem Ausgang. Bei einem XOR-Gatter mit zwei Eingängen ist der Ausgang auf logisch 1, wenn einer der beiden Eingänge auf logisch 1 ist, aber nicht beide gleichzeitig. Dies entspricht der ausschließenden Disjunktion. Für zwei oder mehr Eingänge ist der Ausgang auf logisch 1, wenn an einer ungerade Anzahl von Eingängen eine logische 1 anliegt.
+Das XOR-Gatter (von engl. <i>e**X**clusive **OR**</i>) hat meist zwei (oder auch mehr) Eingänge und einen Ausgang. Bei einem XOR-Gatter mit zwei Eingängen ist der Ausgang auf logisch 1, wenn einer der beiden Eingänge auf logisch 1 ist, aber nicht beide gleichzeitig. Dies entspricht der ausschließenden Disjunktion. Für zwei oder mehr Eingänge ist der Ausgang auf logisch 1, wenn an einer ungeraden Anzahl von Eingängen eine logische 1 anliegt.
 
 In booleschen Funktionen wird die XOR Verknüpfung mittels "\\(\oplus\\)" dargestellt.
 

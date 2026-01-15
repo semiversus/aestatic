@@ -4,7 +4,7 @@ latex: true
 
 # Allgemeines
 Eine typische Anwendung für Transistoren ist das Schalten von Lastströmen. Der einfachste Fall ist eine Last, die keinen
-Bezug zum Massepontential braucht. Dies nennt man *Low-Side* schalten.
+Bezug zum Massepotential braucht. Dies nennt man *Low-Side* schalten.
 
 # Low-Side Schalter
 ![Prinzipschaltbild](bipolarer_transistor_schalter.svg)
@@ -19,21 +19,21 @@ eingeschaltete Zustand.
 Bei der Auswahl des Transistors ist es wichtig, dass die im ausgeschalteten Zustand anliegende Spannung \\(V+\\) an Kollektor
 und Emitter nicht zu einer Beschädigung führt. Im Datenblatt ist diese Maximale Spannung von \\(U_{CE}\\) meist mit \\(U_{CE0}\\)
 bzw. \\(V_{CE0}\\) beschrieben. Für den gegebenen Transistor ist diese Spannung 60V, d.h. die Betriebsspannung darf nicht
-höher 60 Volt sein.
+höher als 60 Volt sein.
 
 Ein zweiter Punkt der meist kein Problem darstellt ist der Abschaltstrom des Transistors. Wenn durch die Basis kein Strom
 fließt, aber eine Spannung \\(U_{CE}\\) anliegt so ist der Strom \\(I_C\\) nicht 0 sondern es fließt ein sehr kleiner *Abschaltstrom*.
 Dieser findet sich im Datenblatt meist unter \\(I_{CE0}\\) bzw. *Collector Cutoff Current*.
 
 ## Eingeschalteter Zustand
-Im eingeschaltenen Zustand ist die Spannung \\(U_{CE}\\) am Transistor sehr klein. Der ausgewählte Transistor muss hier zwei
+Im eingeschalteten Zustand ist die Spannung \\(U_{CE}\\) am Transistor sehr klein. Der ausgewählte Transistor muss hier zwei
 Eigenschaften besitzen:
 
 * Der Strom durch den Kollektor muss kleiner \\(I_{C Max}\\) sein
 * Die abfallende Leistung am Transistor muss kleiner \\(P_{D}\\) (*Power Dissipation*, je nach Kühlung) sein
 
-Wird der Transistor voll durchgesteuert entspricht die Spannung \\(U_{CE}\\) der Sättigungsspannung \\(U_{CE Sat}\\). Die
-Sättigungspsannung ist stark abhängig von Temperatur, Übersteuerungsfaktor und dem Strom \\(I_C\\). Sie wird über Kennlinien
+Wird der Transistor voll durchgesteuert, entspricht die Spannung \\(U_{CE}\\) der Sättigungsspannung \\(U_{CE Sat}\\). Die
+Sättigungsspannung ist stark abhängig von Temperatur, Übersteuerungsfaktor und dem Strom \\(I_C\\). Sie wird über Kennlinien
 im Datenblatt ermittelt. Für kleine Ströme \\(I_C\\) (<100mA) wird sie oft mit 0.1 Volt angenommen.
 
 Die Verlustleistung am Transistor besteht aus zwei Komponenten:
@@ -44,7 +44,7 @@ Die Verlustleistung am Transistor besteht aus zwei Komponenten:
 Daraus ergibt sich für die Gesamtleistung \\(P_{Transistor}=I_B \cdot U_{BE} + I_C \cdot U_{CE Sat}\\). Da der Anteil über die
 Basisdiode viel kleiner ist gilt \\(P_{Transistor} \approx I_C \cdot U_{CE Sat}\\).
 
-## Berechnung des Basiswiderstand
+## Berechnung des Basiswiderstands
 .. figure:: transistor_npn_esb.svg
     :title: Vereinfachtes Ersatzschaltbild
     :author: Biezl

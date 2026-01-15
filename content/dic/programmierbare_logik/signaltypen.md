@@ -71,7 +71,7 @@ signal led_reg : std_ulogic := '0'; -- Signal vom Typ std_ulogic, initialisiert 
 In vielen Anwendungen werden mehrere Signale zu einem *Bus* zusammengefasst. Dazu wird der Signaltyp `std_ulogic_vector`
 verwendet.
 
-Um einen Bus `data_reg` mit 8 Signalen zu definieren und diesen mit den Bits `"00000001"` zu initialisieren wird folgende
+Um einen Bus `data_reg` mit 8 Signalen zu definieren und diesen mit den Bits `"00000001"` zu initialisieren, wird folgende
 Definition genutzt:
 
 ```vhdl
@@ -79,8 +79,8 @@ signal data_reg : std_ulogic_vector(7 downto 0) := "00000001";
 ```
 
 ## `downto` und `to`
-Im obigen Beispiel wurde `downto` genutzt um innerhalb des Vektors die einzelnen Indizies zu definieren. Wir können auf
-ein einzelnes Signal im Bus mittels `data_reg(0)` zugreifen. Dies wurde laut obiger Definition `'1'` zurückliefern und
+Im obigen Beispiel wurde `downto` genutzt, um innerhalb des Vektors die einzelnen Indizes zu definieren. Wir können auf
+ein einzelnes Signal im Bus mittels `data_reg(0)` zugreifen. Dies würde laut obiger Definition `'1'` zurückliefern und
 entspricht somit (wie erwartet) dem niederwertigsten Bit.
 
 Würde `data_reg` wie folgt definiert sein:
@@ -111,14 +111,14 @@ Diese Definition setzt den Index 0 auf `'1'` und alle anderen Bits auf `'0'`.
 
 ## Verknüpfen von Bussen
 Busse lassen sich beliebig zusammenführen und aufteilen. Im folgenden Beispiel wird der 8 Bit Bus `data_in_reg` in zwei
-Teilbusse `low_nibble` und `high_nibble` mit jeweils 4 Bit aufgeteilt. Der 8 Bit Bus `data_out_reg` besteht aus den
-einzelnen 4 Bit Bussen, die in umgekehrter Reihenfolge wieder zusammengesetzt werden.
+Teilbusse `low_nibble` und `high_nibble` mit jeweils 4 Bit aufgeteilt. Der 8-Bit-Bus `data_out_reg` besteht aus den
+einzelnen 4-Bit-Bussen, die in umgekehrter Reihenfolge wieder zusammengesetzt werden.
 
 ```vhdl
 signal data_in_reg : std_ulogic_vector(7 downto 0);
 signal low_nibble : std_ulogic_vector(3 downto 0);
 signal high_nibble : std_ulogic_vector(3 downto 0);
-signal data_out_reg : std_ulogic_vector(7 dowto 0);
+signal data_out_reg : std_ulogic_vector(7 downto 0);
 
 low_nibble <= data_in_reg(3 downto 0);
 high_nibble <= data_in_reg(7 downto 4);
@@ -156,11 +156,11 @@ counter_reg <= counter_reg + 1;
 # Ganzzahlen mittels `integer`
 
 In vielen Anwendungen werden arithmetische Operationen mit Signalen durchgeführt. Oft ist es aber nicht notwendig, auf
-die einzelnen Bits zuzugreifen. Für solche Zwecke gibt folgende Ganzzahl Signaltypen:
+die einzelnen Bits zuzugreifen. Für solche Zwecke gibt es folgende Ganzzahl-Signaltypen:
 
-* `integer`: Ganzzahl, je nach Synthesetool meist als 32 Bit vorzeichbehaftete Zahl representiert
-* `natural`: Subtype von `integer` die positive Zahlen inklusive `0` enthält.
-* `positive`: Subtype von `integer` die ausschließlich positive Zahlen enthält (ohne `0`).
+* `integer`: Ganzzahl, je nach Synthesetool meist als 32-Bit vorzeichenbehaftete Zahl repräsentiert
+* `natural`: Subtype von `integer`, der die positiven Zahlen inklusive `0` enthält.
+* `positive`: Subtype von `integer`, der ausschließlich die positiven Zahlen enthält (ohne `0`).
 
 ## Eingrenzung mittels `range`
 Für Signale kann der Wertebereich der Ganzzahltypen weiter eingeschränkt werden. Für einen Zähler im Dezimalsystem
@@ -172,15 +172,15 @@ signal dec_counter_reg : integer range 0 to 9;
 
 .. warning:: Überlauf bei `integer`
     Wenn wie im obigen Beispiel der Bereich auf 0 bis 9 eingeschränkt ist, bedeutet dies nicht, dass bei einem Überlauf
-    (9+1) das Ergebnis auf 0 überläuft. Es ist ein Hinweis für Simulation und Synthese, die im Falle eine Warnung
-    ausgeben können, der Überlauf selbst muss aber durch eine eigene Beschreibung abgefangen werden.
+    (9+1) das Ergebnis auf 0 überläuft. Es ist ein Hinweis für Simulation und Synthese, die im Falle einer Warnung
+ausgeben können, der Überlauf selbst muss aber durch eine eigene Beschreibung abgefangen werden.
 
 # Konvertierung und Casting
 
-Wird ein Signaltyp mit dem Wert eines anderen Signaltyps angesteuert benötigt man eine Konvertierung bzw. einen *Cast*.
+Wird ein Signaltyp mit dem Wert eines anderen Signaltyps angesteuert, benötigt man eine Konvertierung bzw. einen *Cast*.
 
 Die Typen `std_ulogic_vector`, `unsigned` und `signed` sind Vektoren. Hier reicht es aus den Typ zu *casten*. Bei einer
-Umwandlung von einem `integer` zu einem Vektor benötigt man die Information, wieviele Bits notwendig sind.
+Umwandlung von einem `integer` zu einem Vektor benötigt man die Information, wie viele Bits notwendig sind.
 
 Für die folgenden Beispiele gehen wir von folgender Definition aus:
 
@@ -199,7 +199,7 @@ s_vector <= signed(sul_vector);
 int <= to_integer(unsigned(sul_vector));
 ```
 
-Die Umwandlung eines `std_ulogic_vector` in `unsigned` und `signed` geht einfach, da es sich nur die Interpretation der
+Die Umwandlung eines `std_ulogic_vector` in `unsigned` und `signed` geht einfach, da sich nur die Interpretation der
 Bits ändert.
 
 Bei der Umwandlung in einen `integer` gibt es das Problem, dass `std_ulogic_vector` nur eine Ansammlung
@@ -218,7 +218,7 @@ sul_vector <= std_ulogic_vector(s_vector);
 int <= to_integer(s_vector);
 ```
 
-Die Umwandlung funktioniert hier änhlich zu `std_ulogic_vector`.
+Die Umwandlung funktioniert hier ähnlich zu `std_ulogic_vector`.
 
 ## `integer`
 

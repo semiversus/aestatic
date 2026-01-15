@@ -82,7 +82,7 @@ Lotterie-Scheduling löst das Problem des Verhungerns. Wenn man jedem Prozess mi
 Bei diesen Strategien wird jedem Prozess eine Priorität zugeordnet. Die Abarbeitung erfolgt dann in der Reihenfolge der Prioritäten.
 
 * **Rate Monotonic Scheduling** (RMS): Die Priorität wird aus der Periodenlänge berechnet (Prozesse mit kürzeren Perioden haben höhere Priorität).
-* **Deadline Monotonic Scheduling** (DMS): Die Priorität wird aus der relativen Deadline berechnet (Prozesse mit größeren Deadlines haben höhere Priorität.
+* **Deadline Monotonic Scheduling** (DMS): Die Priorität wird aus der relativen Deadline berechnet (Prozesse mit größeren Deadlines haben höhere Priorität).
 * Man kann auch mehreren Prozessen die gleiche Priorität geben, sie werden dann in Eingangsreihenfolge ausgeführt, oder mit einem untergeordneten Zeitscheibenverfahren innerhalb der gleichen Priorität abgewechselt (zum Beispiel Multilevel Feedback Queue Scheduling oder Shortest-Elapsed-Time (SET) )
 * Die Prioritäten können auch dynamisch sein, wobei sich die Priorität eines Prozesses mit der Zeit erhöht, damit auch niedrig priorisierte Prozesse irgendwann bearbeitet werden und nicht ständig von höher priorisierten Prozessen verdrängt werden.
 
@@ -93,5 +93,5 @@ Ein Prozess mit hoher Priorität will auf eine Ressource zugreifen, kann dies ab
 
 Existiert nun ein Prozess mit mittlerer Priorität, der die fragliche Ressource nicht verwendet, kann dieser mittel priorisierte Prozess den niedrig priorisierten verdrängen, d.h. der mittel priorisierte Prozess wird anstelle des niedrig priorisierten Prozesses ausgeführt. Der niedrig priorisierte Prozess kann die Ressource nun nicht mehr freigeben, so dass der hoch priorisierte Prozess nicht zur Ausführung kommt. Damit hindert der mittel priorisierte Prozess indirekt auch den hoch priorisierten Prozess an der Ausführung, was er nach dem Prinzip des Prioritäts-Schedulings nicht darf. Die Priorität des hoch priorisierten Prozesses und des mittel priorisierten Prozesses sind somit in einer zweiten Form der Prioritätsinversion vertauscht.
 
-## Aushungern
-Zur Aushungerung von Prozssen (engl. Starvation) kommt es, wenn niederpriore Prozesse nie zur Ausführung kommen, da immer höher priore Prozesse an die Reihe kommen. Ein Mittel zur Vermeidung von Aushungerung ist das *Priority Aging*. Dabei wird die Priorität eines Prozess während der Laufzeit erhöht, wenn er nicht zur Ausführung kommt. Irgendwann ist diese dynamische Priorität höher als die der anderen Prozesse und der Prozess kommt zur Ausführung. *Priority Aging* ist auch eine mögliche Lösung zur Prioritätsinversion.
+## Aushungerung
+Zur Aushungerung von Prozessen (engl. Starvation) kommt es, wenn niederpriore Prozesse nie zur Ausführung kommen, da immer höher priore Prozesse an die Reihe kommen. Ein Mittel zur Vermeidung von Aushungerung ist das *Priority Aging*. Dabei wird die Priorität eines Prozesses während der Laufzeit erhöht, wenn er nicht zur Ausführung kommt. Irgendwann ist diese dynamische Priorität höher als die der anderen Prozesse und der Prozess kommt zur Ausführung. *Priority Aging* ist auch eine mögliche Lösung zur Prioritätsinversion.

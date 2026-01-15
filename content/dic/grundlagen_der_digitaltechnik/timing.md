@@ -21,7 +21,7 @@ Die Verzögerung durch ein einzelnes logisches Gatter wird *Gatterlaufzeit* (ode
 
 ## Kritischer Pfad
 
-Der kritische Pfad ist jener Pfad, der die größte Gesamtverzögerung aufweist. Im folgenden ist dieser Pfad rot eingezeichnet:
+Der kritische Pfad ist jener Pfad, der die größte Gesamtverzögerung aufweist. Im Folgenden ist dieser Pfad rot eingezeichnet:
 
 ![Kritischer Pfad bei einer kombinatorischen Schaltung](kritischer_pfad.png)
 
@@ -57,7 +57,7 @@ Zeichnet man das KV-Diagramm auf, ergibt sich folgendes Bild:
 
 ![KV-Diagramm des Multiplexers](hazard_mux_kv.svg)
 
-Man sieht die zwei unabhängige Minterme \\(A\overline{S}\\) und \\(BS\\). Wird das Signal S gewechselt, wechseln auch die zuständigen Minterme. Dies ist ein Zeichen dafür, dass ein Hazard auftreten **kann**.
+Man sieht die zwei unabhängigen Minterme \\(A\overline{S}\\) und \\(BS\\). Wird das Signal S gewechselt, wechseln auch die zuständigen Minterme. Dies ist ein Zeichen dafür, dass ein Hazard auftreten **kann**.
 
 Damit ein logischer Hazard überhaupt auftreten kann, müssen folgende drei Bedingungen erfüllt sein:
 
@@ -80,4 +80,4 @@ Wenn wir in unserem Beispiel den Eingang A auf logisch 1 setzen und dann die Ein
 
 ![Zustandsänderung bei einem funktionalen Hazard](funktionaler_hazard.png)
 
-Funktionale Hazards kann man in den meiste Fällen nicht durch Hinzufügen von redundanten Schaltelementen vermeiden.
+Funktionale Hazards kann man in den meisten Fällen nicht durch Hinzufügen von redundanten Schaltelementen vermeiden.

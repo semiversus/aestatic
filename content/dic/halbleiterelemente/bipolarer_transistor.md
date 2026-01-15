@@ -7,12 +7,12 @@ Bei einem Bipolartransistor (engl. *bipolar junction transistor* oder kurz *BJT*
 
 Auch wenn der Feldeffekttransistor wesentlich früher theoretisch beschrieben wurde, war es der Bipolartransistor, der ab den 50er Jahren zu einer Revolution der Miniaturisierung geführt hat.
 
-Ein wichtiges Grundkonzept bei der Arbeit mit Transistoren ist der Umgang mit Modellen. Je nach verwendetem Modell lassen sich bestimmte Vorgänge einfach erklären, andere wiederum nicht. Dazu ist es erforderlich die Modelle zu verstehen und auch zu wissen, für welche Anwendung man welches Modell heranzieht. Im folgenden lernen wir die wesentlichen Modelle kennen: Das Halbleitermodell, das vereinfachte Ersatzschaltbild, das statische Kleinsignal Ersatzschaltbild sowie die Arbeit mit dem Kennlinienfeld.
+Ein wichtiges Grundkonzept bei der Arbeit mit Transistoren ist der Umgang mit Modellen. Je nach verwendetem Modell lassen sich bestimmte Vorgänge einfach erklären, andere wiederum nicht. Dazu ist es erforderlich die Modelle zu verstehen und auch zu wissen, für welche Anwendung man welches Modell heranzieht. Im Folgenden lernen wir die wesentlichen Modelle kennen: Das Halbleitermodell, das vereinfachte Ersatzschaltbild, das statische Kleinsignal Ersatzschaltbild sowie die Arbeit mit dem Kennlinienfeld.
 
 # Halbleitermodell
 Der Bipolartransistor besteht aus drei abwechselnden Schichten aus p- und n-dotierten Halbleiterschichten. Daher spricht man auch von NPN- und PNP-Transistoren. Die drei Bereiche werden *Kollektor* (C), *Basis* (B) und *Emitter* (E) genannt. Die Basis ist besonders dünn und liegt zwischen Emitter und Kollektor. Kollektor und Emitter sind unterschiedlich stark dotiert. Dieser asymmetrische Aufbau bewirkt ein unterschiedliches Verhalten im Normal- und Inversbetrieb.
 
-Die beiden pn-Übergänge lassen sich auch als Dioden darstellen, wobei sich aus diesem Dioden Modell nicht die Funktionsweise ableiten lässt. Im folgenden Bild sieht man die Schaltsymbole und den Aufbau symbolisiert durch zwei Dioden.
+Die beiden pn-Übergänge lassen sich auch als Dioden darstellen, wobei sich aus diesem Dioden Modell nicht die Funktionsweise ableiten lässt. Im Folgenden Bild sieht man die Schaltsymbole und den Aufbau symbolisiert durch zwei Dioden.
 
 .. figure:: transistor_diode_npn_pnp.svg
     :title: Schaltbilder
@@ -82,7 +82,7 @@ Eine Anwendung des vereinfachten Ersatzschaltbildes ist zum Beispiel der Betrieb
 
 Das statische Kleinsignalmodell beschreibt das Kleinsignalverhalten bei niedrigen Frequenzen und wird deshalb auch als Gleichstrom-Kleinsignalersatzschaltbild (oder kurz *GS-KSESB*) bezeichnet.
 
-Die Ermittlung der Parameter erfolgt im Arbeitspunkt also unter definierten Randbedingungen. Der differentielle Widerstand der Basis-Emitter-Strecke \\(r_{BE}\\) entspricht der Tangente zur Diodenkennlinie für den Arbeitspunkt. Der differentielle Kollektor-Emitter-Widerstand \\(r_{CE}\\) entspricht der Steigung der Ausgangskennlinie bedingt durch den Early-Effekt. Der differentielle Stromverstärkungsfaktor β vervollständigt die Beschreibung des elektrischen Verhaltens. (Der Datenblattwert \\(h_{FE}\\) entspricht dabei β.)
+Die Ermittlung der Parameter erfolgt im Arbeitspunkt, also unter definierten Randbedingungen. Der differentielle Widerstand der Basis-Emitter-Strecke \\(r_{BE}\\) entspricht der Tangente zur Diodenkennlinie für den Arbeitspunkt. Der differentielle Kollektor-Emitter-Widerstand \\(r_{CE}\\) entspricht der Steigung der Ausgangskennlinie bedingt durch den Early-Effekt. Der differentielle Stromverstärkungsfaktor β vervollständigt die Beschreibung des elektrischen Verhaltens. (Der Datenblattwert \\(h_{FE}\\) entspricht dabei β.)
 
 Unmittelbar mit dem Kleinsignalmodell verwandt sind die Vierpolparameter des Transistors.
 Das Großsignalmodell umfasst den gesamten Spannungsbereich, der für das betrachtete Bauteil zulässig ist. Das Kleinsignalmodell gilt nur in einem eng begrenzten Bereich um den Arbeitspunkt. Eine weitere Unterteilung erfolgt in statische und dynamische Modelle. Letztere sind komplexer, denn sie berücksichtigen die kapazitiven Eigenschaften der Sperrschichten und eignen sich daher für mittlere bis hohe Frequenzen.
@@ -105,7 +105,7 @@ Kennlinienfelder dienen der grafischen Darstellung zweier oder mehrerer voneinan
 
 Beim **Eingangskennlinienfeld** wird der Basisstrom \\(I_{B}\\) gegen die Basisspannung \\(U_{BE}\\) aufgetragen. Da es sich hierbei nur um den Basis-Emitter-pn-Übergang handelt, entspricht die Kennlinie der einer pn-Diode.
 
-Das **Ausgangkennlinienfeld** stellt die Abhängigkeit des Kollektorstroms \\(I_{C}\\) von der Kollektor-Emitterspannung \\(U_{CE}\\) bei ausgewählten Basissteuerströmen \\(I_{B}\\) dar.
+Das **Ausgangskennlinienfeld** stellt die Abhängigkeit des Kollektorstroms \\(I_{C}\\) von der Kollektor-Emitterspannung \\(U_{CE}\\) bei ausgewählten Basissteuerströmen \\(I_{B}\\) dar.
 
 Beim **Stromsteuerkennlinienfeld** (auch Übertragungskennlinienfeld) wird die Abhängigkeit des Kollektorstroms \\(I_{C}\\) vom ansteuernden Basisstrom \\(I_{B}\\) bei konstanter Kollektor-Emitterspannung \\(U_{CE}\\) dargestellt. In der Regel hat sie den Verlauf einer Geraden (annähernd linear) durch den Ursprung, wobei die Steigung dem Stromverstärkungsfaktor \\(\beta\\) entspricht.
 

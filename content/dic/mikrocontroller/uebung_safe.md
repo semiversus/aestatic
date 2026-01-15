@@ -22,7 +22,7 @@ um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.)
 * Zustand `CLOSED`:
     * Nach dem Reset befindet sich die Applikation im Zustand `CLOSED`
     * Das Display zeigt den Text "CLOSED" in der ersten Zeile, die zweite Zeile ist leer
-* Wird einer der Taster *S0* bis *S3* gedrückt wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein `*` in der zweiten Zeile angezeigt
+* Wird einer der Taster *S0* bis *S3* gedrückt, wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein `*` in der zweiten Zeile angezeigt
 * Nach dem vierten Tastendruck wird der eingegebene Code ausgewertet
 * Bei falscher Codeeingabe:
     * In der ersten Zeile wird "WRONG" und der zweiten Zeile "CODE" ausgegeben
@@ -30,7 +30,7 @@ um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.)
 * Bei richtiger Codeeingabe
     * In der ersten Zeile wird "OPENED" ausgegeben, die zweiten Zeile ist leer
     * Nach drei Sekunden wird in den Zustand `CLOSED` gewechselt
-    * Wird innerhalb der drei Sekunden ein Taster gedrückt wird dies als erste Ziffer für den neuen Code verwendet und ein neuer Code kann eingegeben werden
+    * Wird innerhalb der drei Sekunden ein Taster gedrückt, wird dies als erste Ziffer für den neuen Code verwendet und ein neuer Code kann eingegeben werden
 * Eingabe eines neuen Codes:
     * In der ersten Zeile steht "NEW CODE", die zweite Zeile zeigt den bisher eingegebenen Code (z.B. "41")
     * Sind alle vier Ziffern eingegeben wechselt die Applikation nach zwei Sekunden in den Zustand `CLOSED`
@@ -50,10 +50,10 @@ uint8_t code_stored[4]={1,2,3,4};
 uint8_t code_actual[4];
 ```
 
-Tippt der Anwender den Code ein wird jede Ziffer an der entsprechenden Stelle im Array gespeichert:
+Tippt der Anwender den Code ein, wird jede Ziffer an der entsprechenden Stelle im Array gespeichert:
 
 ```c
-code_actual[index]=key; // index gibt die aktuelle Codepostion an,
+code_actual[index]=key; // index gibt die aktuelle Codeposition an,
                         // key die zu speichernde Ziffer
 ```
 
@@ -71,8 +71,8 @@ else {
 ```
 
 .. warning:: Beim Array Vergleich muss jeder Wert einzeln geprüft werden
-    Es funktioniert **nicht** einen Vergleich von `code_actual==code_stored` zu machen. Da `code_actual` und
-    `code_stored` jeweils Arrays und damit Zeiger auf eine Speicherstelle sind werden auch nur diese Zeiger verglichen.
+    Es funktioniert **nicht**, einen Vergleich von `code_actual==code_stored` zu machen. Da `code_actual` und
+`code_stored` jeweils Arrays und damit Zeiger auf eine Speicherstelle sind, werden auch nur diese Zeiger verglichen.
     Und diese werden immer auf unterschiedliche Positionen im Speicher zeigen!
 
 ### Speicherung als Integer
@@ -84,9 +84,9 @@ uint16_t code_stored=1234;
 uint16_t code_actual;
 ```
 
-Die größte zu darzustellende Zahl ist 4444, welche mit einem 16 Bit Integer dargestellt werden kann (\\(2^{16}=65535\\)).
+Die größte darzustellende Zahl ist 4444, welche mit einem 16 Bit Integer dargestellt werden kann (\\(2^{16}=65535\\)).
 
-Tippt der Anwender eine neue Ziffer ein wird die aktuelle Zahl mit 10 multipliziert und die eingetippte Ziffer
+Tippt der Anwender eine neue Ziffer ein, wird die aktuelle Zahl mit 10 multipliziert und die eingetippte Ziffer
 hinzuaddiert. Durch die Multiplikation mit 10 wird der bisher eingegebene Code um eine Dezimalstelle nach links geschoben.
 
 ```c
@@ -106,14 +106,14 @@ else {
 ```
 
 ## Ausgaben am LC Display
-Eine LCD Ausgabe entweder je nach Zustand bei jedem `safe_process` gemacht werden oder bei einem Zustandswechsel.
+Eine LCD-Ausgabe kann entweder je nach Zustand bei jedem `safe_process` gemacht werden oder bei einem Zustandswechsel.
 
-Im folgenden Beispiel sieht man die Ausgabe des Zustands `WRONG_CODE`. Bei jedem `safe_process` wird über
+Im Folgenden Beispiel sieht man die Ausgabe des Zustands `WRONG_CODE`. Bei jedem `safe_process` wird über
 `hal_lcd_printf` die Ausgabe "WRONG CODE" gemacht. Das Leerzeichen hinter "WRONG" ist beabsichtigt, da zuvor in dieser
 Zeile "CLOSED" steht und dies um einen Buchstaben länger ist als "WRONG". Das Leerzeichen überschreibt somit den letzten
 Buchstaben von "CLOSED".
 
-Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display mittels `hal_lcd_clear` gelöscht.
+Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist, wird das Display mittels `hal_lcd_clear` gelöscht.
 
 ```c
 void safe_process(void) {
@@ -134,6 +134,6 @@ void safe_process(void) {
 ```
 
 # Musterlösung
-Ein Implementierung dieser Übung befindet sich hier zum Download:
+Eine Implementierung dieser Übung befindet sich hier zum Download:
 
 * [Musterlösung](embedded_uebung_safe_loesung.zip)

@@ -4,9 +4,9 @@ parent: ../../unterricht.md
 # Inhalt
 ## Linux Tutorial
 * [Installation von Virtualbox mit DICbian](dicbian.html)
-* [Unterlagen der Tuxcadamy](grd1-de-manual.pdf) (stehen unter der [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+* [Unterlagen der Tuxcademy](grd1-de-manual.pdf) (stehen unter der [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
   Lizenz).
-* Weitere Infos zur [Tuxcadamy](https://www.tuxcademy.org/)
+* Weitere Infos zur [Tuxcademy](https://www.tuxcademy.org/)
 * [Tutorial 1](tutorial1.html) - Übersicht über *Linux*
 * [Tutorial 2](tutorial2.html) - Einstieg in die *Shell*
 * [Tutorial 3](tutorial3.html) - Reguläre Ausdrücke
@@ -15,7 +15,7 @@ parent: ../../unterricht.md
 ## Anwendungen
 * [Raspberry Pi](raspberrypi.html)
 
-## Echtzeitbetriebsysteme
+## Echtzeitbetriebssysteme
 * [Übersicht](echtzeitbetriebssysteme.html)
 * [Scheduling](scheduling.html)
 * [Prozesssynchronisation](synchronisation.html)

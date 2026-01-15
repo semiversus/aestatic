@@ -4,7 +4,7 @@ parent: ../../unterricht.md
 
 # Inhalt
 ## Bipolarer Transistor
-* [Grundlagen des bipolaren Transistor](bipolarer_transistor.html)
+* [Grundlagen des bipolaren Transistors](bipolarer_transistor.html)
 * [Bipolarer Transistor als Schalter](bipolarer_transistor_schalter.html)
 
 ## Unipolarer Transistor

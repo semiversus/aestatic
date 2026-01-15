@@ -28,7 +28,7 @@ $ sudo make install
   ...
 ```
 
-The libary will be installed in `/usr/local/lib` (at least here on Fedora 39).
+The library will be installed in `/usr/local/lib` (at least here on Fedora 39).
 
 Now add the path to `/usr/local/lib` in two instances in the environment script for diamond (under `/usr/local/diamond/3.13/bin/lin64/diamond_env` for version 3.13):
 ``` bash

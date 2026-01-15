@@ -9,7 +9,7 @@ realisiert werden (siehe [sequentielle Logik](../grundlagen_der_digitaltechnik/s
 
 # Register mit Reset
 
-.. info:: Name für das Reset Signal
+.. info:: Name für das Resetsignal
 
     Wie beim Taktsignal steht es dem Entwickler frei, einen Namen für das Resetsignal zu wählen. In der Praxis wird
     meist `rst` oder `reset` verwendet. Je nach Anwendung kann es *high*- oder *low*-aktiv sein. Bei *low*-aktiven Resets
@@ -44,7 +44,7 @@ begin
 end architecture;
 ```
 
-Dem taktflanken getriggerten D FlipFlop wurde ein asynchroner Reset hinzugefügt. `rst` wurde der Sensitivitätsliste hinzugefügt, d.h. der `process` wird auch für Änderungen an `rst` getriggert. Innerhalb des `process` wird zuerst `rst` ausgewertet und erst dann auf eine steigende Taktflanke überprüft.
+Dem taktflankengesteuerten D-Flipflop wurde ein asynchroner Reset hinzugefügt. `rst` wurde der Sensitivitätsliste hinzugefügt, d.h. der `process` wird auch für Änderungen an `rst` getriggert. Innerhalb des `process` wird zuerst `rst` ausgewertet und erst dann auf eine steigende Taktflanke überprüft.
 
 ![D-Flipflop mit asynchronem Reset](dff_async.svg)
 
@@ -80,14 +80,14 @@ begin
 end architecture;
 ```
 
-Die Sensitivity List besteht nur mehr aus dem `clk` Signal. Bei einer steigenden Taktflanke wird ausgewertet, ob `rst` gleich `1` ist. Wenn dies der Fall ist, wird der interne Zustand `data_o` auf `0` gesetzt, ansonsten wird der Wert von `data_i` übernommen.
+Die Sensitivitätsliste besteht nur mehr aus dem `clk` Signal. Bei einer steigenden Taktflanke wird ausgewertet, ob `rst` gleich `1` ist. Wenn dies der Fall ist, wird der interne Zustand `data_o` auf `0` gesetzt, ansonsten wird der Wert von `data_i` übernommen.
 
 ![D-Flipflop mit synchronem Reset](dff_sync.svg)
 
 ## Mittels Initialisierung
 In FPGAs lässt sich der Zustand eines Flip-Flops nach einem Ein-Aus-Zyklus auch durch die Initialisierung des
 entsprechenden Signals realisieren. Das Register hält dann den entsprechenden Initialisierungswert, nachdem der FPGA
-sein Design geladen.
+sein Design geladen hat.
 
 ```vhdl
 architecture behave of dff is

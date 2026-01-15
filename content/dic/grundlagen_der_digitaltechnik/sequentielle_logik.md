@@ -29,7 +29,7 @@ Laut Definition ist ein *Latch* ein Speicherelement, welches abhängig vom Pegel
 
 ![Latch-Realisierung mittels NOR Gatter](rs_latch_nor.svg)
 
-Anhand der Schaltung und des Impulsdiagramm können wir die Funktionsweise des RS Latch nachvollziehen. Angenommen wird ein Anfangszustand von \\(Q\\) gleich 0 und \\(\overline{Q}\\) gleich 1.
+Anhand der Schaltung und des Impulsdiagramms können wir die Funktionsweise des RS Latch nachvollziehen. Angenommen wird ein Anfangszustand von \\(Q\\) gleich 0 und \\(\overline{Q}\\) gleich 1.
 Im Impulsdiagramm sieht man folgenden Signalverlauf:
 
 Phase|S|R|Bemerkung
@@ -52,7 +52,7 @@ Aufgrund des Verhaltens können wir folgende Punkte zusammen fassen:
 * Der Zustand `R` und `S` gleich 1 ist zu vermeiden. Während diesem Zustand ist das Latch zwar stabil, die Ausgänge sind aber nicht mehr invertiert zueinander, sondern beide auf 0.
 * Undefiniert wird das Verhalten, wenn beide Eingänge auf 1 sind und gleichzeitig auf 0 wechseln.
 
-Das hier gezeigt RS Latch ist mittels `NOR`-Gatter aufgebaut, deswegen spricht man auch vom RS-NOR-Latch. Im folgenden sieht man ein RS Latch, welches mittels `NAND`-Gatter aufgebaut ist. Man spricht dann vom RS-NAND-Latch.
+Das hier gezeigt RS Latch ist mittels `NOR`-Gatter aufgebaut, deswegen spricht man auch vom RS-NOR-Latch. Im Folgenden sieht man ein RS Latch, welches mittels `NAND`-Gatter aufgebaut ist. Man spricht dann vom RS-NAND-Latch.
 
 ![Latch-Realisierung mittels NAND Gatter](rs_latch_nand.svg)
 
@@ -79,7 +79,7 @@ Um dies zu erreichen werden zwei Latches miteinander kombiniert:
 
 ![Einflanken-getriggertes Flip-Flop](d_flipflop.svg)
 
-Ist der Eingang `C` gleich 1, so ist das Master Latch *transparent* und das Slave Latch im *Halte* Zustand. Ist der Eingang `C` gleich 0, hält das Master Latch seinen Zustand und das Slave Latch ist transparent. Wenn `C` also von 0 auf 1 wechselt, wird der Zustand am Eingang `D` gespeichert und am Ausgang ausgegeben. Man spricht in diesem Fall von einem Flip-Flop, das auf die positive Flanke des Signals `C` reagiert. Die Flankentriggerung wird im DIN Symbol mittels einem Dreieck am Eingang symbolisiert.
+Ist der Eingang `C` gleich 1, so ist das Master-Latch *transparent* und das Slave-Latch im *Haltezustand*. Ist der Eingang `C` gleich 0, hält das Master-Latch seinen Zustand und das Slave-Latch ist transparent. Wenn `C` also von 0 auf 1 wechselt, wird der Zustand am Eingang `D` gespeichert und am Ausgang ausgegeben. Man spricht in diesem Fall von einem Flip-Flop, das auf die positive Flanke des Signals `C` reagiert. Die Flankentriggerung wird im DIN Symbol mittels eines Dreiecks am Eingang symbolisiert.
 
 Als Beispiel für ein Datenblatt dient uns ein 74HC74. Dieser Baustein enthält zwei flankengetriggerte D-Flip-Flops mit asynchronem Reset und Set Eingang ([Datenblatt](https://assets.nexperia.com/documents/data-sheet/74HC_HCT74.pdf)).
 
@@ -106,6 +106,6 @@ Ein T Flip-Flop reagiert auf eine Taktflanke und hat einen Eingang. Der Eingang 
 ![T Flip-Flop](t_flipflop.svg)
 
 ## Asynchrone Eingänge
-Je nach Bauart können auch noch zusätzliche asynchrone Eingänge vorhanden sein. Diese `asynchronen` Eingänge verändern den Zustand unabhängig vom Taktsignal. So kann ein asynchroner Reset genutzt werden, das Flip-Flop unabhängig vom Takt in einen definierten Zustand zu bringen.
+Je nach Bauart können auch noch zusätzliche asynchrone Eingänge vorhanden sein. Diese `asynchronen` Eingänge verändern den Zustand unabhängig vom Taktsignal. So kann ein asynchroner Reset genutzt werden, um das Flip-Flop unabhängig vom Takt in einen definierten Zustand zu bringen.
 
 ![Asynchrone Eingänge](d_flipflop_async.svg)

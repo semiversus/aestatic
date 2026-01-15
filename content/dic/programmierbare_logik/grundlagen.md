@@ -13,12 +13,12 @@ den USA weite Verbreitung findet.
     mit einer *Programmiersprache* verwechselt!
 
 # Aufbau einer VHDL Datei
-Eine Komponente, die mittels VHDL beschrieben wird besteht aus den folgenden beiden Bestandteilen:
+Eine Komponente, die mittels VHDL beschrieben wird, besteht aus den folgenden beiden Bestandteilen:
 
 * `entity` - Definiert die Schnittstelle der Komponente
 * `architecture` - Beschreibt die Funktion der Komponente
 
-In einer VHDL Datei können mehrere Komponenten beschrieben werden, es ist allerdings üblich pro Komponente eine Datei zu
+In einer VHDL Datei können mehrere Komponenten beschrieben werden, es ist allerdings üblich, pro Komponente eine Datei zu
 nutzen.
 
 .. info:: Groß- und Kleinschreibung
@@ -26,9 +26,9 @@ nutzen.
     Bei VHDL spielt die Groß- und Kleinschreibung keine Rolle. Dies gilt für Schlüsselwörter wie `entity` (kann auch
     `Entity`, `ENTITY` oder auch `eNTity` heißen), sowie für Signalnamen.
 
-    In diesem Skriptum werden sämtliche Schlüsselwörter und Signale kleingeschreiben. Generics werden großgeschrieben.
+    In diesem Skriptum werden sämtliche Schlüsselwörter und Signale kleingeschrieben. Generics werden großgeschrieben.
 
-Am Begin einer Datei werden die benötigten Bibliotheken deklariert.
+Am Beginn einer Datei werden die benötigten Bibliotheken deklariert.
 
 Ein Beispiel:
 
@@ -55,6 +55,6 @@ begin
 end architecture;
 ```
 
-Diese VHDL Datei beschreibt ein D Flip-Flop, dessen Eingang `data_i` bei einer steigenden Flanke von `clk` gespeichert wird. Das Signal `data_o` gibt den aktuellen Zustand des Flip-Flops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
+Diese VHDL Datei beschreibt ein D Flip-Flop, dessen Eingang `data_i` bei einer steigenden Flanke von `clk` gespeichert wird. Das Signal `data_o` gibt den aktuellen Zustand des Flip-Flops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start* (nach dem Reset) ist nicht definiert.
 
 ![D-Flipflop](dff.svg)

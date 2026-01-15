@@ -8,13 +8,13 @@ Bei statischen Speichern wird keine zyklische Erneuerung der Information benöti
 
 # Festwertspeicher
 ## Masken ROM
-Bei einem Masken ROM (Read-Only-Memory) handelt es sich um einen Festwertspeicher, dessen Speicherinhalt durch den Fertigungsprozess über Masken fest angelegt wird. Diese Art von Speicher ist nur für sehr große Massenfertigung sinnvoll, da die Erstellung von individuellen Masken sehr teuer ist. Die Anwendung muss auch so ausgelegt sein, dass es keine Notwendigkeit von nachträglichen Updates gibt. Für den Großteil der heutigen Endkundenprodukte ist so etwas unvorstellbar geworden.
+Bei einem Masken-ROM (Read-Only-Memory) handelt es sich um einen Festwertspeicher, dessen Speicherinhalt durch den Fertigungsprozess über Masken fest angelegt wird. Diese Art von Speicher ist nur für sehr große Massenfertigung sinnvoll, da die Erstellung von individuellen Masken sehr teuer ist. Die Anwendung muss auch so ausgelegt sein, dass es keine Notwendigkeit von nachträglichen Updates gibt. Für den Großteil der heutigen Endkundenprodukte ist so etwas unvorstellbar geworden.
 
 ![ROM Speicherzelle](rom.png)
 
 Die Ansteuerung erfolgt durch die Wort- und Datenleitung. Eine Speicherzelle wird selektiert, indem die Wortleitung auf logisch 1 gesetzt wird. Wenn die Verbindung durch die Maske erzeugt wurde, wird über diese Verbindung die Datenleitung auch auf logisch 1 gezogen. Die Datenleitung bleibt auf logisch 0, wenn die Verbindung nicht vorhanden ist.
 
-Um ungewollte Rückwirkungen zu vermeiden werden Dioden benötigt, da meist mehrere Speicherzellen gleichzeitig angesprochen werden. Die Wortleitung selbst wird durch einen Adressdekoder gesteuert.
+Um ungewollte Rückwirkungen zu vermeiden, werden Dioden benötigt, da meist mehrere Speicherzellen gleichzeitig angesprochen werden. Die Wortleitung selbst wird durch einen Adressdekoder gesteuert.
 
 ![ROM Adressdekoder](rom_adressierung.png)
 
@@ -44,7 +44,7 @@ Beim schnellen Programmieren werden wesentlich kürzere Programmierzeiten verwen
 Der Transistor schaltet durch, wenn nun am Gate eine Spannung von etwa 5 Volt angelegt wird und das Floating Gate keine Ladungsträger enthält (wurde also nicht programmiert). Beim Durchschalten zieht der Transistor den Pegel der Datenleitung auf Massepotential. Wenn am Floating Gate Ladungsträger vorhanden sind, verschiebt sich die Schwellenspannung und die 5 Volt am Gate reichen nicht mehr aus, den Transistor durchzuschalten. Der Pegel der Datenleitung wird also nicht auf Masse gezogen und bleibt auf einem hohen Pegel.
 
 ### Löschen
-Um nun die Information zu Löschen bzw. den Speicherbaustein auf seinen Auslieferungszustand zurückzusetzen wird nun mittels UV Licht im Bereich von 250nm der Widerstand der Isolierschicht heruntergesetzt und damit können die Elektronen Richtung Substrat abfließen.
+Um nun die Information zu löschen bzw. den Speicherbaustein auf seinen Auslieferungszustand zurückzusetzen, wird nun mittels UV-Licht im Bereich von 250nm der Widerstand der Isolierschicht heruntergesetzt und damit können die Elektronen Richtung Substrat abfließen.
 
 Damit dies überhaupt möglich wird, ist ein Quarzglas im Chip notwendig. Nach dem Löschen wird dies meist mit einem nicht transparenten Aufkleber abgedeckt.
 
@@ -54,12 +54,12 @@ Damit dies überhaupt möglich wird, ist ein Quarzglas im Chip notwendig. Nach d
     :source: https://commons.wikimedia.org/wiki/File:16Mbit_EPROM_ST_Microelectronics_M27C160_(1).jpg
     :license: CC BY 2.0
 
-Der Löschvorgang dauert je nach Intensität zwischen 20 Minuten und mehreren Stunden. Da die Isolationsschicht sich bei jedem Löschvorgang verschlechtert geben die Hersteller meist eine Beschreibbarkeit (oder genauer Löschbarkeit) von einigen Hundert Zyklen an.
+Der Löschvorgang dauert je nach Intensität zwischen 20 Minuten und mehreren Stunden. Da die Isolationsschicht sich bei jedem Löschvorgang verschlechtert, geben die Hersteller meist eine Beschreibbarkeit (oder genauer Löschbarkeit) von einigen Hundert Zyklen an.
 
-Da die Isolationsschicht nicht ideal isoliert fließen über längere Zeit auch die Elektronen aus dem Floating Gate ab. Die Hersteller geben meist eine Zeit von ca. 10 Jahren an, in der ein EPROM seine Information behalten kann. Umwelteinflüsse (erhöhte Umgebungstemperatur, Röntgenstrahlung, ...) können diesen Vorgang beschleunigen.
+Da die Isolationsschicht nicht ideal isoliert, fließen über längere Zeit auch die Elektronen aus dem Floating Gate ab. Die Hersteller geben meist eine Zeit von ca. 10 Jahren an, in der ein EPROM seine Information behalten kann. Umwelteinflüsse (erhöhte Umgebungstemperatur, Röntgenstrahlung, ...) können diesen Vorgang beschleunigen.
 
 ## EEPROM
-Eine EEPROM (Electrically-Erasable PROM) Speicherzelle ist im Prinzip ähnlich wie ein EPROM aufgebaut. Die Isolationsschicht zwischen dem Floating Gate und Drain ist hier aber so dünn, dass es auch bei geringen Spannungen von ca. 12 Volt zu einem sogenannten Tunneleffekt kommt. Dieser quantenmechanische Effekt ermöglicht das Durchwandern von Elektronen durch die dünne Isolationsschicht in beide Richtungen. Es können also Elektronen auf das Floating Gate hinzugefügt oder abgetragen werden.
+Ein EEPROM (Electrically-Erasable PROM) Speicherzelle ist im Prinzip ähnlich wie ein EPROM aufgebaut. Die Isolierschicht zwischen dem Floating Gate und Drain ist hier aber so dünn, dass es auch bei geringen Spannungen von ca. 12 Volt zu einem sogenannten Tunneleffekt kommt. Dieser quantenmechanische Effekt ermöglicht das Durchwandern von Elektronen durch die dünne Isolierschicht in beide Richtungen. Es können also Elektronen auf das Floating Gate hinzugefügt oder abgetragen werden.
 
 Da der Transistor mit dem Floating Gate je nach gespeichertem Datum einen selbstsperrenden Zustand aufweisen kann, wird ein zweiter Transistor benötigt, um die Speicherzelle zu adressieren.
 
@@ -73,7 +73,7 @@ Die Spannung zum Schreiben und Löschen (ca. 12V) wird heute meist durch integri
 ### SLC vs. MLC
 In einer Single-Level-Cell wird nur zwischen vorhandener und nicht vorhandener Ladung (also logisch 0 oder 1) unterschieden. Wenn man nun mehrere Zwischenstufen nutzt, kommt man zur sogenannten Multi-Level-Cell. Wenn man zwischen 4 Ladungszuständen unterscheiden kann, können 2 Bit pro Speicherzelle gespeichert werden.
 
-MLC Flash Speicher erhöhen die Speicherdichte (mehr Bit auf gleiche Fläche), die Transferrate (mehr Bit pro Zugriff). allerdings auch den Leistungsbedarf.
+MLC-Flash-Speicher erhöhen die Speicherdichte (mehr Bit auf gleicher Fläche) und die Transferrate (mehr Bit pro Zugriff), allerdings auch den Leistungsbedarf.
 
 # Flüchtiger Speicher
 ## SRAM

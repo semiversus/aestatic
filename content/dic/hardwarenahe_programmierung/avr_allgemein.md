@@ -7,7 +7,7 @@ Datenblatt Atmel ATMega16 ([Download über Atmel.com](https://ww1.microchip.com/
 Sämtliche Seitenangaben beziehen sich auf dieses Datenblatt (Rev. 2466T–AVR–07/10).
 
 # Fuse und Lock Bits (*Seite 259-261*)
-Bei den Fuse Bits handelt es sich um Bits, die während einem Programmiervorgang verändert werden können. Mit den Fuse Bits wird z.B. die Wahl der Taktquelle (intern oder extern, ...) ausgewählt. Der Name *Fuse Bit* kann hier etwas verwirren, da sie nicht wie Sicherungen wirken, die nur einmal programmiert werden können.
+Bei den Fuse Bits handelt es sich um Bits, die während eines Programmiervorgangs verändert werden können. Mit den Fuse Bits wird z.B. die Wahl der Taktquelle (intern oder extern, ...) ausgewählt. Der Name *Fuse Bit* kann hier etwas verwirren, da sie nicht wie Sicherungen wirken, die nur einmal programmiert werden können.
 
 Bei den *Lock Bits* handelt es sich um einen Auslese Schutz. Wird ein Mikrocontroller in einem Produkt verwendet, kann es sinnvoll sein, den Programmspeicher-Inhalt vor einem Auslesen zu schützen. Es gibt drei verschiedene Modi dieses Schutzes:
 
@@ -18,19 +18,19 @@ Bei den *Lock Bits* handelt es sich um einen Auslese Schutz. Wird ein Mikrocontr
 Diese Lockbits können nur einmal gesetzt werden und dann nicht wieder zurückgesetzt werden.
 
 # Versorgung
-Die Versorgungspannung ist abhängig vom verwendeten Typ. Beim ATMega16 gibt es zwei verschiedene Ausführungen (siehe Seite 336):
+Die Versorgungsspannung ist abhängig vom verwendeten Typ. Beim ATMega16 gibt es zwei verschiedene Ausführungen (siehe Seite 336):
 
  | Takt | Versorgung
 -|-|-
 ATMega16 | bis 16Mhz | 4.5V bis 5.5V
 ATMega16L | bis 8Mhz | 2.7V bis 5.5V
 
-Die Stromaufnahme ist abhängig von der Betriebsspannung, der Betriebsart und der Taktfrequenz (siehe Seite 299-311). Generell kann gesagt werden, dass je kleiner die Betriebsspannung und die Taktfrequenz ist, desto kleiner ist der Stromverbrauch. Die verschiedenen Betriebsmodi helfen, den Stromverbrauch zu reduzieren, indem der Microcontroller seinen Betrieb einstellt und in verschiedene Stromsparmodis wechselt.
+Die Stromaufnahme ist abhängig von der Betriebsspannung, der Betriebsart und der Taktfrequenz (siehe Seite 299-311). Generell kann gesagt werden, dass je kleiner die Betriebsspannung und die Taktfrequenz ist, desto kleiner ist der Stromverbrauch. Die verschiedenen Betriebsmodi helfen, den Stromverbrauch zu reduzieren, indem der Microcontroller seinen Betrieb einstellt und in verschiedene Stromsparmodi wechselt.
 
 Bei der Versorgung wird zwischen der digitalen Versorgung für den eigentlichen Mikroprozessorkern und der analogen Versorgung für den ADC unterschieden.
 
 # Reset (*Seite 37-41*)
-Während dem Reset werden alle Register auf ihren Anfangszustand zurückgesetzt. Die Programmausführung startet beim Reset Vektor.
+Während des Resets werden alle Register auf ihren Anfangszustand zurückgesetzt. Die Programmausführung startet beim Reset Vektor.
 
 Es gibt verschiedene Möglichkeiten, einen Reset durchzuführen:
 
@@ -48,7 +48,7 @@ Komponenten die mit einem Takt versorgt werden sind dabei:
 * \\(clk_{CPU}\\): Dieser Takt steuert die Abläufe innerhalb des Prozessorkerns und dem SRAM Speicher.
 * \\(clk_{I/O}\\): Die meisten Peripheriebausteine innerhalb des ATMega16 werden mittels diesem Takt gesteuert. Dazu zählen etwa die USART und der Timer/Counter.
 * \\(clk_{ADC}\\): Der ADC hat eine eigene Taktversorgung. Dies erlaubt das Anhalten des Prozessor und I/O Taktes, um eine möglichst störungsfreie Analogumsetzung zu ermöglichen.
-* \\(clk_{ASY}\\): Dieser Takt kann von einem externen 32kHz Quarzoszillator erzeugt werden. Dadurch wird es möglich, eine Echtzeitmessung auch innerhalb eines Stromspar Modus durchzuführen.
+* \\(clk_{ASY}\\): Dieser Takt kann von einem externen 32kHz Quarzoszillator erzeugt werden. Dadurch wird es möglich, eine Echtzeitmessung auch innerhalb eines Stromsparmodus durchzuführen.
 
 Der Watchdog Timer wird von einem eigenen Oszillator betrieben. Die Frequenz ist abhängig von Temperatur und Versorgungsspannung (Seite 321).
 

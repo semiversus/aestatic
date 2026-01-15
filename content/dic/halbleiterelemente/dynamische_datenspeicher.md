@@ -29,6 +29,6 @@ Im Laufe der Zeit wurde diese 3T1C Zelle durch die 1T1C Zelle abgelöst, die wes
 
 Zum Schreiben wird die Datenleitung (Bit Line) auf den gewünschten Pegel gebracht und anschließend wird der Transistor durchgeschaltet. Dadurch wird die Kapazität entsprechend dem Pegel der Datenleitung geladen bzw. entladen.
 
-Um die Information auszulesen wird die Datenleitung auf die Hälfte der Versorgungsspannung vorgeladen. Anschließend wird die Speicherzelle über den durchgeschaltenen Transistor mit der Datenleitung verbunden. Die Ladungen verteilen sich auf der Datenleitungs- und Speicherzellenkapazität. Wenn die Kapazität der Speicherzelle keine Ladungen gespeichert hatte, wird die Spannung leicht sinken. War die Kapazität voll geladen, wird die Spannung leicht steigen.
+Um die Information auszulesen, wird die Datenleitung auf die Hälfte der Versorgungsspannung vorgeladen. Anschließend wird die Speicherzelle über den durchgeschalteten Transistor mit der Datenleitung verbunden. Die Ladungen verteilen sich auf der Datenleitungs- und Speicherzellenkapazität. Wenn die Kapazität der Speicherzelle keine Ladungen gespeichert hatte, wird die Spannung leicht sinken. War die Kapazität voll geladen, wird die Spannung leicht steigen.
 
-Da nach dem Durchschalten des Transistors die Information verloren geht, wird direkt nach dem Auslesen die Information neu in die Speicherzelle geschrieben.
+Da nach dem Durchschalten des Transistors die Information verloren geht, wird direkt nach dem Auslesen, die Information neu in die Speicherzelle geschrieben.

@@ -12,15 +12,15 @@ Beispiel `3.5` Format und der Binärzahl `01101011`:
 
 0 | 1 | 1**,** | 0 | 1 | 0 | 1 | 1
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-$$2^\{2\}\\) | \\(2^\{1\}\\) | \\(2^\{0\}\\) | \\(2^\{-1\}\\) | \\(2^\{-2\}\\) | \\(2^\{-3\}\\) | \\(2^\{-4\}\\) | \\(2^\{-5\}$$
+$$2^2$$ | $$2^1$$ | $$2^0$$ | $$2^{-1}$$ | $$2^{-2}$$ | $$2^{-3}$$ | $$2^{-4}$$ | $$2^{-5}$$
 4 | 2 | 1 | 0.5 | 0.25 | 0.125 | 0.0625 | 0.03125
 
 Die oben dargestellte Zahl hat den Wert (**0** * 4) + (**1** * 2) + (**1** * 1) + (**0** * 0.5) + (**1** * 0.25) + (**0** * 0.125) + (**1** * 0.0625) + (**1** * 0.03125) = **3.34375**
 
 Bei der Addition und Subtraktion können die Zahlen als reine Integer betrachtet werden. Bei Multiplikation und Division muss eine Anpassung der Kommastelle durchgeführt werden.
 
-## Gleitkomma Zahlen
-Bei der Gleitkommazahl (auch *Fließkommazahl* genannt) wird die Darstellung mittels *Mantisse*(`M`) und *Exponent*(`E`) genutzt. Das Vorzeichen wird durch die Variable `S` beschrieben. Bei `S`=0 ist die Zahl Positiv, bei `S`=1 negativ.
+## Gleitkommazahlen
+Bei der Gleitkommazahl (auch *Fließkommazahl* genannt) wird die Darstellung mittels *Mantisse*(`M`) und *Exponent*(`E`) genutzt. Das Vorzeichen wird durch die Variable `S` beschrieben. Bei `S`=0 ist die Zahl positiv, bei `S`=1 negativ.
 
 $$x=-1^{S} \cdot M \cdot B^{E}$$
 
@@ -41,12 +41,12 @@ Beispiel: `0 10000011 00100110011001100110011` (aus [Wikipedia](https://de.wikip
 
 Der Exponent als Dezimalzahl ist hier `10000011`->131. Der Exponent wird als Zahl +127 gespeichert, um negative Zahlen darstellen zu können (sogenanntes *Biasing*). Der Exponent ist also 131-127=4.
 
-Die Mantisse einer Gleitkommazahl wird immer Normalisiert gespeichert. Die Normalisierung schiebt das Komma in die Position, dass die Zahl einem `I.Q` Format von 1.23 entspricht und das MSB eine `1` ist. Da nun vor dem Komma immer eine `1` ist, muss diese nicht mehr gesondert abgespeichert werden. Um nun die Mantisse aus der Gleitkommadarstellung zu bekommen wird eine `1` vor das Komma gestellt. Die Mantisse ist also **1,**`00100110011001100110011`.
+Die Mantisse einer Gleitkommazahl wird immer normalisiert gespeichert. Die Normalisierung schiebt das Komma in die Position, dass die Zahl einem `I.Q` Format von 1.23 entspricht und das MSB eine `1` ist. Da nun vor dem Komma immer eine `1` ist, muss diese nicht mehr gesondert abgespeichert werden. Um nun die Mantisse aus der Gleitkommadarstellung zu bekommen wird eine `1` vor das Komma gestellt. Die Mantisse ist also **1,**`00100110011001100110011`.
 
 Da der Exponent 4 ist, müssen wir das Komma um 4 Stellen nach rechts verschieben:
 `10010,0110011001100110011`. Als Dezimalzahl hat die Zahl den Wert 18,39999961853.
 
-Das Vorzeichen ist Positiv, da das Vorzeichenbit `0` ist. Das Ergebnis ist also **+18,39999961853**.
+Das Vorzeichen ist positiv, da das Vorzeichenbit `0` ist. Das Ergebnis ist also **+18,39999961853**.
 
 ## Besondere Werte
-Der Wert `0` kann auf Grund der Normalisierung nicht gespeichert werden. Um eine `0` als Gleitkommazahl zu repräsentieren wird Exponent und Mantisse auf `0` gesetzt. Es gibt weiters besondere Darstellungen für positiv und negativ Unendlich sowie eine Darstellung für `NaN` (not a number bzw. keine Zahl).
+Der Wert `0` kann auf Grund der Normalisierung nicht gespeichert werden. Um eine `0` als Gleitkommazahl zu repräsentieren, werden Exponent und Mantisse auf `0` gesetzt. Es gibt weiters besondere Darstellungen für positiv und negativ Unendlich sowie eine Darstellung für `NaN` (not a number bzw. keine Zahl).
