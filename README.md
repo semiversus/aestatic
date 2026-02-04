@@ -2,7 +2,7 @@
 
 There are still too few static website building tools available. This is mine. I was previously working with
 [pelican](https://getpelican.com/) as a static website builder, but I ended up with a mess of plugins to achieve
-what I wanted. So how hard could it be to create your own static website builder? It's not that hard—about 500 lines of code.
+what I wanted. So how hard could it be to create your own static website builder? It's not that hard - about 500 lines of code.
 
 ## Features
 ### Markdown

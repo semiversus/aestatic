@@ -26,7 +26,7 @@ title: Unterricht
 
 # Korrekturen
 Mit der Zeit haben sich sicher einige Fehler eingeschlichen. Egal ob sachliche Ungenauigkeiten oder Tipp- und
-Rechtschreibfehler—ich bin für jeden Hinweis dankbar!
+Rechtschreibfehler - ich bin für jeden Hinweis dankbar!
 
 Bisher habe ich von folgenden Personen Korrekturhinweise bekommen:
 
