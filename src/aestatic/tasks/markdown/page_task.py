@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import mistune
 from mistune.directives import RSTDirective
 from jinja2 import Environment, FileSystemLoader
-import htmlmin
+import minify_html
 
 from aestatic.tasks.markdown.page_renderer import PageRenderer, Admonition, Figure
 
@@ -168,4 +168,4 @@ class PageTask(BaseTask):
                        root_path=os.path.relpath("output", output_path.parent),
                        env=processor.environment,
                    )
-            output_path.write_text(htmlmin.minify(html))
+            output_path.write_text(minify_html.minify(html, minify_js=True, minify_css=True))

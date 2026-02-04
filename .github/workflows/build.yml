@@ -6,11 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  PYTHON_VERSION: "3.10"
-  POETRY_VERSION: "1.4.2"
-  POETRY_URL: https://install.python-poetry.org
-
 permissions:
   contents: read
 
@@ -21,25 +16,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install Poetry
-        run: |
-          pipx install poetry
-      - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/checkout@v4
+      - name: Set up Python and uv
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: poetry
-          cache-dependency-path: poetry.lock
-      - name: Set Poetry environment
-        run: |
-          poetry env use 3.11
       - name: Install dependencies
-        run: |
-          poetry install
+        run: uv pip install -e .
       - name: Build website
-        run: |
-          poetry run aestatic
+        run: uv run aestatic
       - name: Deploy website
         uses: burnett01/rsync-deployments@5.2.1
         with:

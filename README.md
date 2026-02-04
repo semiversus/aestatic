@@ -83,12 +83,8 @@ $$y[n]=\sum\limits_{k=0}^\infty h[k] \cdot x[n-k]$$
 <img src='./documentation/latex.png' style="border: 2px solid  gray; border-radius:15px">
 
 ## How to build the website
-### Using `venv` and `pip`
-* (Optionally) create a virtual environment (eg. `python3 -m venv .venv; source .venv/bin/activate`)
-* install via `pip install .` (or `pip install -e .` if you want to work on the source code)
+### Using `uv`
+* Create a virtual environment using `uv venv`
+* Activate the virtual environment using `source .venv/bin/activate`
+* install via `uv pip install .` (or `uv pip install -e .` if you want to work on the source code)
 * run `aestatic` - result is in folder ./output
-
-### Using `poetry`
-* run `poetry shell` and then `poetry install`
-* run `aestatic` - result is in folder ./output
-* optionally install jupyter notebooks with tensorflow and others using `poetry install --with jupyter`
