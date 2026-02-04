@@ -13,7 +13,7 @@ dependencies = [
     "pygments>=2.14.0",
     "gitpython>=3.1.30",
     "beautifulsoup4>=4.11.2",
-    "qrcode>=7.4.2",
+    "qrcode[pil]>=7.4.2",
     "mistune>=3.0.1",
     "minify-html>=0.14.0",
 ]
