@@ -47,6 +47,8 @@ parent: uebersicht.md
     :source: http://www.inf.fu-berlin.de/lehre/SS09/KI/folien/vl4.pdf
     :license: Miao Wang (Freie Universität Berlin)
 
+Suche von Stuttgart nach Ulm
+
 # A* 2
 
 * [Beispiel 2 aus Test1](test1.pdf)
