@@ -1,3 +1,6 @@
+title: Fanuc Roboterarm
+parent: ../../unterricht.md
+
 # Inbetriebnahme FANUC Demo
 
 Checklist vor der Inbetriebnahme:
