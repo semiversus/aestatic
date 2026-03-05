@@ -84,7 +84,4 @@ $$y[n]=\sum\limits_{k=0}^\infty h[k] \cdot x[n-k]$$
 
 ## How to build the website
 ### Using `uv`
-* Create a virtual environment using `uv venv`
-* Activate the virtual environment using `source .venv/bin/activate`
-* install via `uv pip install .` (or `uv pip install -e .` if you want to work on the source code)
-* run `aestatic` - result is in folder ./output
+* run `uv run aestatic` - result is in folder ./output
