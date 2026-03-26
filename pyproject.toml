@@ -16,6 +16,9 @@ dependencies = [
     "qrcode[pil]>=7.4.2",
     "mistune>=3.0.1",
     "minify-html>=0.14.0",
+    "numpy>=2.2.6",
+    "matplotlib>=3.10.8",
+    "scikit-learn>=1.7.2",
 ]
 
 [project.scripts]

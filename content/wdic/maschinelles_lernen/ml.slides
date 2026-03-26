@@ -1,4 +1,5 @@
 title: Machine Learning
+latex: true
 
 ### Anwendungsgebiete
 
@@ -28,16 +29,44 @@ Tom Mitchell definiert 1998
 
 ---
 
+Übersicht
+
+![KI Übersicht](./ai_overview.png)
+
+---
+
 ### Supervised Learning
 
 * Datensatz mit bekannten Ergebnissen existiert
 * Regression/Klassifikation
 
-.. notes::
-    Beispiel für Regression: Position/Zeit s=s0 + v*t
-    Beispiel für Klassifikation: Google Ad für Computerspiel -> gekauft/nicht gekauft übers Alter, Zweidimensional mit Einkommen
-    Beispiel für Maximumssuche: https://www.geogebra.org/graphing/rtk3xmax
-    Beispiel für [lineare Regression](./lineare_regression.html)
+---
+
+#### Beispiel: Regression - Position/Zeit
+
+$$s = s_0 + v \cdot t$$
+
+Vorhersage der Position basierend auf Anfangsposition \\(s_0\\), Geschwindigkeit \\(v\\) und Zeit \\(t\\).
+
+---
+
+#### Beispiel: Klassifikation - E-Mail Spam Filter
+
+**Eingabe-Features:**
+* Anzahl bestimmter Wörter ("Gewinn", "kostenlos", "dringend")
+* Anzahl Großbuchstaben
+* Anzahl Ausrufezeichen
+* Absender-Domain bekannt/unbekannt
+
+**Ausgabe:** Spam (🚫) oder Kein Spam (✓)
+
+Das Modell lernt aus tausenden gelabelten E-Mails die Muster von Spam.
+
+---
+
+#### Beispiel: Lineare Regression
+
+Siehe Beispiel "Anscombe's Quartet" in Jupyter Notebook `lineare_regression.ipynb`
 
 ---
 
@@ -45,8 +74,13 @@ Tom Mitchell definiert 1998
 
 Daten haben beschreibende Eigenschaften und Labels sind bekannt.
 
-.. notes::
-    [Anscombe's Quartett](https://en.wikipedia.org/wiki/Anscombe%27s_quartet)
+**Regression:**
+* Vorhersage kontinuierlicher Werte
+* Beispiele: Hauspreise, Temperatur, Aktienkurse
+
+**Klassifikation:**
+* Zuordnung zu diskreten Kategorien
+* Beispiele: Spam-Erkennung, Bilderkennung, Sentiment-Analyse
 
 ---
 
