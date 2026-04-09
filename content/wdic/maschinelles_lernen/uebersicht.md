@@ -18,3 +18,15 @@ parent: ../../unterricht.md
 # Tests
 * [Test 1](test1.pdf)
 * [Test 2](test2.pdf)
+
+Teststoff:
+* Huffmankodierung
+* Breiten- und Tiefensuche
+* Branch&Bound
+* A* Suche
+* Dijkstra Algorithmus
+
+Kein Teststoff:
+* Hillclimb & Beam
+* Min-Max Algorithmus
+* Maschinelles Lernen
