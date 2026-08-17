@@ -13,6 +13,8 @@ parent: ../../unterricht.md
 * [Schrittmotortreiber](schrittmotor.html)
 * [Servotester](servotester.html)
 
+<!--- PWM Erzeugung, Verstärker, Wake-on-shake -->
+
 # Ablauf
 * Verwendung einer vorgegebenen Schaltung
 * Zeichnen der Schaltung in KiCAD
