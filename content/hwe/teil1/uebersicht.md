@@ -11,7 +11,7 @@ Folgende Komponenten werden für die Baisausführung benötigt:
 * Vollbrücke: Toshiba TB67H450AFNG
 * Programmierstecker: ISP 6pin
 
-.. figure:: bitstuffing.svg
+.. figure:: robot.jpg
     :title: Bild dient nur als Beispiel
     :author: STEMpedia
     :source: https://ai.thestempedia.com/docs/quarky/quarky-ultimate-kit-robot-configurations/quarky-2-wheel-drive-horizontal-robot/
