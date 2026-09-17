@@ -10,9 +10,9 @@ Als Mikrocontroller dient ein ATmega328. In der Basisausführung erhält der Rob
 Jedes Team wählt zusätzlich weitere Erweiterungen, um den Roboter zu erweitern (Batteriemanagement, Fernsteuerung, Display, Servos, Strom- und Spannungsmessung am Motor, Drehzahlerkennung, ...)
 
 Folgende Komponenten werden für die Baisausführung benötigt:
-* Mikrocontroller: Microchip ATMega328 (Gehäuse TQFP32)
-* Beschleunigungssensor: Bosch BMI323
-* Vollbrücke: Toshiba TB67H450AFNG
+* Mikrocontroller: [Microchip ATMega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) (Gehäuse TQFP32)
+* Beschleunigungssensor: [Bosch BMI323](https://www.bosch-sensortec.com/en/products/motion-sensors/imus/bmi323)
+* Vollbrücke: [Toshiba TB67H450AFNG](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/motor-driver-ics/brushed-dc-motor-driver-ics/detail.TB67H450AFNG.html)
 * Programmierstecker: ISP 6pin
 
 .. figure:: robot.jpg
