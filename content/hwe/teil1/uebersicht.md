@@ -3,7 +3,11 @@ parent: ../../unterricht.md
 
 # Projekt Roboter
 
-In diesem Projekt wird ein kleiner Roboter entwickelt, wobei zunächst Schaltplan und Layout erstellt und anschließend der Roboter aufgebaut wird. Der Roboter verfügt über zwei Motoren, die jeweils individuell mittels einer Vollbrücke (engl. *H-bridge*) angesteuert werden. Als Mikrocontroller dient ein ATmega328. In der Basisausführung erhält der Roboter weiters drei Taster und einen Beschleunigungssensor, um zu erkennen, ob er irgendwo angestoßen ist. Jedes Team wählt zusätzlich weitere Erweiterungen, um den Roboter zu erweitern (Batteriemanagement, Fernsteuerung, Display, Servos, Strom- und Spannungsmessung am Motor, Drehzahlerkennung, ...)
+In diesem Projekt wird ein kleiner Roboter entwickelt, wobei zunächst Schaltplan und Layout erstellt und anschließend der Roboter aufgebaut wird. Der Roboter verfügt über zwei Motoren, die jeweils individuell mittels einer Vollbrücke (engl. *H-bridge*) angesteuert werden.
+
+Als Mikrocontroller dient ein ATmega328. In der Basisausführung erhält der Roboter weiters drei Taster und einen Beschleunigungssensor, um zu erkennen, ob er irgendwo angestoßen ist.
+
+Jedes Team wählt zusätzlich weitere Erweiterungen, um den Roboter zu erweitern (Batteriemanagement, Fernsteuerung, Display, Servos, Strom- und Spannungsmessung am Motor, Drehzahlerkennung, ...)
 
 Folgende Komponenten werden für die Baisausführung benötigt:
 * Mikrocontroller: Microchip ATMega328 (Gehäuse TQFP32)
