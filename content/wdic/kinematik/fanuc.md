@@ -1,5 +1,5 @@
 title: Fanuc Roboterarm
-parent: ../../unterricht.md
+parent: uebersicht.md
 
 # Inbetriebnahme FANUC Demo
 
