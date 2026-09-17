@@ -1,4 +1,4 @@
-title: Hardwareentwicklung Teil 1
+title: Hardwareentwicklung Teil 1 & Teil 2
 parent: ../../unterricht.md
 
 # Projekt Roboter
@@ -14,6 +14,8 @@ Folgende Komponenten werden für die Baisausführung benötigt:
 * Beschleunigungssensor: [Bosch BMI323](https://www.bosch-sensortec.com/en/products/motion-sensors/imus/bmi323)
 * Vollbrücke: [Toshiba TB67H450AFNG](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/motor-driver-ics/brushed-dc-motor-driver-ics/detail.TB67H450AFNG.html)
 * Programmierstecker: ISP 6pin
+
+Teil 1 des Projekt konzentriert sich auf die Entwicklung der Hardware, Teil 2 auf die Implementierung der Firmware.
 
 .. figure:: robot.jpg
     :title: Bild dient nur als Beispiel
@@ -38,3 +40,25 @@ Durch die Messung von Strom und Spannung an den Motoren lassen sich Rückschlüs
 
 ## Drehzahlerkennung
 Mittels Drehzahlerkennung kann die Geschwindigkeit der Räder geregelt werden, anstatt die Motoren nur mit einer festen PWM vorzugeben. Als Sensor dient typischerweise ein Hallsensor oder ein optischer Encoder, der die Drehzahl erfasst und dem Mikrocontroller als Rückführgröße zur Verfügung stellt.
+
+# Termine Schuljahr 2026/2027
+* 17.9.
+* 24.9.
+* 1.10.
+* 8.10. **Check 1** (Überprüfung der Fortschritts)
+* 15.10.
+* 22.10. **Abgabe PCB Layout**
+* 29.10. *Herbstferien*
+* 5.11.
+* 12.11. **Check 2**
+* 19.11.
+* 26.11.
+* 3.12. **Abgabe Teil 1 (Hardware)**
+* 10.12.
+* 17.12.
+* 24.12. *Weihnachtsferien*
+* 31.12. *Weihnachtsferien*
+* 7.12. *Weihnachtsferien*
+* 14.1.
+* 21.1.
+* 28.1. **Abgabe Teil 2 (Software)**
