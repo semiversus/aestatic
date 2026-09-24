@@ -22,7 +22,10 @@ Teil 1 des Projekt konzentriert sich auf die Entwicklung der Hardware, Teil 2 au
     :title: Roboter Basis
     :author: Günther Jena
 
-Daten für den 3D Druck: [frame.FCStd](frame.FCStd) (FreeCAD Datei), [frame.step](frame.step) (STEP Datei), [frame.stl](frame.stl) (STL Mesh Datei)
+Daten für den 3D Druck
+* [frame.FCStd](frame.FCStd) (FreeCAD Datei)
+* [frame.step](frame.step) (STEP Datei)
+* [frame.stl](frame.stl) (STL Mesh Datei)
 
 # Weitere Ideen
 ## Batteriemanagement
