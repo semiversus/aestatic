@@ -1,6 +1,6 @@
 title: Suche (2)
 
-### Beispiele für Suchprobleme
+## Beispiele für Suchprobleme
 
 * Lösen des 15-Puzzle oder Zauberwürfels
 * Routenplanung
@@ -10,7 +10,7 @@ title: Suche (2)
 
 ---
 
-### Terminologie
+## Terminologie
 
 * *Agent*
 * *Zustand* (und *Initialer Zustand*)
@@ -23,25 +23,25 @@ title: Suche (2)
 
 ---
 
-### Agent
+## Agent
 
 Ein *Agent* kann seine Umgebung wahrnehmen und in irgendeiner Weise auf diese Umgebung einwirken.
 
 ---
 
-### Zustand
+## Zustand
 
 Ein *Zustand* ist eine Konfiguration der Umgebung und des Agenten.
 
 ---
 
-### Initialer Zustand
+## Initialer Zustand
 
 Der Zustand, mit dem ein Agent anfängt zu arbeiten.
 
 ---
 
-### Aktionen
+## Aktionen
 
 Alle Maßnahmen, die ein Agent nutzen kann, um von einem Zustand in einen anderen zu kommen.
 
@@ -51,7 +51,7 @@ Meist sind die möglichen Aktionen abhängig vom aktuellen Zustand.
 
 ---
 
-### Übergangsmodel
+## Übergangsmodel
 
 Liefert uns den nächsten Zustand, abhängig vom aktuellen Zustand und der gewählten Aktion.
 
@@ -59,13 +59,13 @@ Liefert uns den nächsten Zustand, abhängig vom aktuellen Zustand und der gewä
 
 ---
 
-### Zustandsraum
+## Zustandsraum
 
 Die Gesamtheit aller Zustände und der Übergänge dazwischen.
 
 ---
 
-### Zieltest
+## Zieltest
 
 Stellt fest, ob der aktuelle Zustand ein Zielzustand ist.
 
@@ -73,7 +73,7 @@ Stellt fest, ob der aktuelle Zustand ein Zielzustand ist.
 
 ---
 
-### Pfadkosten
+## Pfadkosten
 
 Maßeinheit für die Kosten, die bei einem Pfad über mehrere Zustände entstehen.
 
@@ -81,7 +81,7 @@ Maßeinheit für die Kosten, die bei einem Pfad über mehrere Zustände entstehe
 
 ---
 
-### Suchproblem
+## Suchproblem
 * Initialer Zustand
 * Aktionen
 * Übergangsmodel
@@ -90,19 +90,19 @@ Maßeinheit für die Kosten, die bei einem Pfad über mehrere Zustände entstehe
 
 ---
 
-### Lösung
+## Lösung
 
 Eine Abfolge von *Aktionen* die vom *initialen Zustand* zu einem *Zustand*, welcher den *Zieltest* besteht, führt.
 
 ---
 
-### Optimale Lösung
+## Optimale Lösung
 
 Die Lösung mit den niedrigsten *Pfadkosten*
 
 ---
 
-### Lösungsansatz
+## Lösungsansatz
 
 * Start mit einer offenen Liste, die anfangs nur den initialen Zustand beinhaltet
 * Wiederhole folgende Punkte

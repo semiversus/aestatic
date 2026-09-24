@@ -1,23 +1,23 @@
 title: WDIC
 author: Franz Lauritsch, Günther Jena
 
-### Zwei Themengebiete
+## Zwei Themengebiete
 * Embedded Systems
 * Robotik
 
 ---
 
-### Embedded Systems
+## Embedded Systems
 <blockquote>Embedded Systems sind spezialisierte Computersysteme, bestehend aus Hardware und Software, die in Geräten oder Anlagen integriert sind, um spezifische, aufgabenorientierte Funktionen effizient und zuverlässig auszuführen.</blockquote>
 
 ---
 
-### Robotik
+## Robotik
 <blockquote>Robotik ist ein interdisziplinäres Fachgebiet, das sich mit Konstruktion, Entwicklung, Steuerung und Anwendung von Robotern befasst, welche mechanische, elektronische und programmierbare Elemente kombinieren, um autonome Aktionen auszuführen und Aufgaben in einer Vielzahl von Anwendungen zu erledigen.</blockquote>
 
 ---
 
-### Beispiele
+## Beispiele
 
 .. figure:: miele_waschmaschine.webp
     :title: Waschmaschine
@@ -31,7 +31,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Beispiele
+## Beispiele
 
 .. figure:: nasa_ingenuity.png
     :title: Ingenuity
@@ -48,7 +48,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Beispiele
+## Beispiele
 
 .. figure:: carbon_robotics.png
     :title: Laser Weeder
@@ -60,7 +60,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Beispiele
+## Beispiele
 
 .. figure:: kopswerk.jpg
     :title: Kopswerk II
@@ -71,7 +71,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Inhalt 4. Klasse
+## Inhalt 4. Klasse
 
 * Vertiefung im Bereich der Digital- und Steuerungstechnik anhand von Robotern
 * Jeder baut sich seinen eigenen Roboter
@@ -79,7 +79,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### 1. Roboter
+## 1. Roboter
 
 <figure style="float: right; width: 40%"><img src="roboter1.png" alt="NIBObee"><figcaption>NIBObee (<a href="https://www.nicai-systems.com">Quelle</a>, Lizenz © Nicai Systems)</figcaption></figure>
 
@@ -91,7 +91,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### 2. Roboter
+## 2. Roboter
 
 <figure style="float: right; width:40%"><img src="roboter2.png" alt="Roboter"><figcaption>Roboter (HTL Rankweil)</figcaption></figure>
 
@@ -105,7 +105,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### 3. Roboter
+## 3. Roboter
 
 <figure style="float: right; width: 40%;"><img src="roboter3.png" alt="AlphaBot" style=""><figcaption>AlphaBot (<a href="https://www.waveshare.com/product/robotics/mobile-robots/raspberry-pi-robots/alphabot-pi3-b-plus.htm">Quelle</a>, Lizenz © Waveshare)</figcaption></figure>
 
@@ -118,7 +118,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Adapterplatinen
+## Adapterplatinen
 
 <figure style="float: right; width: 30%;"><img src="adapter.png" alt="Adapter"><figcaption>Adapter (Quelle: HTL Rankweil)</figcaption></figure>
 
@@ -130,7 +130,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Inhalt 4. Klasse
+## Inhalt 4. Klasse
 
 * Einführung in mobile Roboter
 * Modularisierung
@@ -144,7 +144,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Inhalt 4. Klasse
+## Inhalt 4. Klasse
 
 * Sensoren
   * Abstand
@@ -158,7 +158,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Inhalt 4. Klasse
+## Inhalt 4. Klasse
 
 * Algorithmen zur Steuerung von Robotern:
   * Chaosfahren, Geradefahren, Linienfolger, Wandfolger (Labyrinth)
@@ -170,7 +170,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Inhalt 5. Klasse
+## Inhalt 5. Klasse
 
 * Python (Fokus auf Embedded Systems)
 * Algorithmen zur Suche
@@ -179,7 +179,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Python
+## Python
 
 * Zählt zu den beliebtesten Programmiersprachen
 <br><small>Quellen [Github](https://pypl.github.io/PYPL.html), [TIOBE](https://www.tiobe.com/tiobe-index/)</small>
@@ -188,7 +188,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Algorithmen
+## Algorithmen
 <section>
     <ul>
         <li>Inverse Kinematik</li>
@@ -205,7 +205,7 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-### Internet of Things
+## Internet of Things
 
 * MQTT Protokoll
 * ESP32 & Raspberry Pi
@@ -213,4 +213,4 @@ author: Franz Lauritsch, Günther Jena
 
 ---
 
-## Zusammenfassung
+# Zusammenfassung

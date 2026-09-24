@@ -1,6 +1,6 @@
 title: Suche
 
-### Beispiel 1 - Der Paketdienst
+## Beispiel 1 - Der Paketdienst
 
 * Am Anfang der Fahrt erhält er 20 Pakete, die er während des Tages ausliefern muss
 * Fragestellung: Was ist die beste Route?
@@ -34,7 +34,7 @@ Wie lange dauert die Berechnung?
 
 ---
 
-### Beispiel 2 - Königsberger Brückenproblem
+## Beispiel 2 - Königsberger Brückenproblem
 
 .. figure:: bridges.png
     :title: Königsberg
@@ -61,7 +61,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Graphentheorie
+## Graphentheorie
 
 <small>Ein *Graph* ist eine abstrakte Struktur, die eine Menge von Objekten (genannt Knoten) zusammen mit den zwischen diesen Objekten bestehenden Verbindungen (genannt Kanten) repräsentiert.</small>
 
@@ -72,7 +72,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Eigenschaften von Graphen
+## Eigenschaften von Graphen
 
 <div><img src="graph1.svg" style="padding:3%; height: 17%; width: 17%;"><img src="graph2.svg" style="padding:3%; height: 17%; width: 17%;"><img src="graph3.svg" style="padding:3%; height: 17%; width: 17%;"></div>
 
@@ -82,7 +82,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Baum
+## Baum
 
 <img src="graph1.svg">
 
@@ -92,21 +92,21 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-## Uninformierte Suche
+# Uninformierte Suche
 
 ---
 
-### Breiten- und Tiefensuche
+## Breiten- und Tiefensuche
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7RCp2jNwxjQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
-## Informierte Suche
+# Informierte Suche
 
 ---
 
-### Branch-and-Bound
+## Branch-and-Bound
 
 <small>Unnötige Äste im Suchbaum werden nicht weiter untersucht (abgeschnitten)</small>
 
@@ -117,7 +117,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### A* Algorithmus
+## A* Algorithmus
 
 <small>Es wird eine Heuristik (Abschätzung) verwendet, um die Suche zu optimieren</small>
 
@@ -129,7 +129,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### A* Beispiel
+## A* Beispiel
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fI9PGLoRE2E" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -137,6 +137,6 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Huffman Kodierung
+## Huffman Kodierung
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6vgkip3z83s" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -1,7 +1,7 @@
 title: Machine Learning
 latex: true
 
-### Anwendungsgebiete
+## Anwendungsgebiete
 
 * EMail Spam Filter
 * Virtuelle Assistenten (Siri, Alexa, Google Assistant, ...)
@@ -35,14 +35,14 @@ Tom Mitchell definiert 1998
 
 ---
 
-### Supervised Learning
+## Supervised Learning
 
 * Datensatz mit bekannten Ergebnissen existiert
 * Regression/Klassifikation
 
 ---
 
-#### Beispiel: Regression - Position/Zeit
+### Beispiel: Regression - Position/Zeit
 
 $$s = s_0 + v \cdot t$$
 
@@ -50,7 +50,7 @@ Vorhersage der Position basierend auf Anfangsposition \\(s_0\\), Geschwindigkeit
 
 ---
 
-#### Beispiel: Klassifikation - E-Mail Spam Filter
+### Beispiel: Klassifikation - E-Mail Spam Filter
 
 **Eingabe-Features:**
 * Anzahl bestimmter Wörter ("Gewinn", "kostenlos", "dringend")
@@ -64,13 +64,13 @@ Das Modell lernt aus tausenden gelabelten E-Mails die Muster von Spam.
 
 ---
 
-#### Beispiel: Lineare Regression
+### Beispiel: Lineare Regression
 
 Siehe Beispiel "Anscombe's Quartet" in Jupyter Notebook `lineare_regression.ipynb`
 
 ---
 
-### Supervised Learning
+## Supervised Learning
 
 Daten haben beschreibende Eigenschaften und Labels sind bekannt.
 
@@ -84,26 +84,26 @@ Daten haben beschreibende Eigenschaften und Labels sind bekannt.
 
 ---
 
-### Unsupervised Learning
+## Unsupervised Learning
 
 * Datensatz hat beschreibende Eigenschaften, aber keine *Labels*
 * Aufgaben: Finde Gruppen, finde Anomalien
 
 ---
 
-### k-means Clustering
+## k-means Clustering
 
 [Visualisierung](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
 
 ---
 
-### DBSCAN
+## DBSCAN
 
 [Visualisierung](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/)
 
 ---
 
-### Neuronale Netze
+## Neuronale Netze
 
 .. notes::
     Einstiegsvideo https://youtu.be/9NeKnO4OPdE

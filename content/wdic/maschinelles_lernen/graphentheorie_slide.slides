@@ -1,6 +1,6 @@
 title: Graphentheorie
 
-### Beispiel 1 - Der Paketdienst
+## Beispiel 1 - Der Paketdienst
 
 * Am Anfang der Fahrt erhält er 20 Pakete, die er während des Tages ausliefern muss
 * Fragestellung: Was ist die beste Route?
@@ -34,7 +34,7 @@ Wie lange dauert die Berechnung?
 
 ---
 
-### Beispiel 2 - Königsberger Brückenproblem
+## Beispiel 2 - Königsberger Brückenproblem
 
 .. figure:: bridges.png
     :title: Königsberg
@@ -61,7 +61,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Graphentheorie
+## Graphentheorie
 
 <small>Ein *Graph* ist eine abstrakte Struktur, die eine Menge von Objekten (genannt Knoten) zusammen mit den zwischen diesen Objekten bestehenden Verbindungen (genannt Kanten) repräsentiert.</small>
 
@@ -72,7 +72,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Eigenschaften von Graphen
+## Eigenschaften von Graphen
 
 <div><img src="graph1.svg" style="padding:3%; height: 17%; width: 17%;"><img src="graph2.svg" style="padding:3%; height: 17%; width: 17%;"><img src="graph3.svg" style="padding:3%; height: 17%; width: 17%;"></div>
 
@@ -82,7 +82,7 @@ Leonhard Euler bewies 1736, dass ein solcher Weg nicht möglich ist.
 
 ---
 
-### Baum
+## Baum
 
 <img src="graph1.svg">
 
