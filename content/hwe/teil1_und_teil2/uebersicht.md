@@ -14,6 +14,7 @@ Folgende Komponenten werden für die Baisausführung benötigt:
 * Beschleunigungssensor: [Bosch BMI323](https://www.bosch-sensortec.com/en/products/motion-sensors/imus/bmi323)
 * Vollbrücke: [Toshiba TB67H450AFNG](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/motor-driver-ics/brushed-dc-motor-driver-ics/detail.TB67H450AFNG.html)
 * Programmierstecker: ISP 6pin
+* Linerarregler: [LM317](https://www.ti.com/lit/ds/symlink/lm317.pdf) (Gehäuse SOT-223)
 
 Teil 1 des Projekt konzentriert sich auf die Entwicklung der Hardware, Teil 2 auf die Implementierung der Firmware.
 
