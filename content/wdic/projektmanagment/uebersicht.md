@@ -3,7 +3,7 @@ parent: ../../unterricht.md
 
 # Inhalt
 * [Installation](installation.html)
-* [Einführung](einfuehrung_git.html)
+* [Einführung](einfuehrung_git.html) (Slides)
 
 # Übungen
 * [Übung 1](uebung1.html)
