@@ -1,0 +1,246 @@
+title: Einführung in Git
+author: Günther Jena
+latex: true
+
+### Einführung in Git — Versionsverwaltung für Entwickler
+
+Lerninhalte
+* Was Versionierungssysteme sind und welche **Aufgaben** sie erfüllen
+* Den Unterschied zwischen **zentralen** und **dezentralen** Systemen
+* Die **Geschichte und Funktionsweise** von Git
+* Ein **praktisches Beispiel** von lokal bis GitHub
+* Die wichtigsten **Git-Fachbegriffe**
+
+---
+
+### Problem ohne Versionierung
+
+Ohne Versionierungssysteme entsteht schnell Chaos
+
+.. figure:: phd_versioning.gif
+    :title: Typisches Szenario ohne Versionierung
+    :scale: 30%
+    :author: Jorge Cham
+    :source: https://phdcomics.com/comics/archive.php?comicid=101212
+    :license: Copyright Jorge Cham
+
+---
+
+### Warum Versionierungssysteme?
+
+* **Definition:** Ein Versionierungssystem ist ein System, das zur Erfassung von Änderungen an Dokumenten oder Dateien verwendet wird
+* **Analogie:** Erweitert die „Rückgängig“-Funktion auf ganze Projektverläufe
+* **Kollaboration:** Ermöglicht mehreren Personen die **gleichzeitige Arbeit** an einem Projekt
+
+---
+
+### Aufgaben von Versionierungssystemen
+
+Versionierungssysteme erfüllen folgende **Kernaufgaben**:
+
+* **Historienverfolgung:** Nachverfolgung von **wer, wann und welche** Änderungen vorgenommen hat
+* **Kollaboration:** Ermöglicht mehreren Personen die **gleichzeitige Arbeit** an einem Projekt
+* **Sicherheit:** **Wiederherstellung** von älteren Versionen (z.B. nach Fehlern oder Datenverlust)
+* **Experimentierfreudigkeit:** Änderungen können **getestet** werden, ohne das Original zu gefährden
+
+---
+
+### Zentrale vs. dezentrale Systeme
+
+Es lassen sich zwei Hauptparadigmen der Versionierung unterscheiden:
+
+* **Zentrale Systeme:** Hier dient ein Server als „single point of truth“ (z. B. SVN, CVS)
+* **Dezentrale Systeme:** Jeder Benutzer hat ein vollständiges Repository (z. B. Git, Mercurial)
+
+---
+
+### Aufbau zentraler Systeme
+
+Zentrale Versionierungssysteme basieren auf einem **Client-Server-Modell**:
+
+* **Architektur:** Ein zentraler Server speichert als „single point of truth“ die einzige Version des Projekts
+* **Workflow:** Clients checken Dateien **aus** (*checkout*) und **ein** (*commit*)
+* **Beispiel:** SVN (Apache Subversion)
+
+---
+
+### Aufbau dezentraler Systeme
+
+Dezentrale Versionierungssysteme basieren auf einem **Peer-to-Peer-Modell**:
+
+* **Architektur:** Jeder Benutzer hat ein **vollständiges Repository** inklusive der gesamten Projektgeschichte
+* **Workflow:** Änderungen werden lokal **commited** und mittels *push/pull* mit Remote-Repositories synchronisiert
+* **Beispiel:** Git, Mercurial
+
+---
+
+### Vor- und Nachteile im Vergleich
+
+| Kriterium          | Zentrale Systeme (z. B. SVN) | Dezentrale Systeme (z. B. Git) |
+|:-------------------|:-------------------------------|:----------------------------------|
+| **Verfügbarkeit**  | Server-Ausfall führt zu Stillstand | Arbeit auch offline möglich |
+| **Geschwindigkeit**| Langsam (Netzwerkabhängig)      | Schnell (lokale Operationen) |
+| **Backup**         | Single point of failure          | Jedes Repository ist ein Backup |
+| **Komplexität**    | Einfacher zu verstehen           | Höhere Lernkurve |
+| **Kollaboration**  | Einfacher für kleine Teams       | Besser für verteilte Teams |
+
+---
+
+### Die Geschichte von Git
+
+Git wurde 2005 von Linus Torvalds entwickelt, um die Versionierung des Linux-Kernels zu verbessern.
+
+* **Hintergrund:** Nach Problemen mit dem proprietären System BitKeeper entstand die Notwendigkeit einer eigenen Lösung
+* **Ziele:** Geschwindigkeit, Skalierbarkeit (für tausende Contributor:innen) und Dezentralität
+* **Heute:** Git ist der **Standard** für Open-Source- und kommerzielle Projekte
+
+---
+
+### Wie funktioniert Git? — Die drei Bereiche
+
+Git verwaltet Änderungen in drei Bereichen:
+
+* **Arbeitsverzeichnis** (*Working Directory*): Die Dateien im Projektordner, an denen gerade gearbeitet wird
+* **Staging Area** (*Index*): Vormerkung der Änderungen, die in den nächsten Commit übernommen werden sollen
+* **Repository** (`.git`-Verzeichnis): Die dauerhaft gespeicherte Versionsgeschichte
+
+```
+Arbeitsverzeichnis --git add--> Staging Area --git commit--> Repository
+```
+
+Eine Änderung durchläuft somit immer beide Schritte, bevor sie dauerhaft gespeichert ist.
+
+---
+
+### Der typische Git-Workflow
+
+Der Arbeitsablauf mit Git folgt einem wiederkehrenden Muster:
+
+1. **Dateien bearbeiten** im Arbeitsverzeichnis
+2. `git add` — Änderungen in die Staging Area übernehmen
+3. `git commit` — Änderungen dauerhaft im lokalen Repository speichern
+4. `git push` — lokale Commits zum Remote-Repository (z. B. GitHub) übertragen
+
+Schritte 1–3 werden lokal ausgeführt, eine Netzwerkverbindung ist dazu nicht erforderlich. Erst `git push` synchronisiert mit dem Remote-Repository.
+
+---
+
+### Praxis: Lokales Repository anlegen
+
+Zur Anlage eines lokalen Repositories wird ein Projektordner benötigt. Mittels `git init` wird dieser zu einem Git-Repository:
+
+1. Projektordner in VS Code öffnen
+2. Terminal öffnen und `git init` ausführen
+
+```console
+$> git init
+Initialized empty Git repository in /pfad/zum/projekt/.git/
+```
+
+Der Befehl erstellt das `.git`-Verzeichnis, in dem Git die gesamte Versionsgeschichte ablegt. Dieses Verzeichnis sollte nie manuell verändert werden.
+
+---
+
+### Praxis: Dateien ändern und Änderungen einsehen
+
+Nach dem Anlegen einer neuen Datei (z. B. `index.html`) zeigt `git status` den aktuellen Zustand des Repositories an:
+
+```console
+$> git status
+On branch main
+No commits yet
+Untracked files:
+        index.html
+nothing added to commit but untracked files present
+```
+
+* `git status` — zeigt geänderte und neue Dateien
+* `git diff` — zeigt die genauen Änderungen im Detail
+
+In VS Code werden Änderungen zusätzlich farblich im Explorer und in der Datei selbst markiert (grün: neue Zeilen, rot: entfernte Zeilen).
+
+---
+
+### Praxis: Änderungen stagen und committen
+
+Zum dauerhaften Speichern werden Änderungen zuerst **gestaged** und anschließend **committet**:
+
+```console
+$> git add index.html
+$> git commit -m "Erste Version von index.html"
+[main (root-commit) a1b2c3d] Erste Version von index.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+```
+
+* `git add <datei>` — übernimmt eine Datei in die Staging Area
+* `git add .` — übernimmt alle geänderten und neuen Dateien
+* `git commit -m "<nachricht>"` — speichert die gestagten Änderungen im Repository
+
+Die Commit-Nachricht sollte kurz und präzise beschreiben, welche Änderung vorgenommen wurde.
+
+---
+
+### Praxis: Remote-Repository auf GitHub anlegen
+
+Zur Synchronisation des lokalen Repositories wird ein Remote-Repository auf [GitHub](https://github.com) benötigt:
+
+1. Auf GitHub anmelden und **„New repository"** wählen
+2. Repository-Name vergeben (z. B. `mein-projekt`)
+3. Sichtbarkeit festlegen: **Public** (öffentlich) oder **Private** (privat)
+4. **Wichtig:** Kein README, keine `.gitignore` und keine Lizenz anlegen — das lokale Repository enthält bereits einen Commit
+
+Nach der Anlage zeigt GitHub die URL des Repositories an (z. B. `https://github.com/<benutzername>/mein-projekt.git`), die für die Verbindung benötigt wird.
+
+---
+
+### Praxis: Verbinden und pushen
+
+Zur Verbindung des lokalen Repositories mit GitHub wird die Repository-URL als Remote unter dem Namen `origin` registriert. Anschließend werden die lokalen Commits übertragen:
+
+```console
+$> git remote add origin https://github.com/<benutzername>/mein-projekt.git
+$> git push -u origin main
+Enumerating objects: 3, done.
+Writing objects: 100% (3/3), 240 bytes | 240.00 KiB/s, done.
+To github.com:<benutzername>/mein-projekt.git
+ * [new branch]      main -> main
+```
+
+* `git remote add origin <url>` — registriert das Remote-Repository
+* `git push -u origin main` — überträgt den lokalen Branch `main` und setzt den Upstream
+
+Nach dem Push sind die Dateien und die Versionsgeschichte auf GitHub sichtbar.
+
+---
+
+### Git-Fachbegriffe im Überblick
+
+| Begriff          | Bedeutung                                                     |
+|:-----------------|:--------------------------------------------------------------|
+| **Repository**   | Verzeichnis mit `.git`-Ordner, enthält das Projekt samt Versionsgeschichte (lokal oder remote) |
+| **Commit**       | Dauerhaft gespeicherter Zustand des Projekts zu einem bestimmten Zeitpunkt |
+| **Branch**       | Parallelversion der Projektgeschichte (z. B. `main`, `feature/login`) |
+| **Clone**        | vollständige Kopie eines Remote-Repositories auf den lokalen Rechner |
+| **Pull**         | Änderungen vom Remote-Repository in das lokale Repository übernehmen |
+| **Push**         | lokale Commits zum Remote-Repository übertragen |
+| **Merge**        | zwei Branches zusammenführen |
+| **Fork**         | Kopie eines fremden Repositories unter dem eigenen GitHub-Account |
+| **Pull Request** | Vorschlag, Änderungen aus einem Fork in das Original-Repository zu übernehmen |
+
+---
+
+### Zusammenfassung und Ausblick
+
+Im Rahmen dieser Einheit wurden folgende Inhalte behandelt:
+
+* **Aufgaben** von Versionierungssystemen: Historie, Kollaboration, Sicherheit
+* **Paradigmen:** zentrale vs. dezentrale Systeme
+* **Funktionsweise** von Git: drei Bereiche, typischer Workflow
+* **Praxis:** lokales Repository anlegen, committen und nach GitHub pushen
+
+Nächste Schritte:
+
+* **Branches** — Parallelversionen für Features und Experimente
+* **Pull Requests** — Kollaboration über Code-Reviews
+* [Git-Dokumentation](https://git-scm.com/doc) und [GitHub Guides](https://guides.github.com/) als Referenz
