@@ -32,7 +32,7 @@ Bemassung des PCBs
     :title: PCB Bemassung
 
 .. figure:: pcb_key.png
-    :title: PCB Key
+    :title: PCB Taster
 
 # Weitere Ideen
 ## Batteriemanagement
