@@ -15,6 +15,7 @@ Folgende Komponenten werden für die Baisausführung benötigt:
 * Vollbrücke: [Toshiba TB67H450AFNG](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/motor-driver-ics/brushed-dc-motor-driver-ics/detail.TB67H450AFNG.html)
 * Programmierstecker: ISP 6pin
 * Linerarregler für 3.3 Volt: [LM317](https://www.ti.com/lit/ds/symlink/lm317.pdf) (Gehäuse SOT-223)
+* Taster: [Omron B3F-3150](https://www.mouser.at/datasheet/3/39/1/en_b3f.pdf)
 
 Teil 1 des Projekt konzentriert sich auf die Entwicklung der Hardware, Teil 2 auf die Implementierung der Firmware.
 
