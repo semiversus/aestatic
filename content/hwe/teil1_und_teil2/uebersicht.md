@@ -28,6 +28,11 @@ Daten für den 3D Druck
 * [frame.step](frame.step) (STEP Datei)
 * [frame.stl](frame.stl) (STL Mesh Datei)
 
+Bemassung des PCBs
+.. figure:: bemassung.svg
+    :title: PCB Bemassung
+    :author: Günther Jena
+
 # Weitere Ideen
 ## Batteriemanagement
 Mittels eines Batteriemanagementsystems (engl. *Battery Management System* oder kurz *BMS*) lässt sich der Ladezustand des Akkus überwachen und ein Tiefentladen verhindern. Dazu werden die Einzelzellspannungen gemessen und der Stromfluss beim Laden kontrolliert, sprich der Akku wird vor Überladung und Tiefentladung geschützt.

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="569.3" height="456.62" version="1.1" viewBox="0 0 569.3 456.62" xmlns="http://www.w3.org/2000/svg">
+ <style>.outline { stroke: #000; stroke-width: 3; fill: none; stroke-linejoin: round; stroke-linecap: round; }
+    .centerline { stroke: #000; stroke-width: 1.2; stroke-dasharray: 16 4 4 4; fill: none; }
+    .dim-line { stroke: #000; stroke-width: 1; fill: none; }
+    .text { font-family: 'Arial', 'Helvetica', sans-serif; font-size: 22px; fill: #000; text-anchor: middle; }
+    .arrow { fill: #000; }</style>
+ <defs>
+  <marker id="arrow" markerHeight="8" markerUnits="userSpaceOnUse" markerWidth="8" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" refX="10" refY="5" viewBox="0 0 10 10">
+   <path class="arrow" d="m0 1 10 4-10 4z"/>
+  </marker>
+ </defs>
+ <line class="centerline" x1="200" x2="500.88" y1="98.616" y2="98.616" fill="none" stroke="#000" stroke-dasharray="13.3332, 3.33334, 3.33334, 3.33334"/>
+ <line class="centerline" x1="200" x2="500.88" y1="354.62" y2="354.62" fill="none" stroke="#000" stroke-dasharray="13.3332, 3.33334, 3.33334, 3.33334"/>
+ <text class="text" transform="rotate(-90)" x="-219.35812" y="105.457" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="22px" text-anchor="middle">30°</text>
+ <path class="outline" d="m200 66.616h310v320h-310a160 160 0 0 1 0-320z"/>
+ <path class="centerline" d="m200 354.62a128 128 0 0 1-110.85-64 128 128 0 0 1 0-128 128 128 0 0 1 110.85-64"/>
+ <line class="centerline" x2="530" y1="226.62" y2="226.62"/>
+ <line class="centerline" x1="200" x2="200" y1="46.616" y2="406.62"/>
+ <line class="centerline" x1="477.3" x2="477.3" y1="78.616" y2="376.51" stroke-dasharray="13.3333, 3.33333, 3.33333, 3.33333"/>
+ <line class="centerline" x1="200" x2="66.153" y1="226.62" y2="190.74"/>
+ <line class="centerline" x1="200" x2="66.153" y1="226.62" y2="262.5"/>
+ <circle class="outline" cx="200" cy="98.616" r="12"/>
+ <circle class="outline" transform="rotate(-15)" cx="23.703" cy="206.66" r="12"/>
+ <circle class="outline" transform="rotate(15)" cx="141.01" cy="231.13" r="12"/>
+ <circle class="outline" cx="200" cy="354.62" r="12"/>
+ <circle class="outline" cx="477.3" cy="98.616" r="12"/>
+ <circle class="outline" cx="477" cy="355.82" r="12"/>
+ <polyline class="dim-line" transform="translate(-100 -53.384)" points="300 152 340 90 470 90"/>
+ <text class="text" x="320" y="28.616371">6xØ3,2mm(M3)</text>
+ <g transform="rotate(-21.527 107.29 790.64)">
+  <line class="dim-line" x1="400" x2="286.8" y1="300" y2="413.1" marker-end="url(#arrow)"/>
+  <text class="text" transform="rotate(-45)" x="-3.5355339" y="484.36813">R32</text>
+ </g>
+ <line class="dim-line" x1="477.28" x2="477.28" y1="66.616" y2="16.616"/>
+ <line class="dim-line" x1="510" x2="510" y1="66.616" y2="16.616"/>
+ <line class="dim-line" x1="451.28" x2="477.28" y1="31.616" y2="31.616" marker-end="url(#arrow)"/>
+ <line class="dim-line" x1="536" x2="510" y1="31.616" y2="31.616" marker-end="url(#arrow)"/>
+ <line class="dim-line" x1="510" x2="550" y1="98.276" y2="98.276"/>
+ <line class="dim-line" x1="510" x2="550" y1="66.616" y2="66.616"/>
+ <line class="dim-line" x1="535" x2="535" y1="46.616" y2="66.616" marker-end="url(#arrow)"/>
+ <line class="dim-line" x1="535" x2="535" y1="118.28" y2="98.276" marker-end="url(#arrow)"/>
+ <text class="text" x="546.30994" y="85.886681" text-anchor="middle">3mm</text>
+ <text class="text" x="495.88617" y="15.361328" fill="#000000" font-family="Arial, Helvetica, sans-serif" font-size="22px" text-anchor="middle">3mm</text>
+ <line class="dim-line" x1="200" x2="200" y1="386.62" y2="456.62"/>
+ <line class="dim-line" x1="510" x2="510" y1="386.62" y2="456.62"/>
+ <line class="dim-line" x1="200" x2="510" y1="436.62" y2="436.62" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+ <text class="text" x="355" y="428.61636">61,00mm</text>
+ <path d="m112.57 250.04a90.51 90.51 0 0 1 0-46.851" fill="none" marker-end="url(#arrow)" marker-start="url(#arrow)" stroke="#000" stroke-linecap="round"/>
+</svg>
