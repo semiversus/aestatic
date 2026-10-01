@@ -33,6 +33,10 @@ Bemassung des PCBs
     :title: PCB Bemassung
     :author: Günther Jena
 
+.. figure:: pcb_key.png
+    :title: PCB Key
+    :author: Günther Jena
+
 # Weitere Ideen
 ## Batteriemanagement
 Mittels eines Batteriemanagementsystems (engl. *Battery Management System* oder kurz *BMS*) lässt sich der Ladezustand des Akkus überwachen und ein Tiefentladen verhindern. Dazu werden die Einzelzellspannungen gemessen und der Stromfluss beim Laden kontrolliert, sprich der Akku wird vor Überladung und Tiefentladung geschützt.
