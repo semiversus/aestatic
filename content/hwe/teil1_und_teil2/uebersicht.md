@@ -21,7 +21,6 @@ Teil 1 des Projekt konzentriert sich auf die Entwicklung der Hardware, Teil 2 au
 
 .. figure:: roboter.png
     :title: Roboter Basis
-    :author: Günther Jena
 
 Daten für den 3D Druck
 * [frame.FCStd](frame.FCStd) (FreeCAD Datei)
@@ -31,11 +30,9 @@ Daten für den 3D Druck
 Bemassung des PCBs
 .. figure:: bemassung.svg
     :title: PCB Bemassung
-    :author: Günther Jena
 
 .. figure:: pcb_key.png
     :title: PCB Key
-    :author: Günther Jena
 
 # Weitere Ideen
 ## Batteriemanagement
