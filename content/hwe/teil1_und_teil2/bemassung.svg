@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 569.30359 456.61636"
-   width="569.30359"
+   viewBox="0 0 571.08447 456.61636"
+   width="571.08447"
    height="456.61636"
    version="1.1"
    id="svg27"
@@ -20,15 +20,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.6499824"
-     inkscape:cx="192.12326"
-     inkscape:cy="264.24524"
+     inkscape:zoom="1.0469155"
+     inkscape:cx="200.58925"
+     inkscape:cy="344.82248"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg27" />
+     inkscape:current-layer="g28" />
   <style
      id="style1">
     .outline { stroke: #000; stroke-width: 3; fill: none; stroke-linejoin: round; stroke-linecap: round; }
@@ -58,139 +58,139 @@
   </defs>
   <!-- Background -->
   <line
-     x1="200"
+     x1="201.78091"
      y1="98.616371"
-     x2="500.87866"
+     x2="502.65958"
      y2="98.616371"
      class="centerline"
      id="line2-9-7"
      style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:13.3332, 3.33334, 3.33334, 3.33334;stroke-dashoffset:0" />
   <line
-     x1="200"
+     x1="201.78091"
      y1="354.61636"
-     x2="500.87866"
+     x2="502.65958"
      y2="354.61636"
      class="centerline"
      id="line2-9"
      style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:13.3332, 3.33334, 3.33334, 3.33334;stroke-dashoffset:0" />
   <text
      x="-219.35812"
-     y="105.457"
+     y="107.23791"
      class="text"
      id="text16-5"
      style="font-size:22px;font-family:Arial, Helvetica, sans-serif;text-anchor:middle;fill:#000000"
      transform="rotate(-90)">30°</text>
   <path
-     d="M 200,66.616371 H 510 V 386.61637 H 200 a 160,160 0 0 1 0,-319.999999 z"
+     d="m 201.78091,66.616371 h 310 V 386.61637 h -310 a 160,160 0 0 1 0,-319.999999 z"
      class="outline"
      id="path2" />
   <path
      class="centerline"
      id="circle2"
      sodipodi:type="arc"
-     sodipodi:cx="200"
+     sodipodi:cx="201.78091"
      sodipodi:cy="226.61636"
      sodipodi:rx="128"
      sodipodi:ry="128"
      sodipodi:start="1.5707963"
      sodipodi:end="4.712389"
      sodipodi:arc-type="arc"
-     d="m 200,354.61636 a 128,128 0 0 1 -110.851251,-64 128,128 0 0 1 0,-128 A 128,128 0 0 1 200,98.616364"
+     d="m 201.78091,354.61636 a 128,128 0 0 1 -110.851247,-64 128,128 0 0 1 0,-128 128,128 0 0 1 110.851247,-63.999996"
      sodipodi:open="true" />
   <line
-     x1="0"
+     x1="1.7809076"
      y1="226.61636"
-     x2="530"
+     x2="531.78088"
      y2="226.61636"
      class="centerline"
      id="line2" />
   <line
-     x1="200"
+     x1="201.78091"
      y1="46.616371"
-     x2="200"
+     x2="201.78091"
      y2="406.61636"
      class="centerline"
      id="line3" />
   <line
-     x1="170.09859"
+     x1="171.8795"
      y1="58.980083"
-     x2="68.51638"
+     x2="70.297287"
      y2="117.94357"
      class="centerline"
      id="line3-1"
      style="fill:none;stroke:#000000;stroke-width:1.2;stroke-dasharray:16, 3.99999, 3.99999, 3.99999" />
   <line
-     x1="39.876534"
+     x1="41.65744"
      y1="168.18617"
-     x2="40.149315"
+     x2="41.930222"
      y2="285.64066"
      class="centerline"
      id="line3-1-7"
      style="fill:none;stroke:#000000;stroke-width:1.2;stroke-dasharray:16, 3.99999, 3.99999, 3.99999" />
   <line
-     x1="71.088936"
+     x1="72.869843"
      y1="337.07266"
-     x2="172.94391"
+     x2="174.72482"
      y2="395.56366"
      class="centerline"
      id="line3-1-9"
      style="fill:none;stroke:#000000;stroke-width:1.2;stroke-dasharray:16, 3.99999, 3.99999, 3.99999" />
   <line
-     x1="477.3017"
+     x1="479.08261"
      y1="78.616371"
-     x2="477.3017"
+     x2="479.08261"
      y2="376.50641"
      class="centerline"
      id="line5"
      style="stroke-width:1;stroke-dasharray:13.3333, 3.33333, 3.33333, 3.33333;stroke-dashoffset:0" />
   <line
-     x1="200"
+     x1="201.78091"
      y1="226.61636"
-     x2="66.15274"
+     x2="67.933647"
      y2="190.73599"
      class="centerline"
      id="line9" />
   <line
-     x1="200"
+     x1="201.78091"
      y1="226.61636"
-     x2="66.152771"
+     x2="67.933678"
      y2="262.49673"
      class="centerline"
      id="line10" />
   <circle
-     cx="200"
+     cx="201.78091"
      cy="98.616371"
      r="12"
      class="outline"
      id="circle11" />
   <circle
-     cx="23.702522"
-     cy="206.6584"
+     cx="25.422747"
+     cy="207.11934"
      class="outline"
      id="circle12"
      transform="rotate(-15)"
      r="12" />
   <circle
-     cx="141.00778"
-     cy="231.13078"
+     cx="142.72801"
+     cy="230.66985"
      r="12"
      class="outline"
      id="circle13"
      transform="rotate(15)" />
   <circle
-     cx="200"
+     cx="201.78091"
      cy="354.61636"
      r="12"
      class="outline"
      id="circle14" />
   <circle
-     cx="477.3017"
+     cx="479.08261"
      cy="98.616371"
      class="outline"
      id="circle15"
      r="12" />
   <circle
-     cx="477.00012"
+     cx="478.78104"
      cy="355.81638"
      r="12"
      class="outline"
@@ -199,15 +199,15 @@
      points="300,152 340,90 470,90"
      class="dim-line"
      id="polyline16"
-     transform="translate(-100,-53.383629)" />
+     transform="translate(-98.219092,-53.383629)" />
   <text
-     x="320"
+     x="321.78091"
      y="28.616371"
      class="text"
      id="text16">6xØ3,2mm(M3)</text>
   <g
      id="g27"
-     transform="rotate(-1.527467,-2445.2281,7782.2288)">
+     transform="rotate(-1.527467,-2444.3376,7715.4303)">
     <line
        x1="400"
        y1="300"
@@ -224,120 +224,120 @@
        id="text17">R32</text>
   </g>
   <line
-     x1="477.28357"
+     x1="479.06448"
      y1="66.616371"
-     x2="477.28357"
+     x2="479.06448"
      y2="16.616371"
      class="dim-line"
      id="line17" />
   <line
-     x1="510"
+     x1="511.78091"
      y1="66.616371"
-     x2="510"
+     x2="511.78091"
      y2="16.616371"
      class="dim-line"
      id="line18" />
   <line
-     x1="451.28357"
+     x1="453.06448"
      y1="31.616371"
-     x2="477.28357"
+     x2="479.06448"
      y2="31.616371"
      class="dim-line"
      marker-end="url(#arrow)"
      id="line19" />
   <line
-     x1="536"
+     x1="537.78088"
      y1="31.616371"
-     x2="510"
+     x2="511.78091"
      y2="31.616371"
      class="dim-line"
      marker-end="url(#arrow)"
      id="line20" />
   <line
-     x1="510"
+     x1="511.78091"
      y1="98.276253"
-     x2="550"
+     x2="551.78088"
      y2="98.276253"
      class="dim-line"
      id="line21" />
   <line
-     x1="510"
+     x1="511.78091"
      y1="66.616371"
-     x2="550"
+     x2="551.78088"
      y2="66.616371"
      class="dim-line"
      id="line22" />
   <line
-     x1="535"
+     x1="536.78088"
      y1="46.616371"
-     x2="535"
+     x2="536.78088"
      y2="66.616371"
      class="dim-line"
      marker-end="url(#arrow)"
      id="line23" />
   <line
-     x1="535"
+     x1="536.78088"
      y1="118.27625"
-     x2="535"
+     x2="536.78088"
      y2="98.276253"
      class="dim-line"
      marker-end="url(#arrow)"
      id="line24" />
   <text
-     x="546.30994"
+     x="548.09082"
      y="85.886681"
      class="text"
      text-anchor="middle"
      id="text24">3mm</text>
   <text
-     x="495.88617"
+     x="497.66708"
      y="15.361328"
      class="text"
      text-anchor="middle"
      id="text24-7"
      style="font-size:22px;font-family:Arial, Helvetica, sans-serif;text-anchor:middle;fill:#000000">3mm</text>
   <line
-     x1="200"
+     x1="201.78091"
      y1="386.61636"
-     x2="200"
+     x2="201.78091"
      y2="456.61636"
      class="dim-line"
      id="line25" />
   <line
-     x1="510"
+     x1="511.78091"
      y1="386.61636"
-     x2="510"
+     x2="511.78091"
      y2="456.61636"
      class="dim-line"
      id="line26" />
   <line
-     x1="200"
+     x1="201.78091"
      y1="436.61636"
-     x2="510"
+     x2="511.78091"
      y2="436.61636"
      class="dim-line"
      marker-start="url(#arrow)"
      marker-end="url(#arrow)"
      id="line27" />
   <text
-     x="355"
+     x="356.78091"
      y="428.61636"
      class="text"
      id="text27">61,00mm</text>
   <text
-     x="129.80179"
+     x="131.5827"
      y="398.28729"
      class="text"
      id="text27-2"
      style="font-size:22px;font-family:Arial, Helvetica, sans-serif;text-anchor:middle;fill:#000000">Key</text>
   <text
-     x="15.368995"
+     x="17.149902"
      y="217.32349"
      class="text"
      id="text27-2-5"
      style="font-size:22px;font-family:Arial, Helvetica, sans-serif;text-anchor:middle;fill:#000000">Key</text>
   <text
-     x="111.26217"
+     x="113.04308"
      y="73.164711"
      class="text"
      id="text27-2-5-2"
@@ -346,19 +346,19 @@
      style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#arrow);marker-end:url(#arrow)"
      id="path27"
      sodipodi:type="arc"
-     sodipodi:cx="200"
+     sodipodi:cx="201.78091"
      sodipodi:cy="226.61636"
      sodipodi:rx="90.509666"
      sodipodi:ry="90.509666"
      sodipodi:start="2.8797933"
      sodipodi:end="3.403392"
      sodipodi:arc-type="arc"
-     d="m 112.57437,250.04199 a 90.509666,90.509666 0 0 1 0,-46.85125"
+     d="m 114.35529,250.04199 a 90.509666,90.509666 0 0 1 0,-46.85125"
      sodipodi:open="true" />
   <line
-     x1="199.91006"
+     x1="201.69098"
      y1="226.58778"
-     x2="111.26217"
+     x2="113.04308"
      y2="73.164711"
      class="centerline"
      id="line10-3"
@@ -367,26 +367,26 @@
      style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#arrow);marker-end:url(#arrow)"
      id="path28"
      sodipodi:type="arc"
-     sodipodi:cx="200"
+     sodipodi:cx="201.78091"
      sodipodi:cy="226.61636"
      sodipodi:rx="90.509666"
      sodipodi:ry="90.509666"
      sodipodi:start="4.1887902"
      sodipodi:end="4.712389"
      sodipodi:arc-type="arc"
-     d="M 154.74517,148.23269 A 90.509666,90.509666 0 0 1 200,136.1067"
+     d="M 156.52608,148.23269 A 90.509666,90.509666 0 0 1 201.78091,136.1067"
      sodipodi:open="true" />
   <line
-     x1="199.54141"
+     x1="201.32233"
      y1="226.81584"
-     x2="106.16517"
+     x2="107.94608"
      y2="388.59021"
      class="centerline"
      id="line28"
      style="fill:none;stroke:#000000;stroke-width:1.2;stroke-dasharray:16, 4, 4, 4" />
   <g
      id="g28"
-     transform="rotate(75,196.32893,225.46082)">
+     transform="rotate(75,197.21938,226.62128)">
     <text
        x="-219.35812"
        y="105.457"
@@ -399,18 +399,18 @@
      style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#arrow);marker-end:url(#arrow)"
      id="path29"
      sodipodi:type="arc"
-     sodipodi:cx="200"
+     sodipodi:cx="201.78091"
      sodipodi:cy="226.61636"
      sodipodi:rx="90.509666"
      sodipodi:ry="90.509666"
      sodipodi:start="1.5707963"
      sodipodi:end="2.0943951"
      sodipodi:arc-type="arc"
-     d="m 200,317.12603 a 90.509666,90.509666 0 0 1 -45.25483,-12.126"
+     d="m 201.78091,317.12603 a 90.509666,90.509666 0 0 1 -45.25483,-12.126"
      sodipodi:open="true" />
   <g
      id="g29"
-     transform="rotate(105,95.042803,301.81213)">
+     transform="rotate(105,95.933257,302.4954)">
     <text
        x="-219.35812"
        y="105.457"
