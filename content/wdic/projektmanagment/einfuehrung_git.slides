@@ -82,7 +82,6 @@ Dezentrale Versionierungssysteme basieren auf einem **Peer-to-Peer-Modell**:
 | **Geschwindigkeit**| Langsam (Netzwerkabhängig)      | Schnell (lokale Operationen) |
 | **Backup**         | Single point of failure          | Jedes Repository ist ein Backup |
 | **Komplexität**    | Einfacher zu verstehen           | Höhere Lernkurve |
-| **Kollaboration**  | Einfacher für kleine Teams       | Besser für verteilte Teams |
 
 ---
 
@@ -91,7 +90,7 @@ Dezentrale Versionierungssysteme basieren auf einem **Peer-to-Peer-Modell**:
 Git wurde 2005 von Linus Torvalds entwickelt, um die Versionierung des Linux-Kernels zu verbessern.
 
 * **Hintergrund:** Nach Problemen mit dem proprietären System BitKeeper entstand die Notwendigkeit einer eigenen Lösung
-* **Ziele:** Geschwindigkeit, Skalierbarkeit (für tausende Contributor:innen) und Dezentralität
+* **Ziele:** Geschwindigkeit, Skalierbarkeit (für tausende Contributoren) und Dezentralität
 * **Heute:** Git ist der **Standard** für Open-Source- und kommerzielle Projekte
 
 ---
