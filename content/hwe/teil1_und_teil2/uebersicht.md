@@ -27,9 +27,9 @@ Daten für den 3D Druck
 * [frame.step](frame.step) (STEP Datei)
 * [frame.stl](frame.stl) (STL Mesh Datei)
 
-Bemassung des PCBs
+Bemaßung des PCBs
 .. figure:: bemassung.svg
-    :title: PCB Bemassung
+    :title: PCB Bemaßung
 
 .. figure:: pcb_key.png
     :title: PCB Taster
