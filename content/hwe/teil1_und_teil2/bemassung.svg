@@ -20,9 +20,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.3590377"
-     inkscape:cx="338.4748"
-     inkscape:cy="197.93418"
+     inkscape:zoom="3.8174605"
+     inkscape:cx="304.65279"
+     inkscape:cy="306.48647"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -84,7 +84,7 @@
      d="m 201.78091,66.616371 h 310 V 386.61637 h -310 a 160,160 0 0 1 0,-319.999999 z"
      class="outline"
      id="path2"
-     style="fill:#ee9292;fill-opacity:0.3193554" />
+     style="fill:#f7cccc;fill-opacity:1" />
   <path
      d="m 226.56163,122.38316 h 228.68828 v 208.4664 H 226.56163 a 118.03267,104.2332 0 0 1 0,-208.4664 z"
      class="outline"
@@ -425,4 +425,33 @@
        style="font-size:22px;font-family:Arial, Helvetica, sans-serif;text-anchor:middle;fill:#000000"
        transform="rotate(-90)">30°</text>
   </g>
+  <line
+     x1="258.40924"
+     y1="330.84955"
+     x2="288.40924"
+     y2="330.84955"
+     class="dim-line"
+     id="line1" />
+  <line
+     x1="273.40924"
+     y1="310.84955"
+     x2="273.40924"
+     y2="330.84955"
+     class="dim-line"
+     marker-end="url(#arrow)"
+     id="line4" />
+  <line
+     x1="272.62338"
+     y1="406.61636"
+     x2="272.62338"
+     y2="386.61636"
+     class="dim-line"
+     marker-end="url(#arrow)"
+     id="line6" />
+  <text
+     x="283.93332"
+     y="374.22681"
+     class="text"
+     text-anchor="middle"
+     id="text6">6mm</text>
 </svg>
