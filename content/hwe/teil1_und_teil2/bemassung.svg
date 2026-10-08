@@ -22,7 +22,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="3.8174605"
      inkscape:cx="304.65279"
-     inkscape:cy="306.48647"
+     inkscape:cy="354.948"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -449,9 +449,9 @@
      marker-end="url(#arrow)"
      id="line6" />
   <text
-     x="283.93332"
-     y="374.22681"
+     x="343.13498"
+     y="364.53448"
      class="text"
      text-anchor="middle"
-     id="text6">6mm</text>
+     id="text6">6mm (Keepout Zone)</text>
 </svg>
