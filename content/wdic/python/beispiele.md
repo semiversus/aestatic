@@ -38,7 +38,7 @@ Was fällt im Vergleich zu anderen Programmiersprachen auf?
 * Python nutzt dynamische Typisierung (d.h. beim Einführen von Variablen muss kein Datentyp angegeben werden)
 * Es werden keine Klammern für Blöcke benötigt. Sie werden durch Einrückungen definiert
 
-## Beispiel2
+## Beispiel 2
 
 Zum Ausprobieren gibt es das Beispiel auch hier: [Online Python Beispiel](https://www.onlinegdb.com/B19ue-gOH)
 
