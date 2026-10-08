@@ -100,4 +100,4 @@ Mittels Drehzahlerkennung kann die Geschwindigkeit der Räder geregelt werden, a
   * Die Programmierschnittstelle verwendet die SPI Pins. Wie können wir verhindern, dass andere SPI Komponenten (z.B. Beschleunigungssensor) nicht stören/gestört werden.
 * Oszillator
   * ATMega328P hat einen internen RC-Oszillator mit 8MHz und einer Genauigkeit von ±2%. Wie groß ist der Fehler an Sekunden pro Jahr?
-  * Der optionale Quatz-Oszillator hat ±50 ppm Genauigkeit. Was bedeutet dies für den Fehler pro Jahr?
+  * Der optionale Quartz-Oszillator hat ±50 ppm Genauigkeit. Was bedeutet dies für den Fehler pro Jahr?
