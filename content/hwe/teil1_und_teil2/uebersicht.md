@@ -15,8 +15,9 @@ Folgende Komponenten werden für die Baisausführung benötigt:
 * Vollbrücke: [Toshiba TB67H450AFNG](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/motor-driver-ics/brushed-dc-motor-driver-ics/detail.TB67H450AFNG.html)
 * Programmierstecker: ISP 6pin
 * Linerarregler für 3.3 Volt: [LM317](https://www.ti.com/lit/ds/symlink/lm317.pdf) (Gehäuse SOT-223)
-* Taster: [Omron B3F-3150](https://www.mouser.at/datasheet/3/39/1/en_b3f.pdf)
+* Taster: [Omron B3F-3150](https://www.mouser.at/datasheet/3/39/1/en_b3f.pdf), Footprint: `Button_Switch_THT:SW_SPST_Omron_B3F-315x_Angled`
 * Oszillator (optional): [Abracon ABLS-10.000MHZ-B2](https://www.mouser.at/datasheet/3/184/1/ABLS.pdf)
+* Display (optional): [OLED 128x64 Pixel](https://www.az-delivery.de/products/0-96zolldisplay)
 
 Teil 1 des Projekt konzentriert sich auf die Entwicklung der Hardware, Teil 2 auf die Implementierung der Firmware.
 
@@ -31,6 +32,9 @@ Daten für den 3D Druck
 Bemaßung des PCBs
 .. figure:: bemassung.svg
     :title: PCB Bemaßung
+
+.. warning:: Am Rand des PCB sind 6mm freizuhalten, da dieser Teil auf dem Rahmen des Roboters aufliegt!
+
 
 .. figure:: pcb_key.png
     :title: PCB Taster

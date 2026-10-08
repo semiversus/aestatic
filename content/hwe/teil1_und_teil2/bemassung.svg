@@ -20,15 +20,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.0469155"
-     inkscape:cx="200.58925"
-     inkscape:cy="344.82248"
+     inkscape:zoom="1.3590377"
+     inkscape:cx="338.4748"
+     inkscape:cy="197.93418"
      inkscape:window-width="1920"
-     inkscape:window-height="1011"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g28" />
+     inkscape:current-layer="svg27" />
   <style
      id="style1">
     .outline { stroke: #000; stroke-width: 3; fill: none; stroke-linejoin: round; stroke-linecap: round; }
@@ -83,7 +83,13 @@
   <path
      d="m 201.78091,66.616371 h 310 V 386.61637 h -310 a 160,160 0 0 1 0,-319.999999 z"
      class="outline"
-     id="path2" />
+     id="path2"
+     style="fill:#ee9292;fill-opacity:0.3193554" />
+  <path
+     d="m 226.56163,122.38316 h 228.68828 v 208.4664 H 226.56163 a 118.03267,104.2332 0 0 1 0,-208.4664 z"
+     class="outline"
+     id="path3"
+     style="fill:#ffffff;fill-opacity:1;stroke:none" />
   <path
      class="centerline"
      id="circle2"
