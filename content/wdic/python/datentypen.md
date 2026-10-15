@@ -27,11 +27,12 @@ next: kontrollstrukturen.md
 * Was liefert `[1, 2, 3] + [4, 5]`?
 * Wie erhält man das erste Element einer Liste?
 * Wie erhält man das letzte Element einer Liste?
-* Wie erhält man eine Liste mit jedem zweiten Element?
+* Wie erhält man eine Liste ab dem 3. Element?
 * Wie fügt man ein Element hinten an?
 * Wie fügt man ein Element vorne an?
 * Wie ändert man das 2. Element?
 * Was unterscheidet *Listen* von *Tuples*?
+* Wie löscht man das 2. Element der Liste?
 
 ## Zuordnungen (`dict`)
 

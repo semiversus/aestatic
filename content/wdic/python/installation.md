@@ -14,13 +14,13 @@ Für das Tutorial ist es egal, unter welcher Plattform gearbeitet wird (Windows/
 Hier geht's zum Download: [Visual Studio Code Download](https://code.visualstudio.com/download) . Wählt die für euch passende Plattform aus und führt die Installation durch.
 
 # Installation Python
-Wir benötigen eine Python Installation mit Version >= 3.8.
+Wir benötigen eine Python Installation mit Version >= 3.10.
 
-Es gibt viele Möglichkeiten Python zu installieren und manche Plattformen liefern Python direkt mit (MacOS/Linux). Sollte dies nicht der Fall sein oder nur eine alte Version vorhanden sein, gibt es eine Downloadmöglichkeit hier: [Python Download](https://www.python.org/downloads/)
+Es gibt viele Möglichkeiten Python zu installieren und manche Plattformen liefern Python direkt mit (MacOS/Linux).
 
-**Wichtig**: Unter Windows sollte der Pfad zu Python in der `PATH`-Umgebungsvariable enthalten sein. Dazu bei der Installation folgende Option setzen:
+Unter Windows erfolgt die Installation am einfachsten über den **Microsoft Store**. Dazu den Store öffnen, dort nach "Python" suchen und die gewünschte Version (z.B. *Python 3.12* von der Python Software Foundation) installieren. Die Installation läuft damit im Hintergrund, Updates werden ebenfalls über den Store abgewickelt.
 
-![Umgebungsvariable bei der Installation setzen](add_Python_to_Path.png)
+Der große Vorteil dieser Variante: Der Pfad zu Python wird automatisch in der `PATH`-Umgebungsvariable eingetragen (mittels sogenannter App-Ausführungsaliase), sprich `python` lässt sich direkt im Terminal bzw. in Visual Studio Code aufrufen.
 
 # Visual Studio Code Erweiterung für Python
 
@@ -33,5 +33,5 @@ Nach dem Start von Visual Studio Code gibt es auf der linken Seite eine Toolbar.
 1. Erstelle eine neue Datei (<kbd>Ctrl</kbd> + <kbd>n</kbd>)
 2. Schreibe folgendes in diese Datei: `print('Hello world!')`
 3. Speichere diese Datei (<kbd>Ctrl</kbd> + <kbd>s</kbd>) unter `test.py`
-4. Führe diese Datei aus mittels <kbd>Ctrl</kbd> + <kbd>F5</kbd>
+4. Führe diese Datei aus mittels <kbd>Ctrl</kbd> + <kbd>F5</kbd> (oder rechts oben auf den "Play" Button klicken)
 5. Unten sollte im Terminal (neben anderen Meldungen) `Hello world!` erscheinen
