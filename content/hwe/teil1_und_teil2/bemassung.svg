@@ -20,12 +20,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="3.8174605"
-     inkscape:cx="304.65279"
-     inkscape:cy="354.948"
+     inkscape:zoom="1.3224963"
+     inkscape:cx="-9.4518223"
+     inkscape:cy="304.72675"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
-     inkscape:window-x="0"
+     inkscape:window-height="1048"
+     inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg27" />
@@ -56,6 +56,16 @@
          id="path1" />
     </marker>
   </defs>
+  <path
+     d="m 201.78091,66.616371 h 310 V 386.61637 h -310 a 160,160 0 0 1 0,-319.999999 z"
+     class="outline"
+     id="path2"
+     style="fill:#f7cccc;fill-opacity:1" />
+  <path
+     d="m 226.56163,122.38316 h 228.68828 v 208.4664 H 226.56163 a 118.03267,104.2332 0 0 1 0,-208.4664 z"
+     class="outline"
+     id="path3"
+     style="fill:#ffffff;fill-opacity:1;stroke:none" />
   <!-- Background -->
   <line
      x1="201.78091"
@@ -74,22 +84,12 @@
      id="line2-9"
      style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:13.3332, 3.33334, 3.33334, 3.33334;stroke-dashoffset:0" />
   <text
-     x="-219.35812"
-     y="107.23791"
+     x="-222.12917"
+     y="106.17597"
      class="text"
      id="text16-5"
      style="font-size:22px;font-family:Arial, Helvetica, sans-serif;text-anchor:middle;fill:#000000"
      transform="rotate(-90)">30°</text>
-  <path
-     d="m 201.78091,66.616371 h 310 V 386.61637 h -310 a 160,160 0 0 1 0,-319.999999 z"
-     class="outline"
-     id="path2"
-     style="fill:#f7cccc;fill-opacity:1" />
-  <path
-     d="m 226.56163,122.38316 h 228.68828 v 208.4664 H 226.56163 a 118.03267,104.2332 0 0 1 0,-208.4664 z"
-     class="outline"
-     id="path3"
-     style="fill:#ffffff;fill-opacity:1;stroke:none" />
   <path
      class="centerline"
      id="circle2"
@@ -450,7 +450,7 @@
      id="line6" />
   <text
      x="343.13498"
-     y="364.53448"
+     y="374.53448"
      class="text"
      text-anchor="middle"
      id="text6">6mm (Keepout Zone)</text>
