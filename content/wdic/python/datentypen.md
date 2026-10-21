@@ -1,6 +1,6 @@
 title: Datentypen
 parent: uebersicht.md
-next: kontrollstrukturen.md
+next: paketmanagement.md
 
 ## Zahlen
 
