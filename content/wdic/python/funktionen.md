@@ -1,5 +1,6 @@
 title: Funktionen in Python
 parent: uebersicht.md
+next: fehlerbehandlung.md
 
 # Grundlagen von Funktionen
 

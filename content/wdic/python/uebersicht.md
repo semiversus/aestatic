@@ -8,6 +8,7 @@ parent: ../../unterricht.md
 1. [Kontrollstrukturen](kontrollstrukturen.html)
 1. [Paketmanagement](paketmanagement.html)
 1. [Funktionen](funktionen.html)
+1. [Fehlerbehandlung](fehlerbehandlung.html)
 
 [Wenn was nicht funktioniert...](problem.html)
 
