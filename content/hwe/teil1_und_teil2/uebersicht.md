@@ -83,11 +83,16 @@ Mittels Drehzahlerkennung kann die Geschwindigkeit der Räder geregelt werden, a
 # Checkliste Schaltplan
 * Stützkondensatoren (100nF) für Mikrocontroller, Beschleuningungssensor und Vollbrücke
 * Pull-Up Widerstände für Reset und /CS des Beschleunigungssensors
-* SPI Verbindung für Beschleungungssensor: MISO -> SDO, MOSI -> SDx, SCK -> SCx, /CS -> CSB
+* Verbindung für Beschleungungssensor
+  * SPI: MISO -> SDO, MOSI -> SDx, SCK -> SCx, /CS -> CSB
+  * I²C: SDA -> SDx, SCL -> SCx
 * Taster auf Masse verbinden. In der Firmware wird dann der Pull-Up des Mikrocontrollers aktiviert.
 * PWM für die Vollbrücke: PB1 (OC1A) und PB2 (OC1B) sowie PD5 (OC0B) und PD6 (OC0A)
 * 4 Pin Header für I²C Display vorsehen (GND, VCC, SCL, SDA) vorsehen
 * 4 Pin Header für USART (GND, TXD, RXD, VCC) vorsehen
+* Testpunkte vorsehen
+* Breite der Leitungen je nach Strom dimensionieren (Faustregel 1mm/A). Versorgung der Vollbrücken und Leitungen zum Motor für ~1A auslegen.
+* Beschriftung für Stecker vorsehen (+/- bei Versorgung, ...)
 
 # Mündlicher Check 1
 Über ein gemeinsames Gespräch checken wir das allgemeine Verständnis des Projekts. Als Ankerpunkte gibt es Fragen zum Projekt.
