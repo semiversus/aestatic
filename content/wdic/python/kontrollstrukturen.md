@@ -130,5 +130,5 @@ else:
     print('Drake nicht gefunden')
 ```
 
-* Schreibe ein Programm, das alle Zahlen von 1 bis 100 ausgibt, die durch 3 und durch 5 teilbar sind
+* Schreibe ein Programm, das alle Zahlen von 1 bis 100 ausgibt, die durch 3 **oder** durch 5 teilbar sind
 * Schreibe eine Abfrage mittels `while`, die so lange eine Eingabe anfordert, bis diese eine Zahl zwischen 1 und 100 ist
