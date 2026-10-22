@@ -93,6 +93,7 @@ Mittels Drehzahlerkennung kann die Geschwindigkeit der Räder geregelt werden, a
 * Testpunkte vorsehen
 * Breite der Leitungen je nach Strom dimensionieren (Faustregel 1mm/A). Versorgung der Vollbrücken und Leitungen zum Motor für ~1A auslegen.
 * Beschriftung für Stecker vorsehen (+/- bei Versorgung, ...)
+* ERC und DRC Checks durchführen!
 
 # Mündlicher Check 1
 Über ein gemeinsames Gespräch checken wir das allgemeine Verständnis des Projekts. Als Ankerpunkte gibt es Fragen zum Projekt.
