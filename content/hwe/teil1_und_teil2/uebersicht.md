@@ -13,7 +13,7 @@ Folgende Komponenten werden für die Baisausführung benötigt:
 * Mikrocontroller: [Microchip ATMega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) (Gehäuse TQFP32)
 * Beschleunigungssensor: [Bosch BMI323](https://www.bosch-sensortec.com/en/products/motion-sensors/imus/bmi323)
 * Vollbrücke: [Toshiba TB67H450AFNG](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/motor-driver-ics/brushed-dc-motor-driver-ics/detail.TB67H450AFNG.html)
-* Programmierstecker: ISP 6pin
+* Programmierstecker: ISP 6pin (Schul Magazin 101531)
 * Linerarregler für 3.3 Volt: [LM317](https://www.ti.com/lit/ds/symlink/lm317.pdf) (Gehäuse SOT-223)
 * Taster: [Omron B3F-3150](https://www.mouser.at/datasheet/3/39/1/en_b3f.pdf), Footprint: `Button_Switch_THT:SW_SPST_Omron_B3F-315x_Angled`
 * Oszillator (optional): [Abracon ABLS-10.000MHZ-B2](https://www.mouser.at/datasheet/3/184/1/ABLS.pdf)

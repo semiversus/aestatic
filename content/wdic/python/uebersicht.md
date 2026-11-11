@@ -22,4 +22,5 @@ parent: ../../unterricht.md
 # Tests
 [Vorbereitung](vorbereitung.html)
 
-1. [Mustertest](python_test.zip) (pre ChatGPT)
+1. [Test](python_test.zip) (pre ChatGPT)
+1. [Test](test2.pdf)
