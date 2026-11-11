@@ -6,8 +6,10 @@ parent: ../../unterricht.md
 1. [Erste Beispiele](beispiele.html)
 1. [Datentypen](datentypen.html)
 1. [Kontrollstrukturen](kontrollstrukturen.html)
+1. [List Comprehension](listcomprehension.html)
 1. [Paketmanagement](paketmanagement.html)
 1. [Funktionen](funktionen.html)
+1. [Objektorientierte Programmierung](oop.html)
 1. [Fehlerbehandlung](fehlerbehandlung.html)
 
 [Wenn was nicht funktioniert...](problem.html)

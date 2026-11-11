@@ -1,6 +1,6 @@
 title: Kontrollstrukturen
 parent: uebersicht.md
-next: paketmanagement.md
+next: listcomprehension.md
 
 # Verzweigungen
 Bislang wurden Programme von oben nach unten abgearbeitet. Für alles Weitere sind Kontrollstrukturen (engl. *control structures*) erforderlich: Sie erlauben es, je nach Bedingung unterschiedliche Codepfade auszuführen bzw. Anweisungen zu wiederholen.
