@@ -229,7 +229,31 @@
       });
   }
 
+  // blocks copy/cut/paste when the selection or the event target is inside
+  // a snippet, so browser-provided clipboard actions (context menu, Ctrl+C/V)
+  // cannot be used on the editor content either
+  function selectionInSnippet() {
+    var sel = window.getSelection();
+    var node = sel && (sel.anchorNode || sel.focusNode);
+    if (node && node.nodeType === Node.TEXT_NODE) node = node.parentNode;
+    return !!(node && node.closest && node.closest(".python-snippet"));
+  }
+
+  function blockClipboardEvent(e) {
+    var target = e.target;
+    if (
+      selectionInSnippet() ||
+      (target && target.closest && target.closest(".python-snippet"))
+    ) {
+      e.preventDefault();
+    }
+  }
+
   function init() {
+    ["copy", "cut", "paste"].forEach(function (type) {
+      document.addEventListener(type, blockClipboardEvent);
+    });
+
     var snippets = document.querySelectorAll(".python-snippet");
 
     snippets.forEach(function (container) {
@@ -241,6 +265,11 @@
     if (snippets.length > 0) {
       loadCodeMirror()
         .then(function (CM) {
+          // no clipboard interaction (copy/cut/paste) inside the editor
+          function blockClipboard(event) {
+            event.preventDefault();
+            return true;
+          }
           document
             .querySelectorAll(".python-snippet textarea.python-code")
             .forEach(function (textarea) {
@@ -251,6 +280,11 @@
                   CM.basicSetup,
                   CM.python(),
                   CM.EditorView.lineWrapping,
+                  CM.EditorView.domEventHandlers({
+                    copy: blockClipboard,
+                    cut: blockClipboard,
+                    paste: blockClipboard,
+                  }),
                 ],
               });
               textarea.replaceWith(view.dom);
