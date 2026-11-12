@@ -169,17 +169,14 @@ class Python(DirectivePlugin):
             md.renderer.register("python", Python.render)
 
     def render(self, code):
-        lexer = get_lexer_by_name("python", stripall=True)
-        formatter = pygments_html.HtmlFormatter(nowrap=True)
-        highlighted = highlight(code, lexer, formatter)
-
         english = getattr(self, "english", False)
         run_label = "Run" if english else "Ausführen"
         loading = "Loading Python ..." if english else "Python wird geladen ..."
 
+        # the textarea is turned into a CodeMirror editor by theme/js/python.js
         return (
             f'<div class="python-snippet" data-loading="{loading}">'
-            f'<pre class="python-code"><code>{highlighted}</code></pre>'
+            f'<textarea class="python-code" spellcheck="false">{mistune.escape(code)}</textarea>'
             f'<button type="button" class="button is-small is-link python-run">{run_label}</button>'
             '<pre class="python-output" hidden></pre>'
             "</div>\n"

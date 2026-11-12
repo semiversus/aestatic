@@ -2,3 +2,5 @@ __pycache__/
 .venv
 output/
 *.egg-info
+build/codemirror/node_modules/
+build/pyodide/.cache/

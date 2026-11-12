@@ -1,12 +1,49 @@
 /* Runs the code of ".. python::" snippets in the browser using Pyodide.
-   Pyodide is loaded lazily from the CDN on the first click on a run button.
-   input() is served by an in-page input field (not a blocking window.prompt
-   dialog), so print output stays visible while waiting for input. */
+   The code is edited with a CodeMirror editor; Pyodide is loaded lazily from
+   the CDN on the first click on a run button. input() is served by an in-page
+   input field (not a blocking window.prompt dialog), so print output stays
+   visible while waiting for input. */
 (function () {
   "use strict";
 
-  var PYODIDE_BASE_URL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
+  // the CodeMirror 6 bundle and the Pyodide runtime are built by aestatic
+  // (BundleTask) and served next to this file
+  var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || "";
+  var CM_BUNDLE_URL = SCRIPT_SRC.replace(/python\.js$/, "codemirror.bundle.js");
+  var PYODIDE_LOCAL_URL = SCRIPT_SRC.replace(/\/js\/python\.js$/, "/pyodide/");
+  var PYODIDE_CDN_URL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
   var pyodidePromise = null;
+  var codeMirrorPromise = null;
+
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var script = document.createElement("script");
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = function () {
+        reject(new Error("Could not load " + src));
+      };
+      document.head.appendChild(script);
+    });
+  }
+
+  // loads the locally bundled CodeMirror 6 (window.AestaticCM)
+  function loadCodeMirror() {
+    if (!codeMirrorPromise) {
+      codeMirrorPromise = loadScript(CM_BUNDLE_URL)
+        .then(function () {
+          if (!window.AestaticCM) {
+            throw new Error("CodeMirror bundle did not expose window.AestaticCM");
+          }
+          return window.AestaticCM;
+        })
+        .catch(function (err) {
+          codeMirrorPromise = null;
+          throw err;
+        });
+    }
+    return codeMirrorPromise;
+  }
 
   // shows an inline input field inside the given snippet container and
   // resolves with the entered text (Enter) or null (Escape)
@@ -116,31 +153,46 @@
     "    return ast.unparse(tree)",
   ].join("\n");
 
+  function loadPyodideFrom(baseUrl) {
+    return new Promise(function (resolve, reject) {
+      var script = document.createElement("script");
+      script.src = baseUrl + "pyodide.js";
+      script.onload = function () {
+        // window.loadPyodide is defined by the script loaded above
+        window.loadPyodide({ indexURL: baseUrl }).then(resolve, reject);
+      };
+      script.onerror = function () {
+        reject(new Error("Could not load Pyodide from " + script.src));
+      };
+      document.head.appendChild(script);
+    });
+  }
+
   function getPyodide() {
     if (!pyodidePromise) {
-      pyodidePromise = new Promise(function (resolve, reject) {
-        var script = document.createElement("script");
-        script.src = PYODIDE_BASE_URL + "pyodide.js";
-        script.onload = function () {
-          // window.loadPyodide is defined by the CDN script loaded above
-          window.loadPyodide({ indexURL: PYODIDE_BASE_URL }).then(function (pyodide) {
-            pyodide.runPython(SETUP_CODE);
-            resolve(pyodide);
-          }, reject);
-        };
-        script.onerror = function () {
+      pyodidePromise = loadPyodideFrom(PYODIDE_LOCAL_URL)
+        .catch(function () {
+          // fall back to the CDN if the local runtime is missing
+          return loadPyodideFrom(PYODIDE_CDN_URL);
+        })
+        .then(function (pyodide) {
+          pyodide.runPython(SETUP_CODE);
+          return pyodide;
+        })
+        .catch(function (err) {
           pyodidePromise = null;
-          reject(new Error("Could not load Pyodide from " + script.src));
-        };
-        document.head.appendChild(script);
-      });
+          throw err;
+        });
     }
     return pyodidePromise;
   }
 
   function runSnippet(container) {
     var button = container.querySelector(".python-run");
-    var code = container.querySelector(".python-code code").textContent;
+    var editor = container._cmEditor;
+    var code = editor
+      ? editor.getValue()
+      : container.querySelector("textarea.python-code").value;
     var output = container.querySelector(".python-output");
 
     button.disabled = true;
@@ -178,13 +230,43 @@
   }
 
   function init() {
-    document
-      .querySelectorAll(".python-snippet .python-run")
-      .forEach(function (button) {
-        button.addEventListener("click", function () {
-          runSnippet(button.closest(".python-snippet"));
-        });
+    var snippets = document.querySelectorAll(".python-snippet");
+
+    snippets.forEach(function (container) {
+      container.querySelector(".python-run").addEventListener("click", function () {
+        runSnippet(container);
       });
+    });
+
+    if (snippets.length > 0) {
+      loadCodeMirror()
+        .then(function (CM) {
+          document
+            .querySelectorAll(".python-snippet textarea.python-code")
+            .forEach(function (textarea) {
+              var container = textarea.closest(".python-snippet");
+              var view = new CM.EditorView({
+                doc: textarea.value,
+                extensions: [
+                  CM.basicSetup,
+                  CM.python(),
+                  CM.EditorView.lineWrapping,
+                ],
+              });
+              textarea.replaceWith(view.dom);
+              container._cmView = view;
+              container._cmEditor = {
+                getValue: function () {
+                  return view.state.doc.toString();
+                },
+              };
+            });
+        })
+        .catch(function (err) {
+          // editor stays a plain textarea, snippets remain runnable
+          console.error(err);
+        });
+    }
   }
 
   if (document.readyState === "loading") {

@@ -1,0 +1,13 @@
+{
+  "name": "aestatic-codemirror-bundle",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CodeMirror 6 bundle built into the website by aestatic (BundleTask)",
+  "dependencies": {
+    "@codemirror/lang-python": "6.2.1",
+    "codemirror": "6.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

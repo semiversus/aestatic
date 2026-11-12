@@ -7,6 +7,7 @@ from abc import ABC, abstractmethod
 class BaseTask(ABC):
     filename_suffix = None
     folder_suffix = None
+    quiet = False  # tasks with quiet = True only produce output on errors
 
     def select_files(self, files: MutableSet[Path]) -> MutableSet[Path]:
         if self.filename_suffix is not None:
@@ -63,6 +64,7 @@ class Processor:
                     f'Exception while running task "{task}" for these files: {", ".join(str(f) for f in files)}'
                 ) from e
 
-            print(
-                f"{task.__class__.__name__}: {number_of_selected_files} files processed"
-            )
+            if not task.quiet:
+                print(
+                    f"{task.__class__.__name__}: {number_of_selected_files} files processed"
+                )

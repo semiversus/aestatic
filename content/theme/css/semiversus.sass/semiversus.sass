@@ -76,6 +76,26 @@ a:not(:hover) > svg.icon
     margin-bottom: 1em
     pre
         margin-bottom: 0
+    textarea.python-code
+        width: 100%
+        border: 1px solid $grey-lighter
+        background-color: #f5f5f5
+        color: #4a4a4a
+        font-family: $code-family
+        font-size: 0.875em
+        padding: 0.5em 1em
+        margin-bottom: 0
+    .cm-editor
+        border: 1px solid $grey-lighter
+        background-color: #f5f5f5
+        color: #4a4a4a
+        font-size: 0.875em
+        &.cm-focused
+            outline: none
+            border-color: $grey-lighter
+        .cm-scroller
+            font-family: $code-family
+            line-height: 1.45
     .python-run
         margin-top: 0.5em
     .python-input
@@ -86,6 +106,9 @@ a:not(:hover) > svg.icon
         .python-input-prompt
             font-family: $code-family
             white-space: pre-wrap
+        .input:focus
+            border-color: $grey-lighter
+            box-shadow: none
     .python-output
         margin-top: 0.5em
         border: 1px solid $grey-lighter

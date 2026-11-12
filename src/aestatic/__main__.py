@@ -2,7 +2,7 @@ import sys
 import git
 
 from .processor import Processor
-from .tasks import copy, compress, sass, markdown, source
+from .tasks import copy, compress, sass, markdown, source, code_mirror, pyodide
 
 
 processor = Processor()
@@ -12,6 +12,8 @@ processor.register(compress.CompressTask())
 processor.register(markdown.SlidesTask())
 processor.register(source.SourceTask())
 processor.register(copy.CopyTask())
+processor.register(code_mirror.CodeMirrorTask())
+processor.register(pyodide.PyodideTask())
 processor.register(markdown.PageTask())
 
 repo = git.Repo()
