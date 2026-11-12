@@ -7,14 +7,16 @@ from aestatic.processor import Processor, BaseTask
 BUILD_DIR = Path("build/pyodide")
 OUTPUT_DIR = Path("output/theme/pyodide")
 
-PYODIDE_VERSION = "0.26.4"
+PYODIDE_VERSION = "314.0.7"
 ARCHIVE_URL = (
     "https://github.com/pyodide/pyodide/releases/download/"
     f"{PYODIDE_VERSION}/pyodide-core-{PYODIDE_VERSION}.tar.bz2"
 )
+# since 314.x the wasm glue is an ES module (pyodide.asm.mjs); pyodide.js
+# loads it via a dynamic import() relative to indexURL
 KEEP_FILES = [
     "pyodide.js",
-    "pyodide.asm.js",
+    "pyodide.asm.mjs",
     "pyodide.asm.wasm",
     "python_stdlib.zip",
     "pyodide-lock.json",

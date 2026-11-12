@@ -11,7 +11,7 @@
   var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || "";
   var CM_BUNDLE_URL = SCRIPT_SRC.replace(/python\.js$/, "codemirror.bundle.js");
   var PYODIDE_LOCAL_URL = SCRIPT_SRC.replace(/\/js\/python\.js$/, "/pyodide/");
-  var PYODIDE_CDN_URL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
+  var PYODIDE_CDN_URL = "https://cdn.jsdelivr.net/pyodide/v314.0.7/full/";
   var pyodidePromise = null;
   var codeMirrorPromise = null;
 
