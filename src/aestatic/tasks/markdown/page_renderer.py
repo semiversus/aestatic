@@ -1,4 +1,5 @@
 from pathlib import Path
+import textwrap
 
 import mistune
 from mistune.directives import DirectivePlugin
@@ -140,3 +141,46 @@ class Figure(DirectivePlugin):
             h += ")"
 
         return h + "</div></div>"
+
+
+class Python(DirectivePlugin):
+    """Renders ".. python::" blocks as runnable code snippets. Like every other
+    directive, the code has to be indented below the directive line:
+
+        .. python::
+
+            print("Hello world!")
+    """
+
+    def parse(self, block, m, state):
+        self._renderer.python_used = True
+        code = textwrap.dedent(self.parse_content(m)).strip("\n")
+
+        return {
+            "type": "python",
+            "attrs": {"code": code},
+        }
+
+    def __call__(self, directive, md):
+        directive.register("python", self.parse)
+
+        self._renderer = md.renderer
+        if md.renderer.NAME == "html":
+            md.renderer.register("python", Python.render)
+
+    def render(self, code):
+        lexer = get_lexer_by_name("python", stripall=True)
+        formatter = pygments_html.HtmlFormatter(nowrap=True)
+        highlighted = highlight(code, lexer, formatter)
+
+        english = getattr(self, "english", False)
+        run_label = "Run" if english else "Ausführen"
+        loading = "Loading Python ..." if english else "Python wird geladen ..."
+
+        return (
+            f'<div class="python-snippet" data-loading="{loading}">'
+            f'<pre class="python-code"><code>{highlighted}</code></pre>'
+            f'<button type="button" class="button is-small is-link python-run">{run_label}</button>'
+            '<pre class="python-output" hidden></pre>'
+            "</div>\n"
+        )

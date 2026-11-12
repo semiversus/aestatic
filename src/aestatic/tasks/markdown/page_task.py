@@ -11,7 +11,7 @@ from mistune.directives import RSTDirective
 from jinja2 import Environment, FileSystemLoader
 import minify_html
 
-from aestatic.tasks.markdown.page_renderer import PageRenderer, Admonition, Figure
+from aestatic.tasks.markdown.page_renderer import PageRenderer, Admonition, Figure, Python
 
 
 def resolve(p: Path):
@@ -23,7 +23,7 @@ markdown_convert = mistune.create_markdown(
     escape=False,
     renderer=renderer,
     plugins=[
-        RSTDirective([Admonition(), Figure()]),
+        RSTDirective([Admonition(), Figure(), Python()]),
         "strikethrough",
         "footnotes",
         "table",
@@ -40,6 +40,7 @@ class Page:
     title: str
     english: bool = False
     latex: bool = False
+    python: bool = False
     comments: bool = True
     date: datetime = None
     thumbnail: Path = None
@@ -91,12 +92,15 @@ class Page:
         renderer.english = meta["english"]
         renderer.path = "output" / meta["path"].parent
         renderer.root_path = os.path.relpath("output", renderer.path)
+        renderer.python_used = False
         try:
             meta["content"] = markdown_convert(source_content)
         except Exception as e:
             raise ValueError(f"Problem parsing content from {path}") from e
 
         meta["latex"] = meta.get("latex", "").lower() == "true"
+        # the python runner script is included whenever the page contains a python snippet
+        meta["python"] = renderer.python_used
         meta["comments"] = meta.get("comments", "true").lower() == "true"
         meta["draft"] = meta.get("draft", "false").lower() == "true"
 

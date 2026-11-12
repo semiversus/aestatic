@@ -72,6 +72,19 @@ a:not(:hover) > svg.icon
     filter: contrast(0%)
     -webkit-filter: contrast(0%)
 
+.python-snippet
+    margin-bottom: 1em
+    pre
+        margin-bottom: 0
+    .python-run
+        margin-top: 0.5em
+    .python-output
+        margin-top: 0.5em
+        border: 1px solid $grey-lighter
+        &.is-error
+            color: $red
+            border-color: $red
+
 html, body
     min-height: 100vh
     display: flex
