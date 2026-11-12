@@ -28,8 +28,6 @@ Was fällt auf im Vergleich zu anderen Programmiersprachen?
 
     print(result_string)
 
-Beispiel als [Download](example1.py)
-
 Das Programm iteriert über eine Liste mit Wörtern und findet das Wort mit den meisten Selbstlauten.
 
 Was fällt im Vergleich zu anderen Programmiersprachen auf?
