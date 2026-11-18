@@ -174,7 +174,7 @@ Eine Klasse lässt sich von einer anderen Klasse ableiten (engl. *inheritance*, 
         def greet(self):  # overrides the base class method
             return f"Hallo, ich bin {self.name} aus der {self.grade}."
 
-    s = Student("Anna", 17, "4AHIF")
+    s = Student("Anna", 17, "5BHEL")
     print(s.greet())
     print(s.age)  # attribute of Person
 
