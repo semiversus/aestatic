@@ -4,14 +4,12 @@ parent: uebersicht.md
 # Exceptions
 Was passiert eigentlich, wenn etwas schiefgeht? Ein Beispiel:
 
-```python
-number = int("abc")
-```
+.. python::
+    number = int("abc")
 
 Die Ausführung bricht mit folgender Meldung ab:
 
 ```console
-$> python main.py
 Traceback (most recent call last):
   File "main.py", line 1, in <module>
     number = int("abc")
@@ -23,17 +21,16 @@ Python wirft in so einem Fall eine Exception (engl. *exception*, zu deutsch Ausn
 Exceptions sind aber nicht nur Fehlermeldungen: Sie lassen sich gezielt abfangen und behandeln, wodurch das Programm kontrolliert weiterlaufen kann.
 
 # try und except
-Zum Abfangen einer Exception dient `try`/`except`:
+Zum Abfangen einer Exception dient `try`/`except` - direkt zum Ausprobieren (gib z.B. `abc` ein, dann eine Zahl):
 
-```python
-user_input = input("Bitte eine Zahl: ")
+.. python::
+    user_input = input("Bitte eine Zahl: ")
 
-try:
-    number = int(user_input)
-    print("Die Zahl ist", number)
-except ValueError:
-    print("Das war keine Zahl!")
-```
+    try:
+        number = int(user_input)
+        print("Die Zahl ist", number)
+    except ValueError:
+        print("Das war keine Zahl!")
 
 Dabei gilt:
 
@@ -42,18 +39,21 @@ Dabei gilt:
 * Tritt keine Exception auf, so wird der `except`-Block übersprungen
 * Passt kein `except` zur aufgetretenen Exception, so bricht das Programm dennoch ab
 
-Genau damit lässt sich die Aufgabe aus [Kontrollstrukturen](kontrollstrukturen.html) sauber lösen - eine Abfrage, so lange wiederholt wird, bis eine gültige Zahl vorliegt:
+Genau damit lässt sich die Aufgabe aus [Kontrollstrukturen](kontrollstrukturen.html) sauber lösen - eine Abfrage, die so lange wiederholt wird, bis eine gültige Zahl vorliegt:
 
-```python
-while True:
-    user_input = input("Zahl zwischen 1 und 100: ")
+.. python::
+    while True:
+        user_input = input("Zahl zwischen 1 und 100: ")
 
-    try:
-        number = int(user_input)
-        break
-    except ValueError:
-        print("Ungültige Eingabe, nochmal versuchen")
-```
+        try:
+            number = int(user_input)
+            if 1 <= number <= 100:
+                break
+            print("Die Zahl liegt nicht zwischen 1 und 100")
+        except ValueError:
+            print("Ungültige Eingabe, nochmal versuchen")
+
+    print("Gültige Zahl:", number)
 
 # Passende Exceptions abfangen
 Der `except`-Block gibt an, welche Exception-Typen er behandelt. Dabei sollte möglichst spezifisch abgefangen werden:
@@ -80,16 +80,17 @@ Die Namen sind Programm: Sie sagen bereits, was schiefgelaufen ist, und erleicht
 # else und finally
 Analog zu Schleifen lässt sich auch bei der Fehlerbehandlung ein `else`-Anhang definieren, sowie ein `finally`-Block, der in jedem Fall ausgeführt wird:
 
-```python
-try:
-    number = int(user_input)
-except ValueError:
-    print("Keine Zahl!")
-else:
-    print("Erfolg, die Zahl ist", number)
-finally:
-    print("Wird in jedem Fall ausgeführt, z.B. zum Aufräumen")
-```
+.. python::
+    user_input = "42"
+
+    try:
+        number = int(user_input)
+    except ValueError:
+        print("Keine Zahl!")
+    else:
+        print("Erfolg, die Zahl ist", number)
+    finally:
+        print("Wird in jedem Fall ausgeführt, z.B. zum Aufräumen")
 
 * `else` läuft, wenn keine Exception aufgetreten ist
 * `finally` läuft immer - egal ob Erfolg, abgefangener oder unbehandelter Fehler. Typische Einsatzgebiete sind Aufräumarbeiten, etwa das Schließen einer Datei
@@ -97,27 +98,29 @@ finally:
 # Eigene Fehler mittels raise
 Mittels `raise` lässt sich selbst eine Exception auslösen - etwa wenn eine Funktion eine unzulässige Eingabe erhält:
 
-```python
-def set_age(age):
-    if age < 0:
-        raise ValueError("Alter darf nicht negativ sein: " + str(age))
-```
+.. python::
+    def set_age(age):
+        if age < 0:
+            raise ValueError("Alter darf nicht negativ sein: " + str(age))
+        return age
 
-Der Aufruf `set_age(-5)` bricht dann mit `ValueError: Alter darf nicht negativ sein: -5` ab, sprich der eigene Code verhält sich genau wie die eingebauten Funktionen auch.
+    print(set_age(17))
+    print(set_age(-5))
+
+Der Aufruf `set_age(-5)` bricht dann mit `ValueError: Alter darf nicht negativ sein: -5` ab, sprich der eigene Code verhält sich genau wie die eingebaute Funktionen auch.
 
 # Aufgaben
-* Was gibt das folgende Programm aus - und in welcher Reihenfolge?
+* Was gibt das folgende Programm aus - und in welcher Reihenfolge? Probiere es aus:
 
-```python
-try:
-    print("Start")
-    result = 10 / 0
-    print("Nach der Division")
-except ZeroDivisionError:
-    print("Division durch 0!")
-finally:
-    print("Aufräumen")
-```
+  .. python::
+      try:
+          print("Start")
+          result = 10 / 0
+          print("Nach der Division")
+      except ZeroDivisionError:
+          print("Division durch 0!")
+      finally:
+          print("Aufräumen")
 
 * Erweitere das Ratespiel aus [Erste Beispiele](beispiele.html) mittels `try`/`except`, sodass es bei einer Eingabe wie `"abc"` nicht mehr abstürzt, sondern erneut fragt
-* Schreibe eine Funktion `divide(a, b)`, die bei `b == 0` mittels `raise` eine `ZeroDivisionError` mit eigenem Text auslöst
+* Schreibe eine Funktion `divide(a, b)`, die bei `b == 0` mittels `raise` eine `ZeroDivisionError` mit eigenem Text auslöst. Teste mit `divide(10, 0)`

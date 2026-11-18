@@ -184,3 +184,99 @@ Dabei gilt:
 * `super().__init__(name, age)` ruft den Konstruktor der Basisklasse auf, sprich die Attribute `name` und `age` werden dort angelegt
 * Eine überschriebene Methode (hier `greet`) ersetzt das Verhalten der Basisklasse
 * Mittels `isinstance(s, Person)` lässt sich prüfen, ob ein Objekt von einer bestimmten Klasse (oder einer davon abgeleiteten) stammt: `isinstance(s, Person)` liefert `True`
+
+# Aufgabe: Playlist
+
+Starter-Code - führe ihn aus und erweitere ihn Schritt für Schritt:
+
+.. python::
+    class Song:
+        def __init__(self, title, artist, duration):
+            self.title = title
+            self.artist = artist
+            self.duration = duration  # Sekunden
+
+        def __str__(self):
+            minutes = self.duration // 60
+            seconds = self.duration % 60
+            return f"{self.title} von {self.artist} ({minutes}:{seconds:02d})"
+
+    song1 = Song("Rosa", "Herbert Grönemeyer", 233)
+    song2 = Song("Bohemian Rhapsody", "Queen", 354)
+
+    print(song1)
+    print(song2)
+
+**Schritt 1 - Song testen.** Führe den Starter-Code aus. Die Ausgabe sollte lauten:
+
+```
+Rosa von Herbert Grönemeyer (3:53)
+Bohemian Rhapsody von Queen (5:54)
+```
+
+**Schritt 2 - Klasse `Playlist`.** Ergänze unterhalb der Klasse `Song` eine Klasse `Playlist`. Der Konstruktor legt eine leere Liste `self._songs` an (konventionell "privat"). Ergänze weiters zwei Methoden:
+
+* `add_song(song)` - hängt einen Song an die Liste an
+* `total_duration()` - liefert die Summe aller Song-Dauern in Sekunden als `return`
+
+Teste mittels:
+
+```python
+pl = Playlist()
+pl.add_song(song1)
+pl.add_song(song2)
+print(pl.total_duration())
+```
+
+Erwartete Ausgabe: `587`
+
+**Schritt 3 - String-Darstellung der Playlist.** Ergänze der Klasse `Playlist` eine Methode `__str__`, die die Songs nummeriert ausgibt und am Ende die Gesamtzeit im Format `m:ss` anhängt:
+
+```
+1: Rosa von Herbert Grönemeyer (3:53)
+2: Bohemian Rhapsody von Queen (5:54)
+Gesamt: 9:47
+```
+
+Teste mittels `print(pl)`. Hinweis: Die Gesamtzeit lässt sich mittels `total_duration()` berechnen, das Format `9:47` erhält man analog zu Schritt 1 mittels `//`, `%` und `:02d`.
+
+**Schritt 4 - Song entfernen.** Ergänze eine Methode `remove_song(title)`, die den Song mit dem passenden Titel aus `self._songs` löscht und `True` zurückgibt. Existiert kein Song mit diesem Titel, so soll `False` zurückgegeben werden. Teste mittels:
+
+```python
+print(pl.remove_song("Rosa"))
+print(pl.remove_song("Unbekannt"))
+print(pl)
+```
+
+Erwartete Ausgabe:
+
+```
+True
+False
+1: Bohemian Rhapsody von Queen (5:54)
+Gesamt: 5:54
+```
+
+**Schritt 5 - Vererbung: `PremiumPlaylist`.** Leite eine Klasse `PremiumPlaylist` von `Playlist` ab. Der Konstruktor nimmt zusätzlich `owner` entgegen und ruft mittels `super().__init__()` den Konstruktor der Basisklasse auf. Überschreibe `__str__`, sodass am Anfang `Playlist von {owner}` steht, z.B.:
+
+```
+Playlist von Anna
+1: Bohemian Rhapsody von Queen (5:54)
+Gesamt: 5:54
+```
+
+Teste mittels:
+
+```python
+premium = PremiumPlaylist("Anna")
+premium.add_song(song2)
+print(premium)
+```
+
+**Schritt 6 - Klassenattribut.** Ergänze der Klasse `Playlist` ein Klassenattribut `count = 0`, das im Konstruktor mittels `Playlist.count += 1` erhöht wird. Teste am Ende:
+
+```python
+print(Playlist.count)
+```
+
+Nach den obigen Schritten (eine `Playlist`, eine `PremiumPlaylist`) sollte `2` ausgegeben werden.
