@@ -28,16 +28,12 @@ Was fällt auf im Vergleich zu anderen Programmiersprachen?
 
     print(result_string)
 
-Das Programm iteriert über eine Liste mit Wörtern und findet das Wort mit den meisten Selbstlauten.
-
 Was fällt im Vergleich zu anderen Programmiersprachen auf?
 
 * Python nutzt dynamische Typisierung (d.h. beim Einführen von Variablen muss kein Datentyp angegeben werden)
 * Es werden keine Klammern für Blöcke benötigt. Sie werden durch Einrückungen definiert
 
 ## Beispiel 2
-
-Zum Ausprobieren gibt es das Beispiel auch hier: [Online Python Beispiel](https://www.onlinegdb.com/B19ue-gOH)
 
 .. python::
     from random import randint
