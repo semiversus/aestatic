@@ -1,9 +1,9 @@
 /* Runs the code of ".. python::" snippets in the browser using Pyodide.
    The code is edited with a CodeMirror editor; the Pyodide runtime is
-   preloaded in idle time right after page load, so the first click on a
-   run button does not have to wait for the download. input() is served by
-   an in-page input field (not a blocking window.prompt dialog), so print
-   output stays visible while waiting for input. */
+   loaded at page start, and while that is happening the run buttons stay
+   disabled with a "Loading..." caption. input() is served by an in-page
+   input field (not a blocking window.prompt dialog), so print output stays
+   visible while waiting for input. */
 (function () {
   "use strict";
 
@@ -351,6 +351,17 @@
     return pyodidePromise;
   }
 
+  // disables the run button with the loading caption while Python is being
+  // initialised, or enables it with the run caption once Python is available
+  function setRunButton(container, ready) {
+    var button = container.querySelector(".python-run");
+    if (!button) return;
+    button.disabled = !ready;
+    button.textContent = ready
+      ? button.dataset.runLabel || "Run"
+      : button.dataset.loadingLabel || "Loading...";
+  }
+
   function runSnippet(container) {
     var button = container.querySelector(".python-run");
     var editor = container._cmEditor;
@@ -389,7 +400,7 @@
         output.textContent += String(err && err.message ? err.message : err);
       })
       .finally(function () {
-        button.disabled = false;
+        setRunButton(container, true);
       });
   }
 
@@ -424,6 +435,10 @@
       var textarea = container.querySelector("textarea.python-code");
       container._originalCode = textarea ? textarea.value : "";
       container._storageKey = storageKey(container, index);
+
+      // Python is initialised below at page start; until then the run
+      // button stays disabled with the loading caption
+      setRunButton(container, false);
 
       // restore the persisted edit (if any) before the editor is created
       var saved = loadSavedCode(container._storageKey);
@@ -480,19 +495,22 @@
     }
 
     if (snippets.length > 0) {
-      // warm up the Python runtime in idle time after page load; getPyodide
-      // caches its promise, so a click on a run button reuses it and only
-      // waits if the preload has not finished yet
-      var preloadPyodide = function () {
-        getPyodide().catch(function (err) {
+      // initialise Python right away at page start; the run buttons are
+      // enabled with the run caption once the runtime is ready
+      getPyodide()
+        .then(function () {
+          snippets.forEach(function (container) {
+            setRunButton(container, true);
+          });
+        })
+        .catch(function (err) {
+          // enable the buttons anyway so a click retries the load; the
+          // error is then shown in the snippet's output by runSnippet
           console.error(err);
+          snippets.forEach(function (container) {
+            setRunButton(container, true);
+          });
         });
-      };
-      if (window.requestIdleCallback) {
-        window.requestIdleCallback(preloadPyodide, { timeout: 2000 });
-      } else {
-        window.setTimeout(preloadPyodide, 0);
-      }
 
       loadCodeMirror()
         .then(function (CM) {
