@@ -84,6 +84,98 @@
     }
   }
 
+  // absolute URL of the site root, derived from this script's own URL
+  // (document.currentScript.src is always resolved to an absolute URL)
+  var ROOT_URL = SCRIPT_SRC
+    ? SCRIPT_SRC.replace(/theme\/js\/python\.js$/, "")
+    : window.location.origin + "/";
+
+  function bytesToBase64Url(bytes) {
+    var bin = "";
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin)
+      .replace(/\+/g, "-")
+      .replace(/\//g, "_")
+      .replace(/=+$/, "");
+  }
+
+  function base64UrlToBytes(b64) {
+    b64 = b64.replace(/-/g, "+").replace(/_/g, "/");
+    while (b64.length % 4 !== 0) b64 += "=";
+    var bin = atob(b64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  // compresses with gzip (if supported) and base64url-encodes the result,
+  // so it can be used as a GET parameter
+  async function encodeCode(code) {
+    var bytes = new TextEncoder().encode(code);
+    if (typeof CompressionStream !== "undefined") {
+      var compressed = new Blob([bytes])
+        .stream()
+        .pipeThrough(new CompressionStream("gzip"));
+      bytes = new Uint8Array(await new Response(compressed).arrayBuffer());
+    }
+    return bytesToBase64Url(bytes);
+  }
+
+  // inverse of encodeCode; falls back to plain base64 (no compression)
+  // when the data is not gzip-compressed
+  async function decodeCode(param) {
+    var bytes = base64UrlToBytes(param);
+    if (typeof DecompressionStream !== "undefined") {
+      try {
+        var plain = new Blob([bytes])
+          .stream()
+          .pipeThrough(new DecompressionStream("gzip"));
+        return await new Response(plain).text();
+      } catch (err) {
+        // not gzip-compressed, decode as plain base64 below
+      }
+    }
+    return new TextDecoder().decode(bytes);
+  }
+
+  function flashButton(button) {
+    if (!button || !button.dataset.copied) return;
+    var original = button.textContent;
+    button.textContent = button.dataset.copied;
+    button.disabled = true;
+    setTimeout(function () {
+      button.textContent = original;
+      button.disabled = false;
+    }, 1500);
+  }
+
+  function copyToClipboard(text, button) {
+    var clipboard = window.navigator && window.navigator.clipboard;
+    if (clipboard && clipboard.writeText) {
+      clipboard.writeText(text).then(
+        function () {
+          flashButton(button);
+        },
+        function () {
+          window.prompt(text, text);
+        }
+      );
+    } else {
+      window.prompt(text, text);
+    }
+  }
+
+  // builds a python.html URL containing the current code and copies it
+  function shareSnippet(container, button) {
+    encodeCode(currentCode(container))
+      .then(function (encoded) {
+        copyToClipboard(ROOT_URL + "python.html?code=" + encoded, button);
+      })
+      .catch(function (err) {
+        console.error(err);
+      });
+  }
+
   function loadScript(src) {
     return new Promise(function (resolve, reject) {
       var script = document.createElement("script");
@@ -350,6 +442,13 @@
         });
       }
 
+      var shareButton = container.querySelector(".python-share");
+      if (shareButton) {
+        shareButton.addEventListener("click", function () {
+          shareSnippet(container, shareButton);
+        });
+      }
+
       // fallback path while CodeMirror is not (yet) available
       if (textarea) {
         textarea.addEventListener("input", function () {
@@ -360,6 +459,22 @@
       // reflect a restored edit (button visibility) also without CodeMirror
       updateResetState(container);
     });
+
+    // a shared snippet (?code=... in the URL, see shareSnippet) is loaded
+    // into the first snippet of the page, overriding any stored edit
+    var sharedParam = new URLSearchParams(window.location.search).get("code");
+    if (sharedParam && snippets.length > 0) {
+      decodeCode(sharedParam)
+        .then(function (code) {
+          if (!code) return;
+          var container = snippets[0];
+          setCode(container, code);
+          updateResetState(container);
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
+    }
 
     if (snippets.length > 0) {
       loadCodeMirror()

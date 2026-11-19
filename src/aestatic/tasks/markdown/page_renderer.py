@@ -172,6 +172,8 @@ class Python(DirectivePlugin):
         english = getattr(self, "english", False)
         run_label = "Run" if english else "Ausführen"
         reset_label = "Reset" if english else "Zurücksetzen"
+        share_label = "Share" if english else "Teilen"
+        copied_label = "URL copied!" if english else "URL Kopiert!"
         loading = "Loading Python ..." if english else "Python wird geladen ..."
 
         # the textarea is turned into a CodeMirror editor by theme/js/python.js
@@ -179,6 +181,7 @@ class Python(DirectivePlugin):
             f'<div class="python-snippet" data-loading="{loading}">'
             f'<textarea class="python-code" spellcheck="false">{mistune.escape(code)}</textarea>'
             f'<button type="button" class="button is-small is-link python-run">{run_label}</button>'
+            f'<button type="button" class="button is-small is-light python-share" data-copied="{copied_label}">{share_label}</button>'
             f'<button type="button" class="button is-small is-light python-reset" hidden>{reset_label}</button>'
             '<pre class="python-output" hidden></pre>'
             "</div>\n"
