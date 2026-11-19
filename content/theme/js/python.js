@@ -15,6 +15,75 @@
   var pyodidePromise = null;
   var codeMirrorPromise = null;
 
+  // edited code is kept in localStorage, keyed by page URL and the
+  // snippet's position on the page, so changes survive a page reload
+  var STORAGE_PREFIX = "aestatic:python:";
+
+  function storageKey(container, index) {
+    return STORAGE_PREFIX + window.location.pathname + ":" + index;
+  }
+
+  function loadSavedCode(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function saveCode(key, code) {
+    try {
+      window.localStorage.setItem(key, code);
+    } catch (err) {
+      // storage full or unavailable: editing still works, just not persisted
+    }
+  }
+
+  function removeSavedCode(key) {
+    try {
+      window.localStorage.removeItem(key);
+    } catch (err) {
+      // ignore
+    }
+  }
+
+  function currentCode(container) {
+    var editor = container._cmEditor;
+    if (editor) return editor.getValue();
+    var textarea = container.querySelector("textarea.python-code");
+    return textarea ? textarea.value : "";
+  }
+
+  function setCode(container, code) {
+    if (container._cmView) {
+      container._cmView.dispatch({
+        changes: {
+          from: 0,
+          to: container._cmView.state.doc.length,
+          insert: code,
+        },
+      });
+    } else {
+      var textarea = container.querySelector("textarea.python-code");
+      if (textarea) textarea.value = code;
+    }
+  }
+
+  // shows the reset button and persists the code as soon as it differs
+  // from the original snippet; hides the button and drops the stored
+  // code when the content is back to the original state
+  function updateResetState(container) {
+    var code = currentCode(container);
+    var changed = code !== container._originalCode;
+    var button = container.querySelector(".python-reset");
+    if (button) button.hidden = !changed;
+    if (changed) {
+      saveCode(container._storageKey, code);
+    } else {
+      removeSavedCode(container._storageKey);
+    }
+  }
+
   function loadScript(src) {
     return new Promise(function (resolve, reject) {
       var script = document.createElement("script");
@@ -256,10 +325,40 @@
 
     var snippets = document.querySelectorAll(".python-snippet");
 
-    snippets.forEach(function (container) {
+    snippets.forEach(function (container, index) {
+      var textarea = container.querySelector("textarea.python-code");
+      container._originalCode = textarea ? textarea.value : "";
+      container._storageKey = storageKey(container, index);
+
+      // restore the persisted edit (if any) before the editor is created
+      var saved = loadSavedCode(container._storageKey);
+      if (saved !== null && saved !== container._originalCode && textarea) {
+        textarea.value = saved;
+      }
+
       container.querySelector(".python-run").addEventListener("click", function () {
         runSnippet(container);
       });
+
+      var resetButton = container.querySelector(".python-reset");
+      if (resetButton) {
+        resetButton.addEventListener("click", function () {
+          setCode(container, container._originalCode);
+          // setCode does not fire an "input" event on a plain textarea
+          updateResetState(container);
+          if (container._cmView) container._cmView.focus();
+        });
+      }
+
+      // fallback path while CodeMirror is not (yet) available
+      if (textarea) {
+        textarea.addEventListener("input", function () {
+          updateResetState(container);
+        });
+      }
+
+      // reflect a restored edit (button visibility) also without CodeMirror
+      updateResetState(container);
     });
 
     if (snippets.length > 0) {
@@ -280,6 +379,9 @@
                   CM.basicSetup,
                   CM.python(),
                   CM.EditorView.lineWrapping,
+                  CM.EditorView.updateListener.of(function (update) {
+                    if (update.docChanged) updateResetState(container);
+                  }),
                   CM.EditorView.domEventHandlers({
                     copy: blockClipboard,
                     cut: blockClipboard,
