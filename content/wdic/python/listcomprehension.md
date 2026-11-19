@@ -96,10 +96,10 @@ List Comprehensions sind ideal, wenn eine einzelne Liste aus einer vorhandenen S
 
 * Ausgehend von einer Liste `temperatures = [12, 18, 25, 8, 30, 15]` sollen mittels List Comprehension zwei Listen entstehen: eine mit allen Temperaturen über 20 und eine mit allen Temperaturen darunter.
 
-  .. python::
-      THRESHOLD = 20
-      temperatures = [12, 18, 25, 8, 30, 15]
-      lower_temperatures = []
-      upper_temperatures = []
+.. python::
+    THRESHOLD = 20
+    temperatures = [12, 18, 25, 8, 30, 15]
+    lower_temperatures = []
+    upper_temperatures = []
 
-      print(lower_temperatures, upper_temperatures)
+    print(lower_temperatures, upper_temperatures)
