@@ -69,14 +69,16 @@
     }
   }
 
-  // shows the reset button and persists the code as soon as it differs
-  // from the original snippet; hides the button and drops the stored
-  // code when the content is back to the original state
-  function updateResetState(container) {
+  // shows the reset and share buttons and persists the code as soon as it
+  // differs from the original snippet; hides the buttons and drops the
+  // stored code when the content is back to the original state
+  function updateChangedState(container) {
     var code = currentCode(container);
     var changed = code !== container._originalCode;
-    var button = container.querySelector(".python-reset");
-    if (button) button.hidden = !changed;
+    [".python-reset", ".python-share"].forEach(function (selector) {
+      var button = container.querySelector(selector);
+      if (button) button.hidden = !changed;
+    });
     if (changed) {
       saveCode(container._storageKey, code);
     } else {
@@ -437,7 +439,7 @@
         resetButton.addEventListener("click", function () {
           setCode(container, container._originalCode);
           // setCode does not fire an "input" event on a plain textarea
-          updateResetState(container);
+          updateChangedState(container);
           if (container._cmView) container._cmView.focus();
         });
       }
@@ -452,12 +454,12 @@
       // fallback path while CodeMirror is not (yet) available
       if (textarea) {
         textarea.addEventListener("input", function () {
-          updateResetState(container);
+          updateChangedState(container);
         });
       }
 
       // reflect a restored edit (button visibility) also without CodeMirror
-      updateResetState(container);
+      updateChangedState(container);
     });
 
     // a shared snippet (?code=... in the URL, see shareSnippet) is loaded
@@ -469,7 +471,7 @@
           if (!code) return;
           var container = snippets[0];
           setCode(container, code);
-          updateResetState(container);
+          updateChangedState(container);
         })
         .catch(function (err) {
           console.error(err);
@@ -495,7 +497,7 @@
                   CM.python(),
                   CM.EditorView.lineWrapping,
                   CM.EditorView.updateListener.of(function (update) {
-                    if (update.docChanged) updateResetState(container);
+                    if (update.docChanged) updateChangedState(container);
                   }),
                   CM.EditorView.domEventHandlers({
                     copy: blockClipboard,

@@ -181,7 +181,7 @@ class Python(DirectivePlugin):
             f'<div class="python-snippet" data-loading="{loading}">'
             f'<textarea class="python-code" spellcheck="false">{mistune.escape(code)}</textarea>'
             f'<button type="button" class="button is-small is-link python-run">{run_label}</button>'
-            f'<button type="button" class="button is-small is-light python-share" data-copied="{copied_label}">{share_label}</button>'
+            f'<button type="button" class="button is-small is-light python-share" data-copied="{copied_label}" hidden>{share_label}</button>'
             f'<button type="button" class="button is-small is-light python-reset" hidden>{reset_label}</button>'
             '<pre class="python-output" hidden></pre>'
             "</div>\n"
