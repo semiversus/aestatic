@@ -101,6 +101,10 @@ a:not(:hover) > svg.icon
     .python-reset
         margin-top: 0.5em
         margin-left: 0.5em
+        // bulma's .button sets display:inline-flex, which would override
+        // the hidden attribute — keep the button truly hidden
+        &[hidden]
+            display: none
     .python-input
         display: flex
         align-items: center
