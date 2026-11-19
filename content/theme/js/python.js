@@ -1,8 +1,9 @@
 /* Runs the code of ".. python::" snippets in the browser using Pyodide.
-   The code is edited with a CodeMirror editor; Pyodide is loaded lazily from
-   the CDN on the first click on a run button. input() is served by an in-page
-   input field (not a blocking window.prompt dialog), so print output stays
-   visible while waiting for input. */
+   The code is edited with a CodeMirror editor; the Pyodide runtime is
+   preloaded in idle time right after page load, so the first click on a
+   run button does not have to wait for the download. input() is served by
+   an in-page input field (not a blocking window.prompt dialog), so print
+   output stays visible while waiting for input. */
 (function () {
   "use strict";
 
@@ -479,6 +480,20 @@
     }
 
     if (snippets.length > 0) {
+      // warm up the Python runtime in idle time after page load; getPyodide
+      // caches its promise, so a click on a run button reuses it and only
+      // waits if the preload has not finished yet
+      var preloadPyodide = function () {
+        getPyodide().catch(function (err) {
+          console.error(err);
+        });
+      };
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(preloadPyodide, { timeout: 2000 });
+      } else {
+        window.setTimeout(preloadPyodide, 0);
+      }
+
       loadCodeMirror()
         .then(function (CM) {
           // no clipboard interaction (copy/cut/paste) inside the editor
