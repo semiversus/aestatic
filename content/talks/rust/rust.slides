@@ -115,4 +115,337 @@ log = "0.4.27"
 mysql = "16.0.1"
 ```
 
+.. notes::
+    DEMO `cargo build`, `cargo run`
+
 ---
+# Sicherheit
+## (Genauer *Safety*)
+* Logische Korrektheit
+* Technische Korrektheit
+
+.. notes::
+    Was macht eine Programmiersprache sicher? Oder genauer, was kann eine Programmiersprache leisten, um sichere Programme zu erstellen? Wenn wir von Sicherheit reden, müssen wir zwei Ebenen betrachten.
+
+    Die erste Ebene ist die **logische Korrektheit** - Ein unsicheres Programm kann entstehen, wenn wir eine **Spezifikation falsch implementieren** haben oder die **Spezifikation in sich fehlerhaft** ist. Auf dieser Ebene hat eine Programmiersprache keinen Einfluss korrigierend einzuwirken.
+
+    Die zweite Ebene ist die technische Korrektheit. Werden zur Laufzeit Operationen ausgeführt, die nicht vorgesehen waren.
+
+---
+# Speicherverwaltung
+
+```c++
+#include <vector>
+
+int main() {
+    std::vector<int> v(3);
+    v[5] = 42;
+}
+```
+
+.. notes::
+    In diesem Beispiel legen wir einen Vektor mit 3 Integer an und schreiben dann auf den Wert mit Index 5. Die Programmiersprache bewahrt uns nicht vor diesem Fehler. Es gibt Vorkehrungen, die wir treffen können, damit sowas nicht passiert. Aber die Programmiersprache lässt uns die Freiheit, uns selbst in den Fuss zu schießen.
+
+    Was genau in diesem Fall passiert, ist nicht definiert. Es ist sogenanntes **Undefined Behavior**. Klassische Fälle sind auch **Use-After-Free**, wobei ein Pointer verarbeitet wird, obwohl der Speicher freigegeben wurde und **Double-Free**, also das freigeben eines Speicherbereichs, obwohl es bereits freigegeben wurde.
+
+---
+# Use-After-Free
+
+```c++
+#include <iostream>
+
+int main() {
+    int* r;
+    {
+        int x = 5;
+        r = &x;
+    }
+    std::cout << *r << '\n';
+}
+```
+
+.. notes::
+    Genau genommen ist dies ein Dangling-Pointer, aber das Muster ist das gleiche. In C++ kann der Zeiger r beliebig weitergegeben werden, aber den ursprünglichen Speicherbereich gibt es nicht mehr.
+
+---
+## Manuelle Speicherverwaltung ist fehleranfällig
+* Garbage Collection
+* Reference Counting
+
+.. notes::
+    Programmiersprachen haben schon lange vor Rust die Probleme der Speicherverwaltung gelöst. Java, C#, Go, Python, Swift, usw. sind alles Programmiersprachen die die Speicherverwaltung selbst übernehmen und diese Fehlerklassen verschwinden lassen.
+
+    Gängige Konzepte hier sind Garbage Collection und Reference Counting. Der Programmierer kann beliebig Speicher allokieren und die Runtime kümmert sich um die Freigabe des Speichers.
+
+---
+## Automatische Speicherverwaltung
+* Overhead
+* Unberrechenbare Latenz
+* Out Of Memory
+* Keine Hilfe bei Handles auf Dateien, Verbindungen, Locks, ...
+
+.. notes::
+    Problem gelöst? Aber: Overhead, Unberrechenbare Latenz, OutOfMemory
+
+    Außerdem ist es keine Lösung für Nicht-Speicher-Ressourcen wie Dateien, Verbindungen oder Locks.
+
+---
+# Data Races
+
+```c++
+#include <thread>
+
+int counter = 0;
+
+void increment() {
+    for (int i = 0; i < 100000; ++i)
+        ++counter;
+}
+
+int main() {
+    std::thread t1(increment);
+    std::thread t2(increment);
+    t1.join();
+    t2.join();
+}
+```
+
+.. notes::
+    Richtig lästig können Data-Races werden. In diesem Beispiel haben wir eine globale Variable counter und eine Funktion, die diesen Counter hunderttausendmal um eins erhöht. Diese Funktion wird in zwei Thread parallel ausgeführt. Das erwartete Ergebnis wäre zweihundert tausend.
+
+---
+
+# Data Races
+
+```ca65
+ldr  r1, =counter    ; Adresse von counter holen
+
+ldr  r0, [r1]        ; 1. LOAD
+adds r0, r0, #1      ; 2. ADD
+str  r0, [r1]        ; 3. STORE
+```
+
+.. notes::
+    Beim Erhöhen von `counter` wird der Wert aus dem Speicher gelesen, um eins erhöht und dann in den Speicher zurückgeschrieben. Wenn nun ein Thread den Wert aus dem Speicher liest, den Wert um eins erhöht und dann ein Threadwechsel passiert, kann der dann laufende Thread counter beliebig verändern. Das Problem ist, sobald der ursprünglich Thread dann wieder läuft, wird der "alte" Wert geschrieben.
+
+    Im Embedded Bereich haben wir Interruptroutinen, die anfällig sind für diese Data Races. Immerhin sind Interruptroutinen nichts anderes als quasi parallel laufende Threads.
+
+---
+
+# Data Races
+Es liegt am Programmierer, dies zu verhindern
+
+.. notes::
+    Bieten Programmiersprachen Konzepte an, diese Probleme zu lösen? Definitiv - `std::unique_ptr`, `std::mutex` usw. gibt es. Der Programmierer ist aber gefordert, zu wissen, wann er was einsetzen sollte bzw. muss.
+
+---
+
+# Ownership
+```rust
+fn main() {
+    let s = String::from("Hallo");
+}   // Scope endet: Speicher wird freigegeben
+```
+
+.. notes::
+    Jeder Wert hat genau einen Besitzer. Sobald dieser Besitzer den Scope verlässt, wird der Speicher freigegeben. Der wichtige Unterschied ist, dass dies zur Compile Zeit festgelegt wird und nicht erst zur Laufzeit.
+
+    Damit werden auch Handles auf Dateien, Verbindungen oder Locks automatisch geschlossen.
+
+---
+
+# Ownership
+
+```rust
+let s1 = String::from("Hallo");
+let s2 = s1;
+println!("{s1}");  // <-- Compilerfehler!
+```
+
+.. notes::
+    Der Besitz kann auch weitergegeben werden. Und natürlich kann man auch Kopien erstellen
+
+---
+
+# Borrowing
+
+```rust
+let mut x = 5;
+let r1 = &x;
+let r2 = &x;
+let r3 = &mut x;      // <-- Compilerfehler!
+println!("{r1}, {r2}");
+```
+
+* Es kann **entweder** beliebig viele lesende Referenzen auf ein Objekt geben
+* **oder** exakt eine schreibende Referenz
+* **Niemals beides gleichzeitig**
+
+.. notes::
+    Statt Werte ständig zu kopieren oder den Besitz abzugeben können wir den Zugriff auch verleihen. Und hier wird eine zentrale Regel zur Compilezeit durchgesetzt: Es kann entweder beliebig viele lesende Referenzen auf ein Objekt geben oder exakt eine schreibende Referenz. Niemals beides gleichzeitig.
+
+---
+
+## Lifetime
+
+```rust
+let r;
+{
+    let x = 5;
+    r = &x;  // <-- Compilefehler
+}
+```
+
+* Eine Referenz darf nicht länger leben als ihr Besitzer
+* Keine Use-After-Free (auch kein Dangling Pointer, Dobule-Free, ...)
+
+---
+
+## Data Race
+
+```rust
+use std::thread;
+
+static mut COUNTER: i32 = 0;
+
+fn main() {
+    let t1 = thread::spawn(|| {
+        for _ in 0..100000 { COUNTER += 1 ; }
+    });
+    let t2 = thread::spawn(|| {
+        for _ in 0..100000 { COUNTER += 1 ; }
+    });
+    t1.join().unwrap();
+    t2.join().unwrap();
+}
+```
+
+.. notes::
+    Hier ist die Rust Entsprechung des C++ Beispiels. Rust lässt uns diesen Code nicht kompilieren.
+
+---
+
+```rust
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+fn main() {
+    let counter = Arc::new(Mutex::new(0));
+
+    let c1 = Arc::clone(&counter);
+    let t1 = thread::spawn(move || {
+        for _ in 0..100000 { *c1.lock().unwrap() += 1; }
+    });
+
+    let c2 = Arc::clone(&counter);
+    let t2 = thread::spawn(move || {
+        for _ in 0..100000 { *c2.lock().unwrap() += 1; }
+    });
+
+    t1.join().unwrap();
+    t2.join().unwrap();
+}
+```
+
+.. notes::
+    * `Mutex` löst das Zugriffsproblem: Nur ein Thread kann gleichzeitig `lock()` halten.
+    * `Arc` löst das Besitzproblem: Es ist ein Referenz Counting Objekt. `Arc::clone` erzeugt keine Kopie des Wertes, sondern eine weitere besitzende Referenz mit Zähler. Der Speicher wird freigegeben, sobald der letzte Besitzer stirbt.
+
+    Schön auch zusehen, dass in dem Beispiel das `lock()` auf den Mutex geholt wird, wir aber das Lock nicht explizit freigeben müssen, weil es automatisch am Ende der Anweisung freigegeben wird.
+
+---
+
+# Borrow Checker
+Wem gehört dieser Wert, und wie lange lebt er?
+
+* Jeder Wert hat genau einen Besitzer. Verlässt der Besitzer den Scope, wird der Wert freigegeben.
+* Wer verändert, hat den Wert exklusiv. Beliebig viele dürfen lesen oder genau einer schreibt - nie beides gleichzeitig
+* Der Compiler prüft dies alles statisch. Kein Garbage Collector, keine Laufzeit-Checks, kein Overhead
+
+.. notes::
+    Wir haben also für unsere Embedded Anwendungen die Speichersicherheit einer Garbage Collector Sprache, aber ohne dessen Overhead. Und da sich diese Sicherheit auch über Threads hinweg erstreckt spricht man auch von **fearless concurrency**.
+
+---
+
+![Borrow Checker](borrow_checker.webp)
+
+.. notes::
+    Aber auch hier ist nicht alles geschenkt. Es gibt den Ausdruck "Fighting the borrow checker". Der Borrow Checker hindert einem oft daran, den vermeintlich einfachen Weg zu gehen.
+
+    Der Borrow Checker bietet keinen Schutz vor **Deadlocks**!
+
+---
+
+# Embedded Stack
+* Rust Embedded Working Group
+* `embedded-hal`
+
+.. notes::
+    Für uns wichtig ist die Arbeit der Rust Embedded Group. Diese definiert die `embedded-hal` und deren Traits.
+
+---
+
+# `embedded-hal`
+
+* GPIO: `InputPin`, `OutputPin`, `PwmPin`
+* Bussysteme: `I2c`, `Spi`, `Serial/embedded-io`
+* `embedded-storage`, `embedded-can`, ...
+
+.. notes::
+    Traits sind eine Art Interface und legt fest, welche Methoden ein Typ anbieten muss, ohne festzulegen, wie sie implementiert sind. Code, der gegen einen Trait geschrieben ist, funktioniert mit jedem konkreten Typ, der ihn implementiert. Deshalb können wir `embedded-hal` Treiber schreiben, die auf jeder HAL laufen.
+
+---
+
+# `#![no_std]
+
+.. figure:: no_std.png
+    :title: `core`, `alloc` and `std`
+    :source: https://blog.csdn.net/ZCShouCSDN/article/details/141210171
+
+.. notes::
+    Ein wichtiges Merkmal, auf das man vor allem am Anfang stößt, ist no_std. Wird Rust auf einem PC oder Server verwendet, steht die Standard Library (`std`) zur Verfügung. Sie liefert Funktionen für den Zugriff auf den Heap, Dateien, Threads, usw. Auf einem Mikrocontroller haben wir das alles nicht oder wenn, dann mit Einschränkungen. Durch die Deklaration von `#![no_std]` teilen wir mit, dass unser Code keinen Zugriff auf `std` benötigt und diese Bibliothek nicht eingebunden werden soll.
+
+    Wenn wir ein Projekt mittels `no_std` bauen, sind wir auf Bibliotheken begrenzt die auch ohne Standard Bibliothek laufen können.
+
+    Das schöne für die Embedded Entwicklung ist, dass der komplette Sprachkern der gleiche bleibt.
+
+---
+
+# Bare Metal
+
+* Loop mit zyklischer Abarbeitung
+* Interruptgetrieben
+* Zustandsmaschine
+
+.. notes::
+    Natürlich gibt es die Möglichkeit mit Rust auch komplett ohne Betriebssystem Programme zu schreiben. Hier kommen klassische Konzepte zum Tragen.
+
+---
+
+## Frameworks und Betriebssysteme
+* [RTIC](https://rtic.rs/)
+* [Embassy](https://embassy.dev/)
+* [Ariel OS](https://ariel-os.org/)
+* [tock](https://www.tockos.org/)
+* [Hubris](https://hubris.oxide.computer/)
+
+.. notes::
+    Für die Embedded Entwicklung in Rust haben sich einige Frameworks etabliert, um die Entwicklung zu vereinfachen. Neben wirklich vollwertigen Betriebssystemen wie Ariel OS, Tock oder Hubris gibt es auch Lösungen, die nur eine Schicht mit Scheduler anbieten.
+
+---
+
+## RTIC
+
+.. notes::
+    RTIC ist ein Framework, das echtzeitfähige Nebenläufigkeit komplett zur Compilezeit plant. Es gibt #[task]-Funktionen mit festen Prioritäten und Ressourcen werden automatisch in kritische Sektionen gepackt. Dies verhindert Data Races und in diesem Fall auch Deadlocks strukturell. Das entstehende Konstrukt ist sehr starr, weil alles zur Compilezeit deklariert werden muss, dafür bekommt man harte Echtzeit Garantien.
+
+---
+
+## Embassy
+
+.. notes::
+    Neben RTIC findet Embassy häufig Verwendung. In unseren Produkten bauen wir auch auf Embassy auf.
+
+    Embassy bringt asynchrone Programmierung mittels async/await auf den Microcontroller. Statt Threads mit je einem Stack laufen kooperative Tasks auf einem einzigen Stack. Die Kontrolle wird immer an den Punkten abgegeben, auf denen auf ein Ergebnis gewartet wird. Ein übergeordneter Executor pollt die einzelnen Routinen dann reihum.
+
+    Wir haben keine harte Echtzeit Garantien wie in RTIC, aber der Code ist lesbarer und näher am gewohnten async-Stil aus der Server oder Desktop Welt.
