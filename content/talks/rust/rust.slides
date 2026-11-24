@@ -1,0 +1,118 @@
+title: Rust & Embedded
+
+## Rust & Embedded
+```rust
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    loop {
+        info!("hello world!");
+        Timer::after_secs(1).await;
+    }
+}
+```
+Günther Jena, clownfish tech talks, 27.11.2026
+
+---
+## Über mich
+* Elektronik&Softwareentwickler @ LaserAtWork
+* Lehrer @ HTL Rankweil
+
+.. notes::
+    Ich bin Elektronik und Softwareentwickler bei LaserAtWork in Höchst. Wir bauen sogenannte Ultrakurzpulslaser die Anwendung in wissenschaftlichen, industriellen und auch medizinischen Prozessen finden. Die Anforderungen an **funktionale Sicherheit** sind also entsprechend groß und dies ist ein Grund, wieso wir unsere Firmware in Rust schreiben.
+    Wir sind außerdem auf der **Suche nach neuen Mitarbeitern** im Bereich Elektronik/Softwareentwicklung! Wenn jemand Interesse hat - schaut gern auf die Webseite oder sprecht mich direkt an.
+    Weiters darf ich mein Wissen an der HTL Rankweil im Bereich Robotik, Digitale Systeme und Hardwareentwicklung weitergeben.
+
+---
+.. figure:: hoare.png
+    :title: Graydon Hoare
+    :author: Graydon Hoare
+
+2006 von Graydon Hoare gestartet
+
+.. notes::
+    Gestartet wurde Rust **2006** von Graydon Hoare. Der Legende nach hat sich der damalige Mozilla Mitarbeiter über den Personenlift in seinem Wohnhaus geärgert, weil er immer wieder wegen Software Problemen außer Betrieb war, bis ein Servicetechniker die Elektronik neu gestartet hat. Wir sind also schon beim Start von Rust sehr nah an unserem heutigen Thema: Embedded Systems.
+
+---
+.. figure:: rust_fungus.jpg
+    :title: Rust fungus on a leaf, under low magnification
+    :author: Pengo
+    :source: https://en.wikipedia.org/wiki/Rust_(fungus)#/media/File:Rust_fungus_(Uredinales)_Pengo.jpg
+    :license: CC BY 2.5
+    :scale: 50%
+
+.. notes::
+    Der Name Rust stammt nicht vom englischen Wort für Rost sondern einer sehr widerstandsfähigen Pilzart. Das Ziel war es eine Programmiersprache zu schaffen, die es erlaubt, "sichere" Programme zu schreiben.
+
+---
+.. figure:: mozilla.svg
+    :title: Mozilla Foundation
+    :scale: 50%
+    :source: https://raw.githubusercontent.com/MozillaFoundation/foundation.mozilla.org/99c8fd728461ed03c84d04467f331da192c4c7dd/foundation_cms/static/images/primary-nav-wordmark-logo.svg
+    :license: Mozilla Public License Version 2
+
+Ab 2009 von Mozilla gesponsert
+
+.. notes::
+    Mozilla hat das Potential in dieser neuen Sprache gesehen und fungierte ab **2009** als offizieller Sponsor der Sprache.
+
+---
+.. figure:: rust.svg
+    :title: Rust Logo
+    :scale: 50%
+
+Version 1.0 wird 2015 veröffentlicht
+
+.. notes::
+    Es hat dann bis 2015 gedauert, bis die Version 1.0 heraus kam. Es wird sehr viel Wert auf Rückwärtskompatibilität gelegt. Code, der auf 1.0 kompiliert, soll auch auf späteren Versionen kompilieren. "Stability without Stagnation".
+
+---
+.. figure:: rust_foundation.svg
+    :title: Rust Foundation
+    :scale: 50%
+    :source: https://rustfoundation.org/brand-guide/
+
+Seit 2021 von der Rust Foundation getragen.
+
+.. notes::
+    Seit 2021 wird Rust von der Rust Foundation getragen und entwickelt. Der **Release Zyklus** liegt bei **6 Wochen** und aktuell haben wir die Version **1.100**.
+
+---
+# Rustup
+https://rustup.rs/
+
+.. notes::
+    Um ein Embedded System zu programmieren hat man es mit viel mehr als nur einer Programmiersprache zu tun: Man braucht eine Toolchain, die richtige Compilerversion, Crosscompiler, Abhängigkeiten von Bibliotheken, Umgang mit Programmern und Debuggern, ein Build-System, usw.
+
+    Bei Rust kommt alles aus einer Hand. rustup kümmert sich um die komplette Toolchain und ermöglicht uns auf einfache Weise die erstmalige Installation.
+
+---
+# Cargo
+
+.. figure:: cargo.png
+    :title: Cargo
+    :source: https://doc.rust-lang.org/cargo/
+
+.. notes::
+    Das Tool, mit dem wir unser Projekt managen heißt "cargo". Damit können wir Abhängigkeiten auflösen, builden, testen, Dokumentation generieren, usw. Wir haben also nicht mit vielen kleinen Tools zu tun, sondern haben ein konsistentes Ökosystem.
+
+    Rust hat definitiv den Vorteil, dass die Programmiersprache noch recht jung ist und auf die Erfahrung vieler anderer Programmiersprachen aufbauen kann. Rust hat hier nichts neu erfunden - es hat die Möglichkeit genutzt, bestimmte Dinge von Anfang an zu vereinheitlichen.
+
+---
+
+# Cargo.toml
+```bash
+[package]
+name = "hello_world"
+version = "0.1.0"
+authors = ["Max Muster <max@must.er>"]
+
+[dependencies]
+binary_serde = "1.0.24"
+static_cell = { version = "2.1.0" }
+log = "0.4.27"
+
+[dev-dependencies]
+mysql = "16.0.1"
+```
+
+---
