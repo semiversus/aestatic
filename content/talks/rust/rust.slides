@@ -407,7 +407,7 @@ Wem gehört dieser Wert, und wie lange lebt er?
 ---
 
 # Embassy
-
+DEMO ([codeberg.org/semiversus/embedded_rust_demo](https://codeberg.org/semiversus/embedded_rust_demo))
 .. notes::
     Neben RTIC findet Embassy häufig Verwendung. In unseren Produkten bauen wir auch auf Embassy auf.
 
