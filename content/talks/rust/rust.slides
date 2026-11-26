@@ -180,7 +180,7 @@ int main() {
 ---
 ## Automatische Speicherverwaltung
 * Overhead
-* Unberrechenbare Latenz
+* Unberechenbare Latenz
 * Out Of Memory
 * Keine Hilfe bei Handles auf Dateien, Verbindungen, Locks, ...
 
@@ -297,7 +297,7 @@ let r;
 ```
 
 * Eine Referenz darf nicht länger leben als ihr Besitzer
-* Keine Use-After-Free (auch kein Dangling Pointer, Dobule-Free, ...)
+* Keine Use-After-Free (auch kein Dangling Pointer, Double-Free, ...)
 
 ---
 
