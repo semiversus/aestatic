@@ -26,10 +26,12 @@ class PageRenderer(mistune.HTMLRenderer):
 
     def block_code(self, code, info=None):
         if info:
-            lexer = get_lexer_by_name(info, stripall=True)
+            lang = info.split()[0]
+            lexer = get_lexer_by_name(lang, stripall=True)
             formatter = pygments_html.HtmlFormatter(nowrap=True)
             highlighted = highlight(code, lexer, formatter)
-            return "<pre>" + highlighted + "</pre>"
+            badge = mistune.escape(lang)
+            return f'<div class="code-block"><span class="code-badge">{badge}</span><pre>{highlighted}</pre></div>\n'
         return "<pre><code>" + mistune.escape(code) + "</code></pre>"
 
     def link(self, text: str, url: str, title=None):

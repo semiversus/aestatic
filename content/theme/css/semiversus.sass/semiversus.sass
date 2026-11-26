@@ -124,6 +124,25 @@ a:not(:hover) > svg.icon
             color: $red
             border-color: $red
 
+.code-block
+    position: relative
+    pre
+        padding-top: 2rem
+    .code-badge
+        background-color: $pre-background
+        border: 1px solid $grey-lighter
+        border-radius: 4px
+        color: $grey
+        font-family: $code-family
+        font-size: 0.7em
+        line-height: 1
+        padding: 0.35em 0.6em
+        position: absolute
+        right: 0.75rem
+        top: 0.6rem
+        text-transform: uppercase
+        z-index: 1
+
 html, body
     min-height: 100vh
     display: flex

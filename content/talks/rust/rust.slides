@@ -14,11 +14,11 @@ Günther Jena, clownfish tech talks, 27.11.2026
 
 ---
 ## Über mich
-* Elektronik&Softwareentwickler @ LaserAtWork
+* Elektronik & Softwareentwickler @ LaserAtWork
 * Lehrer @ HTL Rankweil
 
 .. notes::
-    Ich bin Elektronik und Softwareentwickler bei LaserAtWork in Höchst. Wir bauen sogenannte Ultrakurzpulslaser die Anwendung in wissenschaftlichen, industriellen und auch medizinischen Prozessen finden. Die Anforderungen an **funktionale Sicherheit** sind also entsprechend groß und dies ist ein Grund, wieso wir unsere Firmware in Rust schreiben.
+    Ich bin Elektronik und Softwareentwickler bei LaserAtWork in Höchst. Wir bauen sogenannte Ultrakurzpulslaser, die Anwendung in wissenschaftlichen, industriellen und auch medizinischen Prozessen finden. Die Anforderungen an **funktionale Sicherheit** sind also entsprechend groß und dies ist ein Grund, wieso wir unsere Firmware in Rust schreiben.
     Wir sind außerdem auf der **Suche nach neuen Mitarbeitern** im Bereich Elektronik/Softwareentwicklung! Wenn jemand Interesse hat - schaut gern auf die Webseite oder sprecht mich direkt an.
     Weiters darf ich mein Wissen an der HTL Rankweil im Bereich Robotik, Digitale Systeme und Hardwareentwicklung weitergeben.
 
@@ -30,7 +30,7 @@ Günther Jena, clownfish tech talks, 27.11.2026
 2006 von Graydon Hoare gestartet
 
 .. notes::
-    Gestartet wurde Rust **2006** von Graydon Hoare. Der Legende nach hat sich der damalige Mozilla Mitarbeiter über den Personenlift in seinem Wohnhaus geärgert, weil er immer wieder wegen Software Problemen außer Betrieb war, bis ein Servicetechniker die Elektronik neu gestartet hat. Wir sind also schon beim Start von Rust sehr nah an unserem heutigen Thema: Embedded Systems.
+    Gestartet wurde Rust **2006** von Graydon Hoare. Der Legende nach hat sich der damalige Mozilla Mitarbeiter über den Personenlift in seinem Wohnhaus geärgert, weil er immer wieder wegen Softwareproblemen außer Betrieb war, bis ein Servicetechniker die Elektronik neu gestartet hat. Wir sind also schon beim Start von Rust sehr nah an unserem heutigen Thema: Embedded Systems.
 
 ---
 .. figure:: rust_fungus.jpg
@@ -41,7 +41,7 @@ Günther Jena, clownfish tech talks, 27.11.2026
     :scale: 50%
 
 .. notes::
-    Der Name Rust stammt nicht vom englischen Wort für Rost sondern einer sehr widerstandsfähigen Pilzart. Das Ziel war es eine Programmiersprache zu schaffen, die es erlaubt, "sichere" Programme zu schreiben.
+    Der Name Rust stammt nicht vom englischen Wort für Rost sondern von einer sehr widerstandsfähigen Pilzart. Das Ziel war es, eine Programmiersprache zu schaffen, die es erlaubt, "sichere" Programme zu schreiben.
 
 ---
 .. figure:: mozilla.svg
@@ -58,12 +58,12 @@ Ab 2009 von Mozilla gesponsert
 ---
 .. figure:: rust.svg
     :title: Rust Logo
-    :scale: 50%
+    :scale: 40%
 
 Version 1.0 wird 2015 veröffentlicht
 
 .. notes::
-    Es hat dann bis 2015 gedauert, bis die Version 1.0 heraus kam. Es wird sehr viel Wert auf Rückwärtskompatibilität gelegt. Code, der auf 1.0 kompiliert, soll auch auf späteren Versionen kompilieren. "Stability without Stagnation".
+    Es hat dann bis 2015 gedauert, bis die Version 1.0 herauskam. Es wird sehr viel Wert auf Rückwärtskompatibilität gelegt. Code, der auf 1.0 kompiliert, soll auch auf späteren Versionen kompilieren. "Stability without Stagnation".
 
 ---
 .. figure:: rust_foundation.svg
@@ -71,7 +71,7 @@ Version 1.0 wird 2015 veröffentlicht
     :scale: 50%
     :source: https://rustfoundation.org/brand-guide/
 
-Seit 2021 von der Rust Foundation getragen.
+Seit 2021 von der Rust Foundation getragen
 
 .. notes::
     Seit 2021 wird Rust von der Rust Foundation getragen und entwickelt. Der **Release Zyklus** liegt bei **6 Wochen** und aktuell haben wir die Version **1.100**.
@@ -100,7 +100,7 @@ https://rustup.rs/
 ---
 
 # Cargo.toml
-```bash
+```toml
 [package]
 name = "hello_world"
 version = "0.1.0"
@@ -144,7 +144,7 @@ int main() {
 ```
 
 .. notes::
-    In diesem Beispiel legen wir einen Vektor mit 3 Integer an und schreiben dann auf den Wert mit Index 5. Die Programmiersprache bewahrt uns nicht vor diesem Fehler. Es gibt Vorkehrungen, die wir treffen können, damit sowas nicht passiert. Aber die Programmiersprache lässt uns die Freiheit, uns selbst in den Fuss zu schießen.
+    In diesem Beispiel legen wir einen Vektor mit 3 Integern an und schreiben dann auf den Wert mit Index 5. Die Programmiersprache bewahrt uns nicht vor diesem Fehler. Es gibt Vorkehrungen, die wir treffen können, damit sowas nicht passiert. Aber die Programmiersprache lässt uns die Freiheit, uns selbst in den Fuß zu schießen.
 
     Was genau in diesem Fall passiert, ist nicht definiert. Es ist sogenanntes **Undefined Behavior**. Klassische Fälle sind auch **Use-After-Free**, wobei ein Pointer verarbeitet wird, obwohl der Speicher freigegeben wurde und **Double-Free**, also das freigeben eines Speicherbereichs, obwohl es bereits freigegeben wurde.
 
@@ -168,7 +168,7 @@ int main() {
     Genau genommen ist dies ein Dangling-Pointer, aber das Muster ist das gleiche. In C++ kann der Zeiger r beliebig weitergegeben werden, aber den ursprünglichen Speicherbereich gibt es nicht mehr.
 
 ---
-## Manuelle Speicherverwaltung ist fehleranfällig
+## Lösung?
 * Garbage Collection
 * Reference Counting
 
@@ -180,13 +180,11 @@ int main() {
 ---
 ## Automatische Speicherverwaltung
 * Overhead
-* Unberechenbare Latenz
+* Unberechenbare Latenzen
 * Out Of Memory
 * Keine Hilfe bei Handles auf Dateien, Verbindungen, Locks, ...
 
 .. notes::
-    Problem gelöst? Aber: Overhead, Unberrechenbare Latenz, OutOfMemory
-
     Außerdem ist es keine Lösung für Nicht-Speicher-Ressourcen wie Dateien, Verbindungen oder Locks.
 
 ---
@@ -211,13 +209,13 @@ int main() {
 ```
 
 .. notes::
-    Richtig lästig können Data-Races werden. In diesem Beispiel haben wir eine globale Variable counter und eine Funktion, die diesen Counter hunderttausendmal um eins erhöht. Diese Funktion wird in zwei Thread parallel ausgeführt. Das erwartete Ergebnis wäre zweihundert tausend.
+    Richtig lästig können Data-Races werden. In diesem Beispiel haben wir eine globale Variable counter und eine Funktion, die diesen Counter hunderttausendmal um eins erhöht. Diese Funktion wird in zwei Threads parallel ausgeführt. Das erwartete Ergebnis wäre zweihunderttausend.
 
 ---
 
 # Data Races
 
-```ca65
+```
 ldr  r1, =counter    ; Adresse von counter holen
 
 ldr  r0, [r1]        ; 1. LOAD
@@ -226,7 +224,7 @@ str  r0, [r1]        ; 3. STORE
 ```
 
 .. notes::
-    Beim Erhöhen von `counter` wird der Wert aus dem Speicher gelesen, um eins erhöht und dann in den Speicher zurückgeschrieben. Wenn nun ein Thread den Wert aus dem Speicher liest, den Wert um eins erhöht und dann ein Threadwechsel passiert, kann der dann laufende Thread counter beliebig verändern. Das Problem ist, sobald der ursprünglich Thread dann wieder läuft, wird der "alte" Wert geschrieben.
+    Beim Erhöhen von `counter` wird der Wert aus dem Speicher gelesen, um eins erhöht und dann in den Speicher zurückgeschrieben. Wenn nun ein Thread den Wert aus dem Speicher liest, den Wert um eins erhöht, bevor ein Threadwechsel passiert, kann der dann laufende Thread counter beliebig verändern. Das Problem ist, sobald der ursprüngliche Thread dann wieder läuft, wird der "alte" Wert geschrieben.
 
     Im Embedded Bereich haben wir Interruptroutinen, die anfällig sind für diese Data Races. Immerhin sind Interruptroutinen nichts anderes als quasi parallel laufende Threads.
 
@@ -263,7 +261,7 @@ println!("{s1}");  // <-- Compilerfehler!
 ```
 
 .. notes::
-    Der Besitz kann auch weitergegeben werden. Und natürlich kann man auch Kopien erstellen
+    Der Besitz kann auch weitergegeben werden. Und natürlich kann man auch Kopien erstellen.
 
 ---
 
@@ -292,7 +290,7 @@ println!("{r1}, {r2}");
 let r;
 {
     let x = 5;
-    r = &x;  // <-- Compilefehler
+    r = &x;  // <-- Compilerfehler
 }
 ```
 
@@ -301,7 +299,7 @@ let r;
 
 ---
 
-## Data Race
+## Data Races
 
 ```rust
 use std::thread;
@@ -363,7 +361,7 @@ Wem gehört dieser Wert, und wie lange lebt er?
 * Der Compiler prüft dies alles statisch. Kein Garbage Collector, keine Laufzeit-Checks, kein Overhead
 
 .. notes::
-    Wir haben also für unsere Embedded Anwendungen die Speichersicherheit einer Garbage Collector Sprache, aber ohne dessen Overhead. Und da sich diese Sicherheit auch über Threads hinweg erstreckt spricht man auch von **fearless concurrency**.
+    Wir haben also für unsere Embedded Anwendungen die Speichersicherheit einer Garbage-Collector-Sprache, aber ohne deren Overhead. Und da sich diese Sicherheit auch über Threads hinweg erstreckt, spricht man auch von **fearless concurrency**.
 
 ---
 
@@ -392,56 +390,23 @@ Wem gehört dieser Wert, und wie lange lebt er?
 * `embedded-storage`, `embedded-can`, ...
 
 .. notes::
-    Traits sind eine Art Interface und legt fest, welche Methoden ein Typ anbieten muss, ohne festzulegen, wie sie implementiert sind. Code, der gegen einen Trait geschrieben ist, funktioniert mit jedem konkreten Typ, der ihn implementiert. Deshalb können wir `embedded-hal` Treiber schreiben, die auf jeder HAL laufen.
+    Traits sind eine Art Interface und legen fest, welche Methoden ein Typ anbieten muss, ohne festzulegen, wie sie implementiert sind. Code, der gegen einen Trait geschrieben ist, funktioniert mit jedem konkreten Typ, der ihn implementiert. Deshalb können wir `embedded-hal` Treiber schreiben, die auf jeder HAL laufen.
 
 ---
 
-# `#![no_std]
-
-.. figure:: no_std.png
-    :title: `core`, `alloc` and `std`
-    :source: https://blog.csdn.net/ZCShouCSDN/article/details/141210171
-
-.. notes::
-    Ein wichtiges Merkmal, auf das man vor allem am Anfang stößt, ist no_std. Wird Rust auf einem PC oder Server verwendet, steht die Standard Library (`std`) zur Verfügung. Sie liefert Funktionen für den Zugriff auf den Heap, Dateien, Threads, usw. Auf einem Mikrocontroller haben wir das alles nicht oder wenn, dann mit Einschränkungen. Durch die Deklaration von `#![no_std]` teilen wir mit, dass unser Code keinen Zugriff auf `std` benötigt und diese Bibliothek nicht eingebunden werden soll.
-
-    Wenn wir ein Projekt mittels `no_std` bauen, sind wir auf Bibliotheken begrenzt die auch ohne Standard Bibliothek laufen können.
-
-    Das schöne für die Embedded Entwicklung ist, dass der komplette Sprachkern der gleiche bleibt.
-
----
-
-# Bare Metal
-
-* Loop mit zyklischer Abarbeitung
-* Interruptgetrieben
-* Zustandsmaschine
-
-.. notes::
-    Natürlich gibt es die Möglichkeit mit Rust auch komplett ohne Betriebssystem Programme zu schreiben. Hier kommen klassische Konzepte zum Tragen.
-
----
-
-## Frameworks und Betriebssysteme
-* [RTIC](https://rtic.rs/)
-* [Embassy](https://embassy.dev/)
-* [Ariel OS](https://ariel-os.org/)
-* [tock](https://www.tockos.org/)
-* [Hubris](https://hubris.oxide.computer/)
-
-.. notes::
-    Für die Embedded Entwicklung in Rust haben sich einige Frameworks etabliert, um die Entwicklung zu vereinfachen. Neben wirklich vollwertigen Betriebssystemen wie Ariel OS, Tock oder Hubris gibt es auch Lösungen, die nur eine Schicht mit Scheduler anbieten.
-
----
-
-## RTIC
+# RTIC
+* Nebenläufigkeit wird komplett zur Compilezeit geplant
+* `#[task]`-Funktionen mit festen Prioritäten
+* Ressourcen werden automatisch in kritische Sektionen gepackt
+* Data Races und Deadlocks strukturell ausgeschlossen
+* Harte Echtzeit-Garantien - dafür ein starres, voll deklariertes Konstrukt
 
 .. notes::
     RTIC ist ein Framework, das echtzeitfähige Nebenläufigkeit komplett zur Compilezeit plant. Es gibt #[task]-Funktionen mit festen Prioritäten und Ressourcen werden automatisch in kritische Sektionen gepackt. Dies verhindert Data Races und in diesem Fall auch Deadlocks strukturell. Das entstehende Konstrukt ist sehr starr, weil alles zur Compilezeit deklariert werden muss, dafür bekommt man harte Echtzeit Garantien.
 
 ---
 
-## Embassy
+# Embassy
 
 .. notes::
     Neben RTIC findet Embassy häufig Verwendung. In unseren Produkten bauen wir auch auf Embassy auf.
@@ -449,3 +414,24 @@ Wem gehört dieser Wert, und wie lange lebt er?
     Embassy bringt asynchrone Programmierung mittels async/await auf den Microcontroller. Statt Threads mit je einem Stack laufen kooperative Tasks auf einem einzigen Stack. Die Kontrolle wird immer an den Punkten abgegeben, auf denen auf ein Ergebnis gewartet wird. Ein übergeordneter Executor pollt die einzelnen Routinen dann reihum.
 
     Wir haben keine harte Echtzeit Garantien wie in RTIC, aber der Code ist lesbarer und näher am gewohnten async-Stil aus der Server oder Desktop Welt.
+
+---
+
+# Rewrite it in Rust
+* (engl. *rewrite it in Rust*) — wann lohnt sich das wirklich?
+* Sicherheitskritische Firmware: Speicherfehlerklassen verschwinden zur Compilezeit
+* Bestehende C/C++-Codebasis: schrittweise Migration mittels FFI (`cxx`, `bindgen`)
+* Nicht immer sinnvoll: schneller Prototyp, Team ohne Rust-Erfahrung
+
+.. notes::
+    FFI: **foreign function interface**, "Rewrite it in Rust" ist längst ein Meme, aber dahinter steckt eine echte Beobachtung: Überall dort, wo Speicherfehler teuer sind, lohnt sich der Umstieg. Wichtig ist die schrittweise Migration — mittels FFI lassen sich einzelne Module austauschen, ohne alles auf einmal neu zu schreiben. Firefox hat mit Stylo vorgemacht, dass das in großen Codebasen funktioniert.
+
+---
+
+# Summary
+* Speichersicherheit ohne Laufzeitkosten
+* *Fearless concurrency*
+* Ressourcen werden deterministisch behandelt
+* *Zero Cost Abstraction*
+* Vereinheitlichte Toolchain
+* Langzeit Stabilität
