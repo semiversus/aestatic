@@ -170,7 +170,7 @@ class Python(DirectivePlugin):
 
     def render(self, code):
         english = getattr(self, "english", False)
-        run_label = "Run" if english else "Ausführen"
+        run_label = "▶ Run" if english else "▶ Ausführen"
         reset_label = "Reset" if english else "Zurücksetzen"
         share_label = "Share" if english else "Teilen"
         copied_label = "URL copied!" if english else "URL Kopiert!"
