@@ -14,13 +14,17 @@ Günther Jena, clownfish tech talks, 27.11.2026
 
 ---
 ## Über mich
-* Elektronik & Softwareentwickler @ LaserAtWork
-* Lehrer @ HTL Rankweil
+* Elektronik & Softwareentwickler @ [LaserAtWork](https://laseratwork.com)
+* Lehrer @ [HTL Rankweil](https://www.htl-rankweil.at/)
 
 .. notes::
     Ich bin Elektronik und Softwareentwickler bei LaserAtWork in Höchst. Wir bauen sogenannte Ultrakurzpulslaser, die Anwendung in wissenschaftlichen, industriellen und auch medizinischen Prozessen finden. Die Anforderungen an **funktionale Sicherheit** sind also entsprechend groß und dies ist ein Grund, wieso wir unsere Firmware in Rust schreiben.
     Wir sind außerdem auf der **Suche nach neuen Mitarbeitern** im Bereich Elektronik/Softwareentwicklung! Wenn jemand Interesse hat - schaut gern auf die Webseite oder sprecht mich direkt an.
     Weiters darf ich mein Wissen an der HTL Rankweil im Bereich Robotik, Digitale Systeme und Hardwareentwicklung weitergeben.
+
+---
+
+![LaserAtWork Peregrine](peregrine.jpg)
 
 ---
 .. figure:: hoare.png
